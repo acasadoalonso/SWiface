@@ -104,13 +104,28 @@ conn=sqlite3.connect(DBase)		# connect with the database
 curs=conn.cursor()                      # set the cursor
 date=datetime.datetime.now()            # get the date
 dte=date.strftime("%y%m%d")             # today's date
+#
+#-----------------------------------------------------------------
+# Initialise API for computing sunrise and sunset
+#-----------------------------------------------------------------
+#
+location = ephem.Observer()
+location.pressure = 0
+location.horizon = '-0:34'      # Adjustments for angle to horizon
+
+location.lat, location.lon = settings.FLOGGER_LATITUDE, settings.FLOGGER_LONGITUDE
+date = datetime.datetime.now()
+next_sunrise = location.next_rising(ephem.Sun(), date)
+next_sunset = location.next_setting(ephem.Sun(), date)
+print "Sunrise today is at: ", next_sunrise, " UTC "
+print "Sunset  today is at: ", next_sunset,  " UTC "
+print "Time now is: ", date
 
 #----------------------ogn_SilentWingsInterface.py start-----------------------
  
-print "Start OGN Silent Wings Interface"
-print "================================"
+print "Start OGN Silent Wings Interface V1.0"
+print "====================================="
 
-print "Database: ",  DBase
 print "Date: ", date
 prtreq =  sys.argv[1:]
 if prtreq and prtreq[0] == 'prt':
@@ -139,6 +154,7 @@ local_time = datetime.datetime.now()
 fl_date_time = local_time.strftime("%y%m%d")
 OGN_DATA = settings.DBpath + "DATA" + fl_date_time+'.log'
 print "OGN data file is: ", OGN_DATA
+print "Database: ",  DBase
 datafile = open (OGN_DATA, 'a')
 keepalive_count = 1
 keepalive_time = time.time()
@@ -163,6 +179,17 @@ print "Time now is: ", date
 try:
 
     while True:
+        location.date = ephem.Date(datetime.datetime.utcnow())
+        date = datetime.datetime.now()
+        s = ephem.Sun()
+        s.compute(location)
+        twilight = -6 * ephem.degree    # Defn of Twilight is: Sun is 6, 12, 18 degrees below horizon (civil, nautical, astronomical)
+        if s.alt < twilight:
+            print "At Sunset now ... Time is:", date, " Next sunset is: ", next_sunset,  " UTC"
+            shutdown(sock, datafile, tmaxa, tmaxt,tmid)
+            print "At Sunset ... Exit"
+            exit(0)
+
         #Loop for a long time with a count, illustrative only
         current_time = time.time()
         elapsed_time = current_time - keepalive_time
@@ -223,7 +250,9 @@ try:
             if prt:
                 print 'Packet returned is: ', packet_str
                 print 'Callsign is: ', callsign, 'DST CallSign:', dst_callsign, 'Dest: ', destination, 'header: ', header
-            if not id in fid :                  # if we did not see the FLARM ID
+            if ( latitude < settings.FILTER_LATI1 or latitude > settings.FILTER_LATI2 ):
+		continue			# if is not within our latitude ignore the data 
+	    if not id in fid :                  # if we did not see the FLARM ID
                 fid[id]=0                       # init the counter
                 fsta[id]=id                     # init the station receiver
                 fmaxa[id]=altitude              # maximun altitude
@@ -313,7 +342,8 @@ try:
             # write the DB record
             addcmd="insert into OGNDATA values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"
             curs.execute(addcmd, (id, dte, hora, station, latitude, longitude, altim, speed, course, roclimb, rot,sensitivity, gps, uniqueid, dist, extpos))
-            cin +=1                             # one more record read
+            conn.commit()                       # commit the DB updates
+	    cin +=1                             # one more record read
         
 
 except KeyboardInterrupt:
