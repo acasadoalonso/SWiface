@@ -1,9 +1,23 @@
+
+
 This repo contains the interface between the Silent Wings either Studio or Viewer with the OGN network.
 
 The main task is to collect all the OGN APRS data for a defined competition area and store it on a SQLITE3 database.
 
-SWiface.py is the data collector.
+SWiface.py 		Is the data collector.
+			it gathers all the fixes on the competition area until the sunset
 
-gencuc.py is the CUC file gnerator used by the SW interface with all the gliders found in the competition area. It ises the OGN Device Database in order to get the registration, type and competition number using the FLARMID.
+gencuc.py 		Is the CUC file gnerator used by the SW interface with all the gliders found flying in the competition area.
+			 It uses the OGN Device Database in order to get the registration, type and competition number using the FLARMID.
 
+DBcreate.py 		Script to create the SWiface database, using the DBschema.sql file
 
+DBschema.sql		Database schema used in this application
+
+libfap.py		APRS parser routine
+
+parserfuncs.py		The set of routines to extract the main data from the APRS packets
+
+kglid.py		The list of known gliders, this list isvgenerated weekly from the OGN device data base 
+
+settings.py		The settings used by this application

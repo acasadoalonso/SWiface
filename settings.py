@@ -1,9 +1,7 @@
 
 #-------------------------------------
-# OGN-Flight-Logger Settings
+# OGN-Silent Wings interface --- Settings 
 #-------------------------------------
-# Python APRS/OGN program to log flight times, durations and maximum heights achieved
-#
 #
 #-------------------------------------
 # Setting values
