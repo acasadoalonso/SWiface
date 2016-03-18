@@ -18,3 +18,11 @@ parserfuncs.py		The set of routines to extract the main data from the APRS packe
 kglid.py		The list of known gliders, this list isvgenerated weekly from the OGN device data base 
 
 settings.py		The settings used by this application
+
+Currently the system is running on a Raspberry Pi 3 with a HDD SDD of 128 Gb., using Raspbian Jessie distro.
+
+For any bug please report it thru the GitHub account, open an issue and I will try to solve it.
+
+Angel Casado
+
+acasado (at) acm.org
