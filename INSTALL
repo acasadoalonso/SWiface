@@ -1,13 +1,13 @@
 Installation instructions:
 
 - Download this repo from GitHub.com
-- Install the python dependencies									pip install sqlite3 socket ephem pytz geopy ...
+- Install the python dependencies									pip install socket ephem pytz geopy ...
 - Make the directory where the data will reside for example : 						mkdir SWdata
 - Create the SQLITE3 database running DBcreate:  							python DBcreate.py
 - Make the archive folder, for example: makdir 								SWdata/archive
 - copy the database to the archive directory, for example: 						cp SWdata/SWiface.db SWdata/archive
 - Adjust the setting on setting.py									vi setting.py
-- Undate the list of known pilots									vi kpilots.py
+- update the list of known pilots									vi kpilots.py
 - Review the list of known gliders									vi kglid.py
 - Install the crontab entries										crontab -e
 - Execute the collector program										sh live.sh
@@ -37,6 +37,7 @@ SWiface.py:import ephem
 SWiface.py:import pytz
 SWiface.py:import sys
 SWiface.py:import os
+SWiface.py:import signal
 SWiface.py:import kglid                                # import the list on known gliders
 SWiface.py:from   parserfuncs import *                 # the ogn/ham parser functions
 SWiface.py:from   geopy.distance import vincenty       # use the Vincenty algorithm^M
