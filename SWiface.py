@@ -16,6 +16,7 @@ import ephem
 import pytz
 import sys
 import os
+import signal
 import kglid                                # import the list on known gliders
 from   parserfuncs import *                 # the ogn/ham parser functions 
 from   geopy.distance import vincenty       # use the Vincenty algorithm^M
@@ -74,7 +75,30 @@ def shutdown(sock, datafile, tmaxa, tmaxt, tmid):	# shutdown routine, close file
     return				# job done
 
 #########################################################################
+ 
+#########################################################################
+def alive(first='no'):
 
+        if (first == 'yes'):
+                alivefile = open ("OGN.alive", 'w') # create a file just to mark that we are alive
+        else:
+                alivefile = open ("OGN.alive", 'a') # append a file just to mark that we are alive
+        local_time = datetime.datetime.now()
+        alivetime = local_time.strftime("%y-%m-%d %H:%M:%S")
+        alivefile.write(alivetime+"\n") # write the time as control
+        alivefile.close()               # close the alive file
+#########################################################################
+#########################################################################
+
+def signal_term_handler(signal, frame):
+    print 'got SIGTERM ... shutdown orderly'
+    libfap.fap_cleanup()                        # close libfap
+    shutdown(sock, datafile, tmaxa, tmaxt,tmid) # shutdown orderly
+    sys.exit(0)
+
+# ......................................................................# 
+signal.signal(signal.SIGTERM, signal_term_handler)
+# ......................................................................# 
 fid=  {'NONE  ' : 0}                    # FLARM ID list
 fsta= {'NONE  ' : 'NONE  '}             # STATION ID list
 fmaxa={'NONE  ' : 0}                    # maximun altitude
@@ -123,7 +147,7 @@ print "Time now is: ", date
 
 #----------------------ogn_SilentWingsInterface.py start-----------------------
  
-print "Start OGN Silent Wings Interface V1.0"
+print "Start OGN Silent Wings Interface V1.1"
 print "====================================="
 
 print "Date: ", date
@@ -158,7 +182,7 @@ print "Database: ",  DBase
 datafile = open (OGN_DATA, 'a')
 keepalive_count = 1
 keepalive_time = time.time()
-
+alive("yes")
 #
 #-----------------------------------------------------------------
 # Initialise API for computing sunrise and sunset
@@ -193,12 +217,13 @@ try:
         #Loop for a long time with a count, illustrative only
         current_time = time.time()
         elapsed_time = current_time - keepalive_time
-        if (current_time - keepalive_time) > 300:        # keepalives every 5 mins
+        if (current_time - keepalive_time) > 180:        # keepalives every 3 mins
             try:
                 rtn = sock_file.write("#Python ognES App\n\n")
                 # Make sure keepalive gets sent. If not flushed then buffered
                 sock_file.flush()
                 datafile.flush()
+		alive()					# indicate that we are alive
                 run_time = time.time() - start_time
                 if prt:
                     print "Send keepalive no: ", keepalive_count, " After elapsed_time: ", int((current_time - keepalive_time)), " After runtime: ", int(run_time), " secs"
