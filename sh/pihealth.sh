@@ -4,6 +4,7 @@
 # then delete the logfiles to save space
 
 /sbin/ifconfig eth0 	>  hc.log
+/sbin/ifconfig wlan0 	>> hc.log
 df -v 			>> hc.log
 lsusb	 		>> hc.log
 /usr/bin/uptime	 	>> hc.log
@@ -26,6 +27,7 @@ echo $taken
 echo "####################   IP settings  ##################"
 echo "           "
 /sbin/ifconfig eth0
+/sbin/ifconfig wlan0
 echo "           "
 echo "####################   disk usage  ##################"
 echo "           "

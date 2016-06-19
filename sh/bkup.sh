@@ -5,7 +5,7 @@ mv        BKUP_$(hostname)_$(date +%y.%m.%d).tar ./google_drive
 cd ./google_drive 
 #./grive
 sudo mount -t nfs casadonfs:/nfs/NFS/Backups /bkups
-cp        BKUP_$(hostname)_$(date +%y.%m.%d).tar         /bkups
+mv        BKUP_$(hostname)_$(date +%y.%m.%d).tar         /bkups
 echo "Bkup SWdata"
 tar -czvf BKUP_SWiface_$(hostname)_$(date +%y.%m.%d).tar /nfs/OGN/SWdata --exclude="lost+found"
 mv        BKUP_SWiface_$(hostname)_$(date +%y.%m.%d).tar /bkups

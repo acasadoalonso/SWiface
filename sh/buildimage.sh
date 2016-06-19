@@ -76,7 +76,7 @@ if [ "${deb_local_mirror}" == "" ]; then
 fi
 
 bootsize="64M"
-deb_release="wheezy"
+deb_release="jessie"
 
 relative_path=`dirname $0`
 
@@ -88,7 +88,7 @@ delivery_path=`cd ${absolute_path}/../delivery; pwd`
 
 # define destination folder where created image file will be stored
 buildenv=`cd ${absolute_path}; cd ..; mkdir -p rpi/images; cd rpi; pwd`
-#buildenv="/nfs/RPi"
+# buildenv="/tmp/rpi"
 
 # cd ${absolute_path}
 
@@ -105,6 +105,7 @@ if [ "${device}" == "" ]; then
   image="${buildenv}/images/raspbian_basic_${deb_release}_${today}.img"
   dd if=/dev/zero of=${image} bs=1MB count=3800
   device=`losetup -f --show ${image}`
+  sync 
   echo "image ${image} created and mounted as ${device}"
 else
   dd if=/dev/zero of=${device} bs=512 count=1
@@ -127,10 +128,14 @@ w
 EOF
 
 
+echo "Partitions defined ...."
+sync
+partprobe  ${device} 
+
 if [ "${image}" != "" ]; then
   losetup -d ${device}
-  device=`kpartx -va ${image} | sed -E 's/.*(loop[0-9])p.*/\1/g' | head -1`
-  device="/dev/mapper/${device}"
+  #device=`kpartx -va ${image} | sed -E 's/.*(loop[0-9])p.*/\1/g' | head -1`
+  #device="/dev/mapper/${device}"
   bootp=${device}p1
   rootp=${device}p2
 else
@@ -146,12 +151,20 @@ else
     rootp=${device}2
   fi
 fi
+echo $bootp $rootp $device
+sync
+partprobe  ${device} 
 
+kpartx -u -l ${device} 
+
+sync
+echo "Partitions updated" 
 mkfs.vfat ${bootp}
 mkfs.ext4 ${rootp}
 
+pwd
 mkdir -p ${rootfs}
-
+ls -la
 mount ${rootp} ${rootfs}
 
 mkdir -p ${rootfs}/proc
@@ -160,14 +173,16 @@ mkdir -p ${rootfs}/dev
 mkdir -p ${rootfs}/dev/pts
 mkdir -p ${rootfs}/usr/src/delivery
 
+ls -la $(rootfs) 
 mount -t proc none ${rootfs}/proc
 mount -t sysfs none ${rootfs}/sys
 mount -o bind /dev ${rootfs}/dev
 mount -o bind /dev/pts ${rootfs}/dev/pts
 mount -o bind ${delivery_path} ${rootfs}/usr/src/delivery
-
+df
 cd ${rootfs}
-
+pwd
+echo "debootstrap ..." 
 debootstrap --foreign --arch armhf ${deb_release} ${rootfs} ${deb_local_mirror}
 cp /usr/bin/qemu-arm-static usr/bin/
 LANG=C chroot ${rootfs} /debootstrap/debootstrap --second-stage
@@ -265,4 +280,3 @@ if [ "${image}" != "" ]; then
 fi
 
 echo "done."
-
