@@ -22,6 +22,7 @@ from   parserfuncs import *                 # the ogn/ham parser functions
 from   geopy.distance import vincenty       # use the Vincenty algorithm^M
 from   geopy.geocoders import GeoNames      # use the Nominatim as the geolocator^M
 import sqlite3                              # the SQL data base routines^M
+import MySQLdb                              # the SQL data base routines^M
 
 #########################################################################
 def shutdown(sock, datafile, tmaxa, tmaxt, tmid):	# shutdown routine, close files and report on activity
@@ -53,14 +54,26 @@ def shutdown(sock, datafile, tmaxa, tmaxt, tmid):	# shutdown routine, close file
 	    lati=fslla[key] 		# latitude
 	    long=fsllo[key] 		# longitude
 	    alti=fslal[key] 		# altitude
-            selcmd="select idrec from RECEIVERS where idrec=?"	# SQL command to execute: SELECT
-            curs.execute(selcmd, (key,))
-	    if curs.fetchone() == None:
-            	inscmd="insert into RECEIVERS values (?, ?, ?, ?, ?)"
-            	curs.execute(inscmd, (key, gid, lati, long, alti))
+	    if (MySQL):
+            	selcmd="SELECT * FROM  RECEIVERS WHERE  idrec =  '"+key+"'"
+            	curs.execute(selcmd)
 	    else:
-            	updcmd="update RECEIVERS SET idrec=?, desc=?, lati=?, longi=?, alti=? where idrec=?"	# SQL command to execute: UPDATE
-            	curs.execute(updcmd, (key, gid, lati, long, alti, key))
+            	selcmd="select idrec from RECEIVERS where idrec=?"	# SQL command to execute: SELECT
+            	curs.execute(selcmd, (key,))
+	    if curs.fetchone() == None:
+		if (MySQL):
+            		inscmd="insert into RECEIVERS values ('%s', '%s', %f,  %f,  %f)" % (key, gid, lati, long, alti)
+            		curs.execute(inscmd)
+		else:
+            		inscmd="insert into RECEIVERS values (?, ?, ?, ?, ?)"
+            		curs.execute(inscmd, (key, gid, lati, long, alti))
+	    else:
+		if (MySQL):
+            		updcmd="update RECEIVERS SET idrec='%s', descri='%s', lati=%f, longi=%f, alti=%f where idrec='%s' " % (key, gid, lati, long, alti, key)	# SQL command to execute: UPDATE
+            		curs.execute(updcmd)
+		else:
+            		updcmd="update RECEIVERS SET idrec=?, descri=?, lati=?, longi=?, alti=? where idrec=?"	# SQL command to execute: UPDATE
+            		curs.execute(updcmd, (key, gid, lati, long, alti, key))
 	    print "Added STATION: ==> ", key, gid, fslla[key], fsllo[key], fslal[key] 
                                         # report now the maximun altitude for the day
     if tmid[3:9] in kglid.kglid:        # if it is a known glider ???
@@ -99,6 +112,25 @@ def signal_term_handler(signal, frame):
 # ......................................................................# 
 signal.signal(signal.SIGTERM, signal_term_handler)
 # ......................................................................# 
+#
+def blackhole(lati, long):
+
+	latn=42.72667
+	lats=42.57833
+	lonw=-0.1025
+	lone=+0.18333
+	if (lati < lats or lati > latn or long < lonw or long > lone):
+		return (False)
+	else:
+		return (True)
+########################################################################
+def get_station(data):
+    	scolon=data.find(':')                   # find the colon
+    	station=data[19:scolon]                 # get the station identifier
+    	station=station.upper()                 # translate to uppercase
+    	return (station)
+########################################################################
+
 fid=  {'NONE  ' : 0}                    # FLARM ID list
 fsta= {'NONE  ' : 'NONE  '}             # STATION ID list
 fmaxa={'NONE  ' : 0}                    # maximun altitude
@@ -122,9 +154,19 @@ fsalt={'NONE  ' : 0}                    # maximun altitude
 lastp_lati={"LECD" : +42.38695}         # the dummy competitor
 lastp_long={"LECD" : +1.86843}          # the dummy competitor
 lastp_alti={"LECD" : +1105.8144}        # the dummy competitor
-
+# --------------------------------------#
+MySQL=True
+DBhost   =settings.DBhost
+DBuser   =settings.DBuser
+DBpasswd =settings.DBpasswd
+DBname   =settings.DBname
+# --------------------------------------#
 DBase=settings.DBpath+'SWiface.db'	# Data base used
-conn=sqlite3.connect(DBase)		# connect with the database
+if (MySQL):
+	conn=MySQLdb.connect(host=DBhost, user=DBuser, passwd=DBpasswd, db=DBname)
+else:
+	conn=sqlite3.connect(DBase)	# connect with the database
+
 curs=conn.cursor()                      # set the cursor
 date=datetime.datetime.now()            # get the date
 dte=date.strftime("%y%m%d")             # today's date
@@ -137,6 +179,15 @@ location = ephem.Observer()
 location.pressure = 0
 location.horizon = '-0:34'      # Adjustments for angle to horizon
 
+#----------------------ogn_SilentWingsInterface.py start-----------------------
+ 
+print "Start OGN Silent Wings Interface V1.2"
+print "====================================="
+if (MySQL):
+	print "MySQL: Database:", DBname, " at Host:", DBhost
+else:
+	print "Database: ",  DBase
+print "Date: ", date
 location.lat, location.lon = settings.FLOGGER_LATITUDE, settings.FLOGGER_LONGITUDE
 date = datetime.datetime.now()
 next_sunrise = location.next_rising(ephem.Sun(), date)
@@ -145,12 +196,6 @@ print "Sunrise today is at: ", next_sunrise, " UTC "
 print "Sunset  today is at: ", next_sunset,  " UTC "
 print "Time now is: ", date
 
-#----------------------ogn_SilentWingsInterface.py start-----------------------
- 
-print "Start OGN Silent Wings Interface V1.1"
-print "====================================="
-
-print "Date: ", date
 prtreq =  sys.argv[1:]
 if prtreq and prtreq[0] == 'prt':
     prt = True
@@ -178,7 +223,6 @@ local_time = datetime.datetime.now()
 fl_date_time = local_time.strftime("%y%m%d")
 OGN_DATA = settings.DBpath + "DATA" + fl_date_time+'.log'
 print "OGN data file is: ", OGN_DATA
-print "Database: ",  DBase
 datafile = open (OGN_DATA, 'a')
 keepalive_count = 1
 keepalive_time = time.time()
@@ -257,6 +301,10 @@ try:
             else:
                 continue
 
+    	ix=packet_str.find('>')
+    	cc= packet_str[0:ix]
+    	cc=cc.upper()
+    	packet_str=cc+packet_str[ix:]
         # Parse packet using libfap.py into fields to process, eg:
         packet = libfap.fap_parseaprs(packet_str, len(packet_str), 0)
         if  len(packet_str) > 0 and packet_str[0] <> "#":
@@ -275,8 +323,6 @@ try:
             if prt:
                 print 'Packet returned is: ', packet_str
                 print 'Callsign is: ', callsign, 'DST CallSign:', dst_callsign, 'Dest: ', destination, 'header: ', header
-            if ( latitude < settings.FILTER_LATI1 or latitude > settings.FILTER_LATI2 ):
-		continue			# if is not within our latitude ignore the data 
 	    if not id in fid :                  # if we did not see the FLARM ID
                 fid[id]=0                       # init the counter
                 fsta[id]=id                     # init the station receiver
@@ -291,23 +337,28 @@ try:
                    fslod[id]=(latitude, longitude) # save the location of the station
                    fsmax[id]=0.0                # initial coverage zero
                    fsalt[id]=0                  # initial coverage zero
-		   if prt :
+		   if True :			# prt
 		   	print "===>STA:", id, latitude, longitude, altitude
                 continue                           # go for the next record
-
 
 	    if path == 'qAC':
 		continue			# the case of the TCP IP as well
             if path == 'qAS':                   # if std records
-                station = packet_str[19:23]     # get the station identifier
-                if station == 'LECI' or station == 'CREA':
-                    station=packet_str[19:24]   # just a hack !!!
-		if station == 'Madr':
-                    station=packet_str[19:25]   # just a hack !!!
+		station=get_station(packet_str) 
                 fsta[id]=station                # init the station receiver
 		    
             else:
 		continue 			# nothing else to do
+	    # filter by latitude
+	    if settings.FILTER_LATI1 > 0:	# if we are in the norther hemisfere
+            	if ( latitude < settings.FILTER_LATI1 or latitude > settings.FILTER_LATI2 ):
+			continue		# if is not within our latitude ignore the data
+	    else: 				# southern hemisfere
+            	if ( latitude > settings.FILTER_LATI1 or latitude < settings.FILTER_LATI2 ):
+			continue		# if is not within our latitude ignore the data
+	    if (blackhole(longitude, latitude)):
+		print "BH:", id, longitude, latitude, date
+		continue			# if is not within our latitude ignore the data
             fid[id] +=1                         # increase the number of records read
 	    lastp_lati[id]=latitude		# update the last knoow position of the glider
 	    lastp_long[id]=longitude		# update the last knoow position of the glider
@@ -365,8 +416,19 @@ try:
                 print 'Parsed data: POS: ', longitude, latitude, altitude,' Speed:',speed,' Course: ',course,' Path: ',path,' Type:', type
                 print roclimb, rot, sensitivity, gps, uniqueid, dist, extpos
             # write the DB record
-            addcmd="insert into OGNDATA values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"
-            curs.execute(addcmd, (id, dte, hora, station, latitude, longitude, altim, speed, course, roclimb, rot,sensitivity, gps, uniqueid, dist, extpos))
+
+	    if (MySQL):
+                addcmd="insert into OGNDATA values ('" +id+ "','" + dte+ "','" + hora+ "','" + station+ "'," + str(latitude)+ "," + str(longitude)+ "," + str(altim)+ "," + str(speed)+ "," + \
+			str(course)+ "," + str(roclimb)+ "," +str( rot) + "," +str(sensitivity) + \
+                	",'" + gps+ "','" + uniqueid+ "'," + str(dist)+ ",'" + extpos+ "')"
+                try:
+                        curs.execute(addcmd)
+                except:
+                        print ">>>MySQL error:", nrec, cin, addcmd
+            else:
+                addcmd="insert into OGNDATA values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"^M
+                curs.execute(addcmd, (id, dte, hora, station, latitude, longitude, altim, speed, course, roclimb, rot,sensitivity, gps, uniqueid, dist, extpos))^M
+
             conn.commit()                       # commit the DB updates
 	    cin +=1                             # one more record read
         

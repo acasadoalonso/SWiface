@@ -31,3 +31,16 @@ lastp_alti={"LECD" : +1105.8144}					# the dummy competitor
 FILTER_LATI1 = 42.0 							# further filteering for latitude
 FILTER_LATI2 = 43.0 							# further filteering for latitude
 DBpath=r"/nfs/OGN/SWdata/"						# data directory
+# MySQLdb settings
+MySQL=False
+Mydb     ="OGNDB"
+Myuser   ="ogn"
+Mypasswd ="ogn"
+Myhost   ="ubuntu" 
+# --------------------------------------#
+MySQL=False
+DBhost   ="casadonfs"
+DBuser   ="ogn"
+DBpasswd ="ogn"
+DBname   ="SWIFACE"
+# --------------------------------------#
