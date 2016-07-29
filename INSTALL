@@ -4,6 +4,7 @@ Installation instructions:
 - Install the python dependencies									pip install socket ephem pytz geopy ...
 - Make the directory where the data will reside for example : 						mkdir SWdata
 - Create the SQLITE3 database running DBcreate:  							python DBcreate.py
+  or create   the database SWIFACE on MySQL using phpmyadmin as defined on the template DBschema.sql 
 - Make the archive folder, for example: makdir 								SWdata/archive
 - copy the database to the archive directory, for example: 						cp SWdata/SWiface.db SWdata/archive
 - Adjust the setting on setting.py									vi setting.py
@@ -43,3 +44,4 @@ SWiface.py:from   parserfuncs import *                 # the ogn/ham parser func
 SWiface.py:from   geopy.distance import vincenty       # use the Vincenty algorithm^M
 SWiface.py:from   geopy.geocoders import GeoNames      # use the Nominatim as the geolocator^M
 SWiface.py:import sqlite3                              # the SQL data base routines^M
+SWiface.py:import MySQLdb                              # the SQL data base routines^M
