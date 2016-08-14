@@ -21,8 +21,10 @@ import kglid                                # import the list on known gliders
 from   parserfuncs import *                 # the ogn/ham parser functions 
 from   geopy.distance import vincenty       # use the Vincenty algorithm^M
 from   geopy.geocoders import GeoNames      # use the Nominatim as the geolocator^M
-import sqlite3                              # the SQL data base routines^M
-import MySQLdb                              # the SQL data base routines^M
+if (config.MySQL):
+	import MySQLdb                      # the SQL data base routines^M
+else:
+	import sqlite3                      # the SQL data base routines^M
 
 #########################################################################
 def shutdown(sock, datafile, tmaxa, tmaxt, tmid):	# shutdown routine, close files and report on activity
@@ -197,7 +199,7 @@ if (MySQL):
 else:
 	print "Database: ",  DBase
 print "Date: ", date, "at:", socket.gethostname()
-location.lat, location.lon = config.FLOGGER_LATITUDE, config.FLOGGER_LONGITUDE
+location.lat, location.lon = config.location_latitude, config.location_longitude
 date = datetime.datetime.now()
 next_sunrise = location.next_rising(ephem.Sun(), date)
 next_sunset = location.next_setting(ephem.Sun(), date)
@@ -244,14 +246,6 @@ alive("yes")
 location = ephem.Observer()
 location.pressure = 0
 location.horizon = '-0:34'	# Adjustments for angle to horizon
-
-location.lat, location.lon = config.FLOGGER_LATITUDE, config.FLOGGER_LONGITUDE
-date = datetime.datetime.now()
-next_sunrise = location.next_rising(ephem.Sun(), date)
-next_sunset = location.next_setting(ephem.Sun(), date)
-print "Sunrise today is at: ", next_sunrise, " UTC "
-print "Sunset  today is at: ", next_sunset,  " UTC "
-print "Time now is: ", date
 
 try:
 
@@ -400,11 +394,7 @@ try:
 	    roclimb      = gdatal(data,"fpm ")  # get the rate of climb
             rot          = gdatal(data,"rot ")  # get the rate of turn
             sensitivity  = gdatal(data,"dB ")   # get the sensitivity
-            p6=data.find('gps')                 # scan for gps info
-            if p6 != -1:
-                        gps      = data[p6+3:p6+6]      # get the gps
-            else:
-                        gps      = " "
+            gps          = gdatar(data,"gps")   # get the gps strength
             altim=altitude                      # the altitude in meters
             if altim > 15000 or altim < 0:
                 altim=0
