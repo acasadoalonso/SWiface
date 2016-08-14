@@ -9,7 +9,7 @@ from ctypes import *
 from datetime import datetime
 import socket
 import time
-import settings
+import config
 import string
 import datetime
 import ephem
@@ -74,7 +74,7 @@ def shutdown(sock, datafile, tmaxa, tmaxt, tmid):	# shutdown routine, close file
 		else:
             		updcmd="update RECEIVERS SET idrec=?, descri=?, lati=?, longi=?, alti=? where idrec=?"	# SQL command to execute: UPDATE
             		curs.execute(updcmd, (key, gid, lati, long, alti, key))
-	    print "Added STATION: ==> ", key, gid, fslla[key], fsllo[key], fslal[key] 
+	    #print "Added STATION: ==> ", key, gid, fslla[key], fsllo[key], fslal[key] 
                                         # report now the maximun altitude for the day
     if tmid[3:9] in kglid.kglid:        # if it is a known glider ???
         gid=kglid.kglid[tmid[3:9]]      # report the registration
@@ -84,7 +84,7 @@ def shutdown(sock, datafile, tmaxa, tmaxt, tmid):	# shutdown routine, close file
     conn.commit()			# commit the DB updates
     conn.close()			# close the database
     local_time = datetime.datetime.now() # report date and time now
-    print "Time now:", local_time
+    print "Time now:", local_time, " Local time."
     return				# job done
 
 #########################################################################
@@ -130,6 +130,18 @@ def get_station(data):
     	station=station.upper()                 # translate to uppercase
     	return (station)
 ########################################################################
+def chkfilati(latitude,  flatil, flatiu):
+	if (flatil == 0.0):
+		return (False)
+	if (flatil > 0):			# northern hemisphere
+        	if (latitude < flatil or latitude > flatiu ):
+			return (True)           
+	else:                               	# southern hemisfere
+                if (latitude > flatil or latitude < flatiu ):
+			return (True)           
+	return(False)
+########################################################################
+########################################################################
 
 fid=  {'NONE  ' : 0}                    # FLARM ID list
 fsta= {'NONE  ' : 'NONE  '}             # STATION ID list
@@ -151,24 +163,21 @@ fslod={'NONE  ' : (0.0, 0.0)}           # station location - tuple
 fsmax={'NONE  ' : 0.0}                  # maximun coverage
 fsalt={'NONE  ' : 0}                    # maximun altitude
 
-lastp_lati={"LECD" : +42.38695}         # the dummy competitor
-lastp_long={"LECD" : +1.86843}          # the dummy competitor
-lastp_alti={"LECD" : +1105.8144}        # the dummy competitor
 # --------------------------------------#
-MySQL=True
-DBhost   =settings.DBhost
-DBuser   =settings.DBuser
-DBpasswd =settings.DBpasswd
-DBname   =settings.DBname
+MySQL    =config.MySQL
+DBhost   =config.DBhost
+DBuser   =config.DBuser
+DBpasswd =config.DBpasswd
+DBname   =config.DBname
+DBase=config.DBpath+'SWiface.db'	# Data base used
 # --------------------------------------#
-DBase=settings.DBpath+'SWiface.db'	# Data base used
 if (MySQL):
 	conn=MySQLdb.connect(host=DBhost, user=DBuser, passwd=DBpasswd, db=DBname)
 else:
 	conn=sqlite3.connect(DBase)	# connect with the database
 
 curs=conn.cursor()                      # set the cursor
-date=datetime.datetime.now()            # get the date
+date=datetime.datetime.utcnow()         # get the date
 dte=date.strftime("%y%m%d")             # today's date
 #
 #-----------------------------------------------------------------
@@ -187,14 +196,14 @@ if (MySQL):
 	print "MySQL: Database:", DBname, " at Host:", DBhost
 else:
 	print "Database: ",  DBase
-print "Date: ", date
-location.lat, location.lon = settings.FLOGGER_LATITUDE, settings.FLOGGER_LONGITUDE
+print "Date: ", date, "at:", socket.gethostname()
+location.lat, location.lon = config.FLOGGER_LATITUDE, config.FLOGGER_LONGITUDE
 date = datetime.datetime.now()
 next_sunrise = location.next_rising(ephem.Sun(), date)
 next_sunset = location.next_setting(ephem.Sun(), date)
 print "Sunrise today is at: ", next_sunrise, " UTC "
 print "Sunset  today is at: ", next_sunset,  " UTC "
-print "Time now is: ", date
+print "Time now is: ", date, " Local time"
 
 prtreq =  sys.argv[1:]
 if prtreq and prtreq[0] == 'prt':
@@ -204,12 +213,12 @@ else:
     
 # create socket & connect to server
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-sock.connect((settings.APRS_SERVER_HOST, settings.APRS_SERVER_PORT))
+sock.connect((config.APRS_SERVER_HOST, config.APRS_SERVER_PORT))
 print "Socket sock connected"
  
 # logon to OGN APRS network    
 
-login = 'user %s pass %s vers Silent Wings-Interface 1.0 %s'  % (settings.APRS_USER, settings.APRS_PASSCODE , settings.APRS_FILTER_DETAILS)
+login = 'user %s pass %s vers Silent Wings-Interface 1.0 %s'  % (config.APRS_USER, config.APRS_PASSCODE , config.APRS_FILTER_DETAILS)
 sock.send(login)    
  
 # Make the connection to the server
@@ -221,7 +230,7 @@ libfap.fap_init()
 start_time = time.time()
 local_time = datetime.datetime.now()
 fl_date_time = local_time.strftime("%y%m%d")
-OGN_DATA = settings.DBpath + "DATA" + fl_date_time+'.log'
+OGN_DATA = config.DBpath + "DATA" + fl_date_time+'.log'
 print "OGN data file is: ", OGN_DATA
 datafile = open (OGN_DATA, 'a')
 keepalive_count = 1
@@ -236,7 +245,7 @@ location = ephem.Observer()
 location.pressure = 0
 location.horizon = '-0:34'	# Adjustments for angle to horizon
 
-location.lat, location.lon = settings.FLOGGER_LATITUDE, settings.FLOGGER_LONGITUDE
+location.lat, location.lon = config.FLOGGER_LATITUDE, config.FLOGGER_LONGITUDE
 date = datetime.datetime.now()
 next_sunrise = location.next_rising(ephem.Sun(), date)
 next_sunset = location.next_setting(ephem.Sun(), date)
@@ -320,6 +329,7 @@ try:
             dst_callsign = get_dst_callsign(packet)
             destination  = get_destination(packet)
             header       = get_header(packet)
+	    data=packet_str
             if prt:
                 print 'Packet returned is: ', packet_str
                 print 'Callsign is: ', callsign, 'DST CallSign:', dst_callsign, 'Dest: ', destination, 'header: ', header
@@ -337,8 +347,16 @@ try:
                    fslod[id]=(latitude, longitude) # save the location of the station
                    fsmax[id]=0.0                # initial coverage zero
                    fsalt[id]=0                  # initial coverage zero
+                   tempC=gdatal(data, "C ")        # temperature
+                   if tempC == ' ':
+                            temp = -99.9
+                   else:
+                            temp=float(tempC)
+                   version=gdatar(data, " v0.")    # version
+                   cpu=float(gdatar(data,"CPU:"))  # CPU usage
+                   rf=gdatar(data, "RF:").rstrip() # RF noise
 		   if True :			# prt
-		   	print "===>STA:", id, latitude, longitude, altitude
+		   	print "===>STA:", id, latitude, longitude, altitude, version, temp, "C", cpu, "%", rf
                 continue                           # go for the next record
 
 	    if path == 'qAC':
@@ -350,19 +368,13 @@ try:
             else:
 		continue 			# nothing else to do
 	    # filter by latitude
-	    if settings.FILTER_LATI1 > 0:	# if we are in the norther hemisfere
-            	if ( latitude < settings.FILTER_LATI1 or latitude > settings.FILTER_LATI2 ):
-			continue		# if is not within our latitude ignore the data
-	    else: 				# southern hemisfere
-            	if ( latitude > settings.FILTER_LATI1 or latitude < settings.FILTER_LATI2 ):
+	    if config.FILTER_LATI1 > 0:	# if we are in the norther hemisfere
+	    	if (chkfilati(latitude, config.FILTER_LATI1, config.FILTER_LATI2) and chkfilati(latitude, config.FILTER_LATI3, config.FILTER_LATI4)): 
 			continue		# if is not within our latitude ignore the data
 	    if (blackhole(longitude, latitude)):
 		print "BH:", id, longitude, latitude, date
 		continue			# if is not within our latitude ignore the data
             fid[id] +=1                         # increase the number of records read
-	    lastp_lati[id]=latitude		# update the last knoow position of the glider
-	    lastp_long[id]=longitude		# update the last knoow position of the glider
-	    lastp_alti[id]=altitude		# update the last knoow position of the glider
             if altitude >= fmaxa[id]:
                 fmaxa[id] = altitude
                 if altitude > tmaxa and (not spanishsta(id) and not frenchsta(id)):
@@ -372,7 +384,6 @@ try:
                         tmsta = station         # station capturing the max altitude
             if speed >= fmaxs[id]:
                 fmaxs[id] = speed
-	    data=packet_str
             p1=data.find(':/')+2                # scan for the body of the APRS message
             hora=data[p1:p1+6]                  # get the GPS time in UTC
             long=data[p1+7:p1+11]+data[p1+12:p1+14]+'0'+data[p1+14]         # get the longitude
@@ -385,14 +396,15 @@ try:
 	    else:
             	uniqueid     = data[p2+7:p2+17] # get the unique id
 		extpos=' '
-            p3=data.find('fpm')                 # scan for the rate of climb
-            roclimb      = data[p3-3:p3]        # get the rate of climb
-            p4=data.find('rot')                 # scan for the rate of climb
-            rot      = data[p4-3:p4]            # get the rate of turn
-            p5=data.find('dB')                  # scan for the sensitivity
-            sensitivity = data[p5-4:p5]         # get the sensitivity
+            
+	    roclimb      = gdatal(data,"fpm ")  # get the rate of climb
+            rot          = gdatal(data,"rot ")  # get the rate of turn
+            sensitivity  = gdatal(data,"dB ")   # get the sensitivity
             p6=data.find('gps')                 # scan for gps info
-            gps      = data[p6:p6+6]            # get the gps
+            if p6 != -1:
+                        gps      = data[p6+3:p6+6]      # get the gps
+            else:
+                        gps      = " "
             altim=altitude                      # the altitude in meters
             if altim > 15000 or altim < 0:
                 altim=0

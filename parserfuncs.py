@@ -115,3 +115,28 @@ def frenchsta(station):                # return true if is an French station
     else:
         return False
 ######################################################################### 
+def gdatal (data, typer):               # get data on the left
+        p=data.find(typer)              # scan for the type requested
+        if p == -1:
+                return (" ")
+        pb=p
+        while (data[pb] != ' '):
+                   pb -= 1
+        ret=data[pb:p]                  # return the data requested
+        return(ret)
+########################################################################
+def gdatar (data, typer):               # get data on the  right
+        p=data.find(typer)              # scan for the type requested
+        if p == -1:
+                return (" ")
+        p=p+len(typer)
+        pb=p
+        max=len(data)-1
+        while (pb < max):
+                if data[pb] == ' ' or data[pb] == '\n':
+                        break
+                pb += 1
+        ret=data[p:pb]                  # return the data requested
+        return(ret)
+########################################################################
+
