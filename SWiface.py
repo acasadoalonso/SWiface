@@ -251,12 +251,12 @@ try:
 
     while True:
         location.date = ephem.Date(datetime.datetime.utcnow())
-        date = datetime.datetime.now()
+        date = datetime.datetime.utcnow()
         s = ephem.Sun()
         s.compute(location)
         twilight = -6 * ephem.degree    # Defn of Twilight is: Sun is 6, 12, 18 degrees below horizon (civil, nautical, astronomical)
         if s.alt < twilight:
-            print "At Sunset now ... Time is:", date, " Next sunset is: ", next_sunset,  " UTC"
+            print "At Sunset now ... Time is:", date, "UTC ... Next sunset is: ", next_sunset,  " UTC"
             shutdown(sock, datafile, tmaxa, tmaxt,tmid)
             print "At Sunset ... Exit"
             exit(0)
