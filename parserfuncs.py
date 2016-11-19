@@ -76,6 +76,11 @@ def get_otime(packet):
     except ValueError:
         otime = 0
     return otime
+def get_station(data):
+        scolon=data.find(':')                   # find the colon
+        station=data[19:scolon]                 # get the station identifier
+        station=station.upper()                 # translate to uppercase
+        return (station)
 #######---------------------------------------------------------------------------------------------------------
 
 def spanishsta(station):                # return true if is an Spanish station

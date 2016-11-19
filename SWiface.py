@@ -9,7 +9,6 @@ from ctypes import *
 from datetime import datetime
 import socket
 import time
-import config
 import string
 import datetime
 import ephem
@@ -21,10 +20,8 @@ import kglid                                # import the list on known gliders
 from   parserfuncs import *                 # the ogn/ham parser functions 
 from   geopy.distance import vincenty       # use the Vincenty algorithm^M
 from   geopy.geocoders import GeoNames      # use the Nominatim as the geolocator^M
-if (config.MySQL):
-	import MySQLdb                      # the SQL data base routines^M
-else:
-	import sqlite3                      # the SQL data base routines^M
+import socket
+from configparser import ConfigParser
 
 #########################################################################
 def shutdown(sock, datafile, tmaxa, tmaxt, tmid):	# shutdown routine, close files and report on activity
@@ -95,9 +92,9 @@ def shutdown(sock, datafile, tmaxa, tmaxt, tmid):	# shutdown routine, close file
 def alive(first='no'):
 
         if (first == 'yes'):
-                alivefile = open ("OGN.alive", 'w') # create a file just to mark that we are alive
+                alivefile = open ("SW.alive", 'w') # create a file just to mark that we are alive
         else:
-                alivefile = open ("OGN.alive", 'a') # append a file just to mark that we are alive
+                alivefile = open ("SW.alive", 'a') # append a file just to mark that we are alive
         local_time = datetime.datetime.now()
         alivetime = local_time.strftime("%y-%m-%d %H:%M:%S")
         alivefile.write(alivetime+"\n") # write the time as control
@@ -145,6 +142,52 @@ def chkfilati(latitude,  flatil, flatiu):
 ########################################################################
 ########################################################################
 
+#----------------------ogn_SilentWingsInterface.py start-----------------------
+ 
+print "Start OGN Silent Wings Interface V1.2"
+print "====================================="
+
+
+
+#-------------------------------------
+# OGN-Silent Wings interface --- Settings 
+#-------------------------------------
+#
+#-------------------------------------
+# Setting values
+#-------------------------------------
+#
+hostname=socket.gethostname()
+print "Hostname:", hostname
+cfg=ConfigParser()
+cfg.read('/etc/local/SWSconfig.ini')
+print "Config.ini sections:", cfg.sections()
+
+APRS_SERVER_HOST 	= cfg.get('APRS', 'APRS_SERVER_HOST').strip("'")
+APRS_SERVER_PORT 	= int(cfg.get('APRS', 'APRS_SERVER_PORT'))
+APRS_USER        	= cfg.get('APRS', 'APRS_USER').strip("'")
+APRS_PASSCODE    	= int(cfg.get('APRS', 'APRS_PASSCODE'))			# See http://www.george-smart.co.uk/wiki/APRS_Callpass
+APRS_FILTER_DETAILS 	= cfg.get('APRS', 'APRS_FILTER_DETAILS').strip("'") 
+APRS_FILTER_DETAILS	= APRS_FILTER_DETAILS + '\n '
+
+location_latitude   	= cfg.get('location', 'location_latitude').strip("'")
+location_longitude  	= cfg.get('location', 'location_longitud').strip("'")
+FILTER_LATI1     	= float(cfg.get('filter', 'FILTER_LATI1'))
+FILTER_LATI2     	= float(cfg.get('filter', 'FILTER_LATI2'))
+FILTER_LATI3     	= float(cfg.get('filter', 'FILTER_LATI3'))
+FILTER_LATI4     	= float(cfg.get('filter', 'FILTER_LATI4'))
+DBpath			= cfg.get('server', 'DBpath').strip("'")
+MySQL			= cfg.get('server', 'MySQL')
+DBhost   		= cfg.get('server', 'DBhost').strip("'")
+DBuser   		= cfg.get('server', 'DBuser').strip("'")
+DBpasswd 		= cfg.get('server', 'DBpasswd').strip("'")
+DBname   		= cfg.get('server', 'DBname').strip("'")
+# --------------------------------------#
+assert len(APRS_USER) > 3 and len(str(APRS_PASSCODE)) > 0, 'Please set APRS_USER and APRS_PASSCODE in settings.py.'
+print "Config server values:", DBpath, MySQL, DBhost, DBuser, DBpasswd, DBname
+print "Config APRS values:", APRS_SERVER_HOST, APRS_SERVER_PORT, APRS_USER, APRS_PASSCODE, APRS_FILTER_DETAILS
+print "Config location and filter values:", location_latitude, location_longitude, FILTER_LATI1, FILTER_LATI2,FILTER_LATI3,FILTER_LATI4
+# --------------------------------------#
 fid=  {'NONE  ' : 0}                    # FLARM ID list
 fsta= {'NONE  ' : 'NONE  '}             # STATION ID list
 fmaxa={'NONE  ' : 0}                    # maximun altitude
@@ -166,12 +209,12 @@ fsmax={'NONE  ' : 0.0}                  # maximun coverage
 fsalt={'NONE  ' : 0}                    # maximun altitude
 
 # --------------------------------------#
-MySQL    =config.MySQL
-DBhost   =config.DBhost
-DBuser   =config.DBuser
-DBpasswd =config.DBpasswd
-DBname   =config.DBname
-DBase=config.DBpath+'SWiface.db'	# Data base used
+DBase=DBpath+'SWiface.db'		# Data base used
+MySQL=False
+if (MySQL):
+	import MySQLdb                  # the SQL data base routines^M
+else:
+	import sqlite3                  # the SQL data base routines^M
 # --------------------------------------#
 if (MySQL):
 	conn=MySQLdb.connect(host=DBhost, user=DBuser, passwd=DBpasswd, db=DBname)
@@ -190,16 +233,12 @@ location = ephem.Observer()
 location.pressure = 0
 location.horizon = '-0:34'      # Adjustments for angle to horizon
 
-#----------------------ogn_SilentWingsInterface.py start-----------------------
- 
-print "Start OGN Silent Wings Interface V1.2"
-print "====================================="
 if (MySQL):
 	print "MySQL: Database:", DBname, " at Host:", DBhost
 else:
 	print "Database: ",  DBase
 print "Date: ", date, "at:", socket.gethostname()
-location.lat, location.lon = config.location_latitude, config.location_longitude
+location.lat, location.lon = location_latitude, location_longitude
 date = datetime.datetime.now()
 next_sunrise = location.next_rising(ephem.Sun(), date)
 next_sunset = location.next_setting(ephem.Sun(), date)
@@ -212,15 +251,15 @@ if prtreq and prtreq[0] == 'prt':
     prt = True
 else:
     prt = False
-    
+ 
 # create socket & connect to server
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-sock.connect((config.APRS_SERVER_HOST, config.APRS_SERVER_PORT))
+sock.connect((APRS_SERVER_HOST, APRS_SERVER_PORT))
 print "Socket sock connected"
  
 # logon to OGN APRS network    
 
-login = 'user %s pass %s vers Silent Wings-Interface 1.0 %s'  % (config.APRS_USER, config.APRS_PASSCODE , config.APRS_FILTER_DETAILS)
+login = 'user %s pass %s vers Silent Wings-Interface 1.0 %s'  % (APRS_USER, APRS_PASSCODE , APRS_FILTER_DETAILS)
 sock.send(login)    
  
 # Make the connection to the server
@@ -232,7 +271,7 @@ libfap.fap_init()
 start_time = time.time()
 local_time = datetime.datetime.now()
 fl_date_time = local_time.strftime("%y%m%d")
-OGN_DATA = config.DBpath + "DATA" + fl_date_time+'.log'
+OGN_DATA = DBpath + "DATA" + fl_date_time+'.log'
 print "OGN data file is: ", OGN_DATA
 datafile = open (OGN_DATA, 'a')
 keepalive_count = 1
@@ -303,7 +342,8 @@ try:
                 break
             else:
                 continue
-
+	if prt:
+		print "DATA:", packet_str
     	ix=packet_str.find('>')
     	cc= packet_str[0:ix]
     	cc=cc.upper()
@@ -313,6 +353,9 @@ try:
         if  len(packet_str) > 0 and packet_str[0] <> "#":
             callsign=packet[0].src_callsign     # get the call sign FLARM ID
             id=callsign                         # id
+
+	    if (packet_str[ix+1:ix+11] == "APRS,RELAY*"):
+			print "relay==>", id,":::", packet_str
             longitude = get_longitude(packet)
             latitude  = get_latitude(packet)
             altitude  = get_altitude(packet)
@@ -362,8 +405,8 @@ try:
             else:
 		continue 			# nothing else to do
 	    # filter by latitude
-	    if config.FILTER_LATI1 > 0:	# if we are in the norther hemisfere
-	    	if (chkfilati(latitude, config.FILTER_LATI1, config.FILTER_LATI2) and chkfilati(latitude, config.FILTER_LATI3, config.FILTER_LATI4)): 
+	    if FILTER_LATI1 > 0:	# if we are in the norther hemisfere
+	    	if (chkfilati(latitude, FILTER_LATI1, FILTER_LATI2) and chkfilati(latitude, FILTER_LATI3, FILTER_LATI4)): 
 			continue		# if is not within our latitude ignore the data
 	    if (blackhole(longitude, latitude)):
 		print "BH:", id, longitude, latitude, date
@@ -428,8 +471,8 @@ try:
                 except:
                         print ">>>MySQL error:", nrec, cin, addcmd
             else:
-                addcmd="insert into OGNDATA values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"^M
-                curs.execute(addcmd, (id, dte, hora, station, latitude, longitude, altim, speed, course, roclimb, rot,sensitivity, gps, uniqueid, dist, extpos))^M
+                addcmd="insert into OGNDATA values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"
+                curs.execute(addcmd, (id, dte, hora, station, latitude, longitude, altim, speed, course, roclimb, rot,sensitivity, gps, uniqueid, dist, extpos))
 
             conn.commit()                       # commit the DB updates
 	    cin +=1                             # one more record read
