@@ -17,11 +17,12 @@ import sys
 import os
 import signal
 import kglid                                # import the list on known gliders
+import socket
 from   parserfuncs import *                 # the ogn/ham parser functions 
 from   geopy.distance import vincenty       # use the Vincenty algorithm^M
 from   geopy.geocoders import GeoNames      # use the Nominatim as the geolocator^M
-import socket
 from configparser import ConfigParser
+configfile='/etc/local/SWSconfig.ini'	    # location of the configuration file
 
 #########################################################################
 def shutdown(sock, datafile, tmaxa, tmaxt, tmid):	# shutdown routine, close files and report on activity
@@ -159,34 +160,41 @@ print "====================================="
 #
 hostname=socket.gethostname()
 print "Hostname:", hostname
-cfg=ConfigParser()
-cfg.read('/etc/local/SWSconfig.ini')
-print "Config.ini sections:", cfg.sections()
+cfg=ConfigParser()								# get the configuration parameters
+cfg.read(configfile)								# reading it for the configuration file
+print "Config.ini sections:", cfg.sections()					# report the different sections
 
-APRS_SERVER_HOST 	= cfg.get('APRS', 'APRS_SERVER_HOST').strip("'")
+APRS_SERVER_HOST 	= cfg.get    ('APRS', 'APRS_SERVER_HOST').strip("'")
 APRS_SERVER_PORT 	= int(cfg.get('APRS', 'APRS_SERVER_PORT'))
-APRS_USER        	= cfg.get('APRS', 'APRS_USER').strip("'")
+APRS_USER        	= cfg.get    ('APRS', 'APRS_USER').strip("'")
 APRS_PASSCODE    	= int(cfg.get('APRS', 'APRS_PASSCODE'))			# See http://www.george-smart.co.uk/wiki/APRS_Callpass
-APRS_FILTER_DETAILS 	= cfg.get('APRS', 'APRS_FILTER_DETAILS').strip("'") 
+APRS_FILTER_DETAILS 	= cfg.get    ('APRS', 'APRS_FILTER_DETAILS').strip("'") 
 APRS_FILTER_DETAILS	= APRS_FILTER_DETAILS + '\n '
 
 location_latitude   	= cfg.get('location', 'location_latitude').strip("'")
 location_longitude  	= cfg.get('location', 'location_longitud').strip("'")
+
 FILTER_LATI1     	= float(cfg.get('filter', 'FILTER_LATI1'))
 FILTER_LATI2     	= float(cfg.get('filter', 'FILTER_LATI2'))
 FILTER_LATI3     	= float(cfg.get('filter', 'FILTER_LATI3'))
 FILTER_LATI4     	= float(cfg.get('filter', 'FILTER_LATI4'))
+
 DBpath			= cfg.get('server', 'DBpath').strip("'")
-MySQL			= cfg.get('server', 'MySQL')
+MySQLtext		= cfg.get('server', 'MySQL').strip("'")
 DBhost   		= cfg.get('server', 'DBhost').strip("'")
 DBuser   		= cfg.get('server', 'DBuser').strip("'")
 DBpasswd 		= cfg.get('server', 'DBpasswd').strip("'")
 DBname   		= cfg.get('server', 'DBname').strip("'")
+if (MySQLtext == 'True'):
+	MySQL = True
+else:
+	MySQL = False
 # --------------------------------------#
 assert len(APRS_USER) > 3 and len(str(APRS_PASSCODE)) > 0, 'Please set APRS_USER and APRS_PASSCODE in settings.py.'
-print "Config server values:", DBpath, MySQL, DBhost, DBuser, DBpasswd, DBname
-print "Config APRS values:", APRS_SERVER_HOST, APRS_SERVER_PORT, APRS_USER, APRS_PASSCODE, APRS_FILTER_DETAILS
-print "Config location and filter values:", location_latitude, location_longitude, FILTER_LATI1, FILTER_LATI2,FILTER_LATI3,FILTER_LATI4
+										# report the configuration paramenters
+print "Config server values:", 			MySQL, DBhost, DBuser, DBpasswd, DBname, DBpath 
+print "Config APRS values:", 			APRS_SERVER_HOST, APRS_SERVER_PORT, APRS_USER, APRS_PASSCODE, APRS_FILTER_DETAILS
+print "Config location and filter values:", 	location_latitude, location_longitude, "FILTER:", FILTER_LATI1, FILTER_LATI2,FILTER_LATI3,FILTER_LATI4
 # --------------------------------------#
 fid=  {'NONE  ' : 0}                    # FLARM ID list
 fsta= {'NONE  ' : 'NONE  '}             # STATION ID list
@@ -210,7 +218,7 @@ fsalt={'NONE  ' : 0}                    # maximun altitude
 
 # --------------------------------------#
 DBase=DBpath+'SWiface.db'		# Data base used
-MySQL=False
+#MySQL=False
 if (MySQL):
 	import MySQLdb                  # the SQL data base routines^M
 else:
@@ -398,10 +406,9 @@ try:
 
 	    if path == 'qAC':
 		continue			# the case of the TCP IP as well
-            if path == 'qAS':                   # if std records
+            if path == 'qAS' or path=='RELAY*': # if std records
 		station=get_station(packet_str) 
                 fsta[id]=station                # init the station receiver
-		    
             else:
 		continue 			# nothing else to do
 	    # filter by latitude
