@@ -44,11 +44,17 @@ def shutdown(sock, datafile, tmaxa, tmaxt, tmid):	# shutdown routine, close file
         else:
             if key != None and key[3:9] in kglid.kglid: # if it is a known glider ???                                       
             	gid=kglid.kglid[key[3:9]]   # report the registration
-
+	if key in fsmax:
+	    	maxd=fsmax[key]
+	else:
+		if key in  fmaxd:
+	    		maxd=fmaxd[key] 
+		else:
+	    		maxd=-1.0
         if fmaxs[key] > 0:
-            print key, '=>', fsta[key], gid, fid[key], "Max alt:", fmaxa[key], "Max speed:", fmaxs[key] # report FLARM ID, station used, registration and record counter
+            print key, '=>', fsta[key], gid, fid[key], "Max alt:", fmaxa[key], "Max speed:", fmaxs[key], "Max. distance:", maxd # report FLARM ID, station used, registration and record counter
         else:
-            print key, '=>', fsta[key], gid, fid[key], "Max alt:", fmaxa[key]
+            print key, '=>', fsta[key], gid, fid[key], "Max alt:", fmaxa[key], "Max. distance:", maxd
 
 	if key == fsta[key] and key != None and key != "NONE  ":# in case of an receiver station , update the database with the coordinates
 	    lati=fslla[key] 		# latitude
@@ -80,7 +86,7 @@ def shutdown(sock, datafile, tmaxa, tmaxt, tmid):	# shutdown routine, close file
         gid=kglid.kglid[tmid[3:9]]      # report the registration
     else:
         gid=tmid                        # use the ID instead       
-    print "Maximun altitude for the day:", tmaxa, ' meters MSL at:', tmaxt, 'by:', gid, 'Station:', tmsta
+    print "Maximun altitude for the day:", tmaxa, ' meters MSL at:', tmaxt, 'by:', gid, 'Station:', tmsta, "Max. distance:", tmaxd
     conn.commit()			# commit the DB updates
     conn.close()			# close the database
     local_time = datetime.datetime.now() # report date and time now
@@ -145,7 +151,7 @@ def chkfilati(latitude,  flatil, flatiu):
 
 #----------------------ogn_SilentWingsInterface.py start-----------------------
  
-print "Start OGN Silent Wings Interface V1.2"
+print "Start OGN Silent Wings Interface V1.3"
 print "====================================="
 
 
@@ -185,6 +191,7 @@ DBhost   		= cfg.get('server', 'DBhost').strip("'")
 DBuser   		= cfg.get('server', 'DBuser').strip("'")
 DBpasswd 		= cfg.get('server', 'DBpasswd').strip("'")
 DBname   		= cfg.get('server', 'DBname').strip("'")
+
 if (MySQLtext == 'True'):
 	MySQL = True
 else:
@@ -199,6 +206,7 @@ print "Config location and filter values:", 	location_latitude, location_longitu
 fid=  {'NONE  ' : 0}                    # FLARM ID list
 fsta= {'NONE  ' : 'NONE  '}             # STATION ID list
 fmaxa={'NONE  ' : 0}                    # maximun altitude
+fmaxd={'NONE  ' : 0}                    # maximun distance
 fmaxs={'NONE  ' : 0}                    # maximun speed
 cin   = 0                               # input record counter
 cout  = 0                               # output file counter
@@ -206,6 +214,7 @@ i     = 0                               # loop counter
 err   = 0
 tmaxa = 0                               # maximun altitude for the day
 tmaxt = 0                               # time at max altitude
+tmaxd = 0                               # maximun distance
 tmid  = 'NONE     '                     # glider ID obtaining max altitude
 tmsta = '         '                     # station capturing max altitude
 
@@ -218,7 +227,6 @@ fsalt={'NONE  ' : 0}                    # maximun altitude
 
 # --------------------------------------#
 DBase=DBpath+'SWiface.db'		# Data base used
-#MySQL=False
 if (MySQL):
 	import MySQLdb                  # the SQL data base routines^M
 else:
@@ -383,15 +391,19 @@ try:
                 fsta[id]=id                     # init the station receiver
                 fmaxa[id]=altitude              # maximun altitude
                 fmaxs[id]=speed                 # maximun speed
+                fmaxd[id]=0.0	                # maximun distance
                 cout += 1                       # one more file to create
+	    else:
+		fid[id] += 1			# increase the counter
+
             if path == 'TCPIP*':		# handle the TCPIP
                 if not id in fslod :
                    fslla[id]=latitude		# save the location of the station
                    fsllo[id]=longitude		# save the location of the station
                    fslal[id]=altitude		# save the location of the station
                    fslod[id]=(latitude, longitude) # save the location of the station
-                   fsmax[id]=0.0                # initial coverage zero
-                   fsalt[id]=0                  # initial coverage zero
+                   fsmax[id]=0.0                # initial coverage distance is zero
+                   fsalt[id]=0                  # initial coverage altitude is zero
                    tempC=gdatal(data, "C ")        # temperature
                    if tempC == ' ':
                             temp = -99.9
@@ -418,7 +430,7 @@ try:
 	    if (blackhole(longitude, latitude)):
 		print "BH:", id, longitude, latitude, date
 		continue			# if is not within our latitude ignore the data
-            fid[id] +=1                         # increase the number of records read
+ 
             if altitude >= fmaxa[id]:
                 fmaxa[id] = altitude
                 if altitude > tmaxa and (not spanishsta(id) and not frenchsta(id)):
@@ -453,13 +465,17 @@ try:
             if station in fslod:                # if we have the station yet
                 distance=vincenty((latitude, longitude), fslod[station]).km    # distance to the station
                 dist=distance
-                if distance > 150.0:
+                if distance > 250.0:
                     print "distcheck: ", distance, data
                 elif distance > fsmax[station]: # if higher distance
                     fsmax[station]=distance     # save the new distance
                 if altim > fsalt[station]:  	# if higher altitude
                     fsalt[station]=altim    	# save the new altitude
-            if altim > tmaxa:
+		if distance > tmaxd:		# if exceed maximun distance 
+		    tmaxd=distance
+		if distance >fmaxd[id]:
+		    fmaxd[id]=distance
+            if altim > tmaxa:			# if exceed the maximun altitude
                 tmaxa = altim               	# maximum altitude for the day
                 tmaxt = hora                	# and time
                 tmid  = id                  	# who did it
