@@ -85,12 +85,15 @@ def shutdown(sock, datafile, tmaxa, tmaxt, tmid):	# shutdown routine, close file
     if tmid[3:9] in kglid.kglid:        # if it is a known glider ???
         gid=kglid.kglid[tmid[3:9]]      # report the registration
     else:
-        gid=tmid                        # use the ID instead       
-    print "Maximun altitude for the day:", tmaxa, ' meters MSL at:', tmaxt, 'by:', gid, 'Station:', tmsta, "Max. distance:", tmaxd
+        gid=tmid                        # use the ID instead   
+    for key in fsmax:                   # report data
+        print "Station: ", key, fsmax[key], "Kms."    
+    print "Maximun altitude for the day:", tmaxa, ' meters MSL at:', tmaxt, 'by:', gid, 'Station:', tmsta, "Max. distance:", tmaxd, "by:", tmstd
     conn.commit()			# commit the DB updates
     conn.close()			# close the database
     local_time = datetime.datetime.now() # report date and time now
-    print "Time now:", local_time, " Local time."
+    location.date = ephem.Date(datetime.datetime.utcnow())
+    print "Local Time (server) now is:", local_time, " and UTC time at location is:", location.date, "UTC."
     return				# job done
 
 #########################################################################
@@ -211,12 +214,13 @@ fmaxs={'NONE  ' : 0}                    # maximun speed
 cin   = 0                               # input record counter
 cout  = 0                               # output file counter
 i     = 0                               # loop counter
-err   = 0
+nerr  = 0
 tmaxa = 0                               # maximun altitude for the day
 tmaxt = 0                               # time at max altitude
 tmaxd = 0                               # maximun distance
 tmid  = 'NONE     '                     # glider ID obtaining max altitude
 tmsta = '         '                     # station capturing max altitude
+tmstd = '         '                     # station capturing max distance
 
 fsllo={'NONE  ' : 0.0}      		# station location longitude
 fslla={'NONE  ' : 0.0}      		# station location latitude
@@ -305,13 +309,10 @@ location.horizon = '-0:34'	# Adjustments for angle to horizon
 try:
 
     while True:
-        location.date = ephem.Date(datetime.datetime.utcnow())
-        date = datetime.datetime.utcnow()
-        s = ephem.Sun()
-        s.compute(location)
-        twilight = -6 * ephem.degree    # Defn of Twilight is: Sun is 6, 12, 18 degrees below horizon (civil, nautical, astronomical)
-        if s.alt < twilight:
-            print "At Sunset now ... Time is:", date, "UTC ... Next sunset is: ", next_sunset,  " UTC"
+        location.date = ephem.Date(datetime.datetime.utcnow())	# check the localtime for this location...
+        date =                     datetime.datetime.utcnow()	# locat time of the server
+        if location.date > next_sunset:				# if it is past the sunset ??
+            print "At Sunset now ... Time is (server):", date, "UTC. Location time:", location.date, "UTC ... Next sunset is: ", next_sunset,  " UTC"
             shutdown(sock, datafile, tmaxa, tmaxt,tmid)
             print "At Sunset ... Exit"
             exit(0)
@@ -350,8 +351,8 @@ try:
         # A zero length line should not be return if keepalives are being sent
         # A zero length line will only be returned after ~30m if keepalives are not sent
         if len(packet_str) == 0:
-            err +=1
-            if err > 9:
+            nerr +=1
+            if nerr > 25:
                 print "Read returns zero length string. Failure.  Orderly closeout"
                 date = datetime.datetime.now()
                 print "UTC now is: ", date
@@ -472,7 +473,8 @@ try:
                 if altim > fsalt[station]:  	# if higher altitude
                     fsalt[station]=altim    	# save the new altitude
 		if distance > tmaxd:		# if exceed maximun distance 
-		    tmaxd=distance
+		    tmaxd=distance		# maximun distance today
+		    tmstd=station		# station with the maximun distance
 		if distance >fmaxd[id]:
 		    fmaxd[id]=distance
             if altim > tmaxa:			# if exceed the maximun altitude
@@ -507,7 +509,10 @@ except KeyboardInterrupt:
 
 print 'Counters:', cin, cout                # report number of records read and files generated
 shutdown(sock, datafile, tmaxa, tmaxt,tmid)
-print "Exit now ..."
+location.date = ephem.Date(datetime.datetime.utcnow())
+print "Exit now ...", location.date
+if nerr > 0:
+	print "Number of errors:", nerr
 exit(1)
 
 

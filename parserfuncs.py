@@ -78,7 +78,7 @@ def get_otime(packet):
     return otime
 def get_station(data):
         scolon=data.find(':')                   # find the colon
-        station=data[19:scolon]                 # get the station identifier
+        station=data[data.find("qAS")+4:scolon] # get the station identifier
         station=station.upper()                 # translate to uppercase
         return (station)
 #######---------------------------------------------------------------------------------------------------------
