@@ -25,7 +25,7 @@ from configparser import ConfigParser
 configfile='/etc/local/SWSconfig.ini'	    # location of the configuration file
 
 #########################################################################
-def shutdown(sock, datafile, tmaxa, tmaxt, tmid):	# shutdown routine, close files and report on activity
+def shutdown(sock, datafile, tmaxa, tmaxt, tmid, tmstd):	# shutdown routine, close files and report on activity
                                         # shutdown before exit
     libfap.fap_cleanup()                # close lifap in order to avoid memory leaks
     sock.shutdown(0)                    # shutdown the connection
@@ -115,7 +115,7 @@ def alive(first='no'):
 def signal_term_handler(signal, frame):
     print 'got SIGTERM ... shutdown orderly'
     libfap.fap_cleanup()                        # close libfap
-    shutdown(sock, datafile, tmaxa, tmaxt,tmid) # shutdown orderly
+    shutdown(sock, datafile, tmaxa, tmaxt,tmid, tmstd) # shutdown orderly
     sys.exit(0)
 
 # ......................................................................# 
@@ -313,7 +313,7 @@ try:
         date =                     datetime.datetime.utcnow()	# locat time of the server
         if location.date > next_sunset:				# if it is past the sunset ??
             print "At Sunset now ... Time is (server):", date, "UTC. Location time:", location.date, "UTC ... Next sunset is: ", next_sunset,  " UTC"
-            shutdown(sock, datafile, tmaxa, tmaxt,tmid)
+            shutdown(sock, datafile, tmaxa, tmaxt,tmid, tmstd)
             print "At Sunset ... Exit"
             exit(0)
 
@@ -508,7 +508,7 @@ except KeyboardInterrupt:
     pass
 
 print 'Counters:', cin, cout                # report number of records read and files generated
-shutdown(sock, datafile, tmaxa, tmaxt,tmid)
+shutdown(sock, datafile, tmaxa, tmaxt,tmid, tmstd)
 location.date = ephem.Date(datetime.datetime.utcnow())
 print "Exit now ...", location.date
 if nerr > 0:
