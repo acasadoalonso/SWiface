@@ -494,7 +494,7 @@ try:
                 try:
                         curs.execute(addcmd)
                 except:
-                        print ">>>MySQL error:", nrec, cin, addcmd
+                        print ">>>MySQL error:", cin, addcmd
             else:
                 addcmd="insert into OGNDATA values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"
                 curs.execute(addcmd, (id, dte, hora, station, latitude, longitude, altim, speed, course, roclimb, rot,sensitivity, gps, uniqueid, dist, extpos))
