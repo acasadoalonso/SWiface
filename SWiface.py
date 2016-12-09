@@ -493,8 +493,12 @@ try:
                 	",'" + gps+ "','" + uniqueid+ "'," + str(dist)+ ",'" + extpos+ "')"
                 try:
                         curs.execute(addcmd)
-                except:
-                        print ">>>MySQL error:", cin, addcmd
+                except MySQLdb.Error, e:
+                        try:
+                                print ">>>MySQL Error [%d]: %s" % (e.args[0], e.args[1])
+                        except IndexError:
+                                print ">>>MySQL Error: %s" % str(e)
+                        print         ">>>MySQL error:", cin, addcmd
             else:
                 addcmd="insert into OGNDATA values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"
                 curs.execute(addcmd, (id, dte, hora, station, latitude, longitude, altim, speed, course, roclimb, rot,sensitivity, gps, uniqueid, dist, extpos))
