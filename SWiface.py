@@ -371,8 +371,8 @@ try:
             callsign=packet[0].src_callsign     # get the call sign FLARM ID
             id=callsign                         # id
 
-	    if (packet_str[ix+1:ix+11] == "APRS,RELAY*"):
-			print "relay==>", id,":::", packet_str
+	    #if (packet_str[ix+1:ix+11] == "APRS,RELAY*"):
+		#	print "relay==>", id,":::", packet_str
             longitude = get_longitude(packet)
             latitude  = get_latitude(packet)
             altitude  = get_altitude(packet)
