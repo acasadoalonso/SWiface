@@ -133,12 +133,6 @@ def blackhole(lati, long):
 	else:
 		return (True)
 ########################################################################
-def get_station(data):
-    	scolon=data.find(':')                   # find the colon
-    	station=data[19:scolon]                 # get the station identifier
-    	station=station.upper()                 # translate to uppercase
-    	return (station)
-########################################################################
 def chkfilati(latitude,  flatil, flatiu):
 	if (flatil == 0.0):
 		return (False)
@@ -485,11 +479,15 @@ try:
             if prt:
                 print 'Parsed data: POS: ', longitude, latitude, altitude,' Speed:',speed,' Course: ',course,' Path: ',path,' Type:', type
                 print roclimb, rot, sensitivity, gps, uniqueid, dist, extpos
+	    if rot== ' ':
+		rot=0
+	    if sensitivity == ' ':
+		sensitivity=0
             # write the DB record
 
 	    if (MySQL):
                 addcmd="insert into OGNDATA values ('" +id+ "','" + dte+ "','" + hora+ "','" + station+ "'," + str(latitude)+ "," + str(longitude)+ "," + str(altim)+ "," + str(speed)+ "," + \
-			str(course)+ "," + str(roclimb)+ "," +str( rot) + "," +str(sensitivity) + \
+			str(course)+ "," + str(roclimb)+ "," +str(rot) + "," +str(sensitivity) + \
                 	",'" + gps+ "','" + uniqueid+ "'," + str(dist)+ ",'" + extpos+ "')"
                 try:
                         curs.execute(addcmd)
