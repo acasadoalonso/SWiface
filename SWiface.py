@@ -10,7 +10,6 @@ from datetime import datetime
 import socket
 import time
 import string
-import datetime
 import ephem
 import pytz
 import sys
@@ -91,8 +90,8 @@ def shutdown(sock, datafile, tmaxa, tmaxt, tmid, tmstd):	# shutdown routine, clo
     print "Maximun altitude for the day:", tmaxa, ' meters MSL at:', tmaxt, 'by:', gid, 'Station:', tmsta, "Max. distance:", tmaxd, "by:", tmstd
     conn.commit()			# commit the DB updates
     conn.close()			# close the database
-    local_time = datetime.datetime.now() # report date and time now
-    location.date = ephem.Date(datetime.datetime.utcnow())
+    local_time = datetime.now() 	# report date and time now
+    location.date = ephem.Date(datetime.utcnow())
     print "Local Time (server) now is:", local_time, " and UTC time at location is:", location.date, "UTC."
     return				# job done
 
@@ -105,7 +104,7 @@ def alive(first='no'):
                 alivefile = open ("SW.alive", 'w') # create a file just to mark that we are alive
         else:
                 alivefile = open ("SW.alive", 'a') # append a file just to mark that we are alive
-        local_time = datetime.datetime.now()
+        local_time = datetime.now()
         alivetime = local_time.strftime("%y-%m-%d %H:%M:%S")
         alivefile.write(alivetime+"\n") # write the time as control
         alivefile.close()               # close the alive file
@@ -236,7 +235,7 @@ else:
 	conn=sqlite3.connect(DBase)	# connect with the database
 
 curs=conn.cursor()                      # set the cursor
-date=datetime.datetime.utcnow()         # get the date
+date=datetime.utcnow()         		# get the date
 dte=date.strftime("%y%m%d")             # today's date
 #
 #-----------------------------------------------------------------
@@ -253,7 +252,7 @@ else:
 	print "Database: ",  DBase
 print "Date: ", date, "at:", socket.gethostname()
 location.lat, location.lon = location_latitude, location_longitude
-date = datetime.datetime.now()
+date = datetime.now()
 next_sunrise = location.next_rising(ephem.Sun(), date)
 next_sunset = location.next_setting(ephem.Sun(), date)
 print "Sunrise today is at: ", next_sunrise, " UTC "
@@ -283,7 +282,7 @@ sock_file = sock.makefile()
 print "libfap_init"
 libfap.fap_init()
 start_time = time.time()
-local_time = datetime.datetime.now()
+local_time = datetime.now()
 fl_date_time = local_time.strftime("%y%m%d")
 OGN_DATA = DBpath + "DATA" + fl_date_time+'.log'
 print "OGN data file is: ", OGN_DATA
@@ -303,8 +302,8 @@ location.horizon = '-0:34'	# Adjustments for angle to horizon
 try:
 
     while True:
-        location.date = ephem.Date(datetime.datetime.utcnow())	# check the localtime for this location...
-        date =                     datetime.datetime.utcnow()	# locat time of the server
+        location.date = ephem.Date(datetime.utcnow())		# check the localtime for this location...
+        date =                     datetime.utcnow()		# locat time of the server
         if location.date > next_sunset:				# if it is past the sunset ??
             print "At Sunset now ... Time is (server):", date, "UTC. Location time:", location.date, "UTC ... Next sunset is: ", next_sunset,  " UTC"
             shutdown(sock, datafile, tmaxa, tmaxt,tmid, tmstd)
@@ -348,7 +347,7 @@ try:
             nerr +=1
             if nerr > 25:
                 print "Read returns zero length string. Failure.  Orderly closeout"
-                date = datetime.datetime.now()
+                date = datetime.now()
                 print "UTC now is: ", date
                 break
             else:
@@ -511,7 +510,7 @@ except KeyboardInterrupt:
 
 print 'Counters:', cin, cout                # report number of records read and files generated
 shutdown(sock, datafile, tmaxa, tmaxt,tmid, tmstd)
-location.date = ephem.Date(datetime.datetime.utcnow())
+location.date = ephem.Date(datetime.utcnow())
 print "Exit now ...", location.date
 if nerr > 0:
 	print "Number of errors:", nerr
