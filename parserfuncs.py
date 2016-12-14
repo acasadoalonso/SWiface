@@ -2,7 +2,7 @@
 # Parser functions for the OGN APRS applications
 #
 
-import datetime
+#import datetime
 from libfap import *
 from ctypes import *
 from datetime import datetime
@@ -271,3 +271,4 @@ def parseraprs(packet_str, msg):
 ########################################################################
 
 
+#import datetime

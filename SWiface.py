@@ -20,7 +20,8 @@ import socket
 from   parserfuncs import *                 # the ogn/ham parser functions 
 from   geopy.distance import vincenty       # use the Vincenty algorithm^M
 from   geopy.geocoders import GeoNames      # use the Nominatim as the geolocator^M
-from configparser import ConfigParser
+from   configparser import ConfigParser
+
 configfile='/etc/local/SWSconfig.ini'	    # location of the configuration file
 
 #########################################################################
@@ -50,12 +51,14 @@ def shutdown(sock, datafile, tmaxa, tmaxt, tmid, tmstd):	# shutdown routine, clo
 	    		maxd=fmaxd[key] 
 		else:
 	    		maxd=-1.0
-        if fmaxs[key] > 0:
-            print key, '=>', fsta[key], gid, fid[key], "Max alt:", fmaxa[key], "Max speed:", fmaxs[key], "Max. distance:", maxd # report FLARM ID, station used, registration and record counter
-        else:
-            print key, '=>', fsta[key], gid, fid[key], "Max alt:", fmaxa[key], "Max. distance:", maxd
+	if key != fsta[key]:
+        	if fmaxs[key] > 0:
+            		print key, '=>', fsta[key], gid, fid[key], "Max alt:", fmaxa[key], "Max speed:", fmaxs[key], "Max. distance:", maxd 
+									# report FLARM ID, station used, registration and record counter
+        	else:
+            		print key, '=>', fsta[key], gid, fid[key], "Max alt:", fmaxa[key], "Max. distance:", maxd
 
-	if key == fsta[key] and key != None and key != "NONE  ":# in case of an receiver station , update the database with the coordinates
+	if key == fsta[key] and key != None and key != "NONE  " and key in fslod:# in case of an receiver station , update the database with the coordinates
 	    lati=fslla[key] 		# latitude
 	    long=fsllo[key] 		# longitude
 	    alti=fslal[key] 		# altitude
@@ -68,18 +71,37 @@ def shutdown(sock, datafile, tmaxa, tmaxt, tmid, tmstd):	# shutdown routine, clo
 	    if curs.fetchone() == None:
 		if (MySQL):
             		inscmd="insert into RECEIVERS values ('%s', '%s', %f,  %f,  %f)" % (key, gid, lati, long, alti)
-            		curs.execute(inscmd)
+                        try:
+            			curs.execute(inscmd)
+                        except MySQLdb.Error, e:
+                                try:
+                                        print ">>>MySQL Error [%d]: %s" % (e.args[0], e.args[1])
+                                except IndexError:
+                                        print ">>>MySQL Error: %s" % str(e)
+                                print         ">>>MySQL error:", inscmd
 		else:
             		inscmd="insert into RECEIVERS values (?, ?, ?, ?, ?)"
             		curs.execute(inscmd, (key, gid, lati, long, alti))
 	    else:
 		if (MySQL):
             		updcmd="update RECEIVERS SET idrec='%s', descri='%s', lati=%f, longi=%f, alti=%f where idrec='%s' " % (key, gid, lati, long, alti, key)	# SQL command to execute: UPDATE
-            		curs.execute(updcmd)
+                        try:
+            			curs.execute(updcmd)
+                        except MySQLdb.Error, e:
+                                try:
+                                        print ">>>MySQL Error [%d]: %s" % (e.args[0], e.args[1])
+                                except IndexError:
+                                        print ">>>MySQL Error: %s" % str(e)
+                                print         ">>>MySQL error:", updcmd
 		else:
             		updcmd="update RECEIVERS SET idrec=?, descri=?, lati=?, longi=?, alti=? where idrec=?"	# SQL command to execute: UPDATE
             		curs.execute(updcmd, (key, gid, lati, long, alti, key))
-	    #print "Added STATION: ==> ", key, gid, fslla[key], fsllo[key], fslal[key] 
+
+	    print "Added STATION: ==> ", key, gid
+
+#	end of if (for stations)
+#   end of for 
+
                                         # report now the maximun altitude for the day
     if tmid[3:9] in kglid.kglid:        # if it is a known glider ???
         gid=kglid.kglid[tmid[3:9]]      # report the registration
@@ -147,7 +169,7 @@ def chkfilati(latitude,  flatil, flatiu):
 
 #----------------------ogn_SilentWingsInterface.py start-----------------------
  
-print "Start OGN Silent Wings Interface V1.3"
+print "Start OGN Silent Wings Interface V1.4"
 print "====================================="
 
 
@@ -303,8 +325,10 @@ try:
 
     while True:
         location.date = ephem.Date(datetime.utcnow())		# check the localtime for this location...
-        date =                     datetime.utcnow()		# locat time of the server
-        if location.date > next_sunset:				# if it is past the sunset ??
+        date =                     datetime.utcnow()		# time of the server
+        localdate =                datetime.now()		# time of the server
+        if location.date > next_sunset or localdate.hour > 21:	# if it is past the sunset or 22:00h local time ??
+
             print "At Sunset now ... Time is (server):", date, "UTC. Location time:", location.date, "UTC ... Next sunset is: ", next_sunset,  " UTC"
             shutdown(sock, datafile, tmaxa, tmaxt,tmid, tmstd)
             print "At Sunset ... Exit"
@@ -358,150 +382,133 @@ try:
     	cc= packet_str[0:ix]
     	cc=cc.upper()
     	packet_str=cc+packet_str[ix:]
-        # Parse packet using libfap.py into fields to process, eg:
-        packet = libfap.fap_parseaprs(packet_str, len(packet_str), 0)
+	msg={}
         if  len(packet_str) > 0 and packet_str[0] <> "#":
-            callsign=packet[0].src_callsign     # get the call sign FLARM ID
-            id=callsign                         # id
 
-	    #if (packet_str[ix+1:ix+11] == "APRS,RELAY*"):
-		#	print "relay==>", id,":::", packet_str
-            longitude = get_longitude(packet)
-            latitude  = get_latitude(packet)
-            altitude  = get_altitude(packet)
-            speed     = get_speed(packet)
-            course    = get_course(packet)
-            path      = get_path(packet)
-            type      = get_type(packet)
-            dst_callsign = get_dst_callsign(packet)
-            destination  = get_destination(packet)
-            header       = get_header(packet)
-	    data=packet_str
-            if prt:
-                print 'Packet returned is: ', packet_str
-                print 'Callsign is: ', callsign, 'DST CallSign:', dst_callsign, 'Dest: ', destination, 'header: ', header
-	    if not id in fid :                  # if we did not see the FLARM ID
-                fid[id]=0                       # init the counter
-                fsta[id]=id                     # init the station receiver
-                fmaxa[id]=altitude              # maximun altitude
-                fmaxs[id]=speed                 # maximun speed
-                fmaxd[id]=0.0	                # maximun distance
-                cout += 1                       # one more file to create
-	    else:
-		fid[id] += 1			# increase the counter
+            	msg=parseraprs(packet_str, msg)
+                id        = msg['id']                         # id
+                longitude = msg['longitude']
+                latitude  = msg['latitude']
+                altitude  = msg['altitude']
+                path      = msg['path']
+                otime     = msg['otime']
+                type      = msg['type']
+                if path == 'qAS' or path == 'RELAY*':           # if std records
+                        station=msg['station']
+		else:
+			station=id
+                data=packet_str
+	    	if not id in fid :                  		# if we did not see the FLARM ID
+                	fid[id]=0                       	# init the counter
+                	fsta[id]=station                     	# init the station receiver
+                	fmaxa[id]=altitude              	# maximun altitude
+                	fmaxs[id]=0                     	# maximun speed
+                	fmaxd[id]=0.0	                	# maximun distance
+                	cout += 1                       	# one more file to create
+	    	else:
+			fid[id] += 1				# increase the counter
 
-            if path == 'TCPIP*':		# handle the TCPIP
-                if not id in fslod :
-                   fslla[id]=latitude		# save the location of the station
-                   fsllo[id]=longitude		# save the location of the station
-                   fslal[id]=altitude		# save the location of the station
-                   fslod[id]=(latitude, longitude) # save the location of the station
-                   fsmax[id]=0.0                # initial coverage distance is zero
-                   fsalt[id]=0                  # initial coverage altitude is zero
-                   tempC=gdatal(data, "C ")        # temperature
-                   if tempC == ' ':
-                            temp = -99.9
-                   else:
-                            temp=float(tempC)
-                   version=gdatar(data, " v0.")    # version
-                   cpu=float(gdatar(data,"CPU:"))  # CPU usage
-                   rf=gdatar(data, "RF:").rstrip() # RF noise
-		   if True :			# prt
-		   	print "===>STA:", id, latitude, longitude, altitude, version, temp, "C", cpu, "%", rf
-                continue                           # go for the next record
+            	if path == 'TCPIP*':				# handle the TCPIP
+                	if not id in fslod :
+                   		fslla[id]=latitude		# save the location of the station
+                   		fsllo[id]=longitude		# save the location of the station
+                   		fslal[id]=altitude		# save the location of the station
+                   		fslod[id]=(latitude, longitude) # save the location of the station
+                   		fsmax[id]=0.0                	# initial coverage distance is zero
+                   		fsalt[id]=0                  	# initial coverage altitude is zero
+				status=msg['status']
+                        	temp=msg['temp']
+                        	version=msg['version']
+                        	cpu=msg['cpu']
+                        	rf=msg['rf']
+		   		print "===>STA:", id, latitude, longitude, altitude, version, temp, "C", cpu, "%", rf, ":::", status
+                	continue                        	# go for the next record
 
-	    if path == 'qAC':
-		continue			# the case of the TCP IP as well
-            if path == 'qAS' or path=='RELAY*': # if std records
-		station=get_station(packet_str) 
-                fsta[id]=station                # init the station receiver
-            else:
-		continue 			# nothing else to do
+	    	if path == 'qAC':
+			continue				# the case of the TCP IP as well
+                if path == 'qAS' or path == 'RELAY*':           # if std records
+                        station=msg['station']
+			fsta[id]=station                	# init the station receiver
+                else:
+                        continue                        	# nothing else to do
+                course    = msg['course']
+                speed     = msg['speed']
+                uniqueid  = msg['uniqueid']
+                extpos    = msg['extpos']
+                roclimb   = msg['roclimb']
+                rot       = msg['rot']
+                sensitivity= msg['sensitivity']
+                gps       = msg['gps']
+                hora      = msg['time']
+                altim=altitude                          	# the altitude in meters
 	    # filter by latitude
-	    if FILTER_LATI1 > 0:	# if we are in the norther hemisfere
-	    	if (chkfilati(latitude, FILTER_LATI1, FILTER_LATI2) and chkfilati(latitude, FILTER_LATI3, FILTER_LATI4)): 
-			continue		# if is not within our latitude ignore the data
-	    if (blackhole(longitude, latitude)):
-		print "BH:", id, longitude, latitude, date
-		continue			# if is not within our latitude ignore the data
+	    	if FILTER_LATI1 > 0:				# if we are in the norther hemisfere
+	    		if (chkfilati(latitude, FILTER_LATI1, FILTER_LATI2) and chkfilati(latitude, FILTER_LATI3, FILTER_LATI4)): 
+				continue			# if is not within our latitude ignore the data
+	    	if (blackhole(longitude, latitude)):
+			print "BH:", id, longitude, latitude, date
+			continue				# if is not within our latitude ignore the data
  
-            if altitude >= fmaxa[id]:
-                fmaxa[id] = altitude
-                if altitude > tmaxa and (not spanishsta(id) and not frenchsta(id)):
-                        tmaxa = altitude        # maximum altitude for the day
-                        tmaxt = date            # and time
-                        tmid  = id              # who did it
-                        tmsta = station         # station capturing the max altitude
-            if speed >= fmaxs[id]:
-                fmaxs[id] = speed
-            p1=data.find(':/')+2                # scan for the body of the APRS message
-            hora=data[p1:p1+6]                  # get the GPS time in UTC
-            long=data[p1+7:p1+11]+data[p1+12:p1+14]+'0'+data[p1+14]         # get the longitude
-            lati=data[p1+16:p1+21]+data[p1+22:p1+24]+'0'+data[p1+24]        # get the latitude
-            p2=data.find('/A=')+3               # scan for the altitude on the body of the message
-            altif=data[p2+1:p2+6]               # get the altitude in feet
-            if  data[p2+7] == '!':              # get the unique id
-            	uniqueid     = data[p2+13:p2+23] # get the unique id
-            	extpos       = data[p2+7:p2+12] # get extended position indicator
-	    else:
-            	uniqueid     = data[p2+7:p2+17] # get the unique id
-		extpos=' '
-            
-	    roclimb      = gdatal(data,"fpm ")  # get the rate of climb
-            rot          = gdatal(data,"rot ")  # get the rate of turn
-            sensitivity  = gdatal(data,"dB ")   # get the sensitivity
-            gps          = gdatar(data,"gps")   # get the gps strength
-            altim=altitude                      # the altitude in meters
-            if altim > 15000 or altim < 0:
-                altim=0
-            alti='%05d' % altim                 # convert it to an string
-	    dist=-1
-            if station in fslod:                # if we have the station yet
-                distance=vincenty((latitude, longitude), fslod[station]).km    # distance to the station
-                dist=distance
-                if distance > 250.0:
-                    print "distcheck: ", distance, data
-                elif distance > fsmax[station]: # if higher distance
-                    fsmax[station]=distance     # save the new distance
-                if altim > fsalt[station]:  	# if higher altitude
-                    fsalt[station]=altim    	# save the new altitude
-		if distance > tmaxd:		# if exceed maximun distance 
-		    tmaxd=distance		# maximun distance today
-		    tmstd=station		# station with the maximun distance
-		if distance >fmaxd[id]:
-		    fmaxd[id]=distance
-            if altim > tmaxa:			# if exceed the maximun altitude
-                tmaxa = altim               	# maximum altitude for the day
-                tmaxt = hora                	# and time
-                tmid  = id                  	# who did it
-                tmsta = station             	# station capturing the max altitude
-            if prt:
-                print 'Parsed data: POS: ', longitude, latitude, altitude,' Speed:',speed,' Course: ',course,' Path: ',path,' Type:', type
-                print roclimb, rot, sensitivity, gps, uniqueid, dist, extpos
-	    if rot== ' ':
-		rot=0
-	    if sensitivity == ' ':
-		sensitivity=0
+            	if altitude >= fmaxa[id]:
+                	fmaxa[id] = altitude
+                	if altitude > tmaxa and (not spanishsta(id) and not frenchsta(id)):
+                        	tmaxa = altitude        	# maximum altitude for the day
+                        	tmaxt = date            	# and time
+                        	tmid  = id              	# who did it
+                        	tmsta = station         	# station capturing the max altitude
+            	if speed >= fmaxs[id]:
+               		fmaxs[id] = speed
+            	if altim > 15000 or altim < 0:
+                	altim=0
+            	alti='%05d' % altim                 		# convert it to an string
+	    	dist=-1
+            	if station in fslod:                		# if we have the station yet
+                	distance=vincenty((latitude, longitude), fslod[station]).km    # distance to the station
+                	dist=distance
+                	if distance > 250.0:
+                    		print "distcheck: ", distance, data
+                	elif distance > fsmax[station]: 	# if higher distance
+                    		fsmax[station]=distance     	# save the new distance
+                	if altim > fsalt[station]:  		# if higher altitude
+                    		fsalt[station]=altim    	# save the new altitude
+			if distance > tmaxd:			# if exceed maximun distance 
+		    		tmaxd=distance			# maximun distance today
+		    		tmstd=station			# station with the maximun distance
+			if distance >fmaxd[id]:
+		    		fmaxd[id]=distance
+            	if altim > tmaxa:				# if exceed the maximun altitude
+                	tmaxa = altim               		# maximum altitude for the day
+                	tmaxt = hora                		# and time
+                	tmid  = id                  		# who did it
+                	tmsta = station             		# station capturing the max altitude
+            	if prt:
+                	print 'Parsed data: POS: ', longitude, latitude, altitude,' Speed:',speed,' Course: ',course,' Path: ',path,' Type:', type
+                	print roclimb, rot, sensitivity, gps, uniqueid, dist, extpos
+	    	if rot== ' ':
+			rot=0
+	    	if sensitivity == ' ':
+			sensitivity=0
             # write the DB record
 
-	    if (MySQL):
-                addcmd="insert into OGNDATA values ('" +id+ "','" + dte+ "','" + hora+ "','" + station+ "'," + str(latitude)+ "," + str(longitude)+ "," + str(altim)+ "," + str(speed)+ "," + \
-			str(course)+ "," + str(roclimb)+ "," +str(rot) + "," +str(sensitivity) + \
-                	",'" + gps+ "','" + uniqueid+ "'," + str(dist)+ ",'" + extpos+ "')"
-                try:
-                        curs.execute(addcmd)
-                except MySQLdb.Error, e:
-                        try:
-                                print ">>>MySQL Error [%d]: %s" % (e.args[0], e.args[1])
-                        except IndexError:
-                                print ">>>MySQL Error: %s" % str(e)
-                        print         ">>>MySQL error:", cin, addcmd
-            else:
-                addcmd="insert into OGNDATA values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"
-                curs.execute(addcmd, (id, dte, hora, station, latitude, longitude, altim, speed, course, roclimb, rot,sensitivity, gps, uniqueid, dist, extpos))
+	    	if (MySQL):
+                	addcmd="insert into OGNDATA values ('" +id+ "','" + dte+ "','" + hora+ "','" + station+ "'," + str(latitude)+ "," +\
+				 str(longitude)+ "," + str(altim)+ "," + str(speed)+ "," + \
+				 str(course)+ "," + str(roclimb)+ "," +str(rot) + "," +str(sensitivity) + \
+                		 ",'" + gps+ "','" + uniqueid+ "'," + str(dist)+ ",'" + extpos+ "')"
+                	try:
+                        	curs.execute(addcmd)
+                	except MySQLdb.Error, e:
+                        	try:
+                                	print ">>>MySQL Error [%d]: %s" % (e.args[0], e.args[1])
+                        	except IndexError:
+                                	print ">>>MySQL Error: %s" % str(e)
+                        	print         ">>>MySQL error:", cin, addcmd
+            	else:
+                	addcmd="insert into OGNDATA values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"
+                	curs.execute(addcmd, (id, dte, hora, station, latitude, longitude, altim, speed, course, roclimb, rot,sensitivity, gps, uniqueid, dist, extpos))
 
-            conn.commit()                       # commit the DB updates
-	    cin +=1                             # one more record read
+            	conn.commit()                       		# commit the DB updates
+	    	cin +=1                             		# one more record read
         
 
 except KeyboardInterrupt:
