@@ -115,6 +115,7 @@ def shutdown(sock, datafile, tmaxa, tmaxt, tmid, tmstd):	# shutdown routine, clo
     local_time = datetime.now() 	# report date and time now
     location.date = ephem.Date(datetime.utcnow())
     print "Local Time (server) now is:", local_time, " and UTC time at location is:", location.date, "UTC."
+    os.remove("SW.alive")		# delete the mark of alive
     return				# job done
 
 #########################################################################
