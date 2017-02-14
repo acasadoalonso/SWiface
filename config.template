@@ -23,6 +23,10 @@ APRS_FILTER_DETAILS = 'filter r/-26.67/+27.08/1800  '
 [location]
 location_latitude  = -26.67			
 location_longitud  = +27.08		
+eventname1="CNVV 2017"
+eventname2="OGN LIVE"
+eventdesc1="Campeonato Nacional de Vuelo a Vela"
+eventdesc2="OGN Live tracking in SPAIN "
 
 [filter]
 FILTER_LATI1 = -25.0 			
