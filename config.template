@@ -5,17 +5,17 @@ port: 80
 pid=/tmp/sws.pid
 root=/var/www/html 
 MySQL    =False
-DBhost   =casadonfs
+DBhost   =localhost
 DBuser   =ogn
 DBpasswd =ogn
 DBname   =SWIFACE
-DBpath=/nfs/OGN/SWdata/		
+DBpath=/var/www/public/
 
 [APRS]
 APRS_SERVER_HOST = 'aprs.glidernet.org'
 APRS_SERVER_PORT = 14580
-APRS_USER     = 'SWIface'
-APRS_PASSCODE = 28080  						
+APRS_USER     = 'SWItest'
+APRS_PASSCODE = -1
 APRS_FILTER_DETAILS = 'filter r/-26.67/+27.08/1800  '  
 ;APRS_FILTER_DETAILS = "filter r/-33.12/-70.48/800  " 
 

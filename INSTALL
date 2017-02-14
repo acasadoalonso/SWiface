@@ -45,3 +45,34 @@ SWiface.py:from   geopy.distance import vincenty       # use the Vincenty algori
 SWiface.py:from   geopy.geocoders import GeoNames      # use the Nominatim as the geolocator^M
 SWiface.py:import sqlite3                              # the SQL data base routines^M
 SWiface.py:import MySQLdb                              # the SQL data base routines^M
+--------------------------------------------------------------------------------------------------
+
+
+Install in a Virtual Box
+
+Install VirtualBox and Vagrant
+
+Clone and run Scotch Box, a full-featured development environment for php
+
+git clone https://github.com/scotch-io/scotch-box.git SWIFACE
+cd SWIFACE
+vagrant up
+
+Clone SWiface repository into the webroot of the Scotch Box
+
+rm ./public/index.php
+git clone https://github.com/glidernet/SWiface-PHP public
+git clone https://github.com/glidernet/SWiface     public/main
+vagrant ssh
+
+# The following commands get executed in the vm
+cd /var/www/public/main
+sh install.sh
+cd ..
+python SWiface.py
+
+Access your local SWS interface instance at 192.168.33.10
+
+(optional, for email debugging) Run MailCatcher, accessible at 192.168.33.10
+
+vagrant@scotchbox:~$ mailcatcher --http-ip=0.0.0.0
