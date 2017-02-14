@@ -9,6 +9,7 @@ DBhost   =localhost
 DBuser   =ogn
 DBpasswd =ogn
 DBname   =SWIFACE
+Initials =TEST
 DBpath=/var/www/public/
 
 [APRS]
