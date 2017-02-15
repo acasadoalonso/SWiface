@@ -9,6 +9,7 @@ DBhost   =localhost
 DBuser   =ogn
 DBpasswd =ogn
 DBname   =SWIFACE
+SQLite3  =SWiface.db
 Initials =TEST
 DBpath=/var/www/public/
 
