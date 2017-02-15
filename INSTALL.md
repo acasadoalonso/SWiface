@@ -16,7 +16,6 @@
    vagrant ssh
    # The following commands get executed in the vm
    cd /var/www/public/main
-   composer update
    bash install.sh
    ```
 
@@ -25,4 +24,5 @@
 5. (optional, for email debugging) Run [MailCatcher](http://mailcatcher.me/), accessible at [192.168.33.10](http://192.168.33.10:1080)
    ```
    vagrant@scotchbox:~$ mailcatcher --http-ip=0.0.0.0
+   composer update
    ```
