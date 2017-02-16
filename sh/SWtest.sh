@@ -1,8 +1,9 @@
 #!/bin/bash
-ss=$(/usr/local/bin/calcelestial -p sun -m set -q Madrid -H civil -f %s)
-alive=$"/nfs/OGN/SWdata/OGN.alive"
+city='Johanesburgo'
+ss=$(/usr/local/bin/calcelestial -p sun -m set -q $city -H civil -f %s)
+alive=$"/nfs/OGN/SWdata/SW.alive"
 now=$(date +%s)
-let "dif=$ss-$now"
+let "dif=$ss-$now-1800"
 if [ $dif -lt 0 ]
 then
         logger  -t $0 "SWS Repo Nothing to do: "$dif" Now: "$now" Sunset: "$ss
@@ -16,7 +17,7 @@ else
                         sudo kill $pnum
                 fi
 #               restart OGN data collector
-                /bin/bash /home/pi/src/live.sh
+                /bin/bash /home/pi/src/SWlive.sh
                 logger -t $0 "SWS repo seems down, restarting"
                 date >>/nfs/OGN/SWdata/.restart.log
         else

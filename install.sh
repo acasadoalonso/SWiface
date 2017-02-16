@@ -11,6 +11,7 @@ echo "Installing the packages required ...." 			#
 echo								#
 cd /var/www/public/main						#
 sudo apt-get install -y python-dev python-pip python-mysqldb	#
+sudo apt-get install -y dos2unix				#
 sudo pip install ephem pytz geopy configparser			#
 if [ ! -d /etc/local ]						#
 then								#
@@ -23,7 +24,7 @@ sudo cp config.template /etc/local/SWSconfig.ini		#
 cd /var/www/public/						#
 cp configtail.template configtail.txt				#
 python genconfig.py						#
-if [ ! -f SWiface.db ]						#
+if [ -f SWiface.db ]						#
 then								#
 	rm      SWiface.db					#
 fi								#
