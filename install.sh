@@ -2,6 +2,7 @@
 echo								#
 echo "Installing the Silent Wings Studio interface ...." 	#
 echo								#
+sudo sh/SWppa-remove.sh						#
 sudo apt-get update						#
 sudo apt-get -y upgrade						#
 cd /var/www/public/main/libfap-1.5/deb				#
