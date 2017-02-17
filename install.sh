@@ -37,6 +37,9 @@ cd main								#
 mailcatcher --http-ip=0.0.0.0					#
 sudo /usr/local/bin/composer self-update			#
 composer update							#
+cd sh	 							#
+crontab <crontab.data						#
+crontab -l 							#
 cd								#
 touch SWinstallation.done					#
 echo								#
