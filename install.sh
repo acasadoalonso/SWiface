@@ -2,7 +2,7 @@
 echo								#
 echo "Installing the Silent Wings Studio interface ...." 	#
 echo								#
-sudo sh/SWppa-remove.sh						#
+sudo rm /etc/apt/sources.list.d/ondre*				#
 sudo apt-get update						#
 sudo apt-get -y upgrade						#
 cd /var/www/public/main/libfap-1.5/deb				#
@@ -41,6 +41,9 @@ composer update							#
 cd sh	 							#
 crontab <crontab.data						#
 crontab -l 							#
+mkdir ~/src   							#
+cp *.sh ~/src  							#
+ls -la ~/src 							#
 cd								#
 touch SWinstallation.done					#
 echo								#
