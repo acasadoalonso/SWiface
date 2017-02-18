@@ -3,7 +3,11 @@ echo								#
 echo "Installing the Silent Wings Studio interface ...." 	#
 echo								#
 sudo rm /etc/apt/sources.list.d/ondre*				#
-sudo add-apt-repository ppa:ondrej/ppa				#
+sudo add-apt-repository ppa:ondrej/php				#
+sudo echo "deb http://ppa.launchpad.net/ondrej/ppa/ubuntu lucid main "    >> /etc/apt/sources.list.d/ondrej-ppa-lucid.list #
+sudo echo "deb-src http://ppa.launchpad.net/ondrej/ppa/ubuntu lucid main" >> /etc/apt/sources.list.d/ondrej-ppa-lucid.list #
+
+
 echo								#
 echo " lets update the operating system libraries  ...." 	#
 echo								#
