@@ -4,7 +4,13 @@ echo "Installing the Silent Wings Studio interface ...." 	#
 echo								#
 sudo rm /etc/apt/sources.list.d/ondre*				#
 sudo add-apt-repository ppa:ondrej/ppa				#
+echo								#
+echo " lets update the operating system libraries  ...." 	#
+echo								#
 sudo apt-get update						#
+sudo apt-get install -y language-pack-en-base 			# 
+sudo apt-get install -y language-pack-es-base 			# 
+export LC_ALL=en_US.UTF-8 && export LANG=en_US.UTF-8		#
 sudo apt-get -y upgrade						#
 cd /var/www/public/main/libfap-1.5/deb				#
 sudo dpkg -i lib*amd64.deb					#
@@ -14,9 +20,6 @@ echo								#
 cd /var/www/public/main						#
 sudo apt-get install -y python-dev python-pip python-mysqldb	#
 sudo apt-get install -y dos2unix libarchive-dev	 autoconf	#
-sudo apt-get install -y language-pack-en-base 			# 
-sudo apt-get install -y language-pack-es-base 			# 
-export LC_ALL=en_US.UTF-8 && export LANG=en_US.UTF-8		#
 sudo pip install ephem pytz geopy configparser			#
 if [ ! -d /etc/local ]						#
 then								#
