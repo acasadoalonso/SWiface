@@ -22,8 +22,11 @@ echo								#
 echo "Installing the packages required ...." 			#
 echo								#
 cd /var/www/public/main						#
+sudo apt-get install -y mysql-server mysql-client sqlite3	#
 sudo apt-get install -y python-dev python-pip python-mysqldb	#
 sudo apt-get install -y dos2unix libarchive-dev	 autoconf	#
+sudo apt-get install -y pkg-config				#
+sudo apt-get install -y apache2 php5				#
 sudo pip install ephem pytz geopy configparser			#
 if [ ! -d /etc/local ]						#
 then								#
