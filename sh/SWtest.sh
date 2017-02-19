@@ -17,7 +17,7 @@ else
                         sudo kill $pnum
                 fi
 #               restart OGN data collector
-                /bin/bash /home/pi/src/SWlive.sh
+                /bin/bash ~/src/SWlive.sh
                 logger -t $0 "SWS repo seems down, restarting"
                 date >>/nfs/OGN/SWdata/.restart.log
         else

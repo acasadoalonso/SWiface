@@ -1,4 +1,4 @@
 #!/bin/sh
 pkill python
-sh /home/pi/src/live.sh
+sh ~/src/live.sh
 ps -ef
