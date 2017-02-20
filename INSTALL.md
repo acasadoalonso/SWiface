@@ -6,6 +6,13 @@
    git clone https://github.com/scotch-io/scotch-box.git SWIFACE
    cd SWIFACE
    vagrant up
+
+   or
+
+   mkdir SWIFACE
+   cd    SWIFACE
+   vagrant init ACASADO/SWiface
+   vagrant up
    ```
 
 3. Clone SWIFACE repository into the webroot of the Scotch Box
@@ -13,13 +20,17 @@
    rm ./public/index.php
    git clone https://github.com/glidernet/SWiface-PHP public
    git clone https://github.com/glidernet/SWiface     public/main
+   ln -s public html
    vagrant ssh
    # The following commands get executed in the vm
    cd /var/www/public/main
    bash install.sh
+   cd ~/src
+   bash SWlive
    ```
 
 4. Access your local SWIFACE instance at [192.168.33.10](http://192.168.33.10)
+   On Silent Wings Studio:    File->Browse JSON Events-> http://192.168.33.10
 
 5. (optional, for email debugging) Run [MailCatcher](http://mailcatcher.me/), accessible at [192.168.33.10](http://192.168.33.10:1080)
    ```
