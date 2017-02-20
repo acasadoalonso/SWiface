@@ -4,9 +4,6 @@ echo "Installing the Silent Wings Studio interface ...." 	#
 echo								#
 sudo rm /etc/apt/sources.list.d/ondre*				#
 sudo add-apt-repository ppa:ondrej/php				#
-sudo echo "deb http://ppa.launchpad.net/ondrej/ppa/ubuntu lucid main "    >> /etc/apt/sources.list.d/ondrej-ppa-lucid.list #
-sudo echo "deb-src http://ppa.launchpad.net/ondrej/ppa/ubuntu lucid main" >> /etc/apt/sources.list.d/ondrej-ppa-lucid.list #
-
 
 echo								#
 echo " lets update the operating system libraries  ...." 	#
@@ -15,18 +12,20 @@ sudo apt-get update						#
 sudo apt-get install -y language-pack-en-base 			# 
 sudo apt-get install -y language-pack-es-base 			# 
 export LC_ALL=en_US.UTF-8 && export LANG=en_US.UTF-8		#
+echo "export LC_ALL=en_US.UTF-8 && export LANG=en_US.UTF-8 " >>~/.profile #
+echo "export LD_LIBRARY_PATH=/usr/local/lib" >>~/.profile 	#
 sudo apt-get -y upgrade						#
 cd /var/www/public/main/libfap-1.5/deb				#
 sudo dpkg -i lib*amd64.deb					#
 echo								#
-echo "Installing the packages required ...." 			#
+echo "Installing the packages required . (LAMP stack)..."	#
 echo								#
 cd /var/www/public/main						#
 sudo apt-get install -y mysql-server mysql-client sqlite3	#
 sudo apt-get install -y python-dev python-pip python-mysqldb	#
 sudo apt-get install -y dos2unix libarchive-dev	 autoconf	#
-sudo apt-get install -y pkg-config				#
-sudo apt-get install -y apache2 php5				#
+sudo apt-get install -y pkg-config git				#
+sudo apt-get install -y apache2 php				#
 sudo pip install ephem pytz geopy configparser			#
 if [ ! -d /etc/local ]						#
 then								#
@@ -60,7 +59,13 @@ then								#
 	mkdir ~/src   						#
 fi								#
 cp *.sh ~/src  							#
-ls -la ~/src 							#
+ls  -la ~/src 							#
+if [ ! -d /nfs  ]						#
+then								#
+	sudo mkdir /nfs						#
+	sudo mkdir /nfs/OGN					#
+	sudo mkdir /nfs/OGN/SWdata				#
+fi								#
 cd								#
 touch SWinstallation.done					#
 echo								#
