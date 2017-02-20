@@ -3,6 +3,7 @@ echo								#
 echo "Installing the Silent Wings Studio interface ...." 	#
 echo								#
 export LC_ALL=en_US.UTF-8 && export LANG=en_US.UTF-8		#
+sudo apt-get install -y software-properties-common python-software-properties #
 sudo rm /etc/apt/sources.list.d/ondre*				#
 sudo add-apt-repository ppa:ondrej/php				#
 echo								#
