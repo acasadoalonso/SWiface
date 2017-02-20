@@ -15,7 +15,7 @@ kglid.py	|	The list of known gliders, this list is generated weekly from the [OG
 SWSconfig.ini	|	The settings used by this application. You need to define here if your are using MySQL or not and the name of the user/password and host, This file is in /etc/local
 
 Originally  the system was running on a [Raspberry Pi 3](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/) with a HDD SDD of 128 Gb, using [Raspbian Jessie](https://www.raspberrypi.org/downloads/raspbian/) distro. The MySQL version uses a [Oracle's MySQL](https://www.oracle.com/mysql/index.html) database hosted on a WDC Mirror nas/nfs server. 
-Nowadays the system is running in a [Intel NUC] (http://www.intel.com/nuc) under [Ubuntu 16.04.2 LTS (Xenial)] (http://www.ubuntu.com) and also running under a virtual machine [VirtualBox] (http://www.virtualbox.org) and [Vagrant] (https://www.vagrantup.com/) in a Windows 10 environment.
+Nowadays the system is running in a [Intel NUC] (http://www.intel.com/nuc) under [Ubuntu 16.04.2 LTS (Xenial)] (http://www.ubuntu.com) and also running under a virtual machine [VirtualBox] (http://www.virtualbox.org) and [Vagrant] (https://www.vagrantup.com/) in a Windows 10 environment. See INSTALL.md for more details
 
 For any bug please report it thru the GitHub account, open an issue and I will try to solve it.
 

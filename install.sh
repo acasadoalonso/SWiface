@@ -77,10 +77,11 @@ then								#
 	mv SWiface.db /nfs/OGN/SWdata				#
 fi								#
 cd								#
+sudo apt-get -y dist-upgrade					#
 touch SWinstallation.done					#
 echo								#
 echo "Installation done ..."					#
 echo "Review the configuration file on /etc/local and the config tail file configtail.txt  ..."			#
 echo "Review the configuration of the crontab and the shell script on ~/src "  					#
-echo "In order to execute the Silent Wings data crawler execute:  python /var/www/public/main/SWiface.py " 	#
+echo "In order to execute the Silent Wings data crawler execute:  bash ~/src/SWlive.sh " 	#
 echo								#
