@@ -2,15 +2,14 @@
 echo								#
 echo "Installing the Silent Wings Studio interface ...." 	#
 echo								#
+export LC_ALL=en_US.UTF-8 && export LANG=en_US.UTF-8		#
 sudo rm /etc/apt/sources.list.d/ondre*				#
 sudo add-apt-repository ppa:ondrej/php				#
-
 echo								#
 echo " lets update the operating system libraries  ...." 	#
 echo								#
 sudo apt-get update						#
 sudo apt-get install -y language-pack-en-base 			# 
-sudo apt-get install -y language-pack-es-base 			# 
 export LC_ALL=en_US.UTF-8 && export LANG=en_US.UTF-8		#
 echo "export LC_ALL=en_US.UTF-8 && export LANG=en_US.UTF-8 " >>~/.profile #
 echo "export LD_LIBRARY_PATH=/usr/local/lib" >>~/.profile 	#
@@ -26,6 +25,7 @@ sudo apt-get install -y python-dev python-pip python-mysqldb    #
 sudo apt-get install -y dos2unix libarchive-dev	 autoconf	#
 sudo apt-get install -y pkg-config git				#
 sudo apt-get install -y apache2 php				#
+sudo a2enmod rewrite						#
 sudo pip install ephem pytz geopy configparser			#
 if [ ! -d /etc/local ]						#
 then								#
