@@ -25,7 +25,9 @@ sudo apt-get install -y python-dev python-pip python-mysqldb    #
 sudo apt-get install -y dos2unix libarchive-dev	 autoconf	#
 sudo apt-get install -y pkg-config git				#
 sudo apt-get install -y apache2 php				#
+sudo cat html.dir >>/etc/apache2/apache2.conf			#
 sudo a2enmod rewrite						#
+sudo service apache2 restart					#
 sudo pip install ephem pytz geopy configparser			#
 if [ ! -d /etc/local ]						#
 then								#
