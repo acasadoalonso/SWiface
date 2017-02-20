@@ -11,7 +11,7 @@ DBpasswd =ogn
 DBname   =SWIFACE
 SQLite3  =SWiface.db
 Initials =TEST
-DBpath=/var/www/public/
+DBpath=/nfs/OGN/SWdata/
 
 [APRS]
 APRS_SERVER_HOST = 'aprs.glidernet.org'
@@ -27,7 +27,7 @@ location_longitud  = +27.08
 eventname1="CNVV 2017"
 eventname2="OGN LIVE"
 eventdesc1="Campeonato Nacional de Vuelo a Vela"
-eventdesc2="OGN Live tracking in SPAIN "
+eventdesc2="OGN Live tracking in South Africa "
 
 [filter]
 FILTER_LATI1 = -25.0 			

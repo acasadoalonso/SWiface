@@ -22,7 +22,7 @@ echo "Installing the packages required . (LAMP stack)..."	#
 echo								#
 cd /var/www/public/main						#
 sudo apt-get install -y mysql-server mysql-client sqlite3	#
-sudo apt-get install -y python-dev python-pip python-mysqldb	#
+sudo apt-get install -y python-dev python-pip python-mysqldb    #
 sudo apt-get install -y dos2unix libarchive-dev	 autoconf	#
 sudo apt-get install -y pkg-config git				#
 sudo apt-get install -y apache2 php				#
@@ -57,14 +57,21 @@ crontab -l 							#
 if [ ! -d ~/src  ]						#
 then								#
 	mkdir ~/src   						#
+	mkdir ~/src/SWsrc					#
 fi								#
 cp *.sh ~/src  							#
+cd ..								#
+cp *.py ~/src/SWsrc						#
 ls  -la ~/src 							#
 if [ ! -d /nfs  ]						#
 then								#
 	sudo mkdir /nfs						#
 	sudo mkdir /nfs/OGN					#
 	sudo mkdir /nfs/OGN/SWdata				#
+	sudo chown vagrant:vagrant /nfs/OGN/SWdata		#
+	sudo chmod 777 /nfs/OGN/SWdata				#
+	cd /var/www/public/					#
+	mv SWiface.db /nfs/OGN/SWdata				#
 fi								#
 cd								#
 touch SWinstallation.done					#
