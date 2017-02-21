@@ -79,6 +79,7 @@ then								#
 fi								#
 cd								#
 sudo apt-get -y dist-upgrade					#
+mysqladmin -u root password ogn					#
 touch SWinstallation.done					#
 echo								#
 echo "Installation done ..."					#
