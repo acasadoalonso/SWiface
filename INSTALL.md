@@ -23,7 +23,7 @@
    ln -s public html
    vagrant ssh
    # The following commands get executed in the vm
-   do-release-update
+   do-release-upgrade
    cd /var/www/public/main
    bash install.sh
    cd ~/src

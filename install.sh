@@ -26,6 +26,7 @@ sudo apt-get install -y python-dev python-pip python-mysqldb    #
 sudo apt-get install -y dos2unix libarchive-dev	 autoconf	#
 sudo apt-get install -y pkg-config git				#
 sudo apt-get install -y apache2 php				#
+sudo apt-get install -y phpmyadmin 				#
 sudo cat /etc/apache2/apache2.conf html.dir 	>>temp.conf	#
 sudo mv temp.conf /etc/apache2/apache2.conf			#
 sudo a2enmod rewrite						#
