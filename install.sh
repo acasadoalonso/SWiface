@@ -25,16 +25,20 @@ sudo apt-get install -y mysql-server mysql-client sqlite3	#
 sudo apt-get install -y python-dev python-pip python-mysqldb    #
 sudo apt-get install -y dos2unix libarchive-dev	 autoconf	#
 sudo apt-get install -y pkg-config git				#
-sudo apt-get install -y apache2 php				#
+sudo apt-get install -y apache2 php php-mcrypt php-mysql php-cli #
+sudo apt-get install -y php-mbstring php-gettext		#
 sudo a2enmod rewrite						#
-sudo service apache2 restart					#
-echo								#
-echo "Installing phpmyadmin  ... bypassed"			#
-echo								#
-#sudo apt-get install -y phpmyadmin 				#
+sudo phpendmod mcrypt						#
+sudo phpendmod mbstring						#
 sudo cat /etc/apache2/apache2.conf html.dir 	>>temp.conf	#
+sudo echo "ServerName SWiface " >>temp.conf			#
 sudo mv temp.conf /etc/apache2/apache2.conf			#
 sudo service apache2 restart					#
+echo								#
+echo "Installing phpmyadmin  ... "				#
+echo								#
+#sudo apt-get install -y phpmyadmin 				#
+#sudo service apache2 restart					#
 sudo pip install ephem pytz geopy configparser			#
 if [ ! -d /etc/local ]						#
 then								#
