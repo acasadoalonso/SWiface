@@ -29,9 +29,9 @@ sudo apt-get install -y apache2 php				#
 sudo a2enmod rewrite						#
 sudo service apache2 restart					#
 echo								#
-echo "Installing phpmyadmin 					#
+echo "Installing phpmyadmin  ... bypassed"			#
 echo								#
-sudo apt-get install -y phpmyadmin 				#
+#sudo apt-get install -y phpmyadmin 				#
 sudo cat /etc/apache2/apache2.conf html.dir 	>>temp.conf	#
 sudo mv temp.conf /etc/apache2/apache2.conf			#
 sudo service apache2 restart					#
