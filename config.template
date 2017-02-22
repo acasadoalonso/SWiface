@@ -27,7 +27,7 @@ location_longitud  = 5.56
 eventname1="CNVV 2017"
 eventname2="OGN LIVE"
 eventdesc1="Campeonato Nacional de Vuelo a Vela"
-eventdesc2="OGN Live tracking inA Alp "
+eventdesc2="OGN Live tracking in Alps "
 
 [filter]
 FILTER_LATI1 = 42.0
