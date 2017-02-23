@@ -31,5 +31,7 @@ else
                 logger -t $0 "SWS repo seems up: "$dif" Now: "$now" Sunset: "$ss
         fi
 fi
-rm $alive
-
+if [  -f $alive ]
+        then
+        rm $alive
+fi

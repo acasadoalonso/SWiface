@@ -4,10 +4,10 @@ MAILTO="youremail@yourserver.org"
 # m h  dom mon dow   command
 #00 03 * * 3 /bin/sh ~/src/SWbkup.sh
 #00 07 * * * /bin/sh ~/src/SWpihealth.sh
-#00 09 * * * /bin/sh ~/src/SWlive.sh
+00 09 * * * /bin/sh ~/src/SWlive.sh
 #00 23 * * * /bin/sh ~/src/SWidaily.sh
 #15 23 * * * /bin/sh ~/src/SWsync.sh
 #45 23 * * 1 /bin/sh ~/src/SWweekly.sh
 #00 00 1 * * /bin/sh ~/src/SWmonthlylog.sh
-#*/10 10-17 * * * /bin/bash ~/src/SWtest.sh
+*/10 10-17 * * * /bin/bash ~/src/SWtest.sh
 #*/30 * * * *     /bin/bash ~/src/SWtestnoip.sh >/dev/null 2>&1

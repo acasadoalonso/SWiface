@@ -56,7 +56,8 @@ then								#
 	rm      SWiface.db					#
 fi								#
 sqlite3 SWiface.db         < main/DBschema.sql			#
-mysql --database scotchbox < main/DBschema.sql			#
+echo "CREATE DATABASE SWIFACE" | mysql 				#
+mysql --database SWIFACE < main/DBschema.sql			#
 echo								#
 echo "Optional steps ... "					#
 echo								#
@@ -94,5 +95,6 @@ echo								#
 echo "Installation done ..."					#
 echo "Review the configuration file on /etc/local and the config tail file configtail.txt  ..."			#
 echo "Review the configuration of the crontab and the shell script on ~/src "  					#
-echo "In order to execute the Silent Wings data crawler execute:  bash ~/src/SWlive.sh " 	#
+echo "In order to execute the Silent Wings data crawler execute:  bash ~/src/SWlive.sh " 			#
+echo "Check the placement of the RootDocument on APACHE2 ... needs to be /var/www/html				#
 echo								#
