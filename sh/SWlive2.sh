@@ -7,4 +7,5 @@ python genconfig.py
 cd /nfs/OGN/SWdata
 echo "Generated config.py :" 	>>proc.log
 date 			>>proc.log
+python ~/src/SWsrc/SWcalsunrisesunset.py >>proc.log
 python ~/src/SWsrc/SWiface.py >>proc.log &

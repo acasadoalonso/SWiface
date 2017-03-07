@@ -23,7 +23,7 @@ echo								#
 cd /var/www/public/main						#
 sudo apt-get install -y mysql-server mysql-client sqlite3	#
 sudo apt-get install -y python-dev python-pip python-mysqldb    #
-sudo apt-get install -y dos2unix libarchive-dev	 autoconf	#
+sudo apt-get install -y dos2unix libarchive-dev	 autoconf mc	#
 sudo apt-get install -y pkg-config git				#
 sudo apt-get install -y apache2 php php-mcrypt php-mysql php-cli #
 sudo apt-get install -y php-mbstring php-gettext		#
@@ -90,11 +90,12 @@ fi								#
 cd								#
 sudo apt-get -y dist-upgrade					#
 mysqladmin -u root password ogn					#
+sudo apt-get -y autoremove					#
 touch SWinstallation.done					#
 echo								#
 echo "Installation done ..."					#
 echo "Review the configuration file on /etc/local and the config tail file configtail.txt  ..."			#
-echo "Review the configuration of the crontab and the shell script on ~/src "  					#
+echo "Review the configuration of the crontab and the shell scripts on ~/src " 					#
 echo "In order to execute the Silent Wings data crawler execute:  bash ~/src/SWlive.sh " 			#
 echo "Check the placement of the RootDocument on APACHE2 ... needs to be /var/www/html				#
 echo								#

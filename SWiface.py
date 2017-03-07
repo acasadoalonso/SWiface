@@ -20,9 +20,7 @@ import socket
 from   parserfuncs import *                 # the ogn/ham parser functions 
 from   geopy.distance import vincenty       # use the Vincenty algorithm^M
 from   geopy.geocoders import GeoNames      # use the Nominatim as the geolocator^M
-from   configparser import ConfigParser
-
-configfile='/etc/local/SWSconfig.ini'	    # location of the configuration file
+from   time import sleep
 
 #########################################################################
 def shutdown(sock, datafile, tmaxa, tmaxt, tmid, tmstd):	# shutdown routine, close files and report on activity
@@ -114,7 +112,7 @@ def shutdown(sock, datafile, tmaxa, tmaxt, tmid, tmstd):	# shutdown routine, clo
     conn.close()			# close the database
     local_time = datetime.now() 	# report date and time now
     location.date = ephem.Date(datetime.utcnow())
-    print "Local Time (server) now is:", local_time, " and UTC time at location is:", location.date, "UTC."
+    print "Local Time (server) now is:", local_time, " and UTC time at location ", config.location_name, "is:", location.date, "UTC."
     try:
         os.remove("OGN.alive")		# delete the mark of alive
     except:
@@ -173,58 +171,21 @@ def chkfilati(latitude,  flatil, flatiu):
 
 #----------------------ogn_SilentWingsInterface.py start-----------------------
  
-print "Start OGN Silent Wings Interface V1.4"
+print "Start OGN Silent Wings Interface V1.6"
 print "====================================="
 
+import config
 
-
-#-------------------------------------
-# OGN-Silent Wings interface --- Settings 
-#-------------------------------------
-#
-#-------------------------------------
-# Setting values
-#-------------------------------------
-#
-hostname=socket.gethostname()
-print "Hostname:", hostname
-cfg=ConfigParser()								# get the configuration parameters
-cfg.read(configfile)								# reading it for the configuration file
-print "Config.ini sections:", cfg.sections()					# report the different sections
-
-APRS_SERVER_HOST 	= cfg.get    ('APRS', 'APRS_SERVER_HOST').strip("'").strip('"')
-APRS_SERVER_PORT 	= int(cfg.get('APRS', 'APRS_SERVER_PORT'))
-APRS_USER        	= cfg.get    ('APRS', 'APRS_USER').strip("'").strip('"')
-APRS_PASSCODE    	= int(cfg.get('APRS', 'APRS_PASSCODE'))			# See http://www.george-smart.co.uk/wiki/APRS_Callpass
-APRS_FILTER_DETAILS 	= cfg.get    ('APRS', 'APRS_FILTER_DETAILS').strip("'").strip('"') 
-APRS_FILTER_DETAILS	= APRS_FILTER_DETAILS + '\n '
-
-location_latitude   	= cfg.get('location', 'location_latitude').strip("'").strip('"')
-location_longitude  	= cfg.get('location', 'location_longitud').strip("'").strip('"')
-
-FILTER_LATI1     	= float(cfg.get('filter', 'FILTER_LATI1'))
-FILTER_LATI2     	= float(cfg.get('filter', 'FILTER_LATI2'))
-FILTER_LATI3     	= float(cfg.get('filter', 'FILTER_LATI3'))
-FILTER_LATI4     	= float(cfg.get('filter', 'FILTER_LATI4'))
-
-DBpath			= cfg.get('server', 'DBpath').strip("'").strip('"')
-MySQLtext		= cfg.get('server', 'MySQL').strip("'").strip('"')
-DBhost   		= cfg.get('server', 'DBhost').strip("'").strip('"')
-DBuser   		= cfg.get('server', 'DBuser').strip("'").strip('"')
-DBpasswd 		= cfg.get('server', 'DBpasswd').strip("'").strip('"')
-DBname   		= cfg.get('server', 'DBname').strip("'").strip('"')
-
-if (MySQLtext == 'True'):
-	MySQL = True
-else:
-	MySQL = False
+location_latitude   	= config.location_latitude
+location_longitude  	= config.location_longitude
+DBpath			= config.DBpath 
+DBhost   		= config.DBhost
+DBuser   		= config.DBuser
+DBpasswd 		= config.DBpasswd
+DBname   		= config.DBname
+MySQL 			= config.MySQL
 # --------------------------------------#
-assert len(APRS_USER) > 3 and len(str(APRS_PASSCODE)) > 0, 'Please set APRS_USER and APRS_PASSCODE in settings.py.'
-										# report the configuration paramenters
-print "Config server values:", 			MySQL, DBhost, DBuser, DBpasswd, DBname, DBpath 
-print "Config APRS values:", 			APRS_SERVER_HOST, APRS_SERVER_PORT, APRS_USER, APRS_PASSCODE, APRS_FILTER_DETAILS
-print "Config location and filter values:", 	location_latitude, location_longitude, "FILTER:", FILTER_LATI1, FILTER_LATI2,FILTER_LATI3,FILTER_LATI4
-# --------------------------------------#
+
 fid=  {'NONE  ' : 0}                    # FLARM ID list
 fsta= {'NONE  ' : 'NONE  '}             # STATION ID list
 fmaxa={'NONE  ' : 0}                    # maximun altitude
@@ -293,12 +254,12 @@ else:
  
 # create socket & connect to server
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-sock.connect((APRS_SERVER_HOST, APRS_SERVER_PORT))
+sock.connect((config.APRS_SERVER_HOST, config.APRS_SERVER_PORT))
 print "Socket sock connected"
  
 # logon to OGN APRS network    
 
-login = 'user %s pass %s vers Silent Wings-Interface 1.0 %s'  % (APRS_USER, APRS_PASSCODE , APRS_FILTER_DETAILS)
+login = 'user %s pass %s vers Silent Wings-Interface 1.0 %s'  % (config.APRS_USER, config.APRS_PASSCODE , config.APRS_FILTER_DETAILS)
 sock.send(login)    
  
 # Make the connection to the server
@@ -379,6 +340,7 @@ try:
                 print "UTC now is: ", date
                 break
             else:
+		sleep(5)
                 continue
 	if prt:
 		print "DATA:", packet_str
@@ -445,9 +407,9 @@ try:
                 gps       = msg['gps']
                 hora      = msg['time']
                 altim=altitude                          	# the altitude in meters
-	    # filter by latitude
-	    	if FILTER_LATI1 > 0:				# if we are in the norther hemisfere
-	    		if (chkfilati(latitude, FILTER_LATI1, FILTER_LATI2) and chkfilati(latitude, FILTER_LATI3, FILTER_LATI4)): 
+	    	# filter by latitude
+	    	if config.FILTER_LATI1 > 0:				# if we are in the norther hemisfere
+	    		if (chkfilati(latitude, config.FILTER_LATI1, config.FILTER_LATI2) and chkfilati(latitude, config.FILTER_LATI3, config.FILTER_LATI4)): 
 				continue			# if is not within our latitude ignore the data
 	    	if (blackhole(longitude, latitude)):
 			print "BH:", id, longitude, latitude, date
@@ -498,7 +460,7 @@ try:
                 	addcmd="insert into OGNDATA values ('" +id+ "','" + dte+ "','" + hora+ "','" + station+ "'," + str(latitude)+ "," +\
 				 str(longitude)+ "," + str(altim)+ "," + str(speed)+ "," + \
 				 str(course)+ "," + str(roclimb)+ "," +str(rot) + "," +str(sensitivity) + \
-                		 ",'" + gps+ "','" + uniqueid+ "'," + str(dist)+ ",'" + extpos+ "')"
+                		 ",'" + gps+ "','" + uniqueid+ "'," + str(dist)+ ",'" + extpos+ "','OGN ')"
                 	try:
                         	curs.execute(addcmd)
                 	except MySQLdb.Error, e:
@@ -508,8 +470,8 @@ try:
                                 	print ">>>MySQL Error: %s" % str(e)
                         	print         ">>>MySQL error:", cin, addcmd
             	else:
-                	addcmd="insert into OGNDATA values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"
-                	curs.execute(addcmd, (id, dte, hora, station, latitude, longitude, altim, speed, course, roclimb, rot,sensitivity, gps, uniqueid, dist, extpos))
+                	addcmd="insert into OGNDATA values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"
+                	curs.execute(addcmd, (id, dte, hora, station, latitude, longitude, altim, speed, course, roclimb, rot,sensitivity, gps, uniqueid, dist, extpos,'OGN '))
 
             	conn.commit()                       		# commit the DB updates
 	    	cin +=1                             		# one more record read

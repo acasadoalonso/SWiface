@@ -2,7 +2,7 @@
 cd /nfs/OGN/SWdata
 server="casadonfs"
 echo ".dump OGNDATA" |        sqlite3 SWiface.db >ogndata.dmp 
-sqlite3                       archive/SWiface.db <ogndata.dmp >>proc.log
+sed "s/CREATE TABLE/-- CREATE TABLE/g" ogndata.dmp | sed "s/CREATE INDEX/-- CREATE INDEX/g" | sqlite3  archive/SWiface.db >>proc.log
 echo "delete from OGNDATA;" | sqlite3 SWiface.db              >>proc.log
 echo "vacuum;"              | sqlite3 SWiface.db              >>proc.log
 rm ogndata.dmp
@@ -14,8 +14,8 @@ mysql                                      -u ogn -pogn -h $server SWARCHIVE    
 echo "delete from OGNDATA;" | mysql     -v -u ogn -pogn -h $server SWIFACE                      >>proc.log
 mv ogndata.sql archive
 mv proc.log archive/PROC$(date +%y%m%d).log
-rm SW.alive
+rm SW.alive			>/dev/null 2>&1
 cd /var/www/html/cuc
-mv *.json archive
-sudo rm *.cuc 
+mv *.json archive		>/dev/null 2>&1
+sudo rm *.cuc 			>/dev/null 2>&1
 cd

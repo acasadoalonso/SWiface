@@ -39,7 +39,7 @@ lsusb
 echo "           "
 cd /nfs/OGN/DIRdata
 ls -lrt
-} | mutt -a "~/hc.log" -s $hn" RPi Health Check "$taken -- acasado@acm.org
+} | mutt -a ~/hc.log -s $hn" RPi Health Check "$taken -- acasado@acm.org
 
 rm -f ~/hc.log
 
