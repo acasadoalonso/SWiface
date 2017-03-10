@@ -176,6 +176,7 @@ print "====================================="
 
 import config
 
+# --------------------------------------#
 location_latitude   	= config.location_latitude
 location_longitude  	= config.location_longitude
 DBpath			= config.DBpath 
@@ -184,6 +185,30 @@ DBuser   		= config.DBuser
 DBpasswd 		= config.DBpasswd
 DBname   		= config.DBname
 MySQL 			= config.MySQL
+SPIDER   		= config.SPIDER
+SPOT     		= config.SPOT  
+LT24     		= config.LT24  
+# --------------------------------------#
+
+if SPIDER:
+	from spifuncs import *
+	spiusername =config.SPIuser  
+	spipassword =config.SPIpassword  
+
+if SPOT:
+	from spotfuncs import *
+
+if LT24:
+	from lt24funcs import *
+	lt24username =config.LT24username  
+	lt24password =config.LT24password  
+	LT24qwe=" "
+	LT24_appSecret= " "
+	LT24_appKey= " "
+	LT24path=DBpath+"LT24/" 
+	LT24login=False
+	LT24firsttime=True
+
 # --------------------------------------#
 
 fid=  {'NONE  ' : 0}                    # FLARM ID list
@@ -234,9 +259,10 @@ location.pressure = 0
 location.horizon = '-0:34'      # Adjustments for angle to horizon
 
 if (MySQL):
-	print "MySQL: Database:", DBname, " at Host:", DBhost
+	print "MySQL Database:", DBname, " at Host:", DBhost
 else:
-	print "Database: ",  DBase
+	print "SQLITE3 Database: ",  DBase
+
 print "Date: ", date, "at:", socket.gethostname()
 location.lat, location.lon = location_latitude, location_longitude
 date = datetime.now()
@@ -279,12 +305,34 @@ keepalive_time = time.time()
 alive("yes")
 #
 #-----------------------------------------------------------------
+# Initialise API for SPIDER & SPOT & LT24
+#-----------------------------------------------------------------
+#
+now=datetime.utcnow()			# get the UTC time
+min5=timedelta(seconds=300)		# 5 minutes ago
+now=now-min5				# now less 5 minutes
+td=now-datetime(1970,1,1)         	# number of seconds until beginning of the day 1-1-1970
+ts=int(td.total_seconds())		# Unix time - seconds from the epoch
+spispotcount=1				# loop counter
+ttime=now.strftime("%Y-%m-%dT%H:%M:%SZ")# format required by SPIDER
+
+if LT24:
+	lt24login(LT24path, lt24username, lt24password)	# login into the LiveTrack24 server
+	lt24ts=ts
+	LT24firsttime=True
+
+print spispotcount, "---> TTime:", ttime, "Unix time:", ts, "UTC:", datetime.utcnow().isoformat()
+
+date = datetime.now()
+
+#
+#-----------------------------------------------------------------
 # Initialise API for computing sunrise and sunset
 #-----------------------------------------------------------------
 #
 location = ephem.Observer()
 location.pressure = 0
-location.horizon = '-0:34'	# Adjustments for angle to horizon
+location.horizon = '-0:34'		# Adjustments for angle to horizon
 
 try:
 
@@ -299,24 +347,56 @@ try:
             print "At Sunset ... Exit"
             exit(0)
 
-        #Loop for a long time with a count, illustrative only
+        # Loop for a long time with a count
+
         current_time = time.time()
         elapsed_time = current_time - keepalive_time
         if (current_time - keepalive_time) > 180:        # keepalives every 3 mins
             try:
-                rtn = sock_file.write("#Python ognES App\n\n")
+                rtn = sock_file.write("# Python SWSiface App\n\n")
                 # Make sure keepalive gets sent. If not flushed then buffered
-                sock_file.flush()
-                datafile.flush()
+                sock_file.flush()			# force to write the data
+                datafile.flush()			# use this ocassion to flush as well the data file
 		alive()					# indicate that we are alive
-                run_time = time.time() - start_time
+                run_time = time.time() - start_time	# get the run time
                 if prt:
                     print "Send keepalive no: ", keepalive_count, " After elapsed_time: ", int((current_time - keepalive_time)), " After runtime: ", int(run_time), " secs"
                 keepalive_time = current_time
-                keepalive_count = keepalive_count + 1
+                keepalive_count +=  1
             except Exception, e:
-                print ('something\'s wrong with socket write. Exception type is %s' % (`e`))
-     
+ 
+               print ('something\'s wrong with socket write. Exception type is %s' % (`e`))
+ 
+            try:						# lets see if we have data from the interface functionns: SPIDER, SPOT, LT24 or SKYLINES
+			if SPIDER:				# if we have SPIDER according with the config
+
+				ttime=spifindspiderpos(ttime, conn, spiusername, spipassword)
+
+			else: 
+				ttime=now.strftime("%Y-%m-%dT%H:%M:%SZ")# format required by SPIDER
+
+			if SPOT:				# if we have the SPOT according with the configuration
+
+				ts   =spotfindpos(ts, conn)
+			else:
+
+				td=now-datetime(1970,1,1)      	# number of second until beginning of the day
+				ts=int(td.total_seconds())	# Unix time - seconds from the epoch
+			if LT24:				# if we have the LT24 according with the configuration
+		
+				lt24ts   =lt24findpos(lt24ts, conn, LT24firsttime) # find the position and add it to the DDBB
+				LT24firsttime=False		# only once the addpos
+			else:
+				td=now-datetime(1970,1,1)      	# number of second until beginning of the day
+				lt24ts=int(td.total_seconds())	# Unix time - seconds from the epoch
+
+			spispotcount += 1			# we report a counter of calls to the interfaces 
+			print spispotcount, "---> TTime:", ttime, "SPOT Unix time:", ts, "LT24 Unix time", lt24ts, "UTC Now:", datetime.utcnow().isoformat()
+
+
+            except Exception, e:
+                        print ('something\'s wrong with interface functions Exception type is %s' % (`e`))
+# ------------------------------------------------------- main loop ------------------------------------- #    
         if prt:
             print "In main loop. Count= ", i
             i += 1
@@ -334,35 +414,35 @@ try:
         # A zero length line will only be returned after ~30m if keepalives are not sent
         if len(packet_str) == 0:
             nerr +=1
-            if nerr > 25:
-                print "Read returns zero length string. Failure.  Orderly closeout"
+            if nerr > 10:
+                print "Read returns zero length string. Failure.  Orderly closeout, keep alive count:", keeplive_count
                 date = datetime.now()
                 print "UTC now is: ", date
                 break
             else:
-		sleep(5)
+		sleep(5)					# sleep for 5 seconds and give it another chance
                 continue
 	if prt:
-		print "DATA:", packet_str
-    	ix=packet_str.find('>')
-    	cc= packet_str[0:ix]
+		print "DATA:", packet_str			# print the data received
+    	ix=packet_str.find('>')					# convert to uppercase the ID
+    	cc= packet_str[0:ix]					# just the ID
     	cc=cc.upper()
-    	packet_str=cc+packet_str[ix:]
-	msg={}
-        if  len(packet_str) > 0 and packet_str[0] <> "#":
+    	packet_str=cc+packet_str[ix:]				# now with the ID in uppercase
+	msg={}							# create the dict 
+        if  len(packet_str) > 0 and packet_str[0] <> "#":	# only in case that is data coming
 
-            	msg=parseraprs(packet_str, msg)
-                id        = msg['id']                         # id
-                longitude = msg['longitude']
+            	msg=parseraprs(packet_str, msg)			# parse the message into the dict
+                id        = msg['id']                         	# id
+                longitude = msg['longitude']			# and so on ...
                 latitude  = msg['latitude']
                 altitude  = msg['altitude']
                 path      = msg['path']
                 otime     = msg['otime']
                 type      = msg['type']
                 if path == 'qAS' or path == 'RELAY*':           # if std records
-                        station=msg['station']
+                        station=msg['station']			# the sation is from parsing the data
 		else:
-			station=id
+			station=id				# otherwise is the ID of the data received
                 data=packet_str
 	    	if not id in fid :                  		# if we did not see the FLARM ID
                 	fid[id]=0                       	# init the counter
@@ -382,11 +462,11 @@ try:
                    		fslod[id]=(latitude, longitude) # save the location of the station
                    		fsmax[id]=0.0                	# initial coverage distance is zero
                    		fsalt[id]=0                  	# initial coverage altitude is zero
-				status=msg['status']
-                        	temp=msg['temp']
-                        	version=msg['version']
-                        	cpu=msg['cpu']
-                        	rf=msg['rf']
+				status=msg['status']		# station status
+                        	temp=msg['temp']		# station temperature
+                        	version=msg['version']		# station SW version
+                        	cpu=msg['cpu']			# station CPU load
+                        	rf=msg['rf']			# station RF sensibility
 		   		print "===>STA:", id, latitude, longitude, altitude, version, temp, "C", cpu, "%", rf, ":::", status
                 	continue                        	# go for the next record
 
@@ -397,41 +477,41 @@ try:
 			fsta[id]=station                	# init the station receiver
                 else:
                         continue                        	# nothing else to do
-                course    = msg['course']
+                course    = msg['course']			# heading
                 speed     = msg['speed']
                 uniqueid  = msg['uniqueid']
                 extpos    = msg['extpos']
-                roclimb   = msg['roclimb']
+                roclimb   = msg['roclimb']			# rate of climb
                 rot       = msg['rot']
                 sensitivity= msg['sensitivity']
                 gps       = msg['gps']
-                hora      = msg['time']
+                hora      = msg['time']				# fix time
                 altim=altitude                          	# the altitude in meters
 	    	# filter by latitude
-	    	if config.FILTER_LATI1 > 0:				# if we are in the norther hemisfere
+	    	if config.FILTER_LATI1 > 0:			# if we are in the norther hemisfere
 	    		if (chkfilati(latitude, config.FILTER_LATI1, config.FILTER_LATI2) and chkfilati(latitude, config.FILTER_LATI3, config.FILTER_LATI4)): 
 				continue			# if is not within our latitude ignore the data
 	    	if (blackhole(longitude, latitude)):
 			print "BH:", id, longitude, latitude, date
 			continue				# if is not within our latitude ignore the data
  
-            	if altitude >= fmaxa[id]:
+            	if altitude >= fmaxa[id]:			# check for maximun altitude
                 	fmaxa[id] = altitude
                 	if altitude > tmaxa and (not spanishsta(id) and not frenchsta(id)):
                         	tmaxa = altitude        	# maximum altitude for the day
                         	tmaxt = date            	# and time
                         	tmid  = id              	# who did it
                         	tmsta = station         	# station capturing the max altitude
-            	if speed >= fmaxs[id]:
+            	if speed >= fmaxs[id]:				# check for maximun speed
                		fmaxs[id] = speed
-            	if altim > 15000 or altim < 0:
+            	if altim > 15000 or altim < 0:	
                 	altim=0
             	alti='%05d' % altim                 		# convert it to an string
 	    	dist=-1
             	if station in fslod:                		# if we have the station yet
                 	distance=vincenty((latitude, longitude), fslod[station]).km    # distance to the station
                 	dist=distance
-                	if distance > 250.0:
+                	if distance > 299.9:			# posible errors 
                     		print "distcheck: ", distance, data
                 	elif distance > fsmax[station]: 	# if higher distance
                     		fsmax[station]=distance     	# save the new distance

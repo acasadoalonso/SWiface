@@ -19,11 +19,19 @@ APRS_SERVER_PORT = 14580
 APRS_USER     = 'SWItest'
 APRS_PASSCODE = -1
 APRS_FILTER_DETAILS = 'filter r/44.11/+5.56/100  '  
-;APRS_FILTER_DETAILS = "filter r/-33.12/-70.48/800  " 
 
 [location]
 location_latitude  = 44.11
 location_longitud  = 5.56
+location_name      = "Sisteron"
+SPIDER             =  False
+SPIuser            = "your@email.org"        
+SPIpassword        = "spider"
+SPOT               = False
+LT24               = False
+LT24username       = "yourid"
+LT24password       = "yourpassword"
+
 eventname1="CNVV 2017"
 eventname2="OGN LIVE"
 eventdesc1="Campeonato Nacional de Vuelo a Vela"

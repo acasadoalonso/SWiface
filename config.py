@@ -22,6 +22,14 @@ APRS_FILTER_DETAILS     = APRS_FILTER_DETAILS + '\n '
 
 location_latitude       = cfg.get('location', 'location_latitude').strip("'")
 location_longitude      = cfg.get('location', 'location_longitud').strip("'")
+FLOGGER_LATITUDE        = cfg.get('location', 'location_latitude').strip("'").strip('"')
+FLOGGER_LONGITUDE       = cfg.get('location', 'location_longitud').strip("'").strip('"')
+
+FILTER_LATI1            = float(cfg.get('filter', 'FILTER_LATI1'))
+FILTER_LATI2            = float(cfg.get('filter', 'FILTER_LATI2'))
+FILTER_LATI3            = float(cfg.get('filter', 'FILTER_LATI3'))
+FILTER_LATI4            = float(cfg.get('filter', 'FILTER_LATI4'))
+
 
 try:
 	location_name   = cfg.get('location', 'location_name').strip("'").strip('"')
@@ -79,9 +87,10 @@ else:
 # --------------------------------------#
 assert len(APRS_USER) > 3 and len(str(APRS_PASSCODE)) > 0, 'Please set APRS_USER and APRS_PASSCODE in settings.py.'
  
+# --------------------------------------#
 						# report the configuration paramenters
-print "Config server values:",                  MySQL, DBhost, DBuser, DBpasswd, DBname, DBpath
+print "Config server values:",                  "MySQL=", MySQL, DBhost, DBuser, DBpasswd, DBname, DBpath
 print "Config APRS values:",                    APRS_SERVER_HOST, APRS_SERVER_PORT, APRS_USER, APRS_PASSCODE, APRS_FILTER_DETAILS
-print "Config location :",     			location_name, location_latitude, location_longitude, SPIDER, SPOT, LT24, SKYLINE
+print "Config location :",     			location_name, location_latitude, location_longitude, "SPIDER=", SPIDER, "SPOT=", SPOT, "LT24=", LT24, "SKYLINE=", SKYLINE
 # --------------------------------------#
 
