@@ -120,7 +120,59 @@ def shutdown(sock, datafile, tmaxa, tmaxt, tmid, tmstd):	# shutdown routine, clo
     return				# job done
 
 #########################################################################
- 
+def ogntbuildtable(conn, ognttable, prt=False):	# function to build the OGN tracker table of relation between flarmid and registrations
+
+	cursG=conn.cursor()             # set the cursor for searching the devices
+	cursG.execute("select id, flarmid, registration from TRKDEVICES where devicetype = 'OGNT' and active = 1; " ) 	# get all the devices with SPIDER
+        for rowg in cursG.fetchall(): 	# look for that registration on the OGN database
+                                
+        	ogntid=rowg[0]		# OGN tracker ID
+        	flarmid=rowg[1]		# Flarmid id to be linked
+        	registration=rowg[2]	# registration id to be linked
+		if flarmid == None or flarmid == '': 			# if flarmid is not provided 
+			flarmid=ogntgetflarmid(conn, registration, prt)	# get it from the registration
+		else:
+			if flarmid[3:9] not in kglid.kglid: # check that the registration is on the table - sanity check
+                		print "Warning: flarmid=", flarmid, "not on kglid table"
+
+		tab={ogntid:flarmid}
+		ognttable.append(tab)
+	if prt:
+		print "OGNTtable:", ognttable
+	return()
+
+def ogntgetflarmid(conn, registration, prt=False):
+
+	cursG=conn.cursor()             # set the cursor for searching the devices
+	try:
+		cursG.execute("select idglider, flarmtype from GLIDERS where registration = '"+registration+"' ;")
+       	except MySQLdb.Error, e:
+           	try:
+                   	print ">>>MySQL Error [%d]: %s" % (e.args[0], e.args[1])
+              	except IndexError:
+                   	print ">>>MySQL Error: %s" % str(e)
+                     	print ">>>MySQL error:", "select idglider, flarmtype from GLIDERS where registration = '"+registration+"' ;"
+                    	print ">>>MySQL data :",  registration
+		return("NOREG") 
+        rowg = cursG.fetchone() 	# look for that registration on the OGN database
+	if rowg == None:
+		return("NOREG") 
+       	idglider=rowg[0]		# flarmid to report
+       	flarmtype=rowg[1]		# flarmtype flarm/ica/ogn
+	if idglider not in kglid.kglid:	# check that the registration is on the table - sanity check
+		print "Warning: flarmid=", idglider, "not on kglid table"
+	if flarmtype == 'F':
+		flarmid="FLR"+idglider 	# flarm 
+	elif flarmtype == 'I':
+		flarmid="ICA"+idglider 	# ICA
+	elif flarmtype == 'O':
+		flarmid="OGN"+idglider 	# ogn tracker
+	else: 
+		flarmid="RND"+idglider 	# undefined
+	if prt:
+		print "GGG:", registration, rowg, flarmid
+	return (flarmid)
+
 #########################################################################
 
 def signal_term_handler(signal, frame):
@@ -129,10 +181,10 @@ def signal_term_handler(signal, frame):
     shutdown(sock, datafile, tmaxa, tmaxt,tmid, tmstd) # shutdown orderly
     sys.exit(0)
 
+#########################################################################
 # ......................................................................# 
 signal.signal(signal.SIGTERM, signal_term_handler)
 # ......................................................................# 
-#
 def blackhole(lati, long):
 
 	latn=42.72667
@@ -155,11 +207,10 @@ def chkfilati(latitude,  flatil, flatiu):
 			return (True)           
 	return(False)
 ########################################################################
-########################################################################
 
 #----------------------ogn_SilentWingsInterface.py start-----------------------
  
-print "Start OGN Silent Wings Interface V1.6"
+print "Start OGN Silent Wings Interface V1.7"
 print "====================================="
 
 import config
@@ -176,6 +227,7 @@ MySQL 			= config.MySQL
 SPIDER   		= config.SPIDER
 SPOT     		= config.SPOT  
 LT24     		= config.LT24  
+OGNT     		= config.OGNT  
 # --------------------------------------#
 
 if SPIDER:
@@ -226,13 +278,13 @@ fsalt={'NONE  ' : 0}                    # maximun altitude
 DBase=DBpath+'SWiface.db'		# Data base used
 if (MySQL):
 	import MySQLdb                  # the SQL data base routines^M
+	conn=MySQLdb.connect(host=DBhost, user=DBuser, passwd=DBpasswd, db=DBname)
+	print "MySQL Database:", DBname, " at Host:", DBhost
 else:
 	import sqlite3                  # the SQL data base routines^M
-# --------------------------------------#
-if (MySQL):
-	conn=MySQLdb.connect(host=DBhost, user=DBuser, passwd=DBpasswd, db=DBname)
-else:
 	conn=sqlite3.connect(DBase)	# connect with the database
+	print "SQLITE3 Database: ",  DBase
+# --------------------------------------#
 
 curs=conn.cursor()                      # set the cursor
 date=datetime.utcnow()         		# get the date
@@ -245,11 +297,6 @@ dte=date.strftime("%y%m%d")             # today's date
 location = ephem.Observer()
 location.pressure = 0
 location.horizon = '-0:34'      # Adjustments for angle to horizon
-
-if (MySQL):
-	print "MySQL Database:", DBname, " at Host:", DBhost
-else:
-	print "SQLITE3 Database: ",  DBase
 
 print "Date: ", date, "at:", socket.gethostname()
 location.lat, location.lon = location_latitude, location_longitude
@@ -266,6 +313,10 @@ if prtreq and prtreq[0] == 'prt':
 else:
     prt = False
  
+if OGNT:			# if we need aggregation of FLARM and OGN trackers data
+	ognttable=[]		# init the instance of the table
+	ogntbuildtable(conn, ognttable, prt) # build the table from the TRKDEVICES DB table 
+
 # create socket & connect to server
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 sock.connect((config.APRS_SERVER_HOST, config.APRS_SERVER_PORT))
@@ -522,6 +573,9 @@ try:
 			rot=0
 	    	if sensitivity == ' ':
 			sensitivity=0
+		if OGNT and id[0:3] == 'OGN':			# if we have OGN tracker aggregation and is an OGN tracker
+			if id in ognttable:			# if the device is on the list
+				id=ognttable[id]		# substitude the OGN tracker ID for the related FLARMID
             # write the DB record
 
 	    	if (MySQL):
