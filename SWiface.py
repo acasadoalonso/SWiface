@@ -114,25 +114,13 @@ def shutdown(sock, datafile, tmaxa, tmaxt, tmid, tmstd):	# shutdown routine, clo
     location.date = ephem.Date(datetime.utcnow())
     print "Local Time (server) now is:", local_time, " and UTC time at location ", config.location_name, "is:", location.date, "UTC."
     try:
-        os.remove("OGN.alive")		# delete the mark of alive
+        os.remove(config.APP+".alive")		# delete the mark of alive
     except:
-        print "No OGN.live"
+        print "No SW.live"
     return				# job done
 
 #########################################################################
  
-#########################################################################
-def alive(first='no'):
-
-        if (first == 'yes'):
-                alivefile = open ("SW.alive", 'w') # create a file just to mark that we are alive
-        else:
-                alivefile = open ("SW.alive", 'a') # append a file just to mark that we are alive
-        local_time = datetime.now()
-        alivetime = local_time.strftime("%y-%m-%d %H:%M:%S")
-        alivefile.write(alivetime+"\n") # write the time as control
-        alivefile.close()               # close the alive file
-#########################################################################
 #########################################################################
 
 def signal_term_handler(signal, frame):
@@ -302,7 +290,7 @@ print "OGN data file is: ", OGN_DATA
 datafile = open (OGN_DATA, 'a')
 keepalive_count = 1
 keepalive_time = time.time()
-alive("yes")
+alive(config.APP,first="yes")
 #
 #-----------------------------------------------------------------
 # Initialise API for SPIDER & SPOT & LT24
@@ -357,7 +345,7 @@ try:
                 # Make sure keepalive gets sent. If not flushed then buffered
                 sock_file.flush()			# force to write the data
                 datafile.flush()			# use this ocassion to flush as well the data file
-		alive()					# indicate that we are alive
+		alive(config.APP)			# indicate that we are alive
                 run_time = time.time() - start_time	# get the run time
                 if prt:
                     print "Send keepalive no: ", keepalive_count, " After elapsed_time: ", int((current_time - keepalive_time)), " After runtime: ", int(run_time), " secs"
