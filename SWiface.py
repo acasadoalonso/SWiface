@@ -266,7 +266,7 @@ else:
     prt = False
  
 if OGNT:			# if we need aggregation of FLARM and OGN trackers data
-	ognttable=[]		# init the instance of the table
+	ognttable={}		# init the instance of the table
 	ogntbuildtable(conn, ognttable, prt) # build the table from the TRKDEVICES DB table 
 
 # create socket & connect to server
