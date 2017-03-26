@@ -408,7 +408,7 @@ try:
         if len(packet_str) == 0:
             nerr +=1
             if nerr > 10:
-                print "Read returns zero length string. Failure.  Orderly closeout, keep alive count:", keeplive_count
+                print "Read returns zero length string. Failure.  Orderly closeout, keep alive count:", keepalive_count
                 date = datetime.now()
                 print "UTC now is: ", date
                 break
