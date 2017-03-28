@@ -382,6 +382,8 @@ try:
 				td=now-datetime(1970,1,1)      	# number of second until beginning of the day
 				lt24ts=int(td.total_seconds())	# Unix time - seconds from the epoch
 
+			if OGNT:				# if we need aggregation of FLARM and OGN trackers data
+				ogntbuildtable(conn, ognttable, prt) # rebuild the table from the TRKDEVICES DB table 
 			spispotcount += 1			# we report a counter of calls to the interfaces 
 			if SPIDER or SPOT or LT24:
 				print spispotcount, "---> TTime:", ttime, "SPOT Unix time:", ts, "LT24 Unix time", lt24ts, "UTC Now:", datetime.utcnow().isoformat()
