@@ -86,6 +86,10 @@ then								#
 	sudo chmod 777 /nfs/OGN/SWdata				#
 	cd /var/www/public/					#
 	mv SWiface.db /nfs/OGN/SWdata				#
+	sudo chown vagrant:vagrant *				# 
+	sudo chmod 777 *					#
+	sudo chown vagrant:vagrant */*				# 
+	sudo chmod 777 */*					#
 fi								#
 cd								#
 sudo apt-get -y dist-upgrade					#
@@ -93,10 +97,12 @@ mysqladmin -u root password ogn					#
 sudo apt-get -y autoremove					#
 touch SWinstallation.done					#
 echo								#
+echo "========================================================================================================"	#
 echo "Installation done ..."					#
 echo "Review the configuration file on /etc/local and the config tail file configtail.txt  ..."			#
 echo "Review the configuration of the crontab and the shell scripts on ~/src " 					#
 echo "In order to execute the Silent Wings data crawler execute:  bash ~/src/SWlive.sh " 			#
 echo "Check the placement of the RootDocument on APACHE2 ... needs to be /var/www/html				#
 echo "Install phpmyadmin if needed !!!                                                                          #
+echo "========================================================================================================"	#
 echo								#
