@@ -7,7 +7,7 @@ if [ -f $sunsetfile ]
 		city='Madrid'
 		ss=$(/usr/local/bin/calcelestial -p sun -m set -q $city -H civil -f %s)
 fi
-alive=$"/nfs/OGN/SWdata/SW.alive"
+alive=$"/nfs/OGN/SWdata/SWS.alive"
 now=$(date +%s)
 let "dif=$ss-$now-1800"
 if [ $dif -lt 0 ]

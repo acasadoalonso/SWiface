@@ -49,6 +49,8 @@ SPOT               = False
 LT24               = False
 LT24username       = "yourid"
 LT24password       = "yourpassword"
+; specify where to find the pilot pictures in the FAI's ranking list of the local directory pic
+PicPilots          = 'FAI'
 
 ; name of the events
 eventname1="CNVV 2017"

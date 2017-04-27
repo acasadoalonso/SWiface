@@ -14,7 +14,7 @@ mysql                                      -u ogn -pogn -h $server SWARCHIVE    
 echo "delete from OGNDATA;" | mysql     -v -u ogn -pogn -h $server SWIFACE                      >>proc.log
 mv ogndata.sql archive
 mv proc.log archive/PROC$(date +%y%m%d).log
-rm SW.alive			>/dev/null 2>&1
+rm SWS.alive			>/dev/null 2>&1
 cd /var/www/html/cuc
 mv *.json archive		>/dev/null 2>&1
 sudo rm *.cuc 			>/dev/null 2>&1

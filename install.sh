@@ -72,6 +72,7 @@ if [ ! -d ~/src  ]						#
 then								#
 	mkdir ~/src   						#
 	mkdir ~/src/SWsrc					#
+	ln -s /var/www/html/main ~/src/SWsrc			#
 fi								#
 cp *.sh ~/src  							#
 cd ..								#
@@ -92,6 +93,7 @@ then								#
 	sudo chmod 777 */*					#
 fi								#
 cd								#
+sudo dpkg-reconfigure tzdata					#
 sudo apt-get -y dist-upgrade					#
 mysqladmin -u root password ogn					#
 sudo apt-get -y autoremove					#
@@ -103,6 +105,7 @@ echo "Review the configuration file on /etc/local and the config tail file confi
 echo "Review the configuration of the crontab and the shell scripts on ~/src " 					#
 echo "In order to execute the Silent Wings data crawler execute:  bash ~/src/SWlive.sh " 			#
 echo "Check the placement of the RootDocument on APACHE2 ... needs to be /var/www/html				#
+echo "If running in Windows under Virtual Box, run dos2unix on /var/www/html & ./main & ~/src			#
 echo "Install phpmyadmin if needed !!!                                                                          #
 echo "========================================================================================================"	#
 echo								#
