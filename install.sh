@@ -38,7 +38,7 @@ echo								#
 echo "Installing phpmyadmin  ... "				#
 echo								#
 #sudo apt-get install -y phpmyadmin 				#
-#sudo service apache2 restart					#
+sudo service apache2 restart					#
 sudo pip install ephem pytz geopy configparser pycountry	#
 if [ ! -d /etc/local ]						#
 then								#
@@ -62,6 +62,7 @@ echo								#
 echo "Optional steps ... "					#
 echo								#
 cd main								#
+cp aliases ~/.bash_aliases					#
 mailcatcher --http-ip=0.0.0.0					#
 sudo /usr/local/bin/composer self-update			#
 composer update							#
