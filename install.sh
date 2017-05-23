@@ -28,6 +28,7 @@ sudo apt-get install -y pkg-config git mutt			#
 sudo apt-get install -y apache2 php php-mcrypt php-mysql php-cli #
 sudo apt-get install -y php-mbstring php-gettext		#
 sudo a2enmod rewrite						#
+sudo a2enmod cgi						#
 sudo phpenmod mcrypt						#
 sudo phpenmod mbstring						#
 sudo cat /etc/apache2/apache2.conf html.dir 	>>temp.conf	#
