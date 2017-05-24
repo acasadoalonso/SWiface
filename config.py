@@ -8,7 +8,11 @@
 #
 import socket
 from configparser import ConfigParser
-configfile="/etc/local/SWSconfig.ini"
+configdir=os.getenv('CONFIGDIR')
+if configdir == None:
+	configdir='/etc/local/'
+configfile=configdir+'SWSconfig.ini'
+
 hostname=socket.gethostname()
 cfg=ConfigParser()                                                              # get the configuration parameters
 cfg.read(configfile)                                                            # reading it for the configuration file
