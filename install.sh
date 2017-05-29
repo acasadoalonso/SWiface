@@ -56,6 +56,11 @@ if [ -f SWiface.db ]						#
 then								#
 	rm      SWiface.db					#
 fi								#
+if [ ! -d cuc    ]						#
+then								#
+	mkdir cuc     						#
+	mkdir cuc/TSKF  					#
+fi								#
 sqlite3 SWiface.db         < main/DBschema.sql			#
 echo "CREATE DATABASE SWIFACE" | mysql 				#
 mysql --database SWIFACE < main/DBschema.sql			#
@@ -108,6 +113,7 @@ echo "Review the configuration of the crontab and the shell scripts on ~/src " 	
 echo "In order to execute the Silent Wings data crawler execute:  bash ~/src/SWlive.sh " 			#
 echo "Check the placement of the RootDocument on APACHE2 ... needs to be /var/www/html				#
 echo "If running in Windows under Virtual Box, run dos2unix on /var/www/html & ./main & ~/src			#
+echo "Run the utilities soa2sws.py and/or sgp2sws.py in order to extract the data from SoaringSpot.com or SGP   #
 echo "Install phpmyadmin if needed !!!                                                                          #
 echo "========================================================================================================"	#
 echo								#
