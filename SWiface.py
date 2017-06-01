@@ -357,7 +357,8 @@ try:
                 keepalive_count +=  1
             except Exception, e:
  
-               print ('something\'s wrong with socket write. Exception type is %s' % (`e`))
+               print ('Something\'s wrong with socket write. Exception type is %s' % (`e`))
+	       print "Socket error:", keepalive, current_time
  
             try:						# lets see if we have data from the interface functionns: SPIDER, SPOT, LT24 or SKYLINES
 			if SPIDER:				# if we have SPIDER according with the config
@@ -390,7 +391,11 @@ try:
 
 
             except Exception, e:
-                        print ('something\'s wrong with interface functions Exception type is %s' % (`e`))
+                        print ('Something\'s wrong with interface functions Exception type is %s' % (`e`))
+			if SPIDER or SPOT or LT24:
+				print spispotcount, "ERROR:---> TTime:", ttime, "SPOT Unix time:", ts, "LT24 Unix time", lt24ts, "UTC Now:", datetime.utcnow().isoformat()
+
+
 # ------------------------------------------------------- main loop ------------------------------------- #    
         if prt:
             print "In main loop. Count= ", i
