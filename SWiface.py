@@ -157,9 +157,11 @@ def chkfilati(latitude,  flatil, flatiu):
 ########################################################################
 
 #----------------------ogn_SilentWingsInterface.py start-----------------------
- 
-print "Start OGN Silent Wings Interface V1.8"
+pgmversion='V1.8' 
+print "Start OGN Silent Wings Interface "+pgmversion
 print "====================================="
+
+print "Program Version:", time.ctime(os.path.getmtime(__file__))
 
 import config
 
