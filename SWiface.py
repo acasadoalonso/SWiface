@@ -162,6 +162,9 @@ print "Start OGN Silent Wings Interface "+pgmversion
 print "====================================="
 
 print "Program Version:", time.ctime(os.path.getmtime(__file__))
+date=datetime.utcnow()         		# get the date
+dte=date.strftime("%y%m%d")             # today's date
+print "Date: ", date, " UTC at:", socket.gethostname()
 
 import config
 
@@ -241,8 +244,6 @@ else:
 # --------------------------------------#
 
 curs=conn.cursor()                      # set the cursor
-date=datetime.utcnow()         		# get the date
-dte=date.strftime("%y%m%d")             # today's date
 #
 #-----------------------------------------------------------------
 # Initialise API for computing sunrise and sunset
@@ -252,7 +253,6 @@ location = ephem.Observer()
 location.pressure = 0
 location.horizon = '-0:34'      # Adjustments for angle to horizon
 
-print "Date: ", date, "at:", socket.gethostname()
 location.lat, location.lon = location_latitude, location_longitude
 date = datetime.now()
 next_sunrise = location.next_rising(ephem.Sun(), date)

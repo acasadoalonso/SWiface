@@ -11,6 +11,8 @@ MySQL    =False
 DBhost   =localhost
 DBuser   =ogn
 DBpasswd =ogn
+DBuserread   =ognread
+DBpasswdread =ognread
 ; Name of the MySQL database
 DBname   =SWIFACE
 ; name of the SQLITE3 database
