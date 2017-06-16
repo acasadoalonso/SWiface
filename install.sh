@@ -99,6 +99,9 @@ then								#
 	sudo chown vagrant:vagrant */*				# 
 	sudo chmod 777 */*					#
 fi								#
+cd /var/www/html 						#
+rm kglid.py							#
+ln main/kglid.py .						# 
 cd								#
 sudo dpkg-reconfigure tzdata					#
 sudo apt-get -y dist-upgrade					#
