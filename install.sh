@@ -59,7 +59,9 @@ fi								#
 if [ ! -d cuc    ]						#
 then								#
 	mkdir cuc     						#
+	chmod 777 cuc     					#
 	mkdir cuc/TSKF  					#
+	chmod 777 cuc/TSKF  					#
 fi								#
 sqlite3 SWiface.db         < main/DBschema.sql			#
 echo "CREATE DATABASE SWIFACE" | mysql 				#

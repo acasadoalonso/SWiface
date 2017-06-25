@@ -434,6 +434,8 @@ try:
         if  len(packet_str) > 0 and packet_str[0] <> "#":	# only in case that is data coming
 
             	msg=parseraprs(packet_str, msg)			# parse the message into the dict
+		if prt:
+			print msg
                 id        = msg['id']                         	# id
                 longitude = msg['longitude']			# and so on ...
                 latitude  = msg['latitude']
@@ -557,7 +559,8 @@ try:
             	else:
                 	addcmd="insert into OGNDATA values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"
                 	curs.execute(addcmd, (id, dte, hora, station, latitude, longitude, altim, speed, course, roclimb, rot,sensitivity, gps, uniqueid, dist, extpos,'OGN '))
-
+		if prt:
+			print addcmd
             	conn.commit()                       		# commit the DB updates
 	    	cin +=1                             		# one more record read
         

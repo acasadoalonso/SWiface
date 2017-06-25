@@ -1,5 +1,10 @@
 Installation instructions:
 
+Install VBOX for windows: 	https://www.virtualbox.org/wiki/Downloads 
+Install Git BASH: 		https://git-scm.com/download/win 
+Install Vagrant: 		https://www.vagrantup.com/downloads.html
+
+
 - Download this repo from GitHub.com
 - Install the python dependencies									pip install socket ephem pytz geopy ...
 - Make the directory where the data will reside for example : 						mkdir SWdata
