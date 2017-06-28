@@ -165,7 +165,7 @@ print "====================================="
 print "Program Version:", time.ctime(os.path.getmtime(__file__))
 date=datetime.utcnow()         		# get the date
 dte=date.strftime("%y%m%d")             # today's date
-print "Date: ", date, " UTC at:", socket.gethostname()
+print "Date: ", date, " UTC at:", socket.gethostname(), "Process ID:", os.getpid()
 
 import config
 
@@ -289,10 +289,10 @@ if os.path.isfile(compfile):
 		filter += f
 		filter += "/"	
 	filter += " p/LF/LE/ \n"
-	login = 'user %s pass %s vers Silent Wings-Interface 1.0 %s'  % (config.APRS_USER, config.APRS_PASSCODE , filter)
+	login = 'user %s pass %s vers Silent-Wings-Interface-1.0 %s'  % (config.APRS_USER, config.APRS_PASSCODE , filter)
 else:
-	login = 'user %s pass %s vers Silent Wings-Interface 1.0 %s'  % (config.APRS_USER, config.APRS_PASSCODE , config.APRS_FILTER_DETAILS)
-print login
+	login = 'user %s pass %s vers Silent-Wings-Interface-1.0 %s'  % (config.APRS_USER, config.APRS_PASSCODE , config.APRS_FILTER_DETAILS)
+print "APRS login:", login
 sock.send(login)    
  
 # Make the connection to the server
