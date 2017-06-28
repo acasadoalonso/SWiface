@@ -35,6 +35,10 @@ FILTER_LATI2            = float(cfg.get('filter', 'FILTER_LATI2'))
 FILTER_LATI3            = float(cfg.get('filter', 'FILTER_LATI3'))
 FILTER_LATI4            = float(cfg.get('filter', 'FILTER_LATI4'))
 
+try:
+        cucFileLocation = cfg.get('server', 'cucFileLocation').strip("'").strip('"')
+except:
+        cucFileLocation = "/var/www/html/cuc/"
 
 try:
 	location_name   = cfg.get('location', 'location_name').strip("'").strip('"')
@@ -105,7 +109,7 @@ assert len(APRS_USER) > 3 and len(str(APRS_PASSCODE)) > 0, 'Please set APRS_USER
 # --------------------------------------#
 						# report the configuration paramenters
 print "Config file used:    ",                  configfile
-print "Config server values:",                  "MySQL=", MySQL, DBhost, DBuser, DBpasswd, DBname, DBpath
+print "Config server values:",                  "MySQL=", MySQL, DBhost, DBuser, DBpasswd, DBname, DBpath, cucFileLocation
 print "Config APRS values:",                    APRS_SERVER_HOST, APRS_SERVER_PORT, APRS_USER, APRS_PASSCODE, APRS_FILTER_DETAILS
 print "Config location :",     			location_name, location_latitude, location_longitude, "SPIDER=", SPIDER, "SPOT=", SPOT, "LT24=", LT24, "SKYLINE=", SKYLINE, "OGNtracker=", OGNT
 # --------------------------------------#

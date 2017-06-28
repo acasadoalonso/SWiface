@@ -14,6 +14,7 @@ import ephem
 import pytz
 import sys
 import os
+import os.path
 import signal
 import kglid                                # import the list on known gliders
 import socket
@@ -277,8 +278,21 @@ sock.connect((config.APRS_SERVER_HOST, config.APRS_SERVER_PORT))
 print "Socket sock connected"
  
 # logon to OGN APRS network    
-
-login = 'user %s pass %s vers Silent Wings-Interface 1.0 %s'  % (config.APRS_USER, config.APRS_PASSCODE , config.APRS_FILTER_DETAILS)
+compfile=config.cucFileLocation + "/competitiongliders.lst"
+if os.path.isfile(compfile):
+	fd=open(compfile, 'r')
+	j=fd.read()
+	clist=json.loads(j)
+	fd.close()
+	filter="filter b/"
+	for f in clist:
+		filter += f
+		filter += "/"	
+	filter += " p/LF/LE/ \n"
+	login = 'user %s pass %s vers Silent Wings-Interface 1.0 %s'  % (config.APRS_USER, config.APRS_PASSCODE , filter)
+else:
+	login = 'user %s pass %s vers Silent Wings-Interface 1.0 %s'  % (config.APRS_USER, config.APRS_PASSCODE , config.APRS_FILTER_DETAILS)
+print login
 sock.send(login)    
  
 # Make the connection to the server
