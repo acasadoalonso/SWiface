@@ -457,8 +457,10 @@ try:
                 path      = msg['path']
                 otime     = msg['otime']
                 type      = msg['type']
-                if path == 'qAS' or path == 'RELAY*':           # if std records
-                        station=msg['station']			# the sation is from parsing the data
+                if path == 'qAS' or path == 'RELAY*' or path[0:3] == "OGN": # if std records
+                        station=msg['station']
+			if path[0:3] == "OGN":
+				print "RELAY:", path, station
 		else:
 			station=id				# otherwise is the ID of the data received
                 data=packet_str
@@ -490,7 +492,7 @@ try:
 
 	    	if path == 'qAC':
 			continue				# the case of the TCP IP as well
-                if path == 'qAS' or path == 'RELAY*':           # if std records
+                if path == 'qAS' or path == 'RELAY*' or path[0:3] == "OGN": # if std records
                         station=msg['station']
 			fsta[id]=station                	# init the station receiver
                 else:
