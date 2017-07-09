@@ -35,19 +35,28 @@ FILTER_LATI2            = float(cfg.get('filter', 'FILTER_LATI2'))
 FILTER_LATI3            = float(cfg.get('filter', 'FILTER_LATI3'))
 FILTER_LATI4            = float(cfg.get('filter', 'FILTER_LATI4'))
 
+# --------------------------------------#
 try:
         cucFileLocation = cfg.get('server', 'cucFileLocation').strip("'").strip('"')
 except:
         cucFileLocation = "/var/www/html/cuc/"
 
 try:
+	PIDfile         = cfg.get('server', 'pid').strip("'").strip('"')
+except:
+	PIDfile='/tmp/APRS.pid'
+
+try:
 	location_name   = cfg.get('location', 'location_name').strip("'").strip('"')
 except:
 	location_name   = ' '
+#
+# --------------------------------------#
 try:
 	SPOTtext        = cfg.get('location', 'SPOT').strip("'").strip('"')
 except:
 	SPOTtext='False'
+
 try:
 	LT24text        = cfg.get('location', 'LT24').strip("'").strip('"')
 	LT24username    = cfg.get('location', 'LT24username').strip("'").strip('"')

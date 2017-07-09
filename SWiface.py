@@ -15,6 +15,7 @@ import pytz
 import sys
 import os
 import os.path
+import atexit
 import signal
 import kglid                                # import the list on known gliders
 import socket
@@ -107,7 +108,7 @@ def shutdown(sock, datafile, tmaxa, tmaxt, tmid, tmstd):	# shutdown routine, clo
     else:
         gid=tmid                        # use the ID instead   
     for key in fsmax:                   # report data
-        print "Station: ", key, fsmax[key], "Kms."    
+        print "Station: ", key, fsmax[key], "Kms. and" , fscnt[key], "fixes..."   
     print "Maximun altitude for the day:", tmaxa, ' meters MSL at:', tmaxt, 'by:', gid, 'Station:', tmsta, "Max. distance:", tmaxd, "by:", tmstd
     conn.commit()			# commit the DB updates
     conn.close()			# close the database
@@ -158,7 +159,7 @@ def chkfilati(latitude,  flatil, flatiu):
 ########################################################################
 
 #----------------------ogn_SilentWingsInterface.py start-----------------------
-pgmversion='V1.8' 
+pgmversion='V1.9' 
 print "Start OGN Silent Wings Interface "+pgmversion
 print "====================================="
 
@@ -169,8 +170,13 @@ print "Date: ", date, " UTC at:", socket.gethostname(), "Process ID:", os.getpid
 
 import config
 
+if os.path.exists(config.PIDfile):	# protection agains running the same daemon at the same time
+	raise RuntimeError("APRSlog already running !!!")
+	exit(-1)			# exit with an error code
+#
+
 # --------------------------------------#
-location_latitude   	= config.location_latitude
+location_latitude   	= config.location_latitude	# get the configuration parameters
 location_longitude  	= config.location_longitude
 DBpath			= config.DBpath 
 DBhost   		= config.DBhost
@@ -184,15 +190,15 @@ LT24     		= config.LT24
 OGNT     		= config.OGNT  
 # --------------------------------------#
 
-if SPIDER:
+if SPIDER:				# check if we want the SPIDER to track
 	from spifuncs import *
 	spiusername =config.SPIuser  
 	spipassword =config.SPIpassword  
 
-if SPOT:
+if SPOT:				# check if we want the SPOT to track
 	from spotfuncs import *
 
-if LT24:
+if LT24:				# check if we want the livetrack24 devices to track
 	from lt24funcs import *
 	lt24username =config.LT24username  
 	lt24password =config.LT24password  
@@ -204,8 +210,14 @@ if LT24:
 	LT24firsttime=True
 
 
-if OGNT:
+if OGNT:				# check if we want to add the OGN trackers to be pair with the Flarm units
 	from ogntfuncs import *
+
+# --------------------------------------#
+with open(config.PIDfile,"w") as f:	# protect against to running the daemon twice
+	f.write (str(os.getpid()))
+	f.close()
+atexit.register(lambda: os.remove(config.PIDfile)) 	# remove the lock file at exit
 
 # --------------------------------------#
 
@@ -231,6 +243,7 @@ fslal={'NONE  ' : 0.0}      		# station location altitude
 fslod={'NONE  ' : (0.0, 0.0)}           # station location - tuple
 fsmax={'NONE  ' : 0.0}                  # maximun coverage
 fsalt={'NONE  ' : 0}                    # maximun altitude
+fscnt={'NONE  ' : 0}                    # tation counter
 
 # --------------------------------------#
 DBase=DBpath+'SWiface.db'		# Data base used
@@ -279,21 +292,21 @@ print "Socket sock connected"
  
 # logon to OGN APRS network    
 compfile=config.cucFileLocation + "/competitiongliders.lst"
-if os.path.isfile(compfile):
-	fd=open(compfile, 'r')
+if os.path.isfile(compfile):	# if we have a COMP file with the list of flarm ids, pass that to the APRS at login time
+	fd=open(compfile, 'r')	# open and read the file
 	j=fd.read()
 	clist=json.loads(j)
-	fd.close()
-	filter="filter b/"
-	for f in clist:
-		filter += f
-		filter += "/"	
-	filter += " p/LF/LE/ \n"
+	fd.close()		# close it
+	filter="filter b/"	# prepare the fileter param of login
+	for f in clist:		# explore the whole list
+		filter += f	# add the flarm id
+		filter += "/"	# separated by an slash
+	filter += " p/LF/LE/ \n"# add all the station of france and Spain for control 
 	login = 'user %s pass %s vers Silent-Wings-Interface %s %s'  % (config.APRS_USER, config.APRS_PASSCODE , pgmversion, filter)
 else:
 	login = 'user %s pass %s vers Silent-Wings-Interface %s %s'  % (config.APRS_USER, config.APRS_PASSCODE , pgmversion, config.APRS_FILTER_DETAILS)
-print "APRS login:", login
-sock.send(login)    
+print "APRS login:", login	# print the login for control
+sock.send(login)    		# login into the APRS server
  
 # Make the connection to the server
 sock_file = sock.makefile()
@@ -301,15 +314,15 @@ sock_file = sock.makefile()
 # Initialise libfap.py for parsing returned lines
 print "libfap_init"
 libfap.fap_init()
-start_time = time.time()
+start_time = time.time()	# get the start and local times
 local_time = datetime.now()
 fl_date_time = local_time.strftime("%y%m%d")
-OGN_DATA = DBpath + "DATA" + fl_date_time+'.log'
+OGN_DATA = DBpath + "DATA" + fl_date_time+'.log'	# this is the LOG file
 print "OGN data file is: ", OGN_DATA
 datafile = open (OGN_DATA, 'a')
-keepalive_count = 1
-keepalive_time = time.time()
-alive(config.APP,first="yes")
+keepalive_count = 1		# number of keep alive messages
+keepalive_time = time.time()	# every 3 minutees we send a keep alive message to the APRS server
+alive(config.APP,first="yes")	# and we create a SWS.alive file for control that we are alive as well
 #
 #-----------------------------------------------------------------
 # Initialise API for SPIDER & SPOT & LT24
@@ -323,12 +336,12 @@ ts=int(td.total_seconds())		# Unix time - seconds from the epoch
 spispotcount=1				# loop counter
 ttime=now.strftime("%Y-%m-%dT%H:%M:%SZ")# format required by SPIDER
 
-if LT24:
+if LT24:				# if we use LT24, we do the login now
 	lt24login(LT24path, lt24username, lt24password)	# login into the LiveTrack24 server
 	lt24ts=ts
 	LT24firsttime=True
 
-if SPIDER or SPOT or LT24:
+if SPIDER or SPOT or LT24:		# if we use SPIDER, SPOT or LT24 we print the control
 	print spispotcount, "---> TTime:", ttime, "Unix time:", ts, "UTC:", datetime.utcnow().isoformat()
 
 date = datetime.now()
@@ -374,7 +387,7 @@ try:
             except Exception, e:
  
                print ('Something\'s wrong with socket write. Exception type is %s' % (`e`))
-	       print "Socket error:", keepalive, current_time
+	       print "Socket error:", keepalive_count, current_time
  
             try:						# lets see if we have data from the interface functionns: SPIDER, SPOT, LT24 or SKYLINES
 			if SPIDER:				# if we have SPIDER according with the config
@@ -406,7 +419,7 @@ try:
 				print spispotcount, "---> TTime:", ttime, "SPOT Unix time:", ts, "LT24 Unix time", lt24ts, "UTC Now:", datetime.utcnow().isoformat()
 
 
-            except Exception, e:
+            except Exception, e:				# if we have an error during the aggregation functions 
                         print ('Something\'s wrong with interface functions Exception type is %s' % (`e`))
 			if SPIDER or SPOT or LT24:
 				print spispotcount, "ERROR:---> TTime:", ttime, "SPOT Unix time:", ts, "LT24 Unix time", lt24ts, "UTC Now:", datetime.utcnow().isoformat()
@@ -482,6 +495,7 @@ try:
                    		fslod[id]=(latitude, longitude) # save the location of the station
                    		fsmax[id]=0.0                	# initial coverage distance is zero
                    		fsalt[id]=0                  	# initial coverage altitude is zero
+                   		fscnt[id]=0                  	# initial counter of fixes
 				status=msg['status']		# station status
                         	temp=msg['temp']		# station temperature
                         	version=msg['version']		# station SW version
@@ -540,8 +554,9 @@ try:
 			if distance > tmaxd:			# if exceed maximun distance 
 		    		tmaxd=distance			# maximun distance today
 		    		tmstd=station			# station with the maximun distance
-			if distance >fmaxd[id]:
-		    		fmaxd[id]=distance
+			if distance >fmaxd[id]:			# if distance is higher 
+		    		fmaxd[id]=distance		# save the new distance
+			fscnt[station] += 1			# increase the counter of fixes
             	if altim > tmaxa:				# if exceed the maximun altitude
                 	tmaxa = altim               		# maximum altitude for the day
                 	tmaxt = hora                		# and time

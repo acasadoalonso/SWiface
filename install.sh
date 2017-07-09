@@ -40,7 +40,7 @@ echo "Installing phpmyadmin  ... "				#
 echo								#
 #sudo apt-get install -y phpmyadmin 				#
 sudo service apache2 restart					#
-sudo pip install ephem pytz geopy configparser pycountry	#
+sudo pip install ephem pytz geopy configparser pycountry atexit	#
 if [ ! -d /etc/local ]						#
 then								#
     sudo mkdir /etc/local					#
