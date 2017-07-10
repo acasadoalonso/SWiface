@@ -44,7 +44,7 @@ except:
 try:
 	PIDfile         = cfg.get('server', 'pid').strip("'").strip('"')
 except:
-	PIDfile='/tmp/APRS.pid'
+	PIDfile='/tmp/SWS.pid'
 
 try:
 	location_name   = cfg.get('location', 'location_name').strip("'").strip('"')
