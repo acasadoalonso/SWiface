@@ -464,12 +464,12 @@ try:
 		if prt:
 			print msg
                 id        = msg['id']                         	# id
+                type      = msg['type']				# aprs message type
                 longitude = msg['longitude']			# and so on ...
                 latitude  = msg['latitude']
                 altitude  = msg['altitude']
                 path      = msg['path']
                 otime     = msg['otime']
-                type      = msg['type']
                 if path == 'qAS' or path == 'RELAY*' or path[0:3] == "OGN": # if std records
                         station=msg['station']
 			if path[0:3] == "OGN":
@@ -504,6 +504,9 @@ try:
 		   		print "===>STA:", id, latitude, longitude, altitude, version, temp, "C", cpu, "%", rf, ":::", status
                 	continue                        	# go for the next record
 
+		if type == 8:					# if tracker status report
+			print "OGN tracker Status report:", data
+			continue
 	    	if path == 'qAC':
 			continue				# the case of the TCP IP as well
                 if path == 'qAS' or path == 'RELAY*' or path[0:3] == "OGN": # if std records
