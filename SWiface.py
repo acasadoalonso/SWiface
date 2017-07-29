@@ -170,8 +170,8 @@ print "Date: ", date, " UTC at:", socket.gethostname(), "Process ID:", os.getpid
 
 import config
 
-if os.path.exists(config.PIDfile):	# protection agains running the same daemon at the same time
-	raise RuntimeError("APRSlog already running !!!")
+if os.path.exists(config.PIDfile):	# protection against running the same daemon at the same time
+	raise RuntimeError("SWiface already running !!!")
 	exit(-1)			# exit with an error code
 #
 
