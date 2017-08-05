@@ -385,10 +385,16 @@ try:
                     print "Send keepalive no: ", keepalive_count, " After elapsed_time: ", int((current_time - keepalive_time)), " After runtime: ", int(run_time), " secs"
                 keepalive_time = current_time
                 keepalive_count +=  1
+
             except Exception, e:
  
-               print ('Something\'s wrong with socket write. Exception type is %s' % (`e`))
-	       print "Socket error:", keepalive_count, current_time
+               	print ('Something\'s wrong with socket write. Exception type is %s' % (`e`))
+	       	print "Socket error:", keepalive_count, current_time
+		if keepalive_count != -1:
+			keepalive_count=-1
+            		shutdown(sock, datafile, tmaxa, tmaxt,tmid, tmstd)
+            	print "At socket error ... Exit"
+            	exit(-1)
  
             try:						# lets see if we have data from the interface functionns: SPIDER, SPOT, LT24 or SKYLINES
 			if SPIDER:				# if we have SPIDER according with the config
@@ -417,16 +423,18 @@ try:
 				ogntbuildtable(conn, ognttable, prt) # rebuild the table from the TRKDEVICES DB table 
 			spispotcount += 1			# we report a counter of calls to the interfaces 
 			if SPIDER or SPOT or LT24:
-				print spispotcount, "---> TTime:", ttime, "SPOT Unix time:", ts, "LT24 Unix time", lt24ts, "UTC Now:", datetime.utcnow().isoformat()
+				print spispotcount, "---> Spider TTime:", ttime, "SPOT Unix time:", ts, "LT24 Unix time", lt24ts, "UTC Now:", datetime.utcnow().isoformat()
 
 
             except Exception, e:				# if we have an error during the aggregation functions 
                         print ('Something\'s wrong with interface functions Exception type is %s' % (`e`))
 			if SPIDER or SPOT or LT24:
-				print spispotcount, "ERROR:---> TTime:", ttime, "SPOT Unix time:", ts, "LT24 Unix time", lt24ts, "UTC Now:", datetime.utcnow().isoformat()
+				print spispotcount, "ERROR:---> Spider TTime:", ttime, "SPOT Unix time:", ts, "LT24 Unix time", lt24ts, "UTC Now:", datetime.utcnow().isoformat()
 
 
 # ------------------------------------------------------- main loop ------------------------------------- #    
+
+
         if prt:
             print "In main loop. Count= ", i
             i += 1
@@ -439,6 +447,7 @@ try:
                 
         except socket.error:
             print "Socket error on readline"
+            nerr +=1
             continue
         # A zero length line should not be return if keepalives are being sent
         # A zero length line will only be returned after ~30m if keepalives are not sent
