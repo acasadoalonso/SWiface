@@ -171,9 +171,15 @@ print "Date: ", date, " UTC at:", socket.gethostname(), "Process ID:", os.getpid
 import config
 
 if os.path.exists(config.PIDfile):	# protection against running the same daemon at the same time
+	print "SWiface already running !!!"
 	raise RuntimeError("SWiface already running !!!")
 	exit(-1)			# exit with an error code
 #
+# --------------------------------------#
+with open(config.PIDfile,"w") as f:	# protect against to running the daemon twice
+	f.write (str(os.getpid()))
+	f.close()
+atexit.register(lambda: os.remove(config.PIDfile)) 	# remove the lock file at exit
 
 # --------------------------------------#
 location_latitude   	= config.location_latitude	# get the configuration parameters
@@ -214,11 +220,6 @@ if LT24:				# check if we want the livetrack24 devices to track
 if OGNT:				# check if we want to add the OGN trackers to be pair with the Flarm units
 	from ogntfuncs import *
 
-# --------------------------------------#
-with open(config.PIDfile,"w") as f:	# protect against to running the daemon twice
-	f.write (str(os.getpid()))
-	f.close()
-atexit.register(lambda: os.remove(config.PIDfile)) 	# remove the lock file at exit
 
 # --------------------------------------#
 
