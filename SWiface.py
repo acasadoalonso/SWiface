@@ -449,12 +449,19 @@ try:
         except socket.error:
             print "Socket error on readline"
             nerr +=1
-            continue
+            if nerr > 20:
+                print "Socket error multiple  Failures.  Orderly closeout, keep alive count:", keepalive_count
+                date = datetime.now()
+                print "UTC now is: ", date
+                break
+            else:
+		sleep(5)					# sleep for 5 seconds and give it another chance
+            	continue
         # A zero length line should not be return if keepalives are being sent
         # A zero length line will only be returned after ~30m if keepalives are not sent
         if len(packet_str) == 0:
             nerr +=1
-            if nerr > 10:
+            if nerr > 20:
                 print "Read returns zero length string. Failure.  Orderly closeout, keep alive count:", keepalive_count
                 date = datetime.now()
                 print "UTC now is: ", date
