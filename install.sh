@@ -112,22 +112,21 @@ then								#
 fi								#
 cd /var/www/html 						#
 rm kglid.py							#
-ln main/kglid.py .						# 
+ln -s main/kglid.py .						# 
 cd								#
 sudo dpkg-reconfigure tzdata					#
 sudo apt-get -y dist-upgrade					#
-mysqladmin -u root password ogn					#
 sudo apt-get -y autoremove					#
 touch SWinstallation.done					#
 echo								#
 echo "========================================================================================================"	#
-echo "Installation done ..."					#
+echo "Installation done ..."											#
 echo "Review the configuration file on /etc/local and the config tail file configtail.txt  ..."			#
 echo "Review the configuration of the crontab and the shell scripts on ~/src " 					#
 echo "In order to execute the Silent Wings data crawler execute:  bash ~/src/SWlive.sh " 			#
-echo "Check the placement of the RootDocument on APACHE2 ... needs to be /var/www/html				#
-echo "If running in Windows under Virtual Box, run dos2unix on /var/www/html & ./main & ~/src			#
-echo "Run the utilities soa2sws.py and/or sgp2sws.py in order to extract the data from SoaringSpot.com or SGP   #
-echo "Install phpmyadmin if needed !!!                                                                          #
+echo "Check the placement of the RootDocument on APACHE2 ... needs to be /var/www/html"				#
+echo "If running in Windows under Virtual Box, run dos2unix on /var/www/html & ./main & ~/src"			#
+echo "Run the utilities soa2sws.py and/or sgp2sws.py in order to extract the data from SoaringSpot.com or SGP"  #
+echo "Install phpmyadmin if needed !!! "                                                                        #
 echo "========================================================================================================"	#
 echo								#
