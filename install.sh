@@ -27,6 +27,9 @@ sudo apt-get install -y dos2unix libarchive-dev	 autoconf mc	#
 sudo apt-get install -y pkg-config git mutt			#
 sudo apt-get install -y apache2 php php-mcrypt php-mysql php-cli #
 sudo apt-get install -y php-mbstring php-gettext		#
+sudo apt-get install -y mailutils ntpdate mutt	ssmtp		#
+sudo apt-get install -y libcurl4-openssl-dev			#
+sudo apt-get install -y libjson0 libjson0-dev			#
 sudo a2enmod rewrite						#
 sudo a2enmod cgi						#
 sudo phpenmod mcrypt						#
@@ -38,9 +41,15 @@ sudo service apache2 restart					#
 echo								#
 echo "Installing phpmyadmin  ... "				#
 echo								#
-#sudo apt-get install -y phpmyadmin 				#
+sudo apt-get install -y phpmyadmin 				#
 sudo service apache2 restart					#
-sudo pip install ephem pytz geopy configparser pycountry atexit	#
+sudo -H pip install --upgrade pip                               #
+sudo -H pip install ephem 					#
+sudo -H pip install pytz 					#
+sudo -H pip install geopy 					#
+sudo -H pip install configparser 				#
+sudo -H pip install pycountry 					#
+
 if [ ! -d /etc/local ]						#
 then								#
     sudo mkdir /etc/local					#
@@ -64,8 +73,8 @@ then								#
 	chmod 777 cuc/TSKF  					#
 fi								#
 sqlite3 SWiface.db         < main/DBschema.sql			#
-echo "CREATE DATABASE SWIFACE" | mysql 				#
-mysql --database SWIFACE < main/DBschema.sql			#
+echo "CREATE DATABASE SWIFACE" | mysql -u root -pogn		#
+mysql -u root -pogn --database SWIFACE < main/DBschema.sql	#
 echo								#
 echo "Optional steps ... "					#
 echo								#
@@ -92,13 +101,13 @@ then								#
 	sudo mkdir /nfs						#
 	sudo mkdir /nfs/OGN					#
 	sudo mkdir /nfs/OGN/SWdata				#
-	sudo chown vagrant:vagrant /nfs/OGN/SWdata		#
+	sudo chown ogn:ogn /nfs/OGN/SWdata			#
 	sudo chmod 777 /nfs/OGN/SWdata				#
 	cd /var/www/public/					#
 	mv SWiface.db /nfs/OGN/SWdata				#
-	sudo chown vagrant:vagrant *				# 
+	sudo chown ogn:ogn *					# 
 	sudo chmod 777 *					#
-	sudo chown vagrant:vagrant */*				# 
+	sudo chown ogn:ogn */*					# 
 	sudo chmod 777 */*					#
 fi								#
 cd /var/www/html 						#
