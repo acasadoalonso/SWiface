@@ -519,7 +519,7 @@ try:
                         	version=msg['version']		# station SW version
                         	cpu=msg['cpu']			# station CPU load
                         	rf=msg['rf']			# station RF sensibility
-		   		print "===>STA:", id, latitude, longitude, altitude, version, temp, "C", cpu, "%", rf, ":::", status
+		   		print "===>STA:", id, latitude, longitude, altitude, version, ":::", status
                 	continue                        	# go for the next record
 
 		if type == 8:					# if tracker status report

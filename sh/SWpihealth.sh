@@ -3,8 +3,7 @@
 # script to email logfiles 
 # then delete the logfiles to save space
 
-/sbin/ifconfig eth0 	>  hc.log
-/sbin/ifconfig wlan0 	>> hc.log
+/sbin/ifconfig >  hc.log
 df -v 			>> hc.log
 lsusb	 		>> hc.log
 /usr/bin/uptime	 	>> hc.log
@@ -26,8 +25,7 @@ echo $taken
 /usr/bin/hostnamectl
 echo "####################   IP settings  ##################"
 echo "           "
-/sbin/ifconfig eth0
-/sbin/ifconfig wlan0
+/sbin/ifconfig 
 echo "           "
 echo "####################   disk usage  ##################"
 echo "           "
@@ -39,7 +37,7 @@ lsusb
 echo "           "
 cd /nfs/OGN/DIRdata
 ls -lrt
-} | mutt -a ~/hc.log -s $hn" RPi Health Check "$taken -- acasado@acm.org
+} | mutt -a ~/hc.log -s $hn" UBUNTU Health Check "$taken -- acasado@acm.org
 
 rm -f ~/hc.log
 
