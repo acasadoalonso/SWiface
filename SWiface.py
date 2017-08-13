@@ -84,7 +84,11 @@ def shutdown(sock, datafile, tmaxa, tmaxt, tmid, tmstd):	# shutdown routine, clo
             		curs.execute(inscmd, (key, gid, lati, long, alti))
 	    else:
 		if (MySQL):
-            		updcmd="update RECEIVERS SET idrec='%s', descri='%s', lati=%f, longi=%f, alti=%f where idrec='%s' " % (key, gid, lati, long, alti, key)	# SQL command to execute: UPDATE
+			if len(gid) > 30:
+				descri = gid [0:30]
+			else:
+				descri=gid
+            		updcmd="update RECEIVERS SET idrec='%s', descri='%s', lati=%f, longi=%f, alti=%f where idrec='%s' " % (key, descri, lati, long, alti, key)	# SQL command to execute: UPDATE
                         try:
             			curs.execute(updcmd)
                         except MySQLdb.Error, e:

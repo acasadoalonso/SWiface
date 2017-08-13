@@ -25,7 +25,7 @@ else
 #               restart OGN data collector
                 /bin/bash ~/src/SWlive.sh
                 logger -t $0 "SWS repo seems down, restarting"
-                date >>/nfs/OGN/SWdata/.restart.log
+                date >>/nfs/OGN/SWdata/.SWSrestart.log
         else
                 logger -t $0 "SWS Repo is alive"
                 logger -t $0 "SWS repo seems up: "$dif" Now: "$now" Sunset: "$ss
