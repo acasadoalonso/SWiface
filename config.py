@@ -15,9 +15,12 @@ if configdir == None:
 configfile=configdir+'SWSconfig.ini'
 
 hostname=socket.gethostname()
-cfg=ConfigParser()                                                              # get the configuration parameters
-cfg.read(configfile)                                                            # reading it for the configuration file
-
+if os.path.isfile(configfile):
+	
+	cfg=ConfigParser()		# get the configuration parameters
+	cfg.read(configfile)		# reading it for the configuration file
+else:
+	exit(-1)
 APRS_SERVER_HOST        = cfg.get    ('APRS', 'APRS_SERVER_HOST').strip("'").strip('"')
 APRS_SERVER_PORT        = int(cfg.get('APRS', 'APRS_SERVER_PORT'))
 APRS_USER               = cfg.get    ('APRS', 'APRS_USER').strip("'").strip('"')

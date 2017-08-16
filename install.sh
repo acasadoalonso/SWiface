@@ -30,6 +30,7 @@ sudo apt-get install -y php-mbstring php-gettext		#
 sudo apt-get install -y mailutils ntpdate mutt	ssmtp		#
 sudo apt-get install -y libcurl4-openssl-dev			#
 sudo apt-get install -y libjson0 libjson0-dev			#
+sudo apt-get install -y goaccess				#
 sudo a2enmod rewrite						#
 sudo a2enmod cgi						#
 sudo phpenmod mcrypt						#
@@ -117,6 +118,7 @@ cd								#
 sudo dpkg-reconfigure tzdata					#
 sudo apt-get -y dist-upgrade					#
 sudo apt-get -y autoremove					#
+sudo apt-get -y install libfap					#
 touch SWinstallation.done					#
 echo								#
 echo "========================================================================================================"	#
