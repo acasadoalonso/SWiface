@@ -39,6 +39,8 @@ def shutdown(sock, datafile, tmaxa, tmaxt, tmid, tmstd):	# shutdown routine, clo
         if spanishsta(key) or frenchsta(key):
             if key in kglid.kglid:
                 gid=kglid.kglid[key]    # report the station name
+		if len(gid) > 20:
+			gid=gid[0:20]
             else:
                 gid="NOSTA"             # marked as no sta
         else:
