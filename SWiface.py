@@ -167,7 +167,7 @@ def chkfilati(latitude,  flatil, flatiu):
 #----------------------ogn_SilentWingsInterface.py start-----------------------
 pgmversion='V1.10' 
 print "Start OGN Silent Wings Interface "+pgmversion
-print "====================================="
+print "======================================"
 
 print "Program Version:", time.ctime(os.path.getmtime(__file__))
 date=datetime.utcnow()         		# get the date
@@ -585,6 +585,9 @@ try:
 			if distance >fmaxd[id]:			# if distance is higher 
 		    		fmaxd[id]=distance		# save the new distance
 			fscnt[station] += 1			# increase the counter of fixes
+		if source != "OGN":				# if it is not OGN, we get the distance to the home base
+                	distance=vincenty((latitude, longitude), (config.location_latitude, config.location_longitude)).km    # distance to the base
+                	dist=distance
             	if altim > tmaxa:				# if exceed the maximun altitude
                 	tmaxa = altim               		# maximum altitude for the day
                 	tmaxt = hora                		# and time
