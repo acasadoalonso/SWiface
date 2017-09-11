@@ -617,7 +617,7 @@ try:
                         	print         ">>>MySQL error:", cin, addcmd
             	else:
                 	addcmd="insert into OGNDATA values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"
-                	curs.execute(addcmd, (id, dte, hora, station, latitude, longitude, altim, speed, course, roclimb, rot,sensitivity, gps, uniqueid, dist, extpos, source)
+                	curs.execute(addcmd, (id, dte, hora, station, latitude, longitude, altim, speed, course, roclimb, rot,sensitivity, gps, uniqueid, dist, extpos, source))
 		if prt:
 			print addcmd
             	conn.commit()                       		# commit the DB updates
