@@ -165,7 +165,7 @@ def chkfilati(latitude,  flatil, flatiu):
 ########################################################################
 
 #----------------------ogn_SilentWingsInterface.py start-----------------------
-pgmversion='V1.9' 
+pgmversion='V1.10' 
 print "Start OGN Silent Wings Interface "+pgmversion
 print "====================================="
 
@@ -494,6 +494,7 @@ try:
                 altitude  = msg['altitude']
                 path      = msg['path']
                 otime     = msg['otime']
+                source    = msg['source']
                 if path == 'qAS' or path == 'RELAY*' or path[0:3] == "OGN": # if std records
                         station=msg['station']
 			if path[0:3] == "OGN":
@@ -591,7 +592,7 @@ try:
                 	tmsta = station             		# station capturing the max altitude
             	if prt:
                 	print 'Parsed data: POS: ', longitude, latitude, altitude,' Speed:',speed,' Course: ',course,' Path: ',path,' Type:', type
-                	print roclimb, rot, sensitivity, gps, uniqueid, dist, extpos
+                	print roclimb, rot, sensitivity, gps, uniqueid, dist, extpos, source
 	    	if rot== ' ':
 			rot=0
 	    	if sensitivity == ' ':
@@ -605,7 +606,7 @@ try:
                 	addcmd="insert into OGNDATA values ('" +id+ "','" + dte+ "','" + hora+ "','" + station+ "'," + str(latitude)+ "," +\
 				 str(longitude)+ "," + str(altim)+ "," + str(speed)+ "," + \
 				 str(course)+ "," + str(roclimb)+ "," +str(rot) + "," +str(sensitivity) + \
-                		 ",'" + gps+ "','" + uniqueid+ "'," + str(dist)+ ",'" + extpos+ "','OGN ')"
+                		 ",'" + gps+ "','" + uniqueid+ "'," + str(dist)+ ",'" + extpos+ "','"+source+"')"
                 	try:
                         	curs.execute(addcmd)
                 	except MySQLdb.Error, e:
@@ -616,7 +617,7 @@ try:
                         	print         ">>>MySQL error:", cin, addcmd
             	else:
                 	addcmd="insert into OGNDATA values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"
-                	curs.execute(addcmd, (id, dte, hora, station, latitude, longitude, altim, speed, course, roclimb, rot,sensitivity, gps, uniqueid, dist, extpos,'OGN '))
+                	curs.execute(addcmd, (id, dte, hora, station, latitude, longitude, altim, speed, course, roclimb, rot,sensitivity, gps, uniqueid, dist, extpos, source)
 		if prt:
 			print addcmd
             	conn.commit()                       		# commit the DB updates
