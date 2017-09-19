@@ -21,7 +21,7 @@ import random
 import config
 import kglid
 from flarmfuncs import *
-from parserfuncs import deg2dms
+from parserfuncs import deg2dmslat, deg2dmslon
 
 #-------------------------------------------------------------------------------------------------------------------#
 def lt24login(LT24path, username, password): 	# login into livetrack24.com 
@@ -30,11 +30,9 @@ def lt24login(LT24path, username, password): 	# login into livetrack24.com
 	global LT24_appSecret
 	global LT24_appKey
 	global LT24login
-	f=open(LT24path+"clientid")             # open the file with the client id
-	client=f.read()                         # read it
+	client=config.LT24clientid
 	LT24_appKey=client.rstrip()             # clear the whitespace at the end
-	f=open(LT24path+"secretkey")            # open the file with the secret key
-	secretkey=f.read()                      # read it
+	secretkey=config.LT24secretkey
 	LT24_appSecret=secretkey.rstrip()       # clear the whitespace at the end
 	LT24qwe=" "				# init the seed
 	lt24req("op/ping")			# the first time always is in error but we get the first QWE
@@ -269,14 +267,12 @@ def lt24aprspush(datafix, prt=False):		# push the data to the OGN APRS
 		dist=fix['dist']
 		extpos=fix['extpos']
 						# build the APRS message
-		lat=deg2dms(abs(latitude))
+		lat=deg2dmslat(abs(latitude))
 		if latitude > 0:
 			lat += 'N'
 		else:
 			lat += 'S'
-		lon=deg2dms(abs(longitude))
-		if abs(longitude) < 100.0:
-			lon = '0'+lon
+		lon=deg2dmslon(abs(longitude))
 		if longitude > 0:
 			lon += 'E'
 		else:
@@ -288,8 +284,7 @@ def lt24aprspush(datafix, prt=False):		# push the data to the OGN APRS
 		if altitude > 0:
 			aprsmsg += "A=%06d"%int(altitude*3.28084)
 		aprsmsg += " id"+uniqueid+" %+04dfpm "%(int(roc))+gps+" \n" 
-		if True:
-			print "APRSMSG : ", aprsmsg
+		print "APRSMSG : ", aprsmsg
 		rtn = config.SOCK_FILE.write(aprsmsg)
 
 	return True

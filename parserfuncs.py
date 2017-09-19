@@ -21,6 +21,7 @@ aprssources = {
 	"OGSKYL" : "SKYL",
 	"OGLT24" : "LT24",
 	"OGCAPT" : "CAPT",
+	"OGNAVI" : "NAVITER",
 	"OGNMAV" : "NMAV"
 	}
 #
@@ -178,13 +179,29 @@ def frenchsta(station):                # return true if is an French station
         return False
 ######################################################################### 
 
-def deg2dms(dd):  			# convert degrees float in degrees and decimal minutes (to two decimal places)
+def deg2dmslat(dd):  			# convert degrees float in degrees and decimal minutes (to two decimal places)
         dd1 = round(abs(float(dd)), 4)  
         cdeg = int(dd1)  
         mmss = dd1 - float(cdeg)
         minsec = mmss*60.0
         if dd < 0: cdeg = cdeg * -1  
         return "%2.2d%05.2f"%(cdeg,minsec)
+
+def deg2dmslon(dd):  			# convert degrees float in degrees and decimal minutes (to two decimal places)
+        dd1 = round(abs(float(dd)), 4)  
+        cdeg = int(dd1)  
+        mmss = dd1 - float(cdeg)
+        minsec = mmss*60.0
+        if dd < 0: cdeg = cdeg * -1  
+        return "%3.3d%05.2f"%(cdeg,minsec)
+
+def decdeg2dms(dd):			# convert degress float into DDMMSS
+	is_positive = dd >= 0
+	dd = abs(dd)
+	minutes,seconds = divmod(dd*3600,60)
+	degrees,minutes = divmod(minutes,60)
+	degrees = degrees if is_positive else -degrees
+	return (degrees,minutes,seconds)
 
 ######################################################################### 
 #
@@ -284,7 +301,18 @@ def parseraprs(packet_str, msg):
                         extpos       = data[p2+7:p2+12] # get extended position indicator
                 else:
                         extpos=' '
-		
+		if extpos[0] == '!' and extpos[1] == 'W' and extpos[4] == '!':
+			dlat= int(extpos[2]) * 1e-3
+			dlon= int(extpos[3]) * 1e-3
+			if latitude >0 :
+				latitude += dlat
+			else:
+				latitude -= dlat
+			if longitude >0 :
+				longitude += dlon
+			else:
+				longitude -= dlon
+
                 p3=data.find(' id')                     # scan for uniqueid info
                 if p3 != -1:
 			uniqueid     = "id"+gdatar(data,"id") # get the unique id
@@ -304,12 +332,11 @@ def parseraprs(packet_str, msg):
                 if p6 != -1:
                         gps      = gdatar(data, "gps")  # get the gpsdata 
                 else:
-                        gps      = "NO"			# no GPS data
-                p6=data.find(' GPS')                    # scan for gps info
-                if p6 != -1:
-                        gps      = "GPS"
-                else:
-                        gps      = "NO"			# no GPS data
+                	p6=data.find(' GPS')            # scan for gps info
+                	if p6 != -1:
+                        	gps      = "GPS"	# generic GPS mark
+                	else:
+                        	gps      = "NO"		# no GPS data
                 dte=date.strftime("%y%m%d")		# the aprs msgs has not date
 
                 msg['path']=path			# return the data parsed in the dict

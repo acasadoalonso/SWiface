@@ -15,7 +15,8 @@ import MySQLdb                              # the SQL data base routines^M
 import config
 import kglid
 from flarmfuncs import *
-from parserfuncs import deg2dms
+from parserfuncs import deg2dmslat, deg2dmslon
+
 
 def spotgetapidata(url, prt=False):                      	# get the data from the API server
 
@@ -32,7 +33,7 @@ def spotgetapidata(url, prt=False):                      	# get the data from th
 def spotaddpos(msg, spotpos, ttime, regis, flarmid):	# extract the data from the JSON object
 
 	unixtime=msg["unixTime"] 		# the time from the epoch
-	alt=msg["altitude"] 
+	altitude=msg["altitude"] 
 	if (unixtime < ttime or altitude == 0):
 		return (False)			# if is lower than the last time just ignore it
 	reg=regis
@@ -49,9 +50,9 @@ def spotaddpos(msg, spotpos, ttime, regis, flarmid):	# extract the data from the
 	vitlat   =config.FLOGGER_LATITUDE
 	vitlon   =config.FLOGGER_LONGITUDE
 	distance=vincenty((lat, lon),(vitlat,vitlon)).km    # distance to the statioan
-	pos={"registration": flarmid, "date": date, "time":time, "Lat":lat, "Long": lon, "altitude": alt, "UnitID":id, "GPS":mid, "dist":distance, "extpos":extpos}
+	pos={"registration": flarmid, "date": date, "time":time, "Lat":lat, "Long": lon, "altitude": altitude, "UnitID":id, "GPS":mid, "dist":distance, "extpos":extpos}
 	spotpos['spotpos'].append(pos)		# and store it on the dict
-	print "SPOTPOS :", lat, lon, alt, id, distance, unixtime, dte, date, time, reg, flarmid, extpos
+	print "SPOTPOS :", lat, lon, altitude, id, distance, unixtime, dte, date, time, reg, flarmid, extpos
 	return (True)				# indicate that we added an entry to the dict
 
 def spotgetaircraftpos(data, spotpos, ttime, regis, flarmid, prt=False):	# return on a dictionary the position of all spidertracks
@@ -131,19 +132,17 @@ def spotaprspush(datafix, prt=False):	# push the data into the OGN APRS
 		roclimb=0
 		rot=0
 		sensitivity=0
-		gps=fix['GPS']
+		gps=fix['GPS']			# model ID
 		uniqueid=str(fix["UnitID"])	# identifier of the owner
-		dist=fix['dist']
+		dist=fix['dist']		# distance to BASE
 		extpos=fix['extpos']		# battery state
 						# build the APRS message
-		lat=deg2dms(abs(latitude))	# conver the latitude to the format required by APRS
+		lat=deg2dmslat(abs(latitude))	# convert the latitude to the format required by APRS
 		if latitude > 0:
 			lat += 'N'
 		else:
 			lat += 'S'
-		lon=deg2dms(abs(longitude))
-		if abs(longitude) < 100.0:
-			lon = '0'+lon
+		lon=deg2dmslon(abs(longitude))	# convert longitude to the DDMM.MM format
 		if longitude > 0:
 			lon += 'E'
 		else:

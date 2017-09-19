@@ -16,7 +16,7 @@ import MySQLdb                              # the SQL data base routines
 import config
 import kglid
 from flarmfuncs import *
-from parserfuncs import deg2dms
+from parserfuncs import deg2dmslat, deg2dmslon
 
 # ---------------- #
 
@@ -182,14 +182,12 @@ def spiaprspush(data, conn, prt=False):
 		else:
 			reg="SPI"+id		# if not ... just add the registration prefix
 						# build the APRS message
-		lat=deg2dms(abs(latitude))	# conver the latitude to the format required by APRS
+		lat=deg2dmslat(abs(latitude))	# conver the latitude to the format required by APRS
 		if latitude > 0:
 			lat += 'N'
 		else:
 			lat += 'S'
-		lon=deg2dms(abs(longitude))
-		if abs(longitude) < 100.0:
-			lon = '0'+lon
+		lon=deg2dmslon(abs(longitude))
 		if longitude > 0:
 			lon += 'E'
 		else:

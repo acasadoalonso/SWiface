@@ -20,7 +20,7 @@ import random
 import config
 import kglid
 from flarmfuncs import *
-from parserfuncs import deg2dms
+from parserfuncs import deg2dmslat, deg2dmslon
 
 #-------------------------------------------------------------------------------------------------------------------#
 def skylgetapidata(url): 	                 # get the data from the API server
@@ -143,14 +143,12 @@ def skylaprspush(datafix, conn, prt=False):
 		gliderreg=fix['gliderreg']
 		flarmid=getflarmid(conn, gliderreg)
 						# build the APRS message
-		lat=deg2dms(abs(latitude))
+		lat=deg2dmslat(abs(latitude))
 		if latitude > 0:
 			lat += 'N'
 		else:
 			lat += 'S'
-		lon=deg2dms(abs(longitude))
-		if abs(longitude) < 100.0:
-			lon = '0'+lon
+		lon=deg2dmslon(abs(longitude))
 		if longitude > 0:
 			lon += 'E'
 		else:
@@ -162,8 +160,7 @@ def skylaprspush(datafix, conn, prt=False):
 		if altitude > 0:
 			aprsmsg += "A=%06d"%int(altitude*3.28084)
 		aprsmsg += " id"+uniqueid+" %+04dfpm "%(int(roclimb))+" \n" 
-		if True:
-			print "APRSMSG: ", aprsmsg
+		print "APRSMSG: ", aprsmsg
 		rtn = config.SOCK_FILE.write(aprsmsg)
 
 	return (True)

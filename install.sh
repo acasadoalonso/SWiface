@@ -50,7 +50,7 @@ sudo -H pip install pytz 					#
 sudo -H pip install geopy 					#
 sudo -H pip install configparser 				#
 sudo -H pip install pycountry 					#
-
+sudo -H pip install requests 					#
 if [ ! -d /etc/local ]						#
 then								#
     sudo mkdir /etc/local					#
