@@ -172,7 +172,8 @@ print "======================================"
 print "Program Version:", time.ctime(os.path.getmtime(__file__))
 date=datetime.utcnow()         		# get the date
 dte=date.strftime("%y%m%d")             # today's date
-print "Date: ", date, " UTC at:", socket.gethostname(), "Process ID:", os.getpid()
+hostname=socket.gethostname()
+print "Date: ", date, " UTC at:", hostname, "Process ID:", os.getpid()
 
 import config
 
@@ -309,7 +310,16 @@ if os.path.isfile(compfile):	# if we have a COMP file with the list of flarm ids
 	for f in clist:		# explore the whole list
 		filter += f	# add the flarm id
 		filter += "/"	# separated by an slash
-	filter += " p/LF/LE/ \n"# add all the station of france and Spain for control 
+
+	if OGNT:
+		for f in ognttable:
+			filter += f	# add the flarm id
+			filter += "/"	# separated by an slash
+
+	if hostname == "CHILEOGN":
+		filter += " p/SC/VITACURA/ROBLE/ELBOSQUE/TROCA/WBUX/COLORA/ \n"
+	else:		
+		filter += " p/LF/LE/ \n"# add all the station of france and Spain for control 
 	login = 'user %s pass %s vers Silent-Wings-Interface %s %s'  % (config.APRS_USER, config.APRS_PASSCODE , pgmversion, filter)
 else:
 	login = 'user %s pass %s vers Silent-Wings-Interface %s %s'  % (config.APRS_USER, config.APRS_PASSCODE , pgmversion, config.APRS_FILTER_DETAILS)
