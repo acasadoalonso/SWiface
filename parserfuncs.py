@@ -10,6 +10,7 @@ import json
 from datetime import datetime, timedelta
 aprssources = {
 	"APRS"   : "OGN",
+	"OGNSDR" : "OGN",
 	"OGNFLR" : "OGN",
 	"OGNTRN" : "OGN",
 	"OGNDSX" : "OGN", 

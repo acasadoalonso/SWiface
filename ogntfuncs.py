@@ -14,6 +14,8 @@ def ogntbuildtable(conn, ognttable, prt=False):	# function to build the OGN trac
         	ogntid=rowg[0]		# OGN tracker ID
         	flarmid=rowg[1]		# Flarmid id to be linked
         	registration=rowg[2]	# registration id to be linked
+		if prt:
+			print "OGNTtable:", ogntid, flarmid, registration
 		if flarmid == None or flarmid == '': 			# if flarmid is not provided 
 			flarmid=getflarmid(conn, registration)		# get it from the registration
 		else:
