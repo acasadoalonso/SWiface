@@ -49,6 +49,20 @@ def get_altitude(packet):
         altitude = -1
     return altitude
 
+def get_daodatum(packet):
+    try:
+        daodatum=packet[0].dao_datum_byte
+    except ValueError:
+        daodatum = ' '
+    return daodatum
+
+def get_resolution(packet):
+    try:
+        resolution=packet[0].pos_resolution[0]
+    except ValueError:
+        resolution = -1 
+    return resolution
+
 def get_speed(packet):
     try:
         speed=packet[0].speed[0]
@@ -220,6 +234,8 @@ def parseraprs(packet_str, msg):
                 longitude    = get_longitude(packet)
                 latitude     = get_latitude(packet)
                 altitude     = get_altitude(packet)
+                resolution   = get_resolution(packet)
+                daodatum     = get_daodatum(packet)
                 speed        = get_speed(packet)
                 course       = get_course(packet)
                 path         = get_path(packet)
@@ -302,17 +318,6 @@ def parseraprs(packet_str, msg):
                         extpos       = data[p2+7:p2+12] # get extended position indicator
                 else:
                         extpos=' '
-		if extpos[0] == '!' and extpos[1] == 'W' and extpos[4] == '!':
-			dlat= int(extpos[2]) * 1e-3
-			dlon= int(extpos[3]) * 1e-3
-			if latitude >0 :
-				latitude += dlat
-			else:
-				latitude -= dlat
-			if longitude >0 :
-				longitude += dlon
-			else:
-				longitude -= dlon
 
                 p3=data.find(' id')                     # scan for uniqueid info
                 if p3 != -1:
@@ -349,6 +354,8 @@ def parseraprs(packet_str, msg):
                 msg['latitude']=latitude
                 msg['longitude']=longitude
                 msg['altitude']=altitude
+                msg['resolution']=resolution
+                msg['daodatum']=daodatum
                 msg['speed']=speed
                 msg['course']=course
                 msg['roclimb']=roclimb
