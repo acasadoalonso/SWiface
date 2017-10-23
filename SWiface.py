@@ -507,7 +507,7 @@ try:
                 source    = msg['source']
                 if path == 'qAS' or path == 'RELAY*' or path[0:3] == "OGN": # if std records
                         station=msg['station']
-			if path[0:3] == "OGN":
+			if path[0:3] == "OGN" and prt:
 				print "RELAY:", path, station
 		else:
 			station=id				# otherwise is the ID of the data received
@@ -540,7 +540,8 @@ try:
                 	continue                        	# go for the next record
 
 		if type == 8:					# if tracker status report
-			print "OGN tracker Status report:", data
+			if prt:
+				print "OGN tracker Status report:", data
 			continue
 	    	if path == 'qAC':
 			continue				# the case of the TCP IP as well
@@ -552,6 +553,8 @@ try:
                 course    = msg['course']			# heading
                 speed     = msg['speed']
                 uniqueid  = msg['uniqueid']
+		if len(uniqueid) > 16:
+			uniqueid=uniqueid[0:16]			# limit to 16 chars 
                 extpos    = msg['extpos']
                 roclimb   = msg['roclimb']			# rate of climb
                 rot       = msg['rot']
