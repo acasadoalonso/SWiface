@@ -116,6 +116,7 @@ def shutdown(sock, datafile, tmaxa, tmaxt, tmid, tmstd):	# shutdown routine, clo
     for key in fsmax:                   # report data
         print "Station: ", key, fsmax[key], "Kms. and" , fscnt[key], "fixes..."   
     print "Maximun altitude for the day:", tmaxa, ' meters MSL at:', tmaxt, 'by:', gid, 'Station:', tmsta, "Max. distance:", tmaxd, "by:", tmstd
+    print "Sources:", fsour
     conn.commit()			# commit the DB updates
     conn.close()			# close the database
     local_time = datetime.now() 	# report date and time now
@@ -252,8 +253,9 @@ fslal={'NONE  ' : 0.0}      		# station location altitude
 fslod={'NONE  ' : (0.0, 0.0)}           # station location - tuple
 fsmax={'NONE  ' : 0.0}                  # maximun coverage
 fsalt={'NONE  ' : 0}                    # maximun altitude
-fscnt={'NONE  ' : 0}                    # tation counter
+fscnt={'NONE  ' : 0}                    # station counter
 
+fsour={}			 	# sources
 # --------------------------------------#
 DBase=DBpath+'SWiface.db'		# Data base used
 if (MySQL):
@@ -521,6 +523,10 @@ try:
                 	cout += 1                       	# one more file to create
 	    	else:
 			fid[id] += 1				# increase the counter
+	        if not source in fsour:		    		# did we see this source
+	   	     	fsour[source]=1			    	# init the counter
+    	   	else:
+        		fsour[source] += 1		    	# increase the counter
 
             	if path == 'TCPIP*':				# handle the TCPIP
                 	if not id in fslod :
