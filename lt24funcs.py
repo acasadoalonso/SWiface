@@ -316,7 +316,13 @@ def lt24findpos(ttime, conn, once, prt=False, store=True, aprspush=False):	# fin
 		userList += ","		# separated by comas
 		flarmids[reg]=flarmid   # add flarmid to the list
 
-	userList=userList.rstrip(',')	# clear the last comma
+	if len(userList) == 0:
+		userList = "NONE"
+		now=datetime.utcnow()
+		td=now-datetime(1970,1,1)       # number of second until beginning of the day of 1-1-1970
+		return (int(td.total_seconds() ))
+	else:
+		userList=userList.rstrip(',')	# clear the last comma
 					# request for the time being, just the last position of the glider
 	req="op/2//detailLevel/-1/userList/"+userList	# the URL request to LT24
 	jsondata=lt24req(req)		# get the JSON data from the lt24 server

@@ -171,6 +171,14 @@ def skylfindpos(ttime, conn, prt=False, store=True, aprspush=False):	# find all 
 
 	curs=conn.cursor()              # set the cursor for storing the fixes
 	cursG=conn.cursor()             # set the cursor for searching the devices
+	cursG.execute("select count(*) from TRKDEVICES where devicetype = 'SKYL' and active = '1'; " ) 	# get the counter of IDs
+	cnt = cursG.fetchone()
+	cnt = int (cnt[0])
+	if cnt == 0:
+		now=datetime.utcnow()
+		td=now-datetime(1970,1,1)       # number of second until beginning of the day of 1-1-1970
+		sync=int(td.total_seconds())	# as an integer
+		return (sync+1)			# return TTIME for next call
 	url="https://skylines.aero/api/live" 
 	skylpos={"skylpos":[]}		# init the dicta
 	pos=skylgetapidata(url)	# get the JSON data from the Skylines server
