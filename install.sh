@@ -1,11 +1,14 @@
 #!/bin/bash 
+# Update repository information
+sudo apt-get update 
 echo								#
 echo "Installing the Silent Wings Studio interface ...." 	#
 echo								#
 export LC_ALL=en_US.UTF-8 && export LANG=en_US.UTF-8		#
-sudo apt-get install -y software-properties-common python-software-properties #
-sudo rm /etc/apt/sources.list.d/ondre*				#
-sudo add-apt-repository ppa:ondrej/php				#
+sudo apt-get install -y software-properties-common python-software-properties
+
+# sudo rm /etc/apt/sources.list.d/ondre*				#
+# sudo add-apt-repository ppa:ondrej/php				#
 echo								#
 echo " lets update the operating system libraries  ...." 	#
 echo								#
@@ -15,8 +18,10 @@ export LC_ALL=en_US.UTF-8 && export LANG=en_US.UTF-8		#
 echo "export LC_ALL=en_US.UTF-8 && export LANG=en_US.UTF-8 " >>~/.profile #
 echo "export LD_LIBRARY_PATH=/usr/local/lib" >>~/.profile 	#
 sudo apt-get -y upgrade						#
-cd /var/www/public/main/libfap-1.5/deb				#
-sudo dpkg -i lib*amd64.deb					#
+sudo apt-get -y install libfap6
+# cd /var/www/public/main/libfap-1.5/deb				#
+# TODO this does not work on PI
+# sudo dpkg -i lib*amd64.deb					#
 echo								#
 echo "Installing the packages required . (LAMP stack)..."	#
 echo								#
@@ -118,7 +123,6 @@ cd								#
 sudo dpkg-reconfigure tzdata					#
 sudo apt-get -y dist-upgrade					#
 sudo apt-get -y autoremove					#
-sudo apt-get -y install libfap					#
 touch SWinstallation.done					#
 echo								#
 echo "========================================================================================================"	#
