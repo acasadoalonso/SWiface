@@ -123,7 +123,6 @@ cd								#
 sudo dpkg-reconfigure tzdata					#
 sudo apt-get -y dist-upgrade					#
 sudo apt-get -y autoremove					#
-sudo apt-get -y install libfap					#
 touch SWinstallation.done					#
 echo								#
 echo "========================================================================================================"	#
