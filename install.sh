@@ -19,9 +19,6 @@ echo "export LC_ALL=en_US.UTF-8 && export LANG=en_US.UTF-8 " >>~/.profile #
 echo "export LD_LIBRARY_PATH=/usr/local/lib" >>~/.profile 	#
 sudo apt-get -y upgrade						#
 sudo apt-get -y install libfap6
-# cd /var/www/public/main/libfap-1.5/deb				#
-# TODO this does not work on PI
-# sudo dpkg -i lib*amd64.deb					#
 echo								#
 echo "Installing the packages required . (LAMP stack)..."	#
 echo								#
