@@ -10,6 +10,7 @@ fi
 cd /nfs/OGN/SWdata
 echo "Sync GLIDERS table on databases"			     	>>SWproc.log
 cd    /nfs/OGN/DIRdata
+cp kglid.py ~/src/SWsrc
 echo ".dump GLIDERS" |        sqlite3 OGN.db >gliders.dmp
 cd /nfs/OGN/SWdata
 mv /nfs/OGN/DIRdata/gliders.dmp .

@@ -331,6 +331,11 @@ sock.send(login)    		# login into the APRS server
 # Make the connection to the server
 sock_file = sock.makefile()
  
+print "APRS Version:", sock_file.readline()
+sleep (2)
+print "APRS Login request:", login      # for control print the login sent and get the response
+print "APRS Login reply:  ", sock_file.readline()
+
 # Initialise libfap.py for parsing returned lines
 print "libfap_init"
 libfap.fap_init()

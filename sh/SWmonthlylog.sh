@@ -12,4 +12,5 @@ mv DATA$(date +%y)*.log Y$(date +%y)
 mysqldump                                  -u ogn -pogn -h $server SWARCHIVE >db/SWARCHIVE.dmp
 echo "delete from OGNDATA;" | mysql     -v -u ogn -pogn -h $server SWARCHIVE                      >>SWproc.log
 mv ogndata.sql mondata.sql
+bash ./compress.sh   Y$(date +%y)
 cd

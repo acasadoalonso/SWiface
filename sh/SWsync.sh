@@ -1,7 +1,7 @@
 #!/bin/sh
 cd ~/src
 rsync -rl /var/www .
-cd ~/src/SWsrc
+cd ~/src/SWsrc/main
 git pull origin master
 rsync  ~/src/*.sh /nfs/OGN/src/SWsrc/sh 
 cd /nfs/OGN/src
