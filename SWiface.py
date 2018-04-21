@@ -512,7 +512,7 @@ try:
                 path      = msg['path']
                 otime     = msg['otime']
                 source    = msg['source']
-		if len(source) > 4
+		if len(source) > 4:
 			source=source[0:3]
                 if path == 'qAS' or path == 'RELAY*' or path[0:3] == "OGN": # if std records
                         station=msg['station']
