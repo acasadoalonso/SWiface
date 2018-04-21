@@ -16,14 +16,14 @@ aprssources = {
 	"OGNTRK" : "OGN",
 	"OGNDSX" : "OGN", 
 	"OGADSB" : "ADSB",
-	"OGNFNT" : "FANET",
+	"OGNFNT" : "FANE",
 	"OGNPAW" : "PAW",
 	"OGSPOT" : "SPOT",
 	"OGSPID" : "SPID",
 	"OGSKYL" : "SKYL",
 	"OGLT24" : "LT24",
 	"OGCAPT" : "CAPT",
-	"OGNAVI" : "NAVITER",
+	"OGNAVI" : "NAVI",
 	"OGNMAV" : "NMAV"
 	}
 #
