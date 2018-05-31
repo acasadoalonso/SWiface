@@ -55,10 +55,10 @@ def shutdown(sock, datafile, tmaxa, tmaxt, tmid, tmstd):	# shutdown routine, clo
 	    		maxd=-1.0
 	if key != fsta[key]:
         	if fmaxs[key] > 0:
-            		print key, '=>', fsta[key], gid, fid[key], "Max alt:", fmaxa[key], "Max speed:", fmaxs[key], "Max. distance:", maxd 
+            		print key, '=>', fsta[key], gid, fid[key], "Max alt:", fmaxa[key], "Max speed:", fmaxs[key], "Max. distance:", maxd, "Init at:", fidtm[key] 
 									# report FLARM ID, station used, registration and record counter
         	else:
-            		print key, '=>', fsta[key], gid, fid[key], "Max alt:", fmaxa[key], "Max. distance:", maxd
+            		print key, '=>', fsta[key], gid, fid[key], "Max alt:", fmaxa[key], "Max. distance:", maxd, "Init at:",fidtm[key] 
 
 	if key == fsta[key] and key != None and key != "NONE  " and key in fslod:# in case of an receiver station , update the database with the coordinates
 	    lati=fslla[key] 		# latitude
@@ -232,6 +232,7 @@ if OGNT:				# check if we want to add the OGN trackers to be pair with the Flarm
 # --------------------------------------#
 
 fid=  {'NONE  ' : 0}                    # FLARM ID list
+fidtm={'NONE  ' : 0}                    # FLARM ID list time
 fsta= {'NONE  ' : 'NONE  '}             # STATION ID list
 fmaxa={'NONE  ' : 0}                    # maximun altitude
 fmaxd={'NONE  ' : 0}                    # maximun distance
@@ -523,6 +524,7 @@ try:
                 data=packet_str
 	    	if not id in fid :                  		# if we did not see the FLARM ID
                 	fid[id]=0                       	# init the counter
+                	fidtm[id]=otime                       	# init the time
                 	fsta[id]=station                     	# init the station receiver
                 	fmaxa[id]=altitude              	# maximun altitude
                 	fmaxs[id]=0                     	# maximun speed
