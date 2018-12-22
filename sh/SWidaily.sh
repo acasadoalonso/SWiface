@@ -8,6 +8,7 @@ echo ".dump OGNDATA" |        sqlite3 SWiface.db >ogndata.dmp
 sed "s/CREATE TABLE/-- CREATE TABLE/g" ogndata.dmp | sed "s/CREATE INDEX/-- CREATE INDEX/g" | sqlite3  archive/SWiface.db >>SWproc.log
 echo "delete from OGNDATA;" | sqlite3 SWiface.db              >>SWproc.log
 echo "vacuum;"              | sqlite3 SWiface.db              >>SWproc.log
+echo "select 'Number of fixes: on the DB:', count(*) from OGNDATA; select station, 'Kms.max.:',max(distance) as Distance,'        Flarmid :',idflarm, 'Date:',date, time, station from OGNDATA group by station; " | sqlite3 archive/SWiface.db			>>SWproc.log
 rm ogndata.dmp
 echo "Process MYSQL DB." >>SWproc.log
 mysqlcheck -u admin -padmin -h $server --all-databases >>SWproc.log
