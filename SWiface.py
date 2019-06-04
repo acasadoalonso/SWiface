@@ -295,7 +295,8 @@ else:
  
 if OGNT:			# if we need aggregation of FLARM and OGN trackers data
 	ognttable={}		# init the instance of the table
-	ogntbuildtable(conn, ognttable, prt) # build the table from the TRKDEVICES DB table 
+	ogntbuildtable(conn, ognttable, prt=True) # build the table from the TRKDEVICES DB table 
+        print ognttable
 
 # create socket & connect to server
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -632,6 +633,8 @@ try:
 			if id in ognttable:			# if the device is on the list
 				id=ognttable[id]		# substitude the OGN tracker ID for the related FLARMID
             # write the DB record
+                if source == "SPOT":
+                    continue
 
 	    	if (MySQL):
                 	addcmd="insert into OGNDATA values ('" +id+ "','" + dte+ "','" + hora+ "','" + station+ "'," + str(latitude)+ "," +\
@@ -639,7 +642,7 @@ try:
 				 str(course)+ "," + str(roclimb)+ "," +str(rot) + "," +str(sensitivity) + \
                 		 ",'" + gps+ "','" + uniqueid+ "'," + str(dist)+ ",'" + extpos+ "','"+source+"')"
                 	try:
-                        	curs.execute(addcmd)
+                        	curs.execute(addcmd)            # add the data to the DDBB
                 	except MySQLdb.Error, e:
                         	try:
                                 	print ">>>MySQL Error [%d]: %s" % (e.args[0], e.args[1])
