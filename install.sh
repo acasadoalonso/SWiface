@@ -21,7 +21,7 @@ sudo apt-get -y upgrade						#
 echo								#
 echo "Installing the packages required . (LAMP stack)..."	#
 echo								#
-cd /var/www/public/main						#
+cd /var/www/html/main						#
 echo								#
 echo "Installing mysql "					#
 echo								#
@@ -93,9 +93,9 @@ fi								#
 echo								#
 echo "Installing the templates needed  ...." 			#
 echo								#
-cd /var/www/public/main						#
+cd /var/www/html/main						#
 sudo cp config.template /etc/local/SWSconfig.ini		#
-cd /var/www/public/						#
+cd /var/www/html/						#
 cp configtail.template configtail.txt				#
 python genconfig.py						#
 ls -la
@@ -150,7 +150,7 @@ then								#
 	sudo mkdir /nfs/OGN/SWdata				#
 	sudo chown ogn:ogn /nfs/OGN/SWdata			#
 	sudo chmod 777 /nfs/OGN/SWdata				#
-	cd /var/www/public/					#
+	cd /var/www/html/					#
 	mv SWiface.db /nfs/OGN/SWdata				#
 	sudo chown ogn:ogn *					# 
 	sudo chmod 777 *					#
