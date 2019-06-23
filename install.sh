@@ -22,34 +22,61 @@ echo								#
 echo "Installing the packages required . (LAMP stack)..."	#
 echo								#
 cd /var/www/public/main						#
+echo								#
+echo "Installing mysql "					#
+echo								#
 sudo apt-get install -y mysql-server mysql-client sqlite3	#
+echo								#
+echo "Installing python "					#
+echo								#
 sudo apt-get install -y python-dev python-pip python-mysqldb    #
 sudo apt-get install -y dos2unix libarchive-dev	 autoconf mc	#
 sudo apt-get install -y pkg-config git mutt at			#
+echo								#
+echo "Installing apache2 "					#
+echo								#
 sudo apt-get install -y apache2 				#
-sudo apt-get install -y php php-mcrypt php-mysql php-cli 	#
+echo								#
+echo "Installing php "						#
+echo								#
+sudo apt-get install -y php php-mcrypt 				#
+sudo apt-get install -y php php-mysql php-cli 			#
 sudo apt-get install -y php-mbstring php-gettext		#
+echo								#
+echo "Installing mail "						#
+echo								#
 sudo apt-get install -y mailutils ntpdate mutt	ssmtp		#
 sudo apt-get install -y libcurl4-openssl-dev			#
 sudo apt-get install -y libjson0 libjson0-dev			#
 sudo apt-get install -y goaccess				#
 sudo apt-get install -y libfap6                                 #
-sudo apt-get install -y avahi-*                                 #
+sudo apt-get install -y avahi-daemon                            #
+echo								#
+echo "Installing apache2 modules "				#
+echo								#
 sudo a2enmod rewrite						#
 sudo a2enmod cgi						#
 sudo phpenmod mcrypt						#
 sudo phpenmod mbstring						#
 sudo a2enmod proxy_fcgi setenvif				#
-sudo a2enconf php7.0-fpm					#
+sudo a2enconf 							#
 sudo cat /etc/apache2/apache2.conf html.dir 	>>temp.conf	#
 sudo echo "ServerName SWiface " >>temp.conf			#
 sudo mv temp.conf /etc/apache2/apache2.conf			#
+echo								#
+echo "Installing apache2 conf "					#
+echo								#
+cat temp.conf							#
 sudo service apache2 restart					#
+echo "------------- APACHE2 restarted -----------------------"  #
 echo								#
 echo "Installing phpmyadmin  ... "				#
 echo								#
 sudo apt-get install -y phpmyadmin 				#
 sudo service apache2 restart					#
+echo								#
+echo "Installing pyhon modules "				#
+echo								#
 sudo -H pip install --upgrade pip                               #
 sudo -H pip install ephem 					#
 sudo -H pip install pytz 					#
@@ -66,10 +93,15 @@ fi								#
 echo								#
 echo "Installing the templates needed  ...." 			#
 echo								#
+cd /var/www/public/main						#
 sudo cp config.template /etc/local/SWSconfig.ini		#
 cd /var/www/public/						#
 cp configtail.template configtail.txt				#
 python genconfig.py						#
+ls -la
+echo								#
+echo "Setting the data bases       ...." 			#
+echo								#
 if [ -f SWiface.db ]						#
 then								#
 	rm      SWiface.db					#
@@ -111,6 +143,7 @@ if [ ! -d /nfs  ]						#
 then								#
 	echo							#
 	echo "Adding user ogn ...	"			#
+	echo "=============== ...	"			#
 	sudo adduser ogn 					#
 	sudo mkdir /nfs						#
 	sudo mkdir /nfs/OGN					#
