@@ -57,6 +57,8 @@ sudo -H pip install geopy 					#
 sudo -H pip install configparser 				#
 sudo -H pip install pycountry 					#
 sudo -H pip install requests 					#
+sudo -H pip install pyopenssl 					#
+sudo -H pip install uritemplate					#
 if [ ! -d /etc/local ]						#
 then								#
     sudo mkdir /etc/local					#
@@ -82,6 +84,8 @@ fi								#
 sqlite3 SWiface.db         < main/DBschema.sql			#
 echo "CREATE DATABASE SWIFACE" | mysql -u root -pogn		#
 mysql -u root -pogn --database SWIFACE < main/DBschema.sql	#
+echo "GRANT ALL PRIVILEGES ON *.* TO 'ogn'@'localhost' IDENTIFIED BY 'X_password'; " | mysql -u root -pogn     #
+echo "GRANT SELECT ON *.* TO 'ognread'@'localhost' IDENTIFIED BY 'ognread'; "        | mysql -u root -pogn     #
 echo								#
 echo "Optional steps ... "					#
 echo								#
