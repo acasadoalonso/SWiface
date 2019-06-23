@@ -3,14 +3,13 @@
 sudo apt-get update 
 echo								#
 echo "Installing the Silent Wings Studio interface ...." 	#
+echo "========================================================" #
 echo								#
 export LC_ALL=en_US.UTF-8 && export LANG=en_US.UTF-8		#
 sudo apt-get install -y software-properties-common python-software-properties
-
-# sudo rm /etc/apt/sources.list.d/ondre*				#
-# sudo add-apt-repository ppa:ondrej/php				#
 echo								#
 echo " lets update the operating system libraries  ...." 	#
+echo "========================================================" #
 echo								#
 sudo apt-get update						#
 sudo apt-get install -y language-pack-en-base 			# 
@@ -20,30 +19,39 @@ echo "export LD_LIBRARY_PATH=/usr/local/lib" >>~/.profile 	#
 sudo apt-get -y upgrade						#
 echo								#
 echo "Installing the packages required . (LAMP stack)..."	#
+echo "========================================================" #
 echo								#
 cd /var/www/html/main						#
 echo								#
 echo "Installing mysql "					#
+echo "========================================================" #
 echo								#
 sudo apt-get install -y mysql-server mysql-client sqlite3	#
+sudo mysql_secure_installation					#
+echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'ognognogn';" | sudo mysql #
+echo "SELECT user,authentication_string,plugin,host FROM mysql.user; " | sudo mysql			#
 echo								#
 echo "Installing python "					#
+echo "========================================================" #
 echo								#
 sudo apt-get install -y python-dev python-pip python-mysqldb    #
 sudo apt-get install -y dos2unix libarchive-dev	 autoconf mc	#
 sudo apt-get install -y pkg-config git mutt at			#
 echo								#
 echo "Installing apache2 "					#
+echo "========================================================" #
 echo								#
 sudo apt-get install -y apache2 				#
 echo								#
 echo "Installing php "						#
+echo "========================================================" #
 echo								#
 sudo apt-get install -y php php-mcrypt 				#
 sudo apt-get install -y php php-mysql php-cli 			#
 sudo apt-get install -y php-mbstring php-gettext		#
 echo								#
 echo "Installing mail "						#
+echo "========================================================" #
 echo								#
 sudo apt-get install -y mailutils ntpdate mutt	ssmtp		#
 sudo apt-get install -y libcurl4-openssl-dev			#
@@ -53,6 +61,7 @@ sudo apt-get install -y libfap6                                 #
 sudo apt-get install -y avahi-daemon                            #
 echo								#
 echo "Installing apache2 modules "				#
+echo "========================================================" #
 echo								#
 sudo a2enmod rewrite						#
 sudo a2enmod cgi						#
@@ -65,17 +74,20 @@ sudo echo "ServerName SWiface " >>temp.conf			#
 sudo mv temp.conf /etc/apache2/apache2.conf			#
 echo								#
 echo "Installing apache2 conf "					#
+echo "========================================================" #
 echo								#
 cat temp.conf							#
 sudo service apache2 restart					#
 echo "------------- APACHE2 restarted -----------------------"  #
 echo								#
 echo "Installing phpmyadmin  ... "				#
+echo "========================================================" #
 echo								#
 sudo apt-get install -y phpmyadmin 				#
 sudo service apache2 restart					#
 echo								#
 echo "Installing pyhon modules "				#
+echo "========================================================" #
 echo								#
 sudo -H pip install --upgrade pip                               #
 sudo -H pip install ephem 					#
@@ -92,15 +104,17 @@ then								#
 fi								#
 echo								#
 echo "Installing the templates needed  ...." 			#
+echo "========================================================" #
 echo								#
 cd /var/www/html/main						#
 sudo cp config.template /etc/local/SWSconfig.ini		#
 cd /var/www/html/						#
 cp configtail.template configtail.txt				#
 python genconfig.py						#
-ls -la
+ls -la								#
 echo								#
 echo "Setting the data bases       ...." 			#
+echo "========================================================" #
 echo								#
 if [ -f SWiface.db ]						#
 then								#
@@ -113,13 +127,15 @@ then								#
 	mkdir cuc/TSKF  					#
 	chmod 777 cuc/TSKF  					#
 fi								#
-sqlite3 SWiface.db         < main/DBschema.sql			#
+sqlite3 SWiface.db         < main/DBschema.sqlite3		#
+echo "========================================================" #
 echo "CREATE DATABASE SWIFACE" | mysql -u root -p		#
 mysql -u root -pogn --database SWIFACE < main/DBschema.sql	#
 echo "GRANT ALL PRIVILEGES ON *.* TO 'ogn'@'localhost' IDENTIFIED BY 'yourpassword'; " | mysql -u root -p     #
 echo "GRANT SELECT ON *.* TO 'ognread'@'localhost'     IDENTIFIED BY 'yourpassword'; " | mysql -u root -p     #
 echo								#
 echo "Optional steps ... "					#
+echo "========================================================" #
 echo								#
 cd main								#
 cp aliases ~/.bash_aliases					#
@@ -157,6 +173,7 @@ then								#
 	sudo chown ogn:ogn */*					# 
 	sudo chmod 777 */*					#
 fi								#
+echo "========================================================" #
 cd /var/www/html 						#
 rm kglid.py							#
 cp  main/kglid.py .						# 
