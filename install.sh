@@ -82,10 +82,10 @@ then								#
 	chmod 777 cuc/TSKF  					#
 fi								#
 sqlite3 SWiface.db         < main/DBschema.sql			#
-echo "CREATE DATABASE SWIFACE" | mysql -u root -pogn		#
+echo "CREATE DATABASE SWIFACE" | mysql -u root -p		#
 mysql -u root -pogn --database SWIFACE < main/DBschema.sql	#
-echo "GRANT ALL PRIVILEGES ON *.* TO 'ogn'@'localhost' IDENTIFIED BY 'X_password'; " | mysql -u root -pogn     #
-echo "GRANT SELECT ON *.* TO 'ognread'@'localhost' IDENTIFIED BY 'ognread'; "        | mysql -u root -pogn     #
+echo "GRANT ALL PRIVILEGES ON *.* TO 'ogn'@'localhost' IDENTIFIED BY 'yourpassword'; " | mysql -u root -p     #
+echo "GRANT SELECT ON *.* TO 'ognread'@'localhost'     IDENTIFIED BY 'yourpassword'; " | mysql -u root -p     #
 echo								#
 echo "Optional steps ... "					#
 echo								#

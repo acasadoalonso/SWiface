@@ -10,9 +10,9 @@ MySQL    =False
 ; server where the databse is hosted
 DBhost   =localhost
 DBuser   =ogn
-DBpasswd =ogn
+DBpasswd =yourpassword
 DBuserread   =ognread
-DBpasswdread =ognread
+DBpasswdread =yourpassword
 ; Name of the MySQL database
 DBname   =SWIFACE
 ; name of the SQLITE3 database
