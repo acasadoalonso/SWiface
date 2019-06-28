@@ -28,8 +28,12 @@ echo "========================================================" #
 echo								#
 sudo apt-get install -y mysql-server mysql-client sqlite3	#
 sudo mysql_secure_installation					#
-echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'ognognogn';" | sudo mysql #
-echo "SELECT user,authentication_string,plugin,host FROM mysql.user; " | sudo mysql			#
+echo "Type ROOT password: "					#
+echo "========================================================" #
+echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'ognognogn';" | sudo mysql -u root -p #
+echo "Type ROOT password: "					#
+echo "========================================================" #
+echo "SELECT user,authentication_string,plugin,host FROM mysql.user; " | sudo mysql -u root -p 			#
 echo								#
 echo "Installing python "					#
 echo "========================================================" #
@@ -76,7 +80,7 @@ echo								#
 echo "Installing apache2 conf "					#
 echo "========================================================" #
 echo								#
-cat temp.conf							#
+cat /etc/apache2/apache2.conf					#
 sudo service apache2 restart					#
 echo "------------- APACHE2 restarted -----------------------"  #
 echo								#
@@ -139,6 +143,7 @@ echo "========================================================" #
 echo								#
 cd main								#
 cp aliases ~/.bash_aliases					#
+sh sh/mailcatcher.install
 mailcatcher --http-ip=0.0.0.0					#
 sudo /usr/local/bin/composer self-update			#
 composer update							#
@@ -177,6 +182,8 @@ echo "========================================================" #
 cd /var/www/html 						#
 rm kglid.py							#
 cp  main/kglid.py .						# 
+cd main/sh							#
+sh calcelestial.sh						#
 cd								#
 sudo dpkg-reconfigure tzdata					#
 sudo apt-get -y dist-upgrade					#
