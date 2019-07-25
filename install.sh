@@ -93,15 +93,17 @@ echo								#
 echo "Installing pyhon modules "				#
 echo "========================================================" #
 echo								#
-sudo -H pip install --upgrade pip                               #
-sudo -H pip install ephem 					#
-sudo -H pip install pytz 					#
-sudo -H pip install geopy 					#
-sudo -H pip install configparser 				#
-sudo -H pip install pycountry 					#
-sudo -H pip install requests 					#
-sudo -H pip install pyopenssl 					#
-sudo -H pip install uritemplate					#
+sudo -H pip3 install --upgrade pip                              #
+sudo -H pip3 install ephem 					#
+sudo -H pip3 install pytz 					#
+sudo -H pip3 install geopy 					#
+sudo -H pip3 install configparser 				#
+sudo -H pip3 install pycountry 					#
+sudo -H pip3 install requests 					#
+sudo -H pip3 install pyopenssl 					#
+sudo -H pip3 install uritemplate				#
+sudo -H pip3 install pyMySQLdb					#
+sudo -H pip3 install ogn-python					#
 if [ ! -d /etc/local ]						#
 then								#
     sudo mkdir /etc/local					#
@@ -114,7 +116,7 @@ cd /var/www/html/main						#
 sudo cp config.template /etc/local/SWSconfig.ini		#
 cd /var/www/html/						#
 cp configtail.template configtail.txt				#
-python genconfig.py						#
+python3 genconfig.py						#
 ls -la								#
 echo								#
 echo "Setting the data bases       ...." 			#
@@ -131,6 +133,7 @@ then								#
 	mkdir cuc/TSKF  					#
 	chmod 777 cuc/TSKF  					#
 fi								#
+cd /var/www/html/						#
 sqlite3 SWiface.db         < main/DBschema.sqlite3		#
 echo "========================================================" #
 echo "CREATE DATABASE SWIFACE" | mysql -u root -p		#
