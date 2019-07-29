@@ -1,4 +1,4 @@
-rm *funcs.py kglid.py libfap.py
+rm *funcs.py kglid.py 
 cp /nfs/OGN/src/*funcs.py .
 cp /nfs/OGN/src/kglid.py .
 cp /nfs/OGN/src/libfap.py .
