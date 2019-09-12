@@ -1,8 +1,4 @@
-rm *funcs.py
-rm kglid.py 
-for f in $(ls -ctr /nfs/OGN/src/*funcs.py ); do
-                echo "Processing file:" $f
-                ln -s $f .
-done
+rm *funcs.py kglid.py
 ln -s /nfs/OGN/src/kglid.py .
-ls -la *funcs.py kglid.py 
+ln -s /nfs/OGN/src/funcs/parserfuncs.py .
+ls -la *funcs.py 

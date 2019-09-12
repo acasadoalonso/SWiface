@@ -17,7 +17,7 @@ import os
 import os.path
 import atexit
 import signal
-import kglid                                # import the list on known gliders
+import kglid                              # import the list on known gliders
 import socket
 from parserfuncs import *                 # the ogn/ham parser functions
 from geopy.distance import vincenty       # use the Vincenty algorithm^M
@@ -31,26 +31,25 @@ from time import sleep
 # shutdown routine, close files and report on activity
 def shutdown(sock, datafile, tmaxa, tmaxt, tmid, tmstd):
                                         # shutdown before exit
-    #libfap.fap_cleanup()                # close lifap in order to avoid memory leaks
     sock.shutdown(0)                    # shutdown the connection
     sock.close()                        # close the connection file
     datafile.close()                    # close the data file
     # report number of records read and IDs discovered
     print('Records read:', cin, ' Ids found: ', cout)
-    k = list(fid.keys())                  # list the IDs for debugging purposes
-    print (k)
+    k = list(fid.keys())                # list the IDs for debugging purposes
+    print ("Keys:", len(k))
     k.sort()                            # sort the list
     for key in k:                       # report data
-        gid = 'Noreg '                    # for unknown gliders
+        gid = 'Noreg '                  # for unknown gliders
         if spanishsta(key) or frenchsta(key):
             if key in kglid.kglid:
-                gid = kglid.kglid[key]    # report the station name
+                gid = kglid.kglid[key]  # report the station name
                 if len(gid) > 20:
                     gid = gid[0:20]
             else:
-                gid = "NOSTA"             # marked as no sta
+                gid = "NOSTA"           # marked as no sta
         else:
-            # if it is a known glider ???
+                                        # if it is a known glider ???
             if key != None and key[3:9] in kglid.kglid:
                 gid = kglid.kglid[key[3:9]]   # report the registration
         if key in fsmax:
@@ -124,16 +123,16 @@ def shutdown(sock, datafile, tmaxa, tmaxt, tmid, tmstd):
 #	end of if (for stations)
 #   end of for
 
-            # report now the maximun altitude for the day
+                                        # report now the maximun altitude for the day
     if tmid[3:9] in kglid.kglid:        # if it is a known glider ???
-        gid = kglid.kglid[tmid[3:9]]      # report the registration
+        gid = kglid.kglid[tmid[3:9]]    # report the registration
     else:
-        gid = tmid                        # use the ID instead
+        gid = tmid                      # use the ID instead
     for key in fsmax:                   # report data
         print("Station: ", key, fsmax[key], "Kms. and", fscnt[key], "fixes...")
     print("Maximun altitude for the day:", tmaxa, ' meters MSL at:', tmaxt,
           'by:', gid, 'Station:', tmsta, "Max. distance:", tmaxd, "by:", tmstd)
-    print("Sources:", fsour)
+    print("Sources:", fsour, "stations:", len (fsta), "Gliders:", len(k))
     conn.commit()			# commit the DB updates
     conn.close()			# close the database
     local_time = datetime.now() 	# report date and time now
@@ -141,7 +140,7 @@ def shutdown(sock, datafile, tmaxa, tmaxt, tmid, tmstd):
     print("Local Time (server) now is:", local_time, " and UTC time at location ",
           config.location_name, "is:", location.date, "UTC.")
     try:
-        os.remove(config.APP+".alive")		# delete the mark of alive
+        os.remove(config.APP+".alive")	# delete the mark of alive
     except:
         print("No SW.live")
     return				# job done
@@ -528,7 +527,11 @@ try:
             else:
                 fsour[source] += 1		    	# increase the counter
 
-            if beacontype == 'aprs_receiver':		# handle the TCPIP
+            if beacontype == 'aprs_receiver' or relay == 'TCPIP':	# handle the TCPIP
+                ccchk=id[0:4]                           # just the first 4 chars
+                if ccchk =="BSKY" or ccchk == "FNB1" or ccchk == "AIRS":    # useless sta
+                    continue
+
                 if not id in fslod:
                     fslla[id] = latitude		# save the location of the station
                     fsllo[id] = longitude		# save the location of the station
@@ -541,19 +544,31 @@ try:
                     fsalt[id] = 0
                     fscnt[id] = 0                  	# initial counter of fixes
                     status = msg['status']		# station status
-                    temp = msg['temp']		# station temperature
-                    version = msg['version']		# station SW version
-                    cpu = msg['cpu']			# station CPU load
-                    rf = msg['rf']			# station RF sensibility
+                    if 'temp' in msg:
+                        temp = msg['temp']		# station temperature
+                    else:
+                        temp=-1
+                    if 'version' in msg:
+                        version = msg['version']	# station SW version
+                    else:
+                        version = ' '
+                    if 'cpu' in msg:                    # station CPU load
+                        cpu = msg['cpu']	        # CPU load
+                    else:
+                        cpu = ' '
+                    if 'rf' in msg:                     # 
+                        rf = msg['rf']	                # RF sensitibity load
+                    else:
+                        rf = ' '
                     print("===>STA:", id, latitude, longitude,
-                          altitude, version, ":::", status)
+                            altitude, ":", version, cpu, rf, ":::", status)
                 continue                        	# go for the next record
 
             if aprstype == 'status':			# if tracker status report
                 if prt:
                     print("OGN tracker Status report:", data)
                 continue
-            if beacontype == 'aprs_receiver':
+            if beacontype == 'aprs_receiver' or path == 'receiver' or relay =='TCPIP':
                 continue				# the case of the TCP IP as well
             # if std records
             if beacontype == 'tracker'  and ( relay == 'RELAY*' or relay[0:3] == "OGN"):
@@ -576,20 +591,28 @@ try:
             # filter by latitude
             if config.FILTER_LATI1 > 0:			# if we are in the norther hemisfere
                 if (chkfilati(latitude, config.FILTER_LATI1, config.FILTER_LATI2) and chkfilati(latitude, config.FILTER_LATI3, config.FILTER_LATI4)):
-                    continue			# if is not within our latitude ignore the data
+                    continue			        # if is not within our latitude ignore the data
             if (blackhole(longitude, latitude)):
                 print("BH:", id, longitude, latitude, date)
                 continue				# if is not within our latitude ignore the data
 
-            if altitude >= fmaxa[id]:			# check for maximun altitude
-                fmaxa[id] = altitude
-                if altitude > tmaxa and (not spanishsta(id) and not frenchsta(id)):
-                    tmaxa = altitude        	# maximum altitude for the day
-                    tmaxt = date            	# and time
-                    tmid = id              	# who did it
-                    tmsta = station         	# station capturing the max altitude
-            if speed >= fmaxs[id]:				# check for maximun speed
-                fmaxs[id] = speed
+            try:
+                if altitude >= fmaxa[id]:		# check for maximun altitude
+                 fmaxa[id] = altitude
+                 if altitude > tmaxa and (not spanishsta(id) and not frenchsta(id)):
+                    tmaxa = altitude        	        # maximum altitude for the day
+                    tmaxt = date            	        # and time
+                    tmid = id              	        # who did it
+                    tmsta = station         	        # station capturing the max altitude
+            except:
+                print ("TTTT>>>>", msg)                 # check it out
+                continue
+            try:
+                if speed >= fmaxs[id]:			# check for maximun speed
+                     fmaxs[id] = speed
+            except:
+                print ("TTTT>>>>", msg)                 # check it out
+                continue
             if altim > 15000 or altim < 0:
                 altim = 0
             alti = '%05d' % altim                 		# convert it to an string

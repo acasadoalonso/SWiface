@@ -1,8 +1,8 @@
+#!/usr/bin/python3
 #
 # Parser functions for the OGN APRS applications
 #
 
-from libfap import *
 from ctypes import *
 import urllib.request
 import urllib.error
@@ -221,21 +221,23 @@ def spanishsta(station):                # return true if is an Spanish station
     if (station) == None:
         return False
     if station[0:2] == 'LE' or 			\
-            station[0:5] == 'CREAL' or 	\
-            station[0:4] == 'MORA' or 	\
-            station[0:6] == 'MADRID' or 	\
-            station[0:5] == 'AVILA' or	\
-            station[0:9] == 'ALCAZAREN' or	\
-            station[0:7] == 'ANDORRA' or	\
-            station[0:9] == 'STOROE' or	\
-            station[0:9] == 'STOROW' or	\
-            station[0:5] == 'PALOE' or	\
-            station[0:5] == 'PALOW' or	\
-            station[0:8] == 'BOITAULL' or  \
-            station[0:8] == 'LAMOLINA' or	\
-            station[0:8] == 'CEREJA' or	\
-            station[0:8] == 'FLYMASTER' or	\
-            station[0:8] == 'SPOT' or	\
+            station[0:5] == 'CREAL'         or 	\
+            station[0:4] == 'MORA'          or 	\
+            station[0:6] == 'MADRID'        or 	\
+            station[0:5] == 'AVILA'         or	\
+            station[0:9] == 'ALCAZAREN'     or	\
+            station[0:7] == 'ANDORRA'       or	\
+            station[0:9] == 'STOROE'        or	\
+            station[0:9] == 'STOROW'        or	\
+            station[0:5] == 'PALOE'         or	\
+            station[0:5] == 'PALOW'         or	\
+            station[0:8] == 'BOITAULL'      or  \
+            station[0:8] == 'LAMOLINA'      or	\
+            station[0:6] == 'CEREJA'        or	\
+            station[0:9] == 'FLYMASTER'     or	\
+            station[0:4] == 'SPOT'          or	\
+            station[0:6] == 'PWLERM'        or	\
+            station[0:9] == 'CASTEJONS'     or	\
             station[0:8] == 'PORTAINE':
         return True
     else:
@@ -293,8 +295,10 @@ def decdeg2dms(dd):			# convert degress float into DDMMSS
 
 def parseraprs(packet_str, msg):
     # args: packet_str the packet stream with the data, msg the dict where to return the parsed data
-    # Parse packet using libfap.py into fields to process
-    packet = parse(packet_str)
+    try:
+        packet = parse(packet_str)
+    except:
+        return -1
     #print (">>>Packet:", packet)
     # ignore if do data or just the keep alive message
     if len(packet_str) > 0 and packet_str[0] != "#":
@@ -324,7 +328,7 @@ def parseraprs(packet_str, msg):
         msgtype = packet_str[ix+1:ix+2]
         if msgtype != '>' and msgtype != '/':   # only status or location messages
             print("MMM>>>", aprstype, data)
-        if packet['beacon_type']  == 'aprs_receiver' and (msgtype == '>' or msgtype == '/'):  # handle the TCPIP
+        if (path  == 'aprs_receiver' or path == 'receiver') and (msgtype == '>' or msgtype == '/'):  # handle the TCPIP
             if cc.isupper():
                 id = callsign
             else:
@@ -429,20 +433,22 @@ def parseraprs(packet_str, msg):
         # scan for the altitude on the body of the message
         p2 = data.find('/A=')+3
         if len (data) > (p2 + 7) and data[p2+7] == '!' :                  # get the unique id
-            extpos = data[p2+7:p2+12]  # get extended position indicator
+            extpos = data[p2+7:p2+12]           # get extended position indicator
         else:
             extpos = ' '
 
-        p3 = data.find(' id')                     # scan for uniqueid info
+        p3 = data.find(' id')                   # scan for uniqueid info
         if p3 != -1:
             uniqueid = "id"+gdatar(data, "id")  # get the unique id
         else:
-            uniqueid = ' '		# no unique ID
+            uniqueid = ' '		        # no unique ID
+        if len(uniqueid) > 15:
+            uniqueid = ' '		        # no unique ID
 
-        roclimb = gdatal(data, "fpm ")      # get the rate of climb
-        if roclimb == ' ':				# if no rot provided
+        roclimb = gdatal(data, "fpm ")          # get the rate of climb
+        if roclimb == ' ':			# if no rot provided
             roclimb = 0
-        rot = gdatal(data, "rot")       # get the rate of turn
+        rot = gdatal(data, "rot")               # get the rate of turn
         if rot == ' ':				# if no rot provided
             rot = 0
         sensitivity = gdatal(data, "dB ")       # get the sensitivity
@@ -497,13 +503,14 @@ def parseraprs(packet_str, msg):
 ########################################################################
 
 
-def SRSSgetapidata(url):                        # get the data from the API server
+def SRSSgetapidata(url):                    # get the data from the API server
 
-    req = urllib.request.Request(url)              # buil the request
+    req = urllib.request.Request(url)       # buil the request
     req.add_header("Content-Type", "application/json")
     req.add_header("Content-type", "application/x-www-form-urlencoded")
-    r = urllib.request.urlopen(req)                # open the url resource
-    j_obj = json.load(r)                    # convert to JSON
+    r = urllib.request.urlopen(req)         # open the url resource
+    js=r.read().decode('UTF-8')
+    j_obj = json.loads(js)                  # convert to JSON
     return j_obj                            # return the JSON object
 
 
