@@ -6,7 +6,7 @@ echo "Installing the Silent Wings Studio interface ...." 	#
 echo "========================================================" #
 echo								#
 export LC_ALL=en_US.UTF-8 && export LANG=en_US.UTF-8		#
-sudo apt-get install -y software-properties-common python-software-properties
+sudo apt-get install -y software-properties-common python3-software-properties
 echo								#
 echo " lets update the operating system libraries  ...." 	#
 echo "========================================================" #
@@ -146,7 +146,22 @@ if [ ! -d /etc/local ]						#
 then								#
     sudo mkdir /etc/local					#
 fi								#
-echo								#
+if [ ! -d ~/src  ]						#
+then								#
+	mkdir ~/src   						#
+	ln -s $(pwd) ~/src/SWsrc				#
+fi								#
+echo " DIR: /src ..."						#
+echo "================================================" 	#
+ls -la ~/src							#
+echo " DIR: /src/SWsrc ..."					#
+echo "================================================" 	#
+ls -la ~/src/SWsrc						#
+echo " DIR: /src/SWsrc/sh ..."					#
+echo "================================================" 	#
+ls -la ~/src/SWsrc/sh						#
+
+echo " "								#
 echo "Installing the templates needed  ...." 			#
 echo "========================================================" #
 echo								#
@@ -184,10 +199,13 @@ echo "========================================================" #
 echo								#
 cd main								#
 cp aliases ~/.bash_aliases					#
-sh sh/mailcatcher.install
-mailcatcher --http-ip=0.0.0.0					#
-sudo /usr/local/bin/composer self-update			#
-composer update							#
+if [ ! -f /usr/local/bin/mailcatcher ]				#
+then								#
+	sh sh/mailcatcher.install				#
+	mailcatcher --http-ip=0.0.0.0				#
+	sudo /usr/local/bin/composer self-update		#
+	composer update						#
+fi								#
 cd sh	 							#
 crontab <crontab.data						#
 crontab -l 							#
@@ -197,9 +215,6 @@ then								#
 	mkdir ~/src/SWsrc					#
 	ln -s /var/www/html/main ~/src/SWsrc			#
 fi								#
-cp *.sh ~/src  							#
-cd ..								#
-cp *.py ~/src/SWsrc						#
 ls  -la ~/src 							#
 if [ ! -d /nfs  ]						#
 then								#
