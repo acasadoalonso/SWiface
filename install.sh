@@ -21,13 +21,45 @@ echo								#
 echo "Installing the packages required . (LAMP stack)..."	#
 echo "========================================================" #
 echo								#
+echo								#
+sudo apt-get install -y mysql-server mysql-client sqlite3	#
+sudo mysql_secure_installation					#
+sudo apt-get install -y python3-dev python3-pip python3-mysqldb #
+sudo apt-get install -y dos2unix libarchive-dev	 autoconf mc	#
+sudo apt-get install -y pkg-config git mutt git-core		#
+sudo apt-get install -y apache2 php php-mcrypt php-mysql php-cli #
+sudo apt-get install -y php-mbstring php-gettext		#
+sudo apt-get install -y mailutils ntpdate mutt	ssmtp		#
+sudo apt-get install -y libcurl4-openssl-dev			#
+sudo apt-get install -y libjson0 libjson0-dev			#
+sudo apt-get install -y libjson-c-dev 				#
+sudo apt-get install -y libnova-0.14-0				#
+sudo apt-get install -y libfap-dev                              #
+sudo apt-get install -y at	 				#
+sudo apt-get install -y avahi-daemon 				#
+sudo apt-get install -y php7.2	 				#
+sudo a2enmod rewrite						#
+sudo a2enmod cgi						#
+sudo phpenmod mcrypt						#
+sudo phpenmod mbstring						#
+sudo a2enmod php7.2 						#
+sudo cat /etc/apache2/apache2.conf html.dir 	>>temp.conf	#
+sudo echo "ServerName SWserver  " >>temp.conf			#
+sudo mv temp.conf /etc/apache2/apache2.conf			#
+sudo service apache2 restart					#
+echo								#
+echo "Installing phpmyadmin  ... "				#
+echo "================================================" 	#
+echo								#
+sudo apt-get install -y libmysqlclient-dev			#
+sudo apt-get install -y phpmyadmin 				#
+sudo service apache2 restart					#
+
 cd /var/www/html/main						#
 echo								#
 echo "Installing mysql "					#
 echo "========================================================" #
 echo								#
-sudo apt-get install -y mysql-server mysql-client sqlite3	#
-sudo mysql_secure_installation					#
 echo "Type ROOT password: "					#
 echo "========================================================" #
 echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'ognognogn';" | sudo mysql -u root -p #
@@ -53,6 +85,7 @@ echo								#
 sudo apt-get install -y php php-mcrypt 				#
 sudo apt-get install -y php php-mysql php-cli 			#
 sudo apt-get install -y php-mbstring php-gettext		#
+sudo apt-get install -y php7.2 					#
 echo								#
 echo "Installing mail "						#
 echo "========================================================" #
@@ -60,8 +93,9 @@ echo								#
 sudo apt-get install -y mailutils ntpdate mutt	ssmtp		#
 sudo apt-get install -y libcurl4-openssl-dev			#
 sudo apt-get install -y libjson0 libjson0-dev			#
+sudo apt-get install -y libjson-c-dev 				#
 sudo apt-get install -y goaccess				#
-sudo apt-get install -y libfap6                                 #
+sudo apt-get install -y libfap6-dev                             #
 sudo apt-get install -y avahi-daemon                            #
 echo								#
 echo "Installing apache2 modules "				#
@@ -106,6 +140,8 @@ sudo -H pip3 install pyMySQLdb					#
 sudo -H pip3 install ogn-python					#
 sudo apt-get install libmysqlclient-dev                         #
 sudo -H pip3 install mysqlclient                                #
+sudo -H pip3 install beeprint					#
+sudo -H pip3 install ogn.client					#
 if [ ! -d /etc/local ]						#
 then								#
     sudo mkdir /etc/local					#
