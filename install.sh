@@ -104,6 +104,8 @@ sudo -H pip3 install pyopenssl 					#
 sudo -H pip3 install uritemplate				#
 sudo -H pip3 install pyMySQLdb					#
 sudo -H pip3 install ogn-python					#
+sudo apt-get install libmysqlclient-dev                         #
+sudo -H pip3 install mysqlclient                                #
 if [ ! -d /etc/local ]						#
 then								#
     sudo mkdir /etc/local					#

@@ -26,7 +26,7 @@ date                                                          >>../SWproc.log
 echo "========================================="	      >>../SWproc.log
 cd ..
 echo "drop table GLIDERS;" | mysql -u ogn -pogn -h $server SWIFACE                       >>SWproc.log 
-python /nfs/OGN/src/sql* <gliders.dmp >gliders.sql
+python2 /nfs/OGN/src/sql* <gliders.dmp >gliders.sql
 mysql                              -u ogn -pogn -h $server SWIFACE  <gliders.sql         >>SWproc.log
 date                                                          >>SWproc.log
 echo "========================================="	      >>SWproc.log

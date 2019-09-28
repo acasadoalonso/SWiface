@@ -1,4 +1,4 @@
 #!/bin/sh
-pkill python
+pkill python3
 sh ~/src/live.sh
 ps -ef

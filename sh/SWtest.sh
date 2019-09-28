@@ -17,7 +17,7 @@ else
         if [ ! -f $alive ]
         then
                 logger  -t $0 "SWS Repo is not alive"
-                pnum=$(pgrep python)
+                pnum=$(pgrep python3)
                 if [ $? -eq 0 ] # if OGN repo interface is  not running
                 then
                         sudo kill $pnum
