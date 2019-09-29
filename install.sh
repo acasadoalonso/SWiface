@@ -1,10 +1,10 @@
 #!/bin/bash 
-# Update repository information
-sudo apt-get update 
 echo								#
 echo "Installing the Silent Wings Studio interface ...." 	#
 echo "========================================================" #
 echo								#
+# Update repository information
+sudo apt-get update 
 export LC_ALL=en_US.UTF-8 && export LANG=en_US.UTF-8		#
 sudo apt-get install -y software-properties-common python3-software-properties
 echo								#
@@ -33,7 +33,6 @@ sudo apt-get install -y mailutils ntpdate mutt	ssmtp		#
 sudo apt-get install -y libcurl4-openssl-dev			#
 sudo apt-get install -y libjson0 libjson0-dev			#
 sudo apt-get install -y libjson-c-dev 				#
-sudo apt-get install -y libnova-0.14-0				#
 sudo apt-get install -y libfap-dev                              #
 sudo apt-get install -y avahi-daemon 				#
 sudo apt-get install -y php7.2	 				#
@@ -59,10 +58,10 @@ echo								#
 echo "Installing mysql "					#
 echo "========================================================" #
 echo								#
-echo "Type ROOT password: "					#
+echo "Type ROOT old password: "					#
 echo "========================================================" #
 echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'ognognogn';" | sudo mysql -u root -p #
-echo "Type ROOT password: "					#
+echo "Type ROOT new password: "					#
 echo "========================================================" #
 echo "SELECT user,authentication_string,plugin,host FROM mysql.user; " | sudo mysql -u root -p 			#
 echo								#
@@ -94,7 +93,6 @@ echo								#
 sudo apt-get install -y mailutils ntpdate mutt	ssmtp		#
 sudo apt-get install -y libcurl4-openssl-dev			#
 sudo apt-get install -y goaccess				#
-sudo apt-get install -y libfap6-dev                             #
 sudo apt-get install -y avahi-daemon                            #
 echo								#
 echo "Installing apache2 modules "				#
@@ -188,7 +186,7 @@ cd /var/www/html/						#
 sqlite3 SWiface.db         < main/DBschema.sqlite3		#
 echo "========================================================" #
 echo "CREATE DATABASE SWIFACE" | mysql -u root -p		#
-mysql -u root -pogn --database SWIFACE < main/DBschema.sql	#
+mysql -u root -p --database SWIFACE < main/DBschema.sql	#
 echo "GRANT ALL PRIVILEGES ON *.* TO 'ogn'@'localhost' IDENTIFIED BY 'yourpassword'; " | mysql -u root -p     #
 echo "GRANT SELECT ON *.* TO 'ognread'@'localhost'     IDENTIFIED BY 'yourpassword'; " | mysql -u root -p     #
 echo								#
