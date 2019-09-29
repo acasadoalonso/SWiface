@@ -1,25 +1,33 @@
 #!/bin/bash 
 echo								#
+echo " "							#
 echo "Installing the Silent Wings Studio interface ...." 	#
 echo "========================================================" #
+echo " "							#
 echo								#
 # Update repository information
 sudo apt-get update 
 export LC_ALL=en_US.UTF-8 && export LANG=en_US.UTF-8		#
 sudo apt-get install -y software-properties-common python3-software-properties
+echo " "							#
 echo								#
 echo " lets update the operating system libraries  ...." 	#
 echo "========================================================" #
+echo " "							#
 echo								#
 sudo apt-get update						#
 sudo apt-get install -y language-pack-en-base 			# 
 export LC_ALL=en_US.UTF-8 && export LANG=en_US.UTF-8		#
+echo " "							#
 echo "export LC_ALL=en_US.UTF-8 && export LANG=en_US.UTF-8 " >>~/.profile #
 echo "export LD_LIBRARY_PATH=/usr/local/lib" >>~/.profile 	#
+echo " "							#
 sudo apt-get -y upgrade						#
 echo								#
+echo " "							#
 echo "Installing the packages required . (LAMP stack)..."	#
 echo "========================================================" #
+echo " "							#
 echo								#
 echo								#
 sudo apt-get install -y mysql-server mysql-client sqlite3	#
@@ -46,8 +54,10 @@ sudo echo "ServerName SWserver  " >>temp.conf			#
 sudo mv temp.conf /etc/apache2/apache2.conf			#
 sudo service apache2 restart					#
 echo								#
+echo " "							#
 echo "Installing phpmyadmin  ... "				#
 echo "================================================" 	#
+echo " "							#
 echo								#
 sudo apt-get install -y libmysqlclient-dev			#
 sudo apt-get install -y phpmyadmin 				#
@@ -55,18 +65,24 @@ sudo service apache2 restart					#
 
 cd /var/www/html/main						#
 echo								#
+echo " "							#
 echo "Installing mysql "					#
 echo "========================================================" #
+echo " "							#
 echo								#
 echo "Type ROOT old password: "					#
+echo " "							#
 echo "========================================================" #
 echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'ognognogn';" | sudo mysql -u root -p #
 echo "Type ROOT new password: "					#
+echo " "							#
 echo "========================================================" #
 echo "SELECT user,authentication_string,plugin,host FROM mysql.user; " | sudo mysql -u root -p 			#
 echo								#
+echo " "							#
 echo "Installing python "					#
 echo "========================================================" #
+echo " "							#
 echo								#
 sudo apt-get install -y python3-dev python3-pip python3-mysqldb #
 sudo apt-get install -y dos2unix libarchive-dev	 autoconf mc	#
@@ -74,29 +90,37 @@ sudo apt-get install -y pkg-config git  at			#
 git config --global user.email ".casadoalonso@gmail.com"	#
 git config --global user.name "Angel Casado"			#
 echo								#
+echo " "							#
 echo "Installing apache2 "					#
 echo "========================================================" #
+echo " "							#
 echo								#
 sudo apt-get install -y apache2 				#
 echo								#
+echo " "							#
 echo "Installing php "						#
 echo "========================================================" #
+echo " "							#
 echo								#
 sudo apt-get install -y php php-mcrypt 				#
 sudo apt-get install -y php php-mysql php-cli 			#
 sudo apt-get install -y php-mbstring php-gettext		#
 sudo apt-get install -y php7.2 					#
 echo								#
+echo " "							#
 echo "Installing mail "						#
 echo "========================================================" #
+echo " "							#
 echo								#
 sudo apt-get install -y mailutils ntpdate mutt	ssmtp		#
 sudo apt-get install -y libcurl4-openssl-dev			#
 sudo apt-get install -y goaccess				#
 sudo apt-get install -y avahi-daemon                            #
 echo								#
+echo " "							#
 echo "Installing apache2 modules "				#
 echo "========================================================" #
+echo " "							#
 echo								#
 sudo a2enmod rewrite						#
 sudo a2enmod cgi						#
@@ -108,21 +132,28 @@ sudo cat /etc/apache2/apache2.conf html.dir 	>>temp.conf	#
 sudo echo "ServerName SWiface " >>temp.conf			#
 sudo mv temp.conf /etc/apache2/apache2.conf			#
 echo								#
+echo " "							#
 echo "Installing apache2 conf "					#
 echo "========================================================" #
+echo " "							#
 echo								#
 cat /etc/apache2/apache2.conf					#
 sudo service apache2 restart					#
+echo " "							#
 echo "------------- APACHE2 restarted -----------------------"  #
 echo								#
+echo " "							#
 echo "Installing phpmyadmin  ... "				#
 echo "========================================================" #
+echo " "							#
 echo								#
 sudo apt-get install -y phpmyadmin 				#
 sudo service apache2 restart					#
 echo								#
+echo " "							#
 echo "Installing pyhon modules "				#
 echo "========================================================" #
+echo " "							#
 echo								#
 sudo -H pip3 install --upgrade pip                              #
 sudo -H pip3 install ephem 					#
@@ -147,6 +178,7 @@ then								#
 	mkdir ~/src   						#
 	ln -s $(pwd) ~/src/SWsrc				#
 fi								#
+echo " "							#
 echo " DIR: /src ..."						#
 echo "================================================" 	#
 ls -la ~/src							#
@@ -156,10 +188,11 @@ ls -la ~/src/SWsrc						#
 echo " DIR: /src/SWsrc/sh ..."					#
 echo "================================================" 	#
 ls -la ~/src/SWsrc/sh						#
-
-echo " "								#
+echo "================================================" 	#
+echo " "							#
 echo "Installing the templates needed  ...." 			#
 echo "========================================================" #
+echo " "							#
 echo								#
 cd /var/www/html/main						#
 sudo cp config.template /etc/local/SWSconfig.ini		#
@@ -168,8 +201,10 @@ cp configtail.template configtail.txt				#
 python3 genconfig.py						#
 ls -la								#
 echo								#
+echo " "							#
 echo "Setting the data bases       ...." 			#
 echo "========================================================" #
+echo " "							#
 echo								#
 if [ -f SWiface.db ]						#
 then								#
@@ -184,14 +219,24 @@ then								#
 fi								#
 cd /var/www/html/						#
 sqlite3 SWiface.db         < main/DBschema.sqlite3		#
+if [ -d /nfs/OGN/SWdata  ]					#
+then								#
+	mv      SWiface.db  	/nfs/OGN/SWdata			#
+fi								#
+echo " "							#
+echo "========================================================" #
+echo "Create the MySQL database SWIFACE "			#
+echo "Type the PASSword for the MySQL database SWIFACE "	#
 echo "========================================================" #
 echo "CREATE DATABASE SWIFACE" | mysql -u root -p		#
-mysql -u root -p --database SWIFACE < main/DBschema.sql	#
+mysql -u root -p --database SWIFACE < main/DBschema.sql		#
+echo "Create the MySQL OGN user "				#
 echo "GRANT ALL PRIVILEGES ON *.* TO 'ogn'@'localhost' IDENTIFIED BY 'yourpassword'; " | mysql -u root -p     #
 echo "GRANT SELECT ON *.* TO 'ognread'@'localhost'     IDENTIFIED BY 'yourpassword'; " | mysql -u root -p     #
-echo								#
+echo " "							#
 echo "Optional steps ... "					#
 echo "========================================================" #
+echo " "							#
 echo								#
 cd main								#
 cp aliases ~/.bash_aliases					#
@@ -230,7 +275,9 @@ then								#
 	sudo chown ogn:ogn */*					# 
 	sudo chmod 777 */*					#
 fi								#
+echo " "							#
 echo "========================================================" #
+echo " "							#
 cd /var/www/html 						#
 rm kglid.py							#
 cp  main/kglid.py .						# 
@@ -247,6 +294,7 @@ sudo apt-get -y autoremove					#
 sudo chmod 755 /var/log/syslog					#
 tail /var/log/syslog						#
 touch SWinstallation.done					#
+echo " "							#
 echo								#
 echo "========================================================================================================"	#
 echo "Installation done ..."											#
@@ -259,3 +307,4 @@ echo "Run the utilities soa2sws.py and/or sgp2sws.py in order to extract the dat
 echo "Install phpmyadmin if needed !!! "                                                                        #
 echo "========================================================================================================"	#
 echo								#
+echo " "							#
