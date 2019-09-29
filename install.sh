@@ -246,6 +246,8 @@ cd								#
 sudo dpkg-reconfigure tzdata					#
 sudo apt-get -y dist-upgrade					#
 sudo apt-get -y autoremove					#
+sudo chmod 755 /var/log/syslog					#
+tail /var/log/syslog						#
 touch SWinstallation.done					#
 echo								#
 echo "========================================================================================================"	#
