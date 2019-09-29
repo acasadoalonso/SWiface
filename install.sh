@@ -198,7 +198,7 @@ cp aliases ~/.bash_aliases					#
 if [ ! -f /usr/local/bin/mailcatcher ]				#
 then								#
 	sh sh/mailcatcher.install				#
-	mailcatcher --http-ip=0.0.0.0				#
+	#mailcatcher --http-ip=0.0.0.0				#
 	sudo /usr/local/bin/composer self-update		#
 	composer update						#
 fi								#
