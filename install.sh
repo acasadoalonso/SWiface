@@ -35,7 +35,6 @@ sudo apt-get install -y libjson0 libjson0-dev			#
 sudo apt-get install -y libjson-c-dev 				#
 sudo apt-get install -y libnova-0.14-0				#
 sudo apt-get install -y libfap-dev                              #
-sudo apt-get install -y at	 				#
 sudo apt-get install -y avahi-daemon 				#
 sudo apt-get install -y php7.2	 				#
 sudo a2enmod rewrite						#
@@ -72,7 +71,9 @@ echo "========================================================" #
 echo								#
 sudo apt-get install -y python3-dev python3-pip python3-mysqldb #
 sudo apt-get install -y dos2unix libarchive-dev	 autoconf mc	#
-sudo apt-get install -y pkg-config git mutt at			#
+sudo apt-get install -y pkg-config git  at			#
+git config --global user.email ".casadoalonso@gmail.com"	#
+git config --global user.name "Angel Casado"			#
 echo								#
 echo "Installing apache2 "					#
 echo "========================================================" #
@@ -92,8 +93,6 @@ echo "========================================================" #
 echo								#
 sudo apt-get install -y mailutils ntpdate mutt	ssmtp		#
 sudo apt-get install -y libcurl4-openssl-dev			#
-sudo apt-get install -y libjson0 libjson0-dev			#
-sudo apt-get install -y libjson-c-dev 				#
 sudo apt-get install -y goaccess				#
 sudo apt-get install -y libfap6-dev                             #
 sudo apt-get install -y avahi-daemon                            #
@@ -137,7 +136,6 @@ sudo -H pip3 install requests 					#
 sudo -H pip3 install pyopenssl 					#
 sudo -H pip3 install uritemplate				#
 sudo -H pip3 install pyMySQLdb					#
-sudo -H pip3 install ogn-python					#
 sudo apt-get install libmysqlclient-dev                         #
 sudo -H pip3 install mysqlclient                                #
 sudo -H pip3 install beeprint					#
@@ -238,8 +236,12 @@ echo "========================================================" #
 cd /var/www/html 						#
 rm kglid.py							#
 cp  main/kglid.py .						# 
-cd main/sh							#
-sh calcelestial.sh						#
+if [ ! -f /usr/local/bin/calcelestial ]				#
+then								#
+	cd main/sh						#
+	sh calcelestial.sh					#
+	calcelestial -h 					#
+fi								#
 cd								#
 sudo dpkg-reconfigure tzdata					#
 sudo apt-get -y dist-upgrade					#
