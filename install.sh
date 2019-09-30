@@ -87,7 +87,7 @@ echo								#
 sudo apt-get install -y python3-dev python3-pip python3-mysqldb #
 sudo apt-get install -y dos2unix libarchive-dev	 autoconf mc	#
 sudo apt-get install -y pkg-config git  at			#
-git config --global user.email ".casadoalonso@gmail.com"	#
+git config --global user.email "acasadoalonso@gmail.com"	#
 git config --global user.name "Angel Casado"			#
 echo								#
 echo " "							#

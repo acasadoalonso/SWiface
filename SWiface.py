@@ -20,7 +20,7 @@ import signal
 import kglid                              # import the list on known gliders
 import socket
 from parserfuncs import *                 # the ogn/ham parser functions
-from geopy.distance import vincenty       # use the Vincenty algorithm^M
+from geopy.distance import geodesic       # use the Vincenty algorithm^M
 # use the Nominatim as the geolocator^M
 from geopy.geocoders import GeoNames
 from time import sleep
@@ -619,7 +619,7 @@ try:
             dist = -1
             if station in fslod:                		# if we have the station yet
                 # distance to the station
-                distance = vincenty((latitude, longitude), fslod[station]).km
+                distance = geodesic((latitude, longitude), fslod[station]).km
                 dist = distance
                 if distance > 299.9:			# posible errors
                     print("distcheck: ", distance, data)
@@ -634,7 +634,7 @@ try:
                     fmaxd[id] = distance		# save the new distance
                 fscnt[station] += 1			# increase the counter of fixes
             if source != "OGN":				# if it is not OGN, we get the distance to the home base
-                distance = vincenty((latitude, longitude), (config.location_latitude,
+                distance = geodesic((latitude, longitude), (config.location_latitude,
                                                             config.location_longitude)).km    # distance to the base
                 dist = distance
             if altim > tmaxa:				# if exceed the maximun altitude
