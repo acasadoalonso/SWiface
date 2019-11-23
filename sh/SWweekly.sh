@@ -23,11 +23,12 @@ echo "drop table GLIDERS;" | sqlite3 SWiface.db              >>../SWproc.log
 sqlite3                               SWiface.db <../gliders.dmp >>../SWproc.log
 echo "vacuum;" |              sqlite3 SWiface.db              >>../SWproc.log 
 date                                                          >>../SWproc.log
-echo "========================================="	      >>../SWproc.log
+echo "================MySQL========================="	      >>../SWproc.log
 cd ..
-echo "drop table GLIDERS;" | mysql -u ogn -pogn -h $server SWIFACE                       >>SWproc.log 
-python2 /nfs/OGN/src/sql* <gliders.dmp >gliders.sql
-mysql                              -u ogn -pogn -h $server SWIFACE  <gliders.sql         >>SWproc.log
+echo "drop table GLIDERS;" | mysql --login-path=SARogn -h $server SWIFACE                       >>SWproc.log 
+python2 /nfs/OGN/src/SARsrc/sql* <gliders.dmp >gliders.sql
+mysql                              --login-path=SARogn -h $server SWIFACE  <gliders.sql         >>SWproc.log
+echo "select count(*) from GLIDERS;" | mysql --login-path=SARogn -h $server SWIFACE		>>SWproc.log
 date                                                          >>SWproc.log
 echo "========================================="	      >>SWproc.log
 rm gliders.dmp gliders.sql

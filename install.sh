@@ -157,6 +157,7 @@ echo " "							#
 echo								#
 sudo -H pip3 install --upgrade pip                              #
 sudo -H pip3 install ephem 					#
+sudo -H pip3 install tqdm 					#
 sudo -H pip3 install pytz 					#
 sudo -H pip3 install geopy 					#
 sudo -H pip3 install configparser 				#

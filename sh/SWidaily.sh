@@ -10,16 +10,17 @@ echo "delete from OGNDATA;" | sqlite3 SWiface.db              >>SWproc.log
 echo "vacuum;"              | sqlite3 SWiface.db              >>SWproc.log
 echo "select 'Number of fixes: on the DB:', count(*) from OGNDATA; select station, 'Kms.max.:',max(distance) as Distance,'        Flarmid :',idflarm, 'Date:',date, time, station from OGNDATA group by station; " | sqlite3 archive/SWiface.db			>>SWproc.log
 rm ogndata.dmp
-echo "Process MYSQL DB." >>SWproc.log
-mysqlcheck -u admin -padmin -h $server --all-databases >>SWproc.log
-echo "select 'Number of fixes: on the DB:', count(*) from OGNDATA; select station, 'Kms.max.:',max(distance),'        Flarmid :',idflarm, 'Date:',date, time, station from OGNDATA group by station; " | mysql -v -h $server -u ogn -pogn  SWIFACE	>>SWproc.log
-mysqldump                               -t -u ogn -pogn -h $server SWIFACE OGNDATA >ogndata.sql 
-mysql                                      -u ogn -pogn -h $server SWARCHIVE       <ogndata.sql >>SWproc.log
-echo "delete from OGNDATA;" | mysql     -v -u ogn -pogn -h $server SWIFACE                      >>SWproc.log
+echo "Process MYSQL DB." 				>>SWproc.log
+mysqlcheck --login-path=SARogn -h $server SWIFACE   	>>SWproc.log
+mysqlcheck --login-path=SARogn -h $server SWARCHIVE 	>>SWproc.log
+echo "select 'Number of fixes: on the DB:', count(*) from OGNDATA; select station, 'Kms.max.:',max(distance),'        Flarmid :',idflarm, 'Date:',date, time, station from OGNDATA group by station; " | mysql --login-path=SARogn  -v -h $server SWIFACE	      >>SWproc.log
+mysqldump                               --login-path=SARogn -t -h $server SWIFACE OGNDATA >ogndata.sql 
+mysql                                   --login-path=SARogn    -h $server SWARCHIVE       <ogndata.sql >>SWproc.log
+echo "delete from OGNDATA;" | mysql     --login-path=SARogn -v -h $server SWIFACE                      >>SWproc.log
 mv ogndata.sql archive
 echo "End of processes SQLITE3 & MYSQL DB." >>SWproc.log
 mutt -a "SWproc.log" -s $hostname$server"  SWS interface " -- acasado@acm.org
-mv DATA*.log  archive
+mv DATA*.log  archive		>/dev/null 2>&1
 mv SWproc.log archive/PROC$(date +%y%m%d).log
 rm SWS.alive			>/dev/null 2>&1
 rm SWS.sunset			>/dev/null 2>&1

@@ -9,8 +9,8 @@ rm            db/SWiface.BKUP.db		>/dev/null 2>&1
 cp SWiface.db db/SWiface.BKUP.db
 sqlite3 SWiface.db "vacuum;"
 mv DATA$(date +%y)*.log Y$(date +%y) 
-mysqldump                                  -u ogn -pogn -h $server SWARCHIVE >db/SWARCHIVE.dmp
-echo "delete from OGNDATA;" | mysql     -v -u ogn -pogn -h $server SWARCHIVE                      >>SWproc.log
+mysqldump                                --login-path=SARogn -h $server SWARCHIVE >db/SWARCHIVE.dmp
+echo "delete from OGNDATA;" | mysql      --login-path=SARogn -v -h $server SWARCHIVE                      >>SWproc.log
 mv ogndata.sql mondata.sql
 bash ./compress.sh   Y$(date +%y)
 cd
