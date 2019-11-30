@@ -1,7 +1,6 @@
 #!/bin/bash
 cd /nfs/OGN/SWdata
 server="casadonfs"
-bkserver="ubuntu"
 mv SWproc.log   log/Proc$(date +%y%m).log		>/dev/null 2>&1
 mv err.log    log/Err$(date  +%y%m).log		>/dev/null 2>&1
 cd archive
