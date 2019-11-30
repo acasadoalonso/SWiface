@@ -1,7 +1,11 @@
 #!/bin/bash
 cd /nfs/OGN/SWdata
-server="casadonfs"
-mv SWproc.log   log/Proc$(date +%y%m).log		>/dev/null 2>&1
+if [ $# -eq  0 ]; then
+	server='localhost'
+else
+	server=$1
+fi
+mv SWproc.log   log/SWproc$(date +%y%m).log	>/dev/null 2>&1
 mv err.log    log/Err$(date  +%y%m).log		>/dev/null 2>&1
 cd archive
 rm            db/SWiface.BKUP.db		>/dev/null 2>&1

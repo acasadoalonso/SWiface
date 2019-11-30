@@ -1,7 +1,7 @@
 #!/bin/bash
 dir='/nfs/OGN/DIRdata'
 db='/nfs/OGN/DIRdata/SAROGN.db'
-MySQL='YES'
+MySQL='NO'
 server="localhost"
 # test if directory is available
 if [ ! -d $dir ]
@@ -10,7 +10,7 @@ then
 	exit 1
 fi
 cd /nfs/OGN/SWdata
-echo "Sync GLIDERS table on databases"			    	>>SWproc.log
+echo "Sync GLIDERS table on databases at server: "$(hostname)  	>>SWproc.log
 cd    /nfs/OGN/DIRdata
 if [ -f 'kglid.py' ]
 then
@@ -45,7 +45,7 @@ then
 	rm gliders.sql
 	echo "============= end MySQL ============================" 	>>SWproc.log
 fi
-echo "========================================="         	>>SWproc.log
+echo "=============="$(hostname)"==========================="         	>>SWproc.log
 rm GLIDERS.dump  GLIDERS.out
 cd
 
