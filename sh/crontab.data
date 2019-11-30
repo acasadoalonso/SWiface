@@ -6,7 +6,6 @@ MAILTO="youremail@yourserver.org"
 #00 07 * * * /bin/sh ~/src/SWsrc/sh/SWpihealth.sh
 00 09 * * * /bin/sh ~/src/SWsrc/sh/SWlive2.sh
 00 23 * * * /bin/sh ~/src/SWsrc/sh/SWidaily.sh
-15 23 * * * /bin/sh ~/src/SWsrc/sh/SWsync.sh
 45 23 * * 1 /bin/sh ~/src/SWsrc/sh/SWweekly.sh
 00 00 1 * * /bin/sh ~/src/SWsrc/sh/SWmonthlylog.sh
 */10 10-17 * * * /bin/bash ~/src/SWsrc/sh/SWtest.sh
