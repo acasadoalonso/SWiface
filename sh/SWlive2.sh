@@ -6,7 +6,7 @@ then
 	ls -la /nfs/OGN/SWdata
 fi
 cd /nfs/OGN/SWdata
-echo "LIVE.sh:" 				>>SWproc.log
+echo $(hostname)" running SWlive.sh:" 		>>SWproc.log
 date 						>>SWproc.log
 cd /var/www/html
 python3 genconfig.py
