@@ -1,8 +1,12 @@
 #!/bin/bash
 cd /nfs/OGN/SWdata
-server="casadonfs"
+if [ $# -eq  0 ]; then
+	server='localhost'
+else
+	server=$1
+fi
 hostname=$(hostname)
-echo $hostname" Process SQLITE3 DB." 			>>SWproc.log
+echo "Process SQLITE3 DB at server: "$hostname		>>SWproc.log
 echo "select 'Number of fixes: on the DB:', count(*) from OGNDATA; select station, 'Kms.max.:',max(distance) as Distance,'        Flarmid :',idflarm, 'Date:',date, time, station from OGNDATA group by station; " | sqlite3 SWiface.db	>>SWproc.log
 echo ".dump OGNDATA" |        sqlite3 SWiface.db >ogndata.dmp 
 sed "s/CREATE TABLE/-- CREATE TABLE/g" ogndata.dmp | sed "s/CREATE INDEX/-- CREATE INDEX/g" | sqlite3  archive/SWiface.db >>SWproc.log
@@ -18,7 +22,7 @@ mysqldump                               --login-path=SARogn -t -h $server SWIFAC
 mysql                                   --login-path=SARogn    -h $server SWARCHIVE       <ogndata.sql >>SWproc.log
 echo "delete from OGNDATA;" | mysql     --login-path=SARogn -v -h $server SWIFACE                      >>SWproc.log
 mv ogndata.sql archive
-echo "End of processes SQLITE3 & MYSQL DB."$hostname 	>>SWproc.log
+echo "End of processes SQLITE3 & MYSQL DB at server: "$hostname 	>>SWproc.log
 mutt -a "SWproc.log" -s $hostname$server"  SWS interface " -- acasado@acm.org
 mv DATA*.log  archive		>/dev/null 2>&1
 mv SWproc.log archive/SWproc$(date +%y%m%d).log
