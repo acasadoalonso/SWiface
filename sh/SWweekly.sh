@@ -1,12 +1,12 @@
 #!/bin/bash
 dir='/nfs/OGN/DIRdata'
-db ='/nfs/OGN/DIRdata/SAROGN.db'
+db='/nfs/OGN/DIRdata/SAROGN.db'
 MySQL='NO'
 if [ $# -eq  0 ]; then
 	server='localhost'
 else
 	server=$1
-	$MySQL='YES'
+	MySQL='YES'
 fi
 
 # test if directory is available
