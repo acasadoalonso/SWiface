@@ -80,6 +80,7 @@ echo "========================================================" #
 echo "SELECT user,authentication_string,plugin,host FROM mysql.user; " | sudo mysql -u root -p 			#
 echo								#
 echo " "							#
+mysql_config_editor print --all					#
 echo "Installing python "					#
 echo "========================================================" #
 echo " "							#
