@@ -5,13 +5,14 @@ if [ $# -eq  0 ]; then
 else
 	server=$1
 fi
-mv SWproc.log   log/SWproc$(date +%y%m).log	>/dev/null 2>&1
-mv err.log    log/Err$(date  +%y%m).log		>/dev/null 2>&1
+mv SWproc.log   archive/SWproc$(date +%y%m).log	>/dev/null 2>&1
+mv err.log    archive/Err$(date  +%y%m).log	>/dev/null 2>&1
 cd archive
 rm            db/SWiface.BKUP.db		>/dev/null 2>&1
 cp SWiface.db db/SWiface.BKUP.db
 sqlite3 SWiface.db "vacuum;"
 mv DATA$(date +%y)*.log Y$(date +%y) 
+mv SW$(date +%y)*.log Y$(date +%y) 
 mysqldump                                --login-path=SARogn -h $server SWARCHIVE >db/SWARCHIVE.dmp
 echo "delete from OGNDATA;" | mysql      --login-path=SARogn -v -h $server SWARCHIVE                      >>SWproc.log
 mv ogndata.sql mondata.sql
