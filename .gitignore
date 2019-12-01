@@ -4,6 +4,8 @@
 *.pyo
 *.bak
 *.bkup
+sh/nfs.sh
+sh/SWbkup.sh
 archive
 SWsynckglid.sh
 html/
