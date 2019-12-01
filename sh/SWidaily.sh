@@ -3,9 +3,9 @@ cd /nfs/OGN/SWdata
 MySQL='NO'
 if [ $# -eq  0 ]; then
 	server='localhost'
-	MySQL='YES'
 else
 	server=$1
+	MySQL='YES'
 fi
 hostname=$(hostname)
 echo "Process SQLITE3 DB at server: "$hostname		>>SWproc.log
