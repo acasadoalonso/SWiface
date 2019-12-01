@@ -37,7 +37,7 @@ lsusb
 echo "           "
 cd /nfs/OGN/DIRdata
 ls -lrt
-} | mutt -a ~/hc.log -s $hn" UBUNTU Health Check "$taken -- acasado@acm.org
+} | mutt -a ~/hc.log -s $hn" UBUNTU Health Check "$taken -- angel@acasado.es
 
 rm -f ~/hc.log
 

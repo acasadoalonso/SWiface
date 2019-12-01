@@ -29,7 +29,7 @@ mysql                                   --login-path=SARogn    -h $server SWARCH
 echo "delete from OGNDATA;" | mysql     --login-path=SARogn -v -h $server SWIFACE                      >>SWproc.log
 mv ogndata.sql archive
 echo "End of processes SQLITE3 & MYSQL DB at server: "$hostname 	>>SWproc.log
-mutt -a "SWproc.log" -s $hostname$server"  SWS interface " -- acasado@acm.org
+mutt -a "SWproc.log" -s $hostname$server"  SWS interface " -- angel@acasado.es
 mv DATA*.log  archive		>/dev/null 2>&1
 mv SWproc.log archive/SWproc$(date +%y%m%d).log
 rm SWS.alive			>/dev/null 2>&1

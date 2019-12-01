@@ -36,7 +36,7 @@ lsusb
 echo "           "
 cd /nfs/OGN/SWdata
 ls -lrt
-} | mutt -a $hc -s $hn" SWS iface Health Check "$taken -- acasado@acm.org
+} | mutt -a $hc -s $hn" SWS iface Health Check "$taken -- angel@acasado.es
 
 rm -f ~/hc.log
 
