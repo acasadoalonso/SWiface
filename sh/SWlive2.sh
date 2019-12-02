@@ -5,10 +5,10 @@ then
 	sleep 180
 	ls -la /nfs/OGN/SWdata
 fi
-cd /nfs/OGN/SWdata
+cd /nfs/OGN/SWdata/
 echo $(hostname)" running SWlive.sh:" 		>>SWproc.log
 date 						>>SWproc.log
-cd /var/www/html
+cd /var/www/html/SWS
 python3 genconfig.py
 cd /nfs/OGN/SWdata
 echo "Generated config.py :" 			>>SWproc.log
