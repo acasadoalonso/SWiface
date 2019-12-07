@@ -11,3 +11,5 @@ SWsynckglid.sh
 html/
 __pycache__
 ss*
+config/
+log/
