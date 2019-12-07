@@ -25,18 +25,18 @@ fi
 cd /nfs/OGN/SWdata
 if [ -f $db ]
 then
-	echo ".dump GLIDERS" |        sqlite3 -echo $db >GLIDERS.dump
+	echo ".dump GLIDERS" |        sqlite3  $db >GLIDERS.dump
 else
 	wget repoogn.ddns.net:60080/files/GLIDERS.dump -o GLIDERS.out
 	rm GLIDERS.out
 fi
 echo "drop table GLIDERS;" |  sqlite3 -echo SWiface.db              	>>SWproc.log 
-sqlite3                               -echo SWiface.db <GLIDERS.dump 	>>SWproc.log
+sqlite3                                     SWiface.db <GLIDERS.dump 	>>SWproc.log
 echo "select count(*) from GLIDERS;" | sqlite3 -echo SWiface.db     	>>SWproc.log 
 echo "vacuum;" |              sqlite3 -echo SWiface.db              	>>SWproc.log 
 cd archive
 echo "drop table GLIDERS;" | sqlite3 -echo SWiface.db              	>>../SWproc.log 
-sqlite3                              -echo SWiface.db <../GLIDERS.dump >>../SWproc.log
+sqlite3                                    SWiface.db <../GLIDERS.dump >>../SWproc.log
 echo "vacuum;" |             sqlite3 -echo SWiface.db              	>>../SWproc.log 
 date                                                          	>>../SWproc.log
 echo "============= end SQLite3 ============================" 	>>../SWproc.log

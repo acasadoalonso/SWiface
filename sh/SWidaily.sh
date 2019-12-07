@@ -11,7 +11,7 @@ hostname=$(hostname)
 echo "Process SQLITE3 DB at server: "$hostname		>>SWproc.log
 echo "select 'Number of fixes: on the DB:', count(*) from OGNDATA; select station, 'Kms.max.:',max(distance) as Distance,'        Flarmid :',idflarm, 'Date:',date, time, station from OGNDATA group by station; " | sqlite3 -echo SWiface.db	>>SWproc.log
 echo ".dump OGNDATA" |        sqlite3 SWiface.db >ogndata.dmp 
-sed "s/CREATE TABLE/-- CREATE TABLE/g" ogndata.dmp | sed "s/CREATE INDEX/-- CREATE INDEX/g" | sqlite3  -echo archive/SWiface.db >>SWproc.log
+sed "s/CREATE TABLE/-- CREATE TABLE/g" ogndata.dmp | sed "s/CREATE INDEX/-- CREATE INDEX/g" | sqlite3  archive/SWiface.db >>SWproc.log
 echo "delete from OGNDATA;" | sqlite3 -echo SWiface.db        >>SWproc.log
 echo "vacuum;"              | sqlite3 -echo SWiface.db        >>SWproc.log
 echo "select 'Number of fixes: on the DB:', count(*) from OGNDATA; select station, 'Kms.max.:',max(distance) as Distance,'        Flarmid :',idflarm, 'Date:',date, time, station from OGNDATA group by station; " | sqlite3 -echo archive/SWiface.db			>>SWproc.log
@@ -19,7 +19,7 @@ rm ogndata.dmp
 if [ -f /nfs/OGN/DIRdata/SAROGN.db ]
 then
 	sqlite3 -echo SWiface.db "drop table GLIDERS;" 
-	sqlite3 -echo /nfs/OGN/DIRdata/SAROGN.db ".dump GLIDERS" | sqlite3 SWiface.db
+	sqlite3 /nfs/OGN/DIRdata/SAROGN.db ".dump GLIDERS" | sqlite3 SWiface.db
 	sqlite3 -echo SWiface.db "select count(*) from GLIDERS;" 
 fi
 if [ $MySQL == 'YES' ]
