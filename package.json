@@ -1,0 +1,23 @@
+{
+  "name": "SWsrc",
+  "version": "1.0.0",
+  "description": "This repo contains the interface between the [Silent Wings](http://www.silentwings.no) either Studio or Viewer with the [OGN network](http://wiki.glidernet.org).",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acasadoalonso/SWiface.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/acasadoalonso/SWiface/issues"
+  },
+  "homepage": "https://github.com/acasadoalonso/SWiface#readme"
+}
