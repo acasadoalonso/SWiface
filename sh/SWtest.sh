@@ -1,10 +1,15 @@
 #!/bin/bash
+if [ $# = 0 ]; then
+	city='Madrid'
+else
+	city=$1
+fi
+
 sunsetfile=$"/nfs/OGN/SWdata/SWS.sunset"
 if [ -f $sunsetfile ]
 	then
 		ss=$(cat $sunsetfile)
 	else
-		city='Madrid'
 		ss=$(/usr/local/bin/calcelestial -p sun -m set -q $city -H civil -f %s)
 fi
 alive=$"/nfs/OGN/SWdata/SWS.alive"
