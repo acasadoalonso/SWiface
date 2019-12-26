@@ -22,13 +22,13 @@ else
         if [ ! -f $alive ]
         then
                 logger  -t $0 "SWS Repo is not alive"
-                pnum=$(pgrep python3)
+                pnum=$(pgrep -x -f 'python3 /home/ogn/src/SWsrc/SWiface.py ')
                 if [ $? -eq 0 ] # if OGN repo interface is  not running
                 then
                         sudo kill $pnum
                 fi
 #               restart OGN data collector
-                /bin/bash ~/src/SWlive.sh
+                /bin/bash ~/src/SWsrc/sh/SWlive.sh
                 logger -t $0 "SWS repo seems down, restarting"
                 date >>/nfs/OGN/SWdata/.SWSrestart.log
         else

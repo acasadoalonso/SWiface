@@ -562,9 +562,11 @@ try:
                         rf = ' '
                     print("===>STA:", id, latitude, longitude,
                             altitude, ":", version, cpu, rf, ":::", status)
+                    if id[0:3] == "OGN":
+                        print ("===>MSG:", msg) 
                 continue                        	# go for the next record
 
-            if aprstype == 'status':			# if tracker status report
+            if aprstype == 'status' and beacontype== "tracker" :	# if tracker status report
                 if prt:
                     print("OGN tracker Status report:", data)
                 continue
