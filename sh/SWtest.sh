@@ -32,7 +32,7 @@ else
                 logger -t $0 "SWS repo seems down, restarting"
                 date >>/nfs/OGN/SWdata/.SWSrestart.log
         else
-                logger -t $0 "SWS Repo is alive"
+                logger -t $0 "SWS Repo is alive at: "$city
                 logger -t $0 "SWS repo seems up: "$dif" Now: "$now" Sunset: "$ss
         fi
 fi
