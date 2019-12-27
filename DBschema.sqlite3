@@ -1,4 +1,4 @@
-CREATE TABLE OGNDATA (idflarm char(9) , date char(6), time char(6), station char(6), latitude float, longitude float, altitude int, speed float, course int, roclimb int, rot float, sensitivity float, gps char(6), uniqueid char(9), distance float, extpos char (5), source char(4));
+CREATE TABLE OGNDATA (idflarm char(9) , date char(6), time char(6), station char(6), latitude float, longitude float, altitude int, speed float, course int, roclimb int, rot float, sensitivity float, gps char(6), uniqueid char(16), distance float, extpos char (5), source char(4));
 CREATE TABLE RECEIVERS (idrec char(9) UNIQUE, descri char(20), lati REAL, longi REAL, alti REAL);
 CREATE TABLE `TRKDEVICES` (
   `id` varchar(16) NOT NULL,

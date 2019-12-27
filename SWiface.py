@@ -582,7 +582,7 @@ try:
             speed = msg['speed']
             uniqueid = msg['uniqueid']
             if len(uniqueid) > 16:
-                uniqueid = uniqueid[0:16]			# limit to 16 chars
+                uniqueid = uniqueid[0:16]		# limit to 16 chars
             extpos = msg['extpos']
             roclimb = msg['roclimb']			# rate of climb
             rot = msg['rot']
