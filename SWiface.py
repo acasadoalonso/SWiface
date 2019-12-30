@@ -20,6 +20,7 @@ import signal
 import kglid                              # import the list on known gliders
 import socket
 from parserfuncs import *                 # the ogn/ham parser functions
+from ognddbfuncs import getognreg         # the  get registration from FlarmID
 from geopy.distance import geodesic       # use the Vincenty algorithm^M
 # use the Nominatim as the geolocator^M
 from geopy.geocoders import GeoNames
@@ -42,16 +43,16 @@ def shutdown(sock, datafile, tmaxa, tmaxt, tmid, tmstd):
     for key in k:                       # report data
         gid = 'Noreg '                  # for unknown gliders
         if spanishsta(key) or frenchsta(key):
-            if key in kglid.kglid:
-                gid = kglid.kglid[key]  # report the station name
+            if key in kglid.ksta:
+                gid = kglid.ksta[key]   # report the station name
                 if len(gid) > 20:
                     gid = gid[0:20]
             else:
                 gid = "NOSTA"           # marked as no sta
         else:
                                         # if it is a known glider ???
-            if key != None and key[3:9] in kglid.kglid:
-                gid = kglid.kglid[key[3:9]]   # report the registration
+            if key != None :
+                gid = getognreg(key)    # report the registration
         if key in fsmax:
             maxd = fsmax[key]
         else:
@@ -123,10 +124,8 @@ def shutdown(sock, datafile, tmaxa, tmaxt, tmid, tmstd):
 #	end of if (for stations)
 #   end of for
 
-                                        # report now the maximun altitude for the day
-    if tmid[3:9] in kglid.kglid:        # if it is a known glider ???
-        gid = kglid.kglid[tmid[3:9]]    # report the registration
-    else:
+    gid=getognreg(tmid)                 # report now the maximun altitude for the day
+    if gid == "NOReg":                  # if it is NOT a known glider ???
         gid = tmid                      # use the ID instead
     for key in fsmax:                   # report data
         print("Station: ", key, fsmax[key], "Kms. and", fscnt[key], "fixes...")
@@ -527,7 +526,7 @@ try:
             else:
                 fsour[source] += 1		    	# increase the counter
 
-            if beacontype == 'aprs_receiver' or relay == 'TCPIP':	# handle the TCPIP
+            if (beacontype == 'aprs_receiver' or relay == 'TCPIP')  and aprstype == 'position':	# handle the TCPIP
                 ccchk=id[0:4]                           # just the first 4 chars
                 if ccchk =="BSKY" or ccchk == "FNB1" or ccchk == "AIRS":    # useless sta
                     continue
@@ -561,7 +560,7 @@ try:
                     else:
                         rf = ' '
                     print("===>STA:", id, latitude, longitude,
-                            altitude, ":", version, cpu, rf, ":::", status)
+                            altitude, ":", version, cpu, rf, ":::", status, ":", aprstype,":")
                     if id[0:3] == "OGN":
                         print ("===>MSG:", msg) 
                 continue                        	# go for the next record

@@ -28,7 +28,7 @@ APRS_SERVER_HOST = 'aprs.glidernet.org'
 APRS_SERVER_PORT = 14580
 ; APRS user name .... please change it to fit your needs.
 APRS_USER     = 'SWItest'
-; password for the APRS user or -1 for unverified. Get the password from: 
+; password for the APRS user or -1 for unverified. Get the password from: https://apps.magicbug.co.uk/passcode/
 APRS_PASSCODE = -1
 ; APRS filter, it defined the area where the APRS will send us the fixes ... 
 APRS_FILTER_DETAILS = 'filter r/44.11/+5.56/100  '  
