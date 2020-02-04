@@ -486,6 +486,9 @@ try:
             except exception as e:
                 print ("Parser error: >>>", e, packet_str, "<<<")
                 continue
+            if msg == -1:
+                print ("Parser error: >>>",  packet_str, "<<<")
+                continue
             if prt:
                 print("Parsed msg:>>>", msg)
             id = 	msg['id']                      	# id
