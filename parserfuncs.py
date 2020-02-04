@@ -13,9 +13,9 @@ from beeprint import pp
 from ogn.parser import parse
 
 aprssources = {
-    "APRS": "OGN",
+    "APRS"  : "OGN",
     "OGNSDR": "OGN",
-    "OGFLR": "OGN",
+    "OGFLR" : "OGN",
     "OGNFLR": "OGN",
     "OGNTRK": "OGN",
     "OGNDSX": "OGN",
@@ -31,7 +31,8 @@ aprssources = {
     "OGCAPT": "CAPT",
     "OGNAVI": "NAVI",
     "OGNXCG": "XCG",
-    "OGNMAV": "NMAV"
+    "OGNMAV": "NMAV",
+    "OGNDELAY": "ODLY"
 }
 
 
@@ -259,6 +260,15 @@ def frenchsta(station):                # return true if is an French station
 #########################################################################
 
 
+def dao(dd):  				# return the 3 digit of the decimal minutes
+    dd1 = round(abs(float(dd)), 4)
+    cdeg = int(dd1)
+    mmss = dd1 - float(cdeg)
+    minsec = mmss*60.0
+    decmin="%06.3f" % minsec
+    return decmin[5]			# just return the last digit
+
+
 def deg2dmslat(dd):  			# convert degrees float in degrees and decimal minutes (to two decimal places)
     dd1 = round(abs(float(dd)), 4)
     cdeg = int(dd1)
@@ -316,7 +326,7 @@ def parseraprs(packet_str, msg):
         speed = get_speed(packet)                       # ground_speed
         course = get_course(packet)                     # track
         path = get_path(packet)                         # aprs_receiver, tracker, aprs_aircraft
-        relay = get_relay(packet)                       # relay TCPIP, OGN123456*, RELAY* 
+        relay = get_relay(packet)                       # relay TCPIP, OGN123456*, RELAY* , OGNDELAY*
         aprstype = get_aprstype(packet)                 # status or position
         dst_callsign = get_dst_callsign(packet)         # APRS, OGNTRK, 
         source = get_source(dst_callsign)               # convert to SOURCE

@@ -171,6 +171,7 @@ sudo apt-get install libmysqlclient-dev                         #
 sudo -H pip3 install mysqlclient                                #
 sudo -H pip3 install beeprint					#
 sudo -H pip3 install ogn.client					#
+sudo -H pip3 install python-dateutil				#
 if [ ! -d /etc/local ]						#
 then								#
     sudo mkdir /etc/local					#

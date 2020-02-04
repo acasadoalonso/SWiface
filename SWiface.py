@@ -481,7 +481,11 @@ try:
         if len(packet_str) > 0 and packet_str[0] != "#":
 
             						# parse the message into the dict
-            msg = parseraprs(packet_str, msg)		# parse data using ogn_parser
+            try:
+            	msg = parseraprs(packet_str, msg)	# parse data using ogn_parser
+            except exception as e:
+                print ("Parser error: >>>", e, packet_str, "<<<")
+                continue
             if prt:
                 print("Parsed msg:>>>", msg)
             id = 	msg['id']                      	# id
