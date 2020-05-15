@@ -1,4 +1,4 @@
-# 2020-02-14 CASADOUBUNTU 
+# 2020-05-11 SAROGN 
 ksta = { 
 # -------------------------------------------------------------------#
 # Known Receivers
@@ -212,7 +212,6 @@ kglid = {
 		'000015' : '36445',		 # 'Paraglider' # '' # 'O' # 
 		'0000FD' : 'F-JRDN',		 # 'Taurus' # 'DN' # 'F' # 
 		'000114' : 'NOREG',		 # '' # '' # 'F' # 
-		'000115' : 'peg069',		 # 'Paraglider' # '' # 'O' # 
 		'000118' : 'G-CHBS',		 # 'SZD-41 Jantar Std' # 'HBS' # 'F' # 
 		'000146' : '000146',		 # 'Paraglider' # '' # 'O' # 
 		'000287' : '32712',		 # 'Paraglider' # '' # 'O' # 
@@ -237,14 +236,15 @@ kglid = {
 		'000967' : '38693',		 # 'Paraglider' # '' # 'F' # 
 		'001030' : 'D-6985',		 # 'ASW-19' # 'KHM' # 'F' # 
 		'001032' : 'F-CDVV',		 # 'LS-1 d' # 'L21' # 'F' # 
-		'001067' : 'OE-CCM',		 # 'Experimental' # '' # 'F' # 
 		'001281' : 'VH-GQO',		 # 'Other' # '' # 'F' # 
 		'001352' : 'HBEHS',		 # 'Motorplane' # '' # 'F' # 
 		'001474' : 'N164AF',		 # 'Discus 2' # '7AF' # 'F' # 
+		'001502' : 'NOREG',		 # '' # '' # 'F' # 
 		'001549' : '36445',		 # 'Paraglider' # '' # 'O' # 
 		'001571' : 'DENWU',		 # 'Mooney' # '' # 'F' # 
 		'001661' : 'NOREG',		 # 'Paraglider' # '' # 'O' # 
 		'0016D3' : 'RoberDT',		 # 'Paraglider' # '' # 'F' # 
+		'001863' : 'D-3580',		 # 'DG-303' # 'PG' # 'F' # 
 		'001954' : 'I-B826',		 # 'Gyrocopter' # '' # 'F' # 
 		'002012' : 'CH48475',		 # 'Paraglider' # 'HrL' # 'F' # 
 		'002047' : 'G-RILA',		 # 'Flight Design CTSW' # '' # 'F' # 
@@ -253,14 +253,16 @@ kglid = {
 		'002444' : 'D-0685',		 # 'LS-1 d' # '12' # 'F' # 
 		'002456' : 'N12TA',		 # 'Unknown' # '' # 'F' # 
 		'002531' : 'NOREG',		 # 'Paraglider' # '' # 'F' # 
+		'002545' : 'D-KBRE',		 # 'Stemme S-10' # '' # 'O' # 
 		'002705' : 'G-CKIU',		 # 'Motorglider' # 'KIU' # 'F' # 
 		'002765' : 'NOREG',		 # '' # '' # 'F' # 
 		'002787' : 'NOREG',		 # '' # '' # 'F' # 
 		'002814' : 'NOREG',		 # '' # '' # 'F' # 
 		'002999' : '38032',		 # 'Paraglider' # '' # 'F' # 
+		'003052' : 'OE-5621',		 # 'LS-4' # '' # 'F' # 
+		'003057' : 'OE-5354',		 # 'DG-300' # '' # 'F' # 
 		'003191' : 'G-CJKY',		 # 'Ventus ct' # '243' # 'F' # 
 		'003383' : 'D-KCHD',		 # 'ASH-31 MI' # 'HD' # 'F' # 
-		'003573' : '17019',		 # 'Paraglider' # 'SHV' # 'F' # 
 		'003665' : '110CE9',		 # 'Paraglider' # 'BIR' # 'F' # 
 		'003733' : 'VH-ZBV',		 # 'Nimbus 3' # 'BV' # 'F' # 
 		'003751' : 'D-KKCB',		 # 'DG-808 C' # 'CB' # 'F' # 
@@ -275,7 +277,6 @@ kglid = {
 		'004202' : 'D-KBZE',		 # 'Arcus M' # '2B' # 'F' # 
 		'0042F9' : 'D-5480',		 # 'Discus 2' # 'BW2' # 'F' # 
 		'004335' : 'NOREG',		 # '' # '' # 'F' # 
-		'004400' : 'OY-XVY',		 # 'ASK-21' # 'VY' # 'F' # 
 		'004604' : 'D-6965',		 # 'Ventus 2' # '' # 'F' # 
 		'004641' : 'NOREG',		 # '' # '' # 'I' # 
 		'004664' : 'OY-XUG',		 # 'UFO' # 'G3' # 'F' # 
@@ -294,10 +295,10 @@ kglid = {
 		'006203' : 'NOREG',		 # '' # '' # 'F' # 
 		'006569' : 'D-6322',		 # 'Discus 2' # 'HUN' # 'F' # 
 		'006704' : 'NOREG',		 # '' # '' # 'O' # 
-		'006709' : 'OE6558',		 # 'Paraglider' # '' # 'O' # 
 		'0083C2' : 'ZT-GML',		 # 'JS-3 18M' # 'ML' # 'F' # 
 		'00901A' : 'ZS-GBX',		 # 'JS-1 C21' # 'BJ' # 'F' # 
 		'009181' : 'D-KTMT',		 # 'Nimbus 4DT' # 'ZY' # 'F' # 
+		'0091F1' : 'D-KAZP',		 # 'Ventus 2ct' # 'PJ' # 'F' # 
 		'0091FA' : 'ZS-GUJ',		 # 'DG-500' # '' # 'I' # 
 		'009445' : 'OK-1516',		 # 'VSO-10' # '16' # 'O' # 
 		'0095DF' : 'ZT-GAE',		 # 'DG-808 B' # 'YH' # 'I' # 
@@ -310,7 +311,7 @@ kglid = {
 		'00F8D7' : 'OM-1615',		 # 'ASW-15' # 'TZ' # 'F' # 
 		'011292' : 'NOREG',		 # 'Paraglider' # '' # 'O' # 
 		'011821' : 'OK6430',		 # 'VT-116 Orlik II' # 'T' # 'O' # 
-		'011822' : 'CUBE3',		 # 'A380' # 'TST' # 'O' # 
+		'011822' : 'CUBE3_0',		 # 'LS-8 18' # 'IB0' # 'O' # 
 		'013020' : 'PK20',		 # 'A380' # '' # 'O' # 
 		'013032' : 'PK19',		 # 'A380' # '' # 'F' # 
 		'014312' : 'OKUUO15',		 # 'Skylane Airlony' # '' # 'O' # 
@@ -324,14 +325,13 @@ kglid = {
 		'022710' : 'OK-6922',		 # 'VT-116 Orlik II' # '22' # 'O' # 
 		'023324' : 'MET',		 # 'Drone/UAV' # '' # 'O' # 
 		'023753' : 'PK14',		 # 'A380' # '' # 'O' # 
-		'023C0D' : 'OK-xxxx',		 # 'ASW-20' # '' # 'O' # 
 		'024234' : 'OK-2307',		 # 'ASW-15' # '' # 'O' # 
 		'024932' : 'CC-TR23',		 # 'UFO' # 'T23' # 'O' # 
 		'024B60' : 'OM-OLD3',		 # 'OldTimer' # 'OB3' # 'O' # 
 		'024F0A' : 'KEK_EG',		 # 'Unknown' # '124' # 'O' # 
-		'025B14' : 'LY-ZMZ',		 # 'HPH 304CZ-17' # 'MZ' # 'O' # 
+		'025226' : '51271',		 # 'Paraglider' # '' # 'F' # 
 		'02810A' : 'P21549',		 # 'Paraglider' # '' # 'F' # 
-		'02AD34' : 'OM-3701',		 # 'Blanik' # 'A1' # 'O' # 
+		'02AD34' : 'OM-8517',		 # 'VSO-10' # '72' # 'O' # 
 		'030581' : 'NOREG',		 # 'Paraglider' # '' # 'O' # 
 		'031C72' : 'NOREG',		 # 'Paraglider' # '' # 'O' # 
 		'032536' : 'PK8',		 # 'A380' # '' # 'F' # 
@@ -341,6 +341,7 @@ kglid = {
 		'03440C' : 'OK-2710',		 # 'Blanik' # 'SG1' # 'O' # 
 		'034819' : 'OK-3304',		 # 'ASW-15' # '17' # 'F' # 
 		'034B28' : 'NIC',		 # 'Unknown' # 'NIC' # 'O' # 
+		'034E08' : 'N284BM',		 # 'Ventus' # 'BM' # 'F' # 
 		'034EE0' : 'N101GM',		 # 'PW-5' # '' # 'O' # 
 		'034F00' : 'C-GINY',		 # 'PIK-20 D' # 'GY' # 'O' # 
 		'034F9C' : 'N101GM',		 # 'PW-5' # '' # 'O' # 
@@ -385,12 +386,14 @@ kglid = {
 		'052889' : 'PK-X009',		 # 'Drone/UAV' # 'P09' # 'O' # 
 		'053816' : 'HADAS',		 # 'DV20 Katana' # 'DAS' # 'O' # 
 		'054916' : 'OK-8774',		 # 'Cirrus 18m' # '2W' # 'O' # 
-		'055A16' : 'OM-FAN',		 # 'EuroFox' # 'FAN' # 'O' # 
+		'055A16' : 'OM-FANX',		 # 'EuroFox' # 'F4N' # 'O' # 
 		'05DAFF' : 'SP-3866',		 # 'PIK-20 D' # 'AK' # 'O' # 
 		'05DB23' : 'OK-3702',		 # 'Blanik' # 'BU' # 'O' # 
 		'060577' : 'ToddyS',		 # 'Paraglider' # '' # 'O' # 
+		'062024' : 'foxCube',		 # 'EuroFox' # 'FOX' # 'O' # 
 		'062323' : 'OK_6907',		 # 'VT-116 Orlik II' # 'UO' # 'O' # 
 		'062909' : 'PK15',		 # 'A380' # '' # 'O' # 
+		'063770' : 'D-0705',		 # 'Cirrus Std' # '' # 'O' # 
 		'064D0E' : 'HA-1270',		 # 'SF-25' # '' # 'O' # 
 		'065247' : 'KILY-1',		 # 'Unknown' # 'Vin' # 'O' # 
 		'066015' : 'OK-MPB',		 # 'Z-226 trener' # '226' # 'O' # 
@@ -412,6 +415,7 @@ kglid = {
 		'073B55' : 'LY-GQZ',		 # 'SZD-9 Bocian' # 'QZ' # 'O' # 
 		'07411F' : 'LY-XMF',		 # 'Ultralight' # '' # 'O' # 
 		'074374' : 'Bu',		 # 'Paraglider' # '' # 'O' # 
+		'074812' : 'CUBE3_0',		 # 'LS-8' # 'IB0' # 'O' # 
 		'0749AF' : 'Lexrobe',		 # 'Paraglider' # '312' # 'O' # 
 		'074AD4' : 'OE-66P1',		 # 'Paraglider' # '214' # 'O' # 
 		'074F25' : 'KZO',		 # 'Paraglider' # '' # 'O' # 
@@ -422,17 +426,18 @@ kglid = {
 		'07617D' : 'HA-SKV',		 # 'Cessna 152' # 'HKV' # 'O' # 
 		'076F63' : 'C-MSC1',		 # 'Different Aircraft' # 'MS1' # 'O' # 
 		'078879' : 'NOREG',		 # 'Paraglider' # '' # 'O' # 
+		'078A3C' : 'NOREG',		 # 'Paraglider' # '' # 'F' # 
 		'078D54' : 'H5grau',		 # 'Paraglider' # 'H5P' # 'O' # 
 		'07A37C' : 'H5blau',		 # 'Paraglider' # 'H5K' # 'F' # 
 		'07B51C' : 'NOREG',		 # 'Unknown' # '' # 'O' # 
 		'07D952' : 'NOREG',		 # 'Unknown' # 'Tt1' # 'O' # 
-		'07E2CC' : 'NOREG',		 # 'Paraglider' # '' # 'F' # 
 		'0800B0' : '0800B0',		 # 'Sinus' # 'VC' # 'F' # 
 		'080463' : 'IOTA2',		 # 'Paraglider' # '' # 'F' # 
 		'081599' : 'Para',		 # 'Paraglider' # '999' # 'O' # 
 		'083729' : 'PK27',		 # 'A380' # '' # 'O' # 
 		'084431' : 'OK-5331',		 # 'ASW-15' # 'HH' # 'O' # 
 		'089891' : 'D-KJOY',		 # 'Ventus 2cM' # '' # 'F' # 
+		'08C14C' : 'GXDR1',		 # 'Drone/UAV' # 'GXD' # 'O' # 
 		'090929' : '1600',		 # 'ASW-19' # 'A1' # 'O' # 
 		'092624' : 'PK21',		 # 'A380' # '' # 'O' # 
 		'093815' : 'OK_9851',		 # 'Blanik' # '' # 'O' # 
@@ -453,6 +458,7 @@ kglid = {
 		'0D3856' : 'D-3856',		 # 'Grunau Baby' # '' # 'F' # 
 		'0D4253' : 'RESERV',		 # 'A380' # '' # 'F' # 
 		'0D5496' : 'D-5496',		 # 'Discus 2' # '' # 'F' # 
+		'0D5718' : 'FW413',		 # 'Paraglider' # 'KCS' # 'O' # 
 		'0D5729' : 'D-5729',		 # 'DG-300' # 'FX' # 'F' # 
 		'0D6510' : 'D-6510',		 # 'DG-1000' # '' # 'F' # 
 		'0D6559' : '0D6559',		 # 'LS-1 f' # '2P' # 'F' # 
@@ -495,11 +501,10 @@ kglid = {
 		'110070' : 'CH9164',		 # 'Paraglider' # 'ToW' # 'F' # 
 		'110071' : '5385_SS',		 # 'Paraglider' # '' # 'F' # 
 		'110078' : 'CH42893',		 # 'Paraglider' # 'ChM' # 'F' # 
-		'11007B' : 'CH44472',		 # 'Paraglider' # 'HuN' # 'F' # 
 		'110084' : 'Bene',		 # 'Paraglider' # 'Ben' # 'O' # 
 		'11008D' : '11008D',		 # 'Paraglider' # '' # 'F' # 
 		'110099' : 'Wolf',		 # 'Paraglider' # 'WAK' # 'F' # 
-		'11009D' : 'Doc_Bru',		 # 'Paraglider' # 'Bru' # 'F' # 
+		'11009D' : 'Bru',		 # 'Paraglider' # 'Bru' # 'F' # 
 		'11009E' : '34',		 # 'Paraglider' # '' # 'F' # 
 		'1100AA' : 'CH32358',		 # 'Paraglider' # 'DoS' # 'O' # 
 		'1100B2' : '7493',		 # 'Paraglider' # '' # 'F' # 
@@ -536,6 +541,7 @@ kglid = {
 		'110196' : 'NOREG',		 # 'Paraglider' # 'M.S' # 'F' # 
 		'11019C' : 'WM',		 # 'Paraglider' # '' # 'F' # 
 		'1101A5' : 'OE-6801',		 # 'Paraglider' # '' # 'F' # 
+		'1101A8' : 'andy_r',		 # 'Paraglider' # '' # 'F' # 
 		'1101A9' : 'NOREG',		 # 'HangGlider' # '' # 'F' # 
 		'1101AB' : '53097',		 # 'Paraglider' # '' # 'F' # 
 		'1101B7' : 'NOREG',		 # 'Paraglider' # '' # 'F' # 
@@ -587,6 +593,7 @@ kglid = {
 		'1102C9' : 'NOREG',		 # 'Paraglider' # '' # 'F' # 
 		'1102D5' : '49778',		 # 'Paraglider' # '' # 'F' # 
 		'1102DB' : 'WDP',		 # 'Paraglider' # '' # 'O' # 
+		'1102DD' : 'OMP590',		 # 'Paraglider' # '' # 'F' # 
 		'1102E5' : 'RonnyS',		 # 'Paraglider' # '309' # 'F' # 
 		'1102E7' : 'NOREG',		 # 'Paraglider' # '' # 'F' # 
 		'1102F0' : 'MMO',		 # 'Paraglider' # 'MMO' # 'O' # 
@@ -595,7 +602,7 @@ kglid = {
 		'1102F7' : 'D-NCDP',		 # 'Paraglider' # '' # 'F' # 
 		'110315' : 'FuFritz',		 # 'Paraglider' # '488' # 'O' # 
 		'110318' : 'JensR',		 # 'Paraglider' # 'JR' # 'F' # 
-		'11031B' : 'CC10',		 # 'Paraglider' # '88' # 'F' # 
+		'11031B' : 'D-NCOE',		 # 'Paraglider' # '380' # 'F' # 
 		'110330' : 'DNSLA',		 # 'Paraglider' # 'SLA' # 'F' # 
 		'110331' : 'Joggi',		 # 'Paraglider' # '' # 'F' # 
 		'110338' : 'DG0606',		 # 'Paraglider' # 'PCS' # 'F' # 
@@ -604,7 +611,7 @@ kglid = {
 		'110347' : 'MRU',		 # 'Paraglider' # 'MRU' # 'F' # 
 		'110348' : 'PeFr',		 # 'Paraglider' # 'PeF' # 'F' # 
 		'110349' : '58402',		 # 'Paraglider' # '' # 'F' # 
-		'11034D' : 'NOREG',		 # 'Paraglider' # '' # 'F' # 
+		'11034D' : 'Gerhard',		 # 'Paraglider' # 'GB' # 'F' # 
 		'110352' : 'Clele',		 # 'Paraglider' # 'CB' # 'F' # 
 		'110353' : 'CH45116',		 # 'Paraglider' # 'IrB' # 'F' # 
 		'110356' : 'Thermgk',		 # 'Paraglider' # 'SiK' # 'O' # 
@@ -622,7 +629,6 @@ kglid = {
 		'1103C6' : '5185',		 # 'HangGlider' # '' # 'F' # 
 		'1103CE' : 'Cumeo',		 # 'Paraglider' # '' # 'F' # 
 		'1103D2' : 'NOREG',		 # 'HangGlider' # 'rbe' # 'F' # 
-		'1103D5' : 'shv4181',		 # 'Swift' # 'uh' # 'F' # 
 		'1103D6' : 'D-MDWM',		 # 'HangGlider' # '' # 'F' # 
 		'1103D9' : 'ECKI',		 # 'Paraglider' # '' # 'F' # 
 		'1103DE' : 'Gunther',		 # 'Paraglider' # 'GHa' # 'F' # 
@@ -632,6 +638,7 @@ kglid = {
 		'1103FA' : 'brichi6',		 # 'Paraglider' # 'rht' # 'F' # 
 		'110406' : '110406',		 # 'Paraglider' # '' # 'O' # 
 		'11043C' : 'Stefan',		 # 'Paraglider' # '' # 'F' # 
+		'110464' : 'KLAU',		 # 'Paraglider' # '' # 'F' # 
 		'11046D' : 'Lewi',		 # 'Paraglider' # '' # 'F' # 
 		'11046E' : 'NOREG',		 # 'Paraglider' # '' # 'F' # 
 		'11047F' : 'NOREG',		 # '' # '' # 'O' # 
@@ -644,7 +651,6 @@ kglid = {
 		'1104BE' : 'NOREG',		 # '' # '' # 'F' # 
 		'1104C7' : 'NOREG',		 # 'HangGlider' # 'PD' # 'F' # 
 		'1104D3' : 'Raffl_M',		 # 'Paraglider' # 'RAM' # 'F' # 
-		'1104F6' : '18072',		 # 'Paraglider' # '' # 'F' # 
 		'110503' : 'Adi_Hun',		 # 'Paraglider' # '024' # 'F' # 
 		'110509' : '54158',		 # 'Paraglider' # 'ANC' # 'F' # 
 		'110511' : 'Michael',		 # 'Paraglider' # 'MPR' # 'F' # 
@@ -660,6 +666,8 @@ kglid = {
 		'110529' : 'CH56330',		 # 'Paraglider' # '' # 'F' # 
 		'110534' : 'HBoetes',		 # 'Paraglider' # 'VEG' # 'F' # 
 		'110536' : 'Michel',		 # 'Paraglider' # 'MB' # 'F' # 
+		'11053D' : 'NeyerMa',		 # 'Paraglider' # 'Nem' # 'F' # 
+		'11054B' : '57411',		 # 'Paraglider' # '' # 'F' # 
 		'11054C' : 'CH32819',		 # 'Paraglider' # '' # 'F' # 
 		'11055F' : 'SIGITAS',		 # 'Paraglider' # 'FAI' # 'F' # 
 		'110575' : 'Langer',		 # 'Paraglider' # 'RL' # 'F' # 
@@ -671,7 +679,7 @@ kglid = {
 		'1105A0' : 'Florian',		 # 'Paraglider' # '' # 'F' # 
 		'1105B0' : 'sebbfly',		 # 'HangGlider' # '' # 'F' # 
 		'1105C8' : 'HB54350',		 # 'Paraglider' # '' # 'F' # 
-		'1105D4' : '31479',		 # 'Paraglider' # '123' # 'F' # 
+		'1105D4' : '31479',		 # 'Paraglider' # 'swd' # 'F' # 
 		'1105E2' : 'NOREG',		 # 'Paraglider' # '' # 'F' # 
 		'1105F8' : 'JanPiu',		 # 'Paraglider' # 'PIJ' # 'F' # 
 		'1105F9' : 'SiB',		 # 'Paraglider' # 'SiB' # 'F' # 
@@ -685,8 +693,12 @@ kglid = {
 		'110626' : 'NOREG',		 # 'Paraglider' # 'HT' # 'F' # 
 		'11062E' : 'NOREG',		 # 'Paraglider' # '' # 'F' # 
 		'110634' : 'NOREG',		 # 'Paraglider' # '' # 'F' # 
+		'11063F' : 'NOREG',		 # 'HangGlider' # '' # 'F' # 
 		'110642' : 'OK-6557',		 # 'Cirrus Std' # 'MF' # 'O' # 
 		'110650' : 'Tobi',		 # 'Paraglider' # 'TB' # 'F' # 
+		'110653' : '59239',		 # 'Paraglider' # '' # 'F' # 
+		'110656' : '49104',		 # 'HangGlider' # 'PeS' # 'F' # 
+		'11065F' : 'HansEl',		 # 'Paraglider' # 'HEL' # 'F' # 
 		'110661' : 'RTB',		 # 'HangGlider' # 'RTH' # 'F' # 
 		'110668' : 'NajHo',		 # 'Paraglider' # 'JEH' # 'F' # 
 		'110679' : 'NOREG',		 # 'Paraglider' # '' # 'F' # 
@@ -695,6 +707,7 @@ kglid = {
 		'1106A2' : 'B.H.W.',		 # 'Paraglider' # '' # 'F' # 
 		'1106A5' : 'Daniel',		 # 'Paraglider' # 'ZIO' # 'F' # 
 		'1106A6' : 'Thomas',		 # 'Paraglider' # 'TL' # 'F' # 
+		'1106AB' : 'DJ1',		 # 'Paraglider' # '' # 'F' # 
 		'1106BD' : 'FlyingR',		 # 'Paraglider' # 'RoG' # 'F' # 
 		'1106C2' : '51334',		 # 'Paraglider' # 'wip' # 'F' # 
 		'1106C6' : 'NOREG',		 # 'Paraglider' # '' # 'F' # 
@@ -718,8 +731,6 @@ kglid = {
 		'110748' : 'OXA3',		 # 'Paraglider' # 'SW' # 'F' # 
 		'110749' : 'Mentor',		 # 'Paraglider' # 'WIF' # 'F' # 
 		'110755' : 'JoeT',		 # 'Paraglider' # 'JTR' # 'F' # 
-		'11075E' : 'Smily',		 # 'Paraglider' # '666' # 'F' # 
-		'110768' : 'NOREG',		 # '' # '' # 'F' # 
 		'110769' : 'SUI9965',		 # 'Drone/UAV' # '' # 'F' # 
 		'110778' : '42104',		 # 'Paraglider' # 'ChB' # 'F' # 
 		'110779' : 'G-LEVI',		 # 'Bellanca Citabria' # '' # 'F' # 
@@ -733,6 +744,7 @@ kglid = {
 		'1107D1' : 'D-MIDL',		 # 'Motorglider' # '' # 'F' # 
 		'1107D8' : 'HB_2351',		 # 'ASH-25 MI' # 'RC' # 'F' # 
 		'1107E1' : '109-1',		 # 'Paraglider' # '' # 'F' # 
+		'1107E3' : 'NOREG',		 # 'Paraglider' # '' # 'F' # 
 		'1107E4' : 'Rainu',		 # 'Paraglider' # 'RFr' # 'F' # 
 		'1107EA' : '54643',		 # 'Paraglider' # 'MIC' # 'F' # 
 		'1107F2' : 'YWA',		 # 'Paraglider' # 'YWA' # 'F' # 
@@ -742,16 +754,18 @@ kglid = {
 		'11080A' : 'HCW',		 # 'Paraglider' # 'HCW' # 'F' # 
 		'11080C' : 'NOREG',		 # 'Paraglider' # '' # 'O' # 
 		'11080F' : 'NOREG',		 # '' # '' # 'F' # 
-		'11083A' : 'RAFPG01',		 # 'Paraglider' # 'R01' # 'F' # 
+		'11083A' : 'RAFPG01',		 # 'Paraglider' # '' # 'F' # 
 		'110845' : 'Dietmar',		 # 'Paraglider' # 'DMM' # 'F' # 
-		'11084F' : 'RAFPG02',		 # 'Paraglider' # 'R02' # 'F' # 
-		'110850' : 'NOREG',		 # 'Paraglider' # '' # 'F' # 
+		'11084F' : 'RAFPG02',		 # 'Paraglider' # '' # 'F' # 
+		'110850' : 'C42F',		 # 'Paraglider' # 'RoK' # 'F' # 
 		'110858' : 'Michael',		 # 'Paraglider' # 'MKO' # 'F' # 
 		'110872' : 'Shue',		 # 'HangGlider' # 'SH' # 'F' # 
 		'110883' : 'harry.m',		 # 'Paraglider' # 'HaM' # 'F' # 
 		'11088D' : 'NOREG',		 # 'Paraglider' # 'Rom' # 'F' # 
+		'110894' : 'Thrim',		 # 'Paraglider' # 'OLR' # 'F' # 
 		'11089B' : 'Ziegler',		 # 'Paraglider' # 'And' # 'F' # 
 		'1108AF' : 'CHM',		 # 'HangGlider' # 'CHM' # 'F' # 
+		'1108B5' : '18714',		 # 'Paraglider' # '' # 'F' # 
 		'1108B9' : '1108B9',		 # 'Paraglider' # '8B9' # 'F' # 
 		'1108BA' : 'NOREG',		 # 'Paraglider' # '' # 'F' # 
 		'1108D0' : 'Zille',		 # 'Paraglider' # '' # 'F' # 
@@ -768,6 +782,7 @@ kglid = {
 		'11096B' : '54644',		 # 'Paraglider' # 'AT' # 'F' # 
 		'1109A5' : 'ChUr',		 # 'Paraglider' # 'CU' # 'F' # 
 		'1109BC' : 'MKing',		 # 'Paraglider' # 'MJK' # 'F' # 
+		'1109C1' : 'Ritter',		 # 'Paraglider' # 'VRI' # 'F' # 
 		'1109C9' : 'Thomas',		 # 'Paraglider' # 'TT' # 'F' # 
 		'1109CB' : 'Tobi',		 # 'Paraglider' # 'TOW' # 'F' # 
 		'1109D5' : 'D-MRPK',		 # 'Paraglider' # '' # 'F' # 
@@ -783,6 +798,7 @@ kglid = {
 		'110A76' : 'Ruben',		 # 'Paraglider' # 'RuB' # 'F' # 
 		'110A83' : 'NOREG',		 # 'Paraglider' # '' # 'F' # 
 		'110A86' : 'Michael',		 # 'Paraglider' # 'EBI' # 'F' # 
+		'110A8C' : 'Adrian',		 # 'Paraglider' # 'AKS' # 'F' # 
 		'110A9C' : 'Nobaetz',		 # 'Paraglider' # 'NoB' # 'F' # 
 		'110AAC' : 'Klaus_N',		 # 'Paraglider' # 'KN' # 'F' # 
 		'110AAD' : 'Marcus',		 # 'Paraglider' # 'MK' # 'F' # 
@@ -798,6 +814,7 @@ kglid = {
 		'110AF8' : 'Tobias',		 # 'Paraglider' # '' # 'F' # 
 		'110AFB' : '30121',		 # 'Paraglider' # 'hrd' # 'F' # 
 		'110B0D' : 'MaRe',		 # 'Paraglider' # '' # 'F' # 
+		'110B19' : 'ReAl',		 # 'Paraglider' # '246' # 'F' # 
 		'110B22' : 'Dogger',		 # 'Paraglider' # 'Dog' # 'F' # 
 		'110B49' : 'JRA',		 # 'Paraglider' # '066' # 'F' # 
 		'110B52' : 'Andreas',		 # 'Paraglider' # 'AHI' # 'F' # 
@@ -818,12 +835,18 @@ kglid = {
 		'110BFD' : 'HM',		 # 'Paraglider' # 'HM' # 'F' # 
 		'110BFF' : 'Franz_O',		 # 'HangGlider' # 'FOB' # 'F' # 
 		'110C15' : 'Guenter',		 # 'Paraglider' # 'gue' # 'F' # 
+		'110C1D' : '43942',		 # 'Paraglider' # 'PSC' # 'F' # 
 		'110C31' : 'KaPo',		 # 'Paraglider' # 'KAP' # 'F' # 
 		'110C3D' : 'TomKrz',		 # 'Paraglider' # 'ToK' # 'F' # 
+		'110C3E' : 'Stefan',		 # 'Paraglider' # 'SI' # 'F' # 
 		'110C42' : 'D-NMEO',		 # 'Paraglider' # 'egf' # 'F' # 
+		'110C4A' : 'wge',		 # 'Paraglider' # '' # 'F' # 
 		'110C58' : 'NOREG',		 # 'Paraglider' # '' # 'F' # 
+		'110C60' : 'Sascha',		 # 'Paraglider' # 'SMK' # 'F' # 
+		'110C7E' : 'Juergen',		 # 'Paraglider' # 'JM1' # 'F' # 
 		'110CE2' : 'nfedera',		 # 'Paraglider' # 'NRB' # 'F' # 
 		'110CF0' : 'P.Pan',		 # 'Paraglider' # '' # 'F' # 
+		'110D0C' : 'NOREG',		 # '' # '' # 'F' # 
 		'110D1C' : 'Andy',		 # 'HangGlider' # 'AK' # 'F' # 
 		'110D3F' : 'FRG',		 # 'Paraglider' # '' # 'F' # 
 		'110D40' : 'SilvKop',		 # 'Paraglider' # 'SKo' # 'O' # 
@@ -851,11 +874,14 @@ kglid = {
 		'110E48' : 'PatPiso',		 # 'Paraglider' # 'PiP' # 'F' # 
 		'110E4B' : 'NOREG',		 # 'Paraglider' # 'Los' # 'F' # 
 		'110E78' : 'CH50024',		 # 'Paraglider' # 'AnB' # 'F' # 
+		'110E95' : 'Achim',		 # 'Paraglider' # 'AB' # 'F' # 
 		'110E99' : 'Marcus',		 # 'Paraglider' # 'MHe' # 'F' # 
+		'110EB3' : 'Marko',		 # 'Paraglider' # '' # 'F' # 
 		'110EE1' : 'ReiM',		 # 'Paraglider' # '' # 'F' # 
 		'110F58' : 'NOREG',		 # 'Paraglider' # '' # 'F' # 
 		'110F62' : 'Jele',		 # 'Paraglider' # 'JL' # 'F' # 
 		'110F70' : '42308',		 # 'Paraglider' # '' # 'F' # 
+		'110F79' : 'NOREG',		 # '' # '' # 'F' # 
 		'110FAC' : 'N-DZAC',		 # 'Paraglider' # 'AB' # 'F' # 
 		'110FCB' : 'Helge_M',		 # 'Paraglider' # 'HEM' # 'F' # 
 		'110FCF' : 'HubertS',		 # 'Paraglider' # 'c6f' # 'O' # 
@@ -881,7 +907,7 @@ kglid = {
 		'1110D0' : '-',		 # 'Paraglider' # 'JHA' # 'F' # 
 		'1110D6' : 'Jens',		 # 'Paraglider' # 'NIC' # 'F' # 
 		'1110DB' : '713661',		 # 'Paraglider' # '0DB' # 'F' # 
-		'1110F6' : '4181',		 # 'Swift' # 'hu' # 'F' # 
+		'1110F6' : '4181',		 # 'Swift' # 'uh' # 'F' # 
 		'111101' : 'D-9039',		 # 'Ka-6 cr' # 'AMH' # 'F' # 
 		'111111' : 'FF78UN',		 # 'ASW-20' # '77' # 'I' # 
 		'111112' : 'VH-UKO',		 # 'SZD-48 Jantar Std 2' # 'UKO' # 'O' # 
@@ -903,15 +929,16 @@ kglid = {
 		'11117F' : 'Peter',		 # 'Paraglider' # 'PSt' # 'F' # 
 		'111188' : 'RENE',		 # 'Paraglider' # 'RAF' # 'F' # 
 		'11118B' : '25889',		 # 'Paraglider' # 'CMB' # 'F' # 
-		'111192' : 'CH40300',		 # 'Paraglider' # '' # 'F' # 
+		'111192' : 'CH40300',		 # 'Mistral C' # '' # 'F' # 
 		'111193' : '42538',		 # 'Paraglider' # 'Tom' # 'F' # 
-		'111198' : 'MaHi',		 # 'Paraglider' # 'MaH' # 'F' # 
+		'111198' : 'MaHi',		 # 'Paraglider' # 'MaH' # 'O' # 
 		'11119B' : 'xxx',		 # 'Paraglider' # 'xxx' # 'O' # 
 		'11119E' : '51714',		 # 'Paraglider' # '' # 'F' # 
+		'1111A3' : 'D-MFCK',		 # 'Paraglider' # 'EW' # 'F' # 
 		'1111B1' : 'LGS',		 # 'Paraglider' # '' # 'F' # 
 		'1111B3' : 'NOREG',		 # 'Paraglider' # '' # 'F' # 
 		'1111C0' : 'HMR999',		 # 'Paraglider' # '430' # 'F' # 
-		'1111D2' : 'RAFPG03',		 # 'Paraglider' # 'R03' # 'F' # 
+		'1111D2' : 'RAFPG03',		 # 'Paraglider' # '' # 'F' # 
 		'1111D3' : 'RAFPG04',		 # 'Paraglider' # '' # 'F' # 
 		'1111D5' : 'RAFPG05',		 # 'Paraglider' # '' # 'F' # 
 		'1111D9' : 'RAFPG06',		 # 'Paraglider' # '' # 'F' # 
@@ -946,16 +973,19 @@ kglid = {
 		'1112CF' : 'FrDu',		 # 'Paraglider' # 'FrD' # 'F' # 
 		'1112D1' : 'S.H.',		 # 'Paraglider' # 'SHO' # 'F' # 
 		'111301' : 'Awesome',		 # 'UFO' # 'MP' # 'F' # 
+		'111317' : 'NOREG',		 # '' # '' # 'F' # 
 		'111329' : 'MMAB',		 # 'Paraglider' # 'SHK' # 'F' # 
 		'11135F' : 'FCM',		 # 'Paraglider' # '' # 'F' # 
 		'11136B' : 'JacJack',		 # 'Paraglider' # '' # 'F' # 
 		'111380' : 'WeexAir',		 # 'Paraglider' # 'WXR' # 'F' # 
 		'111382' : 'MicRued',		 # 'Paraglider' # 'GCM' # 'F' # 
+		'11138B' : 'Dave',		 # 'Paraglider' # 'DG' # 'F' # 
 		'111392' : 'ChrisPe',		 # 'Paraglider' # 'PCH' # 'F' # 
 		'1113A2' : 'Philip',		 # 'Paraglider' # 'PhK' # 'F' # 
 		'1113AA' : '35643',		 # 'Paraglider' # '' # 'F' # 
 		'1113D8' : '46267',		 # 'Paraglider' # '' # 'F' # 
 		'1113EF' : '53744',		 # 'Paraglider' # 'smr' # 'F' # 
+		'1113F0' : '58218',		 # 'Paraglider' # '' # 'F' # 
 		'1113FD' : 'Brunth',		 # 'Paraglider' # 'thb' # 'F' # 
 		'111414' : 'Paragld',		 # 'Paraglider' # 'PGL' # 'F' # 
 		'111425' : '58364',		 # 'Paraglider' # 'hb' # 'F' # 
@@ -963,13 +993,16 @@ kglid = {
 		'111432' : 'StefFri',		 # 'Paraglider' # 'sfr' # 'F' # 
 		'111447' : 'MLO',		 # 'Paraglider' # '' # 'F' # 
 		'111454' : 'JYM',		 # 'Paraglider' # 'JYM' # 'F' # 
+		'111475' : 'Luke',		 # 'Paraglider' # 'LCS' # 'F' # 
 		'1114B9' : 'Gin_C',		 # 'Paraglider' # '' # 'F' # 
 		'1114C1' : 'BrunoS',		 # 'Paraglider' # '' # 'F' # 
+		'1114F2' : '44372',		 # 'HangGlider' # 'MJ' # 'F' # 
 		'11151C' : 'NOREG',		 # 'Paraglider' # '' # 'F' # 
 		'111542' : 'UliH',		 # 'Paraglider' # 'Uli' # 'F' # 
 		'111552' : 'NOREG',		 # '' # '' # 'F' # 
 		'11155B' : 'Daan',		 # 'Paraglider' # 'DKS' # 'F' # 
 		'11155F' : 'BKosog',		 # 'Paraglider' # 'BK' # 'F' # 
+		'111563' : 'InSt',		 # 'Paraglider' # 'ISS' # 'F' # 
 		'111583' : 'Mufke',		 # 'Paraglider' # '6' # 'F' # 
 		'11159B' : '0815',		 # 'Paraglider' # '007' # 'F' # 
 		'11159D' : 'CST',		 # 'Paraglider' # 'CST' # 'F' # 
@@ -979,23 +1012,27 @@ kglid = {
 		'1115DF' : 'Andreas',		 # 'Paraglider' # '' # 'F' # 
 		'1115FE' : 'Hammer',		 # 'Paraglider' # 'HAM' # 'F' # 
 		'11164A' : 'C_Bevan',		 # 'Paraglider' # '602' # 'F' # 
+		'111651' : 'HolgFix',		 # 'Paraglider' # 'HFX' # 'F' # 
 		'111657' : 'Martin',		 # 'Paraglider' # 'HOE' # 'F' # 
 		'11167D' : 'GAEL',		 # 'Paraglider' # 'GLF' # 'F' # 
 		'1116BA' : 'Pitair',		 # 'Paraglider' # 'PKa' # 'F' # 
 		'1116D6' : '1116D6',		 # 'Drone/UAV' # '6D6' # 'F' # 
-		'1116D7' : 'Para',		 # 'Paraglider' # 'HaW' # 'F' # 
+		'1116D7' : 'NOREG',		 # '' # '' # 'F' # 
 		'1116DA' : '42507',		 # 'Paraglider' # 'CHG' # 'F' # 
 		'1116E3' : 'SZAWOJ',		 # 'Paraglider' # 'SZA' # 'F' # 
 		'111708' : '1078',		 # 'Paraglider' # 'DB' # 'F' # 
 		'11172A' : 'DK5RF',		 # 'Paraglider' # '' # 'F' # 
 		'111739' : 'cking',		 # 'Paraglider' # '' # 'F' # 
 		'11173B' : 'FlyHi',		 # 'Paraglider' # 'NME' # 'F' # 
+		'111741' : '11339',		 # 'Paraglider' # 'uha' # 'O' # 
 		'11174D' : '52851',		 # 'Paraglider' # '' # 'F' # 
 		'111759' : '50268',		 # 'Paraglider' # 'LJS' # 'F' # 
 		'111783' : '000',		 # 'Paraglider' # '000' # 'O' # 
-		'1117C3' : 'HIA',		 # 'Paraglider' # 'HIA' # 'F' # 
 		'1117D7' : 'joern_k',		 # 'Paraglider' # 'Jrn' # 'F' # 
 		'1117F6' : 'Niviuk',		 # 'Paraglider' # '' # 'F' # 
+		'111812' : 'NOREG',		 # 'Paraglider' # '' # 'F' # 
+		'111826' : 'Konni',		 # 'Paraglider' # 'Kon' # 'F' # 
+		'11184A' : '13714',		 # 'Paraglider' # 'Ct1' # 'F' # 
 		'11184D' : '55633',		 # 'Paraglider' # '' # 'F' # 
 		'11185B' : 'Linders',		 # 'Paraglider' # 'cli' # 'F' # 
 		'111870' : 'Elizabe',		 # 'Paraglider' # 'LIZ' # 'F' # 
@@ -1005,14 +1042,15 @@ kglid = {
 		'11189A' : 'D-MBAY',		 # 'Motorglider' # 'GH' # 'F' # 
 		'1118BB' : 'EnZo',		 # 'Paraglider' # 'EZS' # 'F' # 
 		'1118BC' : 'NOREG',		 # 'Paraglider' # '' # 'F' # 
+		'1118C4' : 'NOREG',		 # 'Paraglider' # '' # 'F' # 
 		'1118CE' : 'Giorgio',		 # 'Paraglider' # 'AG' # 'F' # 
 		'1118D0' : 'RDarlin',		 # 'Paraglider' # 'R.D' # 'F' # 
 		'111907' : 'TimC7',		 # 'Paraglider' # '' # 'F' # 
 		'11192F' : '18072',		 # 'Paraglider' # '' # 'F' # 
 		'111936' : 'Volkmar',		 # 'Paraglider' # 'VKK' # 'F' # 
 		'11194C' : 'Spit',		 # 'Paraglider' # 'SPT' # 'F' # 
+		'111972' : 'More89',		 # 'Paraglider' # '' # 'F' # 
 		'111988' : 'Christo',		 # 'Paraglider' # 'ChG' # 'F' # 
-		'11199F' : '21297',		 # 'Paraglider' # '297' # 'F' # 
 		'1119A0' : 'Michael',		 # 'Paraglider' # 'MIC' # 'F' # 
 		'1119A2' : 'Werner',		 # 'Paraglider' # 'WBU' # 'F' # 
 		'111A15' : 'mine',		 # 'Paraglider' # '' # 'F' # 
@@ -1024,29 +1062,53 @@ kglid = {
 		'111B15' : 'Basti',		 # 'Paraglider' # 'Bas' # 'F' # 
 		'111B20' : 'Hans',		 # 'Paraglider' # 'HM' # 'F' # 
 		'111B28' : 'Chris',		 # 'Paraglider' # 'CBU' # 'F' # 
-		'111B29' : 'NOREG',		 # 'Paraglider' # '' # 'F' # 
 		'111B55' : '52541',		 # 'Paraglider' # '' # 'F' # 
+		'111B5D' : 'Bodo',		 # 'Paraglider' # 'Bod' # 'F' # 
+		'111BBB' : 'ArminS',		 # 'Paraglider' # 'ARS' # 'F' # 
 		'111BFA' : '48426',		 # 'Paraglider' # 'meb' # 'F' # 
 		'111C13' : 'Rudi',		 # 'Paraglider' # 'RMF' # 'F' # 
+		'111C29' : 'Bengaly',		 # 'Paraglider' # '' # 'F' # 
 		'111C42' : 'ToniPa',		 # 'Paraglider' # 'TPA' # 'F' # 
 		'111C4F' : 'NOREG',		 # 'Paraglider' # '' # 'O' # 
-		'111C9F' : 'Gerhard',		 # 'Paraglider' # 'GeF' # 'F' # 
+		'111C7A' : 'NOREG',		 # 'Paraglider' # '' # 'F' # 
+		'111C9F' : 'Gerhard',		 # 'Paraglider' # 'Ger' # 'F' # 
 		'111CC7' : 'Tarek',		 # 'Paraglider' # 'TMH' # 'F' # 
+		'111CC9' : 'CH_5882',		 # 'HangGlider' # '' # 'F' # 
+		'111CCD' : 'Chris73',		 # 'Paraglider' # '' # 'F' # 
+		'111CD0' : 'GerdM',		 # 'Paraglider' # 'DGM' # 'F' # 
 		'111CD4' : '53628',		 # 'Paraglider' # 'StT' # 'F' # 
 		'111CE4' : 'NOREG',		 # 'Paraglider' # '' # 'F' # 
 		'111D2C' : 'Daniel',		 # 'Paraglider' # '' # 'F' # 
 		'111D8A' : '29785',		 # 'Paraglider' # '101' # 'F' # 
 		'111DB5' : '24126',		 # 'Paraglider' # 'JMO' # 'F' # 
-		'111DBE' : 'Andy',		 # 'Paraglider' # 'FA1' # 'F' # 
+		'111DBC' : 'Michael',		 # 'Paraglider' # 'mfr' # 'F' # 
+		'111DBE' : 'Andy',		 # 'Paraglider' # 'and' # 'F' # 
 		'111DC8' : 'AnMo72',		 # 'Paraglider' # 'xxx' # 'F' # 
 		'111E17' : 'NOREG',		 # 'Paraglider' # '' # 'F' # 
+		'111E3C' : 'ThomasE',		 # 'Paraglider' # 'ThE' # 'F' # 
+		'111E3F' : 'MaManf',		 # 'Paraglider' # '' # 'F' # 
+		'111E43' : 'ToGo',		 # 'Paraglider' # 'tob' # 'F' # 
 		'111E4C' : 'LaKo',		 # 'Paraglider' # 'LKO' # 'F' # 
+		'111E57' : 'NOREG',		 # 'Paraglider' # '' # 'F' # 
+		'111E60' : 'Matthss',		 # 'Paraglider' # 'MAT' # 'F' # 
 		'111E8C' : 'Smily',		 # 'Paraglider' # 'Smi' # 'F' # 
 		'111E97' : 'Tobias',		 # 'Paraglider' # 'flo' # 'F' # 
-		'111ECD' : 'GerEic',		 # 'Paraglider' # 'GE1' # 'F' # 
+		'111ECC' : 'NOREG',		 # 'Paraglider' # 'BAR' # 'F' # 
+		'111ECD' : 'GerEic',		 # 'Paraglider' # 'GE2' # 'F' # 
+		'111ED5' : 'BORIS',		 # 'Paraglider' # '88' # 'F' # 
+		'111F08' : '35755',		 # 'Paraglider' # '' # 'O' # 
+		'111F60' : 'ReAl',		 # 'Paraglider' # '246' # 'F' # 
 		'111FAA' : 'J.Paul',		 # 'Paraglider' # 'JP3' # 'F' # 
-		'111FCB' : 'GerEic',		 # 'Paraglider' # 'GE4' # 'F' # 
+		'111FCB' : 'GerEic',		 # 'Paraglider' # 'GE1' # 'F' # 
+		'11200E' : '18072',		 # 'Paraglider' # '' # 'F' # 
 		'11201D' : 'mago',		 # 'Paraglider' # 'Uli' # 'F' # 
+		'112034' : '57670',		 # 'Paraglider' # 'BW' # 'F' # 
+		'11204D' : 'Ralph_T',		 # 'Paraglider' # 'RTh' # 'F' # 
+		'112064' : 'R_F',		 # 'Paraglider' # '' # 'F' # 
+		'11206E' : 'D-NULL',		 # 'Paraglider' # '' # 'F' # 
+		'112084' : 'ROWA',		 # 'Paraglider' # 'RW' # 'F' # 
+		'1120A6' : 'Patrick',		 # 'Paraglider' # 'k2r' # 'F' # 
+		'1120BA' : 'GXDR1',		 # 'Drone/UAV' # 'XDR' # 'F' # 
 		'112233' : 'b14cbcc',		 # 'ASW-20' # '15' # 'I' # 
 		'113949' : 'NAVIAIR',		 # 'UFO' # '2' # 'O' # 
 		'113D07' : 'C-MSC2',		 # 'Different Aircraft' # 'MS2' # 'O' # 
@@ -1062,6 +1124,7 @@ kglid = {
 		'132528' : 'PETRA-D',		 # 'Drone/UAV' # 'UAV' # 'O' # 
 		'133706' : 'OK-5684',		 # 'Ka-6 e' # '' # 'O' # 
 		'133749' : 'PK29',		 # 'A380' # '' # 'O' # 
+		'134434' : 'OKCUR19',		 # 'P 220 Koala' # '' # 'O' # 
 		'141073' : 'HOOK3',		 # 'Paraglider' # 'EG1' # 'O' # 
 		'142121' : 'D-EGYX',		 # 'MS-893 Commodore' # '' # 'O' # 
 		'142BE2' : '11234',		 # 'Paraglider' # '112' # 'O' # 
@@ -1088,6 +1151,8 @@ kglid = {
 		'160042' : 'AIT',		 # 'Drone/UAV' # 'AIT' # 'F' # 
 		'160043' : 'AIT',		 # 'Drone/UAV' # 'AIT' # 'F' # 
 		'160085' : 'UAV',		 # 'Drone/UAV' # 'UAV' # 'F' # 
+		'1600A4' : 'REGA',		 # 'Drone/UAV' # 'RGA' # 'F' # 
+		'160143' : 'HB-XYP',		 # 'MD 500' # 'XYP' # 'F' # 
 		'172916' : 'PK3',		 # 'A380' # '' # 'O' # 
 		'173153' : 'PK30',		 # 'A380' # '' # 'O' # 
 		'17755C' : 'EDAD',		 # 'Drone/UAV' # '' # 'O' # 
@@ -1097,18 +1162,21 @@ kglid = {
 		'17BEEF' : 'NOREG',		 # 'Ground Station' # '' # 'O' # 
 		'181319' : 'I-IVVB',		 # 'Twin Astir II' # '' # 'O' # 
 		'183263' : 'Straton',		 # 'Ultralight' # 'MD' # 'O' # 
-		'183F0A' : 'D-KAOO',		 # 'SF-25' # 'DOO' # 'O' # 
+		'183F0A' : 'HA-4484',		 # 'SZD-48-1 Jantar Std 2' # 'MA' # 'O' # 
 		'18417F' : 'OK-5399',		 # 'LG-425 Sohaj' # 'T' # 'O' # 
 		'184944' : 'OK-2201',		 # 'Marianne' # 'YL' # 'O' # 
 		'185373' : 'OKPUL70',		 # 'FM250 Vampire' # 'VAM' # 'O' # 
 		'189B11' : 'HA-SJF',		 # 'Cessna 172' # 'HJF' # 'O' # 
+		'18A823' : 'OK-4310',		 # 'VT-116 Orlik II' # '10' # 'O' # 
 		'18B436' : 'HA-1212',		 # 'SF-25' # 'H12' # 'O' # 
 		'191513' : 'NAVIAIR',		 # 'A380' # 'T1' # 'O' # 
 		'191612' : 'OM-YRA',		 # 'Z-226 trener' # '526' # 'O' # 
 		'192837' : 'PK25',		 # 'A380' # '' # 'O' # 
 		'193D0D' : '4293',		 # 'Cirrus Std' # 'JPS' # 'O' # 
 		'19510C' : 'HA-BEZ',		 # 'PA-28' # 'HEZ' # 'O' # 
+		'196101' : 'M961',		 # 'Paraglider' # 'PJ1' # 'O' # 
 		'196D0A' : 'OK-7531',		 # 'VSO-10' # '60' # 'O' # 
+		'1971A3' : 'VH-WKI',		 # 'ASK-21' # 'WKI' # 'F' # 
 		'197201' : 'RC-HB0',		 # 'Drone/UAV' # 'RC0' # 'O' # 
 		'197202' : 'RC-HB2',		 # 'Drone/UAV' # 'RC2' # 'O' # 
 		'197207' : 'RC-HB1',		 # 'Drone/UAV' # 'RC1' # 'O' # 
@@ -1117,9 +1185,9 @@ kglid = {
 		'19AD17' : 'HA-1230',		 # 'SF-25' # '' # 'O' # 
 		'19AD65' : '1180',		 # 'HangGlider' # '078' # 'O' # 
 		'19BD4D' : 'HA-JDE',		 # 'MS-893 Commodore' # 'TOW' # 'O' # 
-		'19CE03' : 'Meteo09',		 # 'SF-25' # 'MET' # 'O' # 
+		'19CE03' : 'HA-1256',		 # 'SF-25' # 'H56' # 'O' # 
 		'1A1A1A' : 'D-KHOM',		 # 'SF-25' # 'OM' # 'F' # 
-		'1A1C3D' : 'TOW1',		 # 'Towplane' # 'RUA' # 'O' # 
+		'1A1C3D' : 'RUA28',		 # 'WT9 Dynamic' # 'RUA' # 'O' # 
 		'1A3451' : 'OK-5433',		 # 'Astir CS' # 'MZ' # 'O' # 
 		'1A391D' : 'C-FBON',		 # 'Libelle Std' # 'BON' # 'O' # 
 		'1A3A01' : 'CC-TR28',		 # 'UFO' # 'T28' # 'O' # 
@@ -1127,8 +1195,9 @@ kglid = {
 		'1A4E50' : 'C-GINY',		 # 'PIK-20 D' # 'GY' # 'O' # 
 		'1A540B' : 'OK-1426',		 # 'SF-27' # '26' # 'O' # 
 		'1A543B' : 'HA-IGS',		 # 'Cessna 152' # '' # 'O' # 
+		'1A580A' : 'OK-3300',		 # 'ASW-15' # 'LE' # 'O' # 
 		'1A5A06' : 'CC-KWR',		 # 'Cessna 150' # 'WR' # 'O' # 
-		'1A5E08' : '172',		 # 'Cessna 172' # '172' # 'O' # 
+		'1A5E08' : 'OM-ILF',		 # 'Cessna 172' # 'OLF' # 'O' # 
 		'1A6B16' : 'D-6943',		 # 'LS-3' # 'CE' # 'O' # 
 		'1A6D40' : 'LY-GBA',		 # 'LAK-12' # 'ER' # 'O' # 
 		'1A9566' : 'AIRWIN',		 # 'Motorplane' # '' # 'O' # 
@@ -1155,7 +1224,6 @@ kglid = {
 		'1C5F5A' : 'OK-2000',		 # 'Glasflugel 304' # 'LB' # 'O' # 
 		'1C9B19' : 'viewAir',		 # 'Unknown' # '144' # 'O' # 
 		'1CA143' : 'OK-6606',		 # 'Astir CS' # 'eYF' # 'O' # 
-		'1CA1E1' : 'Teszt',		 # 'Paraglider' # '' # 'O' # 
 		'1CA8D2' : 'OO-ZVF',		 # 'Twin Astir II' # 'OO-' # 'F' # 
 		'1CB87E' : 'OM-LLV',		 # 'Z-226 trener' # 'LLV' # 'O' # 
 		'1CD228' : 'Crew_04',		 # 'Ground Station' # 'C04' # 'O' # 
@@ -1193,6 +1261,8 @@ kglid = {
 		'200000' : 'CC-AGN',		 # 'Ventus 2cxT' # 'GN' # 'F' # 
 		'200001' : '29379',		 # 'Paraglider' # '' # 'F' # 
 		'200006' : 'Robi',		 # 'Paraglider' # '435' # 'F' # 
+		'20006D' : 'RAFPG98',		 # 'Paraglider' # '' # 'F' # 
+		'2000FA' : 'ALEXKEN',		 # 'Paraglider' # 'AJK' # 'F' # 
 		'20012F' : '28996MT',		 # 'Paraglider' # '' # 'F' # 
 		'200135' : 'NOREG',		 # 'Paraglider' # '' # 'F' # 
 		'200136' : 'meierm',		 # 'Paraglider' # '' # 'F' # 
@@ -1202,7 +1272,7 @@ kglid = {
 		'20014C' : '35501',		 # 'Paraglider' # '' # 'F' # 
 		'200153' : 'SondreN',		 # 'Paraglider' # '' # 'F' # 
 		'200156' : 'RICD9',		 # 'Paraglider' # '' # 'F' # 
-		'200164' : 'KessMic',		 # 'Paraglider' # '' # 'F' # 
+		'200164' : 'NOREG',		 # '' # '' # 'F' # 
 		'200167' : '9055',		 # 'Paraglider' # '' # 'F' # 
 		'200168' : '49775',		 # 'Paraglider' # 'HEM' # 'F' # 
 		'200169' : 'redyell',		 # 'Paraglider' # '' # 'F' # 
@@ -1230,6 +1300,7 @@ kglid = {
 		'2001E9' : 'DEDE',		 # 'Paraglider' # 'DD' # 'F' # 
 		'2001ED' : 'NOREG',		 # 'Paraglider' # '' # 'F' # 
 		'2001EE' : 'NOREG',		 # 'Paraglider' # '' # 'F' # 
+		'2001F8' : 'NOREG',		 # 'Paraglider' # '' # 'F' # 
 		'2001FA' : '-',		 # 'Paraglider' # '-' # 'F' # 
 		'2001FC' : 'TMF',		 # 'Paraglider' # '' # 'F' # 
 		'2001FD' : 'AndyM88',		 # 'Paraglider' # 'AM' # 'F' # 
@@ -1241,25 +1312,34 @@ kglid = {
 		'200238' : 'RED-FB',		 # 'Paraglider' # '833' # 'F' # 
 		'20023C' : 'NOREG',		 # 'Paraglider' # '' # 'F' # 
 		'200245' : 'Siggi_B',		 # 'Paraglider' # 'SB1' # 'F' # 
+		'200247' : '5435',		 # 'Paraglider' # 'GWC' # 'F' # 
 		'20024B' : 'NOREG',		 # 'Paraglider' # '' # 'F' # 
 		'20024F' : 'NOREG',		 # 'Paraglider' # '450' # 'F' # 
+		'200250' : 'IndyFLM',		 # 'Paraglider' # 'PG' # 'F' # 
 		'20025F' : '27342',		 # 'Paraglider' # '' # 'F' # 
 		'200260' : 'RonnyS',		 # 'Paraglider' # '309' # 'F' # 
 		'20026F' : 'NOREG',		 # 'Paraglider' # '' # 'F' # 
 		'20027A' : 'CH50627',		 # 'Paraglider' # 'SG' # 'F' # 
-		'200280' : 'andy_r',		 # 'Paraglider' # '' # 'F' # 
 		'20028B' : 'S53XX',		 # 'Paraglider' # '' # 'F' # 
 		'200292' : 'BAJ',		 # 'Paraglider' # '' # 'F' # 
 		'20029A' : '49390',		 # 'Paraglider' # '' # 'F' # 
+		'2002A3' : 'BH16225',		 # 'Paraglider' # 'FP' # 'F' # 
 		'2002B2' : '39580',		 # 'Paraglider' # '' # 'F' # 
 		'2002B4' : 'Skizzo',		 # 'Paraglider' # 'P21' # 'F' # 
 		'2002C0' : 'NOREG',		 # 'Paraglider' # '' # 'F' # 
+		'2002C1' : '20020',		 # 'Paraglider' # '' # 'F' # 
 		'2002C6' : 'NOREG',		 # 'Paraglider' # '' # 'F' # 
+		'2002C7' : '24189',		 # 'Paraglider' # '' # 'F' # 
 		'2002CB' : 'NOREG',		 # 'Paraglider' # 'MST' # 'F' # 
 		'2002CF' : 'd_it',		 # 'Paraglider' # 'JD' # 'F' # 
 		'2002D3' : 'NOREG',		 # 'Paraglider' # 'VV' # 'F' # 
+		'2002D5' : '34000',		 # 'Paraglider' # '' # 'F' # 
 		'2002D8' : 'NOREG',		 # '' # '' # 'F' # 
 		'2002DF' : 'NOREG',		 # '' # '' # 'F' # 
+		'200309' : 'PfeiffA',		 # 'Paraglider' # 'AP' # 'F' # 
+		'20030C' : 'NOREG',		 # 'Paraglider' # '' # 'F' # 
+		'200323' : 'NOREG',		 # 'Paraglider' # 'PAT' # 'F' # 
+		'200347' : '12091',		 # 'Paraglider' # '' # 'F' # 
 		'201726' : 'JoNi',		 # 'Paraglider' # '' # 'F' # 
 		'201947' : 'PK5',		 # 'A380' # '' # 'O' # 
 		'202725' : 'NOREG',		 # 'Unknown' # 'Tt2' # 'O' # 
@@ -1276,17 +1356,18 @@ kglid = {
 		'20E97D' : 'OK-8205',		 # 'Blanik' # '' # 'O' # 
 		'2106FA' : 'NOREG',		 # 'Experimental' # '' # 'O' # 
 		'211D36' : 'OK-0310',		 # 'ASW-19' # 'WT' # 'F' # 
-		'213012' : 'LY-GKY',		 # 'LAK-12' # 'D' # 'O' # 
+		'213012' : 'LY-DOP',		 # 'ASW-20' # 'ZG' # 'O' # 
 		'213456' : 'CC-RPT1',		 # 'UFO' # 'RP1' # 'O' # 
 		'213671' : 'NOREG',		 # 'Paraglider' # '' # 'O' # 
 		'213675' : 'D-KAOO',		 # 'SF-25' # 'KAO' # 'O' # 
+		'213707' : 'OK-PLR',		 # 'Piper J-3 Cub' # 'PLR' # 'O' # 
 		'213724' : 'PK6',		 # 'A380' # '' # 'O' # 
-		'213949' : 'SZ-873',		 # 'Paraglider' # '873' # 'O' # 
+		'213949' : 'FE-174',		 # 'Paraglider' # '174' # 'O' # 
 		'213D11' : 'DEFAV',		 # 'DA20 Katana' # 'DAV' # 'F' # 
 		'213D1B' : 'D-KDJA',		 # 'H36 Dimona' # 'JA' # 'I' # 
 		'214567' : 'CC-RPT2',		 # 'UFO' # 'RP2' # 'O' # 
 		'214568' : 'CC-RPT3',		 # 'UFO' # 'RP3' # 'O' # 
-		'214D14' : 'PETRA24',		 # 'Unknown' # 'P24' # 'O' # 
+		'214D14' : 'HA-1010',		 # 'Unknown' # 'H10' # 'O' # 
 		'21534E' : '65-29',		 # 'HangGlider' # '' # 'O' # 
 		'216A24' : 'viewAir',		 # 'Ground Station' # '.eu' # 'O' # 
 		'216E5D' : 'OK_4720',		 # 'Blanik' # 'TF' # 'O' # 
@@ -1294,6 +1375,7 @@ kglid = {
 		'21A904' : 'HANAG',		 # 'Motorplane' # 'HAG' # 'O' # 
 		'21B5F4' : 'RC-HB2',		 # 'Drone/UAV' # 'RC2' # 'F' # 
 		'21BD1A' : 'FSE-01',		 # 'Paraglider' # '155' # 'O' # 
+		'21D912' : 'OKHUU44',		 # 'Ultralight' # 'HUU' # 'O' # 
 		'21F6B7' : 'D-5539',		 # 'Discus 2' # 'R2' # 'F' # 
 		'220823' : 'PK9',		 # 'A380' # '' # 'O' # 
 		'222051' : 'HA-5080',		 # 'PW-6' # 'M8' # 'O' # 
@@ -1321,20 +1403,21 @@ kglid = {
 		'22DD14' : 'OK-0697',		 # 'Astir Jeans' # 'HVY' # 'O' # 
 		'22FFFE' : 'D-EILB',		 # 'PZL-104 Wilga' # 'LB' # 'F' # 
 		'230251' : 'Giano',		 # 'Ground Station' # '' # 'O' # 
+		'230560' : 'OH-908',		 # 'Ventus 2' # 'KK' # 'F' # 
 		'230843' : 'OK-KRD',		 # 'Towplane' # 'KRD' # 'O' # 
 		'231018' : 'D-MBEJ',		 # 'Ultralight' # '' # 'F' # 
 		'231147' : 'NAVIAIR',		 # 'UFO' # '1' # 'O' # 
 		'231519' : 'NAVIAIR',		 # 'A380' # 'T2' # 'O' # 
-		'231520' : 'OK-1432',		 # 'LS-1 f' # 'DP' # 'O' # 
+		'231520' : 'OK-9722',		 # 'Blanik' # 'L13' # 'O' # 
 		'231546' : 'OK-1432',		 # 'LS-1 f' # 'DP' # 'O' # 
 		'23160E' : 'NOREG',		 # '' # '' # 'O' # 
 		'2317EE' : 'D-2656',		 # 'ASW-19' # 'VS' # 'F' # 
 		'232332' : 'OK-8656',		 # 'ASW-15' # 'BE' # 'O' # 
-		'232855' : 'OKEUU47',		 # 'WT9 Dynamic' # 'ECH' # 'O' # 
+		'232855' : 'OKEUU47',		 # 'Ultralight' # 'ECH' # 'O' # 
 		'233116' : 'PK2',		 # 'A380' # '' # 'O' # 
 		'233440' : 'viewAir',		 # 'Ground Station' # '.eu' # 'O' # 
 		'233846' : 'PH-958',		 # 'Ka-7' # '' # 'O' # 
-		'234177' : 'HA-1212',		 # 'SF-25' # 'H12' # 'O' # 
+		'234177' : 'HA-SLE',		 # 'Cessna 172' # 'HLE' # 'O' # 
 		'235328' : 'PK12',		 # 'A380' # '' # 'O' # 
 		'235541' : 'HA-ELB',		 # 'EuroFox' # 'HLB' # 'O' # 
 		'236E34' : 'LY-GPK',		 # 'SZD-48 Jantar Std 2' # '215' # 'O' # 
@@ -1343,28 +1426,32 @@ kglid = {
 		'23B157' : 'HA-JOC',		 # 'DV20 Katana' # '' # 'O' # 
 		'23BF09' : 'LY-GJU',		 # 'SZD-41 Jantar Std' # 'JU' # 'O' # 
 		'23BF30' : 'JU-GJU',		 # 'SZD-41 Jantar Std' # 'JU' # 'O' # 
-		'23CE25' : 'OKVUA06',		 # 'Motorplane' # 'A06' # 'O' # 
 		'23EB0F' : 'G-CHME',		 # 'DG-300' # 'LKA' # 'F' # 
 		'240516' : 'FCEED',		 # 'Topaze' # 'ED' # 'F' # 
 		'241128' : 'PK16',		 # 'A380' # '' # 'O' # 
+		'243C14' : 'D-1165',		 # 'ASK-21' # '' # 'F' # 
 		'243C29' : 'LKZN02',		 # 'Ultralight' # 'ZN2' # 'O' # 
 		'243E4A' : 'HA-1214',		 # 'Valentin Taifun' # '214' # 'F' # 
-		'243E77' : 'J1G',		 # 'Paraglider' # '' # 'O' # 
+		'243E77' : 'Eagle',		 # 'Paraglider' # '' # 'F' # 
 		'243F24' : 'NOREG',		 # 'WT9 Dynamic' # 'FIL' # 'O' # 
 		'243F71' : 'OH-YHS',		 # 'PIK-15 Hinu' # 'YHS' # 'O' # 
 		'244031' : 'PK17',		 # 'A380' # '' # 'O' # 
 		'244244' : 'Gaffa',		 # 'Paraglider' # 'LK8' # 'O' # 
 		'245913' : 'OK-2029',		 # 'ASW-15' # 'BH' # 'O' # 
-		'24623D' : 'OM-8517',		 # 'VSO-10' # '72' # 'O' # 
+		'24623D' : 'OM-3701',		 # 'Blanik' # 'A1' # 'O' # 
 		'2466CF' : 'D-KJHL',		 # 'Discus 2t' # 'IKB' # 'F' # 
 		'248E60' : 'Spare',		 # 'Unknown' # 'BoZ' # 'O' # 
+		'249677' : 'J1G',		 # 'Paraglider' # '' # 'O' # 
 		'249E3C' : 'NOREG',		 # 'Ultralight' # '' # 'F' # 
 		'24A45C' : 'D-MMUH',		 # 'Unknown' # '' # 'O' # 
+		'24A48C' : 'NOREG',		 # 'Paraglider' # 'PAT' # 'F' # 
 		'24A538' : 'NOREG',		 # '' # '' # 'O' # 
 		'24A6A8' : 'SP-3223',		 # 'SZD-48-1 Jantar Std 2' # 'FL' # 'O' # 
 		'24A6BC' : 'SP-2772',		 # 'SZD-9 Bocian' # '' # 'O' # 
 		'24A72C' : 'MJ',		 # 'Paraglider' # '' # 'F' # 
 		'24A744' : 'D-MHKF',		 # 'SkyRanger' # '' # 'O' # 
+		'24A888' : 'OM-5959',		 # 'Cirrus Std' # 'W' # 'O' # 
+		'24A8B8' : 'OK-9506',		 # 'VSO-10' # 'B4' # 'O' # 
 		'24A8C0' : 'SP-3396',		 # 'SZD-50 Puchacz' # '' # 'O' # 
 		'24A8F0' : 'NOREG',		 # '' # '' # 'O' # 
 		'24CA48' : 'HA-DLF',		 # 'Unknown' # 'HLF' # 'O' # 
@@ -1380,11 +1467,11 @@ kglid = {
 		'24E298' : 'SP-ULC',		 # 'Tecnam P2006T' # 'ULC' # 'O' # 
 		'24E2A8' : 'SP-ULC',		 # 'Tecnam P2006T' # 'ULC' # 'O' # 
 		'24E2B0' : 'SP-THE',		 # 'Cessna 206' # 'THE' # 'O' # 
-		'24E2C4' : 'LZ-NTH',		 # 'Tecnam  P2002 JF' # '' # 'O' # 
+		'24E2C4' : 'LBDR',		 # 'Ground Station' # '' # 'O' # 
 		'25246A' : 'NOREG',		 # '' # '' # 'O' # 
 		'25290E' : 'CC-TR5',		 # 'UFO' # 'TR5' # 'O' # 
 		'252C22' : 'OKDUA05',		 # 'Ultralight' # 'A05' # 'O' # 
-		'252F42' : 'Crew_02',		 # 'Ground Station' # 'C02' # 'O' # 
+		'252F42' : 'viewAir',		 # 'Unknown' # '037' # 'O' # 
 		'253252' : 'PK4',		 # 'A380' # '' # 'O' # 
 		'25345D' : 'OK-DRB',		 # 'Z-226 trener' # 'DRB' # 'O' # 
 		'253A57' : 'HANAF',		 # 'Ultralight' # 'HAF' # 'O' # 
@@ -1392,8 +1479,9 @@ kglid = {
 		'25420F' : 'OK-2277',		 # 'Janus B' # 'V1' # 'O' # 
 		'254341' : 'G-CFSH',		 # 'Astir Jeans' # 'FSH' # 'O' # 
 		'254342' : 'Test',		 # 'UFO' # 'TST' # 'O' # 
-		'254813' : 'OK-KNH',		 # 'Z-226 trener' # 'KNH' # 'O' # 
+		'254813' : 'OK-WRK',		 # 'Zlin 50' # 'WRK' # 'O' # 
 		'255438' : 'PK10',		 # 'A380' # '' # 'F' # 
+		'255929' : 'OK-VEGA',		 # 'Ventus 3T' # 'VEG' # 'O' # 
 		'25630B' : 'viewAir',		 # 'Unknown' # '.eu' # 'O' # 
 		'256730' : 'OKTUU61',		 # 'Tecnam  P2002 JF' # '' # 'O' # 
 		'256858' : 'ASO2',		 # 'Cessna 150' # 'NR2' # 'O' # 
@@ -1409,14 +1497,15 @@ kglid = {
 		'25A390' : 'UFO',		 # 'UFO' # '' # 'F' # 
 		'25A430' : 'CC-OM1',		 # 'UFO' # 'OM' # 'O' # 
 		'25A440' : 'MZ-para',		 # 'Paraglider' # '' # 'O' # 
+		'25A444' : 'OE-6558',		 # 'Paraglider' # '' # 'F' # 
 		'25A4A4' : 'CC-K1Q',		 # 'Bergfalke II' # 'K1' # 'O' # 
 		'25A520' : 'CC-K4Q',		 # 'Pilatus B4' # 'K4' # 'O' # 
 		'25A52C' : 'CC-LHC',		 # 'Cessna 150' # 'HC' # 'O' # 
 		'25A564' : 'N171AK',		 # 'LAK-17 A' # '4' # 'F' # 
 		'25A634' : 'U_F_O',		 # 'UFO' # 'uf1' # 'O' # 
-		'25A680' : 'CRZ_2',		 # 'ASK-14' # '' # 'F' # 
+		'25A680' : 'CRZ_2',		 # 'ASK-14' # 'CRZ' # 'O' # 
 		'25A700' : 'OM-S231',		 # 'Allegro 2000' # 'LR' # 'O' # 
-		'25A82C' : 'G-BDFY',		 # 'Grumman AA-5' # 'FY' # 'F' # 
+		'25A82C' : 'NOREG',		 # 'UFO' # 'AIM' # 'F' # 
 		'25A8C0' : 'OK-8168',		 # 'SF-27' # '68' # 'O' # 
 		'25A958' : 'NOREG',		 # 'SZD-48-3 Jantar Std 3' # 'PV' # 'F' # 
 		'25A980' : 'NOREG',		 # 'UFO' # 'TT' # 'O' # 
@@ -1427,13 +1516,12 @@ kglid = {
 		'25AB3C' : 'HA-SKE',		 # 'Cessna 150' # 'HKE' # 'O' # 
 		'25BA5F' : 'FC001',		 # 'Unknown' # '' # 'O' # 
 		'25BC4C' : 'OMBEA',		 # 'A380' # 'OEA' # 'O' # 
-		'261083' : 'ALEXKEN',		 # 'Paraglider' # '261' # 'F' # 
 		'262772' : 'D-KJHL',		 # 'Discus 2t' # 'IKB' # 'F' # 
 		'262E14' : 'OK_6510',		 # 'VSO-10' # '22' # 'O' # 
 		'263649' : 'AZM-2',		 # 'Unknown' # '' # 'O' # 
 		'263651' : 'D-MUFO',		 # 'UFO' # 'UF' # 'O' # 
 		'26412F' : '2-073',		 # 'EuroFox' # 'VR' # 'O' # 
-		'264E2C' : 'OK-8902',		 # 'Unknown' # '13B' # 'O' # 
+		'264E2C' : 'OK-8902',		 # 'Towplane' # '13B' # 'O' # 
 		'265341' : 'CC-TR26',		 # 'UFO' # 'T26' # 'O' # 
 		'26570A' : 'viewAir',		 # 'Ground Station' # '.eu' # 'O' # 
 		'265765' : 'OK-4751',		 # 'Cirrus 18m' # 'G7' # 'O' # 
@@ -1466,8 +1554,8 @@ kglid = {
 		'27C2BA' : 'LN-GHY',		 # 'LS-6' # 'HY' # 'F' # 
 		'27CB03' : 'CC-KWO',		 # 'Cessna 150' # 'WO' # 'O' # 
 		'27CB0C' : 'OKQUU89',		 # 'Ultralight' # 'U89' # 'O' # 
-		'27D107' : 'OKWUO25',		 # 'Skylane Airlony' # 'WUO' # 'O' # 
-		'27D127' : 'D-6806',		 # 'SZD-30 Pirat' # 'FU2' # 'O' # 
+		'27D107' : 'OKYUR33',		 # 'Skylane Airlony' # 'YUR' # 'O' # 
+		'27D127' : 'OK-KL02',		 # 'SZD-30 Pirat' # 'PRT' # 'O' # 
 		'27D916' : 'SP-',		 # 'Other' # 'OP1' # 'O' # 
 		'27DA7F' : 'OM-0503',		 # 'VSO-10' # 'D4' # 'O' # 
 		'280382' : 'S.Gerum',		 # 'Paraglider' # 'S.G' # 'O' # 
@@ -1485,10 +1573,11 @@ kglid = {
 		'28634B' : 'HA-ROA',		 # 'Unknown' # '' # 'O' # 
 		'286932' : 'LY-GBI',		 # 'SZD-48-3 Jantar Std 3' # 'B' # 'O' # 
 		'286D39' : 'PETRA02',		 # 'Unknown' # 'P02' # 'O' # 
+		'286E1D' : 'SZAT',		 # 'Paraglider' # '' # 'O' # 
 		'28B628' : 'NOREG',		 # 'Astir Jeans' # '2Y' # 'O' # 
 		'28BA0E' : 'OM-2507',		 # 'VSO-10' # 'H7' # 'O' # 
 		'28BC38' : 'SP_-',		 # 'Unknown' # 'DM' # 'O' # 
-		'28CE0A' : 'viewAir',		 # 'Unknown' # '090' # 'O' # 
+		'28CE0A' : 'HA1265',		 # 'SF-25' # 'H65' # 'O' # 
 		'28D376' : 'LEMOI',		 # 'UFO' # '' # 'O' # 
 		'28EFC1' : 'PC',		 # 'ASW-27' # 'PC' # 'F' # 
 		'292433' : 'I-TWYN',		 # 'Twin Astir I' # '' # 'O' # 
@@ -1523,7 +1612,7 @@ kglid = {
 		'2A5444' : 'SZ-782',		 # 'Paraglider' # '092' # 'O' # 
 		'2A5857' : 'PK-X008',		 # 'Drone/UAV' # 'P08' # 'O' # 
 		'2A5C0E' : '57-70',		 # 'HangGlider' # '70' # 'O' # 
-		'2A6E1F' : 'Crew_01',		 # 'Ground Station' # 'C01' # 'O' # 
+		'2A6E1F' : 'viewAir',		 # 'Unknown' # '029' # 'O' # 
 		'2A6F4D' : 'D-KPJG',		 # 'HPH 304S Shark' # 'JG' # 'F' # 
 		'2AA372' : 'SWI',		 # 'Ground Station' # 'SWI' # 'O' # 
 		'2AA911' : 'HA-HCW',		 # 'Cessna 172' # 'HCW' # 'O' # 
@@ -1535,7 +1624,7 @@ kglid = {
 		'2ADD43' : 'EC-AC2',		 # 'UFO' # 'AC2' # 'O' # 
 		'2B1C29' : 'HA-4496',		 # 'Astir CS' # 'C1' # 'O' # 
 		'2B1D1A' : 'FSE-01.',		 # 'Paraglider' # 'F01' # 'O' # 
-		'2B2A66' : 'viewAir',		 # 'Unknown' # '015' # 'O' # 
+		'2B2A66' : '2B2A66',		 # 'Unknown' # 'A66' # 'O' # 
 		'2B2F31' : 'viewAir',		 # 'HangGlider' # '091' # 'O' # 
 		'2B313D' : 'C-MSC4',		 # 'Different Aircraft' # 'MS4' # 'O' # 
 		'2B3C0B' : 'HAJOC',		 # 'DA20 Katana' # 'HOC' # 'O' # 
@@ -1568,11 +1657,11 @@ kglid = {
 		'2CD613' : 'PETRA03',		 # 'Unknown' # 'P03' # 'O' # 
 		'2CDA04' : 'OK-AAJ',		 # 'Cessna 206' # 'OAJ' # 'O' # 
 		'2D2C30' : 'OK-3780',		 # 'Twin Astir II' # 'TW' # 'O' # 
-		'2D2E27' : 'LY-GRA',		 # 'Pegase' # 'PL' # 'O' # 
+		'2D2E27' : 'NOREG',		 # '' # '' # 'O' # 
 		'2D3837' : 'WIM1',		 # 'Unknown' # 'N20' # 'O' # 
 		'2D3936' : 'TvL',		 # 'UFO' # 'GG' # 'O' # 
 		'2D3B57' : 'D-KAOO',		 # 'SF-25' # '' # 'O' # 
-		'2D4072' : 'OK-4310',		 # 'VT-116 Orlik II' # '10' # 'O' # 
+		'2D4072' : 'OKZUA46',		 # 'Samba XXL' # 'ZUZ' # 'O' # 
 		'2D486A' : 'para',		 # 'Paraglider' # '' # 'O' # 
 		'2D4D59' : 'C-FDTI',		 # 'PIK-20 E' # 'DTI' # 'O' # 
 		'2D4E29' : 'OM-OLD4',		 # 'OldTimer' # 'OB4' # 'O' # 
@@ -1582,7 +1671,7 @@ kglid = {
 		'2D8F57' : 'viewAir',		 # 'Cessna 172' # '194' # 'O' # 
 		'2DAB4A' : '20-52',		 # 'HangGlider' # 'GI' # 'O' # 
 		'2DB849' : 'OK-0102',		 # 'Astir CS' # 'O5' # 'O' # 
-		'2DBE44' : 'D-KAOO',		 # 'SF-25' # 'DOO' # 'O' # 
+		'2DBE44' : 'HA-4484',		 # 'SZD-48-1 Jantar Std 2' # 'MA' # 'O' # 
 		'2DC123' : 'OM-OLD6',		 # 'OldTimer' # 'OB6' # 'O' # 
 		'2DC84C' : 'OK-KMJ',		 # 'Z-226 trener' # 'KMJ' # 'O' # 
 		'2DC920' : 'viewAir',		 # 'Towplane' # '156' # 'O' # 
@@ -1592,7 +1681,8 @@ kglid = {
 		'2E0018' : 'XCT',		 # 'Paraglider' # 'XCT' # 'F' # 
 		'2E3160' : 'CC-CGG',		 # 'PA-18 Super Cub' # 'GG' # 'O' # 
 		'2E3233' : 'G-RFSB',		 # 'RF 5 b' # 'SB' # 'O' # 
-		'2E466A' : 'D-1637',		 # 'ASW-20' # 'WU' # 'O' # 
+		'2E3B29' : 'HZoli',		 # 'Paraglider' # '' # 'O' # 
+		'2E466A' : 'NOREG',		 # '' # '' # 'O' # 
 		'2E530F' : 'OM-OLD2',		 # 'OldTimer' # 'OB2' # 'O' # 
 		'2E5A11' : 'viewAir',		 # 'Cessna 172' # '176' # 'O' # 
 		'2E5E18' : 'OK-1730',		 # 'Blanik' # 'VUT' # 'O' # 
@@ -1616,9 +1706,11 @@ kglid = {
 		'2F4C13' : 'OK-8441',		 # 'LET L-33 Solo' # 'XI' # 'O' # 
 		'2F4E39' : 'PETRA18',		 # 'Drone/UAV' # 'UAV' # 'O' # 
 		'2F4F45' : 'OK-MFO',		 # 'Z-226 trener' # 'MFO' # 'O' # 
+		'2F590F' : 'OM-LKL',		 # 'Towplane' # '' # 'O' # 
 		'2F5C13' : 'OK-1193',		 # 'Cirrus Std' # 'PIF' # 'O' # 
 		'2F5D11' : '1294',		 # 'Scheibe SF 40' # '198' # 'F' # 
 		'2F6A2D' : 'LKPN_1',		 # 'Unknown' # '' # 'O' # 
+		'2FA3D3' : 'WAR17',		 # 'Ultralight' # 'R17' # 'F' # 
 		'2FAA47' : 'CC-AJT',		 # 'Glasflugel H301' # 'JT' # 'O' # 
 		'2FAF4B' : 'NOREG',		 # 'VSO-10' # 'K9' # 'O' # 
 		'2FB1C0' : 'D-8592',		 # 'Discus' # '5I' # 'F' # 
@@ -1629,6 +1721,7 @@ kglid = {
 		'2FDB57' : 'OK-4215',		 # 'Blanik' # 'LR' # 'O' # 
 		'2FDC4C' : 'OK-2903',		 # 'Experimental' # '28' # 'O' # 
 		'2FFFFF' : 'D-KOGB',		 # 'ASH-26 E' # 'P' # 'F' # 
+		'300265' : 'I-MCMC',		 # 'AS 350' # '' # 'I' # 
 		'300734' : 'I-EKOS',		 # 'AS 350' # '' # 'I' # 
 		'300742' : 'I-DUEK',		 # 'AS 350' # 'ELI' # 'I' # 
 		'3007A8' : 'I-LGLG',		 # 'AS 350' # '' # 'I' # 
@@ -1645,16 +1738,18 @@ kglid = {
 		'30A202' : 'SNOOPY',		 # 'Unknown' # 'ASB' # 'O' # 
 		'30B141' : '65-12',		 # 'HangGlider' # '' # 'O' # 
 		'30BE13' : 'VH-ZKE',		 # 'ASG-29' # 'M' # 'O' # 
+		'30DC01' : 'LY-EZB',		 # 'WT9 Dynamic' # 'Z' # 'O' # 
 		'30DC2D' : 'viewAir',		 # 'Ground Station' # '.eu' # 'O' # 
 		'30DF3B' : 'OH-U674',		 # 'Ultralight' # 'TPK' # 'O' # 
 		'312712' : 'SP-',		 # 'Unknown' # 'OG7' # 'O' # 
 		'31282A' : 'BlazsoA',		 # 'Cessna 172' # '' # 'O' # 
 		'312910' : 'viewAir',		 # 'Unknown' # '031' # 'O' # 
 		'312B5B' : 'viewAir',		 # 'Paraglider' # '093' # 'O' # 
-		'312E36' : 'OH-OMG',		 # 'Cessna 182' # '' # 'O' # 
+		'312E36' : 'HA-BGY',		 # 'Cessna 182' # '' # 'O' # 
 		'313115' : 'LY-GBK',		 # 'SZD-48-3 Jantar Std 3' # 'V7' # 'O' # 
 		'313825' : 'OK-1100',		 # 'ASW-20' # 'Y5' # 'O' # 
 		'314A35' : 'OK-9608',		 # 'VSO-10' # '78' # 'O' # 
+		'316204' : 'NOREG',		 # '' # '' # 'O' # 
 		'316550' : 'C-GDXT',		 # 'PIK-20 B' # 'KM' # 'O' # 
 		'316E2E' : 'METEO2',		 # 'Drone/UAV' # '' # 'O' # 
 		'31761A' : 'G-DCBA',		 # 'Slingsby T51 Dart 17WR' # '679' # 'O' # 
@@ -1662,8 +1757,7 @@ kglid = {
 		'31AF28' : 'EC-ZZZ',		 # 'UFO' # 'JMC' # 'O' # 
 		'31B607' : 'LV-EME',		 # 'PW-5' # 'TW' # 'O' # 
 		'31B705' : 'HABHQ',		 # 'Ultralight' # 'HHQ' # 'O' # 
-		'31BB45' : 'HA-WRA',		 # 'PA-28' # 'WRA' # 'O' # 
-		'31BD30' : 'HA-SLE',		 # 'Cessna 172' # 'HLE' # 'O' # 
+		'31BB45' : 'OM-5615',		 # 'VSO-10' # '11' # 'O' # 
 		'31CC37' : 'OK-6528',		 # 'VSO-10' # '31' # 'O' # 
 		'31CC3C' : 'HA-SLT',		 # 'Cessna 150' # 'HLT' # 'O' # 
 		'31D864' : 'PETRA62',		 # 'Unknown' # '178' # 'O' # 
@@ -1673,10 +1767,9 @@ kglid = {
 		'31DCD2' : 'I-8956',		 # 'Ultralight' # '' # 'O' # 
 		'32212F' : 'OK-2909',		 # 'VT-116 Orlik II' # '09' # 'O' # 
 		'3225C5' : 'viewAir',		 # 'Unknown' # '.eu' # 'O' # 
-		'323158' : 'I-C066',		 # 'Sinus' # '' # 'O' # 
 		'323911' : 'LY-GBF',		 # 'SZD-48 Jantar Std 2' # 'BF' # 'O' # 
 		'325E59' : 'HANAD',		 # 'Motorplane' # 'HAD' # 'O' # 
-		'32A739' : 'G-KENR',		 # 'Baloon' # '23' # 'O' # 
+		'32A739' : 'viewAir',		 # 'Unknown' # '013' # 'O' # 
 		'32C849' : 'OK-KMP',		 # 'Z-226 trener' # 'KMP' # 'O' # 
 		'32CE64' : 'OK-5616',		 # 'VSO-10' # 'L0' # 'O' # 
 		'32DA1D' : 'OM-4701',		 # 'Blanik' # '01' # 'O' # 
@@ -1695,12 +1788,15 @@ kglid = {
 		'33AC2C' : 'OH-772',		 # 'SZD-50 Puchacz' # '' # 'O' # 
 		'33CF40' : 'OK-L15',		 # 'P 220 Koala' # 'L15' # 'O' # 
 		'33DA3B' : 'D-EPER',		 # 'DA40' # 'DER' # 'O' # 
+		'34052A' : 'HB-2xRC',		 # 'Drone/UAV' # 'MBR' # 'O' # 
+		'340534' : 'HB849RC',		 # 'Drone/UAV' # 'MBK' # 'O' # 
 		'340C2E' : 'OM-7777',		 # 'LS-4' # 'BM' # 'O' # 
 		'342C3D' : 'OK-5618',		 # 'VSO-10' # '618' # 'O' # 
 		'343123' : 'Roman',		 # 'Paraglider' # 'ZM' # 'O' # 
 		'34322F' : 'NOREG',		 # 'A380' # 'TG' # 'O' # 
 		'343843' : '343843',		 # 'ASW-20' # '43' # 'I' # 
 		'343A4A' : 'OM-1528',		 # 'VSO-10' # 'F6' # 'O' # 
+		'343E72' : 'OM-0509',		 # 'VSO-10' # 'D7' # 'O' # 
 		'344553' : 'HA-5074',		 # 'Ka-7' # '' # 'O' # 
 		'344E06' : '48-55',		 # 'HangGlider' # '' # 'O' # 
 		'34563B' : 'OK-9615',		 # 'VSO-10' # '' # 'O' # 
@@ -1714,20 +1810,19 @@ kglid = {
 		'34D817' : 'GBIZE',		 # 'TB-9 Tampico' # '' # 'O' # 
 		'34DA57' : 'OK-8103',		 # 'L 13 SEH Vivat' # 'V03' # 'O' # 
 		'34DC32' : 'G-CFTH',		 # 'SZD-50 Puchacz' # 'FTH' # 'O' # 
-		'35053C' : 'DMDAD',		 # 'Flight Design CTSW' # '' # 'F' # 
+		'35053C' : 'DMDAD',		 # 'Flight Design CTSW' # '' # 'O' # 
 		'353800' : 'SP-',		 # 'Other' # 'ZK' # 'O' # 
 		'353812' : 'DEMO-07',		 # 'Unknown' # '' # 'O' # 
 		'35431F' : 'LV-ERN',		 # 'ASK-13' # '1B' # 'O' # 
 		'354D15' : 'viewAir',		 # 'Ground Station' # '.eu' # 'O' # 
 		'354E0B' : '9711',		 # 'Blanik' # 'V1' # 'O' # 
-		'35720E' : 'Crew_03',		 # 'Ground Station' # 'C03' # 'O' # 
+		'35720E' : 'viewAir',		 # 'Unknown' # '041' # 'O' # 
 		'358979' : 'OK-2732',		 # 'Blanik' # '' # 'O' # 
 		'359698' : 'g-dear',		 # 'PIK-20 D' # 'ear' # 'F' # 
 		'35971E' : 'HANAE',		 # 'Motorplane' # 'HAE' # 'O' # 
 		'3597E1' : 'HANAE',		 # 'Motorplane' # 'HAE' # 'O' # 
 		'359C45' : 'EC-AC3',		 # 'UFO' # 'AC3' # 'O' # 
 		'359F1E' : 'HANAE',		 # 'Ultralight' # 'HAE' # 'O' # 
-		'35A32E' : 'OK-6999',		 # 'Blanik' # '699' # 'O' # 
 		'35AF41' : 'OK-9617',		 # 'VSO-10' # '94' # 'O' # 
 		'35B448' : '54-20',		 # 'Ultralight' # '192' # 'F' # 
 		'35B55B' : 'OK-9107',		 # 'L 13 SEH Vivat' # '107' # 'O' # 
@@ -1795,6 +1890,7 @@ kglid = {
 		'385B2A' : '48-05',		 # 'HangGlider' # 'SEB' # 'O' # 
 		'385B4F' : 'OK-8440',		 # 'LET L-33 Solo' # 'L33' # 'O' # 
 		'385F3C' : 'OK-6426',		 # 'LET L-33 Solo' # 'L33' # 'O' # 
+		'386011' : 'OK-1911',		 # 'ASW-15' # 'ZP' # 'O' # 
 		'386062' : 'OM2APF',		 # 'Ground Station' # '' # 'O' # 
 		'3865D4' : 'F-BZOU',		 # 'PA-18 Super Cub' # 'OU' # 'I' # 
 		'386D9B' : 'F-PFDT',		 # 'DynAero MCR-4S' # 'GSD' # 'I' # 
@@ -1814,7 +1910,7 @@ kglid = {
 		'38BA1B' : 'F-CJRC',		 # 'ASH-30' # 'RC' # 'I' # 
 		'38BBFB' : 'F-CJPG',		 # 'ASH-25' # 'PG' # 'F' # 
 		'38BEBC' : 'F-JVEJ',		 # 'WT9 Dynamic' # '' # 'I' # 
-		'38C6FB' : 'F-CZCX',		 # 'Arcus S' # 'AH' # 'F' # 
+		'38C6FB' : 'F-CZCX',		 # 'Arcus S' # 'AH2' # 'F' # 
 		'38CB1C' : 'F-JRYJ',		 # 'Ikarus C42 B' # 'YJ' # 'F' # 
 		'38CB56' : 'LY-GHY',		 # 'SZD-48-3 Jantar Std 3' # 'HY' # 'O' # 
 		'38D99B' : 'NOREG',		 # '' # '' # 'F' # 
@@ -1824,6 +1920,7 @@ kglid = {
 		'38DADB' : 'NOREG',		 # '' # '' # 'F' # 
 		'38DBBB' : 'NOREG',		 # '' # '' # 'F' # 
 		'38DE3E' : 'NOREG',		 # 'Nimbus 2' # 'WC' # 'O' # 
+		'38E75B' : 'F-CIFF',		 # 'Arcus T' # 'FP' # 'F' # 
 		'38E81C' : 'F-JDYM',		 # 'Apis 2' # 'FM' # 'F' # 
 		'38E8DB' : 'F-CGVS',		 # 'Libelle Std' # 'JS' # 'F' # 
 		'38E9BB' : 'F-CMHN',		 # 'ASW-27' # 'H' # 'I' # 
@@ -1841,7 +1938,7 @@ kglid = {
 		'3908FB' : 'F-CLDF',		 # 'Arcus M' # 'DF' # 'F' # 
 		'3909AF' : 'F-GCNP',		 # 'Cessna 152' # '' # 'F' # 
 		'390F3B' : 'F-CBER',		 # 'Arcus S' # 'ER' # 'I' # 
-		'390FBB' : 'F-CJYB',		 # 'Duo Discus xlt' # 'YB' # 'F' # 
+		'390FBB' : 'D-2476',		 # 'LS-4' # '' # 'F' # 
 		'3919FB' : 'F-CUBE',		 # 'SZD-54 Perkoz' # '' # 'F' # 
 		'391A0C' : 'F-GGQM',		 # 'DR-400' # '' # 'I' # 
 		'391C3C' : 'F-JRDN',		 # 'Taurus' # '' # 'I' # 
@@ -1850,10 +1947,11 @@ kglid = {
 		'39207B' : 'F-CAGA',		 # 'Discus 2' # 'F3' # 'F' # 
 		'39255B' : 'F-CFDY',		 # 'Discus 2' # 'F2' # 'I' # 
 		'392631' : 'D-2247',		 # 'ASW-28' # '' # 'F' # 
-		'39284C' : 'N11843',		 # 'Cessna 152' # 'N11' # 'O' # 
 		'392A5B' : 'F-CJDR',		 # 'SF-25' # 'DR' # 'F' # 
 		'392A9B' : 'F-CGCI',		 # 'ASK-21' # 'CI' # 'F' # 
 		'3930DC' : '25AAV',		 # 'Taurus' # 'HF' # 'I' # 
+		'39327B' : 'F-CFDM',		 # 'Discus' # 'D9' # 'I' # 
+		'39349B' : 'F-CEBJ',		 # 'Libelle Std' # '723' # 'F' # 
 		'393820' : 'F-GOBA',		 # 'Robinson R44' # '' # 'I' # 
 		'393826' : 'OK-6838',		 # 'Blanik' # '838' # 'O' # 
 		'39384B' : 'OM-9509',		 # 'VSO-10' # 'XV' # 'O' # 
@@ -1909,7 +2007,7 @@ kglid = {
 		'3AB85A' : 'viewAir',		 # 'Ground Station' # '.eu' # 'O' # 
 		'3AD90D' : 'TAHIPPG',		 # 'Paraglider' # '70' # 'O' # 
 		'3B06F3' : 'HB-CQL',		 # 'Cessna 172' # 'CQL' # 'I' # 
-		'3B099D' : '-f1',		 # 'Different Aircraft' # '-f1' # 'I' # 
+		'3B099D' : 'NOREG',		 # '' # '' # 'I' # 
 		'3B1E27' : 'OK-1368',		 # 'Bergfalke IV' # 'RZK' # 'O' # 
 		'3B223D' : 'HA-TUR',		 # 'PA-28' # 'HUR' # 'O' # 
 		'3B232F' : 'OK-0931',		 # 'Blanik' # '13' # 'O' # 
@@ -1925,37 +2023,40 @@ kglid = {
 		'3B5678' : 'AK-Most',		 # 'VT-116 Orlik II' # '4' # 'O' # 
 		'3B5839' : 'OM-MPX',		 # 'Z-226 trener' # 'MPX' # 'O' # 
 		'3B5939' : 'viewAir',		 # 'Unknown' # '' # 'O' # 
-		'3B5B11' : 'HA-1205',		 # 'SF-25' # '' # 'O' # 
 		'3B6846' : 'FSE-02.',		 # 'Paraglider' # 'F02' # 'O' # 
 		'3B6860' : 'PH-260',		 # 'Ka-6 cr' # '' # 'O' # 
 		'3B6A26' : 'OKSUL01',		 # 'FM250 Vampire' # '' # 'O' # 
 		'3B6F33' : 'AZM-3',		 # 'Unknown' # '' # 'O' # 
-		'3BDA5E' : 'LY-GHG',		 # 'SZD-48-1 Jantar Std 2' # 'G' # 'O' # 
+		'3B7430' : 'G-CKBD',		 # 'Astir CS' # 'KBD' # 'F' # 
 		'3BDF78' : 'OM-0102',		 # 'L 13 SEH Vivat' # '102' # 'O' # 
 		'3C243E' : 'OK-6676',		 # 'Cirrus Std' # 'ZF' # 'O' # 
 		'3C2C22' : 'OK-7506',		 # 'VSO-10' # '36' # 'O' # 
 		'3C2C64' : '57-69',		 # 'HangGlider' # '69' # 'O' # 
 		'3C327E' : 'HA-IJA',		 # 'Cessna 182' # 'IJA' # 'O' # 
-		'3C3C35' : '54-09',		 # 'Unknown' # '09' # 'O' # 
-		'3C3E41' : 'OK-6722',		 # 'ASW-20' # 'KL' # 'O' # 
+		'3C3C35' : '54-09',		 # 'Paraglider' # '' # 'O' # 
+		'3C3E41' : 'OK-MARA',		 # 'ASW-20' # 'KL' # 'O' # 
 		'3C411F' : 'OM-2400',		 # 'ASW-15' # 'AP' # 'O' # 
 		'3C4D3E' : 'OK-0971',		 # 'Cirrus Std' # 'TI' # 'O' # 
 		'3C4F4B' : 'HA-BEY',		 # 'PA-28' # 'HEY' # 'O' # 
 		'3C5C5D' : 'AZM-4',		 # 'Unknown' # '' # 'O' # 
+		'3C5F77' : 'HA-8450',		 # 'Ka-8' # '' # 'O' # 
 		'3C612D' : 'F-CIPR',		 # 'LS-6 18' # 'IP' # 'I' # 
 		'3C6505' : 'D-KWAD',		 # 'DG-1000 T' # '8D' # 'F' # 
 		'3C922D' : 'LY-GBG',		 # 'SZD-48-3 Jantar Std 3' # 'BG' # 'O' # 
-		'3CA966' : 'LY-MZL',		 # 'SZD-41 Jantar Std' # 'LM' # 'O' # 
 		'3CAB51' : 'NOREG',		 # 'Blanik' # 'LT2' # 'O' # 
-		'3CC813' : 'N24',		 # 'Cessna 150' # 'N24' # 'O' # 
+		'3CC813' : 'N11824',		 # 'Cessna 150' # 'N24' # 'O' # 
+		'3CCE71' : 'D-CFMF',		 # 'Motorplane' # 'FMF' # 'I' # 
+		'3D04DC' : 'D-EACA',		 # 'Other' # '' # 'I' # 
 		'3D04F3' : 'D-EACX',		 # 'TB-20 Trinidad' # 'CX' # 'I' # 
 		'3D0501' : 'D-EADL',		 # 'DA20 Katana' # '' # 'I' # 
 		'3D0542' : 'D-EAFY',		 # 'Motorplane' # '' # 'I' # 
+		'3D055D' : 'D-EAGZ',		 # 'DR-400' # '' # 'F' # 
 		'3D0586' : 'D-EAIO',		 # 'DR-300' # 'Sky' # 'I' # 
 		'3D05AD' : 'D-EAKB',		 # 'Cessna 150' # 'KB' # 'I' # 
 		'3D05BF' : 'D-KIBG',		 # 'miniLAK FES' # 'I' # 'I' # 
 		'3D0667' : 'D-EARF',		 # 'DR-400' # 'RF' # 'F' # 
 		'3D06BE' : 'D-EAUO',		 # 'DR-400' # '' # 'F' # 
+		'3D076A' : 'D-EBBE',		 # 'Jodel D140' # '' # 'F' # 
 		'3D0780' : 'D-EBCA',		 # 'Grumman AA-5' # '' # 'I' # 
 		'3D07B6' : 'D-EBEC',		 # 'DA20 Katana' # '' # 'F' # 
 		'3D0802' : 'D-EBHA',		 # 'DR-400' # 'HA' # 'F' # 
@@ -1969,8 +2070,10 @@ kglid = {
 		'3D0914' : 'D-EBRO',		 # 'Cessna 172' # '' # 'F' # 
 		'3D0929' : 'D-EBSJ',		 # 'DR-400' # 'SJ' # 'I' # 
 		'3D0930' : 'D-EBSQ',		 # 'DR-400' # 'SQ' # 'O' # 
+		'3D0943' : 'D-EBTJ',		 # 'Vans RV-6a' # '' # 'I' # 
+		'3D0979' : 'D-EBVL',		 # 'Motorplane' # '' # 'I' # 
 		'3D097F' : 'D-EBVR',		 # 'PA-28' # '' # 'I' # 
-		'3D099D' : 'WV',		 # 'Towplane' # 'WV' # 'F' # 
+		'3D099D' : 'NOREG',		 # '' # '' # 'F' # 
 		'3D09F9' : 'D-ECAJ',		 # 'DA20 Katana' # '' # 'I' # 
 		'3D0A69' : 'D-ECER',		 # 'DR-400' # 'ER' # 'I' # 
 		'3D0B22' : 'D-XXLU',		 # 'DA20 Katana' # 'DLU' # 'F' # 
@@ -1978,12 +2081,13 @@ kglid = {
 		'3D0B74' : 'D-ECOY',		 # 'Piaggio P.149' # 'OY' # 'I' # 
 		'3D0B97' : 'D-ECQH',		 # 'Cessna 172' # 'QH' # 'O' # 
 		'3D0C39' : 'D-ECWN',		 # 'DR-400' # 'WN' # 'I' # 
+		'3D0C9A' : 'D-EDAG',		 # 'Mooney' # '' # 'I' # 
 		'3D0CB5' : 'D-EDBH',		 # 'Cessna 182' # 'BH' # 'F' # 
 		'3D0CE8' : 'D-EDDG',		 # 'Cessna 172' # 'DG' # 'I' # 
-		'3D0CFB' : 'D-EDDZ',		 # 'PZL-104 Wilga' # '' # 'F' # 
+		'3D0D03' : 'D-EDEH',		 # 'DR-400' # '' # 'I' # 
 		'3D0D59' : 'D-EDHP',		 # 'Unknown' # '' # 'F' # 
 		'3D0D5A' : 'D-EDHQ',		 # 'MS-893 Commodore' # '' # 'I' # 
-		'3D0DAC' : 'D-EDKU',		 # 'PA-28' # 'DKU' # 'I' # 
+		'3D0DAC' : 'NOREG',		 # '' # '' # 'I' # 
 		'3D0DAE' : 'D-EDKW',		 # 'Cessna 172' # 'WKW' # 'F' # 
 		'3D0DFE' : 'D-EDNY',		 # 'Grumman AA-5' # '' # 'I' # 
 		'3D0E09' : 'NOREG',		 # '' # '' # 'F' # 
@@ -1996,6 +2100,7 @@ kglid = {
 		'3D0EE4' : 'D-EDWU',		 # 'Aquila A210' # '' # 'I' # 
 		'3D0F3E' : 'D-EEAG',		 # 'JOB 15' # '' # 'F' # 
 		'3D0FA6' : 'D-EEEG',		 # 'Motorplane' # 'DEG' # 'I' # 
+		'3D0FAB' : 'D-EEEL',		 # 'PA-28' # 'EL' # 'I' # 
 		'3D0FCA' : 'D-EEFQ',		 # 'Cessna 172' # 'DFQ' # 'I' # 
 		'3D0FFC' : 'D-EEHO',		 # 'PA-28' # 'DHO' # 'F' # 
 		'3D1008' : 'D-EEIA',		 # 'DR-400' # '' # 'F' # 
@@ -2005,6 +2110,7 @@ kglid = {
 		'3D10B9' : 'D-EEOV',		 # 'DR-400' # 'OV' # 'I' # 
 		'3D10FE' : 'D-EERM',		 # 'PA-28' # '' # 'F' # 
 		'3D1114' : 'D-EESI',		 # 'Cessna 172' # 'SI' # 'I' # 
+		'3D1132' : 'D-EETM',		 # 'DR-400' # '' # 'I' # 
 		'3D1143' : 'DEEUD',		 # 'TB-20 Trinidad' # 'UD' # 'I' # 
 		'3D1148' : 'D-EEUI',		 # 'MS-892 Commodore' # '' # 'I' # 
 		'3D114E' : 'D-EEUO',		 # 'Rallye 180T-D' # '' # 'F' # 
@@ -2017,6 +2123,7 @@ kglid = {
 		'3D12BE' : 'D-EFIS',		 # 'SportCruiser' # '' # 'F' # 
 		'3D12CF' : 'D-EFJJ',		 # 'Motorplane' # '' # 'F' # 
 		'3D12E5' : 'W54',		 # 'DR-400' # 'W54' # 'I' # 
+		'3D12F8' : 'D-EFKY',		 # 'Unknown' # '' # 'I' # 
 		'3D1321' : 'D-EFMN',		 # 'DR-400' # '' # 'F' # 
 		'3D134E' : 'D-EFOG',		 # 'Maule M-7-235' # 'OG' # 'I' # 
 		'3D13A0' : 'D-EFRK',		 # 'Mooney' # '' # 'F' # 
@@ -2030,6 +2137,7 @@ kglid = {
 		'3D1544' : 'D-EGHO',		 # 'Cessna 182' # 'HO' # 'I' # 
 		'3D1569' : 'D-EGIZ',		 # 'DR-400' # '' # 'F' # 
 		'3D15A3' : 'D-EGLF',		 # 'Cessna 182' # 'LF' # 'I' # 
+		'3D15CD' : 'D-EGMV',		 # 'Cessna 152' # '' # 'I' # 
 		'3D15D5' : 'D-EGND',		 # 'MS-893 Commodore' # '' # 'F' # 
 		'3D15DC' : 'D-EGNK',		 # 'MS-893 Commodore' # '' # 'O' # 
 		'3D15E1' : 'D-EGNP',		 # 'DA40' # '' # 'F' # 
@@ -2045,7 +2153,7 @@ kglid = {
 		'3D17F2' : 'D-EHHY',		 # 'DR-250' # '' # 'I' # 
 		'3D1837' : 'D-EHKP',		 # 'PA-28' # '' # 'I' # 
 		'3D1853' : 'D-EHLR',		 # 'DR-400' # '' # 'I' # 
-		'3D1864' : '_mi',		 # 'Towplane' # '_mi' # 'I' # 
+		'3D1864' : 'NOREG',		 # '' # '' # 'I' # 
 		'3D18FC' : 'D-EHSE',		 # 'DR-400' # '' # 'I' # 
 		'3D1930' : 'D-EHUE',		 # 'Cessna 152' # '' # 'O' # 
 		'3D1945' : 'D-EHUZ',		 # 'Cessna 172' # 'UZ' # 'I' # 
@@ -2065,6 +2173,8 @@ kglid = {
 		'3D1CF3' : 'D-EJFF',		 # 'PA-28' # 'FF' # 'I' # 
 		'3D1D38' : 'D-EJHW',		 # 'DR-400' # 'HW' # 'I' # 
 		'3D1D5B' : 'D-EJJF',		 # 'Tecnam  P2002 JF' # 'DJF' # 'I' # 
+		'3D1E40' : 'D-EJSA',		 # 'Mooney' # '' # 'I' # 
+		'3D1EA9' : 'DEJWB',		 # 'PA-28' # '' # 'F' # 
 		'3D1F63' : 'D-EKDF',		 # 'Towplane' # '' # 'F' # 
 		'3D1F64' : 'D-EKDG',		 # 'DR-400' # '' # 'F' # 
 		'3D1F7E' : 'D-EKEG',		 # 'Cessna 172' # '' # 'I' # 
@@ -2089,8 +2199,9 @@ kglid = {
 		'3D24FE' : 'D-EMGK',		 # 'DV20 Katana' # '' # 'I' # 
 		'3D255B' : 'OK-0105',		 # 'L 13 SEH Vivat' # '105' # 'O' # 
 		'3D256E' : 'D-EMKS',		 # 'Cessna 182' # '' # 'F' # 
+		'3D25C9' : 'D-EMOF',		 # 'Motorplane' # '' # 'F' # 
 		'3D275C' : 'D-ENDS',		 # 'Cessna 206' # 'FFD' # 'I' # 
-		'3D2773' : 'DENEP',		 # 'Unknown' # '' # 'I' # 
+		'3D2773' : 'DENEP',		 # 'Bolkow 208' # '' # 'I' # 
 		'3D2785' : 'D-ENFH',		 # 'MS-893 Commodore' # '' # 'I' # 
 		'3D2834' : 'D-ENMA',		 # 'DA40' # '' # 'I' # 
 		'3D2836' : 'DENMC',		 # 'Mooney' # '' # 'F' # 
@@ -2107,6 +2218,8 @@ kglid = {
 		'3D2AD0' : 'D-EOLS',		 # 'DR-300' # 'LS' # 'F' # 
 		'3D2B38' : 'D-EOPS',		 # 'Cessna 152' # '' # 'F' # 
 		'3D2DB3' : 'D-EPOD',		 # 'Cessna 177' # 'OD' # 'I' # 
+		'3D2DD7' : 'D-EPPN',		 # 'Motorplane' # '' # 'F' # 
+		'3D2E44' : 'D-EPTS',		 # 'Motorplane' # '' # 'I' # 
 		'3D2E66' : 'D-EPVA',		 # 'PA-28' # '' # 'I' # 
 		'3D2EF0' : 'D-EQAI',		 # 'DA40' # 'AI' # 'I' # 
 		'3D2F0C' : 'D-XXBK',		 # 'Aquila A210' # 'DBK' # 'F' # 
@@ -2129,7 +2242,6 @@ kglid = {
 		'3D3458' : 'D-ESBO',		 # 'Cessna 172' # '' # 'I' # 
 		'3D3460' : 'D-ESBW',		 # 'PA-28' # '' # 'I' # 
 		'3D3473' : 'D-ESCP',		 # 'DA20 Katana' # '' # 'F' # 
-		'3D347F' : 'OK-0569',		 # 'Cirrus Std' # 'AW' # 'O' # 
 		'3D349D' : 'D-ESEF',		 # 'Aquila A210' # 'EF' # 'I' # 
 		'3D349E' : 'D-ESEG',		 # 'Motorplane' # 'EG' # 'I' # 
 		'3D34BE' : 'D-ESFM',		 # 'Cessna 172' # '' # 'I' # 
@@ -2162,12 +2274,14 @@ kglid = {
 		'3D4269' : 'D-EXKB',		 # 'Husky A-1' # '' # 'F' # 
 		'3D42F8' : 'D-EXPO',		 # 'PA-28' # '' # 'I' # 
 		'3D43ED' : 'D-EXYZ',		 # 'Husky A-1' # 'YZ' # 'F' # 
+		'3D4512' : 'LAGUNA',		 # 'UFO' # 'R32' # 'F' # 
 		'3D4562' : 'D-EYLA',		 # 'Cessna 182' # '' # 'I' # 
 		'3D45F4' : 'D-EYSY',		 # 'Cessna 172' # '' # 'F' # 
 		'3D46C7' : 'NOREG',		 # '' # '' # 'F' # 
 		'3D471C' : 'D-EZEI',		 # 'PA-28' # '' # 'I' # 
 		'3D476D' : 'D-EZHL',		 # 'DR-400' # 'DHL' # 'I' # 
 		'3D47D5' : 'D-EZLL',		 # 'Cessna 172' # '' # 'F' # 
+		'3D47F5' : 'D-EZMR',		 # 'PA-28' # '' # 'I' # 
 		'3D4F14' : 'OM-IFE',		 # 'Z-226 trener' # 'IFE' # 'O' # 
 		'3D542D' : 'HA-ERF',		 # 'Cessna 152' # 'HRF' # 'O' # 
 		'3D5C75' : 'LV-EMB',		 # 'PW-5' # 'PJ' # 'O' # 
@@ -2178,6 +2292,7 @@ kglid = {
 		'3DBE2D' : 'OK-4069',		 # 'Ka-7' # 'K7' # 'O' # 
 		'3DBF7B' : 'OM-6503',		 # 'VSO-10' # '13' # 'O' # 
 		'3DCC09' : 'OK-6706',		 # 'Blanik' # '06' # 'O' # 
+		'3DD2B2' : 'D-HAAS',		 # 'AS 350' # '' # 'I' # 
 		'3DD2D3' : 'D-HABZ',		 # 'Robinson R44' # '' # 'I' # 
 		'3DD2F3' : 'D-HADF',		 # 'BK 117' # '' # 'I' # 
 		'3DD2F9' : 'D-HADL',		 # 'BK 117' # '' # 'I' # 
@@ -2262,6 +2377,7 @@ kglid = {
 		'3DF746' : 'D-HNWW',		 # 'BK 117' # 'POL' # 'I' # 
 		'3DF8EE' : 'D-HONE',		 # 'EC 135' # 'POL' # 'I' # 
 		'3DF926' : 'D-HOPI',		 # 'EC 135' # 'ADA' # 'I' # 
+		'3DF9D2' : 'D-HOVY',		 # 'Robinson R44' # '' # 'I' # 
 		'3DFF86' : 'D-HRAC',		 # 'Helicopter' # 'ADA' # 'I' # 
 		'3E0031' : 'D-HRGR',		 # 'EC 135' # '' # 'I' # 
 		'3E00F1' : 'D-HROB',		 # 'Robinson R44' # '' # 'I' # 
@@ -2305,6 +2421,7 @@ kglid = {
 		'3E1488' : 'D-HYYY',		 # 'EC 135' # 'DRF' # 'I' # 
 		'3E18D1' : 'D-IAPD',		 # 'Unknown' # '' # 'F' # 
 		'3E1A8A' : 'D-IBGC',		 # 'Motorplane' # '' # 'I' # 
+		'3E1C2D' : 'D-IBWF',		 # 'Motorplane' # '' # 'F' # 
 		'3E2D0A' : 'HA-TOS',		 # 'MS-893 Commodore' # 'HOS' # 'O' # 
 		'3E2D0F' : 'BSK-001',		 # 'Paraglider' # '' # 'O' # 
 		'3E3458' : 'AKM4',		 # 'Unknown' # '' # 'O' # 
@@ -2315,6 +2432,7 @@ kglid = {
 		'3E350E' : 'D-ILHE',		 # 'Motorplane' # 'LH' # 'I' # 
 		'3E3C2D' : 'OK-0211',		 # 'Blanik' # 'N' # 'O' # 
 		'3E40E7' : 'D-KHYL',		 # 'DG-1000 T' # 'HI5' # 'F' # 
+		'3E5BF1' : 'NOREG',		 # 'ASH-31 MI' # 'ITI' # 'F' # 
 		'3E5BF2' : 'D-KAAC',		 # 'Arcus M' # 'DW' # 'F' # 
 		'3E5BF9' : 'D-KAAJ',		 # 'ASH-31 MI' # 'AM' # 'I' # 
 		'3E5C27' : 'D-KACD',		 # 'SF-25' # 'CD' # 'I' # 
@@ -2327,6 +2445,7 @@ kglid = {
 		'3E5C6B' : 'D-KAET',		 # 'SF-25' # 'ET' # 'F' # 
 		'3E5C84' : 'D-KAFS',		 # 'Arcus M' # 'FS' # 'F' # 
 		'3E5C8D' : 'D-KAGB',		 # 'SF-25' # 'GB' # 'I' # 
+		'3E5C8F' : 'D-KAGD',		 # 'ASH-26 E' # 'GD' # 'F' # 
 		'3E5C95' : 'D-KAGJ',		 # 'SF-25' # 'GJ' # 'F' # 
 		'3E5C96' : 'D-KAGK',		 # 'SF-25' # '' # 'I' # 
 		'3E5C99' : 'D-KAGN',		 # 'SF-25' # 'GN' # 'I' # 
@@ -2363,6 +2482,8 @@ kglid = {
 		'3E5EC7' : 'D-KBBZ',		 # 'Carat' # 'BZ' # 'I' # 
 		'3E5ED0' : 'D-KBCI',		 # 'Arcus M' # '' # 'I' # 
 		'3E5EF1' : 'D-KBDP',		 # 'ASH-26 E' # 'DP' # 'I' # 
+		'3E5F09' : 'NOREG',		 # '' # '' # 'F' # 
+		'3E5F2D' : 'D-KBFX',		 # 'Ventus ct' # 'FX' # 'F' # 
 		'3E5F30' : 'D-KBGA',		 # 'ASG-32 MI' # 'GA' # 'F' # 
 		'3E5F42' : 'D-KBGS',		 # 'LS-8 st 18' # 'T2' # 'I' # 
 		'3E5F51' : 'D-KBHH',		 # 'Ventus ct' # 'CS' # 'F' # 
@@ -2371,6 +2492,7 @@ kglid = {
 		'3E5FF4' : 'D-KBNO',		 # 'DG-500' # 'iNO' # 'F' # 
 		'3E6020' : 'D-KBPG',		 # 'Arcus M' # 'BPG' # 'F' # 
 		'3E6050' : 'D-KBRC',		 # 'ASH-31 MI' # 'RC' # 'I' # 
+		'3E6052' : 'D-kbre',		 # 'Stemme S-10' # '' # 'F' # 
 		'3E6072' : 'D-KBSK',		 # 'SF-25' # 'SK' # 'F' # 
 		'3E6076' : 'D-KBSO',		 # 'Glasflugel 304S T' # 'SO' # 'I' # 
 		'3E609D' : 'D-KBUB',		 # 'SF-25' # '' # 'F' # 
@@ -2380,6 +2502,7 @@ kglid = {
 		'3E60BC' : 'D-KBVG',		 # 'Ventus 2cM' # 'VG' # 'F' # 
 		'3E60F0' : 'D-KBXG',		 # 'Duo Discus xlt' # 'XG' # 'F' # 
 		'3E6122' : 'D-KBZE',		 # 'Arcus M' # '2B' # 'I' # 
+		'3E6182' : 'D-KCCW',		 # 'HK36 Super Dimona' # '' # 'F' # 
 		'3E618C' : 'D-KCDG',		 # 'DG-400' # 'DG' # 'F' # 
 		'3E61A1' : 'D-KCEB',		 # 'EB 28' # 'PWR' # 'F' # 
 		'3E61BB' : 'D-KCFB',		 # 'Motorglider' # 'FB' # 'I' # 
@@ -2404,6 +2527,7 @@ kglid = {
 		'3E63E9' : 'D-KDAN',		 # 'HK36 Super Dimona' # 'AN' # 'F' # 
 		'3E63FF' : 'D-KDBJ',		 # 'SF-25' # 'BJ' # 'I' # 
 		'3E6416' : 'D-KDCG',		 # 'SF-25' # 'CG' # 'F' # 
+		'3E644D' : 'D-KDEJ',		 # 'SF-25' # '' # 'I' # 
 		'3E644F' : 'D-KDEL',		 # 'DG-808 C' # 'NL' # 'I' # 
 		'3E6468' : 'D-KDFK',		 # 'ASH-26 E' # 'AC' # 'F' # 
 		'3E6496' : 'D-KDHE',		 # 'Antares 20 E' # 'IHE' # 'F' # 
@@ -2413,8 +2537,9 @@ kglid = {
 		'3E64FA' : 'D-KDLA',		 # 'Grob G109' # '' # 'I' # 
 		'3E64FE' : 'D-KDLE',		 # 'RF 4' # '' # 'F' # 
 		'3E6512' : 'D-KDLY',		 # 'Duo Discus xlt' # 'BZ' # 'F' # 
-		'3E6515' : 'D-KDMB',		 # 'ASH-31 MI' # 'MB' # 'F' # 
+		'3E6515' : 'NOREG',		 # 'ASH-31 MI' # '' # 'F' # 
 		'3E651D' : 'D-KDMJ',		 # 'HK36 Super Dimona' # 'MJ' # 'F' # 
+		'3E6540' : 'D-KDNS',		 # 'ASG-29E' # '99' # 'F' # 
 		'3E6552' : 'D-KDOK',		 # 'ASH-31 MI' # 'AH' # 'F' # 
 		'3E6554' : 'D-KDOM',		 # 'HK36 Super Dimona' # '' # 'F' # 
 		'3E6577' : 'D-KDPV',		 # 'HK36 Super Dimona' # '' # 'I' # 
@@ -2424,22 +2549,25 @@ kglid = {
 		'3E65D6' : 'D-KDTM',		 # 'JS-1 C21' # 'MD' # 'I' # 
 		'3E65EC' : 'D-KDUI',		 # 'DG-1000 T' # 'AIR' # 'I' # 
 		'3E6624' : 'D-KDWM',		 # 'Discus 2c' # 'WM' # 'I' # 
-		'3E6681' : 'D-KEAB',		 # 'ASH-26 E' # 'AB' # 'I' # 
+		'3E6681' : 'NOREG',		 # '' # '' # 'I' # 
 		'3E669E' : 'D-KEBE',		 # 'Ventus' # '7X' # 'I' # 
 		'3E66AE' : 'D-KEBU',		 # 'ASH-31 MI' # 'EB' # 'I' # 
+		'3E66D6' : 'D-KEDI',		 # 'DG-800' # 'RF' # 'I' # 
 		'3E66E9' : 'D-KEEB',		 # 'SF-25' # '' # 'F' # 
 		'3E671A' : 'D-KEFY',		 # 'SF-25' # 'FY' # 'I' # 
 		'3E6728' : 'AZM-5',		 # 'Unknown' # '' # 'O' # 
 		'3E673B' : 'D-KEHF',		 # 'DG-400' # 'HF' # 'I' # 
+		'3E6740' : 'D-KEHK',		 # 'Antares 20 E' # 'HK' # 'I' # 
 		'3E675D' : 'D-KEIN',		 # 'Arcus T' # 'V8' # 'F' # 
 		'3E676B' : 'NOREG',		 # 'UFO' # 'JB' # 'F' # 
 		'3E67A3' : 'D-KELF',		 # 'ASW-24 E' # 'LF' # 'F' # 
 		'3E67BA' : 'D-KEMC',		 # 'Discus 2cT' # 'MC' # 'F' # 
 		'3E67F1' : 'D-KEOF',		 # 'Motorglider' # 'OF' # 'F' # 
+		'3E67FA' : 'D-KEOO',		 # 'Ventus 2cM' # '3P' # 'I' # 
 		'3E67FD' : 'D-XXOR',		 # 'SF-25' # 'OR' # 'I' # 
 		'3E6866' : 'D-KESS',		 # 'SF-25' # '' # 'I' # 
 		'3E68AC' : 'D-KEVK',		 # 'Ventus 2cM' # 'VK' # 'F' # 
-		'3E68BF' : 'D-KEWD',		 # 'Grob G109' # '' # 'F' # 
+		'3E68BF' : 'D-KEWD',		 # 'Grob G109' # '' # 'I' # 
 		'3E68E8' : 'D-KEXS',		 # 'Arcus M' # 'XS' # 'I' # 
 		'3E692D' : 'NOREG',		 # 'A380' # 'YP' # 'O' # 
 		'3E6930' : 'D-KFAM',		 # 'Ventus 2cxT' # 'A2' # 'F' # 
@@ -2449,7 +2577,6 @@ kglid = {
 		'3E696A' : 'D-KFCS',		 # 'ASH-25' # 'CS' # 'F' # 
 		'3E6999' : 'DKFEN',		 # 'DG-808 B' # 'N' # 'F' # 
 		'3E69A3' : 'D-KFEX',		 # 'Ventus 3T' # 'EK' # 'F' # 
-		'3E69B0' : 'FK',		 # 'DG-800' # 'FK' # 'I' # 
 		'3E69B5' : 'D-KFFP',		 # 'ASG-32 MI' # '72' # 'I' # 
 		'3E69BC' : 'D-KFFW',		 # 'Ventus 2ct' # 'FW' # 'F' # 
 		'3E69D2' : 'D-KFGS',		 # 'Ventus 2cM' # 'SC' # 'I' # 
@@ -2470,27 +2597,30 @@ kglid = {
 		'3E6C1D' : 'D-KGDH',		 # 'ASG-29E' # '' # 'F' # 
 		'3E6C5D' : 'FT',		 # 'Grob G109' # 'FT' # 'F' # 
 		'3E6C7C' : 'D-KGGY',		 # 'Ventus 3M' # '4i' # 'I' # 
+		'3E6CAC' : 'D-KGIU',		 # 'DG-1000 T' # 'GIU' # 'I' # 
+		'3E6CD6' : 'D-KGKK',		 # 'Arcus M' # 'KK' # 'F' # 
 		'3E6CF1' : 'D-KGLL',		 # 'Ventus 3F' # 'LL' # 'F' # 
 		'3E6D03' : 'D-KGMD',		 # 'ASH-26 E' # 'MD' # 'F' # 
 		'3E6D53' : 'D-KGPF',		 # 'Arcus M' # 'PF' # 'F' # 
 		'3E6D5A' : 'D-KGPM',		 # 'Arcus M' # 'PM' # 'F' # 
 		'3E6D5F' : 'D-KGPR',		 # 'L 13 SEH Vivat' # 'PR' # 'I' # 
 		'3E6D9C' : 'D-KGSA',		 # 'ASG-29E' # '29' # 'I' # 
-		'3E6DB0' : 'D-KGSU',		 # 'ASG-29E' # 'SU' # 'F' # 
+		'3E6DB0' : 'NOREG',		 # '' # '' # 'F' # 
 		'3E6DC9' : 'D-KGTT',		 # 'ASG-29E' # '2T' # 'I' # 
 		'3E6DD1' : 'D-KGUB',		 # 'HK36 Super Dimona' # '' # 'F' # 
-		'3E6DE8' : 'D-KGUY',		 # 'Ventus 2cxM' # 'X' # 'F' # 
 		'3E6DF6' : 'D-KGVM',		 # 'Arcus M' # 'VM' # 'F' # 
 		'3E6DFC' : 'NOREG',		 # '' # '' # 'I' # 
 		'3E6E0B' : 'D-KGWH',		 # 'Grob G109' # 'WH' # 'F' # 
 		'3E6E93' : 'D-KHBN',		 # 'Arcus T' # '' # 'F' # 
-		'3E6EC1' : 'D-KHDH',		 # 'ASW-28t' # 'DH' # 'I' # 
 		'3E6EDF' : 'D-KHEL',		 # 'Arcus M' # 'EL' # 'I' # 
 		'3E6EEF' : 'D-KHFB',		 # 'HK36 Super Dimona' # 'FB' # 'I' # 
 		'3E6F11' : 'D-KHGJ',		 # 'ASH-31 MI' # 'GJ' # 'I' # 
+		'3E6F1A' : 'D-KHGS',		 # 'Ventus bT' # 'BM' # 'F' # 
+		'3E6F40' : 'D-KHIE',		 # 'ASH-26 E' # 'Hi' # 'F' # 
 		'3E6F41' : 'D-KHIF',		 # 'Nimbus 3' # 'XZ' # 'I' # 
 		'3E6F47' : 'D-KHIL',		 # 'Grob G109' # '' # 'I' # 
 		'3E6F4D' : 'NOREG',		 # 'H36 Dimona' # 'IR' # 'F' # 
+		'3E6F68' : 'D-KHJS',		 # 'ASK-21 MI' # 'ZZ1' # 'I' # 
 		'3E6FAC' : 'D-KHMI',		 # 'DG-808 B' # 'HM' # 'F' # 
 		'3E6FB5' : 'NOREG',		 # '' # '' # 'F' # 
 		'3E708E' : 'D-KHVA',		 # 'Arcus M' # 'JS' # 'F' # 
@@ -2503,6 +2633,7 @@ kglid = {
 		'3E71AE' : 'D-KIGC',		 # 'Ventus 2cxM' # 'IGC' # 'F' # 
 		'3E71B5' : 'D-1796',		 # 'ASK-21' # '' # 'F' # 
 		'3E71B6' : 'D-KIGK',		 # 'Arcus M' # 'GK' # 'F' # 
+		'3E71CD' : 'D-KIHH',		 # 'DG-400' # '' # 'F' # 
 		'3E71D1' : 'D-KIHL',		 # 'Eta' # 'YY' # 'F' # 
 		'3E71DC' : 'D-KIHW',		 # 'Duo Discus t' # 'IHW' # 'F' # 
 		'3E71F1' : 'D-KIIR',		 # 'ASH-26 E' # 'IR' # 'F' # 
@@ -2551,16 +2682,22 @@ kglid = {
 		'3E7728' : 'D-KKIA',		 # 'ASH-31 MI' # '1X' # 'I' # 
 		'3E7733' : 'D-KKIL',		 # 'Ventus cM' # 'GW' # 'F' # 
 		'3E773A' : 'D-KKIS',		 # 'DG-800' # 'IS' # 'F' # 
+		'3E774C' : 'NOREG',		 # 'ASH-31 MI' # 'JK' # 'F' # 
+		'3E7793' : 'D-KKMD',		 # 'Ventus 3M' # '' # 'I' # 
 		'3E77D9' : 'D-KKOV',		 # 'HK36 Super Dimona' # '' # 'F' # 
 		'3E781A' : 'D-KKRI',		 # 'Arcus M' # 'RI' # 'F' # 
+		'3E7820' : 'D-KKRO',		 # 'Duo Discus xlt' # 'KRO' # 'I' # 
 		'3E783F' : 'D-KKST',		 # 'DG-808 C' # 'ST' # 'I' # 
 		'3E7841' : 'D-KKSV',		 # 'Duo Discus xlt' # 'SV' # 'I' # 
+		'3E7847' : 'D-KKTB',		 # 'Ventus cM' # 'TB' # 'I' # 
+		'3E7872' : 'D-KKUS',		 # 'DG-808 C' # 'US' # 'F' # 
 		'3E788F' : 'D-KKVV',		 # 'ASH-31 MI' # 'DVV' # 'F' # 
 		'3E789C' : 'D-KKWI',		 # 'Ventus 3M' # 'KWI' # 'F' # 
 		'3E78B9' : 'D-KKXL',		 # 'Ventus 2cM' # 'XL' # 'F' # 
 		'3E78C5' : 'D-KKXX',		 # 'Ventus 2cxT' # '' # 'O' # 
 		'3E78FF' : 'D-KLAD',		 # 'Nimbus 4' # 'FE' # 'F' # 
 		'3E7942' : 'D-KLCS',		 # 'Arcus M' # 'CS' # 'F' # 
+		'3E7943' : 'D-KLCT',		 # 'HK36 Super Dimona' # '' # 'F' # 
 		'3E7951' : 'D-KLDH',		 # 'Discus t' # 'DH' # 'F' # 
 		'3E7972' : 'D-KLEO',		 # 'LS-8' # 'EO' # 'F' # 
 		'3E7973' : 'D-KLEP',		 # 'Antares 20 E' # 'LB' # 'F' # 
@@ -2590,14 +2727,16 @@ kglid = {
 		'3E7BC5' : 'D-KMBL',		 # 'HK36 Super Dimona' # '' # 'F' # 
 		'3E7BCB' : 'D-KMBR',		 # 'Discus 2cT' # 'MA' # 'F' # 
 		'3E7C0A' : 'D-KMEC',		 # 'Motorglider' # 'EC' # 'F' # 
+		'3E7C13' : 'D-KMEL',		 # 'Arcus T' # '7W' # 'F' # 
 		'3E7C20' : 'D-KMEY',		 # 'Motorglider' # '' # 'I' # 
 		'3E7C38' : 'D-KMFW',		 # 'Stemme S-10' # 'FW' # 'F' # 
 		'3E7C3C' : 'D-KMGA',		 # 'HK36 Super Dimona' # 'GA' # 'I' # 
 		'3E7C5C' : 'D-KMHG',		 # 'ASH-25 MI' # 'Hg' # 'F' # 
+		'3E7C78' : 'D-KMII',		 # 'Ventus bT' # 'V' # 'F' # 
 		'3E7C82' : 'D-KMIS',		 # 'HK36 Super Dimona' # '' # 'F' # 
-		'3E7C9B' : 'D-KMJR',		 # 'Ventus 2cxT' # '' # 'I' # 
 		'3E7CC6' : 'D-KMLI',		 # 'Twin Astir III' # 'PR' # 'I' # 
 		'3E7CD0' : 'D-KMLS',		 # 'ASH-31 MI' # 'LS' # 'F' # 
+		'3E7CE4' : 'D-KMMM',		 # 'SF-25' # '' # 'I' # 
 		'3E7D2A' : 'D-KMPE',		 # 'SF-25' # '' # 'I' # 
 		'3E7D32' : 'D-KMPM',		 # 'Quintus' # 'PM' # 'F' # 
 		'3E7D7C' : 'D-KMSI',		 # 'Ventus 2cxM' # 'SI' # 'I' # 
@@ -2640,6 +2779,7 @@ kglid = {
 		'3EC4C5' : 'D-KPMB',		 # 'DG-1000 T' # 'MB' # 'F' # 
 		'3EC4CC' : 'D-KPMI',		 # 'ASK-21 MI' # '' # 'F' # 
 		'3EC55C' : 'D-KPRW',		 # 'ASH-25 MI' # 'RW' # 'I' # 
+		'3EC56C' : 'D-KPSM',		 # 'ASG-29E' # 'EA' # 'F' # 
 		'3EC56F' : 'D-KPSP',		 # 'ASG-29E' # 'SRI' # 'F' # 
 		'3EC8DF' : 'D-KRAL',		 # 'Ventus 2cxM' # 'RL' # 'F' # 
 		'3EC8EE' : 'D-KRBA',		 # 'EB 28' # 'BA' # 'I' # 
@@ -2647,7 +2787,9 @@ kglid = {
 		'3EC949' : 'NOREG',		 # '' # '' # 'F' # 
 		'3EC9CF' : 'D-KRJR',		 # 'ASH-31 MI' # 'JR' # 'F' # 
 		'3EC9F2' : 'D-KRLA',		 # 'Duo Discus xt' # 'LA' # 'I' # 
+		'3ECA66' : 'D-KRPM',		 # 'ASG-29E' # 'MX' # 'F' # 
 		'3ECA6A' : 'D-KRPK',		 # 'Arcus M' # 'K2' # 'I' # 
+		'3ECA98' : 'D-KRRK',		 # 'Motorglider' # 'Rep' # 'I' # 
 		'3ECAC2' : 'D-KRTA',		 # 'Arcus M' # 'O' # 'F' # 
 		'3ECAD4' : 'D-KRTS',		 # 'Ventus 2ct' # 'JR' # 'F' # 
 		'3ECB3D' : 'D-KRXT',		 # 'JS-1 C21' # 'XT' # 'O' # 
@@ -2659,7 +2801,6 @@ kglid = {
 		'3ECC23' : 'D-KSGP',		 # 'ASG-32 MI' # 'P' # 'F' # 
 		'3ECC2A' : 'D-xxxx',		 # 'Ventus 2cxM' # 'GW' # 'F' # 
 		'3ECC36' : 'D-KSHI',		 # 'DG-1000 T' # 'HI' # 'F' # 
-		'3ECC38' : 'D-KSHK',		 # 'Ventus 3T' # '3M' # 'F' # 
 		'3ECC56' : 'D-KSIO',		 # 'Stemme S-10' # 'IO' # 'I' # 
 		'3ECC68' : 'D-KSJG',		 # 'ASH-25 MI' # 'JG' # 'I' # 
 		'3ECC78' : 'D-KSJW',		 # 'Valentin Taifun' # '' # 'I' # 
@@ -2667,15 +2808,17 @@ kglid = {
 		'3ECCA1' : 'D-KSLL',		 # 'Arcus T' # 'LL' # 'F' # 
 		'3ECCE8' : 'D-KSOE',		 # 'DG-1000 T' # '' # 'I' # 
 		'3ECD04' : 'D-KSPG',		 # 'Arcus T' # 'SPG' # 'I' # 
+		'3ECD41' : 'D-KSRP',		 # 'Antares 20 E' # 'VI' # 'F' # 
 		'3ECD4D' : 'D-KSSB',		 # 'HK36 Super Dimona' # 'SB' # 'I' # 
 		'3ECD69' : 'D-KSTD',		 # 'H36 Dimona' # 'TD' # 'I' # 
 		'3ECE1C' : 'D-KTAA',		 # 'Arcus T' # '2A' # 'F' # 
 		'3ECE25' : 'D-KTAJ',		 # 'ASH-31 MI' # 'AJ' # 'I' # 
 		'3ECE59' : 'D-KTCJ',		 # 'Duo Discus t' # 'CJ' # 'I' # 
 		'3ECE6B' : 'D-KTDB',		 # 'ASH-30' # 'DB' # 'F' # 
+		'3ECE85' : 'D-KTEB',		 # 'ASG-32 MI' # 'EB' # 'F' # 
 		'3ECE89' : 'D-KTEF',		 # 'Discus 2c' # '' # 'F' # 
 		'3ECE96' : 'OH-1019',		 # 'ASG-29E' # '19' # 'F' # 
-		'3ECEBC' : 'D-KTGE',		 # 'DG-808 B' # 'A8' # 'F' # 
+		'3ECEBC' : 'NOREG',		 # '' # '' # 'F' # 
 		'3ECF2E' : 'D-KTKO',		 # 'Ventus 2cxM' # 'KWI' # 'F' # 
 		'3ECF55' : 'D-KTMB',		 # 'Arcus M' # 'MB' # 'F' # 
 		'3ECF5A' : 'D-KTMG',		 # 'ASG-32 MI' # '11' # 'F' # 
@@ -2692,14 +2835,15 @@ kglid = {
 		'3ED1F9' : 'D-KUMB',		 # 'Arcus M' # 'MB' # 'I' # 
 		'3ED218' : 'D-KUNG',		 # 'Duo Discus xlt' # 'REX' # 'F' # 
 		'3ED229' : 'D-KUNX',		 # 'EB 28' # 'NX' # 'F' # 
-		'3ED23E' : 'D-KUOS',		 # 'ASH-31 MI' # 'OS' # 'F' # 
+		'3ED23E' : 'NOREG',		 # '' # '' # 'F' # 
 		'3ED2DC' : 'D-KUUU',		 # 'Ventus 2cxM' # 'C8' # 'F' # 
 		'3ED30A' : 'D-KUWO',		 # 'Ventus 3T' # 'WO' # 'I' # 
 		'3ED322' : 'D-KUXM',		 # 'Ventus 3M' # 'Xm' # 'I' # 
 		'3ED364' : 'D-KVAA',		 # 'ASH-31 MI' # 'AA' # 'F' # 
 		'3ED36F' : 'DKVBB',		 # 'ASH-31 MI' # '31' # 'F' # 
-		'3ED37F' : 'NOREG',		 # '' # '' # 'F' # 
+		'3ED37F' : 'K7',		 # 'ASG-29E' # 'K7' # 'F' # 
 		'3ED3DE' : 'D-KVES',		 # 'DG-808 C' # 'ES' # 'I' # 
+		'3ED438' : 'D-KVIE',		 # 'Stemme S-10' # '' # 'I' # 
 		'3ED43C' : 'D-KVII',		 # 'Ventus 3T' # 'I' # 'F' # 
 		'3ED494' : 'D-KVLS',		 # 'Antares 23 E' # 'VLS' # 'F' # 
 		'3ED4F0' : 'D-KVPG',		 # 'Ventus 3T' # '17' # 'I' # 
@@ -2709,11 +2853,11 @@ kglid = {
 		'3ED5ED' : 'D-KVYZ',		 # 'Stemme S-10' # 'YZ' # 'I' # 
 		'3ED608' : 'D-KWAA',		 # 'Arcus M' # '8T' # 'F' # 
 		'3ED60D' : 'D-KWAF',		 # 'Arcus M' # 'GB' # 'F' # 
-		'3ED60F' : 'AH',		 # 'DG-808 C' # 'AH' # 'I' # 
+		'3ED60F' : 'D-KWAH',		 # 'DG-808 C' # 'FK' # 'I' # 
 		'3ED6A0' : 'D-KWFW',		 # 'Antares 18 T' # 'FW' # 'I' # 
 		'3ED6CF' : 'D-KWHR',		 # 'Discus 2c' # 'ZA' # 'I' # 
 		'3ED746' : 'D-KWMG',		 # 'Arcus M' # '4Y' # 'F' # 
-		'3ED8B0' : 'D-KXAE',		 # 'ASH-31 MI' # 'AE' # 'I' # 
+		'3ED8B0' : 'NOREG',		 # '' # '' # 'I' # 
 		'3ED8B4' : 'D-KXAI',		 # 'Ventus 2cxT' # 'AI' # 'I' # 
 		'3ED8BF' : 'D-KXAT',		 # 'ASG-29E' # 'AT' # 'F' # 
 		'3ED933' : 'D-KXFF',		 # 'ASH-31 MI' # 'SKY' # 'F' # 
@@ -2721,6 +2865,7 @@ kglid = {
 		'3ED94B' : 'D-KXGD',		 # 'Duo Discus xlt' # 'GD' # 'F' # 
 		'3ED9D5' : 'D-KXLL',		 # 'Ventus 2cxT' # '7L' # 'I' # 
 		'3ED9DD' : 'F-CEIM',		 # 'LS-4' # 'SD' # 'F' # 
+		'3EDA73' : 'D-KXRN',		 # 'Discus 2cT' # 'RN' # 'I' # 
 		'3EDB51' : 'D-KYAB',		 # 'Antares 20 E' # 'AB' # 'F' # 
 		'3EDBF4' : 'D-KYGI',		 # 'SF-25' # 'GI' # 'I' # 
 		'3EDBF7' : 'D-KYGL',		 # 'SF-25' # '' # 'I' # 
@@ -2730,6 +2875,7 @@ kglid = {
 		'3EDD99' : 'D-KVCB',		 # 'DG-808 B' # 'J' # 'I' # 
 		'3EDDA2' : 'D-KYWW',		 # 'EB 29 D' # '1P' # 'F' # 
 		'3EDDD7' : 'D-KYYX',		 # 'Arcus M' # '12' # 'F' # 
+		'3EDE05' : 'D-KZAR',		 # 'ASH-26 E' # 'AR' # 'F' # 
 		'3EDE26' : 'D-KZBY',		 # 'Arcus M' # 'BY' # 'F' # 
 		'3EDEBC' : 'D-KZHS',		 # 'Duo Discus xlt' # 'ZHS' # 'I' # 
 		'3EDF3D' : 'D-KZMR',		 # 'ASW-22 BL' # 'GG' # 'F' # 
@@ -2742,8 +2888,10 @@ kglid = {
 		'3EE32C' : 'D-0661',		 # 'LS-6 18' # 'MV' # 'F' # 
 		'3EE34B' : 'D-0692',		 # 'LS-4' # 'EL' # 'I' # 
 		'3EE34F' : 'D-0696',		 # 'Janus A' # 'EG6' # 'I' # 
+		'3EE45C' : 'D-0965',		 # 'LS-6 18' # 'WM' # 'I' # 
 		'3EE482' : 'D-1003',		 # 'LS-8 18' # 'VZ' # 'I' # 
 		'3EE4DA' : 'D-1091',		 # 'ASW-27' # 'FS' # 'I' # 
+		'3EE552' : 'D-1211',		 # 'Discus 2' # '2F' # 'F' # 
 		'3EE602' : 'D-1387',		 # 'LS-4' # '' # 'I' # 
 		'3EE673' : 'D-1500',		 # 'Libelle Std' # 'ii' # 'I' # 
 		'3EE707' : 'D-1648',		 # 'ASW-20' # 'DE' # 'I' # 
@@ -2751,8 +2899,9 @@ kglid = {
 		'3EE72F' : 'D-1688',		 # 'LS-8' # 'CM' # 'F' # 
 		'3EE7BE' : 'D-1831',		 # 'Duo Discus' # 'BG' # 'F' # 
 		'3EE7FB' : 'D-1892',		 # 'ASK-21' # '92' # 'I' # 
+		'3EE819' : 'D-1922',		 # 'LS-8 18' # 'YI' # 'F' # 
 		'3EE844' : 'D-2187',		 # 'ASK-13' # '87' # 'F' # 
-		'3EE867' : 'D-2000',		 # 'DG-600' # 'NB' # 'F' # 
+		'3EE867' : 'NOREG',		 # '' # '' # 'F' # 
 		'3EE879' : 'D-2018',		 # 'LS-8' # 'ZZ' # 'F' # 
 		'3EE8B9' : 'D-2082',		 # 'Duo Discus' # 'MS' # 'F' # 
 		'3EE8CD' : 'D-2102',		 # 'Cirrus Std' # 'SA' # 'I' # 
@@ -2770,6 +2919,7 @@ kglid = {
 		'3EED35' : 'D-3230',		 # 'Discus 2' # '30' # 'F' # 
 		'3EEDB8' : 'D-3361',		 # 'ASG-32 MI' # '1M' # 'I' # 
 		'3EEE08' : 'D-3441',		 # 'LS-8 18' # 'HT' # 'F' # 
+		'3EEE35' : 'D-3486',		 # 'LS-8' # 'MO' # 'F' # 
 		'3EEE54' : 'D-3517',		 # 'LS-3' # 'INF' # 'F' # 
 		'3EEEC8' : 'D-3633',		 # 'Duo Discus xl' # 'LIT' # 'F' # 
 		'3EEF2F' : 'D-3736',		 # 'DG-100' # 'MP' # 'I' # 
@@ -2785,6 +2935,7 @@ kglid = {
 		'3EF1B3' : 'D-4380',		 # 'Discus 2' # '80' # 'F' # 
 		'3EF25A' : 'D-4547',		 # 'Ventus 2' # '47' # 'I' # 
 		'3EF2D5' : 'D-4670',		 # 'Ventus 2CXa' # 'Y' # 'I' # 
+		'3EF31F' : 'D-4744',		 # 'Cirrus Std' # '96' # 'F' # 
 		'3EF383' : '_oc',		 # 'Unknown' # '_oc' # 'F' # 
 		'3EF3CA' : 'D-4915',		 # 'Ventus 2CXa' # 'JT' # 'F' # 
 		'3EF445' : 'D-5038',		 # 'LS-6' # 'NJ' # 'F' # 
@@ -2819,8 +2970,10 @@ kglid = {
 		'3EFC67' : 'D-7120',		 # 'ASG-29' # 'AY' # 'F' # 
 		'3EFD3C' : 'D-7333',		 # 'LS-1 f' # 'BZ' # 'F' # 
 		'3EFD5D' : 'D-7366',		 # 'LS-6' # 'M' # 'F' # 
+		'3EFD69' : 'D-7378',		 # 'ASW-19' # 'Y4' # 'I' # 
 		'3EFDA3' : 'D-7436',		 # 'DG-1000' # 'WG' # 'F' # 
 		'3EFDC3' : 'D-7468',		 # 'Libelle Std' # '68' # 'F' # 
+		'3EFDD8' : 'D-7489',		 # 'Mosquito' # 'YS' # 'I' # 
 		'3EFDF7' : 'D-7520',		 # 'Mosquito' # 'YH' # 'I' # 
 		'3EFE1A' : 'D-7555',		 # 'LS-8 18' # '8M' # 'I' # 
 		'3EFE59' : 'D7618',		 # 'ASW-20' # 'X7' # 'F' # 
@@ -2828,10 +2981,9 @@ kglid = {
 		'3EFEBD' : 'D-7718',		 # 'LS-8' # 'T1' # 'F' # 
 		'3EFECD' : 'D-7734',		 # 'LS-3' # 'XW' # 'F' # 
 		'3EFEF8' : 'D-7777',		 # 'Libelle Std' # '4*7' # 'I' # 
-		'3EFF60' : 'D-7881',		 # 'LS-3' # 'X9' # 'F' # 
-		'3EFF8F' : 'D-7928',		 # 'ASW-28' # 'K2' # 'I' # 
+		'3EFF60' : 'D_7881',		 # 'LS-3' # 'X9' # 'F' # 
+		'3EFF8F' : 'D-7928',		 # 'ASW-28' # 'K2' # 'F' # 
 		'3EFF96' : 'D-7935',		 # 'ASW-20' # 'IRS' # 'F' # 
-		'3F0000' : 'D-MHSF',		 # 'Ultralight' # 'SF' # 'F' # 
 		'3F004A' : 'D-8115',		 # 'ASW-27' # 'M6' # 'I' # 
 		'3F0087' : 'D-8176',		 # 'LS-7' # 'LT' # 'I' # 
 		'3F0098' : 'D8193',		 # 'LS-7' # '77' # 'F' # 
@@ -2857,11 +3009,12 @@ kglid = {
 		'3F068F' : 'D-9720',		 # 'Discus 2' # '2S' # 'I' # 
 		'3F0691' : 'D-9722',		 # 'Duo Discus xl' # 'SX' # 'I' # 
 		'3F0699' : 'D-9730',		 # 'Discus 2' # '6S' # 'I' # 
+		'3F06DD' : 'D-9798',		 # 'DG-600' # 'DG' # 'F' # 
 		'3F06F3' : 'D-9820',		 # 'Discus 2' # '9S' # 'I' # 
 		'3F06FD' : 'D-9830',		 # 'Discus 2' # '77' # 'I' # 
 		'3F074F' : 'D-9912',		 # 'LS-7' # 'RX' # 'F' # 
+		'3F078B' : 'D-9972',		 # 'Duo Discus x' # '72' # 'F' # 
 		'3F2950' : 'MEDI-01',		 # 'EC 135' # '' # 'O' # 
-		'3F2E22' : 'OM-0203',		 # 'Blanik' # 'A7' # 'O' # 
 		'3F2E3B' : 'CC-TR25',		 # 'UFO' # 'T25' # 'O' # 
 		'3F3808' : 'HA-RUF',		 # 'Rubik R-18 Kanya' # 'HUF' # 'O' # 
 		'3F3A3D' : 'OM-5343',		 # 'LG-425 Sohaj' # 'N' # 'O' # 
@@ -2874,10 +3027,12 @@ kglid = {
 		'3F6177' : 'OKSUA34',		 # 'Samba XXL' # 'SAM' # 'O' # 
 		'3F7601' : 'CC-TR11',		 # 'UFO' # 'T11' # 'O' # 
 		'3F7E0F' : 'OK-1007',		 # 'Ka-7' # 'KAC' # 'O' # 
+		'3F843E' : 'JOKER',		 # 'Helicopter' # 'MIL' # 'I' # 
 		'3F8F00' : 'OK-0924',		 # 'OldTimer' # 'K' # 'O' # 
-		'3FC859' : 'NOREG',		 # 'Cirrus Std' # 'LTN' # 'O' # 
+		'3FAC30' : 'SERWIS1',		 # 'Ground Station' # '' # 'O' # 
+		'3FC859' : 'OKVUA06',		 # 'Motorplane' # 'A06' # 'O' # 
 		'3FDC5F' : 'HA-AAE',		 # 'Banhidi Gerle' # 'HAE' # 'O' # 
-		'3FDC77' : 'BB_aero',		 # 'UFO' # '' # 'O' # 
+		'3FDC77' : 'D-0193',		 # 'DG-300' # 'RH' # 'O' # 
 		'3FE9E8' : 'D-MPIX',		 # 'Scheibe SF 40' # 'IX' # 'I' # 
 		'3FEA60' : 'D-MYUW',		 # 'Eurostar EV97' # '' # 'I' # 
 		'3FEA71' : 'D-MDYA',		 # 'WT9 Dynamic' # '' # 'F' # 
@@ -2890,9 +3045,10 @@ kglid = {
 		'3FEACE' : 'D-MASZ',		 # 'Ikarus C42 C' # 'SZ' # 'I' # 
 		'3FEB11' : 'D-MAIK',		 # 'Eurostar EV97' # 'DIK' # 'I' # 
 		'3FEB29' : 'D-MDYC',		 # 'WT9 Dynamic' # 'YC' # 'F' # 
-		'3FEB2C' : 'D-MFSV',		 # 'TL-2000 Sting' # 'FSV' # 'F' # 
 		'3FEB50' : 'D-MASV',		 # 'Flight Design CTSW' # '' # 'I' # 
 		'3FEBBF' : 'D-MZPF',		 # 'FK14' # '' # 'I' # 
+		'3FEBCB' : 'D_MALP',		 # 'Pioneer 300' # '' # 'F' # 
+		'3FEBE6' : 'D-XXEF',		 # 'FK14' # 'FK' # 'F' # 
 		'3FEBFF' : 'DMSCE',		 # 'Ultralight' # '' # 'F' # 
 		'3FEC21' : 'D-MCSD',		 # 'Different Aircraft' # 'SD' # 'F' # 
 		'3FEC3C' : 'D-MPUD',		 # 'Ultralight' # '' # 'F' # 
@@ -2920,9 +3076,12 @@ kglid = {
 		'3FEF7C' : 'D-MSNG',		 # 'Flight Design CTSW' # 'NG' # 'F' # 
 		'3FEF8F' : 'D-MILO',		 # 'Ultralight' # 'DLO' # 'I' # 
 		'3FEFAB' : 'D-MKPN',		 # 'Ikarus C42 B' # 'PN' # 'F' # 
+		'3FEFE4' : 'D-MKTT',		 # 'TL-2000 Sting' # '' # 'F' # 
+		'3FF015' : 'D-MINT',		 # 'Sinus' # '' # 'I' # 
 		'3FF01B' : 'D-MHIJ',		 # 'WT9 Dynamic' # 'IJ' # 'I' # 
 		'3FF02A' : 'D-MWHI',		 # 'Samba XXL' # '' # 'F' # 
 		'3FF02C' : 'D-MJPH',		 # 'Ultralight' # '' # 'F' # 
+		'3FF03D' : 'D-MEGX',		 # 'Remos GX' # '' # 'I' # 
 		'3FF071' : 'D-MVSP',		 # 'Ikarus C42 C' # 'SP' # 'I' # 
 		'3FF092' : 'D-MESC',		 # 'WT9 Dynamic' # 'SC' # 'F' # 
 		'3FF094' : 'D-MHLG',		 # 'WT9 Dynamic' # 'LG' # 'I' # 
@@ -2930,7 +3089,7 @@ kglid = {
 		'3FF0B8' : 'D-MART',		 # 'Sinus' # 'RT' # 'F' # 
 		'3FF0D0' : 'D-MEHI',		 # 'Ultralight' # 'HI' # 'I' # 
 		'3FF0E6' : 'D-MPST',		 # 'Ultralight' # 'MOZ' # 'I' # 
-		'3FF112' : 'D-MFTL',		 # 'WT9 Dynamic' # 'TL' # 'I' # 
+		'3FF10C' : 'D-MYLB',		 # 'WT9 Dynamic' # '' # 'F' # 
 		'3FF11B' : 'D-MTYC',		 # 'Ikarus C42 B' # '' # 'F' # 
 		'3FF128' : 'D-MXWF',		 # 'Remos GX' # '' # 'F' # 
 		'3FF12D' : 'D-MZWO',		 # 'Unknown' # '' # 'I' # 
@@ -2955,7 +3114,7 @@ kglid = {
 		'3FF297' : 'D-MLHI',		 # 'Lambada' # '' # 'F' # 
 		'3FF2A0' : 'D-MCRN',		 # 'Ikarus C42 C' # '' # 'I' # 
 		'3FF2BC' : 'D-MTRA',		 # 'EuroFox' # '' # 'F' # 
-		'3FF2DB' : 'D-KAVR',		 # 'ASK-16' # 'VR' # 'F' # 
+		'3FF2DB' : 'NOREG',		 # '' # '' # 'F' # 
 		'3FF2E2' : 'D-MEEA',		 # 'Ultralight' # '' # 'I' # 
 		'3FF302' : 'D-MAWF',		 # 'Remos GX' # '' # 'F' # 
 		'3FF30A' : 'D-MAPT',		 # 'Flight Design CTSW' # '' # 'I' # 
@@ -2970,8 +3129,8 @@ kglid = {
 		'3FF3BC' : 'D-MABW',		 # 'Ikarus C42 C' # 'BW' # 'F' # 
 		'3FF3C5' : 'D-MBLM',		 # 'Ultralight' # 'LM' # 'I' # 
 		'3FF3C7' : 'D-MOSR',		 # 'WT9 Dynamic' # '' # 'I' # 
-		'3FF3CA' : 'D-MHSF',		 # 'Ultralight' # 'SF' # 'F' # 
 		'3FF3ED' : 'D-MLRP',		 # 'Ikarus C42 C' # '' # 'F' # 
+		'3FF3F6' : 'D-MWON',		 # 'WT9 Dynamic' # '' # 'F' # 
 		'3FF3FD' : 'D-MIVA',		 # 'Ultralight' # '' # 'I' # 
 		'3FF3FF' : 'D-MARJ',		 # 'Motorplane' # '' # 'O' # 
 		'3FF40B' : 'D-MMCK',		 # 'Ikarus C42 B' # '' # 'I' # 
@@ -2984,11 +3143,12 @@ kglid = {
 		'3FF46E' : 'D-MTWT',		 # 'Ultralight' # '' # 'F' # 
 		'3FF474' : 'D-MYHP',		 # 'Silent 2 Electro' # '' # 'I' # 
 		'3FF495' : 'D-MPPW',		 # 'Remos GX' # '' # 'I' # 
-		'3FF497' : 'D-MXTL',		 # 'WT9 Dynamic' # 'TL' # 'I' # 
+		'3FF4CA' : 'D-MHSF',		 # 'Ultralight' # 'SF' # 'F' # 
 		'3FF4D8' : 'D-MLWF',		 # 'Remos GX' # '' # 'F' # 
 		'3FF4D9' : 'D-MYWF',		 # 'Remos GX' # '' # 'F' # 
 		'3FF4DC' : 'D-XXZD',		 # 'WT9 Dynamic' # 'DZD' # 'F' # 
 		'3FF4E3' : 'D-MPPV',		 # 'Ultralight Glider' # 'DPV' # 'I' # 
+		'3FF536' : 'D-MJIC',		 # 'Ultralight' # '' # 'F' # 
 		'3FF567' : 'Klappdr',		 # 'Cessna 172' # '' # 'F' # 
 		'3FF572' : 'D-MXGQ',		 # 'Roland Z602 XL' # '' # 'F' # 
 		'3FF576' : 'D-MCHU',		 # 'Ultralight' # '' # 'I' # 
@@ -3000,6 +3160,7 @@ kglid = {
 		'3FF651' : 'D-MYPT',		 # 'FM250 Vampire' # 'PT' # 'F' # 
 		'3FF655' : 'D-XXZF',		 # 'FK9 Mark 2' # 'DZF' # 'F' # 
 		'3FF657' : 'D-MDGD',		 # 'Ikarus C42 C' # '' # 'F' # 
+		'3FF663' : 'NOREG',		 # '' # '' # 'I' # 
 		'3FF693' : 'D-MOEF',		 # 'WT9 Dynamic' # 'EF' # 'I' # 
 		'3FF69E' : 'D-MRUA',		 # 'Ultralight' # '' # 'F' # 
 		'3FF6A6' : 'D-MKDF',		 # 'Ultralight' # 'DF' # 'F' # 
@@ -3008,6 +3169,7 @@ kglid = {
 		'3FF6F4' : 'D-MXPD',		 # 'Ikarus C42 B' # 'PD' # 'I' # 
 		'3FF6FD' : 'D-MIWT',		 # 'WT9 Dynamic' # '' # 'I' # 
 		'3FF703' : 'D-MKEL',		 # 'Ultralight' # '' # 'F' # 
+		'3FF70C' : 'D-MGDB',		 # 'WT9 Dynamic' # '' # 'F' # 
 		'3FF729' : 'D-MRXS',		 # 'WT9 Dynamic' # 'XS' # 'F' # 
 		'3FF77E' : 'D-MNSR',		 # 'Ultralight' # '' # 'I' # 
 		'3FF7A5' : 'D-MZWT',		 # 'WT9 Dynamic' # 'ZWT' # 'F' # 
@@ -3167,15 +3329,19 @@ kglid = {
 		'401C92' : 'G-BETM',		 # 'PA-25 Pawnee' # 'TM' # 'I' # 
 		'401CDD' : 'G-BFEH',		 # 'Jodel D119' # '' # 'O' # 
 		'401CDF' : 'G-BFEV',		 # 'PA-25 Pawnee' # 'EV' # 'I' # 
+		'401DDD' : 'G-BGRT',		 # 'Experimental' # '' # 'F' # 
 		'401E99' : 'G-BHUU',		 # 'PA-25 Pawnee' # '' # 'I' # 
 		'401EAF' : 'G_BHYP',		 # 'Cessna 172' # 'YP' # 'F' # 
 		'401F40' : 'G-BITF',		 # 'Cessna 152' # '' # 'I' # 
 		'401F93' : 'G-BJCI',		 # 'PA-18 Super Cub' # 'CI' # 'I' # 
+		'401FDD' : 'NOREG',		 # '' # '' # 'F' # 
 		'401FF5' : 'G-BJXK',		 # 'RF 5' # 'JXK' # 'F' # 
+		'402087' : 'G-BKVG',		 # 'Motorglider' # 'VG' # 'F' # 
 		'4020C5' : 'G-BLGH',		 # 'DR-300' # '' # 'I' # 
 		'40215A' : 'GBWMB',		 # 'Jodel D119' # '' # 'I' # 
 		'4021AD' : 'G-EHMM',		 # 'DR-400' # 'MM' # 'F' # 
 		'40221C' : 'G-KCIG',		 # 'RF 5 b' # '' # 'F' # 
+		'40224D' : 'G-TSAS',		 # 'PA-28' # '' # 'F' # 
 		'4022B6' : 'G-POWL',		 # 'Cessna 182' # '' # 'I' # 
 		'402563' : 'G-WAVE',		 # 'Grob G109' # '' # 'I' # 
 		'4025B5' : 'G-BFPR',		 # 'PA-25 Pawnee' # 'PR' # 'I' # 
@@ -3183,6 +3349,7 @@ kglid = {
 		'4026A3' : 'G-IPSI',		 # 'Grob G109' # '' # 'F' # 
 		'402700' : 'BL464',		 # 'Paraglider' # 'SzL' # 'O' # 
 		'402706' : 'g-char',		 # 'Motorglider' # 'AR' # 'I' # 
+		'402723' : 'G-BMTJ',		 # 'Cessna 152' # 'GTJ' # 'O' # 
 		'402750' : 'ARCZT',		 # 'Paraglider' # 'ArG' # 'O' # 
 		'402776' : 'G-AZCN',		 # 'Unknown' # '' # 'O' # 
 		'4027B0' : 'G-DIRK',		 # 'DG-400' # 'RK' # 'F' # 
@@ -3191,6 +3358,9 @@ kglid = {
 		'402810' : 'NOREG',		 # 'Paraglider' # '' # 'O' # 
 		'402820' : 'HODI',		 # 'Paraglider' # 'HT' # 'O' # 
 		'402900' : 'DETKI',		 # 'Paraglider' # 'det' # 'O' # 
+		'402901' : 'G-BNHJ',		 # 'Cessna 152' # 'GHJ' # 'O' # 
+		'402917' : 'G-GFIG',		 # 'Cessna 152' # 'GIG' # 'O' # 
+		'402956' : 'G-BNSN',		 # 'Cessna 152' # 'GSN' # 'O' # 
 		'402989' : 'G-BNSR',		 # 'RF 7' # '' # 'I' # 
 		'40298C' : 'G-DOFY',		 # 'Bell 206' # '' # 'O' # 
 		'4029C9' : 'G-BNXL',		 # 'DG-400' # 'NXL' # 'I' # 
@@ -3207,11 +3377,16 @@ kglid = {
 		'402F38' : 'G_PEKT',		 # 'TB-20 Trinidad' # '' # 'I' # 
 		'403033' : 'G-OXOM',		 # 'PA-28' # '' # 'I' # 
 		'40305D' : 'G-BRTW',		 # 'DG-400' # 'TW' # 'I' # 
+		'403081' : 'G-BRBP',		 # 'Cessna 152' # 'GBP' # 'O' # 
 		'403144' : 'G-BSDH',		 # 'DR-400' # '' # 'I' # 
+		'40314A' : 'NOREG',		 # '' # '' # 'F' # 
+		'403170' : 'G-BSFP',		 # 'Cessna 152' # 'GFP' # 'O' # 
+		'4031BC' : 'G-BSDP',		 # 'Cessna 152' # 'GDP' # 'O' # 
 		'40327F' : 'G-BSSP',		 # 'DR-400' # 'SP' # 'I' # 
 		'4032D5' : 'G-BSWL',		 # 'Motorglider' # 'SWL' # 'I' # 
 		'403341' : 'G-BSUO',		 # 'SF-25' # 'UO' # 'I' # 
 		'403373' : 'G-GOUP',		 # 'Robinson R22' # '' # 'O' # 
+		'4034AE' : 'NOREG',		 # '' # '' # 'F' # 
 		'4034BF' : 'G-OWGC',		 # 'SF-25' # 'WGC' # 'I' # 
 		'403587' : 'G-MYSL',		 # 'Ultralight' # '' # 'O' # 
 		'4035FD' : 'G-BUJA',		 # 'SF-25' # 'JA' # 'F' # 
@@ -3263,6 +3438,7 @@ kglid = {
 		'404915' : 'G-CCDS',		 # 'Jodel D119' # '' # 'O' # 
 		'40499D' : 'G-RVIS',		 # 'Vans RV-8' # 'GIS' # 'I' # 
 		'4049BF' : 'G-TOMJ',		 # 'Flight Design CTSW' # '' # 'I' # 
+		'4049D6' : 'NOREG',		 # '' # '' # 'F' # 
 		'4049E0' : 'G-SEXE',		 # 'SF-25' # 'EXE' # 'I' # 
 		'4049F4' : 'G-CXIP',		 # 'Ultralight' # '' # 'I' # 
 		'404A01' : 'G-CCLR',		 # 'ASH-26 E' # '26E' # 'F' # 
@@ -3286,11 +3462,13 @@ kglid = {
 		'404DF0' : 'W11',		 # 'Hornet' # 'W11' # 'F' # 
 		'404E33' : 'G-satn',		 # 'Other' # 'TN' # 'I' # 
 		'404E39' : 'G-CDNA',		 # 'Grob G109' # '' # 'I' # 
+		'404E8B' : 'NOREG',		 # '' # '' # 'F' # 
 		'404E9A' : 'G-CKKF',		 # 'Ventus 2cxT' # '306' # 'I' # 
 		'404EA2' : 'G-CKGC',		 # 'Ventus 2cxT' # '' # 'F' # 
 		'404EAD' : 'G-CKGV',		 # 'ASW-28 18' # 'KGV' # 'F' # 
 		'404EBF' : 'G-CKLD',		 # 'Discus 2cT' # '797' # 'I' # 
 		'404EC6' : 'G-KOYY',		 # 'Nimbus 4' # 'Y7' # 'I' # 
+		'404ED0' : 'G-CDSC',		 # 'SF-25' # 'SC' # 'F' # 
 		'404EFC' : 'G-CKKR',		 # 'ASK-13' # 'KKR' # 'I' # 
 		'404F07' : 'G-CKJH',		 # 'DG-303' # 'KJH' # 'I' # 
 		'404F0D' : 'G-CKLW',		 # 'ASK-21' # 'KLW' # 'I' # 
@@ -3334,7 +3512,6 @@ kglid = {
 		'405314' : 'G-CFND',		 # 'Ka-6 e' # 'FND' # 'F' # 
 		'405319' : 'G-CJOD',		 # 'LS-8 18' # 'R3' # 'F' # 
 		'405325' : 'G-CFNT',		 # 'DG-600' # 'FNT' # 'F' # 
-		'405346' : 'G-CHUJ',		 # 'ASW-20' # 'ZZ' # 'F' # 
 		'405380' : 'G-VTUS',		 # 'Ventus 2t' # '02' # 'I' # 
 		'405382' : 'G-IAJJ',		 # 'Robinson R44' # '' # 'O' # 
 		'405386' : 'G-CHUD',		 # 'ASK-13' # 'HUD' # 'F' # 
@@ -3378,6 +3555,7 @@ kglid = {
 		'40555C' : 'G-CHMU',		 # 'JP 15/36' # 'MU' # 'F' # 
 		'405565' : 'G-DDAS',		 # 'Cirrus Std' # 'DAS' # 'F' # 
 		'405589' : 'G-JAPK',		 # 'Twin Astir II' # 'PK' # 'I' # 
+		'40558C' : 'G-CKAN',		 # 'SZD-50 Puchacz' # 'KAN' # 'I' # 
 		'405597' : 'G-VEGA',		 # 'Slingsby Vega 15m' # 'AS' # 'F' # 
 		'40559F' : 'F-CLSP',		 # 'LS-4' # 'S4' # 'F' # 
 		'4055A4' : 'G-DFAF',		 # 'ASW-20' # '271' # 'F' # 
@@ -3398,8 +3576,9 @@ kglid = {
 		'40564F' : 'G-CJVL',		 # 'DG-300' # 'JVL' # 'F' # 
 		'405650' : 'G-HAAH',		 # 'Ventus 2ct' # 'V66' # 'F' # 
 		'405651' : 'G-CFVW',		 # 'Ventus bT' # 'FVW' # 'F' # 
-		'405652' : 'G-CFJK',		 # 'Pegase' # 'FJK' # 'F' # 
+		'405652' : 'G-CFJK',		 # 'Pegase' # '189' # 'F' # 
 		'405675' : 'G-CUGC',		 # 'ASW-19' # 'CU' # 'I' # 
+		'40567D' : 'G-DDHT',		 # 'Ka-6 e' # 'DHT' # 'F' # 
 		'40568D' : 'G-CJKU',		 # 'ASK-18' # 'JKU' # 'I' # 
 		'4056A5' : 'G-JNSC',		 # 'Janus CT' # 'C4' # 'F' # 
 		'4056BA' : 'G-CKFB',		 # 'Discus 2t' # 'PH2' # 'F' # 
@@ -3413,6 +3592,7 @@ kglid = {
 		'4056E1' : 'G-CHFH',		 # 'SZD-50 Puchacz' # 'HFH' # 'I' # 
 		'4056F2' : 'G-CJWR',		 # 'Astir CS' # 'JWR' # 'I' # 
 		'4056FD' : 'G-CHXW',		 # 'LS-8' # '325' # 'F' # 
+		'405701' : 'G-CJKW',		 # 'Astir CS-77' # 'JKW' # 'I' # 
 		'405716' : 'NOREG',		 # '' # '' # 'F' # 
 		'405720' : 'G-DDNE',		 # 'Astir CS-77' # 'DNE' # 'I' # 
 		'405753' : 'G-DDJX',		 # 'Astir CS' # 'DJX' # 'I' # 
@@ -3426,17 +3606,19 @@ kglid = {
 		'4057B7' : 'NOREG',		 # '' # '' # 'I' # 
 		'4057D6' : 'G-DEHT',		 # 'Nimbus 2 C' # 'EHT' # 'F' # 
 		'4057E9' : 'G-CHMX',		 # 'LS-4' # 'PZ' # 'F' # 
+		'4057F4' : 'NOREG',		 # '' # '' # 'F' # 
+		'4057F5' : 'NOREG',		 # '' # '' # 'F' # 
 		'405806' : 'G-CJGL',		 # 'Discus' # '27' # 'F' # 
 		'40580D' : 'G-CGTO',		 # 'Mosquito' # '' # 'I' # 
 		'405811' : 'G-CHEF',		 # 'DG-500' # 'HEF' # 'I' # 
 		'405817' : 'G-CKCZ',		 # 'ASK-21' # 'KCZ' # 'F' # 
 		'40581B' : 'G-CJKO',		 # 'ASK-21' # 'R20' # 'F' # 
 		'405827' : 'G-CJKS',		 # 'ASW-19' # 'S19' # 'F' # 
+		'40583E' : 'NOREG',		 # '' # '' # 'F' # 
 		'405848' : 'G-CGCU',		 # 'SZD-50 Puchacz' # 'GCU' # 'I' # 
 		'405851' : 'G-CHDX',		 # 'LS-7' # 'A2' # 'I' # 
 		'405853' : 'G-DEXA',		 # 'Twin Astir II' # 'EXA' # 'I' # 
 		'405870' : 'G-CHGG',		 # 'Cirrus Std' # 'HGG' # 'I' # 
-		'405879' : 'G-CHDE',		 # 'Pilatus B4' # '' # 'F' # 
 		'40587F' : 'G-CFLH',		 # 'Ka-8' # 'FLH' # 'I' # 
 		'4058B0' : 'G-DCUJ',		 # 'Libelle Std' # 'T' # 'F' # 
 		'4058B3' : 'G-CHOR',		 # 'Discus' # 'T19' # 'I' # 
@@ -3444,6 +3626,8 @@ kglid = {
 		'4058CE' : 'G-DDRW',		 # 'Astir CS' # 'R57' # 'I' # 
 		'4058DE' : 'G-CHDJ',		 # 'ASW-20' # 'HDJ' # 'F' # 
 		'4058E9' : 'G-CFOB',		 # 'ASW-15' # 'FOB' # 'F' # 
+		'4058FE' : 'G-DBNH',		 # 'Ka-6 cr' # 'BNH' # 'I' # 
+		'4058FF' : 'G-CFUY',		 # 'SZD-50 Puchacz' # 'FUY' # 'I' # 
 		'405901' : 'G-CHKS',		 # 'Cirrus Std' # 'HKS' # 'F' # 
 		'40590C' : 'G-DCOR',		 # 'Cirrus Std' # 'COR' # 'F' # 
 		'40591C' : 'G-CHGB',		 # 'Astir CS' # '509' # 'I' # 
@@ -3458,6 +3642,7 @@ kglid = {
 		'4059A1' : 'G-DEPD',		 # 'ASK-21' # 'EPD' # 'F' # 
 		'4059A3' : 'G-CGEE',		 # 'Libelle Std' # 'GEE' # 'I' # 
 		'4059B4' : 'G-CHMY',		 # 'Cirrus Std' # 'HMY' # 'F' # 
+		'4059C8' : 'G-CHLC',		 # 'Pilatus B4' # 'HLC' # 'F' # 
 		'4059DF' : 'G-CJGM',		 # 'Discus' # 'R53' # 'F' # 
 		'4059F7' : 'G-CKMP',		 # 'LAK-17 A' # 'KMP' # 'I' # 
 		'4059FC' : 'G-CFCV',		 # 'ASW-20' # 'FCV' # 'F' # 
@@ -3466,6 +3651,7 @@ kglid = {
 		'405A4E' : 'G-CFRE',		 # 'Ka-6 e' # 'fre' # 'I' # 
 		'405A58' : 'G-DDFR',		 # 'Astir CS' # 'DFR' # 'I' # 
 		'405A5A' : 'G-DEEO',		 # 'Std. Astir II' # 'EEO' # 'F' # 
+		'405A6F' : 'NOREG',		 # '' # '' # 'F' # 
 		'405A72' : 'G-CJJD',		 # 'Discus t' # 'JJD' # 'I' # 
 		'405A7B' : 'G-CHVR',		 # 'Discus' # 'HVR' # 'I' # 
 		'405A86' : 'G-DDXG',		 # 'Slingsby Vega 15m' # 'DXG' # 'I' # 
@@ -3487,10 +3673,14 @@ kglid = {
 		'405B61' : 'D-KDPF',		 # 'Ventus 2CXa' # 'P2' # 'F' # 
 		'405B7A' : 'G-DEKF',		 # 'Astir Club' # 'EKF' # 'I' # 
 		'405B92' : 'G-DCMN',		 # 'Ka-8' # 'CMN' # 'I' # 
+		'405BA9' : 'NOREG',		 # '' # '' # 'F' # 
 		'405BB6' : 'G-CHVM',		 # 'DG-300' # '393' # 'I' # 
 		'405BB8' : 'G-FLUZ',		 # 'LS-8 18' # '618' # 'I' # 
 		'405BC0' : 'GCKSD',		 # 'LS-8' # 'IT' # 'F' # 
 		'405BC7' : 'G-DEAE',		 # 'ASW-20' # '107' # 'F' # 
+		'405BC9' : 'NOREG',		 # '' # '' # 'F' # 
+		'405BCA' : 'NOREG',		 # '' # '' # 'F' # 
+		'405BCB' : 'NOREG',		 # '' # '' # 'F' # 
 		'405C02' : 'G-DRAT',		 # 'Slingsby T51 Dart 17R' # '121' # 'I' # 
 		'405C15' : 'G-CHZB',		 # 'PW-5' # 'HZB' # 'F' # 
 		'405C16' : 'G-DCCM',		 # 'ASK-13' # 'CCM' # 'F' # 
@@ -3499,6 +3689,7 @@ kglid = {
 		'405C4C' : 'G-ODDZ',		 # 'Duo Discus t' # 'DD2' # 'I' # 
 		'405C53' : 'G-DEWG',		 # 'Twin Astir II' # 'EWG' # 'I' # 
 		'405C6C' : 'G-DJMC',		 # 'ASK-21' # 'R22' # 'F' # 
+		'405C71' : 'G-CGBS',		 # 'DG-300' # '206' # 'F' # 
 		'405CA5' : 'G-CGCD',		 # 'Cirrus Std' # 'GCD' # 'I' # 
 		'405CB1' : 'G-DDMP',		 # 'Astir CS' # '533' # 'F' # 
 		'405CB5' : 'G-PHYZ',		 # 'Unknown' # '' # 'I' # 
@@ -3534,7 +3725,6 @@ kglid = {
 		'405F26' : 'G-IRPW',		 # 'Experimental' # '' # 'I' # 
 		'405F96' : 'G-OFIX',		 # 'Grob G109' # '' # 'I' # 
 		'405FA9' : 'G-CFUG',		 # 'Grob G109' # '' # 'F' # 
-		'405FE0' : 'G-CJUF',		 # 'Ventus 2ct' # '46' # 'I' # 
 		'406026' : 'G-CKTB',		 # 'Ventus 2cxT' # 'M3' # 'I' # 
 		'40602A' : 'D-KAYY',		 # 'Ventus 2cM' # 'YY' # 'F' # 
 		'406031' : 'G-HMCA',		 # 'Eurostar EV97' # 'MCA' # 'I' # 
@@ -3595,9 +3785,12 @@ kglid = {
 		'406831' : 'G-UFOX',		 # 'EuroFox' # '' # 'I' # 
 		'406887' : 'G-SAXL',		 # 'Duo Discus xlt' # '16' # 'F' # 
 		'4068A6' : 'G-CLKG',		 # 'Janus CM' # 'HI' # 'F' # 
+		'4068B3' : 'G-SHBA',		 # 'Cessna 152' # 'GBA' # 'O' # 
+		'4068CD' : 'G-MRVN',		 # 'SZD-50 Puchacz' # 'VN' # 'I' # 
 		'406968' : 'G-SMAR',		 # 'Arcus M' # 'AR' # 'F' # 
 		'4069BC' : 'G-CHYB',		 # 'Grob G109' # 'YB' # 'F' # 
 		'4069C6' : 'G-CLLH',		 # 'HPH 304S Shark' # 'LLH' # 'I' # 
+		'4069DC' : 'G-CICC',		 # 'Cessna 152' # 'GCC' # 'O' # 
 		'4069EC' : 'G-WJET',		 # 'HPH 304S Shark' # 'JET' # 'I' # 
 		'406A23' : 'G-JOZI',		 # 'AS 350' # '' # 'I' # 
 		'406A40' : 'G-TTUG',		 # 'Towplane' # 'TUG' # 'I' # 
@@ -3622,6 +3815,7 @@ kglid = {
 		'406C23' : 'G-NILT',		 # 'Eurostar EV97' # '-' # 'I' # 
 		'406C4F' : 'G-PWAL',		 # 'EuroFox' # '' # 'I' # 
 		'406C50' : 'G-HMCF',		 # 'Eurostar EV97' # 'MCF' # 'I' # 
+		'406C9A' : 'NOREG',		 # '' # '' # 'F' # 
 		'406CA2' : 'G-HKCC',		 # 'Robinson R66' # '' # 'O' # 
 		'406CCD' : 'G-LARD',		 # 'Robinson R66' # '' # 'I' # 
 		'406CFD' : 'G-CINO',		 # 'Grob G109' # '' # 'I' # 
@@ -3637,6 +3831,7 @@ kglid = {
 		'406E0E' : 'G-CIOF',		 # 'EuroFox' # 'OF' # 'I' # 
 		'406E2D' : 'G-CLOV',		 # 'ASK-21' # 'LOV' # 'I' # 
 		'406E32' : 'G-CIPR',		 # 'SkyRanger Nynja' # '' # 'I' # 
+		'406E49' : 'G-CITE',		 # 'Astir Jeans' # 'LPM' # 'I' # 
 		'406E85' : 'GKWKX',		 # 'Ultralight' # '' # 'I' # 
 		'406E8E' : 'G-NELS',		 # 'Robinson R44' # '' # 'O' # 
 		'406E90' : 'G-CITX',		 # 'Unknown' # '' # 'I' # 
@@ -3644,18 +3839,19 @@ kglid = {
 		'406F02' : 'G-CIWG',		 # 'EuroFox' # '' # 'F' # 
 		'406F2F' : 'G-CLRA',		 # 'ASG-29E' # 'RA1' # 'I' # 
 		'406F36' : 'G-OFES',		 # 'Silent 2 Electro' # '' # 'F' # 
-		'406F8E' : 'NOREG',		 # 'Ventus 2' # 'Y' # 'F' # 
 		'406FC2' : 'G-CJBA',		 # 'Silent 2 Electro' # 'JBA' # 'F' # 
 		'406FCA' : 'G-CLRJ',		 # 'Discus t' # 'LRJ' # 'I' # 
 		'407015' : 'G-GOMS',		 # 'Robinson R66' # '' # 'O' # 
 		'407016' : 'G-CJAK',		 # 'SkyRanger Nynja' # '' # 'I' # 
 		'407060' : 'G-CLPX',		 # 'Twin Astir III' # 'PX' # 'I' # 
 		'407072' : 'G-MCDD',		 # 'HU 369' # '' # 'I' # 
+		'4070AD' : 'NOREG',		 # '' # '' # 'F' # 
 		'4070D5' : 'G-OYGC',		 # 'EuroFox' # 'YGC' # 'I' # 
 		'4070DB' : 'G-CJGT',		 # 'Apis 2' # 'JGT' # 'F' # 
 		'407126' : 'G-BIGB',		 # 'Helicopter' # '' # 'O' # 
 		'407147' : 'G-TRON',		 # 'Robinson R66' # '' # 'I' # 
 		'407150' : 'G-CJHF',		 # 'EuroFox' # '' # 'F' # 
+		'40715E' : 'G-CLSW',		 # 'ASW-20' # '20B' # 'F' # 
 		'407160' : 'G-RJVH',		 # 'Cabri G2' # '' # 'O' # 
 		'407161' : 'GCJIB',		 # 'Silent 2 Electro' # 'JIB' # 'I' # 
 		'4071AD' : 'G-DPER',		 # 'JS-1 C18 Evo' # 'ER' # 'F' # 
@@ -3671,6 +3867,7 @@ kglid = {
 		'4072D6' : 'G-OSOR',		 # 'DG-1000' # 'SOR' # 'F' # 
 		'4072D9' : 'G-HMCH',		 # 'Eurostar EV97' # 'MCH' # 'F' # 
 		'4072DE' : 'G-RAHA',		 # 'Cirrus' # 'M11' # 'F' # 
+		'407350' : 'NOREG',		 # '' # '' # 'F' # 
 		'407387' : 'G-NJNH',		 # 'Robinson R66' # '' # 'I' # 
 		'4073B6' : 'G-CKIU',		 # 'Motorglider' # 'KIU' # 'F' # 
 		'4073D9' : 'G-CLUJ',		 # 'LAK-17B FES' # 'LUJ' # 'F' # 
@@ -3697,6 +3894,8 @@ kglid = {
 		'40781E' : 'G-TADI',		 # 'Gyrocopter' # '' # 'O' # 
 		'40788E' : 'G-CLXO',		 # 'Ventus 3M' # 'Z9' # 'I' # 
 		'4078BB' : 'G-KADS',		 # 'Ventus 2cxT' # 'KS' # 'I' # 
+		'407915' : 'G-CLYE',		 # 'LS-4' # 'LYE' # 'F' # 
+		'407984' : 'G-CLMB',		 # 'Discus 2c' # 'D2' # 'I' # 
 		'40FC36' : 'YL-025',		 # 'Baloon' # '27' # 'O' # 
 		'410047' : 'OK-0739',		 # 'Cirrus 18m' # '1W' # 'O' # 
 		'414931' : 'OK-8522',		 # 'LS-1 f' # 'PK' # 'O' # 
@@ -3710,37 +3909,46 @@ kglid = {
 		'42BB32' : '438',		 # 'Blanik' # '38' # 'O' # 
 		'42E630' : '52',		 # 'SZD-48 Jantar Std 2' # '' # 'O' # 
 		'430506' : 'PETRA77',		 # 'Unknown' # 'P77' # 'O' # 
-		'430840' : 'NOREG',		 # 'Paraglider' # 'KCS' # 'O' # 
 		'430841' : 'PaM-PG',		 # 'Paraglider' # 'PaM' # 'O' # 
 		'430842' : 'VaZ-PG',		 # 'Paraglider' # 'VaZ' # 'O' # 
-		'430843' : 'ViV-PG',		 # 'Paraglider' # 'ViV' # 'O' # 
-		'430844' : 'ZsP-PG',		 # 'Paraglider' # 'ZsP' # 'O' # 
-		'430845' : 'Z2P-PG',		 # 'Paraglider' # 'Z2P' # 'O' # 
+		'430843' : '430843',		 # 'Paraglider' # '843' # 'O' # 
+		'430844' : '430844',		 # 'Paraglider' # '844' # 'O' # 
+		'430845' : '430845',		 # 'Paraglider' # '845' # 'O' # 
 		'430846' : 'JuP-PG',		 # 'Paraglider' # 'JuP' # 'O' # 
 		'430847' : 'ZAn-PG',		 # 'Paraglider' # 'ZAn' # 'O' # 
 		'430848' : 'CsB-PG',		 # 'Paraglider' # 'CsB' # 'O' # 
 		'430849' : 'C2B-PG',		 # 'Paraglider' # 'C2B' # 'O' # 
-		'430850' : 'Ors-PG',		 # 'Paraglider' # 'Ors' # 'O' # 
+		'430850' : '430850',		 # 'Paraglider' # 'BK' # 'O' # 
 		'430851' : 'VeG-PG',		 # 'Paraglider' # 'VeG' # 'O' # 
-		'430852' : 'SaT-PG',		 # 'Paraglider' # 'SaT' # 'O' # 
+		'430852' : '430852',		 # 'Paraglider' # '852' # 'O' # 
 		'430853' : 'RoR-PG',		 # 'Paraglider' # 'RoR' # 'O' # 
-		'430854' : 'PZ-PG',		 # 'Paraglider' # 'PZ' # 'O' # 
+		'430854' : '430854',		 # 'Paraglider' # 'Vas' # 'O' # 
 		'430855' : 'OM-M961',		 # 'Paraglider' # 'PJC' # 'O' # 
 		'430856' : 'EO-PG',		 # 'Paraglider' # 'EO' # 'O' # 
 		'430857' : 'Joe-PG',		 # 'Paraglider' # 'Joe' # 'O' # 
-		'430858' : 'PaZ-PG',		 # 'Paraglider' # 'PaZ' # 'O' # 
+		'430858' : 'SZ-934',		 # 'Paraglider' # 'PG' # 'O' # 
 		'438B46' : 'viewAir',		 # 'Unknown' # '068' # 'O' # 
+		'43C8B3' : 'ZM300',		 # 'Grob G120TP' # '' # 'I' # 
+		'43C8B4' : 'ZM301',		 # 'Grob G120TP' # '' # 'I' # 
+		'43C8B5' : 'ZM302',		 # 'Grob G120TP' # '' # 'I' # 
 		'43C8B6' : 'ZM303',		 # 'Grob G120TP' # '' # 'I' # 
 		'43C8B7' : 'ZM304',		 # 'Grob G120TP' # '' # 'I' # 
 		'43C8B9' : 'ZM306',		 # 'Grob G120TP' # '' # 'I' # 
 		'43C8BA' : 'ZM307',		 # 'Grob G120TP' # '' # 'I' # 
+		'43C8BB' : 'ZM308',		 # 'Grob G120TP' # '' # 'I' # 
 		'43C8BC' : 'ZM309',		 # 'Grob G120TP' # '' # 'I' # 
 		'43C8BE' : 'ZM311',		 # 'Grob G120TP' # '' # 'I' # 
+		'43C8BF' : 'ZM312',		 # 'Grob G120TP' # '' # 'I' # 
 		'43C8C0' : 'ZM313',		 # 'Grob G120TP' # '' # 'I' # 
 		'43C8C1' : 'ZM314',		 # 'Grob G120TP' # '' # 'I' # 
+		'43C8C2' : 'ZM315',		 # 'Grob G120TP' # '' # 'I' # 
+		'43C8C3' : 'ZM316',		 # 'Grob G120TP' # '' # 'I' # 
+		'43C8C4' : 'ZM317',		 # 'Grob G120TP' # '' # 'I' # 
+		'43C8C5' : 'ZM318',		 # 'Grob G120TP' # '' # 'I' # 
 		'43C8C6' : 'ZM319',		 # 'Grob G120TP' # '' # 'I' # 
 		'43C8C7' : 'ZM320',		 # 'Grob G120TP' # '' # 'I' # 
 		'43C8C8' : 'ZM321',		 # 'Grob G120TP' # '' # 'I' # 
+		'43C8C9' : 'ZM322',		 # 'Grob G120TP' # '' # 'I' # 
 		'43E8C5' : 'M-JCBA',		 # 'Helicopter' # '' # 'O' # 
 		'43E9DF' : 'M-JCBC',		 # 'Helicopter' # '' # 'O' # 
 		'43EB34' : '2-GSYJ',		 # 'Diamond DA42' # '' # 'I' # 
@@ -3751,6 +3959,7 @@ kglid = {
 		'4400E0' : 'OE-DID',		 # 'Cessna 182' # '' # 'I' # 
 		'440147' : 'OE-DSR',		 # 'DA40' # 'DSR' # 'I' # 
 		'44015B' : 'OE-XOH',		 # 'AS 350' # 'HTM' # 'I' # 
+		'44015E' : 'OE-XRS',		 # 'EC 135' # 'SHS' # 'I' # 
 		'44016E' : 'OE-DFO',		 # 'DR-400' # 'FO' # 'I' # 
 		'4401B5' : 'OE-9507',		 # 'ASH-31 MI' # '777' # 'F' # 
 		'4401DD' : 'OE-9222',		 # 'SF-25' # '' # 'I' # 
@@ -3770,6 +3979,7 @@ kglid = {
 		'4403C2' : 'OE-XMH',		 # 'AS 350' # 'HTM' # 'I' # 
 		'4403C4' : 'OE-AWS',		 # 'Experimental' # 'AWS' # 'I' # 
 		'4403CA' : 'OE-9482',		 # 'HK36 Super Dimona' # '82' # 'I' # 
+		'4403DD' : 'OE-XXR',		 # 'EC 135' # 'SHS' # 'I' # 
 		'440449' : 'OE-9432',		 # 'HK36 Super Dimona' # '432' # 'I' # 
 		'44044A' : 'OE-CEM',		 # 'DA20 Katana' # 'CEM' # 'I' # 
 		'44044B' : 'OE-KSM',		 # 'PA-28' # 'KSM' # 'I' # 
@@ -3800,6 +4010,7 @@ kglid = {
 		'440597' : 'OE-XPE',		 # 'AS 350' # 'HAU' # 'I' # 
 		'4405C0' : 'OE-CCM',		 # 'Experimental' # '' # 'F' # 
 		'4405F7' : 'OE-CCC',		 # 'DV20 Katana' # '' # 'I' # 
+		'440618' : 'OE-7148',		 # 'WT9 Dynamic' # '' # 'F' # 
 		'440628' : 'OE-XLG',		 # 'Robinson R44' # '' # 'I' # 
 		'440629' : 'OE-APW',		 # 'PA-18 Super Cub' # '' # 'F' # 
 		'4406BE' : 'OE-AAE',		 # 'DA20 Katana' # 'GK' # 'F' # 
@@ -3870,33 +4081,39 @@ kglid = {
 		'44E9C2' : 'OO-ZNB',		 # 'Libelle Std' # 'DC' # 'I' # 
 		'44EA8F' : 'OO-ZTO',		 # 'Ventus ct' # 'AH' # 'I' # 
 		'450024' : 'LY-GCL',		 # 'SZD-48-3 Jantar Std 3' # 'CL' # 'O' # 
-		'452039' : 'LZ-DRI',		 # 'TL-2000 Sting' # '' # 'F' # 
-		'458C58' : 'NOREG',		 # '' # '' # 'I' # 
+		'456744' : 'LY-GCG',		 # 'SZD-48 Jantar Std 2' # 'CG' # 'O' # 
+		'458C58' : 'OY-CBX',		 # 'Ventus' # 'BX' # 'I' # 
 		'458F0C' : 'OY-CXL',		 # 'ASK-23' # 'CL' # 'F' # 
 		'458F13' : 'OY-CXS',		 # 'ASH-26 E' # 'CS' # 'F' # 
 		'458F30' : 'OY-CYP',		 # 'PA-25 Pawnee' # 'YP' # 'I' # 
+		'458F53' : 'HA-BEW',		 # 'Unknown' # 'BEW' # 'O' # 
 		'459534' : 'NOREG',		 # 'Unknown' # 'AB1' # 'O' # 
 		'459535' : 'SP-3423',		 # 'SZD-51 Junior' # 'PT3' # 'O' # 
 		'459705' : 'OY-EXE',		 # 'DG-600' # 'EE' # 'I' # 
+		'45970B' : 'D-KRUX',		 # 'Ventus ct' # 'UX' # 'F' # 
 		'45970E' : 'OY-EXN',		 # 'HK36 Super Dimona' # 'EXN' # 'I' # 
+		'459B05' : 'OY-FXE',		 # 'Duo Discus t' # 'FX' # 'F' # 
 		'459C58' : 'OY-GBX',		 # 'ASH-31 MI' # 'OB' # 'I' # 
 		'459D98' : 'OY-GLX',		 # 'Discus 2cT' # 'AC' # 'I' # 
 		'459F44' : '732',		 # 'Blanik' # '32' # 'O' # 
 		'45A303' : 'OY-HXC',		 # 'DG-200' # 'UP' # 'F' # 
-		'45A593' : 'OY-ZAX',		 # 'Discus 2' # 'IAX' # 'F' # 
+		'45A593' : 'OY-ZAX',		 # 'Discus 2' # 'AX' # 'F' # 
 		'45B038' : 'OY-LAX',		 # 'Pegase' # 'LA' # 'F' # 
 		'45B301' : 'OY-LXA',		 # 'Ventus ct' # 'L8' # 'I' # 
 		'45B701' : 'OY-MXA',		 # 'Arcus M' # 'AM' # 'I' # 
 		'45C10B' : 'OY-PHK',		 # 'PA-28' # '' # 'I' # 
 		'45C898' : 'OY-RDX',		 # 'DG-400' # 'DX' # 'I' # 
 		'45CA98' : 'OY-RTX',		 # 'Duo Discus t' # '6H' # 'I' # 
+		'45CCF8' : 'OY-SGX',		 # 'HK36 Super Dimona' # 'SGX' # 'F' # 
 		'45CF08' : 'OY-SXH',		 # 'Discus 2' # 'D2' # 'F' # 
 		'45D458' : 'OY-UBX',		 # 'ASH-26 E' # 'HB' # 'I' # 
 		'45E0E6' : 'OY-XGF',		 # 'Astir CS' # 'G5' # 'I' # 
+		'45E0E7' : 'OY-XGG',		 # 'Astir CS' # 'G6' # 'I' # 
 		'45E14A' : 'OY-XJJ',		 # 'Twin Astir I' # '59' # 'I' # 
 		'45E154' : 'OY-XJT',		 # 'Arcus T' # 'JT' # 'I' # 
 		'45E169' : 'OY-XKI',		 # 'ASK-21' # 'KI' # 'I' # 
 		'45E178' : 'OY-XKX',		 # 'LS-4' # 'KX' # 'I' # 
+		'45E189' : 'OY-XLI',		 # 'LS-4' # 'U1' # 'I' # 
 		'45E1AC' : 'OY-XML',		 # 'LS-4' # 'ML' # 'I' # 
 		'45E1E4' : 'OY-XOD',		 # 'ASK-23' # 'OD' # 'I' # 
 		'45E1E6' : 'OY-XOF',		 # 'DG-100' # 'R4' # 'I' # 
@@ -3905,7 +4122,9 @@ kglid = {
 		'45E278' : 'OY-XSX',		 # 'Nimbus 4DT' # 'SX' # 'F' # 
 		'45E28C' : 'OY-XTL',		 # 'LS-4' # 'TL' # 'F' # 
 		'45E2C3' : 'OY-XVC',		 # 'ASK-21' # 'VC' # 'I' # 
+		'45E2C9' : 'OY-XVI',		 # 'ASW-24' # 'VI' # 'I' # 
 		'45E2CA' : 'OY-XVJ',		 # 'Ventus 2ct' # 'VJ' # 'I' # 
+		'45E2E2' : 'OY-XWB',		 # 'HK36 Super Dimona' # '' # 'F' # 
 		'45E2ED' : 'OY-XWM',		 # 'Ventus 2cM' # 'WM' # 'F' # 
 		'45E30E' : 'G-DCMS',		 # 'Libelle Std' # '602' # 'F' # 
 		'45E336' : 'OY-XYV',		 # 'ASK-21' # 'YV' # 'I' # 
@@ -3923,8 +4142,9 @@ kglid = {
 		'465BC8' : 'OH-1016',		 # 'HK36 Super Dimona' # '' # 'I' # 
 		'465BD2' : 'OH-1026',		 # 'Ventus 3T' # 'W' # 'I' # 
 		'46903A' : 'D-KWAG',		 # 'DG-800' # 'AG' # 'F' # 
-		'46A231' : 'TP',		 # 'Cirrus' # 'TP' # 'O' # 
+		'46A231' : '00732',		 # 'Blanik' # '732' # 'O' # 
 		'46F631' : 'Phant4',		 # 'DJI Phantom' # '' # 'O' # 
+		'47497F' : 'HA-1240',		 # 'SF-25' # 'H40' # 'I' # 
 		'477FB5' : '477FB5',		 # 'Unknown' # 'FB5' # 'F' # 
 		'477FB6' : '477FB6',		 # 'Unknown' # 'FB6' # 'F' # 
 		'478405' : 'H_705',		 # 'Unknown' # '705' # 'O' # 
@@ -3942,6 +4162,7 @@ kglid = {
 		'484426' : 'PH-891',		 # 'Ventus cM' # 'EG' # 'F' # 
 		'484428' : 'PH-1340',		 # 'Nimbus 4DM' # 'UFO' # 'F' # 
 		'48447F' : 'PH-1353',		 # 'Ventus 2cxT' # 'CX' # 'I' # 
+		'4844E3' : 'PH-1374',		 # 'Stemme S-10' # '' # 'I' # 
 		'484576' : 'PH-963',		 # 'Mosquito' # 'LD' # 'I' # 
 		'484580' : 'PH-1272',		 # 'Duo Discus t' # 'WB1' # 'I' # 
 		'48458D' : 'PH-1317',		 # 'Discus' # 'ED' # 'F' # 
@@ -3984,7 +4205,7 @@ kglid = {
 		'484791' : 'PH-1365',		 # 'LS-6 18' # 'T10' # 'F' # 
 		'484792' : 'PH-1119',		 # 'Duo Discus' # 'T12' # 'F' # 
 		'48479B' : 'PH-726',		 # 'Astir Club' # 'G4' # 'I' # 
-		'48479C' : 'PH-730',		 # 'Astir Club' # 'G6' # 'I' # 
+		'48479C' : 'D-0753',		 # 'Astir Club' # 'G6' # 'I' # 
 		'48479D' : 'PH-740',		 # 'LS-4' # 'G5' # 'F' # 
 		'48479E' : 'PH-859',		 # 'LS-4' # 'G8' # 'F' # 
 		'4847A0' : 'PH-1099',		 # 'Duo Discus' # 'G3' # 'F' # 
@@ -4079,12 +4300,13 @@ kglid = {
 		'484A33' : 'PH-688',		 # 'ASK-21' # 'VL' # 'F' # 
 		'484A34' : 'PH-1378',		 # 'ASK-21' # 'VS' # 'F' # 
 		'484A35' : 'PH-1338',		 # 'SZD-51 Junior' # 'VJ' # 'F' # 
+		'484A58' : 'PH-SLA',		 # 'Motorplane' # 'SLA' # 'I' # 
 		'484A7B' : 'PH-1083',		 # 'LS-4' # 'FW' # 'I' # 
 		'484A7C' : 'PH1216',		 # 'ASW-28' # '28' # 'I' # 
 		'484A7D' : 'PH-1219',		 # 'LS-4' # 'FX' # 'I' # 
 		'484A80' : 'PH-1079',		 # 'LS-4' # 'FV' # 'I' # 
 		'484A8A' : 'PH-1198',		 # 'Duo Discus t' # '1Z' # 'I' # 
-		'484A92' : 'PH-PXB',		 # 'EC 135' # 'POL' # 'F' # 
+		'484A92' : 'PH-PXB',		 # 'EC 135' # 'POL' # 'I' # 
 		'484A93' : 'PH-PXC',		 # 'EC 135' # 'POL' # 'F' # 
 		'484A94' : 'PH-PXD',		 # 'EC 135' # 'POL' # 'F' # 
 		'484A95' : 'PH-PXE',		 # 'EC 135' # 'POL' # 'F' # 
@@ -4099,6 +4321,7 @@ kglid = {
 		'484AC4' : 'PH-1426',		 # 'Discus t' # 'VW' # 'I' # 
 		'484AC5' : 'PH-1424',		 # 'Discus 2cT' # 'Vne' # 'F' # 
 		'484B14' : 'PH-594',		 # 'Mini Nimbus' # 'NB' # 'F' # 
+		'484B1E' : 'PH-1430',		 # 'Pegase' # '997' # 'I' # 
 		'484B23' : 'PH-954',		 # 'Twin Astir III' # 'LY' # 'F' # 
 		'484B24' : 'ph-1169',		 # 'DG-800' # 'TT' # 'F' # 
 		'484B25' : 'PH-1306',		 # 'ASK-21' # 'W5' # 'I' # 
@@ -4130,7 +4353,7 @@ kglid = {
 		'484BBB' : 'PH-934',		 # 'SZD-51 Junior' # 'SL' # 'I' # 
 		'484BBC' : 'PH-1035',		 # 'Duo Discus' # 'SAL' # 'I' # 
 		'484BBE' : 'PH-1293',		 # 'SZD-51 Junior' # 'SK' # 'I' # 
-		'484BC4' : 'PH-1326',		 # 'DG-300' # 'RF' # 'I' # 
+		'484BC4' : 'PH-1326',		 # 'DG-300' # 'BL' # 'I' # 
 		'484BDA' : 'OY-XTO',		 # 'SF-25' # 'TO' # 'F' # 
 		'484BDB' : 'PH-1033',		 # 'DG-300' # 'IX' # 'I' # 
 		'484BDF' : 'PH-386',		 # 'ASK-13' # 'ND' # 'F' # 
@@ -4140,6 +4363,7 @@ kglid = {
 		'484BF2' : 'PH-BZT',		 # 'Vans RV-12' # '' # 'I' # 
 		'484BF3' : 'PH-1446',		 # 'Duo Discus xlt' # 'VP' # 'F' # 
 		'484BFE' : 'PH-1441',		 # 'Libelle Std' # 'GL' # 'F' # 
+		'484C00' : 'PH-SWP',		 # 'Cessna 208' # '' # 'I' # 
 		'484C0C' : 'PH-378',		 # 'Ka-6 e' # '61' # 'F' # 
 		'484C0D' : 'PH-1376',		 # 'Ka-6 e' # 'K6E' # 'I' # 
 		'484C22' : 'PH-1207',		 # 'DG-505' # 'C6' # 'I' # 
@@ -4161,10 +4385,12 @@ kglid = {
 		'484CE4' : 'PH-707',		 # 'Ventus' # 'MS' # 'I' # 
 		'484D20' : 'TataT2',		 # 'Ground Station' # 'TT2' # 'O' # 
 		'484D88' : 'PH-1095',		 # 'Twin Astir I' # 'SN' # 'I' # 
+		'484D99' : 'PH-319',		 # 'Vliegtuigbouw 013 Sagitta' # 'ROB' # 'I' # 
 		'484DB1' : 'PH-339',		 # 'Ka-6 cr' # 'XXX' # 'F' # 
 		'484DD7' : 'PH-1465',		 # 'Astir CS' # 'TC3' # 'I' # 
 		'484DF3' : 'PH-1184',		 # 'Discus t' # 'AN' # 'F' # 
 		'484DFC' : 'PH-1329',		 # 'Astir CS' # 'BO' # 'F' # 
+		'484DFD' : 'PH-870',		 # 'Ka-6 cr' # 'K6' # 'I' # 
 		'484E02' : 'PH-514',		 # 'Pilatus B4' # 'ALU' # 'I' # 
 		'484E1E' : 'PH-822',		 # 'Ka-7' # '' # 'I' # 
 		'484E38' : 'PH-LMJ',		 # 'Cessna 152' # '' # 'I' # 
@@ -4175,7 +4401,7 @@ kglid = {
 		'484E81' : 'PH-1259',		 # 'HPH 304C' # 'Z3' # 'I' # 
 		'484E85' : 'PH-483',		 # 'Libelle Std' # 'VT' # 'F' # 
 		'484E95' : 'PH-364',		 # 'Ka-6 e' # '' # 'I' # 
-		'484EDD' : 'PH-1468',		 # 'Discus' # 'JKR' # 'I' # 
+		'484EDD' : 'PH-1468',		 # 'Discus' # 'N9' # 'I' # 
 		'484EE7' : 'PH-1469',		 # 'ASK-21' # 'T14' # 'F' # 
 		'484EF4' : 'PH-1471',		 # 'Duo Discus xlt' # 'T7' # 'I' # 
 		'484EF6' : 'PH-OBO',		 # 'Vans RV-6a' # '' # 'I' # 
@@ -4228,6 +4454,7 @@ kglid = {
 		'48513F' : 'PH-1549',		 # 'LS-4 W' # 'HP' # 'I' # 
 		'485140' : 'PH-1550',		 # 'Cirrus Std' # 'HE' # 'F' # 
 		'485141' : 'PH-1544',		 # 'Towplane' # 'S25' # 'I' # 
+		'485154' : 'PH-ZZU',		 # 'Unknown' # 'ZZU' # 'I' # 
 		'48515D' : 'PH-1552',		 # 'ASK-21' # 'SG' # 'I' # 
 		'48516F' : 'PH-1557',		 # 'DG-1000' # 'FAC' # 'I' # 
 		'48517C' : 'PH-1554',		 # 'Discus 2t' # 'X6' # 'F' # 
@@ -4257,12 +4484,14 @@ kglid = {
 		'48557F' : 'PH-1593',		 # 'H36 Dimona' # '' # 'I' # 
 		'4855F6' : 'PH-PNX',		 # 'Motorplane' # '' # 'I' # 
 		'485614' : 'PH-1587',		 # 'LS-4' # '8M' # 'I' # 
+		'48563D' : 'PH-VTB',		 # 'Cessna 172' # '' # 'F' # 
 		'485692' : 'PH-864',		 # 'DG-600' # 'ZF' # 'F' # 
 		'48570A' : 'PH-1596',		 # 'ASG-29E' # '9S' # 'F' # 
 		'4857C4' : 'PH-OMP',		 # 'PA-28' # '' # 'I' # 
 		'485837' : 'PH-1600',		 # 'HK36 Super Dimona' # 'P00' # 'I' # 
 		'485839' : 'PH-1598',		 # 'Discus t' # 'BC' # 'F' # 
 		'4858A1' : 'PH-1603',		 # 'Discus 2cT' # 'GO9' # 'I' # 
+		'4858D7' : 'PH-JAA',		 # 'Zlin 242' # '' # 'I' # 
 		'485922' : 'PH-1606',		 # 'ASK-21' # 'Z5' # 'I' # 
 		'4859DD' : 'PH-1607',		 # 'Cirrus Std' # 'BS' # 'F' # 
 		'4859F0' : 'PH-4R6',		 # 'WT9 Dynamic' # 'PR6' # 'I' # 
@@ -4273,6 +4502,7 @@ kglid = {
 		'485B2F' : 'PH-PXX',		 # 'Helicopter' # 'POL' # 'F' # 
 		'485B37' : 'PH-1614',		 # 'LAK-17 A' # 'LB' # 'F' # 
 		'485B94' : 'PH-1619',		 # 'LS-4' # 'S9' # 'I' # 
+		'485BB5' : 'PHIIX',		 # 'Vans RV-12' # 'IIX' # 'I' # 
 		'485BD0' : 'PH-1623',		 # 'LS-8 18' # 'E8' # 'F' # 
 		'485BD1' : 'PH-1622',		 # 'ASG-29' # 'E3' # 'F' # 
 		'485BF4' : 'PH-1620',		 # 'LAK-17B FES' # 'KR' # 'F' # 
@@ -4282,8 +4512,11 @@ kglid = {
 		'485D32' : 'PH-1630',		 # 'Discus 2cT' # 'H8' # 'F' # 
 		'485DEA' : 'PH-4T3',		 # 'VL3 Evolution' # '' # 'I' # 
 		'485E10' : 'PH-4T2',		 # 'VL3 Evolution' # '' # 'F' # 
+		'485E8F' : 'PH-1628',		 # 'Duo Discus xlt' # 'F12' # 'I' # 
 		'485EA5' : 'PH-4U1',		 # 'Taurus' # '' # 'F' # 
 		'485EA7' : 'PH-1636',		 # 'ASG-29E' # 'VE' # 'F' # 
+		'485F62' : 'PH-1641',		 # 'MDM-1 Fox' # 'FOX' # 'F' # 
+		'485FE2' : 'PH-1644',		 # 'LS-4' # 'GO5' # 'F' # 
 		'487631' : 'HA-7004',		 # 'PW-5' # 'M9' # 'O' # 
 		'488E13' : 'viewAir',		 # 'Towplane' # '134' # 'O' # 
 		'48C4F7' : 'SP-3173',		 # 'SZD-48-1 Jantar Std 2' # 'IF' # 'F' # 
@@ -4293,13 +4526,15 @@ kglid = {
 		'48E90E' : 'OK-0201',		 # 'Marianne' # 'SL' # 'O' # 
 		'48FC2B' : 'SP-XTBL',		 # 'Gyrocopter' # '' # 'I' # 
 		'48FC41' : 'SP-SFCB',		 # 'Ultralight' # '' # 'I' # 
+		'48FC80' : 'SP-XEEA',		 # 'Gyrocopter' # '' # 'I' # 
 		'48FDC0' : 'SP-XBOA',		 # 'Gyrocopter' # '' # 'I' # 
 		'48FE43' : 'SP-XZTD',		 # 'Gyrocopter' # '' # 'I' # 
+		'48FE63' : 'SPSBUD',		 # 'Ultralight' # '' # 'I' # 
 		'48FF2F' : 'LEGT003',		 # 'DJI Phantom' # '' # 'O' # 
 		'490544' : 'viewAir',		 # 'HangGlider' # '199' # 'O' # 
 		'49059A' : 'OE-1234',		 # 'ASW-20' # 'OGN' # 'I' # 
 		'49510B' : 'OK-3254',		 # 'Cirrus Std' # 'KA' # 'O' # 
-		'495246' : '48-24',		 # 'Ultralight' # 'COR' # 'O' # 
+		'495246' : 'HA-UAF',		 # 'Ultralight' # 'HAF' # 'O' # 
 		'4958C8' : 'PH-1602',		 # 'Mosquito' # 'K3' # 'F' # 
 		'497D42' : 'OM-TOW',		 # 'EuroFox' # 'TOW' # 'O' # 
 		'49B002' : 'F-CPVB',		 # 'DG-1000' # 'VB' # 'F' # 
@@ -4314,13 +4549,19 @@ kglid = {
 		'4A9721' : 'SE-EYA',		 # 'PA-25 Pawnee' # '' # 'F' # 
 		'4A972C' : 'SE-EYL',		 # 'PA-18 Super Cub' # 'YL' # 'I' # 
 		'4A9ADA' : 'SE-FVZ',		 # 'PA-25 Pawnee' # '' # 'F' # 
-		'4AA220' : 'viewAir',		 # 'Unknown' # '185' # 'O' # 
+		'4A9B53' : 'SE-FZS',		 # 'Cessna 172' # 'ZS' # 'F' # 
+		'4A9B59' : 'SE-FZY',		 # 'Cessna 172' # 'ZY' # 'F' # 
+		'4AA220' : 'HA1289',		 # 'SF-27' # 'H89' # 'O' # 
 		'4AA46C' : 'SE-ICL',		 # 'PA-28' # '' # 'I' # 
-		'4AAB4B' : '699',		 # 'Blanik' # '99' # 'O' # 
+		'4AAB4B' : '00751',		 # 'Blanik' # '751' # 'O' # 
 		'4AADF2' : 'SE-KOR',		 # 'PA-28' # 'KOR' # 'I' # 
 		'4AB28B' : 'SE-LTK',		 # 'Cessna 172' # '' # 'I' # 
 		'4AB455' : 'SE-MBU',		 # 'Towplane' # '' # 'I' # 
+		'4AB586' : 'SE-MLF',		 # 'Cessna 172' # 'LF' # 'F' # 
 		'4AC5D4' : 'SE-UND',		 # 'DG-500' # 'VE' # 'F' # 
+		'4ACD76' : 'SE-SKV',		 # 'ASG-32 MI' # 'VH' # 'F' # 
+		'4ACD79' : 'SE-SKY',		 # 'Ventus 2cxM' # 'SKY' # 'F' # 
+		'4ACDBA' : 'SE-SMZ',		 # 'LS-8 st' # 'Z' # 'I' # 
 		'4ACF34' : 'SE-SYT',		 # 'Bergfalke II' # '' # 'I' # 
 		'4AD113' : 'SE-THS',		 # 'Astir CS' # 'U3' # 'I' # 
 		'4AD18E' : 'SE-TLN',		 # 'Bergfalke IV' # 'LN' # 'I' # 
@@ -4334,6 +4575,7 @@ kglid = {
 		'4AD450' : 'SE-UBP',		 # 'SF-25' # 'BP' # 'I' # 
 		'4AD46C' : 'SE-UCL',		 # 'SF-25' # 'CL' # 'I' # 
 		'4AD46F' : 'SE-UCO',		 # 'SF-25' # 'UCO' # 'I' # 
+		'4AD470' : 'SE-UCP',		 # 'SF-25' # 'UCP' # 'I' # 
 		'4AD473' : 'SE-UCS',		 # 'Motorglider' # 'CS' # 'I' # 
 		'4AD49A' : 'SE-UDZ',		 # 'DG-300' # '4G' # 'I' # 
 		'4AD4C3' : 'SEUFC',		 # 'Ventus c' # 'FC' # 'F' # 
@@ -4360,11 +4602,13 @@ kglid = {
 		'4AD5CC' : 'SE-UNL',		 # 'ASK-21' # 'NL' # 'I' # 
 		'4AD5CE' : 'SE-UNN',		 # 'Pegase' # 'T1' # 'I' # 
 		'4AD5D6' : 'SE-UNV',		 # 'Duo Discus t' # 'V' # 'F' # 
+		'4AD5D9' : 'SE-UNY',		 # 'Janus CM' # 'NY' # 'I' # 
 		'4AD5E3' : 'SE-UOC',		 # 'Ventus 2' # '62' # 'F' # 
-		'4AD5E5' : 'SEUOE',		 # 'LS-8a' # 'VC' # 'F' # 
+		'4AD5E5' : 'SE-UOE',		 # 'LS-8a' # 'VC' # 'F' # 
 		'4AD5E9' : 'SE-UOI',		 # 'DG-400' # '' # 'I' # 
 		'4AD5EE' : 'SE-UON',		 # 'DG-808 C' # 'VG' # 'F' # 
-		'4AD5F0' : 'SEUOP',		 # 'HK36 Super Dimona' # '' # 'F' # 
+		'4AD5F0' : 'SE-UOP',		 # 'HK36 Super Dimona' # '' # 'F' # 
+		'4AD5F8' : 'SE-UOX',		 # 'Ventus 2cxT' # 'OX' # 'F' # 
 		'4AD5FA' : 'SE-UOZ',		 # 'DG-500' # 'OZ' # 'I' # 
 		'4AD601' : 'SE-UPA',		 # 'Discus' # '' # 'I' # 
 		'4AD608' : 'SEUPH',		 # 'HK36 Super Dimona' # '' # 'F' # 
@@ -4376,13 +4620,13 @@ kglid = {
 		'4AD681' : 'SE-UTA',		 # 'Discus 2t' # 'TA' # 'F' # 
 		'4AD685' : 'SE-UTE',		 # 'Ventus 2' # 'TE' # 'I' # 
 		'4AD68F' : 'SE-UTO',		 # 'ASW-27' # 'TO' # 'I' # 
-		'4AD6AC' : 'SE-UUL',		 # 'LAK-17 AT' # '2W' # 'F' # 
 		'4AD6AE' : 'SE-UUN',		 # 'Nimbus 3' # 'UN' # 'I' # 
 		'4AD6B9' : 'SE-UUY',		 # 'Duo Discus' # 'CG' # 'I' # 
 		'4AD6C8' : 'SE-UVH',		 # 'ASH-26 E' # 'VH' # 'I' # 
 		'4AD6CC' : 'SE-UVL',		 # 'Duo Discus xlt' # 'AKF' # 'I' # 
 		'4AD706' : 'SE-UXF',		 # 'Duo Discus xlt' # 'XF' # 'I' # 
 		'4AD710' : 'SE-UXP',		 # 'Arcus M' # 'XP' # 'F' # 
+		'4AD718' : 'SE-UXX',		 # 'ASH-25 EB' # 'XXL' # 'F' # 
 		'4AD722' : 'SE-UYB',		 # 'Arcus M' # '' # 'I' # 
 		'4AD72B' : 'SE-UYK',		 # 'Duo Discus xlt' # 'XLT' # 'I' # 
 		'4AD730' : 'SE-UYP',		 # 'HPH 304C' # 'LU' # 'I' # 
@@ -4444,6 +4688,7 @@ kglid = {
 		'4B0BB6' : 'HB-ELI',		 # 'Piper J-3 Cub' # 'ELI' # 'I' # 
 		'4B0BD5' : 'HB-EMN',		 # 'DR-300' # '' # 'I' # 
 		'4B0BD7' : 'HBEMP',		 # 'Towplane' # 'MP' # 'F' # 
+		'4B0BD8' : 'HB-EMQ',		 # 'DR-300' # '' # 'F' # 
 		'4B0C28' : 'HB-EPS',		 # 'Motorplane' # 'EPS' # 'I' # 
 		'4B0C36' : 'HB-EQG',		 # 'DR-400' # 'FS' # 'F' # 
 		'4B0C3C' : 'HB-EQM',		 # 'DR-300' # 'EQM' # 'I' # 
@@ -4515,6 +4760,7 @@ kglid = {
 		'4B1BED' : 'HB-KOZ',		 # 'Tecnam  P2002 JF' # 'KOZ' # 'I' # 
 		'4B1BEE' : 'HB-KPA',		 # 'Motorplane' # 'KPA' # 'I' # 
 		'4B1BF2' : 'HB-KPE',		 # 'Motorplane' # '' # 'I' # 
+		'4B1BF5' : 'HB-KPH',		 # 'Tecnam  P2002 JF' # '' # 'F' # 
 		'4B1F9D' : 'HB-LZH',		 # 'Diamond DA42' # 'FOC' # 'I' # 
 		'4B21A1' : 'HB-MTD',		 # 'Motorplane' # '' # 'I' # 
 		'4B24FE' : 'HB-OAG',		 # 'Piper J-3 Cub' # '' # 'I' # 
@@ -4534,11 +4780,11 @@ kglid = {
 		'4B27B3' : 'HB-PAX',		 # 'PA-18 Super Cub' # '' # 'I' # 
 		'4B27BD' : 'HB-PBH',		 # 'PA-28' # 'PBH' # 'I' # 
 		'4B27CB' : 'HB-PBV',		 # 'PA-28' # 'PBV' # 'I' # 
-		'4B27F5' : 'HB-PDL',		 # 'PA-18 Super Cub' # 'PDL' # 'I' # 
+		'4B27F5' : 'NOREG',		 # '' # '' # 'I' # 
 		'4B27FE' : 'HB-PDU',		 # 'PA-28' # '' # 'I' # 
 		'4B2816' : 'HB-PES',		 # 'PA-28' # '' # 'I' # 
 		'4B281C' : 'HBPEY',		 # 'PA-28' # 'PEY' # 'F' # 
-		'4B2834' : 'HB-PFW',		 # 'PA-25 Pawnee' # 'PFW' # 'I' # 
+		'4B2834' : 'NOREG',		 # '' # '' # 'I' # 
 		'4B2839' : 'HB-PGB',		 # 'PA-28' # '' # 'I' # 
 		'4B2845' : 'HB-PGN',		 # 'PA-28' # 'PGN' # 'I' # 
 		'4B2865' : 'HB-PHT',		 # 'PA-28' # 'PHT' # 'I' # 
@@ -4556,6 +4802,7 @@ kglid = {
 		'4B28DB' : 'HB-PMH',		 # 'PA-28' # '' # 'I' # 
 		'4B28DC' : 'HB-PMI',		 # 'PA-28' # 'PMI' # 'I' # 
 		'4B28EF' : 'HB-PNB',		 # 'PA-28' # 'PNB' # 'I' # 
+		'4B28F4' : 'HB-PNG',		 # 'PA-28' # 'PNG' # 'F' # 
 		'4B28FA' : 'HB-PNM',		 # 'PA-28' # 'PNM' # 'I' # 
 		'4B28FB' : 'HB-PNN',		 # 'PA-28' # 'PNN' # 'I' # 
 		'4B2901' : 'HB-PNT',		 # 'PA-28' # 'PNT' # 'I' # 
@@ -4577,6 +4824,7 @@ kglid = {
 		'4B2954' : 'HB-PQY',		 # 'PA-28' # '' # 'I' # 
 		'4B2961' : 'HB-PRL',		 # 'PA-28' # 'PRL' # 'I' # 
 		'4B2971' : 'HB-PSB',		 # 'PA-28' # 'PSB' # 'I' # 
+		'4B2D0B' : 'HB-RBN',		 # 'Pilatus P3' # 'RBN' # 'I' # 
 		'4B2EBA' : 'HB-RSC',		 # 'Motorplane' # 'SCO' # 'I' # 
 		'4B2FC7' : 'HB-SCL',		 # 'DA20 Katana' # 'SCL' # 'I' # 
 		'4B2FC9' : 'HB-SCN',		 # 'DA20 Katana' # 'SCN' # 'I' # 
@@ -4618,6 +4866,7 @@ kglid = {
 		'4B3A32' : 'HBWBA',		 # 'DynAero MCR-01' # 'WBA' # 'F' # 
 		'4B3A82' : 'HB-WEC',		 # 'Motorplane' # 'WEC' # 'I' # 
 		'4B3AB4' : 'HB-WGA',		 # 'Gyrocopter' # '' # 'I' # 
+		'4B3ABC' : 'HB-WGI',		 # 'Gyrocopter' # '' # 'F' # 
 		'4B3C8B' : 'HB-WYD',		 # 'Remos GX' # 'WYD' # 'I' # 
 		'4B3C8D' : 'HB-WYF',		 # 'Remos GX' # 'WYF' # 'I' # 
 		'4B3C8E' : 'HB-WYG',		 # 'Remos GX' # 'WYG' # 'I' # 
@@ -4634,12 +4883,13 @@ kglid = {
 		'4B3E66' : 'HB-XQK',		 # 'Robinson R22' # 'HSI' # 'I' # 
 		'4B3E67' : 'HB-XQL',		 # 'Robinson R44' # '' # 'I' # 
 		'4B3E74' : 'HB-XQY',		 # 'Bell 407' # 'CHS' # 'I' # 
-		'4B3EB6' : 'HB-ZNQ',		 # 'AS 350' # 'SWH' # 'I' # 
 		'4B3EDE' : 'HB-XVA',		 # 'AS 350' # 'FOC' # 'I' # 
 		'4B3EDF' : 'HB-XVB',		 # 'AS 350' # 'AGL' # 'I' # 
 		'4B3F2A' : 'HB-XXY',		 # 'Bell 206' # 'CHS' # 'I' # 
 		'4B3F50' : 'HB-XZK',		 # 'Robinson R22' # 'AHB' # 'I' # 
 		'4B3F93' : 'HB-YBZ',		 # 'Vans RV-12' # 'YBZ' # 'I' # 
+		'4B3FE2' : 'HB-YFA',		 # 'Helicopter' # '' # 'I' # 
+		'4B4012' : 'NOREG',		 # '' # '' # 'F' # 
 		'4B4013' : 'HB-YGX',		 # 'Experimental' # 'YGX' # 'I' # 
 		'4B4014' : 'HB-YGY',		 # 'Experimental' # '' # 'F' # 
 		'4B401F' : 'HB-YHJ',		 # 'DynAero MCR-01' # '' # 'I' # 
@@ -4655,9 +4905,11 @@ kglid = {
 		'4B40A2' : 'HB-YMK',		 # 'Helicopter' # '' # 'I' # 
 		'4B40AB' : 'NOREG',		 # '' # '' # 'F' # 
 		'4B40B3' : 'HB-YNB',		 # 'Helicopter' # '' # 'I' # 
+		'4B40E7' : 'HB-YPB',		 # 'Motorplane' # '' # 'F' # 
 		'4B4137' : 'HB-YSD',		 # 'Vans RV-12' # 'YSD' # 'I' # 
 		'4B413B' : 'HB-YSH',		 # 'Motorplane' # 'YSH' # 'I' # 
 		'4B41CD' : 'HB-YXX',		 # 'ArrowCopter' # '' # 'I' # 
+		'4B41D0' : 'HB-YYA',		 # 'Helicopter' # '' # 'I' # 
 		'4B4211' : 'HB-ZAN',		 # 'AS 350' # 'RFU' # 'I' # 
 		'4B4216' : 'HB-ZAS',		 # 'Robinson R66' # 'HSI' # 'I' # 
 		'4B421F' : 'HB-ZBB',		 # 'EC 120' # 'BBH' # 'I' # 
@@ -4675,13 +4927,14 @@ kglid = {
 		'4B4271' : 'HB-ZEF',		 # 'EC 135' # 'AGL' # 'I' # 
 		'4B4274' : 'HB-ZEI',		 # 'AS 350' # 'SWH' # 'I' # 
 		'4B4278' : 'HB-ZEM',		 # 'Robinson R22' # 'ALP' # 'I' # 
+		'4B4279' : 'HB-ZEN',		 # 'EC 135' # 'HUG' # 'F' # 
 		'4B427B' : 'HB-ZEP',		 # 'EC 120' # 'HLA' # 'I' # 
 		'4B4286' : 'HB-XXO',		 # 'Bell 206' # 'AHB' # 'I' # 
 		'4B4292' : 'HB-ZFM',		 # 'EC 120' # 'SWH' # 'I' # 
 		'4B4296' : 'HB-ZFQ',		 # 'Robinson R44' # '' # 'I' # 
 		'4B42AA' : 'HB-ZGK',		 # 'K1200' # 'ZGK' # 'I' # 
 		'4B42AB' : 'HB-ZGL',		 # 'Robinson R44' # 'VAL' # 'I' # 
-		'4B42B0' : 'HB-ZGQ',		 # 'EC 120' # 'MFL' # 'I' # 
+		'4B42B0' : 'OE-XAM',		 # 'EC 120' # '' # 'I' # 
 		'4B42B8' : 'HB-ZGY',		 # 'EC 120' # 'RHE' # 'I' # 
 		'4B42BA' : 'HB-ZHA',		 # 'AS 350' # 'SWH' # 'I' # 
 		'4B42BD' : 'HB-ZHD',		 # 'EC 120' # 'BBH' # 'O' # 
@@ -4689,6 +4942,7 @@ kglid = {
 		'4B42C8' : 'HB-ZHO',		 # 'AS 350' # 'HPA' # 'I' # 
 		'4B42D2' : 'HB-ZHY',		 # 'AS 350' # 'AGL' # 'I' # 
 		'4B42D4' : 'HB-ZIA',		 # 'AS 350' # 'AZE' # 'I' # 
+		'4B42D5' : 'HB-ZIB',		 # 'AS 350' # 'SWH' # 'I' # 
 		'4B42D8' : 'HB-ZIE',		 # 'EC 120' # 'SWH' # 'I' # 
 		'4B42DB' : 'HB-ZIH',		 # 'K1200' # 'ZIH' # 'I' # 
 		'4B42DE' : 'NOREG',		 # '' # '' # 'I' # 
@@ -4711,8 +4965,10 @@ kglid = {
 		'4B4318' : 'HB-ZKQ',		 # 'EC 120' # 'HZU' # 'I' # 
 		'4B431B' : 'HB-ZMC',		 # 'AS 350' # 'SWH' # 'I' # 
 		'4B4322' : 'HB-ZLA',		 # 'EC 120' # 'SWH' # 'I' # 
+		'4B4323' : 'HB-ZLB',		 # 'HU 269' # 'HLA' # 'I' # 
 		'4B4325' : 'HB-ZLD',		 # 'Robinson R44' # '' # 'I' # 
 		'4B4326' : 'HB-ZLE',		 # 'Robinson R44' # '' # 'I' # 
+		'4B4328' : 'HB-ZLG',		 # 'AS 350' # 'SWH' # 'I' # 
 		'4B432B' : 'HB-ZLJ',		 # 'Cabri G2' # 'SWH' # 'I' # 
 		'4B4332' : 'HB-ZLQ',		 # 'Robinson R22' # '' # 'I' # 
 		'4B4333' : 'HB-ZLR',		 # 'EC 120' # 'SWH' # 'I' # 
@@ -4724,9 +4980,12 @@ kglid = {
 		'4B4352' : 'HB-ZMW',		 # 'Robinson R66' # 'VAL' # 'I' # 
 		'4B4356' : 'HB-ZNA',		 # 'AS 350' # 'AGL' # 'I' # 
 		'4B4358' : 'HB-ZNC',		 # 'AS 350' # 'HLI' # 'I' # 
+		'4B4359' : 'HB-ZND',		 # 'AS 350' # 'SWH' # 'I' # 
 		'4B435A' : 'HB-ZNE',		 # 'Robinson R22' # 'AHB' # 'I' # 
+		'4B435D' : 'HB-ZNH',		 # 'AS 350' # 'SWH' # 'I' # 
 		'4B4362' : 'HB-ZNM',		 # 'EC 130' # 'SWH' # 'I' # 
 		'4B4365' : 'HB-ZNP',		 # 'AS 350' # 'HLI' # 'I' # 
+		'4B4366' : 'HB-ZNQ',		 # 'AS 350' # 'SWH' # 'I' # 
 		'4B4367' : 'HB-ZNR',		 # 'AS 350' # 'AGL' # 'I' # 
 		'4B436C' : 'HB-ZNW',		 # 'Bell 407' # 'ALI' # 'I' # 
 		'4B4370' : 'HB-ZOA',		 # 'Cabri G2' # 'SWH' # 'I' # 
@@ -4824,6 +5083,7 @@ kglid = {
 		'4B4802' : 'HB-859',		 # 'Elfe S4' # '859' # 'I' # 
 		'4B4856' : 'HB-943',		 # 'Ka-8' # '943' # 'I' # 
 		'4B485C' : 'HB949',		 # 'Libelle Std' # 'LI' # 'I' # 
+		'4B48B3' : 'HB-1036',		 # 'Libelle Std' # 'WL' # 'I' # 
 		'4B48CC' : 'HB-1061',		 # 'LS-1 d' # '01' # 'I' # 
 		'4B48F4' : '12',		 # 'Pilatus B4' # '' # 'F' # 
 		'4B48FB' : '19',		 # 'Pilatus B4' # '' # 'F' # 
@@ -4837,10 +5097,13 @@ kglid = {
 		'4B49EE' : 'HB-1351',		 # 'Astir CS' # 'D1' # 'I' # 
 		'4B49FB' : 'G-FLAX',		 # 'Towplane' # '' # 'F' # 
 		'4B4A29' : 'HB-1410',		 # 'DG-200' # 'US' # 'I' # 
+		'4B4A35' : 'HB-1422',		 # 'ASW-19' # '' # 'I' # 
 		'4B4A5F' : 'HB-1464',		 # 'DG-100' # 'DP' # 'F' # 
+		'4B4A6D' : 'HB-1478',		 # 'ASW-19' # '' # 'I' # 
 		'4B4AA8' : 'HB-1537',		 # 'ASW-19' # 'W' # 'I' # 
 		'4B4AB1' : 'HB-1546',		 # 'Nimbus 2 C' # 'QB' # 'I' # 
 		'4B4AB6' : 'HB-1551',		 # 'LS-4' # 'N4' # 'I' # 
+		'4B4AB9' : 'HB-1554',		 # 'ASK-21' # '' # 'I' # 
 		'4B4AC2' : 'HB-1563',		 # 'Twin Astir II' # 'WH' # 'F' # 
 		'4B4ADC' : 'HB-1589',		 # 'ASK-21' # '' # 'F' # 
 		'4B4ADD' : 'HB-1590',		 # 'ASK-21' # 'FS1' # 'F' # 
@@ -4871,29 +5134,31 @@ kglid = {
 		'4B4B80' : 'HB-1753',		 # 'LS-4' # 'JP' # 'F' # 
 		'4B4B82' : 'HB-1755',		 # 'DG-300' # '7P' # 'I' # 
 		'4B4B83' : 'HB-1756',		 # 'DG-300' # '8P' # 'I' # 
-		'4B4B85' : 'HB1758',		 # 'ASW-20' # 'DF' # 'F' # 
+		'4B4B85' : 'HB-1758',		 # 'ASW-20' # 'DF' # 'F' # 
 		'4B4B8B' : 'HB-1764',		 # 'LS-4' # '' # 'I' # 
 		'4B4B8D' : 'HB-1766',		 # 'ASK-21' # '766' # 'F' # 
 		'4B4B8E' : 'LV-EKP',		 # 'LS-4' # '2D' # 'F' # 
-		'4B4B94' : 'OK-1773',		 # 'ASW-19' # 'JK' # 'F' # 
+		'4B4B94' : 'OK-1773',		 # 'ASW-19' # 'JK' # 'I' # 
 		'4B4B96' : 'HB-1775',		 # 'ASW-19' # 'IC' # 'F' # 
 		'4B4B99' : 'HB-1778',		 # 'Twin Astir II' # 'WW' # 'F' # 
+		'4B4B9A' : 'HB-1779',		 # 'ASK-23' # '' # 'I' # 
 		'4B4B9F' : 'HB-1784',		 # 'ASW-20' # 'HT' # 'F' # 
 		'4B4BA7' : 'HB-1792',		 # 'LS-6' # 'BY' # 'I' # 
-		'4B4BA9' : 'HB-1794',		 # 'DG-300' # '9M' # 'F' # 
 		'4B4BAB' : 'HB-1796',		 # 'ASK-23' # '' # 'F' # 
 		'4B4BAD' : 'HB-1798',		 # 'ASW-20' # '5' # 'I' # 
-		'4B4BAE' : 'K4',		 # 'LS-4' # 'K4' # 'F' # 
+		'4B4BAE' : 'NOREG',		 # '' # '' # 'F' # 
 		'4B4BB5' : 'HB-1806',		 # 'Discus' # 'W3' # 'F' # 
 		'4B4BBA' : 'HB-1811',		 # 'ASK-21' # '811' # 'F' # 
 		'4B4BC2' : 'HB1819',		 # 'DG-300' # 'FW' # 'F' # 
 		'4B4BC5' : 'HB-1822',		 # 'Discus' # 'BP' # 'I' # 
+		'4B4BC7' : 'HB-1824',		 # 'LS-4' # 'FG' # 'F' # 
 		'4B4BC9' : 'HB-1826',		 # 'Discus' # 'ZT' # 'F' # 
 		'4B4BCA' : 'HB-1827',		 # 'Discus' # '6D' # 'I' # 
 		'4B4BCB' : 'HB-1828',		 # 'LS-4' # 'N1' # 'I' # 
 		'4B4BCD' : 'HB-1830',		 # 'Discus' # 'IE' # 'F' # 
 		'4B4BD2' : 'HB-1835',		 # 'LS-4' # 'MN' # 'F' # 
 		'4B4BD6' : 'HB-1839',		 # 'ASK-21' # 'SJ' # 'I' # 
+		'4B4BD8' : 'HB-1841',		 # 'DG-300' # 'TU' # 'F' # 
 		'4B4BDC' : 'HB-1845',		 # 'DG-300' # '3P' # 'I' # 
 		'4B4BED' : 'HB-1862',		 # 'ASK-23' # '' # 'F' # 
 		'4B4BF0' : 'HB-1865',		 # 'LS-4' # 'SK' # 'F' # 
@@ -4903,7 +5168,7 @@ kglid = {
 		'4B4C04' : 'HB-1885',		 # 'Discus' # 'X7' # 'I' # 
 		'4B4C09' : 'HB-1890',		 # 'ASK-23' # '' # 'F' # 
 		'4B4C1C' : 'HB-1909',		 # 'LS-4' # '3D' # 'I' # 
-		'4B4C1D' : 'B4',		 # 'LS-4' # 'B4' # 'F' # 
+		'4B4C1D' : 'NOREG',		 # '' # '' # 'F' # 
 		'4B4C3B' : 'HB-1940',		 # 'ASH-25' # 'RC' # 'F' # 
 		'4B4C3E' : 'HB-1943',		 # 'DG-300' # 'TL' # 'F' # 
 		'4B4C40' : 'HB-1945',		 # 'Ventus c' # '945' # 'I' # 
@@ -4919,7 +5184,6 @@ kglid = {
 		'4B4C98' : 'HB-2033',		 # 'ASK-16' # '' # 'I' # 
 		'4B4CBB' : 'HB-2068',		 # 'DG-400' # 'VY' # 'I' # 
 		'4B4CBD' : 'HB-2070',		 # 'DG-400' # 'XK' # 'F' # 
-		'4B4CC9' : 'HB-2083',		 # 'Grob G109' # '083' # 'I' # 
 		'4B4CCA' : 'HB-2083',		 # 'Grob G109' # '083' # 'I' # 
 		'4B4CCB' : 'HB-2084',		 # 'Grob G109' # '' # 'I' # 
 		'4B4CCE' : 'HB2087',		 # 'Grob G109' # '87' # 'I' # 
@@ -4928,9 +5192,12 @@ kglid = {
 		'4B4CEB' : 'HB-2116',		 # 'Ventus ct' # 'RL' # 'I' # 
 		'4B4CFB' : 'HB-2132',		 # 'ASH-25' # 'UM' # 'F' # 
 		'4B4D17' : 'HB2160',		 # 'Nimbus 3DT' # 'N3' # 'F' # 
-		'4B4D18' : 'LH',		 # 'Unknown' # 'LH' # 'I' # 
+		'4B4D18' : 'NOREG',		 # '' # '' # 'I' # 
 		'4B4D24' : 'HB-2173',		 # 'Ventus ct' # 'QN' # 'F' # 
+		'4B4D2C' : 'HB-2181',		 # 'ASW-24' # '' # 'I' # 
+		'4B4D2D' : 'HB-2182',		 # 'ASW-24' # '' # 'I' # 
 		'4B4D38' : 'HB-2193',		 # 'Discus' # 'PI' # 'F' # 
+		'4B4D39' : 'HB-2194',		 # 'Discus t' # 'RX' # 'F' # 
 		'4B4D3E' : 'HB2199',		 # 'Stemme S-10' # '99' # 'I' # 
 		'4B4D44' : 'HB-2205',		 # 'HK36 Super Dimona' # '205' # 'I' # 
 		'4B4D56' : 'HB-2223',		 # 'Ventus cM' # 'AC' # 'F' # 
@@ -4964,7 +5231,7 @@ kglid = {
 		'4B4DDA' : 'HB-2355',		 # 'HK36 Super Dimona' # 'SGS' # 'F' # 
 		'4B4DDB' : 'HB2356',		 # 'Duo Discus t' # 'BSL' # 'I' # 
 		'4B4DDF' : 'HB-2360',		 # 'HK36 Super Dimona' # 'H60' # 'F' # 
-		'4B4DE0' : '2361',		 # 'IS-28M2' # '' # 'I' # 
+		'4B4DE0' : 'NOREG',		 # '' # '' # 'I' # 
 		'4B4DE2' : 'HB-2363',		 # 'HK36 Super Dimona' # '363' # 'I' # 
 		'4B4DE7' : 'HB-2368',		 # 'DG-808 B' # 'YH' # 'I' # 
 		'4B4DE8' : 'HB-2369',		 # 'DG-808 B' # 'TW' # 'F' # 
@@ -4995,9 +5262,11 @@ kglid = {
 		'4B4E37' : 'HB-2448',		 # 'Nimbus 4DM' # 'IRR' # 'F' # 
 		'4B4E39' : 'HB-2450',		 # 'ASK-21 MI' # '' # 'I' # 
 		'4B4E3B' : 'HB-2452',		 # 'Antares 20 E' # 'EM' # 'I' # 
+		'4B4E3E' : 'HB-2455',		 # 'Duo Discus t' # 'LM' # 'I' # 
 		'4B4E40' : 'HB-2457',		 # 'Duo Discus xlt' # 'TQ' # 'F' # 
 		'4B4E41' : 'HB-2458',		 # 'ASH-26 E' # 'JS' # 'I' # 
 		'4B4E42' : 'HB-2459',		 # 'HK36 Super Dimona' # '' # 'F' # 
+		'4B4E47' : 'HB-2464',		 # 'Discus 2cT' # 'GZ' # 'F' # 
 		'4B4E49' : 'HB-2466',		 # 'Discus 2cT' # 'KF' # 'I' # 
 		'4B4E4A' : 'HB-2467',		 # 'Arcus T' # 'SX' # 'I' # 
 		'4B4E4C' : 'HB-2469',		 # 'ASH-26 E' # '7T' # 'I' # 
@@ -5012,6 +5281,7 @@ kglid = {
 		'4B4E5D' : 'HB-2486',		 # 'Arcus T' # 'RB' # 'F' # 
 		'4B4E5E' : 'HB-2487',		 # 'Discus 2cT' # 'B8' # 'I' # 
 		'4B4E61' : 'HB-2490',		 # 'Ventus 2ct' # '490' # 'I' # 
+		'4B4E65' : 'HB_2494',		 # 'Ventus 2cxM' # 'XA' # 'F' # 
 		'4B4E68' : 'HB-2497',		 # 'Arcus T' # 'AT' # 'I' # 
 		'4B4E6B' : 'HB-2500',		 # 'Arcus M' # '' # 'I' # 
 		'4B4E6C' : 'D-KGMP',		 # 'ASH-31 MI' # 'ZZ' # 'F' # 
@@ -5019,7 +5289,7 @@ kglid = {
 		'4B4E70' : 'HB2505',		 # 'DG-1000' # 'FB' # 'I' # 
 		'4B4E72' : 'HB-2507',		 # 'ASG-29' # 'PR' # 'I' # 
 		'4B4E76' : 'HB-2511',		 # 'Motorplane' # '' # 'F' # 
-		'4B4E77' : 'HB2512',		 # 'ASH-31 MI' # 'FD' # 'F' # 
+		'4B4E77' : 'HB-2512',		 # 'ASH-31 MI' # 'FD' # 'F' # 
 		'4B4E78' : 'HB-2513',		 # 'Duo Discus xlt' # 'NJ' # 'I' # 
 		'4B4E7F' : 'HB-2520',		 # 'ASH-31 MI' # 'DK' # 'F' # 
 		'4B4E83' : 'HB2524',		 # 'Arcus T' # 'IT' # 'I' # 
@@ -5036,8 +5306,10 @@ kglid = {
 		'4B4ED9' : 'HB-2610',		 # 'SB-10' # 'S10' # 'F' # 
 		'4B4F07' : 'HB-2656',		 # 'DG-1000 T' # 'NF' # 'I' # 
 		'4B5018' : 'HB-2929',		 # 'Arcus M' # 'AA' # 'F' # 
+		'4B506E' : 'HB-3015',		 # 'ASK-23' # '' # 'I' # 
 		'4B5075' : 'HB-3022',		 # 'Discus' # 'DW' # 'F' # 
 		'4B5078' : 'HB-3025',		 # 'LS-4' # 'CR' # 'F' # 
+		'4B5079' : 'HB-3026',		 # 'ASK-21' # '' # 'I' # 
 		'4B507A' : 'HB3027',		 # 'Discus' # '27' # 'I' # 
 		'4B508A' : 'HB-3043',		 # 'Discus' # 'DX' # 'F' # 
 		'4B508B' : 'D-3047',		 # 'Discus' # 'DY' # 'I' # 
@@ -5048,6 +5320,7 @@ kglid = {
 		'4B50A7' : 'HB-3072',		 # 'DG-300' # 'V7' # 'F' # 
 		'4B50A9' : 'HB-3074',		 # 'LS-4' # 'C4' # 'F' # 
 		'4B50B7' : 'G-CTUG',		 # 'PA-25 Pawnee' # 'TUG' # 'I' # 
+		'4B50BA' : 'HB-3091',		 # 'ASK-23' # '' # 'I' # 
 		'4B50BD' : 'HB-3094',		 # 'Discus' # 'Z4' # 'I' # 
 		'4B50C0' : 'HB-3097',		 # 'DG-500' # 'GW' # 'F' # 
 		'4B50C2' : 'HB3099',		 # 'ASK-21' # 'TV' # 'F' # 
@@ -5061,7 +5334,6 @@ kglid = {
 		'4B50DE' : 'HB3127',		 # 'LS-6 18WJ' # 'AQ' # 'F' # 
 		'4B50E0' : 'HB-3129',		 # 'DG-200' # '29' # 'F' # 
 		'4B50E2' : 'HB-3131',		 # 'Duo Discus' # 'DZ' # 'F' # 
-		'4B50E3' : 'HY',		 # 'Janus C' # 'HY' # 'F' # 
 		'4B50E7' : 'HB-3136',		 # 'SZD-51 Junior' # 'WJ' # 'F' # 
 		'4B50EE' : 'HB-3143',		 # 'ASK-21' # 'CJ' # 'F' # 
 		'4B50EF' : 'HB-3144',		 # 'LS-4' # 'H44' # 'I' # 
@@ -5081,7 +5353,6 @@ kglid = {
 		'4B511A' : 'HB3187',		 # 'LS-4' # '9F' # 'I' # 
 		'4B511E' : 'HB-3191',		 # 'ASH-25' # 'IQ' # 'F' # 
 		'4B511F' : 'HB-3192',		 # 'Ventus 2' # 'WX' # 'F' # 
-		'4B5120' : 'D-0472',		 # 'Ka-6 e' # '' # 'F' # 
 		'4B5121' : 'HB-3194',		 # 'Ventus 2' # 'HQ' # 'F' # 
 		'4B512C' : 'HB-3205',		 # 'DG-505' # '5P' # 'I' # 
 		'4B512D' : 'HB-3206',		 # 'LS-8a' # 'O6' # 'F' # 
@@ -5096,6 +5367,7 @@ kglid = {
 		'4B5147' : 'HB-3232',		 # 'Duo Discus' # 'CL' # 'I' # 
 		'4B5149' : 'D-3214',		 # 'Ventus 2' # 'KH' # 'F' # 
 		'4B515D' : 'HB-3254',		 # 'LS-8 18' # 'W7' # 'F' # 
+		'4B515F' : 'HB-3256',		 # 'DG-505' # 'FO' # 'F' # 
 		'4B5167' : 'HB-3264',		 # 'ASW-27' # 'ZX' # 'I' # 
 		'4B5169' : 'HB3266',		 # 'DG-505' # '66' # 'F' # 
 		'4B516C' : 'HB-3269',		 # 'ASW-27' # 'TW' # 'I' # 
@@ -5108,7 +5380,7 @@ kglid = {
 		'4B5176' : 'HB-3279',		 # 'Duo Discus' # 'AI' # 'I' # 
 		'4B517A' : 'HB-3283',		 # 'Discus 2' # 'TS' # 'I' # 
 		'4B517B' : 'HB3284',		 # 'LS-8 18' # 'XF' # 'I' # 
-		'4B517F' : 'KH',		 # 'LS-8' # 'KH' # 'F' # 
+		'4B517F' : 'NOREG',		 # '' # '' # 'F' # 
 		'4B5182' : 'HB-3291',		 # 'Discus 2' # 'W6' # 'F' # 
 		'4B5187' : 'HB-3296',		 # 'Duo Discus' # '2C' # 'F' # 
 		'4B5188' : 'HB-3297',		 # 'LS-8 18' # 'MF' # 'F' # 
@@ -5143,17 +5415,18 @@ kglid = {
 		'4B51D7' : 'HB-3376',		 # 'ASW-28' # 'ZC' # 'F' # 
 		'4B51D8' : 'HB-3377',		 # 'LS-8 18' # 'N8' # 'I' # 
 		'4B51DA' : 'HB-3379',		 # 'ASW-28' # '8S' # 'I' # 
-		'4B51DB' : 'HB-3380',		 # 'Discus 2' # 'DKU' # 'F' # 
+		'4B51DB' : 'HB-3380',		 # 'Discus 2' # 'DKU' # 'I' # 
 		'4B51DC' : 'HB-3381',		 # 'ASW-28' # 'ZE' # 'F' # 
 		'4B51E1' : 'HB-3386',		 # 'LS-8 18' # 'O7' # 'F' # 
 		'4B51E2' : 'HB-3387',		 # 'Duo Discus' # 'PP' # 'I' # 
-		'4B51E3' : 'OH',		 # 'LS-8' # 'OH' # 'F' # 
+		'4B51E3' : 'NOREG',		 # '' # '' # 'F' # 
 		'4B51E4' : 'HB-3389',		 # 'LS-8 18' # 'O8' # 'F' # 
 		'4B51EF' : 'HB-3400',		 # 'DG-1000' # 'BW' # 'F' # 
 		'4B51F0' : 'HB-3401',		 # 'Duo Discus x' # 'ZU' # 'I' # 
 		'4B51F2' : 'HB-3403',		 # 'ASW-28' # '7S' # 'I' # 
 		'4B51F3' : 'HB3404',		 # 'SZD-51 Junior' # '04' # 'F' # 
 		'4B51F5' : 'HB3406',		 # 'DG-1000' # 'QF' # 'I' # 
+		'4B51F6' : 'HB-3407',		 # 'Duo Discus' # 'ZO' # 'F' # 
 		'4B51FA' : 'HB-3411',		 # 'Duo Discus' # 'DQ' # 'F' # 
 		'4B51FC' : 'HB-3413',		 # 'Duo Discus xl' # 'KD' # 'I' # 
 		'4B51FD' : 'HB-3414',		 # 'ASG-29' # 'AE' # 'I' # 
@@ -5163,7 +5436,7 @@ kglid = {
 		'4B5208' : 'HB-3425',		 # 'ASG-29' # '4S' # 'I' # 
 		'4B520D' : 'HB-3430',		 # 'ASG-29' # '5S' # 'I' # 
 		'4B520F' : 'HB-3432',		 # 'DG-1000' # 'RA' # 'F' # 
-		'4B5211' : 'EVH',		 # 'DG-1000' # 'EVH' # 'F' # 
+		'4B5211' : 'NOREG',		 # '' # '' # 'F' # 
 		'4B5218' : 'HB-3441',		 # 'Discus 2c' # 'Z9' # 'I' # 
 		'4B5219' : 'HB-3442',		 # 'Arcus S' # '1C' # 'F' # 
 		'4B521A' : 'HB-3443',		 # 'ASG-29' # 'AF' # 'I' # 
@@ -5219,7 +5492,7 @@ kglid = {
 		'4B7FBE' : 'A-925',		 # 'Motorplane' # '925' # 'I' # 
 		'4B7FD6' : 'A-926',		 # 'Motorplane' # '926' # 'I' # 
 		'4B7FE2' : 'T-331',		 # 'Helicopter' # 'VIP' # 'I' # 
-		'4B9931' : 'Delta_L',		 # 'Paraglider' # 'ZSP' # 'O' # 
+		'4B9931' : 'Bonanza',		 # 'Paraglider' # 'ZSP' # 'O' # 
 		'4BAC09' : 'D-KSSW',		 # 'Ventus cM' # 'SW' # 'F' # 
 		'4BD231' : '47',		 # 'SZD-48-3 Jantar Std 3' # '' # 'O' # 
 		'4BF56F' : 'HA----',		 # 'Cessna 152' # '' # 'O' # 
@@ -5235,32 +5508,34 @@ kglid = {
 		'4D5142' : 'PETRA45',		 # 'Unknown' # 'P45' # 'O' # 
 		'4D6128' : 'OK-7501',		 # 'Cirrus Std' # 'OK' # 'O' # 
 		'4E9513' : 'SO',		 # 'SZD-48-3 Jantar Std 3' # 'SO' # 'O' # 
-		'4E9A6A' : 'MS-427',		 # 'Paraglider' # '120' # 'O' # 
 		'4EF56E' : 'LEGT002',		 # 'Drone/UAV' # '' # 'O' # 
 		'4EF801' : 'RICHC',		 # 'Paraglider' # 'RJC' # 'F' # 
 		'4F7427' : 'PETRA38',		 # 'Unknown' # 'P38' # 'O' # 
 		'4F8A1C' : 'A',		 # 'SZD-48-3 Jantar Std 3' # 'A' # 'O' # 
 		'4FFA21' : 'viewAir',		 # 'Helicopter' # '101' # 'O' # 
+		'500028' : 'T7-PCS',		 # 'Pilatus PC-7' # 'PCS' # 'I' # 
 		'500030' : 'T7-PCS',		 # 'Motorplane' # 'PCS' # 'I' # 
 		'502C7A' : 'YL-PPC',		 # 'DA40' # '' # 'F' # 
 		'502CBC' : 'YL-MFG',		 # 'Ultralight' # 'MFG' # 'I' # 
 		'505CB2' : 'F-JAYJ',		 # 'WT9 Dynamic' # '' # 'F' # 
 		'505D38' : 'OM-IBX',		 # 'Cessna 172' # 'IBX' # 'I' # 
-		'505DA5' : 'OM-EMM',		 # 'PA-28' # 'EMM' # 'F' # 
+		'505DA5' : 'OM-EMM',		 # 'PA-28' # 'EMM' # 'I' # 
+		'505DD2' : 'OM-RNR',		 # 'Cessna 172' # 'RNR' # 'I' # 
 		'505DEE' : 'OM-PNO',		 # 'Towplane' # 'PNO' # 'F' # 
 		'505E65' : 'OM-LSE',		 # 'Cessna 150' # 'LSE' # 'F' # 
-		'505E70' : 'OM-LSP',		 # 'SportCruiser' # 'LSP' # 'F' # 
-		'505F24' : 'OM-DYD',		 # 'WT9 Dynamic' # 'DYD' # 'F' # 
+		'505E70' : 'OM-LSP',		 # 'SportCruiser' # 'LSP' # 'I' # 
+		'505F24' : 'OM-DYD',		 # 'WT9 Dynamic' # 'DYD' # 'I' # 
 		'506653' : 'CC-TR7',		 # 'UFO' # 'TR7' # 'O' # 
 		'50679F' : 'OK-5146',		 # 'LS-6 18' # 'BL' # 'F' # 
 		'506E0D' : 'S5-DGO',		 # 'Cessna 172' # 'DGO' # 'F' # 
 		'506F12' : 'S5-PIG',		 # 'WT9 Dynamic' # 'PIG' # 'F' # 
 		'50AB1C' : '063',		 # 'Blanik' # '63' # 'O' # 
+		'511BEA' : 'OK-0105',		 # 'L 13 SEH Vivat' # '105' # 'O' # 
 		'521931' : 'LY-GPT',		 # 'LS-3' # 'T' # 'O' # 
 		'5239DD' : 'G-CGFU',		 # 'Mini Nimbus' # '142' # 'F' # 
 		'530246' : 'LY-GBT',		 # 'Blanik' # 'BT' # 'O' # 
 		'5343AA' : 'NOREG',		 # '' # '' # 'F' # 
-		'538F33' : 'HA-851',		 # 'Baloon' # '059' # 'O' # 
+		'538F33' : 'viewAir',		 # 'Unknown' # '059' # 'O' # 
 		'538F57' : '2-058',		 # 'HangGlider' # '058' # 'O' # 
 		'539D32' : '33-68',		 # 'Motorglider' # '68' # 'O' # 
 		'53EC14' : 'NOREG',		 # '' # '' # 'F' # 
@@ -5273,7 +5548,7 @@ kglid = {
 		'54DB80' : 'VH-OTP',		 # 'SZD-55' # 'OTP' # 'F' # 
 		'54FD24' : 'LEGT001',		 # 'Drone/UAV' # '' # 'O' # 
 		'552494' : 'F-CGFR',		 # 'Pegase' # 'FR' # 'I' # 
-		'556B24' : 'OK-SKY',		 # 'Cessna 150' # 'OKY' # 'O' # 
+		'556B24' : 'OM-SKA',		 # 'Cessna 150' # 'OKA' # 'O' # 
 		'558935' : 'OK-XYJ',		 # 'Motorplane' # 'XYJ' # 'O' # 
 		'55FD42' : 'LEGT501',		 # 'Unknown' # '' # 'O' # 
 		'55FF21' : 'MEDI-02',		 # 'EC 135' # '' # 'O' # 
@@ -5290,20 +5565,27 @@ kglid = {
 		'596600' : 'OK-5116',		 # 'Motorglider' # 'SW' # 'O' # 
 		'598657' : 'ES-2009',		 # 'SZD-42 Jantar 2/2b' # '09d' # 'O' # 
 		'599520' : 'EPPT',		 # 'SZD-30 Pirat' # 'SK' # 'O' # 
+		'59B94B' : 'HA-VOA',		 # 'Unknown' # 'VOA' # 'O' # 
 		'59BEFC' : 'INO-013',		 # 'Drone/UAV' # 'SCS' # 'F' # 
 		'5A0F01' : 'MAV2',		 # 'Ka-7' # 'MAV' # 'O' # 
 		'5A2763' : 'LY-ZBM',		 # 'Ventus c' # 'BM' # 'O' # 
 		'5A700C' : 'HA-1296',		 # 'SF-25' # 'H96' # 'O' # 
 		'5A8037' : 'NOREG',		 # 'Phoebus' # 'PS' # 'O' # 
+		'5A8E53' : 'SZ-866',		 # 'Paraglider' # '' # 'O' # 
+		'5A987C' : 'OK-1526',		 # 'VSO-10' # 'V3' # 'F' # 
 		'5AB23C' : 'OE-5651',		 # 'PW-5' # '3A' # 'O' # 
 		'5AC0B8' : 'NOREG',		 # 'Cessna 152' # '' # 'O' # 
 		'5AC0D4' : 'SP-UTB',		 # 'Zlin 242' # 'UTB' # 'O' # 
 		'5AC13C' : 'NOREG',		 # '' # '' # 'O' # 
 		'5AC148' : 'NOREG',		 # 'Blanik' # 'FL2' # 'O' # 
+		'5AC170' : 'Nico',		 # 'Paraglider' # '' # 'F' # 
 		'5AC1A4' : 'NOREG',		 # 'Blanik' # 'FL4' # 'O' # 
+		'5AC2F4' : 'OK-1526',		 # 'VSO-10' # 'V3' # 'F' # 
 		'5AC39C' : 'NOREG',		 # 'HangGlider' # '' # 'F' # 
 		'5AC494' : 'SP-FZX',		 # 'Cessna 172' # 'FZX' # 'O' # 
 		'5AC4C4' : 'SP-KMB',		 # 'Cessna 172' # 'KMB' # 'O' # 
+		'5AC4E8' : 'EC-ACP',		 # 'UFO' # 'ACP' # 'O' # 
+		'5AC4EC' : 'EC-ACQ',		 # 'UFO' # 'ACQ' # 'O' # 
 		'5AC544' : 'G-DDTG',		 # 'SHK-1' # 'DTG' # 'O' # 
 		'5AEB3A' : 'HA-5560',		 # 'Other' # 'EN2' # 'O' # 
 		'5AFE4A' : 'AS',		 # 'SZD-48-3 Jantar Std 3' # '' # 'O' # 
@@ -5337,7 +5619,8 @@ kglid = {
 		'5D8532' : 'HB-WZN',		 # 'WT9 Dynamic' # '' # 'F' # 
 		'5DF731' : 'I',		 # 'SZD-48-1 Jantar Std 2' # '' # 'O' # 
 		'5DFC49' : 'YA',		 # 'LS-4' # '' # 'O' # 
-		'5DFD53' : 'viewAir',		 # 'Unknown' # '080' # 'O' # 
+		'5DFD53' : 'SFA',		 # 'Cessna 152' # '080' # 'O' # 
+		'5E0526' : 'AAREON1',		 # 'DJI Inspire' # '' # 'O' # 
 		'5E1240' : 'NOREG',		 # 'Blanik' # 'LT1' # 'O' # 
 		'5E2B2E' : 'HAJAJ',		 # 'Yak-12' # 'HAJ' # 'O' # 
 		'5E5CCC' : 'D-KAIM',		 # 'ASH-25' # 'IM' # 'F' # 
@@ -5358,7 +5641,6 @@ kglid = {
 		'60AB8A' : 'LN-GOL',		 # 'DG-1000 T' # 'OL' # 'F' # 
 		'60B050' : 'OM_LNU',		 # 'Motorplane' # '' # 'O' # 
 		'60E6A0' : 'EC-ACN',		 # 'UFO' # 'ACN' # 'O' # 
-		'61732F' : 'NOREG',		 # 'LS-7' # 'FK' # 'I' # 
 		'6320AC' : 'D-6320',		 # 'ASW-20' # 'AC' # 'F' # 
 		'640000' : 'IndyXCG',		 # 'Paraglider' # '85b' # 'O' # 
 		'640001' : 'Test1',		 # 'Paraglider' # '85b' # 'O' # 
@@ -5383,6 +5665,10 @@ kglid = {
 		'64020F' : 'HA_PTF',		 # 'Discus' # 'aa3' # 'O' # 
 		'640210' : 'Tom_Kn',		 # 'Paraglider' # '6f5' # 'I' # 
 		'640211' : 'NOREG',		 # 'HangGlider' # '093' # 'O' # 
+		'640212' : 'Meado',		 # 'Paraglider' # 'c12' # 'O' # 
+		'640213' : 'NOREG',		 # 'Other' # 'ee3' # 'O' # 
+		'640214' : 'NOREG',		 # 'Paraglider' # 'e93' # 'O' # 
+		'640215' : '301963',		 # 'HangGlider' # '5cc' # 'O' # 
 		'641234' : 'RICHC',		 # 'Paraglider' # '46d' # 'O' # 
 		'642323' : 'SEBTEST',		 # 'Unknown' # 'bae' # 'O' # 
 		'642610' : 'ALEXKEN',		 # 'Paraglider' # '289' # 'O' # 
@@ -5411,13 +5697,13 @@ kglid = {
 		'6EF194' : 'BEN',		 # 'ASK-13' # 'BEN' # 'O' # 
 		'6EF2A0' : 'JD-ESP',		 # 'Ground Station' # '_32' # 'O' # 
 		'6EF60C' : 'D-5493',		 # 'Discus' # 'DR' # 'I' # 
-		'6FEF69' : '57670',		 # 'Paraglider' # '' # 'F' # 
 		'700000' : 'F-CIFB',		 # 'ASG-29' # 'FB' # 'I' # 
 		'7000CA' : 'LN-BGB',		 # 'Cessna 206' # '' # 'F' # 
 		'702911' : 'NOREG',		 # '' # '' # 'F' # 
 		'703081' : 'D-KBCG',		 # 'SF-25' # '' # 'F' # 
 		'709626' : 'U_F_O',		 # 'UFO' # 'uf' # 'O' # 
 		'711C3C' : 'NOREG',		 # 'VSO-10' # '40' # 'O' # 
+		'715E5E' : 'HA5027',		 # 'IS-28B2' # '' # 'O' # 
 		'718057' : '56206',		 # 'Paraglider' # 'Ruf' # 'F' # 
 		'726912' : 'D-3968',		 # 'Duo Discus' # 'FE' # 'F' # 
 		'740948' : 'EC-ACC',		 # 'UFO' # 'ACC' # 'O' # 
@@ -5427,14 +5713,16 @@ kglid = {
 		'759147' : 'METEO3',		 # 'Drone/UAV' # '' # 'O' # 
 		'771409' : 'NOREG',		 # 'Paraglider' # '' # 'F' # 
 		'777777' : '15408',		 # 'Paraglider' # '' # 'F' # 
+		'778E2C' : '-Test-',		 # 'Unknown' # 'TST' # 'O' # 
 		'786211' : '6098',		 # 'HangGlider' # 'DVB' # 'O' # 
-		'786C33' : 'NOREG',		 # '' # '' # 'O' # 
 		'792864' : 'NOREG',		 # 'Blanik' # 'LT3' # 'O' # 
 		'7938F2' : '1234',		 # 'DG-400' # '' # 'F' # 
+		'79400B' : 'OM-1337',		 # 'Ka-7' # 'K7' # 'O' # 
 		'7A1B27' : 'HATRM',		 # 'Z-226 trener' # 'HRM' # 'O' # 
-		'7A4A38' : 'HA_5027',		 # 'IS-28B2' # '' # 'O' # 
+		'7A4A38' : 'HA_7628',		 # 'Astir Club' # '3D' # 'O' # 
 		'7A8121' : 'AL',		 # 'LS-1 d' # '' # 'O' # 
 		'7AA741' : 'VP',		 # 'SZD-48-3 Jantar Std 3' # '' # 'O' # 
+		'7ABB6D' : 'Csongor',		 # 'Paraglider' # 'Cso' # 'O' # 
 		'7ABD47' : 'SE-UMP',		 # 'ASK-21' # 'MP' # 'I' # 
 		'7C017D' : 'VH-AKV',		 # 'Towplane' # '' # 'I' # 
 		'7C018C' : 'VH-ALA',		 # 'PA-25 Pawnee' # 'ALA' # 'I' # 
@@ -5444,10 +5732,12 @@ kglid = {
 		'7C1ED1' : 'VH-GDF',		 # 'Astir CS' # '' # 'F' # 
 		'7C1ED3' : 'VH-GDH',		 # 'DG-300' # 'DH' # 'I' # 
 		'7C1F60' : 'VH-GHE',		 # 'Duo Discus' # 'HE' # 'F' # 
+		'7C1FD7' : 'VH-GKP',		 # 'PW-5' # 'KP' # 'F' # 
 		'7C1FEC' : 'VH-GLA',		 # 'LS-8 18' # 'GLA' # 'F' # 
 		'7C2016' : 'VH-GMG',		 # 'Cirrus Std' # 'MG' # 'I' # 
 		'7C2025' : 'VH-GGH',		 # 'Ventus bT' # 'GGH' # 'I' # 
 		'7C2044' : 'VH-GNQ',		 # 'Ka-6 cr' # 'NQ' # 'I' # 
+		'7C206C' : 'VH-GOU',		 # 'Cirrus Std' # 'OU' # 'F' # 
 		'7C2095' : 'VH-GPZ',		 # 'ASK-13' # 'PZ' # 'I' # 
 		'7C20EB' : 'VH_GSD',		 # 'Hornet' # '' # 'F' # 
 		'7C2185' : 'WN',		 # 'ASW-17' # '' # 'F' # 
@@ -5470,6 +5760,8 @@ kglid = {
 		'7C5DB6' : 'VH-SSO',		 # 'PA-25 Pawnee' # 'SSO' # 'F' # 
 		'7C6306' : 'VH-TUG',		 # 'PA-25 Pawnee' # '' # 'F' # 
 		'7C66A8' : 'VH-UKA',		 # 'LS-4' # 'UKA' # 'I' # 
+		'7C66AE' : 'VH-UKG',		 # 'JS-1 Revelation' # 'UKG' # 'F' # 
+		'7C6A7D' : 'VH-VBJ',		 # 'Arcus M' # 'VBJ' # 'F' # 
 		'7C6C6D' : 'VH-VPB',		 # 'LS-8 st 18' # '' # 'F' # 
 		'7C7260' : 'VH_WVM',		 # 'Astir CS' # '' # 'F' # 
 		'7C766A' : 'VH-XOC',		 # 'SZD-51 Junior' # 'XOC' # 'I' # 
@@ -5478,10 +5770,11 @@ kglid = {
 		'7DF02D' : 'OK-1890',		 # 'H36 Dimona' # 'H36' # 'O' # 
 		'7E0433' : 'LY-GNV',		 # 'Blanik' # 'NV' # 'O' # 
 		'7E074F' : 'OK-5550',		 # 'Blanik' # 'S2' # 'O' # 
+		'7E4043' : 'HA4297',		 # 'Cirrus Std' # 'P' # 'O' # 
 		'7E93C4' : 'TK',		 # 'Marianne' # '' # 'F' # 
-		'7EAB41' : '84',		 # 'SZD-41 Jantar Std' # '84' # 'O' # 
+		'7EAB41' : '20438',		 # 'Blanik' # '438' # 'O' # 
 		'7EB43A' : 'ES-2009',		 # 'SZD-42 Jantar 2/2b' # '09' # 'O' # 
-		'7F2E6F' : 'D-MAVU',		 # 'Roland Z602 XL' # '' # 'O' # 
+		'7F7B37' : 'TS',		 # 'Stemme S-10' # 'ZA' # 'O' # 
 		'800000' : 'HA-4495',		 # 'Ventus 2' # 'V8' # 'F' # 
 		'801012' : 'NOREG',		 # 'Paraglider' # 'PB' # 'O' # 
 		'810000' : 'AAREON',		 # 'Drone/UAV' # '01' # 'O' # 
@@ -5500,12 +5793,15 @@ kglid = {
 		'81C788' : 'OK-7106',		 # 'Motorglider' # '' # 'O' # 
 		'81C7A4' : 'OK-2806',		 # 'Blanik' # '' # 'O' # 
 		'81C7BC' : 'OK-6445',		 # 'VT-116 Orlik II' # '' # 'O' # 
+		'842094' : 'SP-SMED',		 # 'Ultralight' # '' # 'F' # 
 		'854129' : 'OM2APF',		 # 'Ground Station' # 'PF3' # 'O' # 
 		'855B51' : 'INO-003',		 # 'Drone/UAV' # 'SCS' # 'O' # 
 		'85E209' : 'SP-111',		 # 'Unknown' # '1' # 'O' # 
+		'867048' : 'CH40300',		 # 'Paraglider' # '' # 'O' # 
 		'86E265' : 'G-DEVK',		 # 'Astir CS' # '' # 'O' # 
 		'86E475' : 'G-BDZA',		 # 'Motorplane' # '' # 'O' # 
 		'86E5AD' : 'abcdef',		 # 'UFO' # 'ESP' # 'F' # 
+		'880104' : 'SZ-846',		 # 'Paraglider' # '846' # 'O' # 
 		'888888' : 'HB-3283',		 # 'Discus 2' # 'TS' # 'F' # 
 		'88B9B0' : 'FFVP002',		 # 'Different Aircraft' # 'F02' # 'O' # 
 		'88BD3C' : 'D-EEUW',		 # 'Rallye 180T-D' # '' # 'O' # 
@@ -5513,8 +5809,8 @@ kglid = {
 		'88BF40' : 'N174NE',		 # 'Glasflugel H301' # 'AS2' # 'F' # 
 		'88BFF4' : 'G-OTWS',		 # 'Duo Discus xlt' # 'T2' # 'O' # 
 		'88C08C' : 'G-BDGB',		 # 'Different Aircraft' # '' # 'O' # 
-		'88C0B0' : 'OM-M682',		 # 'Ultralight' # '682' # 'O' # 
 		'88C100' : '_88C',		 # 'Libelle Std' # '_DV' # 'F' # 
+		'88C1D4' : 'NOREG',		 # 'Experimental' # 'NN' # 'F' # 
 		'88C1F4' : 'CC-KWB',		 # 'Grob G109' # 'WB' # 'O' # 
 		'88C4B8' : 'N101GM',		 # 'PW-5' # '' # 'O' # 
 		'88C4D4' : 'C-FDTI',		 # 'PIK-20 E' # 'DTI' # 'F' # 
@@ -5541,7 +5837,7 @@ kglid = {
 		'8A0E79' : 'D-KPOL',		 # 'SF-25' # '' # 'O' # 
 		'8AA8AA' : 'TEST',		 # 'Ground Station' # 'TST' # 'O' # 
 		'8C1519' : 'OK-3892',		 # 'ASW-19' # '19' # 'O' # 
-		'8C1589' : 'OKWAR17',		 # 'Unknown' # 'R17' # 'O' # 
+		'8C1589' : 'OKWAR17',		 # 'Ultralight' # 'R17' # 'O' # 
 		'8C1779' : 'OK-3122',		 # 'Cirrus Std' # 'NK' # 'O' # 
 		'8C29D9' : 'G-DDJX',		 # 'Astir CS' # 'DJX' # 'O' # 
 		'8C2C25' : 'NOREG',		 # '' # '' # 'O' # 
@@ -5579,34 +5875,39 @@ kglid = {
 		'930813' : 'G-CFSR',		 # 'DG-300' # '' # 'F' # 
 		'932F09' : 'PK-X002',		 # 'Drone/UAV' # 'P02' # 'O' # 
 		'935465' : 'OY-XUT',		 # 'SZD-50 Puchacz' # 'UT' # 'F' # 
-		'9780D8' : 'Pg001',		 # 'Paraglider' # 'LUP' # 'O' # 
+		'9780D8' : 'Pg001',		 # 'Paraglider' # 'EVI' # 'O' # 
 		'97863C' : 'SZ-767',		 # 'Paraglider' # 'BAT' # 'O' # 
-		'978BD0' : 'NOREG',		 # 'UFO' # 'LZ2' # 'O' # 
-		'978DA4' : 'NOREG',		 # 'UFO' # 'LZ1' # 'O' # 
+		'978BD0' : 'LZ2',		 # 'Motorplane' # 'LZ2' # 'O' # 
+		'978DA4' : 'LZ1',		 # 'Motorplane' # 'LZ1' # 'O' # 
+		'979214' : 'NOREG',		 # 'MikroKopter Hexa' # 'JBK' # 'F' # 
 		'979240' : 'NOREG',		 # 'Ground Station' # '' # 'O' # 
 		'9793B0' : 'n.a.',		 # 'Paraglider' # 'n.a' # 'O' # 
 		'979444' : 'OK6969',		 # 'ASW-15' # 'UP' # 'O' # 
+		'9798FC' : 'OK-1814',		 # 'Blanik' # '814' # 'O' # 
 		'97D275' : 'OK-0620',		 # 'ASW-19' # 'FF' # 'F' # 
 		'984378' : 'oe_7134',		 # 'WT9 Dynamic' # '' # 'F' # 
 		'994567' : 'D-KBMC',		 # 'Arcus M' # 'CK' # 'O' # 
 		'99ACED' : 'NOREG',		 # 'Astir CS' # '' # 'F' # 
-		'99B584' : 'OK0913',		 # 'Blanik' # '' # 'O' # 
-		'99B9F0' : 'JB-TEST',		 # 'Drone/UAV' # 'JBT' # 'O' # 
-		'99BB4C' : 'NOREG',		 # 'Unknown' # 'RH9' # 'O' # 
+		'99AEF4' : 'Pg003',		 # 'Paraglider' # 'LUP' # 'O' # 
+		'99B2D0' : 'OK3267',		 # 'Cirrus Std' # 'SC' # 'O' # 
+		'99B584' : 'OK2014',		 # 'Janus B' # 'JC' # 'O' # 
+		'99B9F0' : 'NOREG',		 # '' # '' # 'F' # 
+		'99BB4C' : 'NOREG',		 # 'Other' # 'RH9' # 'O' # 
 		'99BC04' : 'FAX0370',		 # 'UFO' # 'DAP' # 'O' # 
+		'99BD5C' : 'OKMUU42',		 # 'WT9 Dynamic' # '' # 'O' # 
 		'99BE48' : 'T-Beam',		 # 'Paraglider' # 'Tam' # 'F' # 
-		'99C0C4' : 'OKXUO28',		 # 'Skylane Airlony' # 'XUO' # 'O' # 
-		'99C1B4' : 'OK-2500',		 # 'VSO-10' # 'F8' # 'O' # 
+		'99BF38' : 'OK3265',		 # 'Cirrus Std' # 'FS' # 'O' # 
+		'99C0C4' : 'OK-2882',		 # 'DG-200' # 'GL' # 'O' # 
+		'99C118' : 'CH40300',		 # 'Paraglider' # '' # 'O' # 
+		'99C1B4' : 'KU-DYS',		 # 'ASW-20' # 'KL' # 'O' # 
 		'9A718D' : 'F-CNGC',		 # 'DG-1000' # 'TO' # 'F' # 
 		'9A8561' : 'BUC',		 # 'Capstan' # 'A23' # 'I' # 
 		'9B464C' : 'D-9820',		 # 'Discus 2' # '9S' # 'I' # 
-		'9B5B00' : 'HB849RC',		 # 'Drone/UAV' # 'MB' # 'O' # 
 		'9C40F9' : 'HELLI',		 # 'Paraglider' # 'hba' # 'O' # 
 		'9CCF9F' : 'G-AM01',		 # 'PA-28' # '' # 'O' # 
 		'9CF9E8' : 'VH-GVE',		 # 'Cirrus Std' # 'VE' # 'F' # 
 		'9D9273' : 'VH-WPT',		 # 'ASH-26 E' # 'WPT' # 'F' # 
 		'9DB564' : 'Lampe',		 # 'Paraglider' # '' # 'F' # 
-		'9DB634' : 'D-MXX1',		 # 'HangGlider' # '' # 'F' # 
 		'9DB670' : 'D-MTAL',		 # 'Ikarus C42 B' # '' # 'O' # 
 		'9DB9D4' : 'OM-9112',		 # 'L 13 SEH Vivat' # '' # 'O' # 
 		'9DB9F0' : 'mik42',		 # 'Paraglider' # '' # 'O' # 
@@ -5616,9 +5917,12 @@ kglid = {
 		'9E6DD8' : 'T3V1',		 # 'Paraglider' # 'Tam' # 'O' # 
 		'9E709C' : 'Pg002',		 # 'Paraglider' # 'LUP' # 'O' # 
 		'9EDBAC' : 'SP-3859',		 # 'SZD-55' # 'A8' # 'F' # 
+		'A00214' : 'N248MB',		 # 'ASW-24' # '88' # 'F' # 
+		'A005A1' : 'N100KM',		 # 'Discus 2' # 'DS' # 'F' # 
 		'A01413' : 'N104FF',		 # 'Fuji FA-200' # '4FF' # 'I' # 
 		'A01541' : 'N2817',		 # 'Ventus 2cxa FES' # '51P' # 'F' # 
 		'A017E1' : 'N105GD',		 # 'Discus' # 'AAA' # 'F' # 
+		'A01B5A' : 'N106DS',		 # 'SZD-51 Junior' # '6DS' # 'F' # 
 		'A02C17' : 'N11YY',		 # 'PA-30 Twin Comanche' # '' # 'F' # 
 		'A03878' : 'Matter',		 # 'Drone/UAV' # 'MNT' # 'I' # 
 		'A046DE' : 'N117GV',		 # 'Duo Discus' # 'TX' # 'F' # 
@@ -5652,9 +5956,12 @@ kglid = {
 		'A15816' : 'Matter',		 # 'Drone/UAV' # 'MNT' # 'I' # 
 		'A182DD' : 'N197HB',		 # 'PW-5' # '4JS' # 'F' # 
 		'A18BF4' : 'N1990B',		 # 'Luscombe 8E' # '' # 'I' # 
+		'A18EA9' : 'N2PU',		 # 'Extra 330' # '' # 'I' # 
 		'A19032' : 'HB-WGH',		 # 'Gyrocopter' # '' # 'F' # 
 		'A190E8' : 'N20NT',		 # 'ASW-20' # '4B' # 'F' # 
-		'A1C504' : 'N213DT',		 # 'JS-1 C21' # 'DT' # 'F' # 
+		'A1A1FD' : 'N204ML',		 # 'miniLAK' # 'LEL' # 'F' # 
+		'A1BD5E' : 'N211BM',		 # 'ASK-21' # 'BM' # 'F' # 
+		'A1BEBC' : 'N211RM',		 # 'ASK-21' # 'RM' # 'F' # 
 		'A1CDAD' : 'N215SH',		 # 'Duo Discus' # '5H' # 'F' # 
 		'A1D4A3' : 'Matter',		 # 'Drone/UAV' # 'MNT' # 'I' # 
 		'A1F0FB' : 'N224ML',		 # 'ASW-22 BL' # 'MAL' # 'F' # 
@@ -5665,16 +5972,19 @@ kglid = {
 		'A25B4E' : 'N251B',		 # 'ASW-20' # '1B' # 'F' # 
 		'A27219' : 'RICHC',		 # 'Paraglider' # 'RJC' # 'O' # 
 		'A27D43' : 'N26GJ',		 # 'ASH-26 E' # 'L6' # 'F' # 
+		'A28E35' : 'N264DS',		 # 'DA40' # '' # 'I' # 
 		'A296DD' : 'N266SF',		 # 'Unknown' # 'N26' # 'I' # 
 		'A2A4B1' : 'N27FS',		 # 'ASW-27' # 'FS' # 'F' # 
 		'A2A593' : 'N27QT',		 # 'ASW-27' # 'QT' # 'F' # 
 		'A2AAA5' : 'VH-VTM',		 # 'Ventus c' # 'TM' # 'I' # 
 		'A2B58F' : 'N274CE',		 # 'ASW-27' # 'IY' # 'F' # 
 		'A2CA58' : 'D-9599',		 # 'Ventus 2' # 'LS' # 'F' # 
+		'A2CEDC' : 'N280K',		 # 'ASG-29E' # 'OK' # 'F' # 
 		'A2DF44' : 'N2817',		 # 'Ventus 2cxa FES' # '51P' # 'F' # 
 		'A2FA0A' : 'N291JS',		 # 'ASG-29' # '1A' # 'F' # 
 		'A2FDC1' : 'N292JS',		 # 'ASG-29' # 'JS' # 'I' # 
 		'A32189' : 'N300YS',		 # 'ASW-20' # 'GD' # 'F' # 
+		'A32A83' : 'N303AM',		 # 'DG-303' # '8E' # 'F' # 
 		'A32ECA' : 'N304GF',		 # 'HPH 304CZ-17' # 'GF' # 'F' # 
 		'A359A2' : 'N315CM',		 # 'Stemme S-10' # '' # 'F' # 
 		'A36C67' : 'N32EM',		 # 'Discus' # 'EM' # 'I' # 
@@ -5693,12 +6003,12 @@ kglid = {
 		'A51D93' : 'CC-PXX',		 # 'Mini Nimbus' # 'XX' # 'F' # 
 		'A52163' : 'NOREG',		 # '' # '' # 'F' # 
 		'A53161' : 'N4335Y',		 # 'PA-25 Pawnee' # '35Y' # 'F' # 
-		'A5614B' : 'N446E',		 # 'Cirrus Std' # '5T' # 'F' # 
+		'A5614B' : 'N446E',		 # 'Cirrus Std' # '5Tf' # 'F' # 
 		'A5BFE1' : 'Matter',		 # 'Drone/UAV' # 'MNT' # 'I' # 
 		'A5E4DF' : 'D-2871',		 # 'DG-300' # 'L71' # 'F' # 
 		'A5E697' : 'N48DM',		 # 'Ventus' # 'E5' # 'F' # 
 		'A61C69' : 'N493N',		 # 'ASG-29' # 'ZL' # 'I' # 
-		'A63FA2' : '501WG',		 # 'JS-1 C21' # 'F8' # 'F' # 
+		'A63FA2' : '501wg',		 # 'JS-1 C21' # '3M' # 'F' # 
 		'A64A64' : 'Andymac',		 # 'Paraglider' # '' # 'F' # 
 		'A65223' : 'n506vp',		 # 'H36 Dimona' # '' # 'I' # 
 		'A666CE' : 'N511SZ',		 # 'SZD-48 Jantar Std 2' # 'UV' # 'F' # 
@@ -5708,24 +6018,27 @@ kglid = {
 		'A6FEAB' : 'N55SZ',		 # 'SZD-55' # 'H4' # 'F' # 
 		'A71358' : 'N555PW',		 # 'PW-5' # '5PW' # 'F' # 
 		'A79E87' : 'Matter',		 # 'Drone/UAV' # 'MNT' # 'I' # 
+		'A7C450' : 'N6UA',		 # 'PIK-20 B' # 'YS' # 'O' # 
 		'A7C49E' : 'N6XD',		 # 'Discus' # 'XD' # 'F' # 
 		'A7D668' : 'N604DB',		 # 'ASW-27' # 'J3' # 'F' # 
 		'A81B12' : 'MA',		 # 'Ka-8' # 'MA' # 'F' # 
 		'A822A4' : 'N623NX',		 # 'Libelle Std' # 'NX' # 'F' # 
 		'A829F0' : 'Matter',		 # 'Drone/UAV' # 'MNT' # 'I' # 
-		'A831C0' : 'N627RL',		 # 'ASG-29' # 'TG' # 'F' # 
+		'A831C0' : 'N627RL',		 # 'ASG-29' # 'TGf' # 'F' # 
 		'A83428' : 'N628CA',		 # 'Pegase' # 'MSM' # 'F' # 
 		'A8642E' : 'N64PG',		 # 'Discus 2' # 'PG' # 'F' # 
 		'A87E3B' : 'N6462Z',		 # 'PA-25 Pawnee' # '62Z' # 'F' # 
 		'A89361' : 'N6514M',		 # 'ASW-20' # 'DC' # 'F' # 
 		'A8B242' : 'N66DY',		 # 'ASH-26 E' # 'DY' # 'F' # 
 		'A9297D' : 'Matter',		 # 'Drone/UAV' # 'MNT' # 'I' # 
+		'A9549A' : 'N700AM',		 # 'Cessna T303' # '377' # 'I' # 
 		'A95754' : 'HG2547A',		 # 'HangGlider' # '' # 'O' # 
 		'A962AF' : 'N7034Z',		 # 'PA-25 Pawnee' # '34Z' # 'F' # 
 		'A96841' : 'Matter',		 # 'Drone/UAV' # 'MNT' # 'I' # 
 		'A9771D' : 'Matter',		 # 'Drone/UAV' # 'MNT' # 'I' # 
 		'A97A78' : 'N71HW',		 # 'HPH 304S Shark' # 'HW' # 'F' # 
 		'A981EE' : 'N711YD',		 # 'DA40' # '' # 'I' # 
+		'A9BB63' : 'N726RX',		 # 'ASH-26 E' # 'RX' # 'F' # 
 		'A9BC2E' : 'NOREG',		 # 'Paraglider' # '' # 'F' # 
 		'AA000F' : 'HB-X2',		 # 'A380' # 'GG' # 'O' # 
 		'AA0D9B' : 'N747LX',		 # 'UFO' # '' # 'F' # 
@@ -5744,11 +6057,11 @@ kglid = {
 		'AAE22D' : 'N800DE',		 # 'DG-800' # 'EO' # 'F' # 
 		'AAE383' : 'N800SX',		 # 'DG-800' # 'FWS' # 'F' # 
 		'AB034E' : 'PH14',		 # 'Ventus cM' # 'KMS' # 'F' # 
-		'AB07B7' : 'N81HE',		 # 'Robinson R44' # '' # 'I' # 
 		'AB313D' : 'C-FZST',		 # 'LAK-17B FES' # 'ST' # 'O' # 
 		'AB4AF7' : 'N827BB',		 # 'ASW-27' # 'BB' # 'F' # 
 		'AB5875' : 'N830BB',		 # 'ASH-31 MI' # 'BB' # 'F' # 
 		'AB5D31' : 'Matter',		 # 'Drone/UAV' # 'MNT' # 'I' # 
+		'AB61CD' : 'N832WS',		 # 'ASG-32 MI' # 'WS' # 'F' # 
 		'AB6300' : 'HG2547B',		 # 'HangGlider' # '' # 'O' # 
 		'ABAA47' : 'N8504L',		 # 'PA-25 Pawnee' # '04L' # 'F' # 
 		'ABCDEF' : 'D-KKJM',		 # 'ASH-31 MI' # '9X' # 'F' # 
@@ -5758,30 +6071,47 @@ kglid = {
 		'AC5548' : 'EC-HTM',		 # 'DG-100' # 'CH' # 'F' # 
 		'AC9383' : 'N9094D',		 # 'Discus' # '4D' # 'F' # 
 		'AC9BD9' : 'N911R',		 # 'Ventus ct' # 'EF' # 'F' # 
-		'ACB35C' : 'N9172T',		 # 'JS-3 18M' # '2T' # 'F' # 
+		'ACB35C' : 'N9172T',		 # 'JS-3 18M' # '2Tf' # 'F' # 
 		'ACBE53' : 'SP-3181',		 # 'SZD-50 Puchacz' # 'AK' # 'O' # 
 		'ACE06B' : 'N929JK',		 # 'ASG-29' # '2XX' # 'F' # 
 		'AD48F4' : 'N955TS',		 # 'ASK-21' # 'R21' # 'F' # 
 		'AD742A' : 'N966TS',		 # 'ASK-21' # 'G21' # 'F' # 
 		'AD9F60' : 'N977TS',		 # 'ASK-21' # 'B21' # 'F' # 
+		'ADBBA9' : 'N984T',		 # 'Ventus' # '19' # 'F' # 
+		'ADCB98' : 'N98825',		 # 'Cessna 172' # '' # 'I' # 
 		'ADE34A' : 'D-KETE',		 # 'HPH 304S Shark' # 'TE' # 'F' # 
 		'ADE5FE' : 'N995J',		 # 'Stemme S-10' # '5J' # 'F' # 
 		'AF9175' : 'OK_4611',		 # 'Ventus' # '7F' # 'O' # 
+		'AFE192' : 'SK954',		 # 'Paraglider' # '' # 'O' # 
+		'B0A001' : 'SP-XESC',		 # 'Gyrocopter' # '' # 'O' # 
+		'B0A002' : 'SP-XSDZ',		 # 'AutoGyro MTOsport' # '' # 'I' # 
+		'B1F9F8' : 'OK-2705',		 # 'Blanik' # '705' # 'O' # 
 		'B1FA98' : 'OK-0569',		 # 'Cirrus Std' # 'AW' # 'O' # 
+		'B1FCB8' : 'NOREG',		 # 'DG-100' # 'FZ1' # 'F' # 
+		'B20258' : 'Avium',		 # 'Std. Astir II' # 'BJ' # 'O' # 
+		'B20654' : 'LZ-NTH',		 # 'Tecnam  P2002 JF' # '' # 'O' # 
+		'B2068C' : 'Testing',		 # 'Unknown' # 'TST' # 'O' # 
+		'B20950' : 'TM',		 # 'Paraglider' # '' # 'F' # 
+		'B20A50' : 'MATTY',		 # 'UFO' # '' # 'O' # 
 		'B5C05E' : 'Radley',		 # 'Ground Station' # '' # 'I' # 
 		'B5EF38' : 'LY-AUR',		 # 'Cirrus' # 'UR' # 'O' # 
+		'B60000' : 'NOREG',		 # 'Discus' # 'FZZ' # 'F' # 
 		'B6000C' : 'AIR-STM',		 # 'Motorplane' # 'STM' # 'F' # 
 		'B600CC' : 'G-DDTW',		 # 'SZD-30 Pirat' # '' # 'O' # 
 		'B60144' : 'OKGUA14',		 # 'Ultralight' # 'A14' # 'F' # 
 		'B602A4' : 'B3T4',		 # 'Unknown' # '' # 'F' # 
 		'B603C8' : 'B603C8',		 # 'Parrot Bebop' # 'G-' # 'O' # 
 		'B603F8' : 'OK4506',		 # 'VSO-10' # 'I9' # 'F' # 
-		'B60438' : 'N284BM',		 # 'Ventus' # 'BM' # 'O' # 
+		'B60438' : 'N130GL',		 # 'Glasflugel H301' # 'T7' # 'F' # 
 		'B60488' : 'PH-IBL',		 # 'P 220 Koala' # 'LK' # 'F' # 
+		'B60494' : 'OK0652',		 # 'Ka-7' # '' # 'O' # 
 		'B604B0' : 'OKJUU18',		 # 'WT9 Dynamic' # 'U18' # 'F' # 
 		'B604C4' : 'FR1',		 # 'Ultralight Glider' # 'FRP' # 'F' # 
+		'B60574' : 'OM-P399',		 # 'UFO' # 'Rok' # 'O' # 
+		'B605AC' : 'OM-L163',		 # 'Paraglider' # 'MiK' # 'O' # 
 		'B60638' : 'NOREG',		 # 'Baloon' # '' # 'O' # 
 		'B60710' : 'ZARA01',		 # 'Ultralight' # '' # 'O' # 
+		'B6072C' : 'OK0913',		 # 'Blanik' # '' # 'O' # 
 		'B60868' : 'OY-XZN',		 # 'Discus 2cT' # 'ZN' # 'O' # 
 		'B60B90' : 'INO-010',		 # 'UFO' # 'SCS' # 'O' # 
 		'B60CB0' : 'G-CJJJ',		 # 'Cirrus Std' # '' # 'O' # 
@@ -5789,7 +6119,7 @@ kglid = {
 		'B60D94' : 'SGP-12',		 # 'UFO' # 'G12' # 'O' # 
 		'B60DA0' : 'SGP-06',		 # 'UFO' # 'G06' # 'O' # 
 		'B60DB8' : 'OKPUO75',		 # 'Skylane Airlony' # '' # 'F' # 
-		'B60DCC' : 'G-CLGR',		 # 'Libelle Club' # 'LGR' # 'O' # 
+		'B60DCC' : 'G-TEST',		 # 'Arcus M' # 'JV' # 'F' # 
 		'B60DDC' : 'SGP-18',		 # 'UFO' # 'G18' # 'O' # 
 		'B60E18' : 'SGP-15',		 # 'UFO' # 'G15' # 'O' # 
 		'B60E1C' : 'SGP-02',		 # 'UFO' # 'G02' # 'O' # 
@@ -5806,19 +6136,19 @@ kglid = {
 		'B60FC0' : 'INO-012',		 # 'Helicopter' # 'SCS' # 'O' # 
 		'B60FE4' : 'SGP-11',		 # 'UFO' # 'G11' # 'O' # 
 		'B61004' : 'SGP-04',		 # 'UFO' # 'G04' # 'O' # 
-		'B81C22' : 'D-KKTB',		 # 'Ventus cM' # 'TB' # 'F' # 
 		'B827EB' : 'GCSHB',		 # 'SportCruiser' # '' # 'O' # 
 		'B941D4' : 'DJI-PH',		 # 'DJI Phantom' # '2F' # 'F' # 
+		'B94238' : 'OK-KL01',		 # 'Cessna 172' # '001' # 'O' # 
 		'B942A8' : 'HA-BLA',		 # 'UFO' # 'BLA' # 'O' # 
+		'B942E0' : 'NOREG',		 # 'Paraglider' # '' # 'O' # 
 		'B943D8' : 'OK-0000',		 # 'Other' # 'HON' # 'F' # 
 		'B943F8' : 'OM-0233',		 # 'Blanik' # '' # 'O' # 
-		'B944E4' : 'OK-0526',		 # 'VSO-10' # 'C9' # 'F' # 
+		'B944C8' : 'OK-0526',		 # 'VSO-10' # 'C9' # 'F' # 
 		'B94564' : 'OM-1801',		 # 'Twin Astir II' # '' # 'O' # 
 		'B945C4' : 'NOREG',		 # '' # '' # 'F' # 
 		'B94604' : 'OK-0208',		 # 'Blanik' # '' # 'O' # 
 		'B946C4' : 'LV-EMB',		 # 'PW-5' # 'PJ' # 'O' # 
 		'B946EC' : 'OK-0419',		 # 'ASK-13' # 'K13' # 'F' # 
-		'B98950' : 'SZ-767',		 # 'Paraglider' # 'BA' # 'O' # 
 		'B9945C' : 'VH-IZO',		 # 'Slingsby T51 Dart 17WR' # 'IZO' # 'F' # 
 		'B99C30' : 'LV-EON',		 # 'PW-5' # 'GF' # 'O' # 
 		'B99D6C' : 'OK-0113',		 # 'L 13 SEH Vivat' # '' # 'O' # 
@@ -5836,6 +6166,7 @@ kglid = {
 		'B9A030' : 'NOREG',		 # '' # '' # 'F' # 
 		'B9A060' : 'OKIUD01',		 # 'TST-10' # 'DP' # 'F' # 
 		'B9A06C' : 'OK-9688',		 # 'Twin Astir II' # 'BL' # 'F' # 
+		'B9A07C' : 'OK-EYX',		 # 'PA-25 Pawnee' # 'EYX' # 'O' # 
 		'B9A0B8' : 'OK-0512',		 # 'VSO-10' # '' # 'O' # 
 		'B9A188' : 'mik42',		 # 'Paraglider' # '' # 'O' # 
 		'B9A21C' : '54789',		 # 'Paraglider' # '' # 'O' # 
@@ -5863,6 +6194,7 @@ kglid = {
 		'C0017F' : 'C-FAOS',		 # 'LS-4' # 'SO' # 'F' # 
 		'C001DF' : 'NOREG',		 # 'ASK-21' # 'ASK' # 'F' # 
 		'C00212' : 'C-FAUJ',		 # 'Cessna 305' # '' # 'F' # 
+		'C0022E' : 'C-GAVL',		 # 'PA-25 Pawnee' # 'AVL' # 'F' # 
 		'C002F5' : 'C-FBDC',		 # 'Libelle Std' # 'DC' # 'F' # 
 		'C003AB' : 'C-FBKC',		 # 'LS-6' # 'KC' # 'F' # 
 		'C003E7' : 'cfbmk',		 # 'PIK-20 B' # 'BMK' # 'F' # 
@@ -5883,6 +6215,7 @@ kglid = {
 		'C01163' : 'C-FGPE',		 # 'ASW-20' # 'PE' # 'F' # 
 		'C017DF' : 'NOREG',		 # '' # '' # 'F' # 
 		'C01C4F' : 'C-FKSS',		 # 'Phoebus' # 'KS' # 'F' # 
+		'C020AD' : 'C-FMJS',		 # 'SZD-50 Puchacz' # 'MJS' # 'F' # 
 		'C02293' : 'C-FNCK',		 # 'SZD-48-1 Jantar Std 2' # 'W2' # 'F' # 
 		'C02487' : 'C-FNVQ',		 # 'ASW-20' # 'VQ' # 'I' # 
 		'C028EA' : 'C-FPMV',		 # 'ASW-24' # 'WW' # 'F' # 
@@ -5898,6 +6231,7 @@ kglid = {
 		'C03910' : 'C-FVPV',		 # 'Cessna 172' # '' # 'I' # 
 		'C03925' : 'C-FVQQ',		 # 'SZD-55' # '40' # 'F' # 
 		'C03B2E' : 'C-FWKR',		 # 'ASW-27' # 'MZ' # 'I' # 
+		'C03BE6' : 'C-FWRT',		 # 'DG-1000' # 'WRT' # 'F' # 
 		'C03EA8' : 'C-FXSX',		 # 'Ka-6 e' # '6E' # 'F' # 
 		'C03F06' : 'c-fxwn',		 # 'LS-6' # 'S6' # 'I' # 
 		'C0406A' : 'C-FYKF',		 # 'Cessna 152' # '' # 'I' # 
@@ -5914,6 +6248,7 @@ kglid = {
 		'C04924' : 'C-GBSD',		 # 'Cessna 172' # '' # 'I' # 
 		'C0492C' : 'C-GBSL',		 # 'Cessna 172' # '' # 'I' # 
 		'C04974' : 'C-GBVF',		 # 'PW-5' # 'W5' # 'F' # 
+		'C0497D' : 'C-GBVO',		 # 'PW-5' # 'BVO' # 'F' # 
 		'C049A1' : 'C-GBWY',		 # 'PA-25 Pawnee' # 'BWY' # 'F' # 
 		'C049CE' : 'C-GBYR',		 # 'ASW-19' # 'DX' # 'F' # 
 		'C04A18' : 'C-GCBN',		 # 'Cessna 172' # '' # 'I' # 
@@ -5926,6 +6261,7 @@ kglid = {
 		'C04F02' : 'C-GDXX',		 # 'ASK-21' # 'XX' # 'F' # 
 		'C04F0E' : 'C-GDYJ',		 # 'ASK-21' # 'YJ' # 'F' # 
 		'C05120' : 'C-GEST',		 # 'PIK-20 B' # 'EL' # 'F' # 
+		'C05205' : 'C-GFBO',		 # 'SZD-42 Jantar 2/2b' # 'FBO' # 'F' # 
 		'C05254' : 'C-GFEP',		 # 'ASW-20' # 'EB' # 'F' # 
 		'C05257' : 'C-GFES',		 # 'LAK-17B FES' # '17B' # 'F' # 
 		'C05358' : 'C-GFOP',		 # 'PIK-20 D' # 'OP' # 'I' # 
@@ -5960,6 +6296,7 @@ kglid = {
 		'C060F8' : 'C-GKST',		 # 'LAK-17 A' # 'ST2' # 'F' # 
 		'C06170' : 'C-GKXJ',		 # 'Bellanca Citabria' # 'KXJ' # 'F' # 
 		'C0621C' : 'C-GLDZ',		 # 'ASK-21' # 'LDZ' # 'F' # 
+		'C06230' : 'C-GLET',		 # 'LET L-33 Solo' # 'LET' # 'F' # 
 		'C06253' : 'C-GLGC',		 # 'PZL Krosno KR-03 Puchatek' # 'LGC' # 'F' # 
 		'C067BC' : 'C-GNHJ',		 # 'Ka-6 cr' # 'NHJ' # 'F' # 
 		'C067D9' : 'C-GNIM',		 # 'DG-1000' # 'NIM' # 'I' # 
@@ -5971,6 +6308,7 @@ kglid = {
 		'C06B86' : 'C-GOSR',		 # 'PA-30 Twin Comanche' # '' # 'I' # 
 		'C06C83' : 'C-GPCK',		 # 'Bellanca Scout' # 'PCK' # 'I' # 
 		'C06D39' : 'C-GPJK',		 # 'Cessna 172' # '' # 'I' # 
+		'C06D62' : 'C-GPKZ',		 # 'SZD-54 Perkoz' # 'PKZ' # 'F' # 
 		'C06DA4' : 'C-GPNN',		 # 'SZD-51 Junior' # 'PNN' # 'F' # 
 		'C06EDF' : 'C-GPZQ',		 # 'LS-4' # '84' # 'I' # 
 		'C06EE2' : 'C-GPZT',		 # 'PA-28' # '' # 'I' # 
@@ -5979,6 +6317,7 @@ kglid = {
 		'C071CB' : 'RCK',		 # 'PIK-20 B' # 'CK' # 'F' # 
 		'C07219' : 'C-GRFK',		 # 'Cessna 172' # '' # 'I' # 
 		'C073C1' : 'C-GRVS',		 # 'SGS 2-33A' # 'RVS' # 'I' # 
+		'C074BE' : 'C-GSFL',		 # 'PA-25 Pawnee' # 'SFL' # 'F' # 
 		'C0789B' : 'C-GTRM',		 # 'ASW-20' # 'RM' # 'F' # 
 		'C07978' : 'C-GTZZ',		 # 'ASW-19' # 'ZZ' # 'I' # 
 		'C07A68' : 'C-GUJF',		 # 'SZD-41 Jantar Std' # 'AL' # 'F' # 
@@ -6012,6 +6351,7 @@ kglid = {
 		'C1DF60' : 'HA-4022',		 # 'Ka-6 cr' # 'Z' # 'O' # 
 		'C1FF2B' : 'VM',		 # 'SZD-48-3 Jantar Std 3' # '' # 'O' # 
 		'C25128' : 'C25128',		 # 'Paraglider' # '' # 'O' # 
+		'C32838' : 'CUBE3',		 # 'LS-1' # 'IBI' # 'O' # 
 		'C3B05C' : 'F-CLEF',		 # 'SZD-55' # 'ST' # 'F' # 
 		'C3FC28' : '33',		 # 'SZD-48-1 Jantar Std 2' # '33' # 'O' # 
 		'C42264' : 'EC-ACF',		 # 'UFO' # 'ACF' # 'O' # 
@@ -6123,21 +6463,23 @@ kglid = {
 		'C83436' : 'ZK-GSM',		 # 'Arcus M' # 'SM' # 'F' # 
 		'C91EA1' : 'D-EGYX',		 # 'MS-893 Commodore' # '' # 'O' # 
 		'C94275' : 'PAW',		 # 'Ground Station' # '' # 'I' # 
+		'C99048' : 'SZ-2017',		 # 'Paraglider' # 'BB' # 'O' # 
 		'C9C26C' : 'EC-AC5',		 # 'UFO' # 'AC5' # 'O' # 
 		'C9CF40' : '2001',		 # 'HangGlider' # 'KUN' # 'O' # 
+		'C9D230' : 'PM076',		 # 'Paraglider' # 'DNS' # 'O' # 
+		'C9F443' : 'NOREG',		 # '' # '' # 'O' # 
 		'C9FB43' : 'V7',		 # 'SZD-48-3 Jantar Std 3' # 'V7' # 'O' # 
 		'C9FE45' : 'reserv',		 # 'Blanik' # '--' # 'O' # 
 		'CA1303' : 'VH-GAN',		 # 'Cirrus Std' # 'GAN' # 'F' # 
 		'CA6349' : 'NOREG',		 # 'Unknown' # '' # 'O' # 
 		'CA7017' : 'G-DDSH',		 # 'Astir CS-77' # '648' # 'F' # 
-		'CA9907' : 'TARGET2',		 # 'Ground Station' # '177' # 'O' # 
-		'CABAAB' : 'MS-430',		 # 'Paraglider' # '' # 'O' # 
+		'CA8840' : 'SZ-755',		 # 'Paraglider' # 'LKM' # 'O' # 
+		'CABAAB' : 'MS-436',		 # 'Paraglider' # '' # 'O' # 
 		'CAD46F' : 'HA-3933',		 # 'SZD-9 Bocian' # 'MAC' # 'O' # 
 		'CCD439' : 'OE-0900',		 # 'Phoebus' # 'MT' # 'O' # 
 		'CCD8D3' : 'D-4206',		 # 'Astir CS' # '06' # 'I' # 
 		'CDDD34' : 'EC-AC6',		 # 'UFO' # 'AC6' # 'O' # 
-		'CECC38' : 'D-KSHK',		 # 'Ventus 3T' # '3M' # 'F' # 
-		'CED540' : 'HASTQ',		 # 'DA20 Katana' # 'HTQ' # 'O' # 
+		'CED540' : 'HADAX',		 # 'DA20 Katana' # 'HAX' # 'O' # 
 		'CED560' : 'HA1212',		 # 'SF-25' # 'H12' # 'O' # 
 		'CFC675' : 'Crow188',		 # 'Paraglider' # '' # 'O' # 
 		'CFC77B' : 'Crow187',		 # 'Paraglider' # 'CR' # 'O' # 
@@ -6159,7 +6501,7 @@ kglid = {
 		'D0009B' : '29379',		 # 'Paraglider' # '' # 'F' # 
 		'D000A0' : 'Twins',		 # 'Drone/UAV' # 'TWN' # 'F' # 
 		'D000AE' : 'Flarm',		 # 'Drone/UAV' # 'FLA' # 'F' # 
-		'D000B6' : 'NOREG',		 # '' # '' # 'F' # 
+		'D000B6' : 'REGA',		 # 'Drone/UAV' # 'RGA' # 'F' # 
 		'D000D6' : 'N147JA',		 # 'Discus' # 'JA' # 'F' # 
 		'D000D9' : 'D-KJOH',		 # 'ASH-26 E' # 'OH' # 'F' # 
 		'D000DB' : 'G-CHBF',		 # 'Nimbus 2 C' # 'HBF' # 'F' # 
@@ -6167,7 +6509,7 @@ kglid = {
 		'D000DF' : 'C-GNJE',		 # 'Bellanca Scout' # 'NJE' # 'F' # 
 		'D000E1' : 'OK_3722',		 # 'ASW-19' # 'BU' # 'F' # 
 		'D000E5' : 'D-KKGT',		 # 'Ventus 3T' # 'GT' # 'F' # 
-		'D000E6' : 'NOREG',		 # 'PIK-20 E' # '3D' # 'F' # 
+		'D000E6' : 'NOREG',		 # 'PIK-20 E' # '20E' # 'F' # 
 		'D000ED' : 'C-GCZV',		 # 'PA-25 Pawnee' # 'CZV' # 'F' # 
 		'D000EE' : 'ZAM',		 # 'DG-600' # 'ZAM' # 'F' # 
 		'D000F3' : 'C-FAQV',		 # 'Cirrus' # 'B1' # 'F' # 
@@ -6233,7 +6575,6 @@ kglid = {
 		'D0017A' : 'D-KTMB',		 # 'Arcus M' # 'MB' # 'F' # 
 		'D0017C' : 'D-KTFF',		 # 'ASH-31 MI' # 'F2' # 'F' # 
 		'D0017D' : 'G-CEWW',		 # 'Astir CS' # 'WW' # 'F' # 
-		'D0017E' : 'F-CNIV',		 # 'ASG-32 MI' # 'IV' # 'F' # 
 		'D0017F' : 'F-CGYI',		 # 'LS-4' # 'V57' # 'F' # 
 		'D00180' : 'D-1040',		 # 'Ventus c' # 'WM1' # 'F' # 
 		'D00183' : 'D-7415',		 # 'Hornet' # 'DAD' # 'F' # 
@@ -6254,6 +6595,7 @@ kglid = {
 		'D001BA' : 'G-CHBO',		 # 'Ka-6 cr' # 'HBO' # 'F' # 
 		'D001BC' : 'WingCpt',		 # 'Drone/UAV' # 'DLN' # 'F' # 
 		'D001BD' : 'F-CPAC',		 # 'DG-500' # 'AC' # 'F' # 
+		'D001BF' : 'D-1086',		 # 'Twin Astir I' # 'F5' # 'F' # 
 		'D001C0' : 'D-KBGT',		 # 'ASG-32 MI' # '' # 'F' # 
 		'D001C1' : 'D-8120',		 # 'Ventus' # '120' # 'F' # 
 		'D001C4' : 'D-4490',		 # 'Ventus' # 'B1' # 'F' # 
@@ -6266,8 +6608,7 @@ kglid = {
 		'D001D3' : 'NOREG',		 # 'Ventus 2' # 'EH' # 'F' # 
 		'D001D4' : 'OK-9105',		 # 'LS-8' # 'AU' # 'F' # 
 		'D001D7' : 'D-2570',		 # 'LS-3' # 'EC' # 'F' # 
-		'D001D9' : 'F-CKBC',		 # 'Arcus E' # 'BC' # 'F' # 
-		'D001DA' : 'D-KLBS',		 # 'ASG-29E' # 'BS' # 'F' # 
+		'D001D9' : 'F-CKBC',		 # 'SF-25' # 'BC' # 'F' # 
 		'D001E2' : 'Sprayer',		 # 'Drone/UAV' # 'DLN' # 'F' # 
 		'D0021F' : 'F-CGEJ',		 # 'Pegase' # 'J' # 'F' # 
 		'D00220' : 'OY-XZG',		 # 'SF-25' # '' # 'F' # 
@@ -6302,7 +6643,6 @@ kglid = {
 		'D0028D' : 'OE-9435',		 # 'SF-25' # 'V35' # 'F' # 
 		'D0028E' : 'F-CGBS',		 # 'Pegase' # '' # 'F' # 
 		'D0028F' : 'D-1594',		 # 'Ventus 2bx' # 'DE' # 'F' # 
-		'D00291' : 'OH-669',		 # 'LS-4' # 'LS' # 'F' # 
 		'D00292' : 'OH-848',		 # 'Discus' # 'DS' # 'F' # 
 		'D0029C' : 'VH-UIU',		 # 'Janus C' # '' # 'F' # 
 		'D0029E' : 'VH-PXI',		 # 'PA-25 Pawnee' # '' # 'F' # 
@@ -6311,13 +6651,12 @@ kglid = {
 		'D002A6' : 'D-0060',		 # 'PW-5' # 'RG' # 'F' # 
 		'D002AA' : 'F-CFMA',		 # 'Astir CS-77' # '' # 'F' # 
 		'D002AB' : 'VH-GWX',		 # 'LS-3' # 'Wx' # 'F' # 
-		'D002C1' : 'HB-ZQH',		 # 'BK 117' # 'RGA' # 'F' # 
+		'D002B1' : 'SE-SSF',		 # 'DG-1000' # 'SF' # 'F' # 
 		'D002CA' : 'I-IVAE',		 # 'Twin Astir II' # 'IVA' # 'F' # 
 		'D002CD' : 'OKNUA29',		 # 'DuoBanjo' # 'LDK' # 'F' # 
 		'D002D6' : 'F-GEIT',		 # 'DR-400' # 'IT' # 'F' # 
 		'D002E2' : 'EC-BUK',		 # 'ASK-21' # 'SV' # 'F' # 
 		'D002E3' : 'INO-001',		 # 'Drone/UAV' # 'SCS' # 'F' # 
-		'D002FD' : 'HB-ZQJ',		 # 'BK 117' # 'RGA' # 'F' # 
 		'D00356' : 'G-CHAF',		 # 'SZD-50 Puchacz' # 'N53' # 'F' # 
 		'D00379' : 'D-9801',		 # 'LS-8' # 'X8' # 'F' # 
 		'D0037A' : 'na',		 # 'Ventus 2cxT' # '41' # 'F' # 
@@ -6351,13 +6690,13 @@ kglid = {
 		'D003A2' : 'NO',		 # 'Ventus 3F' # 'MC' # 'F' # 
 		'D003A3' : 'D-KHTI',		 # 'DG-808 C' # 'TI' # 'F' # 
 		'D003A4' : 'OK-0727',		 # 'LS-8 18' # '301' # 'F' # 
+		'D003A5' : 'XB',		 # 'DG-808 C' # 'XB' # 'F' # 
 		'D003A9' : 'D-KITO',		 # 'DG-800' # 'TO' # 'F' # 
 		'D003AA' : 'G-OASM',		 # 'HPH 304S Shark' # '4SM' # 'F' # 
 		'D003AD' : 'GCLVD',		 # 'Discus 2c' # 'Z18' # 'F' # 
 		'D003AE' : 'F-CJRC',		 # 'ASH-30' # 'RC' # 'F' # 
 		'D003B3' : 'D-KWOB',		 # 'Duo Discus xt' # 'WN' # 'F' # 
 		'D003B5' : 'OK-6394',		 # 'Cirrus Std' # 'XII' # 'F' # 
-		'D003B7' : 'D-KFFL',		 # 'EB 29' # 'FL' # 'F' # 
 		'D003BF' : 'D-KKPX',		 # 'ASG-32 MI' # 'PX' # 'F' # 
 		'D003C1' : 'OK-0028',		 # 'EB 28' # 'NA' # 'F' # 
 		'D003C2' : 'D-KJCC',		 # 'ASG-29E' # 'CC' # 'F' # 
@@ -6383,7 +6722,7 @@ kglid = {
 		'D003F4' : 'F-CGBS',		 # 'Pegase' # '' # 'F' # 
 		'D003F8' : 'DKSPF',		 # 'Ventus 2cxM' # '' # 'F' # 
 		'D003F9' : 'LV-EQG',		 # 'Ventus cM' # 'L1' # 'F' # 
-		'D003FF' : 'D-KFZF',		 # 'JS-3 15M' # 'ZE' # 'F' # 
+		'D003FF' : 'OK-3773',		 # 'JS-3 18M' # 'ZE' # 'F' # 
 		'D00400' : 'D-1896',		 # 'LS-8a' # 'N6' # 'F' # 
 		'D00401' : 'D-MPIB',		 # 'Piccolo B' # '' # 'F' # 
 		'D00403' : 'D-8520',		 # 'Ventus 2' # 'IR' # 'F' # 
@@ -6417,12 +6756,11 @@ kglid = {
 		'D0043D' : 'D-5690',		 # 'ASW-27' # '' # 'F' # 
 		'D0043E' : 'D-3701',		 # 'Discus 2c' # '2C' # 'F' # 
 		'D0043F' : 'HA-4500',		 # 'Glasflugel H301' # 'DKZ' # 'F' # 
-		'D00441' : 'LY-CFL',		 # 'ASW-20' # 'FL' # 'F' # 
 		'D00443' : 'G-CHWC',		 # 'Libelle Std' # 'S4' # 'F' # 
 		'D00447' : 'D-KMMW',		 # 'Ventus cM' # 'PM' # 'F' # 
 		'D0046A' : 'NOREG',		 # 'Cirrus' # '_38' # 'F' # 
 		'D0046C' : 'D-KLOL',		 # 'DG-808 C' # 'AK' # 'F' # 
-		'D0046D' : 'HF',		 # 'ASG-32 MI' # 'HF' # 'F' # 
+		'D0046D' : 'NOREG',		 # '' # '' # 'F' # 
 		'D0046E' : 'F-CGPJ',		 # 'Arcus M' # '4AS' # 'F' # 
 		'D00478' : 'D-7524',		 # 'ASW-24' # '8H' # 'F' # 
 		'D0047E' : 'D-KHUN',		 # 'Arcus T' # 'HUX' # 'F' # 
@@ -6439,7 +6777,6 @@ kglid = {
 		'D00492' : 'I-AVAW',		 # 'Twin Astir I' # '' # 'F' # 
 		'D00495' : 'F-CAPJ',		 # 'Nimbus 2' # 'PJ' # 'F' # 
 		'D00499' : 'OY-XXS',		 # 'Discus 2c' # '1W' # 'F' # 
-		'D0049C' : 'G-DCKL',		 # 'Ka-6 e' # 'CKL' # 'F' # 
 		'D0049D' : 'F-JCIF',		 # 'Silent 2 Targa' # 'CIF' # 'F' # 
 		'D004A2' : 'D-KGGT',		 # 'ASG-29E' # 'GT' # 'F' # 
 		'D004A4' : 'D-6463',		 # 'LS-8 18' # 'PS' # 'F' # 
@@ -6459,10 +6796,12 @@ kglid = {
 		'D004CA' : 'NO',		 # 'LS-8' # '71' # 'F' # 
 		'D004CB' : 'G-XDUO',		 # 'Duo Discus xt' # 'DUO' # 'F' # 
 		'D004CD' : 'G-CHDA',		 # 'Pilatus B4' # 'HDA' # 'F' # 
+		'D004D6' : 'NOREG',		 # 'Unknown' # 'AZ2' # 'F' # 
 		'D004D9' : 'OH-463',		 # 'ASW-15' # 'KA' # 'F' # 
 		'D004E1' : 'OY-JBX',		 # 'LS-8 18' # 'JB' # 'F' # 
 		'D004E3' : 'F-CHVE',		 # 'Janus C' # 'E4W' # 'F' # 
-		'D004F0' : 'SP-3972',		 # 'SZD-38 Jantar 1' # 'GI' # 'F' # 
+		'D004ED' : 'D-9198',		 # 'LAK 19' # '19' # 'F' # 
+		'D004F0' : 'SP-3269',		 # 'SZD-48-3 Jantar Std 3' # 'DW' # 'F' # 
 		'D004F2' : 'OH-732',		 # 'Ventus c' # 'PD' # 'F' # 
 		'D004F5' : 'OH-784',		 # 'SZD-50 Puchacz' # '784' # 'F' # 
 		'D00506' : 'F-CHKS',		 # 'Pegase' # 'KS' # 'F' # 
@@ -6488,11 +6827,12 @@ kglid = {
 		'D00539' : 'D-7209',		 # 'ASK-21' # '09' # 'F' # 
 		'D0053A' : 'F-CBPY',		 # 'Duo Discus' # 'GD' # 'F' # 
 		'D00543' : 'D-8817',		 # 'LS-6 18' # '17' # 'F' # 
-		'D00544' : 'D-KXAE',		 # 'ASH-31 MI' # 'AE' # 'F' # 
+		'D00544' : 'NOREG',		 # '' # '' # 'F' # 
 		'D0054E' : 'G-IFES',		 # 'Discus 2c' # 'U1' # 'F' # 
 		'D00550' : 'G-DDNX',		 # 'Ka-6 cr' # 'DNX' # 'F' # 
+		'D00557' : 'LV-DJE',		 # 'Cirrus' # '5' # 'F' # 
 		'D00558' : 'D-8380',		 # 'Duo Discus xl' # 'BF' # 'F' # 
-		'D00559' : 'SP-2754',		 # 'SZD-9 Bocian' # '' # 'F' # 
+		'D00559' : 'SP-3347',		 # 'SZD-51 Junior' # '' # 'F' # 
 		'D0055B' : 'D-KJIM',		 # 'ASG-29E' # 'PB' # 'F' # 
 		'D0055D' : 'OH-511',		 # 'ASW-20' # 'MA' # 'F' # 
 		'D00560' : 'LV_ENP',		 # 'Ventus' # 'KR' # 'F' # 
@@ -6511,8 +6851,9 @@ kglid = {
 		'D00578' : 'SP-3234',		 # 'SZD-50 Puchacz' # '' # 'F' # 
 		'D00580' : 'ZK-GHG',		 # 'ASH-31 MI' # 'HG' # 'F' # 
 		'D00583' : 'G-AZPA',		 # 'PA-25 Pawnee' # 'PA' # 'F' # 
-		'D00584' : 'LH',		 # 'DG-400' # 'LH' # 'I' # 
+		'D00584' : 'NOREG',		 # '' # '' # 'I' # 
 		'D00587' : 'VH-EAX',		 # 'Discus 2' # 'A1' # 'F' # 
+		'D0058C' : 'OE-0907',		 # 'Blanik' # '' # 'F' # 
 		'D005B6' : 'OO-ZZS',		 # 'LS-4' # '7' # 'F' # 
 		'D005B7' : 'G-DETJ',		 # 'Pegase' # '223' # 'F' # 
 		'D005B8' : 'OK-5318',		 # 'Discus' # 'KAL' # 'F' # 
@@ -6522,12 +6863,15 @@ kglid = {
 		'D005BE' : 'G-CLVW',		 # 'LS-4' # 'ME' # 'F' # 
 		'D005BF' : 'G-CKZY',		 # 'HPH 304S Shark' # 'ZY' # 'F' # 
 		'D005C4' : 'G-CKYF',		 # 'Towplane' # 'YF' # 'F' # 
+		'D005CE' : 'D-HDSX',		 # 'BK 117' # 'DRF' # 'F' # 
 		'D005F1' : 'D-HDSV',		 # 'BK 117' # 'DRF' # 'F' # 
 		'D00618' : 'D-HDSU',		 # 'BK 117' # 'DRF' # 'F' # 
+		'D0067B' : 'D-HDSY',		 # 'BK 117' # 'DRF' # 'F' # 
 		'D0067F' : 'D-HDSW',		 # 'BK 117' # 'DRF' # 'F' # 
+		'D00690' : 'D-HSAB',		 # 'Helicopter' # 'POL' # 'F' # 
 		'D00699' : 'VH-MCF',		 # 'PA-25 Pawnee' # 'MCF' # 'F' # 
 		'D0069E' : 'D-KORN',		 # 'ASG-32 MI' # '32' # 'F' # 
-		'D006A0' : 'F-CPAV',		 # 'LS-8 18' # 'AV' # 'F' # 
+		'D006A0' : 'F-CPVA',		 # 'LS-8 18' # 'VA' # 'F' # 
 		'D006A1' : 'VH-GOG',		 # 'Nimbus 2' # 'OG' # 'F' # 
 		'D006A3' : 'VH-XJJ',		 # 'LS-7' # 'XJJ' # 'F' # 
 		'D006A4' : 'D-1213',		 # 'Libelle Std' # '' # 'F' # 
@@ -6539,6 +6883,7 @@ kglid = {
 		'D006B1' : 'VH-UTK',		 # 'Bellanca Scout' # 'UTK' # 'F' # 
 		'D006B2' : 'D-KMAU',		 # 'DG-1000' # 'BM' # 'F' # 
 		'D006B4' : 'D-KCGR',		 # 'ASG-29E' # 'TX' # 'F' # 
+		'D006B6' : 'VH-ZRD',		 # 'Duo Discus t' # 'ZRD' # 'F' # 
 		'D006BA' : 'VH-GKC',		 # 'Duo Discus' # 'KC' # 'O' # 
 		'D006BB' : 'D-KHAP',		 # 'ASG-32 MI' # '' # 'F' # 
 		'D006C2' : 'D-9420',		 # 'Discus 2' # 'D1' # 'F' # 
@@ -6546,6 +6891,7 @@ kglid = {
 		'D006C8' : 'D-KVAD',		 # 'JS-3 18M' # '8D' # 'F' # 
 		'D006C9' : 'D-KIJL',		 # 'JS-3 18M' # 'HL' # 'F' # 
 		'D006CD' : 'OY-XSX',		 # 'Nimbus 4DT' # 'SX' # 'F' # 
+		'D006CE' : 'G-CHHK',		 # 'ASW-19' # '838' # 'F' # 
 		'D006D0' : 'F-PVVA',		 # 'Midour' # '' # 'F' # 
 		'D006D2' : 'LV-AZH',		 # 'Aero Boero 180' # '15' # 'F' # 
 		'D006D4' : 'D-KKTL',		 # 'Ventus 3T' # 'TL' # 'F' # 
@@ -6555,6 +6901,7 @@ kglid = {
 		'D006ED' : 'D-EEEM',		 # 'Socata Rallye 235CA-M' # '' # 'F' # 
 		'D006F1' : 'VH-ZBC',		 # 'LS-4' # 'ZBC' # 'F' # 
 		'D006F4' : 'G-DJEB',		 # 'HPH 304S Shark' # 'Z95' # 'F' # 
+		'D006F5' : 'OK-2506',		 # 'JS-3 18M' # 'QX' # 'F' # 
 		'D00705' : 'TWR',		 # 'Ground Station' # 'TWR' # 'F' # 
 		'D00710' : 'TWR',		 # 'Ground Station' # 'TWR' # 'F' # 
 		'D00716' : 'OH-PEW',		 # 'PA-25 Pawnee' # 'PEW' # 'F' # 
@@ -6564,8 +6911,9 @@ kglid = {
 		'D0071E' : 'D-KBVG',		 # 'Ventus 2cM' # 'VG' # 'F' # 
 		'D00729' : 'G-CJPM',		 # 'Astir Club' # 'JPM' # 'F' # 
 		'D00737' : 'OH-PDW',		 # 'PA-25 Pawnee' # 'PDW' # 'F' # 
-		'D0073E' : 'OH-814',		 # 'Motorglider' # '' # 'F' # 
+		'D0073E' : 'OH-669',		 # 'LS-4' # 'LS' # 'F' # 
 		'D00740' : 'HA-4050',		 # 'Discus' # 'M5' # 'F' # 
+		'D00746' : 'D-EFRO',		 # 'SportCruiser' # 'FSV' # 'F' # 
 		'D00756' : 'F-CGOD',		 # 'Pegase' # 'OD' # 'F' # 
 		'D00758' : 'HA-SKR',		 # 'Cessna 172' # 'SKR' # 'F' # 
 		'D00768' : 'F-CVTU',		 # 'ASK-13' # '' # 'F' # 
@@ -6597,6 +6945,7 @@ kglid = {
 		'D008A4' : 'CC-PRV',		 # 'Ventus 2M' # 'RV' # 'F' # 
 		'D008A6' : 'OK-9102',		 # 'HPH 304C' # 'EP' # 'F' # 
 		'D008A9' : 'D-7902',		 # 'LS-3' # '1A' # 'F' # 
+		'D008AB' : 'OY-XNE',		 # 'LS-4' # 'NE' # 'F' # 
 		'D008AC' : 'FHNW',		 # 'Drone/UAV' # 'FHN' # 'F' # 
 		'D008B4' : 'ZOE',		 # 'LS-6 18' # 'ZOE' # 'F' # 
 		'D008B7' : 'OK-6602',		 # 'ASW-19' # 'AH' # 'F' # 
@@ -6613,8 +6962,10 @@ kglid = {
 		'D008DB' : 'RobExp',		 # 'Drone/UAV' # 'Rob' # 'F' # 
 		'D008DC' : 'SRZ2000',		 # 'Drone/UAV' # 'SRZ' # 'F' # 
 		'D008DE' : 'D-6910',		 # 'DG-1000' # 'YG' # 'F' # 
+		'D008DF' : 'VH-ZBE',		 # 'ASG-32 MI' # 'B1' # 'F' # 
 		'D008E2' : 'SDU',		 # 'Drone/UAV' # 'SDU' # 'F' # 
 		'D008E8' : 'SDC',		 # 'Drone/UAV' # 'SDC' # 'F' # 
+		'D008E9' : 'SE-SKI',		 # 'Discus 2t' # 'IKI' # 'F' # 
 		'D008EC' : 'UAV',		 # 'Drone/UAV' # 'UAV' # 'F' # 
 		'D008ED' : 'NO',		 # 'miniLAK FES' # 'LR2' # 'F' # 
 		'D008EE' : 'D-9888',		 # 'LS-8a' # 'KB' # 'F' # 
@@ -6622,10 +6973,11 @@ kglid = {
 		'D008F0' : 'SkyDrns',		 # 'Drone/UAV' # 'Sky' # 'F' # 
 		'D008F1' : 'SP-ABB1',		 # 'Unknown' # 'AB1' # 'F' # 
 		'D008F2' : 'SP-',		 # 'Unknown' # 'AB4' # 'F' # 
+		'D008F6' : 'D-KJMH',		 # 'Ventus 2CXa' # 'V2' # 'F' # 
 		'D008F9' : 'D-KKEX',		 # 'Arcus M' # 'ET' # 'F' # 
 		'D008FA' : 'REV',		 # 'Drone/UAV' # 'REV' # 'F' # 
 		'D008FB' : 'SDC',		 # 'Drone/UAV' # 'SDC' # 'F' # 
-		'D00901' : 'F-CYLU',		 # 'JS-3 18M' # '2L' # 'F' # 
+		'D00901' : 'NOREG',		 # '' # '' # 'F' # 
 		'D00904' : 'AFAC',		 # 'Drone/UAV' # 'AFC' # 'F' # 
 		'D00905' : 'SkyDrns',		 # 'Drone/UAV' # 'Sky' # 'F' # 
 		'D00907' : 'SDC',		 # 'Drone/UAV' # 'SDC' # 'F' # 
@@ -6672,6 +7024,7 @@ kglid = {
 		'D00989' : 'OO-ZBD',		 # 'Ka-6 e' # 'BD' # 'F' # 
 		'D0098B' : 'SP-ABB2',		 # 'Unknown' # 'AB2' # 'F' # 
 		'D0098C' : 'D-KVLZ',		 # 'Ventus 3F' # 'LZ' # 'F' # 
+		'D00990' : 'D-KSLO',		 # 'JS-3 18M' # 'NL' # 'F' # 
 		'D00993' : 'LV-EDK',		 # 'ASW-20' # 'CQ' # 'F' # 
 		'D00994' : 'NO',		 # 'Silent 2 Electro' # 'T' # 'F' # 
 		'D00995' : 'OY-PIX',		 # 'LS-8 18' # 'PI' # 'F' # 
@@ -6693,8 +7046,7 @@ kglid = {
 		'D009C5' : 'OO-ZFX',		 # 'Discus' # '520' # 'F' # 
 		'D009C7' : 'G-CKAP',		 # 'Discus' # 'KAP' # 'F' # 
 		'D009CB' : 'Ec-DIK',		 # 'Mini Nimbus' # 'JJ' # 'F' # 
-		'D009CD' : 'D-KHDH',		 # 'ASW-28t' # 'DH' # 'F' # 
-		'D009CE' : 'UKF',		 # 'ASW-19' # '' # 'F' # 
+		'D009CE' : 'UKF',		 # 'ASW-19' # 'KF' # 'F' # 
 		'D009D2' : 'D-2858',		 # 'DG-300' # 'ME' # 'F' # 
 		'D009D3' : 'VH_VNL',		 # 'ASG-29' # 'VNL' # 'F' # 
 		'D009D6' : 'G-CJCU',		 # 'Cirrus Std' # 'JCU' # 'F' # 
@@ -6737,11 +7089,13 @@ kglid = {
 		'D00A7B' : 'D-9029',		 # 'Duo Discus' # 'TS' # 'F' # 
 		'D00A8C' : 'D-KGHA',		 # 'ASH-26 E' # 'WT' # 'F' # 
 		'D00A92' : 'OO-MVA',		 # 'SF-25' # 'MVA' # 'F' # 
-		'D00A9C' : 'EOW',		 # 'ASW-20' # 'OF' # 'F' # 
+		'D00A98' : 'F-CZCG',		 # 'ASH-25 MI' # 'EW' # 'F' # 
+		'D00A9C' : 'LV-EOW',		 # 'ASW-20' # 'OF' # 'F' # 
 		'D00A9F' : 'OO-ZKN',		 # 'ASK-13' # 'ZKN' # 'F' # 
 		'D00AA0' : 'D-4735',		 # 'LS-8' # 'ET' # 'F' # 
 		'D00AA1' : 'ZS-GFM',		 # 'JS-3 18M' # 'FQ' # 'F' # 
 		'D00AAB' : 'D-KEDZ',		 # 'JS-1 C18 Evo' # 'DZ' # 'F' # 
+		'D00AAC' : 'D-0023',		 # 'DG-100' # 'YZ' # 'F' # 
 		'D00AAF' : 'VH-FIG',		 # 'Arcus M' # 'FIG' # 'F' # 
 		'D00AB2' : 'BDX-PX',		 # 'Ventus 2cxM' # '2D' # 'F' # 
 		'D00AB3' : 'OK-6116',		 # 'HPH 304S Shark' # '16' # 'F' # 
@@ -6758,7 +7112,10 @@ kglid = {
 		'D00B38' : 'D-7081',		 # 'ASK-21' # '81' # 'F' # 
 		'D00B53' : 'OO-ZKC',		 # 'ASK-23' # 'ZKC' # 'F' # 
 		'D00B85' : 'Unknown',		 # 'Unknown' # 'XYZ' # 'F' # 
+		'D00B8E' : 'D-3296',		 # 'ASK-21' # 'FSV' # 'F' # 
 		'D00BB6' : 'G-CFUH',		 # 'Ventus c' # 'E8' # 'F' # 
+		'D00BC2' : 'OY-XLM',		 # 'LS-4' # 'N9' # 'F' # 
+		'D00BC8' : 'D-KPPA',		 # 'Arcus M' # '2P' # 'F' # 
 		'D00BCF' : 'D-KGLD',		 # 'ASG-29' # '2L' # 'F' # 
 		'D00BD2' : 'F-CFRK',		 # 'Pegase' # '' # 'F' # 
 		'D00BD7' : 'D-KREI',		 # 'Discus 2c' # 'EI' # 'F' # 
@@ -6766,33 +7123,51 @@ kglid = {
 		'D00BE4' : 'G-CVBA',		 # 'LS-6 18' # 'BA' # 'F' # 
 		'D00BE5' : 'EI-GMJ',		 # 'ASW-19' # '' # 'F' # 
 		'D00BE6' : 'OO-YKR',		 # 'ASK-13' # 'YKR' # 'F' # 
+		'D00BE7' : 'D-7968',		 # 'ASK-21' # '' # 'F' # 
+		'D00BE8' : 'VH-GAK',		 # 'Libelle Std' # 'GAK' # 'F' # 
 		'D00BE9' : 'F-CEQZ',		 # 'Cirrus Std' # 'C38' # 'F' # 
-		'D00BEB' : 'VH-GAK',		 # 'Libelle Std' # 'GAK' # 'F' # 
+		'D00BEC' : 'OE-5621',		 # 'LS-4' # '' # 'F' # 
 		'D00BED' : 'LY-GRV',		 # 'LS-6' # 'VP' # 'F' # 
 		'D00BF2' : 'F-CFIN',		 # 'Astir Club' # 'IN' # 'F' # 
 		'D00BF3' : 'G-CFYM',		 # 'Discus t' # 'FYM' # 'F' # 
 		'D00BF4' : 'OO-ZXK',		 # 'ASK-21' # 'ZXK' # 'F' # 
 		'D00BF9' : 'SP-3717',		 # 'SZD-48-1 Jantar Std 2' # 'GK' # 'F' # 
 		'D00C02' : 'NOREG',		 # 'Duo Discus' # 'MZ' # 'F' # 
-		'D00C04' : 'D-KDRY',		 # 'JS-3 18M' # 'RY' # 'F' # 
+		'D00C8C' : 'IKS',		 # 'Astir CS-77' # 'IKS' # 'F' # 
+		'D00CCF' : 'D-7859',		 # 'Mosquito' # 'JS' # 'F' # 
+		'D00CFD' : 'NOREG',		 # 'LAK-17B FES' # '' # 'F' # 
+		'D00CFF' : 'NOREG',		 # '' # '' # 'F' # 
+		'D00D03' : 'OK-0804',		 # 'LS-3' # 'Y1' # 'F' # 
 		'D00D14' : 'NOREG',		 # 'Unknown' # 'CAR' # 'F' # 
 		'D00D21' : 'D-KCRT',		 # 'Janus CT' # 'LS' # 'F' # 
 		'D00D23' : 'LV-FMA',		 # 'Nimbus 2' # 'LM' # 'F' # 
 		'D00D27' : 'F-CHCF',		 # 'SF-25' # 'CF' # 'F' # 
+		'D00D2F' : 'SE-UXC',		 # 'LS-7' # 'FK' # 'F' # 
 		'D00D30' : 'NO',		 # 'miniLAK FES' # 'LR2' # 'F' # 
 		'D00D41' : 'ZS-GRT',		 # 'JS-1 Revelation' # 'AR' # 'F' # 
+		'D00D61' : 'OY-XVO',		 # 'ASG-29E' # '29' # 'F' # 
+		'D00D7B' : 'F-CHBA',		 # 'Swift' # 'ES' # 'F' # 
+		'D00D8A' : 'OK-1603',		 # 'Ventus c' # 'LS' # 'F' # 
+		'D00D9B' : 'OH-310',		 # 'Ka-8' # '310' # 'F' # 
+		'D00DB3' : 'D-KNON',		 # 'Arcus T' # 'KA' # 'F' # 
 		'D00DBB' : 'D-1658',		 # 'Grunau Baby' # 'D58' # 'F' # 
 		'D00DC2' : 'HA-4483',		 # 'Ventus 2' # 'V7' # 'F' # 
+		'D00DCB' : 'LY-ZMZ',		 # 'HPH 304CZ-17' # 'MZ' # 'F' # 
 		'D00DCC' : 'D-KRAT',		 # 'ASG-29E' # 'DB' # 'F' # 
+		'D00DCE' : 'EAGLE',		 # 'Unknown' # '' # 'F' # 
+		'D00DDB' : 'G-CFPP',		 # 'Nimbus 2' # 'N2' # 'F' # 
 		'D00DE3' : 'D-KIWA',		 # 'DG-808 B' # '' # 'F' # 
 		'D00DE9' : 'G-CKMB',		 # 'LAK-19 T' # 'KMB' # 'F' # 
 		'D00DEB' : 'G-DEHZ',		 # 'ASW-20' # 'EHZ' # 'F' # 
+		'D00DF4' : 'F-CEGA',		 # 'ASK-13' # 'GA' # 'F' # 
 		'D00DF5' : 'F-CNOG',		 # 'ASK-21' # 'OG' # 'F' # 
 		'D00DF7' : 'G-DDHL',		 # 'DG-100' # 'DHL' # 'F' # 
 		'D00DF9' : 'F-CGDR',		 # 'Duo Discus' # 'DR' # 'F' # 
 		'D00DFE' : 'OK-9302',		 # 'Discus' # 'JA' # 'F' # 
 		'D00E00' : 'NOREG',		 # 'Other' # '9G' # 'F' # 
+		'D00E01' : 'D-KJAW',		 # 'ASG-29E' # '' # 'F' # 
 		'D00E04' : 'F-CIDR',		 # 'Duo Discus x' # 'DR' # 'F' # 
+		'D00E09' : 'F-CHSD',		 # 'JS-3 18M' # '85' # 'F' # 
 		'D00E0D' : 'VH-IBE',		 # 'JS-1 C18 Evo' # 'K1' # 'F' # 
 		'D00E10' : 'ECDSZ',		 # 'Grob G109' # '' # 'F' # 
 		'D00E15' : 'D-7614',		 # 'LS-8' # 'ZZ' # 'F' # 
@@ -6800,28 +7175,40 @@ kglid = {
 		'D00E1B' : 'Refecor',		 # 'Drone/UAV' # 'RFC' # 'F' # 
 		'D00E1F' : 'Aerosct',		 # 'Drone/UAV' # 'AER' # 'F' # 
 		'D00E20' : 'Trend',		 # 'Drone/UAV' # 'TND' # 'F' # 
+		'D00E21' : 'OY-EXD',		 # 'LS-4 W' # 'LE' # 'F' # 
 		'D00E22' : 'OY-XTB',		 # 'Ventus c' # 'TB' # 'F' # 
 		'D00E24' : 'Trend',		 # 'Drone/UAV' # 'TND' # 'F' # 
 		'D00E25' : 'Trend',		 # 'Drone/UAV' # 'TND' # 'F' # 
 		'D00E27' : 'REV',		 # 'Drone/UAV' # 'REV' # 'F' # 
 		'D00E2B' : 'RV-E2B',		 # 'Drone/UAV' # '' # 'F' # 
+		'D00E30' : 'ZS-GCG',		 # 'JS-1 B Revelation' # 'ZP' # 'F' # 
 		'D00E34' : 'OE-5365',		 # 'DG-300' # '50' # 'F' # 
 		'D00E45' : 'Optimum',		 # 'Drone/UAV' # 'Opt' # 'F' # 
+		'D00E49' : 'NOREG',		 # 'ASG-29' # 'A5' # 'F' # 
 		'D00E4E' : 'REV',		 # 'Drone/UAV' # 'REV' # 'F' # 
 		'D00E61' : 'Refecor',		 # 'Drone/UAV' # 'RFC' # 'F' # 
 		'D00E63' : 'Trend',		 # 'Drone/UAV' # 'TND' # 'F' # 
+		'D00E70' : 'OO-ZKV',		 # 'Twin Astir II' # 'ZKV' # 'F' # 
 		'D00E71' : 'Aerosct',		 # 'Drone/UAV' # 'AER' # 'F' # 
 		'D00E7C' : 'Optimum',		 # 'Drone/UAV' # 'Opt' # 'F' # 
 		'D00E81' : 'F-CGQS',		 # 'Discus' # 'D34' # 'F' # 
+		'D00E9C' : 'D-FLOP',		 # 'DJI S900' # 'OP' # 'F' # 
 		'D00EA4' : 'Trend',		 # 'Drone/UAV' # 'TND' # 'F' # 
+		'D00EAE' : 'D-KBBF',		 # 'EB 28' # 'BF_' # 'F' # 
 		'D00EB3' : 'Meteomt',		 # 'Drone/UAV' # 'MET' # 'F' # 
+		'D00EB8' : 'S5-3111',		 # 'LAK-17 A' # 'JL' # 'F' # 
+		'D00EBA' : 'SE-UPF',		 # 'LS-8' # '1' # 'F' # 
+		'D00EBF' : 'G-DCYO',		 # 'Cirrus Std' # '477' # 'F' # 
 		'D00EC0' : 'G-CHFW',		 # 'Ka-8' # 'HFW' # 'F' # 
 		'D00ECB' : 'G-CKOY',		 # 'ASG-29E' # 'S9' # 'F' # 
 		'D00ECC' : 'LV-EQJ',		 # 'LS-4' # 'IP' # 'F' # 
 		'D00ED0' : 'ZT-GAA',		 # 'JS-3 18M' # 'FM' # 'F' # 
 		'D00F0C' : 'HB-ZUE',		 # 'EC 135' # 'ZUE' # 'F' # 
 		'D00F57' : 'G-ENBW',		 # 'DR-400' # 'BW' # 'F' # 
+		'D00FB7' : 'OK-6999',		 # 'Blanik' # '699' # 'F' # 
 		'D00FB8' : 'D-KUBB',		 # 'Duo Discus xlt' # 'BB' # 'F' # 
+		'D00FB9' : 'D-KRUG',		 # 'ASH-26 E' # '' # 'F' # 
+		'D00FD4' : 'S5-3002',		 # 'SZD-48-3 Jantar Std 3' # 'UK' # 'F' # 
 		'D00FD6' : 'F-JFWQ',		 # 'Tetra-15' # 'WQ' # 'F' # 
 		'D00FF1' : 'OK-2807',		 # 'Ventus c' # 'WW' # 'F' # 
 		'D00FF4' : 'D-EIKO',		 # 'DR-400' # 'KO' # 'F' # 
@@ -6829,9 +7216,12 @@ kglid = {
 		'D0100E' : 'G-CJTB',		 # 'ASW-24' # 't9' # 'F' # 
 		'D01011' : 's5-per',		 # 'Apis 2' # 'PP' # 'F' # 
 		'D01015' : 'F-CHYF',		 # 'DG-808 C' # 'TV' # 'F' # 
+		'D0101C' : 'D-KOYA',		 # 'LAK-17B FES' # '' # 'F' # 
 		'D01024' : 'G-CFTC',		 # 'SZD-51 Junior' # 'N56' # 'F' # 
+		'D01025' : 'HB-2437',		 # 'Ventus 2cM' # 'MZ' # 'F' # 
 		'D01027' : 'F-CJCA',		 # 'DG-1000' # 'CA' # 'F' # 
 		'D01028' : 'D-KVWB',		 # 'Ventus 2cxT' # '3E' # 'F' # 
+		'D0102A' : 'D-1342',		 # 'LS-4' # '9B' # 'F' # 
 		'D0102D' : 'G-CICT',		 # 'Ventus 2cxT' # 'PO5' # 'F' # 
 		'D01034' : 'NOREG',		 # '' # '' # 'F' # 
 		'D0103B' : 'D-2717',		 # 'ASW-27' # 'G1' # 'F' # 
@@ -6839,13 +7229,18 @@ kglid = {
 		'D01041' : 'FCGYD',		 # 'LS-7' # '7' # 'F' # 
 		'D01043' : 'G-DFFP',		 # 'ASW-19' # '93' # 'F' # 
 		'D01044' : 'D-4218',		 # 'ASW-20' # '_18' # 'F' # 
+		'D0104A' : 'D-KJFD',		 # 'Duo Discus xlt' # 'D1' # 'F' # 
 		'D0104D' : 'CYN',		 # 'Kestrel' # 'N4' # 'F' # 
 		'D01050' : 'F-CLAB',		 # 'ASH-25' # '11' # 'F' # 
+		'D0105A' : 'LY-CFL',		 # 'ASW-20' # 'FL' # 'F' # 
 		'D01061' : 'D-9085',		 # 'ASK-21' # 'G' # 'F' # 
 		'D0106A' : 'Rigi',		 # 'Drone/UAV' # 'RGI' # 'F' # 
 		'D0106C' : 'Rigi',		 # 'Drone/UAV' # 'RGI' # 'F' # 
 		'D0106D' : 'REV',		 # 'Drone/UAV' # 'REV' # 'F' # 
 		'D01174' : 'SE-UIE',		 # 'ASW-24' # 'IE' # 'F' # 
+		'D012A0' : 'SP-3682',		 # 'SZD-48-3 Jantar Std 3' # 'KA' # 'F' # 
+		'D012C7' : 'D-8129',		 # 'Duo Discus' # 'JwD' # 'F' # 
+		'D012D6' : 'D-5536',		 # 'Ventus 2' # 'OF' # 'F' # 
 		'D07007' : 'F-BXDR',		 # 'MS-893 Commodore' # 'DR' # 'F' # 
 		'D0961F' : 'F-ACBA2',		 # 'Ground Station' # 'BA2' # 'F' # 
 		'D0F0EE' : 'D-KJTM',		 # 'JS-3 18M' # 'AX' # 'F' # 
@@ -6855,17 +7250,20 @@ kglid = {
 		'D4205B' : 'Mach',		 # 'UFO' # 'OKO' # 'O' # 
 		'D4362A' : 'NOREG',		 # 'UFO' # 'YP' # 'O' # 
 		'D4362B' : 'Whizz22',		 # 'Paraglider' # 'PP' # 'O' # 
+		'D43B84' : 'NOREG',		 # 'Paraglider' # '' # 'O' # 
 		'D43C4C' : 'MNA1010',		 # 'Drone/UAV' # 'MNG' # 'F' # 
 		'D43C80' : 'G-LLEW',		 # 'Motorglider' # 'LEW' # 'F' # 
 		'D43DA0' : 'OK-KLPC',		 # 'UFO' # 'NVP' # 'O' # 
 		'D43E10' : 'SP-XBLK',		 # 'Gyrocopter' # '' # 'O' # 
-		'D44004' : 'OKMUU42',		 # 'WT9 Dynamic' # '' # 'O' # 
+		'D44004' : 'OK2781',		 # 'Cirrus Std' # 'XL' # 'O' # 
 		'D44338' : 'ORVALCH',		 # 'Ground Station' # 'MBG' # 'O' # 
 		'D45983' : 'D-1986',		 # 'Cirrus' # 'H1' # 'F' # 
 		'D4EC33' : 'D-5231',		 # 'Ventus c' # 'LE' # 'F' # 
 		'D7184E' : 'D-EYSA',		 # 'TB-20 Trinidad' # 'SA' # 'F' # 
+		'D79822' : 'NOREG',		 # 'Paraglider' # '' # 'F' # 
 		'D8860C' : '12-02',		 # 'Unknown' # 'Atk' # 'O' # 
 		'D8B470' : 'AP',		 # 'ASK-13' # 'LF' # 'F' # 
+		'D8C1BE' : 'D-2720',		 # 'ASW-20' # '2W' # 'F' # 
 		'DAB001' : 'PAR-001',		 # 'Drone/UAV' # 'PAR' # 'O' # 
 		'DABCDE' : 'D-KDHA',		 # 'HK36 Super Dimona' # 'HA' # 'F' # 
 		'DAF1D0' : 'VH-ZAB',		 # 'Duo Discus xt' # 'ZAB' # 'F' # 
@@ -6883,7 +7281,6 @@ kglid = {
 		'DD0157' : 'D-KDCS',		 # 'SF-25' # '' # 'F' # 
 		'DD0168' : 'D-4911',		 # 'DG-1000' # '11' # 'F' # 
 		'DD016F' : 'D-KDFN',		 # 'SF-25' # 'FN' # 'F' # 
-		'DD01A2' : 'D-7718',		 # 'LS-8' # 'T1' # 'F' # 
 		'DD01FC' : 'D-KDKR',		 # 'HK36 Super Dimona' # 'KR' # 'F' # 
 		'DD01FE' : 'D-ENWR',		 # 'DA40' # 'WR' # 'F' # 
 		'DD020E' : 'F-CKBS',		 # 'DG-600' # 'BS' # 'F' # 
@@ -6904,7 +7301,6 @@ kglid = {
 		'DD0507' : 'D-1449',		 # 'LS-4' # '2E' # 'F' # 
 		'DD0515' : 'D-HDSI',		 # 'Helicopter' # 'DRF' # 'F' # 
 		'DD0516' : 'D-HDSG',		 # 'Helicopter' # 'DRF' # 'F' # 
-		'DD051E' : 'NOREG',		 # 'Helicopter' # 'POL' # 'F' # 
 		'DD0525' : 'NOREG',		 # '' # '' # 'F' # 
 		'DD0528' : 'D-HEGK',		 # 'Helicopter' # 'POL' # 'F' # 
 		'DD0532' : 'D-HBWU',		 # 'Helicopter' # 'POL' # 'F' # 
@@ -6914,10 +7310,13 @@ kglid = {
 		'DD0541' : 'D-HDSF',		 # 'Helicopter' # 'DRF' # 'F' # 
 		'DD0558' : 'NOREG',		 # 'Helicopter' # 'POL' # 'F' # 
 		'DD055C' : 'D-HDSJ',		 # 'Helicopter' # 'DRF' # 'F' # 
+		'DD0560' : 'ZM504',		 # 'EC 135' # 'RAF' # 'F' # 
+		'DD0561' : 'ZM505',		 # 'EC 135' # 'RAF' # 'F' # 
 		'DD0564' : 'D-HEMS',		 # 'Helicopter' # 'ADA' # 'F' # 
 		'DD056A' : 'D-HDSP',		 # 'BK 117' # 'DRF' # 'F' # 
 		'DD056D' : 'D-HRTB',		 # 'EC 135' # 'DRF' # 'F' # 
 		'DD0570' : 'D-HBWV',		 # 'BK 117' # 'POL' # 'F' # 
+		'DD0573' : 'ZM506',		 # 'EC 135' # 'RAF' # 'F' # 
 		'DD0574' : 'D-HBWY',		 # 'BK 117' # 'POL' # 'F' # 
 		'DD0577' : 'D-HDSJ',		 # 'BK 117' # 'DRF' # 'F' # 
 		'DD05A5' : 'NOREG',		 # 'ASW-27' # 'TG' # 'F' # 
@@ -6948,16 +7347,18 @@ kglid = {
 		'DD091F' : 'D-EQCP',		 # 'Grumman AA-5' # '' # 'F' # 
 		'DD0921' : 'D-KIMD',		 # 'ASG-32 MI' # 'MD' # 'F' # 
 		'DD0931' : 'D-HDSK',		 # 'BK 117' # 'DRF' # 'F' # 
+		'DD0933' : 'ZM517',		 # 'BK 117' # 'RAF' # 'F' # 
+		'DD0935' : 'ZM501',		 # 'BK 117' # 'RAF' # 'F' # 
 		'DD0947' : 'G-CKKH',		 # 'ASW-27' # '218' # 'F' # 
 		'DD094C' : 'NOREG',		 # 'Towplane' # '' # 'F' # 
 		'DD095E' : 'EC-HTM',		 # 'DG-100' # 'CH' # 'F' # 
 		'DD0979' : 'NOREG',		 # '' # '' # 'F' # 
 		'DD0984' : 'S5-7188',		 # 'Blanik' # '88' # 'F' # 
 		'DD0988' : 'D-KKZZ',		 # 'Antares 18 T' # 'ZZ' # 'F' # 
-		'DD099D' : '-f1',		 # 'Different Aircraft' # '-f1' # 'F' # 
 		'DD099E' : 'D-EEEG',		 # 'Motorplane' # 'DEG' # 'F' # 
 		'DD09CF' : 'D-6798',		 # 'Glasflugel H301' # 'YYY' # 'F' # 
 		'DD09F4' : 'S5-DGO',		 # 'Cessna 172' # 'GO' # 'F' # 
+		'DD0A1A' : 'ZM512',		 # 'EC 135' # 'RAF' # 'F' # 
 		'DD0A1E' : 'D-HNWV',		 # 'Helicopter' # 'POL' # 'F' # 
 		'DD0A1F' : 'D-HDSD',		 # 'Helicopter' # 'DRF' # 'F' # 
 		'DD0A22' : 'D-HNWU',		 # 'EC 135' # 'POL' # 'F' # 
@@ -6979,18 +7380,16 @@ kglid = {
 		'DD0B06' : 'HB-ZIB',		 # 'AS 350' # 'SWH' # 'F' # 
 		'DD0B07' : 'HB-ZKP',		 # 'AS 350' # 'SWH' # 'F' # 
 		'DD0B08' : 'D-HEGG',		 # 'Helicopter' # 'POL' # 'F' # 
-		'DD0B09' : 'HB-ZLG',		 # 'AS 350' # 'SWH' # 'F' # 
-		'DD0B0A' : 'HB-ZND',		 # 'AS 350' # 'SWH' # 'F' # 
 		'DD0B0B' : 'HB-ZPT',		 # 'AS 350' # 'SWH' # 'F' # 
 		'DD0B0C' : 'D-HEGL',		 # 'Helicopter' # 'POL' # 'F' # 
 		'DD0B11' : 'D-HEGE',		 # 'Helicopter' # 'POL' # 'F' # 
 		'DD0B12' : 'D-HVBA',		 # 'EC 135' # 'POL' # 'F' # 
 		'DD0B15' : 'D-HVBQ',		 # 'EC 135' # 'POL' # 'F' # 
+		'DD0B19' : 'D-HZSQ',		 # 'EC 135' # 'BBK' # 'F' # 
 		'DD0B1A' : 'D-HZSR',		 # 'EC 135' # 'BMI' # 'F' # 
 		'DD0B1C' : 'D-HEGT',		 # 'Helicopter' # 'POL' # 'F' # 
 		'DD0B1D' : 'D-HEGZ',		 # 'Helicopter' # 'POL' # 'F' # 
 		'DD0B1E' : 'D-HEGP',		 # 'Helicopter' # 'POL' # 'F' # 
-		'DD0B1F' : 'HB-ZNQ',		 # 'AS 350' # 'SWH' # 'F' # 
 		'DD0B20' : 'HB-ZTN',		 # 'EC 130' # '' # 'F' # 
 		'DD0B21' : 'D-HVBK',		 # 'EC 135' # 'POL' # 'F' # 
 		'DD0B22' : 'D-HEGS',		 # 'Helicopter' # 'POL' # 'F' # 
@@ -7013,6 +7412,12 @@ kglid = {
 		'DD0C17' : 'F-ZBQD',		 # 'BK 117' # 'FSC' # 'F' # 
 		'DD0C18' : 'F-ZBPQ',		 # 'BK 117' # 'FSC' # 'F' # 
 		'DD0C19' : 'F-ZBPS',		 # 'BK 117' # 'FSC' # 'F' # 
+		'DD0C1A' : 'ZM524',		 # 'EC 135' # 'RAF' # 'F' # 
+		'DD0C1B' : 'ZM526',		 # 'EC 135' # 'RAF' # 'F' # 
+		'DD0C1C' : 'ZM523',		 # 'EC 135' # 'RAF' # 'F' # 
+		'DD0C1D' : 'ZM525',		 # 'EC 135' # 'RAF' # 'F' # 
+		'DD0C25' : 'ZM527',		 # 'EC 135' # 'RAF' # 'F' # 
+		'DD0C2A' : 'F-ZBPE',		 # 'BK 117' # 'FSC' # 'F' # 
 		'DD0C2E' : 'OE-BXS',		 # 'Bell 206' # 'POL' # 'F' # 
 		'DD0C31' : 'G-CKIK',		 # 'EC 135' # '' # 'F' # 
 		'DD0C49' : 'D-HDSP',		 # 'BK 117' # 'DRF' # 'F' # 
@@ -7053,7 +7458,6 @@ kglid = {
 		'DD1203' : 'D-KMEB',		 # 'ASG-29E' # 'EB' # 'F' # 
 		'DD1234' : 'BUZZ_Z6',		 # 'Paraglider' # '' # 'O' # 
 		'DD1235' : 'F-CVVA',		 # 'ASK-21' # 'MX' # 'F' # 
-		'DD1250' : 'D-1211',		 # 'Discus 2' # '2F' # 'F' # 
 		'DD12D6' : 'F-CGDT',		 # 'LAK-17 BT' # 'YES' # 'F' # 
 		'DD12F3' : 'G-CJVU',		 # 'Cirrus Std' # 'C74' # 'F' # 
 		'DD1306' : 'NOREG',		 # 'Paraglider' # '' # 'O' # 
@@ -7062,6 +7466,7 @@ kglid = {
 		'DD1448' : 'OE-6213',		 # 'Swift' # '' # 'F' # 
 		'DD147D' : 'HB-2315',		 # 'ASW-24' # 'AS' # 'F' # 
 		'DD14AB' : 'PDN',		 # 'HangGlider' # '' # 'F' # 
+		'DD14AF' : '3441',		 # 'HangGlider' # 'GRB' # 'F' # 
 		'DD14D1' : 'D-KKCB',		 # 'DG-808 B' # '' # 'F' # 
 		'DD15C3' : 'D-NLMS',		 # 'Paraglider' # '' # 'F' # 
 		'DD15ED' : 'VH-XQA',		 # 'DG-500' # 'XQA' # 'F' # 
@@ -7080,12 +7485,10 @@ kglid = {
 		'DD18E8' : '1Z',		 # 'DG-200' # '1Z' # 'F' # 
 		'DD1925' : 'Ralf',		 # 'Paraglider' # 'RAS' # 'F' # 
 		'DD192F' : 'D-5650',		 # 'LS-1 f' # 'H7' # 'F' # 
+		'DD1944' : '41191',		 # 'HangGlider' # '' # 'F' # 
 		'DD196A' : 'NOREG',		 # 'Paraglider' # '' # 'F' # 
 		'DD1974' : 'NOREG',		 # 'Paraglider' # '288' # 'F' # 
 		'DD19BE' : 'GRUNAIR',		 # 'Paraglider' # '' # 'F' # 
-		'DD19E0' : 'HB-1824',		 # 'LS-4' # 'FG' # 'F' # 
-		'DD19E1' : 'HB-1841',		 # 'DG-300' # 'TU' # 'F' # 
-		'DD19E2' : 'HB-3256',		 # 'DG-505' # 'FO' # 'F' # 
 		'DD1A01' : '58040',		 # 'HangGlider' # 'URS' # 'F' # 
 		'DD1A13' : 'F-ZR',		 # 'Ultralight' # 'ZR' # 'F' # 
 		'DD1B8F' : 'SE-TUU',		 # 'SF-25' # '' # 'F' # 
@@ -7130,7 +7533,7 @@ kglid = {
 		'DD4E8D' : 'F-CIGG',		 # 'Ventus 2' # 'GG' # 'F' # 
 		'DD4E8E' : 'F-CFML',		 # 'Astir CS' # 'ML' # 'F' # 
 		'DD4E8F' : 'D-KAGD',		 # 'ASH-26 E' # 'GD' # 'F' # 
-		'DD4E90' : 'SP-3252',		 # 'SZD-48-3 Jantar Std 3' # 'LK' # 'F' # 
+		'DD4E90' : 'SP-4052',		 # 'SZD-48-3 Jantar Std 3' # 'EP' # 'F' # 
 		'DD4E92' : 'D-0184',		 # 'Cirrus 18m' # '18' # 'F' # 
 		'DD4E93' : 'D-0668',		 # 'LS-1 d' # '24' # 'F' # 
 		'DD4E96' : 'LN-GHA',		 # 'LS-1 f' # '577' # 'F' # 
@@ -7147,6 +7550,7 @@ kglid = {
 		'DD4EB4' : 'VH-ALA',		 # 'PA-25 Pawnee' # 'ALA' # 'F' # 
 		'DD4EB5' : 'D-8982',		 # 'LS-1 f' # 'LX' # 'F' # 
 		'DD4EB6' : 'S5-3078',		 # 'Other' # 'MJ' # 'F' # 
+		'DD4EBA' : 'OE-0946',		 # 'ASW-15' # '46' # 'F' # 
 		'DD4EBB' : 'G-CKMA',		 # 'LS-8 st 18' # 'KMA' # 'F' # 
 		'DD4EBC' : 'ZK_GHW',		 # 'Discus 2' # 'HW' # 'F' # 
 		'DD4EBD' : 'D-4556',		 # 'DG-200' # 'OM' # 'F' # 
@@ -7166,6 +7570,7 @@ kglid = {
 		'DD4ED7' : 'NOREG',		 # 'Duo Discus xt' # 'P7' # 'F' # 
 		'DD4EDB' : 'OY-XPM',		 # 'Discus' # 'PM' # 'F' # 
 		'DD4EDC' : 'OY-XTG',		 # 'Twin Astir III' # 'TG' # 'F' # 
+		'DD4EDE' : 'OY-XVY',		 # 'ASK-21' # 'VY' # 'F' # 
 		'DD4EDF' : 'OY-XOK',		 # 'Discus' # 'X9' # 'F' # 
 		'DD4EE4' : 'G-CJWG',		 # 'Nimbus 3DT' # '880' # 'F' # 
 		'DD4EE5' : '55RS',		 # 'Ultralight Glider' # 'HCS' # 'F' # 
@@ -7182,7 +7587,6 @@ kglid = {
 		'DD4EFD' : 'G-CKOU',		 # 'LAK-19 T' # '1UP' # 'F' # 
 		'DD4EFF' : 'G-EENW',		 # 'ASW-20' # 'ENW' # 'F' # 
 		'DD4F01' : 'OY-RAX',		 # 'Duo Discus t' # '1W' # 'F' # 
-		'DD4F03' : 'OY-XWB',		 # 'HK36 Super Dimona' # 'WB' # 'F' # 
 		'DD4F04' : 'OK-3706',		 # 'Cirrus Std' # 'V1' # 'F' # 
 		'DD4F06' : 'S5-3038',		 # 'DG-100' # 'M7' # 'F' # 
 		'DD4F11' : 'S5-3092',		 # 'DG-300' # 'LS' # 'F' # 
@@ -7198,6 +7602,7 @@ kglid = {
 		'DD4F2E' : 'S5-MTI',		 # 'Motorplane' # 'ONE' # 'F' # 
 		'DD4F33' : 'S5-7144',		 # 'Blanik' # '44' # 'F' # 
 		'DD4F34' : 'S5-7115',		 # 'Blanik' # '15' # 'F' # 
+		'DD4F35' : 'OY-EXA',		 # 'DG-808 C' # 'EA' # 'F' # 
 		'DD4F37' : 'D-1582',		 # 'ASW-24' # 'MM' # 'F' # 
 		'DD4F3B' : 'OY-9406',		 # 'EuroFox' # '406' # 'F' # 
 		'DD4F3D' : 'ZK-GFR',		 # 'Discus 2cT' # 'FR' # 'F' # 
@@ -7206,10 +7611,9 @@ kglid = {
 		'DD4F42' : 'SE-URX',		 # 'Janus B' # 'RX' # 'F' # 
 		'DD4F44' : 'WUD',		 # 'LS-3' # '' # 'F' # 
 		'DD4F46' : 'D-6087',		 # 'ASW-24' # 'W1' # 'F' # 
-		'DD4F49' : 'OY-XXH',		 # 'Duo Discus t' # 'XH' # 'F' # 
 		'DD4F4A' : 'F-CHGU',		 # 'Pegase' # 'GU' # 'F' # 
 		'DD4F4D' : 'OY-XRF',		 # 'LS-4' # 'G4' # 'F' # 
-		'DD4F4E' : 'OY-XTX',		 # 'SZD-51 Junior' # 'T4' # 'F' # 
+		'DD4F4E' : 'OY-XTK',		 # 'SZD-51 Junior' # 'T4' # 'F' # 
 		'DD4F4F' : 'NOREG',		 # 'LS-8 18' # '456' # 'F' # 
 		'DD4F51' : 'F-AZNV',		 # 'Breguet 905' # '' # 'F' # 
 		'DD4F52' : 'G-CHWL',		 # 'LS-8' # '184' # 'F' # 
@@ -7320,7 +7724,7 @@ kglid = {
 		'DD501F' : 'D-2262',		 # 'LS-4' # 'V4' # 'F' # 
 		'DD5022' : 'G-CHOG',		 # 'LAK-12' # '' # 'F' # 
 		'DD5024' : 'SP-3184',		 # 'SZD-48-1 Jantar Std 2' # '' # 'F' # 
-		'DD5025' : 'SP-3347',		 # 'SZD-51 Junior' # '' # 'F' # 
+		'DD5025' : 'SP-3040',		 # 'SZD-9 Bocian' # '' # 'F' # 
 		'DD5026' : 'SP-3054',		 # 'SZD-41 Jantar Std' # 'PD' # 'F' # 
 		'DD5027' : 'SP-3228',		 # 'SZD-48-3 Jantar Std 3' # '' # 'F' # 
 		'DD5028' : 'SP-3473',		 # 'SZD-51 Junior' # '7K' # 'F' # 
@@ -7328,7 +7732,7 @@ kglid = {
 		'DD502A' : 'SP-3435',		 # 'SZD-51 Junior' # '5K' # 'F' # 
 		'DD502B' : 'SP-3361',		 # 'SZD-50 Puchacz' # '61' # 'F' # 
 		'DD502D' : 'VH-GCO',		 # 'Libelle Std' # 'GCO' # 'F' # 
-		'DD502E' : 'SP-3383',		 # 'SZD-48-3 Jantar Std 3' # 'MN' # 'F' # 
+		'DD502E' : 'SP-3648',		 # 'SZD-48-3 Jantar Std 3' # 'YZ' # 'F' # 
 		'DD502F' : 'SP-4055',		 # 'Twin Astir II' # 'Sz2' # 'F' # 
 		'DD5030' : 'OM-6143',		 # 'DG-300' # 'FM' # 'F' # 
 		'DD5031' : 'G-CKOZ',		 # 'ASG-29' # 'G9' # 'F' # 
@@ -7344,6 +7748,7 @@ kglid = {
 		'DD503F' : 'F-CKAL',		 # 'ASW-28' # 'A28' # 'F' # 
 		'DD5043' : 'G-DCVL',		 # 'Libelle Std' # 'CVL' # 'F' # 
 		'DD5044' : 'F-CLEO',		 # 'DG-300' # 'R1' # 'F' # 
+		'DD5045' : 'VH_GIO',		 # 'TST-10' # 'IO' # 'F' # 
 		'DD504A' : 'S5-3069',		 # 'DG-300' # 'MM' # 'F' # 
 		'DD504B' : 'F-CAIC',		 # 'Ventus' # 'IC' # 'F' # 
 		'DD504C' : 'OK-4300',		 # 'Discus' # 'VE' # 'F' # 
@@ -7439,7 +7844,7 @@ kglid = {
 		'DD5101' : 'F-JB00',		 # 'WT9 Dynamic' # 'J00' # 'F' # 
 		'DD5103' : 'XOT',		 # 'Discus' # '' # 'F' # 
 		'DD5105' : 'VH-GAP',		 # 'DG-1000' # 'GAP' # 'F' # 
-		'DD5106' : 'BUZZ',		 # 'Ventus' # 'DOG' # 'F' # 
+		'DD5106' : 'COVID',		 # 'Pipistrel Virus' # '19' # 'F' # 
 		'DD5108' : 'G-CLPV',		 # 'ASK-21' # 'LPV' # 'F' # 
 		'DD510E' : 'F-CHKG',		 # 'Pegase' # '415' # 'F' # 
 		'DD5110' : 'OH-929',		 # 'Astir CS' # 'CS' # 'F' # 
@@ -7516,6 +7921,7 @@ kglid = {
 		'DD519C' : '5077',		 # 'Ultralight Glider' # 'RC' # 'F' # 
 		'DD519F' : 'D-2468',		 # 'Libelle Club' # '' # 'F' # 
 		'DD51A0' : '31694',		 # 'Ultralight Glider' # 'Li' # 'F' # 
+		'DD51A7' : 'OK-7385',		 # 'Astir CS' # 'PJ' # 'F' # 
 		'DD51A8' : 'OK-4444',		 # 'Cirrus Std' # 'IYD' # 'F' # 
 		'DD51AB' : 'LV-EPM',		 # 'LS-3' # 'RL' # 'F' # 
 		'DD51AE' : '55RS',		 # 'Ultralight Glider' # 'HCS' # 'F' # 
@@ -7552,7 +7958,6 @@ kglid = {
 		'DD51FA' : 'D-0432',		 # 'LS-1 d' # 'III' # 'F' # 
 		'DD51FB' : 'F-CKTZ',		 # 'Janus B' # '' # 'F' # 
 		'DD51FC' : 'G-CFCP',		 # 'LS-6' # '721' # 'F' # 
-		'DD51FD' : 'G-CHLC',		 # 'Pilatus B4' # 'HLC' # 'F' # 
 		'DD5200' : 'G-DCYT',		 # 'Cirrus Std' # '' # 'F' # 
 		'DD5201' : 'G-CKDF',		 # 'ASK-21' # 'N7' # 'F' # 
 		'DD5206' : 'F-CEYA',		 # 'SF-28' # 'YA' # 'F' # 
@@ -7612,7 +8017,7 @@ kglid = {
 		'DD5274' : 'SP-4065',		 # 'Pegase' # 'IP' # 'F' # 
 		'DD5279' : 'D-KAIN',		 # 'SF-25' # 'AIN' # 'F' # 
 		'DD527C' : 'D-2878',		 # 'LS-3' # 'JZ' # 'F' # 
-		'DD527E' : 'I-PUSC',		 # 'Hornet' # 'SC' # 'F' # 
+		'DD527E' : 'HA-4043',		 # 'Hornet' # 'SC' # 'F' # 
 		'DD5283' : 'G-CFOC',		 # 'DG-200' # '801' # 'F' # 
 		'DD5284' : 'HB-3220',		 # 'LS-4' # 'OW' # 'F' # 
 		'DD5285' : 'D-7591',		 # 'Astir Jeans' # '' # 'F' # 
@@ -7626,7 +8031,7 @@ kglid = {
 		'DD5294' : 'OM-8844',		 # 'DG-200' # 'SJ' # 'F' # 
 		'DD5296' : 'LV-GJL',		 # 'Piper J-3 Cub' # '' # 'F' # 
 		'DD5298' : 'LV-DPE',		 # 'SZD-48 Jantar Std 2' # 'PS' # 'F' # 
-		'DD5299' : 'EOY',		 # 'Ventus' # 'FU' # 'F' # 
+		'DD5299' : 'LV-EOY',		 # 'Ventus' # 'FU' # 'F' # 
 		'DD529B' : 'LV-DOT',		 # 'SZD-48-1 Jantar Std 2' # 'QM' # 'F' # 
 		'DD529E' : 'LV-DOE',		 # 'ASW-20' # 'VN' # 'F' # 
 		'DD52A2' : 'LV-DRA',		 # 'ASW-20' # 'LG' # 'F' # 
@@ -7709,8 +8114,11 @@ kglid = {
 		'DD80D4' : 'F-JXCK',		 # 'Lambada' # 'CK' # 'F' # 
 		'DD80D9' : 'HB-1846',		 # 'Salto H101' # 'IVO' # 'F' # 
 		'DD80DC' : 'D-EAIO',		 # 'DR-300' # 'Sky' # 'F' # 
+		'DD80DD' : 'HB-1654',		 # 'ASK-21' # '' # 'F' # 
+		'DD80E0' : 'D-5731',		 # 'Ka-8' # '' # 'F' # 
 		'DD80E1' : 'HB-2207',		 # 'Discus t' # 'HP' # 'F' # 
 		'DD80E3' : 'SP-3749',		 # 'SZD-55' # 'TG' # 'F' # 
+		'DD80E5' : 'NOREG',		 # '' # '' # 'F' # 
 		'DD80EA' : 'HB-1896',		 # 'Discus' # 'OM' # 'F' # 
 		'DD80EC' : 'D-3289',		 # 'Astir CS' # 'H5' # 'F' # 
 		'DD80F3' : 'HB-KME2',		 # 'Husky A-1' # 'KM2' # 'F' # 
@@ -7780,6 +8188,7 @@ kglid = {
 		'DD826F' : 'OY-MXB',		 # 'HK36 Super Dimona' # '' # 'F' # 
 		'DD8273' : 'D-8086',		 # 'Duo Discus' # 'MA' # 'F' # 
 		'DD8278' : 'D-6712',		 # 'ASW-19' # 'Dem' # 'F' # 
+		'DD8279' : 'HB-1716',		 # 'Nimbus 3' # 'HP' # 'F' # 
 		'DD827B' : 'NOREG',		 # 'Unknown' # 'KW' # 'F' # 
 		'DD827D' : 'D-XXMC',		 # 'ASH-26 E' # 'MC' # 'F' # 
 		'DD827E' : 'NOREG',		 # 'LS-7' # '2B' # 'F' # 
@@ -7795,6 +8204,7 @@ kglid = {
 		'DD8297' : 'F-CLSH',		 # 'LS-8 18' # 'B1' # 'F' # 
 		'DD829A' : 'PH686',		 # 'ASK-21' # 'JL' # 'F' # 
 		'DD829B' : 'NOREG',		 # 'Cirrus Std' # 'LV' # 'F' # 
+		'DD829C' : 'HB-XHB',		 # 'Helicopter' # '' # 'F' # 
 		'DD829D' : 'D-KALT',		 # 'Nimbus 3DT' # 'LT' # 'F' # 
 		'DD829E' : 'PH-1252',		 # 'Janus B' # 'VZ' # 'F' # 
 		'DD829F' : 'D-KMQB',		 # 'Nimbus 4DT' # 'QB' # 'F' # 
@@ -7866,7 +8276,8 @@ kglid = {
 		'DD832B' : 'OM-3300',		 # 'LS-6' # 'N6' # 'F' # 
 		'DD832F' : 'D-2418',		 # 'Discus' # 'YF' # 'F' # 
 		'DD8332' : 'F-CIPP',		 # 'Twin Astir II' # '' # 'F' # 
-		'DD8333' : 'OY-EXJ',		 # 'ASK-13' # 'EJ' # 'F' # 
+		'DD8333' : 'OY-XGL',		 # 'Astir CS' # 'H1' # 'F' # 
+		'DD8335' : 'D-7504',		 # 'ASK-21' # 'A3' # 'F' # 
 		'DD8336' : 'D-5764',		 # 'Ka-8' # '' # 'F' # 
 		'DD8337' : 'NOREG',		 # '' # '' # 'F' # 
 		'DD8338' : 'D-0497',		 # 'LS-4' # '' # 'F' # 
@@ -7906,6 +8317,7 @@ kglid = {
 		'DD838E' : 'D9470',		 # 'Libelle Club' # '70' # 'F' # 
 		'DD838F' : 'D-1476',		 # 'Discus 2' # 'GO' # 'F' # 
 		'DD8391' : 'D-7699',		 # 'Janus C' # '' # 'F' # 
+		'DD8393' : 'D-3192',		 # 'Ventus' # '1C' # 'F' # 
 		'DD8399' : 'D-0191',		 # 'LS-4' # '' # 'F' # 
 		'DD839D' : 'D-6644',		 # 'Astir Jeans' # '44' # 'F' # 
 		'DD839E' : 'D-5779',		 # 'Ka-7' # '' # 'F' # 
@@ -7953,7 +8365,7 @@ kglid = {
 		'DD8403' : 'F-CHJC',		 # 'DG-500' # 'HM' # 'F' # 
 		'DD8407' : 'G-DCJN',		 # 'SHK-1' # 'CJN' # 'F' # 
 		'DD8408' : 'D-5823',		 # 'Ka-8' # '23' # 'F' # 
-		'DD8409' : 'F-CHLX',		 # 'Pegase' # '' # 'F' # 
+		'DD8409' : 'F-CHRI',		 # 'ASK-13' # '' # 'F' # 
 		'DD840C' : 'OM-TOW',		 # 'EuroFox' # 'TOW' # 'F' # 
 		'DD840E' : 'D-4274',		 # 'Astir CS' # 'IBF' # 'F' # 
 		'DD8410' : 'D-KTIV',		 # 'SF-25' # 'TIF' # 'F' # 
@@ -7981,7 +8393,9 @@ kglid = {
 		'DD8443' : 'D-0633',		 # 'ASW-15' # '33' # 'F' # 
 		'DD844A' : 'D-0675',		 # 'ASK-21' # '75' # 'F' # 
 		'DD844E' : 'D-2939',		 # 'LS-1 f' # 'BI' # 'F' # 
+		'DD844F' : 'D-2043',		 # 'Discus' # 'ML' # 'F' # 
 		'DD8450' : 'D-6731',		 # 'Mosquito' # 'EI' # 'F' # 
+		'DD8452' : 'D-5127',		 # 'SZD-50 Puchacz' # 'HS' # 'F' # 
 		'DD8453' : 'D-EWAI',		 # 'DA20 Katana' # 'AI' # 'F' # 
 		'DD845A' : 'D-0941',		 # 'ASW-15' # 'MW' # 'F' # 
 		'DD845E' : 'D-0790',		 # 'SZD-48-1 Jantar Std 2' # 'KY' # 'F' # 
@@ -8022,11 +8436,14 @@ kglid = {
 		'DD84C6' : 'D-0151',		 # 'ASK-13' # 'SGS' # 'F' # 
 		'DD84C7' : 'VH-GMT',		 # 'LS-6' # 'MT' # 'F' # 
 		'DD84C8' : 'D-0465',		 # 'LAK-12' # 'KT' # 'F' # 
+		'DD84CE' : 'D-5465',		 # 'Ka-7' # '' # 'F' # 
 		'DD84CF' : 'F-CEXO',		 # 'Astir CS-77' # 'R20' # 'F' # 
 		'DD84D0' : 'F-CFTL',		 # 'Astir Jeans' # 'R23' # 'F' # 
+		'DD84D2' : 'OK-1844',		 # 'DG-300' # 'LN' # 'F' # 
 		'DD84D3' : 'D-7545',		 # 'ASW-19' # '' # 'F' # 
 		'DD84D7' : 'D-KBNO',		 # 'DG-500' # 'iNO' # 'F' # 
 		'DD84D8' : 'F-CIEC',		 # 'Duo Discus' # 'EC' # 'F' # 
+		'DD84DB' : 'D-2105',		 # 'SZD-51 Junior' # 'LH' # 'F' # 
 		'DD84DC' : 'G-CJLJ',		 # 'LS-4' # 'A3' # 'F' # 
 		'DD84E0' : 'D-2913',		 # 'PIK-20 D' # 'LK' # 'F' # 
 		'DD84E2' : 'D-3005',		 # 'Cirrus Std' # 'LI' # 'F' # 
@@ -8112,7 +8529,7 @@ kglid = {
 		'DD8590' : 'OY-MKX',		 # 'LS-1 d' # 'B6' # 'F' # 
 		'DD8592' : 'D-4849',		 # 'Janus B' # 'GJ' # 'F' # 
 		'DD8595' : 'OY-XBI',		 # 'Pilatus B4' # 'C7' # 'F' # 
-		'DD8596' : 'OY-SGX',		 # 'HK36 Super Dimona' # '' # 'F' # 
+		'DD8596' : 'OY-BZA',		 # 'Cessna 150' # 'BZA' # 'F' # 
 		'DD8597' : 'F-CFTV',		 # 'Discus' # 'EX' # 'F' # 
 		'DD8598' : 'D-4320',		 # 'Twin Astir III' # '20' # 'F' # 
 		'DD8599' : 'D-7353',		 # 'Janus B' # '53' # 'F' # 
@@ -8129,7 +8546,7 @@ kglid = {
 		'DD85BC' : 'D-8091',		 # 'LS-4' # 'LI' # 'F' # 
 		'DD85BD' : 'D-5001',		 # 'LS-4' # 'MI' # 'F' # 
 		'DD85BF' : 'D-4855',		 # 'Twin Astir II' # 'STR' # 'F' # 
-		'DD85C0' : 'D--3540',		 # 'SZD-23 Bocian 2' # '40' # 'F' # 
+		'DD85C0' : 'D--3540',		 # 'SZD-23 Bocian 2' # 'Boc' # 'F' # 
 		'DD85C5' : 'D-9016',		 # 'LS-4' # 'DH' # 'F' # 
 		'DD85C6' : 'DKAVT',		 # 'ASK-16' # 'AVT' # 'F' # 
 		'DD85CA' : 'D-8080',		 # 'Libelle Std' # '1K' # 'F' # 
@@ -8162,7 +8579,6 @@ kglid = {
 		'DD8616' : 'NOREG',		 # '' # '' # 'F' # 
 		'DD8618' : 'D-4506',		 # 'ASW-19' # 'A4' # 'F' # 
 		'DD8619' : 'D-3663',		 # 'DG-100' # 'MB' # 'F' # 
-		'DD861B' : 'D-9395',		 # 'Janus C' # '8W' # 'F' # 
 		'DD8620' : 'F-JUFF',		 # 'WT9 Dynamic' # 'FF' # 'F' # 
 		'DD8621' : 'GRAL_12',		 # 'Other' # 'G12' # 'F' # 
 		'DD8623' : 'D-0395',		 # 'LS-6' # 'EBI' # 'F' # 
@@ -8184,7 +8600,7 @@ kglid = {
 		'DD864E' : 'PH-1345',		 # 'ASK-21' # 'D5' # 'F' # 
 		'DD8651' : 'D-7044',		 # 'LS-4 W' # 'U8' # 'F' # 
 		'DD8655' : 'OK-8844',		 # 'DG-400' # 'TK' # 'F' # 
-		'DD8656' : 'D-2537',		 # 'Astir Jeans' # 'AJ' # 'I' # 
+		'DD8656' : 'D-2537',		 # 'Astir Jeans' # 'ACF' # 'I' # 
 		'DD865A' : 'D-1409',		 # 'Ka-2' # '09' # 'F' # 
 		'DD865C' : 'F-CFVU',		 # 'DG-300' # 'S9' # 'F' # 
 		'DD8660' : 'D-EDMW',		 # 'Piper J-3 Cub' # '' # 'F' # 
@@ -8196,6 +8612,7 @@ kglid = {
 		'DD866B' : 'D-3479',		 # 'LS-4' # 'SGS' # 'F' # 
 		'DD866D' : 'D-EAHK',		 # 'DR-400' # 'HK' # 'F' # 
 		'DD866E' : 'D-5593',		 # 'Ka-8' # '93' # 'F' # 
+		'DD8671' : 'D-2148',		 # 'LS-4' # 'A2' # 'F' # 
 		'DD8672' : 'D-KDHG',		 # 'Ventus 2cxM' # 'DHG' # 'F' # 
 		'DD8675' : 'D-1599',		 # 'LS-4' # 'IT' # 'F' # 
 		'DD8676' : 'D-8040',		 # 'DG-500' # '' # 'F' # 
@@ -8210,7 +8627,6 @@ kglid = {
 		'DD8691' : 'D-0045',		 # 'LS-6 18' # 'BU' # 'F' # 
 		'DD8697' : 'F-CKMC',		 # 'ASK-21' # 'MC' # 'F' # 
 		'DD869B' : 'F-CGZD',		 # 'LS-6' # 'ZD' # 'F' # 
-		'DD869C' : 'D-KLFV',		 # 'Discus' # 'FV' # 'F' # 
 		'DD869F' : 'VH-IUM',		 # 'Twin Astir II' # '' # 'F' # 
 		'DD86A4' : 'D-6960',		 # 'ASW-20' # 'DN' # 'F' # 
 		'DD86AA' : 'D-2301',		 # 'Pilatus B4' # '' # 'F' # 
@@ -8219,6 +8635,7 @@ kglid = {
 		'DD86BC' : 'D-MHAX',		 # 'WT9 Dynamic' # 'AX' # 'F' # 
 		'DD86BE' : 'D-3101',		 # 'Cirrus Std' # 'F4' # 'F' # 
 		'DD86C0' : 'D-0422',		 # 'ASK-13' # '22' # 'F' # 
+		'DD86C4' : 'D-1017',		 # 'DG-300' # '4T' # 'F' # 
 		'DD86C6' : 'D-7059',		 # 'Rhonbussard' # '' # 'F' # 
 		'DD86C7' : 'D-KIBT',		 # 'Discus t' # 'BT' # 'F' # 
 		'DD86C9' : 'D-KABF',		 # 'HK36 Super Dimona' # 'BF' # 'F' # 
@@ -8245,6 +8662,7 @@ kglid = {
 		'DD8708' : 'D-KAXB',		 # 'HK36 Super Dimona' # 'AMH' # 'F' # 
 		'DD870B' : 'D-4298',		 # 'LS-4 W' # '7D' # 'F' # 
 		'DD8711' : 'VH-GMK',		 # 'Hornet' # 'MK' # 'F' # 
+		'DD8713' : 'D-5574',		 # 'Duo Discus' # 'XXX' # 'F' # 
 		'DD8715' : 'D-1962',		 # 'Nimbus 2 C' # 'EV' # 'F' # 
 		'DD8719' : 'D-2643',		 # 'ASW-19' # 'NW' # 'F' # 
 		'DD871C' : 'D-1618',		 # 'Discus 2' # 'GJ' # 'F' # 
@@ -8263,7 +8681,8 @@ kglid = {
 		'DD873E' : 'D-KTSG',		 # 'Discus t' # 'SG' # 'F' # 
 		'DD873F' : 'D-2451',		 # 'Libelle Club' # '' # 'F' # 
 		'DD8740' : 'D-ECJB',		 # 'DR-400' # 'JB' # 'F' # 
-		'DD8741' : 'D-8252',		 # 'LS-4' # '' # 'F' # 
+		'DD8741' : 'D-1111',		 # 'Ka-8' # '' # 'F' # 
+		'DD8747' : 'D-2320',		 # 'Ka-8' # 'A1' # 'F' # 
 		'DD8748' : 'D-KIET',		 # 'SF-25' # 'ET' # 'F' # 
 		'DD8749' : 'D-5245',		 # 'Ka-6 cr' # '' # 'F' # 
 		'DD874B' : 'D-6530',		 # 'ASK-21' # 'DIN' # 'F' # 
@@ -8282,6 +8701,7 @@ kglid = {
 		'DD8774' : 'F-CHPV',		 # 'Calif A21S' # 'PV' # 'F' # 
 		'DD8776' : 'D-MEBR',		 # 'Ultralight' # '' # 'F' # 
 		'DD8777' : 'D-1147',		 # 'Discus 2' # '73' # 'F' # 
+		'DD8779' : 'D-5587',		 # 'ASK-21' # 'SO' # 'F' # 
 		'DD877B' : 'D-7825',		 # 'LS-4' # '' # 'F' # 
 		'DD877C' : 'F-GHTQ',		 # 'PA-25 Pawnee' # 'TQ' # 'F' # 
 		'DD8780' : 'D-9082',		 # 'Ka-8' # 'FS8' # 'F' # 
@@ -8290,7 +8710,7 @@ kglid = {
 		'DD8788' : 'NOREG',		 # 'Nimbus 4D' # 'BSA' # 'F' # 
 		'DD8789' : 'F-CHHB',		 # 'Janus C' # 'Y2' # 'F' # 
 		'DD878A' : 'F-CFZU',		 # 'LS-4' # 'V78' # 'F' # 
-		'DD878F' : 'D-KPRO',		 # 'ASG-29E' # '' # 'F' # 
+		'DD878F' : 'OY-HPX',		 # 'LS-6' # 'HP' # 'F' # 
 		'DD8790' : 'D-2032',		 # 'Salto H101' # 'TZ' # 'F' # 
 		'DD8792' : 'G-CKLN',		 # 'LS-4' # 'A4' # 'F' # 
 		'DD8793' : 'G-CKAR',		 # 'Duo Discus t' # '977' # 'F' # 
@@ -8360,6 +8780,7 @@ kglid = {
 		'DD892A' : 'D-1474',		 # 'ASK-21' # '' # 'F' # 
 		'DD892D' : 'ES-5427',		 # 'Twin Astir II' # '' # 'F' # 
 		'DD892E' : 'D-KIGA',		 # 'ASW-22 BL' # 'GR' # 'F' # 
+		'DD892F' : 'OK-1166',		 # 'Janus CM' # 'J59' # 'F' # 
 		'DD8937' : 'F-GGXE',		 # 'DR-400' # 'EXE' # 'F' # 
 		'DD8938' : 'F-CFTW',		 # 'ASW-20' # 'O2' # 'F' # 
 		'DD893C' : 'D-5523',		 # 'Discus 2' # 'LR' # 'F' # 
@@ -8375,7 +8796,7 @@ kglid = {
 		'DD894E' : 'D-KLAA',		 # 'Ventus 2cxT' # 'AA' # 'F' # 
 		'DD8951' : 'D-4091',		 # 'Discus' # '91' # 'F' # 
 		'DD8952' : 'OE-5319',		 # 'Mistral C' # 'VO' # 'F' # 
-		'DD8954' : 'D-8270',		 # 'Discus 2' # '70' # 'F' # 
+		'DD8954' : 'I-AVAS',		 # 'DG-300' # '' # 'F' # 
 		'DD8955' : 'D-1604',		 # 'LS-4' # 'G3' # 'F' # 
 		'DD895D' : 'D-KSEI',		 # 'Duo Discus xlt' # 'SEI' # 'F' # 
 		'DD895E' : '9A-GTI',		 # 'ASW-24' # 'ZZ' # 'F' # 
@@ -8504,18 +8925,17 @@ kglid = {
 		'DD8C18' : 'HB-1885',		 # 'Discus' # 'X7' # 'F' # 
 		'DD8C25' : 'D-MLAP',		 # 'Piccolo B' # 'AP' # 'F' # 
 		'DD8C2C' : 'G-AVXA',		 # 'PA-25 Pawnee' # 'XA' # 'F' # 
-		'DD8C2D' : 'F-CHRI',		 # 'ASK-13' # '' # 'F' # 
 		'DD8C2E' : 'D-4388',		 # 'Ka-6 cr' # '88' # 'F' # 
 		'DD8C30' : 'HB-711',		 # 'Ka-6 cr' # '' # 'F' # 
+		'DD8C31' : 'HB-3328',		 # 'DG-300' # 'EP' # 'F' # 
 		'DD8C37' : 'HB_3223',		 # 'Duo Discus' # '' # 'F' # 
 		'DD8C3D' : 'HA-4325',		 # 'Cirrus 18m' # 'NN' # 'F' # 
-		'DD8C3F' : 'OK-3187',		 # 'DG-500' # 'SR' # 'F' # 
 		'DD8C41' : 'HB-1697',		 # 'Twin Astir II' # 'H97' # 'F' # 
 		'DD8C42' : 'D-MUFY',		 # 'Ultralight' # 'FY' # 'F' # 
 		'DD8C4C' : 'D-2014',		 # 'Pilatus B4' # 'VZ' # 'F' # 
 		'DD8C52' : 'D-6156',		 # 'Zugvogel IIIb' # '' # 'F' # 
 		'DD8C65' : 'D-7362',		 # 'SZD-23 Bocian 2' # '62' # 'F' # 
-		'DD8C6B' : 'D-MXEL',		 # 'Ultralight' # 'EL' # 'F' # 
+		'DD8C6B' : 'NOREG',		 # 'Ultralight' # 'EL' # 'F' # 
 		'DD8C6E' : 'HB-3205',		 # 'DG-505' # '5PA' # 'F' # 
 		'DD8C7D' : 'D-MSBM',		 # 'Ultralight' # '' # 'F' # 
 		'DD8C89' : 'F-PPRQ',		 # 'Jodel D120' # 'R3F' # 'F' # 
@@ -8534,6 +8954,8 @@ kglid = {
 		'DD8CE1' : 'HB982',		 # 'Elfe S4' # '' # 'F' # 
 		'DD8CE4' : 'D-MSSP',		 # 'Eurostar EV97' # '' # 'F' # 
 		'DD8CF3' : 'F-CIAN',		 # 'Astir CS-77' # 'AN' # 'F' # 
+		'DD8CF7' : 'BLE',		 # 'Slingsby Skylark 4' # 'BLE' # 'F' # 
+		'DD8D04' : 'HB-1952',		 # 'Discus' # 'OD' # 'F' # 
 		'DD8D09' : 'Zenair',		 # 'Experimental' # '' # 'F' # 
 		'DD8D14' : 'HB-768',		 # 'Ka-7' # '7K' # 'F' # 
 		'DD8D25' : 'OK-1272',		 # 'ASW-15' # 'LA' # 'F' # 
@@ -8555,7 +8977,6 @@ kglid = {
 		'DD8D5B' : 'F-CADN',		 # 'Std. Astir II' # 'DN' # 'F' # 
 		'DD8D5F' : 'D-9189',		 # 'Bergfalke III' # '' # 'F' # 
 		'DD8D61' : 'D-ECSM',		 # 'DR-400' # 'SM' # 'F' # 
-		'DD8D62' : 'OO-YNG',		 # 'Mistral C' # '' # 'F' # 
 		'DD8D65' : 'G-CFMT',		 # 'Cirrus Std' # 'FMT' # 'F' # 
 		'DD8D66' : 'G-EEKA',		 # 'DG-200' # 'EKA' # 'F' # 
 		'DD8D67' : 'G-CKKB',		 # 'Pegase' # 'KKB' # 'F' # 
@@ -8585,6 +9006,7 @@ kglid = {
 		'DD8DAD' : 'F-CEMZ',		 # 'Ka-8' # 'EZ' # 'F' # 
 		'DD8DAE' : 'EWP',		 # 'Twin Astir II' # 'EWP' # 'F' # 
 		'DD8DAF' : 'PH-357',		 # 'Ka-6 cr' # '' # 'F' # 
+		'DD8DB1' : 'ZS-GAI',		 # 'ASK-13' # 'V3' # 'F' # 
 		'DD8DB2' : 'PH-1306',		 # 'ASK-21' # 'W5' # 'F' # 
 		'DD8DB3' : 'D-6039',		 # 'Ka-7' # 'GAD' # 'F' # 
 		'DD8DB8' : 'G-DHCF',		 # 'SZD-50 Puchacz' # 'HCF' # 'F' # 
@@ -8601,7 +9023,7 @@ kglid = {
 		'DD8DD1' : 'Vh-IUE',		 # 'DG-400' # 'IUE' # 'F' # 
 		'DD8DD2' : 'VH-GYC',		 # 'PW-6' # 'GYC' # 'F' # 
 		'DD8DD3' : 'D-0357',		 # 'DG-300' # 'PL' # 'F' # 
-		'DD8DD4' : 'OM-7686',		 # 'Std. Astir II' # 'BA7' # 'F' # 
+		'DD8DD4' : 'OM-2069',		 # 'ASW-15' # 'BA5' # 'F' # 
 		'DD8DD6' : 'D-4081',		 # 'Ventus 2' # 'LD' # 'F' # 
 		'DD8DD9' : 'D-7623',		 # 'SZD-50 Puchacz' # 'NGF' # 'F' # 
 		'DD8DDA' : 'D-8825',		 # 'ASK-21' # 'BO' # 'F' # 
@@ -8615,6 +9037,7 @@ kglid = {
 		'DD8DEA' : 'G-CJZH',		 # 'ASW-20' # 'ZH' # 'F' # 
 		'DD8DED' : 'F-CGEU',		 # 'Pegase' # '' # 'F' # 
 		'DD8DEE' : 'G-CFFV',		 # 'SZD-51 Junior' # 'FFV' # 'F' # 
+		'DD8DF3' : 'HB-3391',		 # 'Duo Discus' # '1L' # 'F' # 
 		'DD8DF5' : 'YA',		 # 'Twin Astir II' # '' # 'F' # 
 		'DD8DF6' : 'F-CGSB',		 # 'Pegase Trainer' # '' # 'F' # 
 		'DD8DF7' : '177',		 # 'DG-100' # '177' # 'F' # 
@@ -8684,7 +9107,7 @@ kglid = {
 		'DD8E88' : 'D-1475',		 # 'ASK-21' # 'UG' # 'F' # 
 		'DD8E89' : 'ZS-GZD',		 # 'Ka-8' # '' # 'F' # 
 		'DD8E8C' : 'SE-TPP',		 # 'LS-1 f' # 'G7' # 'F' # 
-		'DD8E8E' : 'OVNI',		 # 'LAK-17 A' # '2L' # 'F' # 
+		'DD8E8E' : 'OVNI_69',		 # 'LAK-17 A' # '2L' # 'F' # 
 		'DD8E90' : 'F-GUXI',		 # 'DR-400' # 'XI' # 'F' # 
 		'DD8E93' : 'NOREG',		 # 'Cirrus Std' # 'E' # 'F' # 
 		'DD8E99' : 'F-CIAT',		 # 'ASK-21' # '' # 'F' # 
@@ -8759,6 +9182,7 @@ kglid = {
 		'DD8F33' : 'D-9307',		 # 'Bergfalke III' # '07' # 'F' # 
 		'DD8F34' : 'F-CDTR',		 # 'Ka-6 e' # '' # 'F' # 
 		'DD90B8' : 'D-0347',		 # 'Discus' # 'UX' # 'F' # 
+		'DD90BA' : 'HB3240',		 # 'ASW-27' # '2B' # 'F' # 
 		'DD90BF' : 'PH-1387',		 # 'Duo Discus x' # 'W1' # 'F' # 
 		'DD90C3' : 'F-CAEM',		 # 'Std. Astir II' # 'EM' # 'F' # 
 		'DD90C4' : 'D-4087',		 # 'ASW-20' # 'MS' # 'F' # 
@@ -8768,12 +9192,10 @@ kglid = {
 		'DD90CC' : 'D-EDVH',		 # 'Husky A-1' # 'VH' # 'F' # 
 		'DD90CD' : 'OE-9072',		 # 'SF-28' # '' # 'F' # 
 		'DD90D0' : 'OK_0000',		 # 'Unknown' # 'CG' # 'F' # 
-		'DD90D1' : 'OK-7537',		 # 'Ka-8' # 'MK' # 'F' # 
 		'DD90DA' : 'D-0646',		 # 'ASK-13' # '13' # 'F' # 
 		'DD90E7' : 'OE-5655',		 # 'SZD-51 Junior' # '' # 'F' # 
 		'DD90E8' : 'NOREG',		 # '' # '' # 'F' # 
 		'DD90E9' : 'D-4076',		 # 'Ka-7' # '76' # 'F' # 
-		'DD90F1' : 'HB-1629',		 # 'ASK-21' # '' # 'F' # 
 		'DD90F2' : 'D-3487',		 # 'LS-4' # 'SY' # 'F' # 
 		'DD90F4' : 'D-9142',		 # 'Duo Discus' # 'H2' # 'F' # 
 		'DD90F7' : 'F-CJPI',		 # 'DG-800' # 'TI' # 'F' # 
@@ -8785,7 +9207,6 @@ kglid = {
 		'DD910C' : 'D-EVLO',		 # 'PA-18 Super Cub' # '' # 'F' # 
 		'DD9111' : 'G-KOBH',		 # 'Discus t' # '920' # 'F' # 
 		'DD9112' : 'D-7533',		 # 'Astir Jeans' # 'OT' # 'F' # 
-		'DD9113' : 'HB-3015',		 # 'ASK-23' # '' # 'F' # 
 		'DD911B' : 'D-KHGW',		 # 'Ventus 2cxM' # 'GW' # 'F' # 
 		'DD911C' : 'D-3772',		 # 'Ventus 2' # 'DE' # 'F' # 
 		'DD9122' : 'D-CKID',		 # 'Ventus' # 'ID' # 'F' # 
@@ -8800,7 +9221,6 @@ kglid = {
 		'DD9138' : 'NOREG',		 # '' # '' # 'F' # 
 		'DD9139' : 'D-1339',		 # 'DG-100' # 'D39' # 'F' # 
 		'DD913A' : '667GH',		 # 'Mosquito' # 'GH' # 'F' # 
-		'DD913C' : 'HB-1779',		 # 'ASK-23' # '' # 'F' # 
 		'DD913E' : 'D-1864',		 # 'ASK-23' # '' # 'F' # 
 		'DD9141' : 'HB-3321',		 # 'Ventus 2' # 'LQ' # 'F' # 
 		'DD9145' : 'D-2638',		 # 'LS-8' # 'NF' # 'F' # 
@@ -8811,7 +9231,6 @@ kglid = {
 		'DD9150' : 'F-CLBE',		 # 'Motorglider' # 'BE' # 'F' # 
 		'DD9154' : 'D-KIPZ',		 # 'Ventus 2ct' # 'PZ' # 'F' # 
 		'DD9158' : 'D-8920',		 # 'LS-1 f' # '1F' # 'F' # 
-		'DD915B' : 'D-3580',		 # 'DG-303' # 'PG' # 'F' # 
 		'DD915D' : 'OE-0875',		 # 'Cirrus 18m' # 'BG' # 'F' # 
 		'DD916A' : 'G-KCWJ',		 # 'Duo Discus t' # '8F' # 'F' # 
 		'DD9175' : 'F-CENT',		 # 'ASW-24 E' # '357' # 'F' # 
@@ -8837,6 +9256,7 @@ kglid = {
 		'DD91B7' : 'D-7868',		 # 'DG-200' # 'T' # 'F' # 
 		'DD91BA' : 'HA-4037',		 # 'ASW-19' # 'F4' # 'F' # 
 		'DD91BB' : 'F-CREB',		 # 'Experimental' # '' # 'F' # 
+		'DD91BE' : 'HA-4567',		 # 'LS-1 c' # '' # 'F' # 
 		'DD91BF' : 'D-MZIA',		 # 'Ultralight' # 'IA' # 'F' # 
 		'DD91C6' : 'D-8811',		 # 'LS-8 18' # '8Y' # 'F' # 
 		'DD91CC' : 'YAM',		 # 'ASH-25' # 'YAM' # 'F' # 
@@ -8852,7 +9272,6 @@ kglid = {
 		'DD91EC' : 'OE-5212',		 # 'Astir CS' # '10' # 'F' # 
 		'DD91ED' : 'D-3498',		 # 'ASK-23' # 'YP' # 'F' # 
 		'DD91F4' : 'D-1795',		 # 'SB-5 e' # 'II' # 'F' # 
-		'DD91FA' : 'HB-1478',		 # 'ASW-19' # '' # 'F' # 
 		'DD91FB' : 'D-KHOF',		 # 'SF-25' # 'HOF' # 'F' # 
 		'DD91FD' : 'D-KSDI',		 # 'ASH-26 E' # 'GA' # 'F' # 
 		'DD91FF' : 'F-CBVT',		 # 'ASK-13' # 'VT' # 'F' # 
@@ -8869,7 +9288,6 @@ kglid = {
 		'DD9224' : 'ZU-FZG',		 # 'Towplane' # '' # 'F' # 
 		'DD9227' : 'D-3922',		 # 'LS-3' # 'N7' # 'F' # 
 		'DD922C' : 'D-KIDX',		 # 'Nimbus 4DM' # 'DX' # 'F' # 
-		'DD922F' : 'OE-5621',		 # 'LS-4' # '' # 'F' # 
 		'DD9231' : 'OGNKDF',		 # 'Ground Station' # 'NaN' # 'F' # 
 		'DD9233' : 'HB-1846',		 # 'Salto H101' # '69' # 'F' # 
 		'DD9234' : 'AKAMUC3',		 # 'Unknown' # 'AM3' # 'F' # 
@@ -8886,7 +9304,6 @@ kglid = {
 		'DD924E' : 'D-KEJC',		 # 'Janus CT' # 'JC' # 'F' # 
 		'DD924F' : 'D-8084',		 # 'Discus 2' # 'ALB' # 'F' # 
 		'DD9251' : 'OK-5293',		 # 'Ventus' # 'S6' # 'F' # 
-		'DD9253' : 'OE-5822',		 # 'LS-4' # 'EF2' # 'F' # 
 		'DD925A' : 'NOREG',		 # '' # '' # 'F' # 
 		'DD9263' : 'D-EEUQ',		 # 'Rallye 180T-D' # 'UQ' # 'F' # 
 		'DD9266' : 'D-3717',		 # 'LS-1 f' # 'RP' # 'F' # 
@@ -8896,7 +9313,6 @@ kglid = {
 		'DD9275' : 'D-7473',		 # 'Mosquito' # 'KMP' # 'F' # 
 		'DD927B' : 'OK-7301',		 # 'Astir CS' # 'BH' # 'F' # 
 		'DD9280' : 'G-KIAU',		 # 'SF-25' # 'AU' # 'F' # 
-		'DD9281' : 'D-6392',		 # 'ASK-21' # 'BF' # 'F' # 
 		'DD9286' : 'D-7348',		 # 'Discus 2' # 'B3' # 'F' # 
 		'DD9287' : 'D-MSHP',		 # 'Ikarus C42 B' # '' # 'F' # 
 		'DD9288' : 'D-5521',		 # 'Ka-7' # '' # 'F' # 
@@ -8906,7 +9322,6 @@ kglid = {
 		'DD9295' : 'OH-1034',		 # 'Discus' # 'FM' # 'F' # 
 		'DD929C' : 'G-CHJY',		 # 'Cirrus' # 'HJY' # 'F' # 
 		'DD929E' : 'HB-3225',		 # 'ASK-21' # '5B' # 'F' # 
-		'DD92A0' : 'D-6987',		 # 'ASK-23' # 'CH' # 'F' # 
 		'DD92AF' : 'NOREG',		 # '' # '' # 'F' # 
 		'DD92B4' : 'HB-2364',		 # 'SF-25' # 'CHO' # 'F' # 
 		'DD92B7' : 'HB-1660',		 # 'ASW-20' # 'J5' # 'F' # 
@@ -8917,6 +9332,7 @@ kglid = {
 		'DD92CA' : 'D-8832',		 # 'ASW-20' # 'F1' # 'F' # 
 		'DD92CD' : 'D-3261',		 # 'Cirrus Std' # 'S2' # 'F' # 
 		'DD92CE' : 'HB-3422',		 # 'Duo Discus' # '9B' # 'F' # 
+		'DD92D0' : 'D-ERIZ',		 # 'MS-893 Commodore' # '' # 'F' # 
 		'DD92D6' : 'D-KBUT',		 # 'SF-25' # 'UT' # 'F' # 
 		'DD92D9' : 'HB-3352',		 # 'LS-8 18' # 'EY' # 'F' # 
 		'DD92DC' : 'OE-5578',		 # 'Twin Astir I' # '' # 'F' # 
@@ -8944,7 +9360,9 @@ kglid = {
 		'DD9322' : 'D-KEHU',		 # 'HK36 Super Dimona' # 'HU' # 'F' # 
 		'DD9327' : 'D-XXNQ',		 # 'FK9 Mark 2' # 'mop' # 'F' # 
 		'DD9328' : 'OK-1418',		 # 'LS-3' # 'NK' # 'F' # 
+		'DD9329' : 'SP-3781',		 # 'SZD-48 Jantar Std 2' # 'PK' # 'F' # 
 		'DD932D' : 'NOREG',		 # '' # '' # 'F' # 
+		'DD932F' : 'OK-1428',		 # 'DG-200' # 'RZ' # 'F' # 
 		'DD9333' : 'D-7388',		 # 'Astir CS' # '' # 'F' # 
 		'DD9334' : 'NOREG',		 # '' # '' # 'F' # 
 		'DD9338' : 'DD9338',		 # 'Unknown' # '' # 'F' # 
@@ -8952,8 +9370,9 @@ kglid = {
 		'DD933B' : 'D-1193',		 # 'Ka-6 cr' # '93' # 'F' # 
 		'DD933C' : 'S5-7188',		 # 'Blanik' # '88' # 'F' # 
 		'DD933F' : '24XH',		 # 'Piccolo B' # '' # 'F' # 
-		'DD9345' : 'G-CLSW',		 # 'ASW-20' # '20B' # 'F' # 
+		'DD9345' : 'G-DCNC',		 # 'Cirrus Std' # '273' # 'F' # 
 		'DD934D' : 'OE-5678',		 # 'ASW-15' # 'KJ' # 'F' # 
+		'DD9351' : 'HB-1933',		 # 'DG-300' # 'KS' # 'F' # 
 		'DD9357' : 'D-KDBD',		 # 'SF-25' # 'BD' # 'F' # 
 		'DD935A' : 'LSCA7',		 # 'HK36 Super Dimona' # 'HT' # 'F' # 
 		'DD935C' : 'OE-5566',		 # 'Pilatus B4' # 'AB4' # 'F' # 
@@ -8963,6 +9382,7 @@ kglid = {
 		'DD9366' : 'OK-4400',		 # 'Discus' # 'SJ' # 'F' # 
 		'DD9369' : 'D-3936',		 # 'LS-3' # 'VL' # 'F' # 
 		'DD936B' : 'OE-KUB',		 # 'DR-400' # '' # 'F' # 
+		'DD936C' : 'HB-1972',		 # 'DG-300' # 'WK' # 'F' # 
 		'DD936E' : 'D-3382',		 # 'Duo Discus' # 'JOY' # 'F' # 
 		'DD936F' : 'D-6841',		 # 'ASW-27' # 'TSX' # 'F' # 
 		'DD9375' : 'D-KDOC',		 # 'Duo Discus' # 'OC' # 'F' # 
@@ -8983,21 +9403,21 @@ kglid = {
 		'DD93B3' : 'HB-3041',		 # 'Discus' # 'LY' # 'F' # 
 		'DD93B4' : 'HB-1708',		 # 'ASK-21' # '' # 'F' # 
 		'DD93BD' : 'D-9260',		 # 'Salto H101' # '60' # 'F' # 
-		'DD93BE' : 'HB-1422',		 # 'ASW-19' # '' # 'F' # 
 		'DD93C4' : 'D-KBIM',		 # 'Ventus bT' # 'PB' # 'F' # 
 		'DD93C7' : 'D-KAGQ',		 # 'SF-25' # 'GQ' # 'F' # 
-		'DD93C8' : 'G-DCNC',		 # 'Cirrus Std' # '273' # 'F' # 
+		'DD93C8' : 'GCFVL',		 # 'Zugvogel IIIb' # 'ZU6' # 'F' # 
 		'DD93C9' : 'D-8918',		 # 'Ka-2' # '18' # 'F' # 
 		'DD93CA' : 'OY-9407',		 # 'Ultralight' # '407' # 'F' # 
 		'DD93CE' : 'OM-5169',		 # 'DG-100' # 'G1' # 'F' # 
 		'DD93D2' : 'AKAMUC1',		 # 'Unknown' # 'AM1' # 'F' # 
+		'DD93D4' : 'OE-5580',		 # 'ASK-13' # '' # 'F' # 
 		'DD93D6' : 'D-5908',		 # 'Ventus 2' # 'M4' # 'F' # 
 		'DD93D8' : 'HB-1747',		 # 'LS-4' # '2B' # 'F' # 
 		'DD93D9' : 'HB-2329',		 # 'ASH-26 E' # 'HJ' # 'F' # 
 		'DD93DB' : 'D-MRZB',		 # 'Ultralight' # '' # 'F' # 
 		'DD93E0' : 'D-2370',		 # 'ASW-15' # 'GO' # 'F' # 
 		'DD93E1' : 'D-8255',		 # 'ASW-27' # 'ES' # 'F' # 
-		'DD93E5' : 'HB-3089',		 # 'Pegase' # 'LR' # 'F' # 
+		'DD93E5' : 'HB-3212',		 # 'Pegase' # 'LN' # 'F' # 
 		'DD93E6' : 'D-9204',		 # 'Duo Discus xl' # 'RD' # 'F' # 
 		'DD93E7' : 'HB-3108',		 # 'Discus' # 'LH' # 'F' # 
 		'DD93EA' : 'NOREG',		 # 'Ventus c' # 'PUP' # 'F' # 
@@ -9018,7 +9438,6 @@ kglid = {
 		'DD9413' : 'D-9119',		 # 'ASK-21' # 'VN' # 'F' # 
 		'DD9415' : 'OE-5654',		 # 'Ventus 2' # 'M3' # 'F' # 
 		'DD941F' : 'HB-1966',		 # 'Discus' # 'LC' # 'F' # 
-		'DD9420' : 'HB-2181',		 # 'ASW-24' # '' # 'F' # 
 		'DD9421' : 'G-WENN',		 # 'H36 Dimona' # 'NN' # 'F' # 
 		'DD9424' : 'D-9390',		 # 'Discus' # '90' # 'F' # 
 		'DD9427' : 'D-8778',		 # 'Ka-8' # '' # 'F' # 
@@ -9026,8 +9445,7 @@ kglid = {
 		'DD942D' : 'D-ELFR',		 # 'DR-400' # 'FR' # 'F' # 
 		'DD943B' : 'D-5085',		 # 'Discus 2' # 'UZ' # 'F' # 
 		'DD9443' : 'OE-AIL',		 # 'PA-18 Super Cub' # 'IL' # 'F' # 
-		'DD9446' : 'D-KHDH',		 # 'ASW-28t' # 'DH' # 'F' # 
-		'DD9447' : 'D-4153',		 # 'LS-6' # '4L' # 'F' # 
+		'DD9447' : 'D-0701',		 # 'Libelle Std' # 'PI' # 'F' # 
 		'DD9448' : 'HB-1353',		 # 'LS-3' # 'LL' # 'F' # 
 		'DD944B' : 'F-BOTI',		 # 'MS-893 Commodore' # 'TI' # 'F' # 
 		'DD944C' : 'OE-5202',		 # 'Ka-8' # 'K8c' # 'F' # 
@@ -9036,6 +9454,7 @@ kglid = {
 		'DD9453' : 'ZS-GLW',		 # 'LS-3' # '84' # 'F' # 
 		'DD9457' : 'HB-3319',		 # 'Ventus 2' # 'LG' # 'F' # 
 		'DD945A' : 'D-8598',		 # 'Ka-8' # '' # 'F' # 
+		'DD945E' : 'SP-3924',		 # 'Pegase' # 'N' # 'F' # 
 		'DD9461' : 'HB-1061',		 # 'LS-1 d' # '01' # 'F' # 
 		'DD9467' : 'D-KTOL',		 # 'H36 Dimona' # 'OL' # 'F' # 
 		'DD946E' : 'D-KAHS',		 # 'ASW-20' # 'HS' # 'F' # 
@@ -9044,6 +9463,7 @@ kglid = {
 		'DD9479' : 'NOREG',		 # 'Ground Station' # 'KM' # 'F' # 
 		'DD947D' : 'D-4216',		 # 'Cirrus Std' # 'RA' # 'F' # 
 		'DD9486' : 'D-KCPS',		 # 'Ventus cM' # 'PS' # 'F' # 
+		'DD9487' : 'D-4904',		 # 'Pilatus B4' # '04' # 'F' # 
 		'DD9489' : 'MIL',		 # 'Unknown' # 'MIL' # 'F' # 
 		'DD948B' : 'NOREG',		 # 'ASW-20' # 'JZ' # 'F' # 
 		'DD948D' : 'D-KBTL',		 # 'Ventus 2cM' # 'TL' # 'F' # 
@@ -9053,7 +9473,7 @@ kglid = {
 		'DD949C' : 'D-3821',		 # 'ASK-21' # 'HA' # 'F' # 
 		'DD94A0' : 'D-KIGB',		 # 'Piccolo B' # '' # 'F' # 
 		'DD94A1' : 'D-7073',		 # 'Ventus 2bx' # 'IMU' # 'F' # 
-		'DD94A3' : 'OE-5535',		 # 'ASK-21' # '' # 'F' # 
+		'DD94A3' : 'OE-5374',		 # 'Pilatus B4' # '' # 'F' # 
 		'DD94A4' : 'D-KFKL',		 # 'Duo Discus t' # '' # 'F' # 
 		'DD94A5' : 'D-KFJV',		 # 'HK36 Super Dimona' # 'JV' # 'F' # 
 		'DD94A8' : 'D-2547',		 # 'Astir Jeans' # 'Pb' # 'F' # 
@@ -9066,15 +9486,13 @@ kglid = {
 		'DD94BF' : 'F-CPAT',		 # 'Nimbus 2' # 'AT' # 'F' # 
 		'DD94C4' : 'LSCA5',		 # 'ASW-20' # 'UF' # 'F' # 
 		'DD94C7' : 'D-4771',		 # 'Astir CS-77' # 'DD' # 'F' # 
-		'DD94C8' : 'HB-3026',		 # 'ASK-21' # '' # 'F' # 
-		'DD94CB' : 'HB-3091',		 # 'ASK-23' # '' # 'F' # 
 		'DD94D3' : 'D-KEKW',		 # 'Ventus 2cxT' # '2W' # 'F' # 
 		'DD94D4' : 'G-CKPZ',		 # 'ASW-20' # 'T93' # 'F' # 
 		'DD94D5' : 'AKMUC11',		 # 'Unknown' # 'A11' # 'F' # 
 		'DD94D6' : 'D-KAWN',		 # 'ASW-20' # 'WN' # 'F' # 
 		'DD94D8' : 'HB-3134',		 # 'DG-500' # '' # 'F' # 
 		'DD94DB' : 'D6408',		 # 'Ka-6 cr' # 'HK6' # 'F' # 
-		'DD94DD' : 'OK-2210',		 # 'LAK-17 AT' # 'YF' # 'F' # 
+		'DD94DD' : 'OK-2210',		 # 'LAK-17 AT' # 'BI' # 'F' # 
 		'DD94DF' : 'D-4032',		 # 'ASK-21' # 'YF' # 'F' # 
 		'DD94EB' : 'D-XXXX',		 # 'Nimbus 3' # '' # 'F' # 
 		'DD94EE' : 'F-CILS',		 # 'ASK-13' # 'LS' # 'F' # 
@@ -9086,7 +9504,6 @@ kglid = {
 		'DD94FA' : 'D-4935',		 # 'ASK-21' # '35' # 'F' # 
 		'DD94FE' : 'HB-3387',		 # 'Duo Discus' # 'PPA' # 'F' # 
 		'DD9502' : 'D-7243',		 # 'Cirrus Std' # '4ME' # 'F' # 
-		'DD9505' : 'OE-5374',		 # 'Pilatus B4' # '' # 'F' # 
 		'DD9509' : 'D-8085',		 # 'Ka-6 cr' # '85' # 'F' # 
 		'DD950F' : 'NOREG',		 # 'Other' # 'BM' # 'F' # 
 		'DD9510' : 'F-CFXK',		 # 'Pegase' # '' # 'F' # 
@@ -9108,8 +9525,9 @@ kglid = {
 		'DD9545' : 'D-6318',		 # 'Nimbus 4' # 'EP' # 'F' # 
 		'DD9547' : 'D-0667',		 # 'LS-1 d' # 'T' # 'F' # 
 		'DD9549' : 'D-KCAX',		 # 'RF 5 b' # 'AX' # 'F' # 
+		'DD954A' : 'D-2866',		 # 'SZD-30 Pirat' # '' # 'F' # 
 		'DD954C' : 'HB-2281',		 # 'ASH-25' # 'HB' # 'F' # 
-		'DD954E' : 'AH',		 # 'DG-808 C' # 'AH' # 'F' # 
+		'DD954E' : 'D-KWAH',		 # 'DG-808 C' # 'FK' # 'F' # 
 		'DD9552' : 'D-3880',		 # 'LS-4' # 'VC' # 'F' # 
 		'DD9553' : 'D-6881',		 # 'Bergfalke IV' # '81' # 'F' # 
 		'DD9556' : 'OK-0426',		 # 'Cirrus Std' # 'WO' # 'F' # 
@@ -9118,7 +9536,7 @@ kglid = {
 		'DD9561' : 'D-5545',		 # 'Ka-6 cr' # '545' # 'F' # 
 		'DD9566' : 'D-4571',		 # 'SZD-55' # '27' # 'F' # 
 		'DD9567' : 'D-9383',		 # 'SB-5 b' # '' # 'F' # 
-		'DD956A' : 'D-1981',		 # 'LS-1 d' # '6H' # 'F' # 
+		'DD956A' : 'OK-9944',		 # 'LS-1 d' # 'FK' # 'F' # 
 		'DD956C' : 'D-8973',		 # 'LS-4' # 'D73' # 'F' # 
 		'DD9570' : 'OE-5424',		 # 'SZD-50 Puchacz' # 'K3' # 'F' # 
 		'DD9571' : 'D-0404',		 # 'LS-4' # 'GP' # 'F' # 
@@ -9127,13 +9545,14 @@ kglid = {
 		'DD957A' : 'OY-XGI',		 # 'SF-25' # 'GI' # 'F' # 
 		'DD957D' : 'OE-5318',		 # 'LS-4' # 'M2' # 'F' # 
 		'DD957E' : 'OE-5569',		 # 'LS-4' # 'F4' # 'F' # 
+		'DD957F' : 'HA-MJC',		 # 'PA-25 Pawnee' # 'MJC' # 'F' # 
 		'DD9585' : 'D-5767',		 # 'LS-4' # '8F' # 'F' # 
 		'DD9588' : 'OE-5699',		 # 'ASW-28' # 'XP' # 'F' # 
 		'DD958B' : 'D-EKSO',		 # 'DR-400' # '' # 'F' # 
 		'DD958F' : 'D-KKHK',		 # 'ASH-31 MI' # 'DHK' # 'F' # 
 		'DD9592' : 'D-1540',		 # 'ASK-21' # 'W1' # 'F' # 
 		'DD9593' : 'D-KPFH',		 # 'ASH-25' # 'FH' # 'F' # 
-		'DD9594' : 'OK-0793',		 # 'ASW-15' # 'TK' # 'F' # 
+		'DD9594' : 'OK-0793',		 # 'ASW-15' # 'KA' # 'F' # 
 		'DD9598' : 'ZS-GVA',		 # 'Ka-6 cr' # '' # 'F' # 
 		'DD9599' : 'D-KCBP',		 # 'Discus 2t' # 'BP' # 'F' # 
 		'DD95A0' : 'D-KATH',		 # 'Piccolo B' # '' # 'F' # 
@@ -9150,7 +9569,6 @@ kglid = {
 		'DD95C9' : 'HB3034',		 # 'LS-4' # 'WE' # 'F' # 
 		'DD95D0' : 'D-MPOR',		 # 'Ultralight' # 'OR' # 'F' # 
 		'DD95D2' : 'D-0564',		 # 'Janus Ce' # 'CY' # 'F' # 
-		'DD95D4' : 'PH-1430',		 # 'Pegase' # '997' # 'F' # 
 		'DD95D5' : 'D-KIDF',		 # 'ASH-26 E' # 'DF' # 'F' # 
 		'DD95DA' : 'F-CHJN',		 # 'DG-500' # 'NJ' # 'F' # 
 		'DD95DB' : 'F-CEDS',		 # 'Ventus' # '28' # 'F' # 
@@ -9177,6 +9595,7 @@ kglid = {
 		'DD961C' : 'D-KIIS',		 # 'Piccolo B' # 'IS' # 'F' # 
 		'DD961D' : 'ZS-GMK',		 # 'ASW-20' # '15' # 'F' # 
 		'DD961F' : 'F-CGUO',		 # 'LS-6 18' # 'Z15' # 'F' # 
+		'DD9628' : 'HB-ZJK',		 # 'Robinson R44' # 'MFL' # 'F' # 
 		'DD9629' : 'HB-ZMF',		 # 'Robinson R22' # 'MFL' # 'F' # 
 		'DD9632' : 'OE-5627',		 # 'DG-300' # 'HS' # 'F' # 
 		'DD9635' : 'OK-2494',		 # 'ASW-19' # 'XP' # 'F' # 
@@ -9219,17 +9638,16 @@ kglid = {
 		'DD969B' : 'D-2761',		 # 'Discus' # '' # 'F' # 
 		'DD969C' : 'G-FEBB',		 # 'Speed Astir II' # 'EBB' # 'F' # 
 		'DD96A0' : 'D-2261',		 # 'LS-1 f' # 'CH' # 'F' # 
-		'DD96A5' : 'D-7826',		 # 'LS-4' # '4R' # 'F' # 
 		'DD96AA' : 'D-8181',		 # 'LS-7' # '' # 'F' # 
 		'DD96AE' : 'D-6089',		 # 'Ka-6 cr' # '89' # 'F' # 
 		'DD96AF' : 'D-0930',		 # 'Discus' # '' # 'F' # 
+		'DD96B0' : 'D-MPPH',		 # 'Ultralight' # '' # 'F' # 
 		'DD96B1' : 'D-5070',		 # 'Discus' # 'B2' # 'F' # 
-		'DD96B2' : 'D-5848',		 # 'LS-8 18' # 'RS' # 'F' # 
 		'DD96B3' : 'D-0404',		 # 'LS-4' # 'GP' # 'F' # 
 		'DD96B4' : 'OK-3758',		 # 'ASW-15' # 'TX' # 'F' # 
 		'DD96B5' : 'D-0410',		 # 'Libelle Std' # 'KJ' # 'F' # 
 		'DD96B8' : 'OE-9218',		 # 'H36 Dimona' # '18' # 'F' # 
-		'DD96C8' : 'HB-2182',		 # 'ASW-24' # '' # 'F' # 
+		'DD96C1' : 'D-2190',		 # 'ASK-13' # '' # 'F' # 
 		'DD96CD' : 'OK-7463',		 # 'Astir CS' # 'M1' # 'F' # 
 		'DD96D1' : 'D-KTBT',		 # 'Discus' # 'BT' # 'F' # 
 		'DD96D2' : 'NOREG',		 # 'Pilatus B4' # 'O38' # 'F' # 
@@ -9243,15 +9661,13 @@ kglid = {
 		'DD96E7' : 'D-MNDM',		 # 'Ikarus C42 B' # '' # 'F' # 
 		'DD96EA' : 'F-PNOG',		 # 'Towplane' # '' # 'F' # 
 		'DD96ED' : 'F-CKAN',		 # 'Janus B' # '3A' # 'F' # 
+		'DD96F6' : 'OK-3748',		 # 'DG-100' # 'CPS' # 'F' # 
 		'DD96FA' : 'D-0523',		 # 'Bergfalke IV' # 'K23' # 'F' # 
 		'DD96FD' : 'D-KUCI',		 # 'Ventus 2cxM' # 'CI' # 'F' # 
-		'DD9702' : 'G-CGBS',		 # 'DG-300' # '206' # 'F' # 
 		'DD9703' : 'F-CNKI',		 # 'Twin Astir II' # '7G' # 'F' # 
 		'DD9704' : 'D-6725',		 # 'ASW-19' # 'BW' # 'F' # 
 		'DD970A' : 'D-0401',		 # 'LS-4' # 'IST' # 'F' # 
 		'DD9710' : 'HB-3017',		 # 'SZD-51 Junior' # '' # 'F' # 
-		'DD9715' : 'OK-2882',		 # 'DG-200' # 'GL' # 'F' # 
-		'DD9716' : 'OE-5354',		 # 'DG-300' # '' # 'F' # 
 		'DD9719' : 'D-KBNG',		 # 'ASH-25' # 'NG' # 'F' # 
 		'DD971D' : 'OO-ZHH',		 # 'M-200 Foehn' # 'HH' # 'F' # 
 		'DD971F' : 'D-KACD',		 # 'SF-25' # 'CD' # 'F' # 
@@ -9266,6 +9682,7 @@ kglid = {
 		'DD973E' : 'OE-5534',		 # 'Discus' # 'SO' # 'F' # 
 		'DD9740' : 'ZU-KDP',		 # 'DG-808 B' # '' # 'F' # 
 		'DD9742' : 'OE-5493',		 # 'LS-7' # '3O' # 'F' # 
+		'DD9743' : 'D-KMRV',		 # 'Ventus 2cM' # 'RV' # 'F' # 
 		'DD9745' : 'D-ECOC',		 # 'Bellanca Citabria' # 'OC' # 'F' # 
 		'DD9747' : 'OK-0868',		 # 'ASW-15' # 'BF' # 'F' # 
 		'DD9748' : 'D-KCJJ',		 # 'HK36 Super Dimona' # 'JJ' # 'F' # 
@@ -9327,7 +9744,8 @@ kglid = {
 		'DD9827' : 'F-CGLT',		 # 'Ventus 2' # '1L' # 'F' # 
 		'DD9828' : 'F-CEAK',		 # 'ASK-13' # '' # 'F' # 
 		'DD9829' : 'F-CGZZ',		 # 'LS-8' # 'ZZ' # 'F' # 
-		'DD9831' : 'D-3188',		 # 'Ventus' # 'AW' # 'F' # 
+		'DD982A' : 'F-HPMO',		 # 'PA-25 Pawnee' # 'OLO' # 'F' # 
+		'DD9831' : 'NOREG',		 # '' # '' # 'F' # 
 		'DD9834' : 'F-HNZV',		 # 'PA-25 Pawnee' # 'ZV' # 'F' # 
 		'DD9838' : 'D-8943',		 # 'Hornet' # 'CT' # 'F' # 
 		'DD983A' : 'D-1174',		 # 'Discus' # 'Gi' # 'F' # 
@@ -9354,19 +9772,19 @@ kglid = {
 		'DD9872' : 'OE-5746',		 # 'SF-34' # '' # 'F' # 
 		'DD9875' : 'F-CEXN',		 # 'Astir CS-77' # 'R22' # 'F' # 
 		'DD9878' : 'AAFO',		 # 'OldTimer' # 'FO' # 'F' # 
-		'DD987A' : 'D-KFMD',		 # 'Discus 2cT' # 'MD' # 'F' # 
 		'DD9887' : 'D-6763',		 # 'Nimbus 2 C' # '' # 'F' # 
 		'DD9889' : 'D-1502',		 # 'Elfe S4' # 'JT' # 'F' # 
 		'DD988A' : 'D-7507',		 # 'ASK-13' # '' # 'F' # 
 		'DD988B' : 'D-MORB',		 # 'Ultralight' # 'RB' # 'F' # 
 		'DD988D' : 'D-4046',		 # 'LS-4' # 'E7' # 'F' # 
 		'DD988E' : 'SGSM_08',		 # 'LS-4' # '08' # 'F' # 
+		'DD988F' : 'D-5343',		 # 'Ka-8' # '43' # 'F' # 
 		'DD9892' : 'D-9918',		 # 'ASK-13' # '18' # 'F' # 
 		'DD9897' : 'OE-5680',		 # 'HPH 304CZ-17' # '' # 'F' # 
 		'DD989A' : 'D-1670',		 # 'ASK-13' # '' # 'F' # 
-		'DD98A5' : 'D-KIEZ',		 # 'SF-25' # '' # 'F' # 
+		'DD98A5' : 'D-KIEZ',		 # 'SF-25' # 'EFK' # 'F' # 
 		'DD98AA' : 'D-4002',		 # 'Ventus 2CX' # 'W0' # 'F' # 
-		'DD98AC' : 'D-4553',		 # 'LS-8 18' # 'TK' # 'F' # 
+		'DD98AC' : 'TEST',		 # 'Unknown' # '' # 'F' # 
 		'DD98AD' : 'NOREG',		 # 'ASK-21' # '36' # 'F' # 
 		'DD98B4' : 'D-0544',		 # 'Ventus 2' # 'DR' # 'F' # 
 		'DD98B6' : 'D-4593',		 # 'DG-300' # 'IG' # 'F' # 
@@ -9386,16 +9804,15 @@ kglid = {
 		'DD98DA' : 'F-COOL',		 # 'ASW-20' # 'SRA' # 'F' # 
 		'DD98E0' : 'F-CPJL',		 # 'Ventus 2cxT' # '3B' # 'F' # 
 		'DD98E2' : 'D-6901',		 # 'ASK-13' # '' # 'F' # 
-		'DD98E3' : 'F-CBPE',		 # 'Ventus 2' # 'FA' # 'F' # 
 		'DD98E4' : 'D-1807',		 # 'LS-1 f' # 'CG' # 'F' # 
 		'DD98E8' : 'D-KKLH',		 # 'Ventus cM' # 'LH' # 'F' # 
 		'DD98E9' : 'D-0298',		 # 'Discus' # 'WI' # 'F' # 
+		'DD98EA' : 'OK-2242',		 # 'LS-1 f' # 'LS' # 'F' # 
 		'DD98EB' : 'D-KFCP',		 # 'DG-400' # 'BW' # 'F' # 
 		'DD98EC' : 'OO-XYZ',		 # 'A60 Fauconnet' # 'MN' # 'F' # 
 		'DD98EE' : 'D-EODD',		 # 'MS-893 Commodore' # '' # 'F' # 
 		'DD98EF' : 'D-XXBA',		 # 'Discus 2' # 'BA' # 'F' # 
 		'DD98F1' : 'F-CXBD',		 # 'Duo Discus' # 'BD' # 'F' # 
-		'DD98F2' : 'D-9201',		 # 'Ka-6 cr' # '01' # 'F' # 
 		'DD98F9' : 'D-2744',		 # 'ASK-21' # '' # 'F' # 
 		'DD98FA' : 'PH',		 # 'Speed Astir II' # 'PH' # 'F' # 
 		'DD98FD' : 'D-5133',		 # 'ASK-21' # '' # 'F' # 
@@ -9421,7 +9838,7 @@ kglid = {
 		'DD9938' : 'ok_0674',		 # 'LS-1' # '' # 'F' # 
 		'DD993B' : 'D-0353',		 # 'LS-4' # 'G9' # 'F' # 
 		'DD993E' : 'D-4104',		 # 'LS-4' # 'MZ' # 'F' # 
-		'DD9941' : 'G-CFPD',		 # 'LS-7' # '973' # 'F' # 
+		'DD9941' : 'G-DEJY',		 # 'SZD-9 Bocian' # 'EJY' # 'F' # 
 		'DD9944' : 'D-2909',		 # 'ASG-29' # 'CZ' # 'F' # 
 		'DD9948' : 'D-4109',		 # 'Duo Discus' # '' # 'F' # 
 		'DD994B' : 'D-8392',		 # 'Ka-8' # '' # 'F' # 
@@ -9433,12 +9850,12 @@ kglid = {
 		'DD9957' : 'D-5119',		 # 'LS-4' # '' # 'F' # 
 		'DD995D' : 'D-0870',		 # 'ASW-15' # '2K' # 'F' # 
 		'DD9960' : 'OE-5667',		 # 'Blanik' # 'BLK' # 'F' # 
-		'DD9964' : 'D-KCMM',		 # 'Nimbus 3DM' # 'MM' # 'F' # 
+		'DD9964' : 'NOREG',		 # '' # '' # 'F' # 
 		'DD996A' : 'OE-5308',		 # 'LS-4' # 'L2' # 'F' # 
 		'DD996E' : 'NOREG',		 # '' # '' # 'F' # 
 		'DD9970' : 'HB-2464',		 # 'Unknown' # 'BIT' # 'F' # 
 		'DD9971' : 'D-0481',		 # 'Cirrus 18m' # '4U' # 'F' # 
-		'DD9972' : 'F-JETE',		 # 'Zodiac CH601XL' # 'TE' # 'F' # 
+		'DD9972' : 'F-CLRC',		 # 'ASH-25' # 'LRC' # 'F' # 
 		'DD9974' : 'F-CEFK',		 # 'Cirrus Std' # 'CFK' # 'F' # 
 		'DD9975' : 'F-CIPV',		 # 'ASK-21' # 'VS' # 'F' # 
 		'DD9976' : 'OO-ZTY',		 # 'Ka-7' # '' # 'F' # 
@@ -9463,13 +9880,13 @@ kglid = {
 		'DD99A1' : 'F-CEXR',		 # 'Astir CS' # 'XR' # 'F' # 
 		'DD99A2' : 'NOREG',		 # 'SZD-50 Puchacz' # 'F2' # 'F' # 
 		'DD99A7' : 'D-KIBC',		 # 'HK36 Super Dimona' # 'BC' # 'F' # 
-		'DD99A9' : 'D-KKLC',		 # 'ASG-29E' # 'LC' # 'F' # 
 		'DD99AF' : 'D-3537',		 # 'Discus' # 'F1' # 'F' # 
 		'DD99B0' : 'D-4714',		 # 'Ka-8' # '' # 'F' # 
 		'DD99B4' : 'F-CVBP',		 # 'LS-8 st 18' # '' # 'F' # 
-		'DD99B5' : 'D-0701',		 # 'Libelle Std' # 'PI' # 'F' # 
+		'DD99B5' : 'D-4153',		 # 'LS-6' # '4L' # 'F' # 
 		'DD99B6' : 'OY-XOS',		 # 'DG-300' # 'U3' # 'F' # 
 		'DD99B7' : 'D-7585',		 # 'Astir Jeans' # '' # 'F' # 
+		'DD99B8' : 'D-2890',		 # 'ASW-28' # 'XW' # 'F' # 
 		'DD99B9' : 'D-9303',		 # 'DG-303' # 'MV' # 'F' # 
 		'DD99BB' : 'OY-IGC',		 # 'Unknown' # 'DEM' # 'F' # 
 		'DD99BC' : 'D_8556',		 # 'Glasflugel 304' # 'XR' # 'F' # 
@@ -9517,7 +9934,7 @@ kglid = {
 		'DD9A24' : 'AKAMUC9',		 # 'Unknown' # 'AM9' # 'F' # 
 		'DD9A2B' : 'F-CGKF',		 # 'ASK-21' # '' # 'F' # 
 		'DD9A2C' : 'OO-YOU',		 # 'Astir Jeans' # 'OU' # 'F' # 
-		'DD9A2D' : 'HA-XXXX',		 # 'Different Aircraft' # 'WZS' # 'F' # 
+		'DD9A2D' : 'NOREG',		 # '' # '' # 'F' # 
 		'DD9A2F' : 'OE-5683',		 # 'DG-500' # 'A5' # 'F' # 
 		'DD9A32' : 'D-2694',		 # 'DG-100' # '94' # 'F' # 
 		'DD9A34' : 'D-3526',		 # 'LS-4' # '' # 'F' # 
@@ -9544,7 +9961,7 @@ kglid = {
 		'DD9A6A' : 'OO-ZPM',		 # 'LS-4' # 'PM' # 'F' # 
 		'DD9A6B' : 'F-CCJP',		 # 'ASK-13' # 'JP' # 'F' # 
 		'DD9A6C' : 'NOREG',		 # '' # '' # 'F' # 
-		'DD9A6F' : 'OY-XPB',		 # 'DG-600' # 'PB' # 'F' # 
+		'DD9A6F' : 'SP-4068',		 # 'DG-600' # 'AG' # 'F' # 
 		'DD9A70' : 'D-XXBK',		 # 'Discus' # 'BK' # 'F' # 
 		'DD9A71' : 'D-KODH',		 # 'Ventus 2cM' # '' # 'F' # 
 		'DD9A72' : 'D-KGPL',		 # 'Ventus 2cxT' # 'GPL' # 'F' # 
@@ -9572,7 +9989,6 @@ kglid = {
 		'DD9AAA' : 'D-8972',		 # 'LS-1 f' # 'TW' # 'F' # 
 		'DD9AAB' : 'NOREG',		 # 'Ventus' # 'DM' # 'F' # 
 		'DD9AAE' : 'D-KGSF',		 # 'Duo Discus t' # '7up' # 'F' # 
-		'DD9AAF' : 'SE-SKI',		 # 'Discus 2t' # 'IKI' # 'F' # 
 		'DD9AB1' : 'OO-ZTQ',		 # 'LS-4' # 'TQ' # 'F' # 
 		'DD9AB6' : 'D-5098',		 # 'Discus' # 'R4' # 'F' # 
 		'DD9AB7' : 'D-2594',		 # 'Discus' # 'S1' # 'F' # 
@@ -9580,7 +9996,8 @@ kglid = {
 		'DD9ABA' : 'F-CTJD',		 # 'Cirrus Std' # 'JD' # 'F' # 
 		'DD9ABD' : 'OE-5321',		 # 'LS-4' # '51' # 'F' # 
 		'DD9AC1' : 'OE-5390',		 # 'Discus' # '7' # 'F' # 
-		'DD9AC5' : 'SE-UOI',		 # 'DG-400' # '' # 'F' # 
+		'DD9AC4' : 'D-KNOW',		 # 'Grob G109' # '' # 'F' # 
+		'DD9AC5' : 'D-6239',		 # 'ASW-24' # '' # 'F' # 
 		'DD9AC7' : 'DM',		 # 'DG-400' # 'DM' # 'F' # 
 		'DD9AC8' : 'D-2711',		 # 'LS-4' # 'A1' # 'F' # 
 		'DD9AC9' : 'D-9667',		 # 'LS-3' # 'SO' # 'F' # 
@@ -9598,6 +10015,7 @@ kglid = {
 		'DD9B11' : 'D-9599',		 # 'Ventus 2' # 'SL' # 'F' # 
 		'DD9B16' : 'F-CEXT',		 # 'Astir CS-77' # 'R38' # 'F' # 
 		'DD9B18' : 'GP',		 # 'LS-3' # 'Pan' # 'F' # 
+		'DD9B1B' : 'D-KIPL',		 # 'Other' # 'PL' # 'F' # 
 		'DD9B1D' : 'D-KYHF',		 # 'Nimbus 4' # 'NT' # 'F' # 
 		'DD9B1E' : 'OO-YEJ',		 # 'Twin Astir II' # 'EJ' # 'F' # 
 		'DD9B1F' : 'NOREG',		 # 'Unknown' # '16' # 'F' # 
@@ -9613,11 +10031,11 @@ kglid = {
 		'DD9B31' : 'D-0081',		 # 'ASK-13' # '81' # 'F' # 
 		'DD9B32' : 'D-EFAC',		 # 'DR-400' # '' # 'F' # 
 		'DD9B34' : 'D-4040',		 # 'DG-500' # 'E5' # 'F' # 
-		'DD9B35' : 'D-1850',		 # 'ASK-21' # '' # 'F' # 
+		'DD9B35' : 'D-1850',		 # 'ASK-21' # '50' # 'F' # 
+		'DD9B36' : 'OK_5230',		 # 'Discus' # 'XE' # 'F' # 
 		'DD9B3A' : 'D-2495',		 # 'ASK-21' # 'WF' # 'F' # 
 		'DD9B3F' : 'D-0499',		 # 'ASK-13' # '99' # 'F' # 
 		'DD9B41' : 'D-2894',		 # 'LS-3' # '' # 'F' # 
-		'DD9B43' : 'DKLLA',		 # 'ASG-29E' # '2L' # 'F' # 
 		'DD9B44' : 'D-KBGS',		 # 'LS-8 18' # 'T2' # 'F' # 
 		'DD9B46' : 'D-EFCX',		 # 'PA-25 Pawnee' # 'AMH' # 'F' # 
 		'DD9B49' : 'D-1451',		 # 'Ventus' # 'YM' # 'F' # 
@@ -9683,6 +10101,7 @@ kglid = {
 		'DD9BDA' : 'D-KGAR',		 # 'SF-25' # '' # 'F' # 
 		'DD9BDB' : 'D-KBUR',		 # 'SF-25' # '' # 'F' # 
 		'DD9BDD' : 'D-0680',		 # 'ASK-21' # 'EH' # 'F' # 
+		'DD9BDE' : 'D-6142',		 # 'ASW-24' # '3S' # 'F' # 
 		'DD9BDF' : 'D-6185',		 # 'ASK-21' # 'FG' # 'F' # 
 		'DD9BE2' : 'F-CHAN',		 # 'ASK-21' # 'AN' # 'F' # 
 		'DD9BE5' : 'D-3394',		 # 'LS-7' # 'TU' # 'F' # 
@@ -9712,6 +10131,7 @@ kglid = {
 		'DD9C27' : 'D-6957',		 # 'Ka-8' # 'SGS' # 'F' # 
 		'DD9C29' : 'D-5628',		 # 'ASK-21' # '' # 'F' # 
 		'DD9C2D' : 'D-KDIE',		 # 'Ventus bT' # '59' # 'F' # 
+		'DD9C2E' : 'OE-9275',		 # 'AVo 68 Samburo' # 'EFS' # 'F' # 
 		'DD9C2F' : 'D-8377',		 # 'Discus' # '77' # 'F' # 
 		'DD9C32' : 'D-7448',		 # 'Astir CS' # '48' # 'F' # 
 		'DD9C34' : 'OK-5224',		 # 'ASW-20' # 'MK' # 'F' # 
@@ -9782,10 +10202,10 @@ kglid = {
 		'DD9CCE' : 'D-9940',		 # 'DG-1000' # 'CB' # 'F' # 
 		'DD9CD0' : 'F-CFDP',		 # 'Discus 2' # 'EH' # 'F' # 
 		'DD9CD4' : 'D7091',		 # 'Ventus 2bx' # '' # 'F' # 
-		'DD9CD6' : 'D-KEII',		 # 'Discus 2cT' # '' # 'F' # 
-		'DD9CD7' : 'D-3406',		 # 'LS-4' # '4M' # 'F' # 
+		'DD9CD6' : 'D-KEII',		 # 'Discus 2cT' # 'II' # 'F' # 
 		'DD9CD8' : 'D-KHHL',		 # 'Piccolo B' # '' # 'F' # 
 		'DD9CDA' : 'D-5081',		 # 'LS-6' # '' # 'F' # 
+		'DD9CDB' : 'F-BRKL',		 # 'MS-893 Commodore' # '' # 'F' # 
 		'DD9CDC' : 'DF',		 # 'Discus' # 'DF' # 'F' # 
 		'DD9CDD' : 'G-BMBJ',		 # 'Janus CM' # 'BJ' # 'F' # 
 		'DD9CDE' : 'F-JUSQ',		 # 'Ultralight' # 'SQ' # 'F' # 
@@ -9794,6 +10214,7 @@ kglid = {
 		'DD9CE1' : 'F-CGBD',		 # 'Pegase' # 'BS' # 'F' # 
 		'DD9CE2' : 'D-5331',		 # 'LS-7' # 'BM' # 'F' # 
 		'DD9CE3' : 'NOREG',		 # 'DG-400' # '' # 'F' # 
+		'DD9CE5' : 'OK-9752',		 # 'Astir CS' # 'LS' # 'F' # 
 		'DD9CE6' : 'D-6049',		 # 'LS-7' # 'TK' # 'F' # 
 		'DD9CE8' : 'D-1543',		 # 'Libelle Std' # '86' # 'F' # 
 		'DD9CE9' : 'D-1554',		 # 'Twin Astir II' # 'H3' # 'F' # 
@@ -9802,13 +10223,12 @@ kglid = {
 		'DD9CF6' : 'F-CGHQ',		 # 'Pegase' # 'D' # 'F' # 
 		'DD9CF7' : 'F-CJYS',		 # 'LAK 19' # 'YS' # 'F' # 
 		'DD9CFE' : 'D-2732',		 # 'LS-1 f' # 'LG' # 'F' # 
-		'DD9D01' : 'NOREG',		 # 'Twin Astir II' # '98' # 'F' # 
 		'DD9D05' : 'NOREG',		 # '' # '' # 'F' # 
 		'DD9D08' : 'D-KUFP',		 # 'HK36 Super Dimona' # '' # 'F' # 
 		'DD9D09' : 'LX-CPB',		 # 'ASW-20' # 'PB' # 'F' # 
 		'DD9D0F' : 'D-4514',		 # 'ASK-21' # 'B1' # 'F' # 
 		'DD9D10' : 'D-2966',		 # 'Duo Discus' # '66' # 'F' # 
-		'DD9D11' : 'D-KEEI',		 # 'Ventus 2ct' # '' # 'F' # 
+		'DD9D11' : 'D-KEEI',		 # 'Ventus 2ct' # 'EI' # 'F' # 
 		'DD9D15' : 'D-KROM',		 # 'Discus 2c' # 'RM' # 'F' # 
 		'DD9D16' : 'F-CDOO',		 # 'Phoebus' # 'OO' # 'F' # 
 		'DD9D1A' : 'F-CKJN',		 # 'Duo Discus' # 'LT' # 'F' # 
@@ -9816,7 +10236,7 @@ kglid = {
 		'DD9D1C' : 'F-CFRT',		 # 'Pegase' # 'RT' # 'F' # 
 		'DD9D1E' : 'D-KXDH',		 # 'DG-808 C' # 'DH' # 'F' # 
 		'DD9D24' : 'OE-5687',		 # 'Kestrel' # '87' # 'F' # 
-		'DD9D25' : 'D-4418',		 # 'Discus' # 'E4' # 'F' # 
+		'DD9D25' : 'D-4418',		 # 'Discus' # 'LB' # 'F' # 
 		'DD9D2D' : 'D-EFCL',		 # 'DR-400' # '' # 'F' # 
 		'DD9D2E' : 'F-CLHP',		 # 'Twin Astir II' # 'T41' # 'F' # 
 		'DD9D2F' : 'D-5246',		 # 'LS-4' # 'M4' # 'F' # 
@@ -9826,15 +10246,16 @@ kglid = {
 		'DD9D3B' : 'F-BTBC',		 # 'DR-300' # 'TBC' # 'F' # 
 		'DD9D3C' : 'F-CEIB',		 # 'LS-4' # 'SB' # 'F' # 
 		'DD9D3D' : 'F-CFKP',		 # 'Twin Astir II' # 'T66' # 'F' # 
-		'DD9D3E' : 'D-2595',		 # 'DG-100' # '9B' # 'F' # 
-		'DD9D5F' : 'HB-2042',		 # 'SF-28' # '' # 'F' # 
+		'DD9D5F' : 'HB-2045',		 # 'SF-28' # '' # 'F' # 
 		'DD9D9A' : 'D-7818',		 # 'Hornet' # 'XA' # 'F' # 
 		'DD9DA6' : 'D-4995',		 # 'Discus' # 'Z' # 'F' # 
 		'DD9DA8' : 'D-3797',		 # 'DG-200' # '97' # 'F' # 
 		'DD9DA9' : 'D-9312',		 # 'Ka-8' # '' # 'F' # 
+		'DD9DAB' : 'OK-1144',		 # 'ASW-15' # 'TT' # 'F' # 
 		'DD9DAC' : 'D-2965',		 # 'Cirrus Std' # '' # 'F' # 
 		'DD9DAE' : 'D-1083',		 # 'Ka-6 cr' # 'MJ' # 'F' # 
 		'DD9DB2' : 'F-CJUB',		 # 'Duo Discus' # 'EB' # 'F' # 
+		'DD9DB4' : 'D-3848',		 # 'ASW-19' # '' # 'F' # 
 		'DD9DB6' : 'OE-9148',		 # 'SF-25' # '48' # 'F' # 
 		'DD9DB9' : 'D-8043',		 # 'Ka-6 cr' # '43' # 'F' # 
 		'DD9DBA' : 'D-KDNO',		 # 'ASW-20' # 'NO' # 'F' # 
@@ -9843,7 +10264,6 @@ kglid = {
 		'DD9DBF' : 'OK-0880',		 # 'Ventus c' # 'MC' # 'F' # 
 		'DD9DC1' : 'OH-980',		 # 'LS-10' # 'TU' # 'F' # 
 		'DD9DC3' : 'D-7605',		 # 'Hornet' # 'PR' # 'F' # 
-		'DD9DC4' : 'D-KLMC',		 # 'DG-600' # 'MC' # 'F' # 
 		'DD9DC6' : 'D-KBBT',		 # 'Discus 2cT' # 'KT' # 'F' # 
 		'DD9DCB' : 'D-KSFW',		 # 'Duo Discus' # 'KK' # 'F' # 
 		'DD9DCC' : 'F-CMFJ',		 # 'Duo Discus' # '' # 'F' # 
@@ -9869,7 +10289,7 @@ kglid = {
 		'DD9E2D' : 'OE-7077',		 # 'WT9 Dynamic' # '77' # 'F' # 
 		'DD9E2E' : 'HA-4460',		 # 'SZD-48-3 Jantar Std 3' # '42' # 'F' # 
 		'DD9E2F' : 'LD',		 # 'ASK-13' # 'LD' # 'F' # 
-		'DD9E31' : 'D-5078',		 # 'Discus' # '' # 'F' # 
+		'DD9E31' : 'D-5078',		 # 'Discus' # '78' # 'F' # 
 		'DD9E36' : 'D-2402',		 # 'Kestrel' # '' # 'F' # 
 		'DD9E3B' : 'F-CLOT',		 # 'Astir CS' # '' # 'F' # 
 		'DD9E3D' : 'OK-7667',		 # 'ASW-20' # '67' # 'F' # 
@@ -9914,6 +10334,7 @@ kglid = {
 		'DD9EA7' : 'G-KEMJ',		 # 'Duo Discus t' # '2UP' # 'F' # 
 		'DD9EA8' : 'D-5034',		 # 'Discus' # '34' # 'F' # 
 		'DD9EA9' : 'D-6075',		 # 'ASW-24' # 'CB' # 'F' # 
+		'DD9EAD' : 'SP-4058',		 # 'Discus' # 'D3' # 'F' # 
 		'DD9EF2' : 'NOREG',		 # 'Ventus' # 'LA' # 'F' # 
 		'DD9EF3' : 'D-7476',		 # 'DG-1000' # 'CT' # 'F' # 
 		'DD9EF4' : '87',		 # 'LS-6' # 'CS' # 'F' # 
@@ -9923,6 +10344,7 @@ kglid = {
 		'DD9EF9' : 'F-CGMD',		 # 'Marianne' # 'MD' # 'F' # 
 		'DD9EFB' : 'D-KFAG',		 # 'SF-25' # '' # 'F' # 
 		'DD9EFE' : 'D-6251',		 # 'Libelle Club' # 'D' # 'F' # 
+		'DD9F05' : 'F-CEXP',		 # 'Astir CS-77' # 'R19' # 'F' # 
 		'DD9F06' : 'D-0741',		 # 'Discus 2' # 'NY' # 'F' # 
 		'DD9F0B' : 'OE-5668',		 # 'LS-4' # '' # 'F' # 
 		'DD9F10' : 'F-CEIC',		 # 'LS-4' # 'SC' # 'F' # 
@@ -9933,6 +10355,7 @@ kglid = {
 		'DD9F18' : 'OK-9664',		 # 'LS-3' # 'S20' # 'F' # 
 		'DD9F1A' : 'D-9177',		 # 'Bergfalke III' # '' # 'F' # 
 		'DD9F1C' : 'D-8097',		 # 'Twin Astir II' # '97' # 'F' # 
+		'DD9F1F' : 'D-6686',		 # 'LS-6' # 'AR' # 'F' # 
 		'DD9F26' : 'F-CEXA',		 # 'Astir CS' # 'XA' # 'F' # 
 		'DD9F27' : 'D-3523',		 # 'LS-3' # 'FS' # 'F' # 
 		'DD9F28' : 'HB-1701',		 # 'ASW-22' # 'HL' # 'F' # 
@@ -9949,12 +10372,12 @@ kglid = {
 		'DD9F39' : 'OE-5549',		 # 'Discus' # 'H2' # 'F' # 
 		'DD9F3B' : 'D-6126',		 # 'ASH-26 E' # '' # 'F' # 
 		'DD9F41' : 'OH-703',		 # 'ASK-23' # 'DAD' # 'O' # 
+		'DD9F42' : 'OK-0914',		 # 'ASW-15' # '' # 'F' # 
 		'DD9F48' : 'D-6202',		 # 'SZD-48-1 Jantar Std 2' # '' # 'F' # 
 		'DD9F4A' : 'D-0869',		 # 'Ka-8' # '69' # 'F' # 
 		'DD9F4B' : 'D-7558',		 # 'ASK-13' # '58' # 'F' # 
 		'DD9F4E' : 'D-2551',		 # 'LS-1 d' # 'MT' # 'F' # 
 		'DD9F51' : 'NOREG',		 # 'Ventus 2cxT' # 'K1' # 'F' # 
-		'DD9F52' : 'D-KEHK',		 # 'Antares 20 E' # 'HK' # 'F' # 
 		'DD9F56' : 'OY-EXD',		 # 'LS-4' # 'LE' # 'F' # 
 		'DD9F5C' : 'EC-KYA',		 # 'Duo Discus' # 'BY' # 'F' # 
 		'DD9F5D' : 'NOREG',		 # 'SZD-30 Pirat' # '73' # 'F' # 
@@ -10006,7 +10429,7 @@ kglid = {
 		'DD9FE2' : 'D-9576',		 # 'ASW-20' # 'MP' # 'F' # 
 		'DD9FE3' : 'D-5941',		 # 'Discus 2' # 'TY' # 'F' # 
 		'DD9FE8' : 'D-1909',		 # 'SZD-30 Pirat' # '' # 'F' # 
-		'DD9FED' : 'D-1111',		 # 'Ka-8' # '11' # 'F' # 
+		'DD9FED' : 'D-8252',		 # 'LS-4' # '' # 'F' # 
 		'DD9FEF' : 'D-7165',		 # 'Ka-6 cr' # '' # 'F' # 
 		'DD9FF1' : 'I-IVAE',		 # 'Twin Astir I' # 'IAE' # 'F' # 
 		'DD9FF2' : 'HB-3323',		 # 'Glasflugel 304' # 'G3' # 'F' # 
@@ -10021,6 +10444,7 @@ kglid = {
 		'DDA263' : 'D-4513',		 # 'ASK-21' # '2T' # 'F' # 
 		'DDA264' : 'PH-1302',		 # 'Ventus 2ct' # 'CB' # 'F' # 
 		'DDA266' : 'D-KEPG',		 # 'Antares 20 E' # 'PG' # 'F' # 
+		'DDA267' : 'BR',		 # 'DG-600' # 'BR' # 'F' # 
 		'DDA268' : 'D-7538',		 # 'Astir Jeans' # '' # 'F' # 
 		'DDA26B' : 'NOREG',		 # '' # '' # 'F' # 
 		'DDA26C' : 'D-7976',		 # 'ASW-20' # 'RW' # 'F' # 
@@ -10038,6 +10462,7 @@ kglid = {
 		'DDA285' : 'D-6105',		 # 'Std. Astir II' # '' # 'F' # 
 		'DDA286' : 'D-XXBF',		 # 'LS-4' # 'BF' # 'F' # 
 		'DDA289' : 'D-KHGK',		 # 'Discus 2t' # 'HGK' # 'F' # 
+		'DDA28B' : 'F-CMND',		 # 'ASK-13' # 'ND' # 'F' # 
 		'DDA291' : 'D-2926',		 # 'Duo Discus' # 'VZ' # 'F' # 
 		'DDA292' : 'D-EDVM',		 # 'Towplane' # '' # 'F' # 
 		'DDA293' : 'D-7167',		 # 'Discus' # 'B67' # 'F' # 
@@ -10051,7 +10476,7 @@ kglid = {
 		'DDA2A8' : 'D-5733',		 # 'DG-300' # '5T' # 'F' # 
 		'DDA2A9' : 'G-DDHK',		 # 'DG-100' # 'A30' # 'F' # 
 		'DDA2AA' : 'OM-0296',		 # 'ASW-24' # 'CK' # 'F' # 
-		'DDA2AD' : 'D-KKUB',		 # 'DG-800' # 'MB' # 'F' # 
+		'DDA2AD' : 'D-KKUB',		 # 'DG-800' # 'YH' # 'F' # 
 		'DDA2B2' : 'D-3682',		 # 'LS-6 18' # 'CA' # 'F' # 
 		'DDA2B3' : 'NOREG',		 # '' # '' # 'F' # 
 		'DDA2B5' : 'D-XXXX',		 # 'DG-300' # 'IWK' # 'F' # 
@@ -10095,7 +10520,7 @@ kglid = {
 		'DDA308' : 'F-CHBY',		 # 'ASK-21' # '' # 'F' # 
 		'DDA309' : 'D-KERF',		 # 'Nimbus 3' # 'RF' # 'F' # 
 		'DDA30B' : 'D-0914',		 # 'Libelle Std' # 'JF' # 'F' # 
-		'DDA30C' : 'D-KAIX',		 # 'Nimbus 4DM' # '4Y' # 'F' # 
+		'DDA30C' : 'NOREG',		 # '' # '' # 'F' # 
 		'DDA30D' : 'D-1497',		 # 'LS-4' # 'MI' # 'F' # 
 		'DDA310' : 'F-CLUI',		 # 'Janus C' # '' # 'F' # 
 		'DDA311' : 'D-4635',		 # 'SZD-50 Puchacz' # '' # 'F' # 
@@ -10113,7 +10538,6 @@ kglid = {
 		'DDA328' : 'D-4944',		 # 'Mistral C' # '44' # 'F' # 
 		'DDA32A' : 'NOREG',		 # '' # '' # 'F' # 
 		'DDA32D' : 'W02',		 # 'Other' # 'W02' # 'F' # 
-		'DDA32F' : 'D-9035',		 # 'Ka-8' # '' # 'F' # 
 		'DDA333' : 'D-0051',		 # 'Discus 2' # 'CA' # 'F' # 
 		'DDA336' : 'NOREG',		 # '' # '' # 'F' # 
 		'DDA338' : 'D-9700',		 # 'LS-6' # 'HI' # 'F' # 
@@ -10135,7 +10559,6 @@ kglid = {
 		'DDA371' : 'F-CECY',		 # 'ASK-13' # '' # 'F' # 
 		'DDA374' : 'D-7314',		 # 'Astir CS' # 'IZ' # 'F' # 
 		'DDA378' : 'D-8914',		 # 'LS-4' # 'AS' # 'F' # 
-		'DDA379' : 'PH-955',		 # 'LS-6' # 'M' # 'F' # 
 		'DDA37A' : 'D-8363',		 # 'Duo Discus' # 'H1' # 'F' # 
 		'DDA37D' : 'D-KNAU',		 # 'SF-25' # 'AU' # 'F' # 
 		'DDA37F' : 'D-5198',		 # 'Twin Astir III' # '3T' # 'F' # 
@@ -10192,7 +10615,6 @@ kglid = {
 		'DDA3E7' : 'D-7054',		 # 'ASK-21' # '21' # 'F' # 
 		'DDA3E9' : 'D-3227',		 # 'Ka-6 cr' # '27' # 'F' # 
 		'DDA3EA' : 'D-KCWE',		 # 'Discus t' # 'WE' # 'F' # 
-		'DDA3EB' : 'D-4390',		 # 'Discus 2' # 'MP' # 'F' # 
 		'DDA3EC' : 'D-4985',		 # 'Twin Astir III' # '85' # 'F' # 
 		'DDA3ED' : 'D-1545',		 # 'ASK-21' # '45' # 'F' # 
 		'DDA3EE' : 'D-XXTT',		 # 'LS-3' # 'TT' # 'F' # 
@@ -10212,6 +10634,7 @@ kglid = {
 		'DDA418' : 'D-4413',		 # 'Hornet' # '7J' # 'F' # 
 		'DDA419' : 'D-KDPI',		 # 'DG-400' # 'AM1' # 'F' # 
 		'DDA41E' : 'D-6505',		 # 'DG-505' # 'AY' # 'F' # 
+		'DDA41F' : 'NOREG',		 # '' # '' # 'F' # 
 		'DDA422' : 'D-4581',		 # 'DG-300' # 'TL' # 'F' # 
 		'DDA427' : 'OO-YFS',		 # 'LS-6' # '5Y' # 'F' # 
 		'DDA42A' : 'F-CGOU',		 # 'Pegase' # '' # 'F' # 
@@ -10253,7 +10676,6 @@ kglid = {
 		'DDA470' : 'OO-ZWU',		 # 'ASK-13' # 'WU' # 'F' # 
 		'DDA472' : 'NOREG',		 # 'LS-4' # 'A' # 'F' # 
 		'DDA473' : 'D-3135',		 # 'LS-1 f' # 'KK' # 'F' # 
-		'DDA474' : 'D-EEJB',		 # 'DR-400' # 'JB' # 'F' # 
 		'DDA476' : 'D-KSEF',		 # 'Duo Discus t' # 'EF' # 'F' # 
 		'DDA477' : 'D-KEEH',		 # 'SF-25' # 'EH' # 'F' # 
 		'DDA47E' : 'OK-1066',		 # 'DG-1000' # '66' # 'F' # 
@@ -10275,7 +10697,7 @@ kglid = {
 		'DDA49B' : 'D-1458',		 # 'Mini Nimbus' # 'MN' # 'F' # 
 		'DDA49D' : 'OKVKU93',		 # 'Banjo' # 'ZF' # 'F' # 
 		'DDA49E' : 'D-7093',		 # 'SZD-9 Bocian' # '' # 'F' # 
-		'DDA4A3' : 'D-KNAM',		 # 'SF-25' # '' # 'F' # 
+		'DDA4A3' : 'D-KNAM',		 # 'SF-27' # '' # 'F' # 
 		'DDA4A4' : 'D-3464',		 # 'ASK-21' # '' # 'F' # 
 		'DDA4A5' : 'D-6576',		 # 'LS-4' # 'S4' # 'F' # 
 		'DDA4A8' : 'D-KGHL',		 # 'DG-400' # '7' # 'F' # 
@@ -10322,7 +10744,7 @@ kglid = {
 		'DDA4F2' : 'D-7655',		 # 'ASW-19' # 'H3' # 'F' # 
 		'DDA4F9' : 'CC-AYH',		 # 'Stemme S-10' # 'YH' # 'F' # 
 		'DDA4FB' : 'D-EOMA',		 # 'DA20 Katana' # '' # 'F' # 
-		'DDA4FC' : 'D-2398',		 # 'SZD-48-3 Jantar Std 3' # '3RD' # 'F' # 
+		'DDA4FC' : 'SP-4042',		 # 'SZD-48-3 Jantar Std 3' # 'SB' # 'F' # 
 		'DDA4FD' : 'F-BSVV',		 # 'MS-893 Commodore' # 'VV' # 'F' # 
 		'DDA4FE' : 'D-KKVO',		 # 'Duo Discus t' # '' # 'F' # 
 		'DDA4FF' : 'F-GICU',		 # 'DR-400' # 'CU' # 'F' # 
@@ -10332,7 +10754,6 @@ kglid = {
 		'DDA516' : 'D-4974',		 # 'ASK-21' # '74' # 'F' # 
 		'DDA517' : 'D-9410',		 # 'DG-300' # 'AT' # 'F' # 
 		'DDA51A' : 'NOREG',		 # 'Nimbus 3DT' # '4Z' # 'F' # 
-		'DDA51C' : 'D-4177',		 # 'DG-303' # '' # 'F' # 
 		'DDA523' : 'F-CHEE',		 # 'Pegase' # 'BD' # 'F' # 
 		'DDA525' : 'D-6421',		 # 'Twin Astir III' # 'JW' # 'F' # 
 		'DDA526' : 'F-BXYS',		 # 'Socata Rallye 235CA-M' # 'YS' # 'F' # 
@@ -10340,7 +10761,7 @@ kglid = {
 		'DDA52A' : 'F-CPPM',		 # 'SF-28' # '' # 'F' # 
 		'DDA52B' : 'F-CHCB',		 # 'SF-25' # 'CB' # 'F' # 
 		'DDA52C' : 'D-EWET',		 # 'DR-400' # '' # 'F' # 
-		'DDA52D' : 'OO-ZWB',		 # 'Astir Jeans' # 'WB' # 'F' # 
+		'DDA52D' : 'OO-ZBW',		 # 'Ka-6 cr' # 'BW' # 'F' # 
 		'DDA530' : 'D-8604',		 # 'SZD-50 Puchacz' # '04' # 'F' # 
 		'DDA531' : 'D-KBPK',		 # 'HK36 Super Dimona' # 'PK' # 'F' # 
 		'DDA532' : 'OH-547',		 # 'ASK-21' # '' # 'F' # 
@@ -10367,7 +10788,6 @@ kglid = {
 		'DDA556' : 'D-KEMW',		 # 'ASH-26 E' # 'KR' # 'F' # 
 		'DDA559' : 'D-1576',		 # 'ASK-21' # 'EE' # 'F' # 
 		'DDA55A' : 'F-CGFH',		 # 'Pegase' # 'ZZ' # 'F' # 
-		'DDA55B' : 'F-CFCB',		 # 'Astir Jeans' # '' # 'F' # 
 		'DDA55C' : 'D-0877',		 # 'ASK-21' # '' # 'F' # 
 		'DDA55D' : 'D-4184',		 # 'LS-4' # 'BL' # 'F' # 
 		'DDA55E' : 'D-0243',		 # 'Libelle Std' # 'H9' # 'F' # 
@@ -10427,7 +10847,7 @@ kglid = {
 		'DDA5B6' : 'D-0936',		 # 'DG-800' # 'GH' # 'F' # 
 		'DDA5B7' : 'D-7870',		 # 'Discus' # 'GC' # 'F' # 
 		'DDA5B8' : 'F-PCBA',		 # 'Midour' # 'BA' # 'F' # 
-		'DDA5B9' : 'OLO-DN',		 # 'Janus C' # 'DN' # 'F' # 
+		'DDA5B9' : 'F-CIDN',		 # 'Janus C' # 'OLO' # 'F' # 
 		'DDA5BA' : 'X-SUFO',		 # 'Experimental' # 'MS' # 'F' # 
 		'DDA5BB' : 'F-CIMC',		 # 'ASK-21' # '' # 'F' # 
 		'DDA5BE' : 'D-8632',		 # 'ASW-20' # 'BAS' # 'F' # 
@@ -10473,7 +10893,7 @@ kglid = {
 		'DDA61A' : 'F-CHTU',		 # 'Duo Discus t' # 'TU' # 'F' # 
 		'DDA61B' : 'D-0506',		 # 'Cirrus 18m' # 'NP' # 'F' # 
 		'DDA61D' : 'OK-7171',		 # 'LAK-17 A' # 'ZZ' # 'F' # 
-		'DDA61E' : 'OLO-SG',		 # 'ASH-25' # 'SG' # 'F' # 
+		'DDA61E' : 'F-CISG',		 # 'ASH-25' # 'OLO' # 'F' # 
 		'DDA61F' : 'D-5556',		 # 'LS-8 18' # 'TX' # 'F' # 
 		'DDA620' : 'D-8627',		 # 'Ka-8' # '' # 'F' # 
 		'DDA621' : 'NOREG',		 # 'Unknown' # '' # 'F' # 
@@ -10565,6 +10985,7 @@ kglid = {
 		'DDA6D5' : 'D-6283',		 # 'Twin Astir III' # '' # 'F' # 
 		'DDA6D7' : 'F-CGBT',		 # 'Pegase' # 'EBT' # 'F' # 
 		'DDA6D9' : 'D-0989',		 # 'Ka-8' # '89' # 'F' # 
+		'DDA6DD' : 'D-1191',		 # 'Cirrus Std' # 'IHE' # 'F' # 
 		'DDA6DF' : 'G-BXSH',		 # 'DG-808 B' # 'SH' # 'F' # 
 		'DDA6E0' : 'D-5653',		 # 'LS-8' # 'AH' # 'F' # 
 		'DDA6E2' : 'D-6608',		 # 'SZD-50 Puchacz' # '' # 'F' # 
@@ -10709,7 +11130,7 @@ kglid = {
 		'DDA817' : 'D-KWWJ',		 # 'Discus 2t' # 'PJ' # 'F' # 
 		'DDA818' : 'D-5752',		 # 'ASK-21' # 'B52' # 'F' # 
 		'DDA81A' : 'D-6694',		 # 'Astir Jeans' # 'PH' # 'F' # 
-		'DDA81B' : 'D-KEDI',		 # 'DG-808 B' # 'DI' # 'F' # 
+		'DDA81B' : 'D-KEDI',		 # 'DG-800' # 'RF' # 'F' # 
 		'DDA81D' : 'D-3194',		 # 'Mini Nimbus' # 'CC' # 'F' # 
 		'DDA81F' : 'NOREG',		 # '' # '' # 'F' # 
 		'DDA820' : 'F-CHEI',		 # 'Pegase' # 'EI' # 'F' # 
@@ -10752,7 +11173,6 @@ kglid = {
 		'DDA867' : 'D-7474',		 # 'Ventus 2' # 'OG' # 'F' # 
 		'DDA869' : 'D-5180',		 # 'LS-4' # 'BH' # 'I' # 
 		'DDA86B' : 'D-7256',		 # 'Astir CS' # 'D5' # 'F' # 
-		'DDA86C' : 'OK-1974',		 # 'Cirrus Std' # 'LJ' # 'F' # 
 		'DDA86D' : 'BBX-01',		 # 'UFO' # '' # 'F' # 
 		'DDA86E' : 'D-5386',		 # 'DG-500' # '86' # 'F' # 
 		'DDA871' : 'HB-XYP',		 # 'MD 500' # 'RFU' # 'F' # 
@@ -10773,14 +11193,16 @@ kglid = {
 		'DDA8A3' : 'D-0538',		 # 'ASK-13' # '' # 'F' # 
 		'DDA8A4' : 'D-4682',		 # 'Discus' # 'MUS' # 'F' # 
 		'DDA8A8' : 'D-3693',		 # 'ASW-15' # 'I' # 'F' # 
+		'DDA8AC' : 'D-KOOU',		 # 'SF-25' # '' # 'F' # 
 		'DDA8B7' : 'D-KIIX',		 # 'Ventus ct' # 'IX' # 'F' # 
 		'DDA8B8' : 'PH1093',		 # 'Discus' # 'NJ' # 'F' # 
-		'DDA8B9' : 'PH-1326',		 # 'DG-300' # 'RF' # 'F' # 
+		'DDA8B9' : 'PH-1326',		 # 'DG-300' # 'BL' # 'F' # 
 		'DDA8BB' : 'G-DHHD',		 # 'SZD-51 Junior' # 'HHD' # 'F' # 
 		'DDA8BD' : 'D-8253',		 # 'ASW-20' # '7W' # 'F' # 
 		'DDA8C0' : 'HB-XXO',		 # 'Bell 206' # 'AHB' # 'F' # 
 		'DDA8C4' : 'NOREG',		 # 'ASK-13' # 'JJ' # 'F' # 
 		'DDA8CE' : 'D-1996',		 # 'Cirrus Std' # 'ML' # 'F' # 
+		'DDA8D1' : 'SP-4057',		 # 'LS-3' # 'AE' # 'F' # 
 		'DDA8D4' : 'PH-1383',		 # 'Astir CS' # 'TC2' # 'F' # 
 		'DDA8D9' : 'F-CKPB',		 # 'LAK-17 A' # 'PB' # 'F' # 
 		'DDA8DA' : 'F-CELO',		 # 'Mosquito' # '' # 'F' # 
@@ -10832,7 +11254,6 @@ kglid = {
 		'DDA93A' : 'G-CHPV',		 # 'ASK-21' # 'HPV' # 'F' # 
 		'DDA93B' : 'G-CHPW',		 # 'ASK-21' # 'HPW' # 'F' # 
 		'DDA940' : 'D-8515',		 # 'Discus' # 'ST' # 'F' # 
-		'DDA941' : 'OE-5126',		 # 'Astir CS-77' # '26' # 'F' # 
 		'DDA942' : 'D-3577',		 # 'LS-4' # 'F3' # 'F' # 
 		'DDA944' : 'D-7580',		 # 'Astir Jeans' # 'NY' # 'F' # 
 		'DDA945' : 'F-CZAR',		 # 'Astir Club' # '' # 'F' # 
@@ -10844,13 +11265,15 @@ kglid = {
 		'DDA94E' : 'D-MCKS',		 # 'Apis 2' # 'KS' # 'F' # 
 		'DDA950' : 'D-9429',		 # 'DG-100' # 'VO' # 'F' # 
 		'DDA951' : 'HB-2437',		 # 'Ventus 2cM' # 'MZ' # 'F' # 
+		'DDA952' : 'D-EGYH',		 # 'Rallye 180T-D' # '' # 'F' # 
 		'DDA955' : 'D2420',		 # 'Libelle Std' # '' # 'F' # 
 		'DDA95A' : 'NOREG',		 # '' # '' # 'F' # 
 		'DDA963' : 'HA-4031',		 # 'Ventus bT' # 'JN' # 'F' # 
 		'DDA965' : 'NOREG',		 # 'ASW-24' # '4E' # 'F' # 
+		'DDA967' : 'D-6583',		 # 'Discus' # 'L2' # 'F' # 
 		'DDA968' : 'D-1361',		 # 'ASK-13' # '61' # 'F' # 
 		'DDA969' : 'D-3967',		 # 'ASK-13' # '' # 'F' # 
-		'DDA96D' : 'D-4246',		 # 'LS-4' # 'IK' # 'F' # 
+		'DDA96D' : 'D-4246',		 # 'LS-4' # 'AT' # 'F' # 
 		'DDA96F' : 'D-6652',		 # 'LS-3' # 'FM' # 'F' # 
 		'DDA972' : 'D-KSPK',		 # 'SF-25' # 'PK' # 'F' # 
 		'DDA973' : 'D-KEXO',		 # 'H36 Dimona' # 'HXO' # 'F' # 
@@ -10874,7 +11297,7 @@ kglid = {
 		'DDA992' : 'F-CCAA',		 # 'Janus B' # 'AA' # 'F' # 
 		'DDA993' : 'F-CGZC',		 # 'LS-6 18WJ' # 'ZC' # 'F' # 
 		'DDA994' : 'D-9009',		 # 'Astir Club' # '09' # 'F' # 
-		'DDA995' : 'NOREG',		 # 'Kranich III' # 'SF3' # 'F' # 
+		'DDA995' : 'NOREG',		 # 'LS-6' # 'SF3' # 'F' # 
 		'DDA997' : 'D-KVCT',		 # 'Ventus ct' # 'VC' # 'F' # 
 		'DDA999' : 'OK_3945',		 # 'Twin Astir I' # 'KW' # 'F' # 
 		'DDA99C' : 'D-KBEJ',		 # 'ASH-26 E' # 'BV' # 'F' # 
@@ -10922,6 +11345,7 @@ kglid = {
 		'DDA9F9' : 'D-0032',		 # 'LS-8 18' # 'FU' # 'F' # 
 		'DDA9FC' : 'PH-794',		 # 'LS-4 W' # 'E10' # 'F' # 
 		'DDA9FD' : 'D-4860',		 # 'SZD-55' # 'RD' # 'F' # 
+		'DDA9FE' : 'D-EDDZ',		 # 'PZL-104 Wilga' # '' # 'F' # 
 		'DDAA02' : 'F-CGBH',		 # 'Pegase' # 'BH' # 'F' # 
 		'DDAA03' : 'G-DEWG',		 # 'Twin Astir II' # 'EWG' # 'F' # 
 		'DDAA09' : 'D-xxAZ',		 # 'SF-25' # 'AZ' # 'F' # 
@@ -11008,6 +11432,7 @@ kglid = {
 		'DDAAB7' : 'D-7227',		 # 'Astir CS' # 'CG' # 'F' # 
 		'DDAABD' : 'D-5821',		 # 'Ka-6 cr' # '16' # 'F' # 
 		'DDAAC1' : 'D-KHCB',		 # 'DG-505' # 'CB' # 'F' # 
+		'DDAAC2' : 'D-1481',		 # 'ASK-21' # 'IT' # 'F' # 
 		'DDAAC3' : 'OK-7724',		 # 'ASW-24' # 'SM' # 'F' # 
 		'DDAAC6' : 'D-2346',		 # 'ASW-15' # '' # 'F' # 
 		'DDAACC' : 'D-5903',		 # 'LS-4' # '' # 'F' # 
@@ -11032,11 +11457,12 @@ kglid = {
 		'DDAAF5' : 'D-8334',		 # 'Ka-8' # 'N2' # 'F' # 
 		'DDAAF7' : 'D-KEIV',		 # 'HK36 Super Dimona' # 'IV' # 'F' # 
 		'DDAAF8' : 'D-3201',		 # 'ASK-13' # '' # 'F' # 
+		'DDAAFB' : 'D-KLWH',		 # 'LS-8 st' # 'PB' # 'F' # 
 		'DDAB02' : 'D-5311',		 # 'ASK-13' # '11' # 'F' # 
 		'DDAB04' : 'D-7626',		 # 'Astir CS-77' # '' # 'F' # 
 		'DDAB06' : 'D-2647',		 # 'ASK-13' # '' # 'F' # 
 		'DDAB07' : 'EC-MZF',		 # 'Twin Astir II' # 'M9' # 'F' # 
-		'DDAB0B' : 'D-6546',		 # 'DG-200' # 'TL' # 'F' # 
+		'DDAB0B' : 'NOREG',		 # '' # '' # 'F' # 
 		'DDAB0D' : 'D-5427',		 # 'ASK-21' # 'FB' # 'F' # 
 		'DDAB0E' : 'D-9999',		 # 'Duo Discus' # 'MH' # 'F' # 
 		'DDAB11' : 'HB-ZHN',		 # 'HU 269' # 'RFU' # 'F' # 
@@ -11045,6 +11471,7 @@ kglid = {
 		'DDAB1E' : 'D-KGSG',		 # 'A380' # 'SG' # 'F' # 
 		'DDAB1F' : 'D-1731',		 # 'ASW-20' # 'AW' # 'F' # 
 		'DDAB24' : 'OK-5777',		 # 'Cirrus Std' # 'FF' # 'F' # 
+		'DDAB25' : 'D-6697',		 # 'PIK-20 D' # 'MA' # 'F' # 
 		'DDAB28' : 'D-0230',		 # 'Ka-6 e' # '' # 'F' # 
 		'DDAB2A' : 'D-0193',		 # 'DG-300' # '' # 'F' # 
 		'DDAB2C' : 'F-CGTH',		 # 'Marianne' # 'TH' # 'F' # 
@@ -11056,7 +11483,7 @@ kglid = {
 		'DDAB38' : 'D-1968',		 # 'Discus' # 'HF' # 'F' # 
 		'DDAB39' : 'D-0636',		 # 'ASW-15' # '' # 'F' # 
 		'DDAB3A' : 'D-9259',		 # 'LS-8a' # '59' # 'F' # 
-		'DDAB3C' : 'HA-4484',		 # 'SZD-48-1 Jantar Std 2' # 'MA' # 'F' # 
+		'DDAB3C' : 'D-7499',		 # 'Speed Astir II' # 'MY' # 'F' # 
 		'DDAB3D' : 'D-MAPE',		 # 'Unknown' # 'APE' # 'F' # 
 		'DDAB3E' : 'D-6124',		 # 'Ka-8' # '' # 'F' # 
 		'DDAB3F' : 'OK-0133',		 # 'Ventus c' # 'XE' # 'F' # 
@@ -11140,6 +11567,7 @@ kglid = {
 		'DDAC00' : 'RA',		 # 'SZD-48-3 Jantar Std 3' # 'SK' # 'F' # 
 		'DDAC01' : 'OE-0860',		 # 'Ka-6 e' # 'EF7' # 'F' # 
 		'DDAC02' : 'D-1402',		 # 'ASK-21' # '' # 'F' # 
+		'DDAC03' : 'Frankli',		 # 'Janus A' # '22' # 'F' # 
 		'DDAC06' : 'D-6879',		 # 'ASK-13' # '79' # 'F' # 
 		'DDAC09' : 'F-CHLM',		 # 'Pegase' # 'EO' # 'F' # 
 		'DDAC0A' : 'F-CHEL',		 # 'Pegase' # 'EL' # 'F' # 
@@ -11167,11 +11595,13 @@ kglid = {
 		'DDAC3D' : 'OE-0778',		 # 'Ka-8' # '' # 'F' # 
 		'DDAC3E' : 'D-4233',		 # 'SF-34' # 'DY' # 'F' # 
 		'DDAC42' : 'D-3239',		 # 'SZD-51 Junior' # 'F2' # 'F' # 
+		'DDAC43' : 'OE-5637',		 # 'LS-4' # '' # 'F' # 
 		'DDAC46' : 'D-5647',		 # 'DG-303' # 'DAN' # 'F' # 
 		'DDAC47' : 'D-KATF',		 # 'RF 5' # 'TF' # 'F' # 
 		'DDAC4D' : 'D-MUWH',		 # 'Ikarus C42 B' # '' # 'F' # 
 		'DDAC4E' : 'D4419',		 # 'Twin Astir III' # '19' # 'F' # 
 		'DDAC4F' : 'F-CHIG',		 # 'ASW-24' # '57' # 'F' # 
+		'DDAC50' : 'D-MXKS',		 # 'Apis 2' # '' # 'F' # 
 		'DDAC5E' : 'D-KSBD',		 # 'HK36 Super Dimona' # 'BD' # 'F' # 
 		'DDAC67' : 'G-CJJB',		 # 'LS-4 W' # '615' # 'F' # 
 		'DDAC68' : 'F-GEIL',		 # 'DR-400' # 'IL' # 'F' # 
@@ -11217,7 +11647,6 @@ kglid = {
 		'DDACB5' : 'D-6216',		 # 'LS-6 18' # '' # 'F' # 
 		'DDACB7' : 'F-CGKO',		 # 'ASW-24' # 'KO' # 'F' # 
 		'DDACB9' : 'HB-ZKT',		 # 'AS 350' # 'SWH' # 'F' # 
-		'DDACBB' : 'HB-ZNQ',		 # 'AS 350' # 'SWH' # 'F' # 
 		'DDACBC' : 'D-0441',		 # 'LS-4' # 'RC' # 'F' # 
 		'DDACBD' : 'D-0519',		 # 'LS-1 c' # 'BZ' # 'F' # 
 		'DDACC0' : 'NOREG',		 # '' # '' # 'F' # 
@@ -11254,8 +11683,9 @@ kglid = {
 		'DDAD1B' : 'D-1290',		 # 'LS-4' # 'AM' # 'F' # 
 		'DDAD1C' : 'OK-8717',		 # 'Speed Astir II' # 'M2' # 'F' # 
 		'DDAD1D' : 'D-5559',		 # 'ASW-20' # 'NN' # 'F' # 
-		'DDAD21' : 'D-3742',		 # 'SZD-50 Puchacz' # 'PU' # 'I' # 
-		'DDAD26' : 'D-3365',		 # 'Discus' # 'SH' # 'F' # 
+		'DDAD1F' : 'D-5487',		 # 'Ka-8' # '' # 'F' # 
+		'DDAD21' : 'D-3742',		 # 'SZD-50 Puchacz' # 'ACF' # 'I' # 
+		'DDAD26' : 'OK-5043',		 # 'DG-100' # '75' # 'F' # 
 		'DDAD28' : 'D-3365',		 # 'Discus' # 'SH' # 'F' # 
 		'DDAD29' : 'D-8318',		 # 'ASW-19' # '8C' # 'F' # 
 		'DDAD2A' : 'G-VCXT',		 # 'Ventus 2cxT' # 'HJ' # 'F' # 
@@ -11293,6 +11723,7 @@ kglid = {
 		'DDAD84' : 'D-1298',		 # 'LS-4' # '98' # 'F' # 
 		'DDAD86' : 'D-4305',		 # 'Twin Astir III' # '8N' # 'F' # 
 		'DDAD87' : 'OY-ENX',		 # 'Janus C' # 'T1' # 'F' # 
+		'DDAD8A' : 'D-ETSY',		 # 'Husky A-1' # '' # 'F' # 
 		'DDAD8C' : 'D-0171',		 # 'LS-4' # 'AX' # 'F' # 
 		'DDAD8E' : 'D-0492',		 # 'ASK-13' # '' # 'F' # 
 		'DDAD99' : 'D-5808',		 # 'LS-8' # '6J' # 'F' # 
@@ -11307,6 +11738,7 @@ kglid = {
 		'DDADA7' : 'G-CFVP',		 # 'Pegase' # 'FVP' # 'F' # 
 		'DDADAA' : 'PH-1308',		 # 'Ventus 2ct' # 'NU' # 'F' # 
 		'DDADB1' : 'D-2568',		 # 'LS-3' # 'MC3' # 'F' # 
+		'DDADB2' : 'D-9017',		 # 'LS-4' # '3M' # 'F' # 
 		'DDADB3' : 'D-XXBJ',		 # 'Ka-6 e' # 'BJ' # 'F' # 
 		'DDADB5' : 'D-4102',		 # 'DG-100' # 'LW' # 'F' # 
 		'DDADB8' : 'D-1004',		 # 'Discus' # '63' # 'F' # 
@@ -11326,6 +11758,7 @@ kglid = {
 		'DDADE5' : 'D-3311',		 # 'Discus 2' # 'AB' # 'F' # 
 		'DDADE9' : 'D-5722',		 # 'DG-100' # '22' # 'F' # 
 		'DDADEB' : 'G-HCAC',		 # 'Ka-6 e' # '994' # 'F' # 
+		'DDADED' : 'D-KRRK',		 # 'Motorglider' # 'Rep' # 'F' # 
 		'DDADF0' : 'D-KBTM',		 # 'DG-808 C' # 'TM' # 'F' # 
 		'DDADF1' : 'D-1895',		 # 'SZD-30 Pirat' # '' # 'F' # 
 		'DDADF2' : 'NOREG',		 # 'Mistral C' # '17' # 'F' # 
@@ -11377,7 +11810,6 @@ kglid = {
 		'DDAE77' : 'D-KTIM',		 # 'SF-25' # 'IM' # 'F' # 
 		'DDAE79' : 'D-7515',		 # 'Discus 2c' # 'HY' # 'F' # 
 		'DDAE7B' : 'OK-9918',		 # 'Nimbus 2' # 'MR' # 'F' # 
-		'DDAE7C' : 'D-KIKW',		 # 'Discus t' # 'RU' # 'F' # 
 		'DDAE7D' : 'D-269x',		 # 'LS-4 W' # 'L4' # 'F' # 
 		'DDAE85' : 'HB-2339',		 # 'Nimbus 4DM' # 'WB' # 'F' # 
 		'DDAE86' : 'D-2389',		 # 'LS-6' # 'Z' # 'F' # 
@@ -11410,7 +11842,7 @@ kglid = {
 		'DDAED1' : 'D-3916',		 # 'LS-3' # '6R' # 'F' # 
 		'DDAED2' : 'OO-FUS',		 # 'Cessna 208' # '' # 'F' # 
 		'DDAEDA' : 'HA-4412',		 # 'PIK-20 D' # 'T7' # 'F' # 
-		'DDAEDC' : 'F-GBAK',		 # 'DR-400' # 'AK' # 'F' # 
+		'DDAEDC' : 'F-GEIO',		 # 'DR-400' # 'IO' # 'F' # 
 		'DDAEDE' : 'F-CGHF',		 # 'Pegase' # 'E9' # 'F' # 
 		'DDAEDF' : 'F-CLOE',		 # 'ASK-23' # '' # 'F' # 
 		'DDAEE2' : 'F-CGPS',		 # 'Cirrus' # '19' # 'F' # 
@@ -11452,6 +11884,7 @@ kglid = {
 		'DDAF34' : 'F-CGET',		 # 'Pegase' # 'ET' # 'F' # 
 		'DDAF35' : 'F-CFMF',		 # 'Astir Club' # 'R66' # 'F' # 
 		'DDAF38' : 'F-GAPL',		 # 'PA-25 Pawnee' # 'PL' # 'F' # 
+		'DDAF39' : 'D-7872',		 # 'LS-3' # 'FR' # 'F' # 
 		'DDAF3A' : 'D-1247',		 # 'LS-4' # 'MB' # 'F' # 
 		'DDAF3B' : 'D-KCWB',		 # 'DG-400' # 'WB' # 'F' # 
 		'DDAF3D' : 'D-8106',		 # 'Nimbus 2' # 'BC' # 'F' # 
@@ -11465,7 +11898,6 @@ kglid = {
 		'DDAF4F' : 'F-CJBG',		 # 'Alliance 34' # 'BG' # 'F' # 
 		'DDAF50' : 'OK-7504',		 # 'VSO-10' # '' # 'F' # 
 		'DDAF51' : 'D-KBEW',		 # 'Discus t' # '1T' # 'F' # 
-		'DDAF52' : 'SE-UXC',		 # 'LS-7' # 'FK' # 'F' # 
 		'DDAF55' : 'F-CJHA',		 # 'Astir CS' # 'HA' # 'F' # 
 		'DDAF56' : 'D-1810',		 # 'Discus 2' # 'K' # 'F' # 
 		'DDAF5A' : 'D-KOSR',		 # 'Ventus bT' # 'MM' # 'F' # 
@@ -11523,7 +11955,7 @@ kglid = {
 		'DDAFE2' : 'D-2515',		 # 'LS-4' # '' # 'F' # 
 		'DDAFE4' : 'D-MZOB',		 # 'Silent-IN' # 'OB' # 'F' # 
 		'DDAFE5' : 'DDAFE5',		 # 'LS-4' # '' # 'F' # 
-		'DDAFE6' : 'D-KBVH',		 # 'Discus t' # 'VH' # 'F' # 
+		'DDAFE6' : 'NOREG',		 # '' # '' # 'F' # 
 		'DDAFE7' : 'OO-FFB',		 # 'Cessna 208' # '' # 'F' # 
 		'DDAFE8' : 'D-1593',		 # 'LS-4' # '' # 'F' # 
 		'DDAFE9' : 'D-4103',		 # 'LS-4 W' # 'FU' # 'F' # 
@@ -11595,7 +12027,6 @@ kglid = {
 		'DDB09A' : 'D-6585',		 # 'LS-4' # 'CR' # 'F' # 
 		'DDB09C' : 'D-2708',		 # 'DG-300' # 'D4' # 'F' # 
 		'DDB09E' : 'D-3130',		 # 'LS-1 f' # 'GC' # 'F' # 
-		'DDB0A1' : 'D-KSTL',		 # 'EB 28' # 'TL' # 'F' # 
 		'DDB0A2' : 'F-CGBC',		 # 'Pegase' # 'BC' # 'F' # 
 		'DDB0A5' : 'D-4962',		 # 'Mistral' # 'FS' # 'F' # 
 		'DDB0A7' : 'D-6234',		 # 'ASK-21' # 'AK' # 'F' # 
@@ -11723,7 +12154,6 @@ kglid = {
 		'DDB1CC' : 'F-CFRF',		 # 'Pegase' # '09' # 'F' # 
 		'DDB1CD' : 'OK-1743',		 # 'DG-100' # 'IL' # 'F' # 
 		'DDB1D1' : 'D-KFLL',		 # 'Duo Discus t' # '' # 'F' # 
-		'DDB1D3' : 'HB-2464',		 # 'Discus 2cT' # 'GZ' # 'F' # 
 		'DDB1D4' : 'D-KCEE',		 # 'Ventus cM' # '' # 'F' # 
 		'DDB1D6' : 'F-CHEX',		 # 'Pegase' # '' # 'F' # 
 		'DDB1D7' : 'F-CGGE',		 # 'Discus' # '' # 'F' # 
@@ -11744,12 +12174,13 @@ kglid = {
 		'DDB1FA' : 'D-4075',		 # 'Ka-6 e' # '75' # 'F' # 
 		'DDB1FC' : 'D-1154',		 # 'ASK-21' # '' # 'F' # 
 		'DDB1FD' : 'D-KDLQ',		 # 'Duo Discus xlt' # 'GB1' # 'F' # 
-		'DDB200' : 'F-BRKL',		 # 'MS-893 Commodore' # '' # 'F' # 
+		'DDB201' : 'D-KNJA',		 # 'Piccolo B' # 'JA' # 'F' # 
 		'DDB206' : 'D-0536',		 # 'PIK-20 D' # 'NK' # 'F' # 
 		'DDB20C' : 'D-1842',		 # 'LS-4' # 'RN' # 'F' # 
 		'DDB20D' : 'D-7161',		 # 'DG-100' # '61' # 'F' # 
-		'DDB215' : 'D-9220',		 # 'ASK-13' # '20' # 'F' # 
+		'DDB215' : 'NOREG',		 # '' # '' # 'F' # 
 		'DDB216' : 'D-6454',		 # 'Ka-8' # '' # 'F' # 
+		'DDB217' : 'OK-0783',		 # 'Cirrus Std' # 'A7' # 'F' # 
 		'DDB219' : 'D-8039',		 # 'SZD-9 Bocian' # '' # 'F' # 
 		'DDB21C' : 'D-3888',		 # 'Astir Jeans' # '88' # 'F' # 
 		'DDB221' : 'D-1680',		 # 'Discus' # 'SW' # 'F' # 
@@ -11818,7 +12249,7 @@ kglid = {
 		'DDB2BB' : 'OE-5638',		 # 'PW-5' # '' # 'F' # 
 		'DDB2BC' : 'F-CFAL',		 # 'Janus C' # 'FAL' # 'F' # 
 		'DDB2BE' : 'OK_0369',		 # 'Ventus bT' # 'SK' # 'F' # 
-		'DDB2BF' : 'OK-6610',		 # 'SZD-36 Cobra 15' # '10' # 'F' # 
+		'DDB2BF' : 'OK-7530',		 # 'VSO-10' # '59' # 'F' # 
 		'DDB2C3' : 'DELTP',		 # 'Aquila A210' # 'TP' # 'F' # 
 		'DDB2C7' : 'D-0817',		 # 'LS-1 c' # 'XY' # 'F' # 
 		'DDB2CA' : 'D-2098',		 # 'Libelle Club' # 'TM' # 'F' # 
@@ -11834,6 +12265,7 @@ kglid = {
 		'DDB33D' : 'VH-GXH',		 # 'Libelle Std' # '' # 'F' # 
 		'DDB33E' : 'VH-GGU',		 # 'Libelle Std' # '' # 'F' # 
 		'DDB341' : 'IIU',		 # 'A380' # 'IIU' # 'F' # 
+		'DDB344' : 'ZBK',		 # 'Discus' # 'BK' # 'F' # 
 		'DDB34B' : 'VH-YBE',		 # 'ASH-25 EB' # '' # 'F' # 
 		'DDB34D' : 'VH-IUO',		 # 'Discus 2c' # 'IUO' # 'F' # 
 		'DDB350' : 'VH-GCJ',		 # 'Libelle Std' # 'CJ' # 'F' # 
@@ -11845,7 +12277,7 @@ kglid = {
 		'DDB375' : 'OE-0922',		 # 'Libelle Std' # '22' # 'F' # 
 		'DDB376' : 'VH-CUR',		 # 'PA-25 Pawnee' # '' # 'F' # 
 		'DDB384' : 'MLR',		 # 'PA-25 Pawnee' # '' # 'F' # 
-		'DDB386' : 'FFO',		 # 'Grob G109' # 'FFO' # 'F' # 
+		'DDB386' : 'GwZ',		 # 'Janus A' # 'WZ' # 'F' # 
 		'DDB393' : 'VH-NSO',		 # 'Discus 2' # 'NSO' # 'F' # 
 		'DDB397' : 'GAY',		 # 'PIK-20 B' # '' # 'F' # 
 		'DDB399' : 'VH-GKR',		 # 'Different Aircraft' # '' # 'F' # 
@@ -11908,7 +12340,7 @@ kglid = {
 		'DDB499' : 'GJH',		 # 'Libelle Club' # 'JH' # 'F' # 
 		'DDB49E' : 'VH-IZI',		 # 'Janus B' # 'IZI' # 'F' # 
 		'DDB49F' : 'VH-GHF',		 # 'Astir CS' # 'GHF' # 'F' # 
-		'DDB4A6' : 'GOR',		 # 'Cirrus Std' # '' # 'F' # 
+		'DDB4A6' : 'VH__GOR',		 # 'Cirrus Std' # '' # 'F' # 
 		'DDB4A7' : 'VH-IIK',		 # 'Ventus 2ct' # '11' # 'F' # 
 		'DDB4A8' : 'VH-GOW',		 # 'Cirrus Std' # '' # 'F' # 
 		'DDB4A9' : 'VH-GWK',		 # 'PIK-20 B' # 'WK' # 'F' # 
@@ -11939,7 +12371,7 @@ kglid = {
 		'DDB5E3' : 'VH-PII',		 # 'Pegase' # 'KO' # 'F' # 
 		'DDB603' : 'D-xxx',		 # 'SZD-9 Bocian' # '' # 'F' # 
 		'DDB630' : 'D-2944',		 # 'LS-8' # 'AR' # 'F' # 
-		'DDB66E' : 'OO-ZTS',		 # 'Ka-6 e' # 'RM' # 'F' # 
+		'DDB66E' : 'D-0900',		 # 'Ka-2' # 'K2' # 'F' # 
 		'DDB6B3' : 'VH-CPU',		 # 'PA-25 Pawnee' # 'CPU' # 'F' # 
 		'DDB6B4' : 'VH-HDP',		 # 'SZD-51 Junior' # 'HDP' # 'F' # 
 		'DDB6BA' : 'VH-GIQ',		 # 'ASK-13' # 'GIQ' # 'F' # 
@@ -11980,7 +12412,6 @@ kglid = {
 		'DDBAAB' : 'G-UCLU',		 # 'ASK-21' # 'EDW' # 'F' # 
 		'DDBAAE' : 'OY-TNX',		 # 'LS-8' # 'X' # 'F' # 
 		'DDBAB0' : 'D-2564',		 # 'LS-3' # 'FV' # 'F' # 
-		'DDBAB1' : 'D-0605',		 # 'DG-505' # '' # 'F' # 
 		'DDBAB7' : 'D-KBFM',		 # 'Duo Discus xt' # 'FM' # 'F' # 
 		'DDBABF' : 'NOREG',		 # 'ASW-15' # 'ZZ' # 'F' # 
 		'DDBAC2' : 'D-2917',		 # 'Std. Astir II' # 'HL' # 'F' # 
@@ -11991,8 +12422,7 @@ kglid = {
 		'DDBACE' : 'D-KCPF',		 # 'DG-500' # '' # 'F' # 
 		'DDBAD0' : 'OO-YBG',		 # 'Duo Discus t' # 'BG' # 'F' # 
 		'DDBAD1' : 'D-3752',		 # 'ASW-15' # '' # 'F' # 
-		'DDBAD2' : 'D-1922',		 # 'LS-8 18' # 'YI' # 'F' # 
-		'DDBAD3' : 'D-6041',		 # 'LS-4' # 'H2' # 'F' # 
+		'DDBAD2' : 'NOREG',		 # 'Twin Astir II' # '98' # 'F' # 
 		'DDBAD4' : 'D-0282',		 # 'DG-500' # 'RC' # 'F' # 
 		'DDBAD6' : 'OE-5616',		 # 'LS-8' # 'ZI' # 'F' # 
 		'DDBAD7' : 'DKKFC',		 # 'Discus 2cT' # '4E' # 'F' # 
@@ -12005,7 +12435,6 @@ kglid = {
 		'DDBAEA' : 'OY-XZT',		 # 'Discus' # 'ZT' # 'F' # 
 		'DDBAF1' : 'G-CLME',		 # 'Ventus 2ct' # 'LME' # 'F' # 
 		'DDBAF4' : 'SE-SKF',		 # 'Twin Astir III' # '92' # 'F' # 
-		'DDBAFF' : 'D-KNHC',		 # 'Ventus 2cxM' # 'HC' # 'F' # 
 		'DDBB01' : 'D-6349',		 # 'Discus 2' # '' # 'F' # 
 		'DDBB04' : 'D-0355',		 # 'Libelle Std' # '2S' # 'F' # 
 		'DDBB09' : 'F-CFNZ',		 # 'LS-8 18' # 'MNZ' # 'F' # 
@@ -12022,6 +12451,7 @@ kglid = {
 		'DDBB27' : 'D-7940',		 # 'LS-8' # 'R1' # 'F' # 
 		'DDBB28' : 'D-1340',		 # 'LS-6' # 'DF' # 'F' # 
 		'DDBB2B' : 'D-3904',		 # 'DG-505' # '2D' # 'F' # 
+		'DDBB2C' : 'F-CJAC',		 # 'Nimbus 4D' # '' # 'F' # 
 		'DDBB31' : 'OK_2530',		 # 'Ventus c' # 'VV' # 'F' # 
 		'DDBB33' : 'I-FGTM',		 # 'LS-4' # 'TM' # 'F' # 
 		'DDBB34' : 'IIFW',		 # 'DG-600' # 'WII' # 'F' # 
@@ -12035,7 +12465,7 @@ kglid = {
 		'DDBB6B' : 'D-KIST',		 # 'DG-1000 T' # 'W4' # 'F' # 
 		'DDBB6E' : 'HB-3412',		 # 'ASG-29' # 'MD' # 'F' # 
 		'DDBB82' : 'HB-2409',		 # 'ASW-28t' # 'BS' # 'F' # 
-		'DDBB84' : 'SE-SMZ',		 # 'LS-8 st' # 'Z' # 'F' # 
+		'DDBB86' : 'G-CHDE',		 # 'Pilatus B4' # '' # 'F' # 
 		'DDBB87' : 'OO-YBR',		 # 'Ventus ct' # 'FU' # 'F' # 
 		'DDBB88' : 'D-KPML',		 # 'DG-400' # 'ML' # 'F' # 
 		'DDBB8F' : 'D-KKVL',		 # 'Ventus 2cxT' # 'VL' # 'F' # 
@@ -12046,8 +12476,7 @@ kglid = {
 		'DDBB98' : 'IG01',		 # 'Other' # 'IG' # 'O' # 
 		'DDBB9B' : 'D-7828',		 # 'LS-4' # '5J' # 'F' # 
 		'DDBB9D' : 'W07',		 # 'Other' # 'W07' # 'F' # 
-		'DDBB9F' : 'D-7682',		 # 'Mosquito' # 'AW' # 'F' # 
-		'DDBBA5' : 'F-CVVS',		 # 'LS-8 18' # '8Z' # 'F' # 
+		'DDBBA5' : 'D-2669',		 # 'LS-4' # '74' # 'F' # 
 		'DDBBA7' : 'G-saoc',		 # 'Discus 2cT' # 'R6' # 'F' # 
 		'DDBBAE' : 'D-KHFW',		 # 'Discus 2cT' # 'H2' # 'F' # 
 		'DDBBAF' : 'ORVILLE',		 # 'DG-808 C' # '' # 'F' # 
@@ -12073,7 +12502,6 @@ kglid = {
 		'DDBBD6' : 'G-PHNX',		 # 'Duo Discus xt' # '72' # 'F' # 
 		'DDBBD7' : 'G-CKPG',		 # 'Discus 2cT' # 'KPG' # 'F' # 
 		'DDBBDA' : 'ZS-GKP',		 # 'Nimbus 4DM' # 'PK' # 'F' # 
-		'DDBBDB' : 'D-2492',		 # 'ASK-21' # 'S1' # 'F' # 
 		'DDBBDE' : 'D-7636',		 # 'ASK-21' # '' # 'F' # 
 		'DDBBDF' : 'D-KULT',		 # 'DG-808 B' # 'LT' # 'F' # 
 		'DDBBE1' : 'G-CHZZ',		 # 'ASW-20' # 'LD' # 'F' # 
@@ -12106,6 +12534,7 @@ kglid = {
 		'DDBC24' : 'G-RBCT',		 # 'Ventus 2ct' # 'RB' # 'F' # 
 		'DDBC28' : 'G-cjyu',		 # 'Ventus 2ct' # 'R11' # 'F' # 
 		'DDBC2A' : 'PH-1028',		 # 'LS-4' # 'D3' # 'F' # 
+		'DDBC2B' : 'D-KPHJ',		 # 'Nimbus 3DM' # '' # 'F' # 
 		'DDBC2F' : 'D-KONI',		 # 'ASH-25' # '8x' # 'F' # 
 		'DDBC30' : 'G-CKOO',		 # 'ASG-29E' # '7' # 'F' # 
 		'DDBC33' : 'D-4990',		 # 'Mini Nimbus' # 'VV' # 'F' # 
@@ -12113,14 +12542,15 @@ kglid = {
 		'DDBC3A' : 'OY-XPS',		 # 'DG-400' # 'PS' # 'F' # 
 		'DDBC3D' : 'D-KEHD',		 # 'HPH 304S Shark' # 'HD' # 'F' # 
 		'DDBC3F' : 'OH-976',		 # 'LS-8 st 18' # 'LK' # 'F' # 
-		'DDBC41' : 'D-3155',		 # 'ASW-20' # '3HT' # 'F' # 
 		'DDBC42' : 'G-RYPE',		 # 'DG-1000 T' # 'E6' # 'F' # 
 		'DDBC47' : 'D-5104',		 # 'LS-4' # '04' # 'F' # 
+		'DDBC48' : 'SE-UTS',		 # 'DG-1000' # 'TS' # 'F' # 
 		'DDBC4A' : 'D-KDOS',		 # 'Discus t' # 'GB' # 'F' # 
 		'DDBC54' : 'NOREG',		 # '' # '' # 'F' # 
 		'DDBC55' : 'D-7459',		 # 'ASK-21' # 'WK' # 'F' # 
 		'DDBC60' : 'OK-0456',		 # 'Ventus ct' # 'AW' # 'F' # 
 		'DDBC62' : 'G-DERS',		 # 'ASW-19' # '319' # 'F' # 
+		'DDBC63' : 'S5-3048',		 # 'Astir CS' # 'KA' # 'F' # 
 		'DDBC64' : 'D-7839',		 # 'ASW-19' # '1V' # 'F' # 
 		'DDBC65' : 'D-KYBB',		 # 'Ventus 2cxT' # '2B' # 'F' # 
 		'DDBC66' : 'D-1739',		 # 'DG-300' # 'HF2' # 'F' # 
@@ -12129,14 +12559,13 @@ kglid = {
 		'DDBC6B' : 'F-CIDL',		 # 'Duo Discus' # 'DL' # 'F' # 
 		'DDBC6D' : 'PH-1403',		 # 'Duo Discus xlt' # '49' # 'F' # 
 		'DDBC6E' : 'OO-YEZ',		 # 'PIK-20 D' # 'EZ' # 'F' # 
-		'DDBC6F' : 'OY-XNE',		 # 'LS-4' # 'NE' # 'F' # 
 		'DDBC70' : 'G-CKPE',		 # 'Duo Discus' # 'KPE' # 'F' # 
 		'DDBC75' : 'D-KBDB',		 # 'DG-600' # 'DB' # 'F' # 
 		'DDBC76' : 'D-6161',		 # 'Discus' # 'SH' # 'F' # 
 		'DDBC79' : 'F-CGCE',		 # 'ASH-25' # 'CE' # 'F' # 
 		'DDBC83' : 'D-KGFF',		 # 'Nimbus 3DT' # '' # 'F' # 
 		'DDBC88' : 'D-4240',		 # 'Discus' # 'M3' # 'F' # 
-		'DDBC8B' : 'D-3595',		 # 'ASW-20' # 'EF' # 'F' # 
+		'DDBC8B' : 'NOREG',		 # '' # '' # 'F' # 
 		'DDBC90' : 'D-9788',		 # 'DG-600' # 'CM' # 'F' # 
 		'DDBC91' : 'ACH',		 # 'UFO' # 'LX' # 'F' # 
 		'DDBC93' : 'NOREG',		 # 'Taurus' # 'MM' # 'F' # 
@@ -12191,7 +12620,7 @@ kglid = {
 		'DDBD27' : 'D-KGIU',		 # 'DG-1000 T' # 'GIU' # 'F' # 
 		'DDBD29' : 'G-CKPM',		 # 'LS-8 st 18' # '8T' # 'F' # 
 		'DDBD2A' : 'D-1931',		 # 'Discus' # '' # 'F' # 
-		'DDBD33' : 'D-9596',		 # 'Discus 2' # '8A' # 'F' # 
+		'DDBD33' : 'D-6987',		 # 'ASK-23' # 'CH' # 'F' # 
 		'DDBD35' : 'D-7269',		 # 'Discus' # 'MH' # 'F' # 
 		'DDBD36' : 'D-xx31',		 # 'LS-8 18' # '8V' # 'F' # 
 		'DDBD38' : 'G-DKEN',		 # 'LS-4' # 'KEN' # 'F' # 
@@ -12206,6 +12635,7 @@ kglid = {
 		'DDBD54' : 'G-CKSY',		 # 'LS-7' # 'SY' # 'F' # 
 		'DDBD56' : 'D-5641',		 # 'Discus 2' # '41' # 'F' # 
 		'DDBD57' : 'I-AVVR',		 # 'Janus B' # 'VR' # 'F' # 
+		'DDBD58' : 'G-ORIG',		 # 'DG-800' # '345' # 'F' # 
 		'DDBD60' : 'D-6254',		 # 'Discus' # '54' # 'F' # 
 		'DDBD62' : 'D-0902',		 # 'Cirrus 18m' # 'WV' # 'F' # 
 		'DDBD6F' : 'G-CGAD',		 # 'LS-3' # 'L5' # 'F' # 
@@ -12237,7 +12667,6 @@ kglid = {
 		'DDBE82' : 'NOREG',		 # '' # '' # 'F' # 
 		'DDBE88' : 'OY-XZH',		 # 'Discus t' # '01' # 'F' # 
 		'DDBE90' : 'S5-3105',		 # 'Cirrus Std' # 'BM' # 'F' # 
-		'DDBE91' : 'D-MLPF',		 # 'Apis 2' # '' # 'F' # 
 		'DDBE92' : '_oc',		 # 'Unknown' # '_oc' # 'F' # 
 		'DDBE93' : 'F-CLLC',		 # 'ASH-25 MI' # 'LC6' # 'F' # 
 		'DDBE95' : 'F-CBSM',		 # 'AV 36 Fauvel' # 'SM' # 'F' # 
@@ -12266,7 +12695,6 @@ kglid = {
 		'DDBEED' : 'D-2969',		 # 'Duo Discus x' # 'T3' # 'F' # 
 		'DDBEEF' : 'OK-5080',		 # 'Astir CS' # 'CS' # 'F' # 
 		'DDBEF0' : 'D-8555',		 # 'Twin Astir III' # 'SG1' # 'F' # 
-		'DDBEF2' : 'OE-0633',		 # 'Ka-8' # 'Ka8' # 'F' # 
 		'DDBEF9' : 'D-MDET',		 # 'FK14' # '' # 'F' # 
 		'DDBEFA' : 'D-KRFP',		 # 'ASK-21 MI' # 'PR' # 'F' # 
 		'DDBEFD' : 'D-KDUT',		 # 'Discus t' # 'D8' # 'F' # 
@@ -12290,6 +12718,7 @@ kglid = {
 		'DDBF4A' : 'D-5006',		 # 'LS-4' # 'SV' # 'F' # 
 		'DDBF4D' : 'OE-5618',		 # 'Blanik' # 'L23' # 'F' # 
 		'DDBF54' : 'OK-2803',		 # 'Nimbus 2' # 'IK' # 'F' # 
+		'DDBF59' : 'OK-1337',		 # 'Astir CS' # 'AU' # 'F' # 
 		'DDBF66' : 'D-KUEN',		 # 'Duo Discus xlt' # 'EIS' # 'F' # 
 		'DDBF6B' : 'OE-5484',		 # 'ASK-21' # '' # 'F' # 
 		'DDBF6D' : 'F-CHEA',		 # 'Pegase' # 'H2' # 'F' # 
@@ -12299,6 +12728,7 @@ kglid = {
 		'DDBF83' : 'D-6194',		 # 'Ka-8' # '94' # 'F' # 
 		'DDBF88' : 'D-EKIZ',		 # 'Bellanca Scout' # 'IZ' # 'F' # 
 		'DDBF8A' : 'D-KNIU',		 # 'SF-25' # 'IU' # 'F' # 
+		'DDBF8B' : 'D-0626',		 # 'ASK-21' # '26' # 'F' # 
 		'DDBF92' : 'D-7493',		 # 'Astir Jeans' # '' # 'F' # 
 		'DDBF98' : 'SE-EFK5',		 # 'UFO' # 'F98' # 'F' # 
 		'DDBF9D' : 'D-1429',		 # 'LS-8 18' # 'IKG' # 'F' # 
@@ -12311,6 +12741,7 @@ kglid = {
 		'DDBFC8' : 'OM-3518',		 # 'VSO-10' # 'I5' # 'F' # 
 		'DDBFD2' : 'F-COLS',		 # 'ASG-29E' # 'LS' # 'F' # 
 		'DDBFD4' : 'NOREG',		 # '' # '' # 'F' # 
+		'DDBFD8' : 'OK-3399',		 # 'Nimbus 2' # 'EL' # 'F' # 
 		'DDBFD9' : 'D-8521',		 # 'SF-27' # 'HH' # 'F' # 
 		'DDBFDE' : 'D-6233',		 # 'ASW-28' # 'GT' # 'F' # 
 		'DDBFE2' : 'D-KYKY',		 # 'Duo Discus t' # '2AS' # 'F' # 
@@ -12330,7 +12761,6 @@ kglid = {
 		'DDC020' : 'OH-667',		 # 'Astir Club' # '667' # 'F' # 
 		'DDC023' : 'OK-7557',		 # 'ASW-19' # 'BO' # 'F' # 
 		'DDC025' : 'OE-7119',		 # 'WT9 Dynamic' # '' # 'F' # 
-		'DDC028' : 'G-EEBA',		 # 'Slingsby Vega 15m' # 'EBA' # 'F' # 
 		'DDC02C' : 'S5-7166',		 # 'Twin Astir I' # 'TAS' # 'F' # 
 		'DDC038' : 'OH-836',		 # 'Discus' # 'AT' # 'F' # 
 		'DDC039' : 'OY-NMX',		 # 'Ventus bT' # 'NM' # 'F' # 
@@ -12364,12 +12794,11 @@ kglid = {
 		'DDC094' : 'SE-EFK1',		 # 'UFO' # 'DZ6' # 'F' # 
 		'DDC096' : 'D-9908',		 # 'Ventus 2' # 'EY' # 'F' # 
 		'DDC099' : 'SE-URU',		 # 'Ventus' # 'RU' # 'F' # 
-		'DDC09D' : 'D-KVBR',		 # 'DG-808 C' # 'BR' # 'F' # 
+		'DDC09D' : 'D-8766',		 # 'DG-808 C' # '87' # 'F' # 
 		'DDC0A1' : 'OH-905',		 # 'PIK-20 B' # 'AZ' # 'F' # 
 		'DDC0A2' : 'NOREG',		 # '' # '' # 'F' # 
 		'DDC0A4' : 'OH-791',		 # 'ASW-24' # 'PP' # 'F' # 
 		'DDC0A5' : 'SE-UGC',		 # 'ASH-25' # 'GC' # 'F' # 
-		'DDC0A7' : 'D-1279',		 # 'DG-300' # 'YD' # 'F' # 
 		'DDC0AA' : 'OY-XUS',		 # 'DG-800' # 'D' # 'F' # 
 		'DDC0AB' : 'SE-EFK2',		 # 'UFO' # 'DZH' # 'F' # 
 		'DDC0BA' : 'VH-CQO',		 # 'LS-4' # 'CQO' # 'O' # 
@@ -12377,14 +12806,14 @@ kglid = {
 		'DDC0BF' : 'G-EDDD',		 # 'Nimbus 2' # '695' # 'F' # 
 		'DDC0CB' : 'G-OFJC',		 # 'PIK-20 E' # 'P20' # 'F' # 
 		'DDC0CD' : 'G-CKHB',		 # 'LS-3' # 'LS5' # 'F' # 
-		'DDC0D5' : 'OY-TXA',		 # 'LS-4' # 'PLU' # 'F' # 
+		'DDC0D1' : 'LY-GPH',		 # 'LS-3' # 'S3' # 'F' # 
+		'DDC0D5' : 'NOREG',		 # '' # '' # 'F' # 
 		'DDC0D8' : 'D-KSCR',		 # 'Duo Discus xlt' # 'POL' # 'F' # 
 		'DDC0DF' : 'SE-UMP',		 # 'ASK-21' # 'MP' # 'F' # 
 		'DDC0E1' : 'G-CHJX',		 # 'LS-6' # '203' # 'F' # 
 		'DDC0E2' : 'SE-UGU',		 # 'ASW-20' # 'J' # 'F' # 
 		'DDC0E3' : 'G-DRCS',		 # 'ASH-25' # 'M25' # 'F' # 
 		'DDC0E4' : 'SE-SSG',		 # 'Duo Discus t' # 'SG' # 'F' # 
-		'DDC0E9' : 'OM-2069',		 # 'ASW-15' # 'BA5' # 'F' # 
 		'DDC0EA' : 'OH-936',		 # 'Discus 2' # 'PI' # 'F' # 
 		'DDC0EB' : 'G-CKLP',		 # 'ASW-28t' # '205' # 'F' # 
 		'DDC0EC' : 'SE-EFK3',		 # 'UFO' # 'DZY' # 'F' # 
@@ -12448,8 +12877,7 @@ kglid = {
 		'DDC1D7' : 'LV-EQT',		 # 'ASW-20' # 'HD' # 'F' # 
 		'DDC1DD' : 'OO-YDC',		 # 'Ventus c' # 'D27' # 'F' # 
 		'DDC1E0' : 'G-DCNE',		 # 'Libelle Std' # '525' # 'F' # 
-		'DDC1E2' : 'OE-5495',		 # 'Astir CS' # '' # 'F' # 
-		'DDC1E4' : 'OE-0907',		 # 'Blanik' # '' # 'F' # 
+		'DDC1E4' : 'OE-5495',		 # 'Astir CS' # '' # 'F' # 
 		'DDC1E5' : 'F-CIOL',		 # 'Twin Astir III' # 'OL' # 'F' # 
 		'DDC1EC' : 'HF',		 # 'Calif A21S' # 'HF' # 'F' # 
 		'DDC1EF' : 'OO-ZTM',		 # 'Ka-6 cr' # 'LF' # 'F' # 
@@ -12486,8 +12914,10 @@ kglid = {
 		'DDC247' : 'D-6891',		 # 'Nimbus 2' # 'GM' # 'F' # 
 		'DDC249' : 'SE-UHX',		 # 'ASK-21' # '' # 'F' # 
 		'DDC24E' : 'F-GBIM',		 # 'DR-400' # '' # 'F' # 
+		'DDC251' : 'SE-EIH',		 # 'PA-18 Super Cub' # 'IH' # 'F' # 
 		'DDC252' : 'SE-ECG',		 # 'PA-25 Pawnee' # '' # 'F' # 
 		'DDC255' : 'SE-UGA',		 # 'Twin Astir II' # 'UGA' # 'F' # 
+		'DDC259' : 'SE-UTH',		 # 'ASH-26 E' # 'WH' # 'F' # 
 		'DDC25C' : 'SE-123',		 # 'UFO' # 'FEL' # 'F' # 
 		'DDC25E' : 'SE-UMB',		 # 'DG-808 B' # 'DG' # 'F' # 
 		'DDC261' : 'SE-UKS',		 # 'SZD-48 Jantar Std 2' # 'CL' # 'F' # 
@@ -12503,17 +12933,17 @@ kglid = {
 		'DDC277' : 'F-CAGJ',		 # 'Ka-8' # 'GJ' # 'F' # 
 		'DDC278' : 'F-CEHZ',		 # 'LS-1 f' # 'L49' # 'F' # 
 		'DDC27A' : 'OO-ZZK',		 # 'Mosquito' # 'K3' # 'F' # 
-		'DDC27B' : 'NOREG',		 # '' # '' # 'F' # 
 		'DDC27D' : 'D-KBGR',		 # 'SF-25' # '' # 'F' # 
 		'DDC27F' : 'OY-XYF',		 # 'LS-6 18' # 'YF' # 'F' # 
-		'DDC280' : 'D-KFEC',		 # 'SF-25' # '' # 'F' # 
+		'DDC280' : 'D-KFEC',		 # 'SF-25' # 'EC' # 'F' # 
+		'DDC281' : 'D-KATW',		 # 'Grob G109' # '' # 'F' # 
 		'DDC287' : 'D-KPSV',		 # 'HK36 Super Dimona' # '@SV' # 'F' # 
 		'DDC288' : 'D-KTCA',		 # 'LS-8 st 18' # 'SN' # 'F' # 
-		'DDC28C' : 'D-KFCE',		 # 'SF-25' # '' # 'F' # 
+		'DDC28C' : 'D-KFCE',		 # 'SF-25' # 'CE' # 'F' # 
 		'DDC29C' : 'D-KGPC',		 # 'LAK-17 AT' # 'PC' # 'F' # 
 		'DDC29E' : 'D-6313',		 # 'LS-4' # 'X13' # 'F' # 
-		'DDC29F' : 'D-EKVL',		 # 'DR-400' # '' # 'F' # 
-		'DDC2A0' : 'D-ENJN',		 # 'DR-300' # '' # 'F' # 
+		'DDC29F' : 'D-EKVL',		 # 'DR-400' # 'VL' # 'F' # 
+		'DDC2A0' : 'D-ENJN',		 # 'DR-300' # 'DJN' # 'F' # 
 		'DDC2A1' : 'D-2276',		 # 'Twin Astir I' # 'BC' # 'F' # 
 		'DDC2A3' : 'JU',		 # 'Unknown' # 'JU' # 'F' # 
 		'DDC2A7' : 'D-KDEJ',		 # 'SF-25' # '' # 'F' # 
@@ -12531,7 +12961,7 @@ kglid = {
 		'DDC2BD' : 'HA-4027',		 # 'ASW-20' # 'M6' # 'F' # 
 		'DDC2BE' : 'PH-1394',		 # 'LS-6 18' # 'WHO' # 'F' # 
 		'DDC2C0' : 'HB-2100',		 # 'Ventus bT' # '' # 'F' # 
-		'DDC2C5' : 'NOREG',		 # '' # '' # 'F' # 
+		'DDC2C5' : 'D-1747',		 # 'LS-4' # '' # 'F' # 
 		'DDC2D0' : 'DDC2D0',		 # 'Unknown' # '' # 'F' # 
 		'DDC2D1' : 'D-8686',		 # 'Libelle Club' # '' # 'F' # 
 		'DDC2D2' : 'DDC2D2',		 # 'Unknown' # '' # 'F' # 
@@ -12542,7 +12972,7 @@ kglid = {
 		'DDC2DB' : 'D-7372',		 # 'Astir CS' # 'F7' # 'F' # 
 		'DDC2DF' : 'D-5028',		 # 'LS-6' # '' # 'F' # 
 		'DDC2E3' : 'D-KKYD',		 # 'ASH-25 MI' # 'YD' # 'F' # 
-		'DDC2E7' : 'D-0121',		 # 'LS-1' # 'AL' # 'F' # 
+		'DDC2E7' : 'OK-0121',		 # 'LS-1' # 'AL' # 'F' # 
 		'DDC2EB' : 'D-ELVS',		 # 'PZL-104 Wilga' # '' # 'F' # 
 		'DDC2F3' : 'F-CLAS',		 # 'ASK-13' # 'AS' # 'F' # 
 		'DDC2F7' : 'F-CFCM',		 # 'Astir Jeans' # 'CM' # 'F' # 
@@ -12559,7 +12989,7 @@ kglid = {
 		'DDC318' : 'D-KMTX',		 # 'DG-1000 T' # 'TX' # 'F' # 
 		'DDC31F' : 'D-MFRB',		 # 'WT9 Dynamic' # '' # 'F' # 
 		'DDC329' : 'OK-1404',		 # 'Discus t' # 'TAL' # 'F' # 
-		'DDC32A' : 'D-EGJC',		 # 'Cessna 172' # '' # 'F' # 
+		'DDC32A' : 'D-EGJC',		 # 'Cessna 172' # 'JC' # 'F' # 
 		'DDC32C' : 'D-6700',		 # 'PIK-20 D' # 'SZ' # 'F' # 
 		'DDC332' : 'D-KAUC',		 # 'H36 Dimona' # 'UC' # 'F' # 
 		'DDC334' : 'D-KBBO',		 # 'ASW-22' # 'BO' # 'F' # 
@@ -12584,7 +13014,6 @@ kglid = {
 		'DDC38A' : 'OE-5698',		 # 'Duo Discus' # 'UT' # 'F' # 
 		'DDC38B' : 'D-4733',		 # 'Discus' # '33' # 'F' # 
 		'DDC38F' : 'HB-POX',		 # 'PA-28' # 'POX' # 'F' # 
-		'DDC39F' : 'D-1234',		 # 'LS-6' # 'CE' # 'F' # 
 		'DDC3A0' : 'W52',		 # 'Other' # 'W52' # 'F' # 
 		'DDC3A2' : 'D-MVRH',		 # 'Zodiac CH601XL' # '' # 'F' # 
 		'DDC3A7' : 'F-CGCC',		 # 'ASK-21' # 'C2' # 'F' # 
@@ -12645,7 +13074,7 @@ kglid = {
 		'DDC45D' : 'F-CMAX',		 # 'Pilatus B4' # '' # 'F' # 
 		'DDC45E' : 'F-CESF',		 # 'LS-3' # 'S03' # 'F' # 
 		'DDC461' : 'D-7880',		 # 'LS-4' # 'JT' # 'F' # 
-		'DDC462' : 'F-CFAE',		 # 'Janus B' # 'AE' # 'F' # 
+		'DDC462' : 'F-TEST',		 # 'Unknown' # 'TT' # 'F' # 
 		'DDC463' : 'F-CLCD',		 # 'ASW-28' # 'CD' # 'F' # 
 		'DDC465' : 'F-JCXJ',		 # 'Ultralight' # '' # 'F' # 
 		'DDC467' : 'F-CAVV',		 # 'HK36 Super Dimona' # 'VV' # 'F' # 
@@ -12678,6 +13107,7 @@ kglid = {
 		'DDD213' : 'D-7206',		 # 'Duo Discus' # 'Y2' # 'F' # 
 		'DDD215' : 'D-3484',		 # 'LS-4' # 'B' # 'F' # 
 		'DDD21D' : 'D-8449',		 # 'Pegase' # 'LL' # 'F' # 
+		'DDD224' : 'SP-ZBOA',		 # 'Ultralight' # '' # 'O' # 
 		'DDD22A' : 'D-5050',		 # 'ASK-23' # 'W50' # 'F' # 
 		'DDD230' : 'D-4029',		 # 'LS-4' # 'W29' # 'F' # 
 		'DDD237' : 'OY-XSO',		 # 'Ventus 2ct' # 'KV' # 'F' # 
@@ -12724,13 +13154,14 @@ kglid = {
 		'DDD2A6' : 'D-XXXX',		 # 'Unknown' # '44' # 'F' # 
 		'DDD2AE' : 'G-CJOB',		 # 'Ka-8' # 'JOB' # 'F' # 
 		'DDD2B0' : 'S5-3087',		 # 'DG-303' # 'AV' # 'F' # 
+		'DDD2B3' : 'F-CJOK',		 # 'ASK-13' # 'OK' # 'F' # 
 		'DDD2B5' : 'OH-684',		 # 'LS-4' # 'TK' # 'F' # 
 		'DDD2B6' : 'D-3890',		 # 'Astir CS' # 'NE' # 'F' # 
 		'DDD2BE' : 'G-PIKD',		 # 'PIK-20 D' # '869' # 'F' # 
 		'DDD2C1' : 'OO-ZHS',		 # 'OldTimer' # '' # 'F' # 
 		'DDD2C2' : 'D-KONZ',		 # 'SF-25' # 'onz' # 'F' # 
 		'DDD2CA' : 'PH-1384',		 # 'Discus' # 'W3' # 'F' # 
-		'DDD2CB' : 'D-0626',		 # 'ASK-21' # '26' # 'F' # 
+		'DDD2CB' : 'D-3406',		 # 'LS-4' # '4M' # 'F' # 
 		'DDD2CD' : 'D-3420',		 # 'ASW-20' # 'YD' # 'F' # 
 		'DDD2CF' : 'ZS-GMI',		 # 'ASW-20' # '100' # 'F' # 
 		'DDD2D2' : 'D-4170',		 # 'Astir CS' # 'T5' # 'F' # 
@@ -12740,7 +13171,7 @@ kglid = {
 		'DDD2DF' : 'SE-UIS',		 # 'PIK-20 D' # '51' # 'F' # 
 		'DDD2E3' : 'VH-GSA',		 # 'LS-4' # 'PFB' # 'F' # 
 		'DDD2E4' : 'ZS-GXY',		 # 'LS-6 18' # 'JCB' # 'F' # 
-		'DDD2E5' : 'PH1145',		 # 'ASW-20' # 'ZG' # 'F' # 
+		'DDD2E5' : 'LY-DOP',		 # 'ASW-20' # 'ZG' # 'F' # 
 		'DDD2E7' : 'ZS-GOZ',		 # 'Ventus' # 'GD' # 'F' # 
 		'DDD2EA' : 'F-CHTB',		 # 'Duo Discus' # '' # 'F' # 
 		'DDD2EC' : 'LN-YRX',		 # 'WT9 Dynamic' # '' # 'F' # 
@@ -12765,6 +13196,7 @@ kglid = {
 		'DDD328' : 'FCERB',		 # 'ASK-13' # 'ERB' # 'F' # 
 		'DDD329' : 'NOREG',		 # '' # '' # 'F' # 
 		'DDD32F' : 'GRAL_21',		 # 'Other' # 'G21' # 'F' # 
+		'DDD331' : 'F-CFBK',		 # 'Twin Astir I' # 'T11' # 'F' # 
 		'DDD335' : 'F-CGOC',		 # 'Pegase' # 'U2' # 'F' # 
 		'DDD33A' : 'F-CDVN',		 # 'LS-1 c' # 'L16' # 'F' # 
 		'DDD33B' : 'D-2639',		 # 'ASW-24' # '44' # 'F' # 
@@ -12781,7 +13213,7 @@ kglid = {
 		'DDD34C' : 'F-CERD',		 # 'ASK-13' # '' # 'F' # 
 		'DDD34E' : 'NOREG',		 # 'Pegase' # 'jw3' # 'F' # 
 		'DDD350' : 'NOREG',		 # 'Pegase' # 'jw2' # 'F' # 
-		'DDD352' : 'NOREG',		 # 'Duo Discus' # 'jwD' # 'F' # 
+		'DDD352' : 'F-CNBF',		 # 'ASK-21' # 'jwD' # 'F' # 
 		'DDD354' : 'G-DDSJ',		 # 'Twin Astir I' # 'DSJ' # 'F' # 
 		'DDD359' : 'NOREG',		 # 'LS-4' # 'jwy' # 'F' # 
 		'DDD35C' : 'F-CKMA',		 # 'LS-6' # 'GE' # 'F' # 
@@ -12796,7 +13228,7 @@ kglid = {
 		'DDD372' : 'D-9359',		 # 'SB-5 b' # '59' # 'F' # 
 		'DDD374' : 'G-EJHH',		 # 'Cirrus Std' # 'JHH' # 'F' # 
 		'DDD376' : 'SE-USC',		 # 'SF-25' # '' # 'F' # 
-		'DDD37A' : 'D-6612',		 # 'Discus' # 'PX' # 'F' # 
+		'DDD37A' : 'OO-ZFB',		 # 'Astir CS-77' # 'FB' # 'F' # 
 		'DDD37F' : 'G-CKKH',		 # 'ASW-27' # '218' # 'F' # 
 		'DDD381' : 'G-CHPD',		 # 'LS-6 18' # '62' # 'F' # 
 		'DDD382' : 'D-7922',		 # 'ASK-23' # 'PF' # 'F' # 
@@ -12813,11 +13245,11 @@ kglid = {
 		'DDD395' : 'EC-HBD',		 # 'ASW-19' # 'TP' # 'F' # 
 		'DDD396' : 'EC-HTM',		 # 'DG-100' # 'CH' # 'F' # 
 		'DDD39D' : 'D-3254',		 # 'ASK-21' # 'PJ' # 'F' # 
-		'DDD3A1' : 'OLO-FK',		 # 'Pegase' # '480' # 'F' # 
-		'DDD3A2' : 'OLO-XE',		 # 'Astir CS' # 'XE' # 'F' # 
-		'DDD3A3' : 'OLO-HH',		 # 'Twin Astir I' # 'HH' # 'F' # 
-		'DDD3A4' : 'OLO-DI',		 # 'Pegase' # 'DI' # 'F' # 
-		'DDD3A5' : 'OLO_P7',		 # 'UFO' # 'P7' # 'F' # 
+		'DDD3A1' : 'F-CHFK',		 # 'Pegase' # 'OLO' # 'F' # 
+		'DDD3A2' : 'F-CEXE',		 # 'Astir CS' # 'OLO' # 'F' # 
+		'DDD3A3' : 'F-CFHH',		 # 'Twin Astir I' # 'OLO' # 'F' # 
+		'DDD3A4' : 'F-CHGI',		 # 'Pegase' # 'OLO' # 'F' # 
+		'DDD3A5' : 'F-CJLL',		 # 'UFO' # 'OLO' # 'F' # 
 		'DDD3A6' : 'F-CGHD',		 # 'Pegase' # 'E7' # 'F' # 
 		'DDD3A8' : 'F-CEKR',		 # 'LS-1 f' # 'L67' # 'F' # 
 		'DDD3A9' : 'GRAL_15',		 # 'Other' # 'G15' # 'F' # 
@@ -12827,12 +13259,11 @@ kglid = {
 		'DDD3B1' : 'F-CEAU',		 # 'Ka-6 e' # '' # 'F' # 
 		'DDD3B7' : 'GRAL_23',		 # 'Other' # 'G23' # 'F' # 
 		'DDD3B9' : 'OO-KMT',		 # 'Bellanca Scout' # 'MT' # 'F' # 
-		'DDD3BA' : 'OLO-LIL',		 # 'Motorplane' # 'IL' # 'F' # 
 		'DDD3C1' : 'F-CBNA',		 # 'Astir Jeans' # '' # 'F' # 
 		'DDD3C6' : 'F-CGNA',		 # 'Pegase' # 'NA' # 'F' # 
 		'DDD3E1' : 'F-CEQJ',		 # 'Libelle Club' # '' # 'F' # 
 		'DDD3E9' : 'S5-3060',		 # 'DG-100' # 'S6' # 'F' # 
-		'DDD3EF' : 'F-CEPY',		 # 'Janus B' # 'PY' # 'F' # 
+		'DDD3EF' : 'F-CEPY',		 # 'Janus B' # 'MC5' # 'F' # 
 		'DDD3F9' : 'NOREG',		 # '' # '' # 'F' # 
 		'DDD3FA' : 'F-CEIT',		 # 'LS-4' # 'V3' # 'F' # 
 		'DDD3FB' : 'F-COMP',		 # 'ASK-21' # 'MP' # 'F' # 
@@ -12933,7 +13364,6 @@ kglid = {
 		'DDD4EF' : 'G-AXZH',		 # 'Libelle Std' # '123' # 'F' # 
 		'DDD4F0' : 'F-XXPX',		 # 'Janus B' # 'PX' # 'F' # 
 		'DDD4F1' : 'F-XXMP',		 # 'ASK-21' # 'MP' # 'F' # 
-		'DDD4F3' : 'ARC-KG',		 # 'ASW-24' # '26' # 'F' # 
 		'DDD4F4' : 'F-XXLD',		 # 'Marianne' # 'LD' # 'F' # 
 		'DDD4F5' : 'F-XXXC',		 # 'Astir CS' # 'XC' # 'F' # 
 		'DDD4F6' : 'F-XXDM',		 # 'Pegase' # 'DM' # 'F' # 
@@ -12968,7 +13398,7 @@ kglid = {
 		'DDD535' : 'F-CIHX',		 # 'Alliance 34' # 'HX' # 'F' # 
 		'DDD537' : 'D-8328',		 # 'ASW-28' # 'MO' # 'F' # 
 		'DDD538' : 'F-CHCV',		 # 'SF-25' # '' # 'F' # 
-		'DDD539' : 'NOREG',		 # 'LS-8 18' # 'jw8' # 'F' # 
+		'DDD539' : 'D-6923',		 # 'LS-8 18' # 'jw8' # 'F' # 
 		'DDD53A' : 'ZS-GHV',		 # 'ASK-13' # '' # 'F' # 
 		'DDD53B' : 'PH-442',		 # 'Cirrus Std' # 'CEO' # 'F' # 
 		'DDD53D' : 'EC-HER',		 # 'Astir CS' # 'MAX' # 'F' # 
@@ -12993,7 +13423,6 @@ kglid = {
 		'DDD570' : 'D-0878',		 # 'Elfe S4' # 'T2' # 'F' # 
 		'DDD573' : 'G-CKMZ',		 # 'ASW-28t' # 'J5' # 'F' # 
 		'DDD575' : 'G-CLMO',		 # 'ASW-28 18' # 'FI' # 'F' # 
-		'DDD576' : 'D-9198',		 # 'LAK 19' # '19' # 'F' # 
 		'DDD577' : 'NOREG',		 # 'Discus' # '82' # 'F' # 
 		'DDD579' : 'F-BUMC',		 # 'DR-400' # 'MC' # 'F' # 
 		'DDD57A' : 'PH-425',		 # 'Astir CS-77' # '' # 'F' # 
@@ -13070,6 +13499,7 @@ kglid = {
 		'DDD607' : 'D-KEUD',		 # 'LAK-17 AT' # 'UD' # 'F' # 
 		'DDD609' : 'F-BPME',		 # 'MS-893 Commodore' # '' # 'F' # 
 		'DDD60A' : 'SP-3258',		 # 'SZD-48-1 Jantar Std 2' # 'BAH' # 'F' # 
+		'DDD60D' : 'SP-3094',		 # 'SZD-36 Cobra 15' # '' # 'F' # 
 		'DDD7E4' : 'PH-806',		 # 'Discus' # 'SO' # 'F' # 
 		'DDD7E5' : 'PH-795',		 # 'Pegase' # 'SP' # 'F' # 
 		'DDD7E7' : 'PH-1514',		 # 'LS-4' # 'SU' # 'F' # 
@@ -13157,6 +13587,7 @@ kglid = {
 		'DDD874' : 'F-CEJZ',		 # 'Ka-8' # 'JZ' # 'F' # 
 		'DDD877' : 'NOREG',		 # 'LS-6 18' # '245' # 'F' # 
 		'DDD878' : 'G-DEGH',		 # 'Sport Vega' # 'EGH' # 'F' # 
+		'DDD879' : 'OK-8718',		 # 'Speed Astir II' # 'XM' # 'F' # 
 		'DDD87A' : 'OH-493',		 # 'PIK-20 B' # 'JT' # 'F' # 
 		'DDD87B' : 'D-3537',		 # 'Discus' # 'F1' # 'F' # 
 		'DDD87C' : 'OH-812',		 # 'LS-7' # 'PF' # 'F' # 
@@ -13252,7 +13683,7 @@ kglid = {
 		'DDD901' : 'F-CFHT',		 # 'Twin Astir II' # 'T45' # 'F' # 
 		'DDD902' : 'F-CFHR',		 # 'Twin Astir II' # 'T43' # 'F' # 
 		'DDD903' : 'D-4371',		 # 'ASW-20' # 'TE' # 'F' # 
-		'DDD905' : 'NOREG',		 # '' # '' # 'F' # 
+		'DDD905' : 'G-CHXT',		 # 'LS-4' # 'HXT' # 'F' # 
 		'DDD906' : 'F-CESO',		 # 'LS-3' # 'SO' # 'F' # 
 		'DDD907' : 'EC-DJA',		 # 'ASW-20' # 'AL' # 'F' # 
 		'DDD90A' : 'NOREG',		 # '' # '' # 'F' # 
@@ -13260,6 +13691,7 @@ kglid = {
 		'DDD90C' : 'PH-963',		 # 'Mosquito' # 'LD' # 'F' # 
 		'DDD90D' : 'G-CJPA',		 # 'Duo Discus' # 'HB1' # 'F' # 
 		'DDD90F' : 'F-CLRJ',		 # 'LS-6 18' # 'RJ' # 'F' # 
+		'DDD910' : 'CSORLO',		 # 'Ground Station' # 'BC2' # 'O' # 
 		'DDD912' : 'OH-604',		 # 'ASW-20' # 'VA' # 'F' # 
 		'DDD914' : 'OO-ZFS',		 # 'Libelle Std' # '717' # 'F' # 
 		'DDD915' : 'G-CKFH',		 # 'Mini Nimbus' # '' # 'F' # 
@@ -13293,6 +13725,7 @@ kglid = {
 		'DDD948' : 'F-CGGP',		 # 'Discus t' # '' # 'F' # 
 		'DDD949' : 'Sergej',		 # 'Cirrus Std' # 'NM' # 'F' # 
 		'DDD94B' : 'EC-HRT',		 # 'LS-7' # 'Z3' # 'F' # 
+		'DDD94C' : 'OK-FUZO',		 # 'VSO-10' # 'FUK' # 'O' # 
 		'DDD94E' : 'D-2314',		 # 'ASW-15' # '14' # 'F' # 
 		'DDD94F' : 'D-1142',		 # 'ASK-21' # '' # 'F' # 
 		'DDD950' : 'F-CYJD',		 # 'Janus C' # 'JD' # 'F' # 
@@ -13333,7 +13766,7 @@ kglid = {
 		'DDD97C' : 'NOREG',		 # 'Pegase Trainer' # 'jwT' # 'F' # 
 		'DDD97D' : 'F-CLFV',		 # 'LS-4 W' # 'R19' # 'F' # 
 		'DDD97E' : 'F-CFYH',		 # 'Twin Astir II' # 'T88' # 'F' # 
-		'DDD980' : 'OH-805',		 # 'LS-7' # 'GE' # 'F' # 
+		'DDD97F' : 'F-CKED',		 # 'LS-1 f' # 'L53' # 'F' # 
 		'DDD981' : 'OH-742',		 # 'SZD-51 Junior' # 'K2' # 'F' # 
 		'DDD982' : 'QKFW',		 # 'Pegase' # 'WQK' # 'F' # 
 		'DDD983' : 'F-CGFK',		 # 'Pegase' # 'FK' # 'F' # 
@@ -13342,16 +13775,17 @@ kglid = {
 		'DDD98A' : 'D-2677',		 # 'ASK-13' # '' # 'F' # 
 		'DDD98B' : 'G-CJUP',		 # 'Discus 2' # '183' # 'F' # 
 		'DDD98C' : 'G-CHNF',		 # 'Duo Discus' # '315' # 'F' # 
+		'DDD98E' : 'OH-595',		 # 'ASW-19' # 'TS' # 'F' # 
 		'DDD98F' : 'OH-990',		 # 'Duo Discus x' # 'NIL' # 'F' # 
 		'DDD991' : 'OH-884',		 # 'LS-8' # 'N8' # 'F' # 
-		'DDD992' : 'OH-942',		 # 'LAK-17 A' # 'JM' # 'F' # 
+		'DDD992' : 'OH-728',		 # 'SZD-51 Junior' # '86' # 'F' # 
 		'DDD993' : 'G-DDDR',		 # 'Cirrus' # '680' # 'F' # 
 		'DDD994' : 'G-DENV',		 # 'ASW-20' # 'JJ' # 'F' # 
 		'DDD995' : 'D-1095',		 # 'Pegase' # 'V5' # 'F' # 
 		'DDD996' : 'OO-YUU',		 # 'Duo Discus t' # 'UU' # 'F' # 
 		'DDD997' : 'F-CGRD',		 # 'DG-400' # 'RD' # 'F' # 
 		'DDD998' : 'PH-473',		 # 'Cirrus Std' # '74' # 'F' # 
-		'DDD99D' : 'OY-HXJ',		 # 'DG-400' # 'HX' # 'F' # 
+		'DDD99D' : 'OK4476',		 # 'DG-400' # 'HX' # 'F' # 
 		'DDD99E' : 'PH-1287',		 # 'Duo Discus t' # 'QV' # 'F' # 
 		'DDD9A2' : 'F-CJNL',		 # 'Ventus 2cM' # '' # 'F' # 
 		'DDD9A3' : 'PH-538',		 # 'ASW-19' # 'JA' # 'F' # 
@@ -13461,6 +13895,7 @@ kglid = {
 		'DDDA4E' : 'SE-TLT',		 # 'Bergfalke IV' # '' # 'F' # 
 		'DDDA50' : 'SE-KDH',		 # 'PA-25 Pawnee' # 'KDH' # 'F' # 
 		'DDDA51' : 'SE-GCD',		 # 'PA-18 Super Cub' # '' # 'F' # 
+		'DDDA52' : 'D-5193',		 # 'SF-27' # 'FPL' # 'F' # 
 		'DDDA55' : 'OH-680',		 # 'ASW-20' # 'L1' # 'F' # 
 		'DDDA56' : 'OY-XXM',		 # 'LS-8' # 'UG' # 'F' # 
 		'DDDA57' : 'D-1397',		 # 'LS-3' # 'BN' # 'F' # 
@@ -13480,6 +13915,7 @@ kglid = {
 		'DDDA67' : 'SE-UPC',		 # 'Ventus 2' # 'C' # 'F' # 
 		'DDDA68' : 'OH-668',		 # 'LS-4' # 'OW' # 'F' # 
 		'DDDA69' : 'OH_-943',		 # 'LAK 19' # 'JW' # 'F' # 
+		'DDDA6C' : 'SP-3865',		 # 'SZD-51 Junior' # 'LU' # 'F' # 
 		'DDDA6D' : 'F-CIDK',		 # 'Duo Discus' # 'EJ' # 'F' # 
 		'DDDA6E' : 'OK-4420',		 # 'Janus A' # 'BV' # 'F' # 
 		'DDDA71' : 'F-CGMR',		 # 'Marianne' # '' # 'F' # 
@@ -13498,8 +13934,8 @@ kglid = {
 		'DDDA81' : 'SE-UNH',		 # 'ASK-21' # 'NH' # 'F' # 
 		'DDDA82' : 'F-CBLM',		 # 'Marianne' # '' # 'F' # 
 		'DDDA83' : 'SE-UDV',		 # 'Grob G109' # '' # 'F' # 
-		'DDDA86' : 'SE-UVA',		 # 'LS-10' # 'VA' # 'F' # 
 		'DDDA87' : 'SE-UAO',		 # 'Grob G109' # '' # 'F' # 
+		'DDDA88' : 'OH-1010',		 # 'DG-808 B' # 'B1' # 'F' # 
 		'DDDA89' : 'F-CFAR',		 # 'Janus C' # 'AR' # 'F' # 
 		'DDDA8A' : 'F-CMNB',		 # 'ASK-13' # 'NB' # 'F' # 
 		'DDDA8D' : 'F-CFZG',		 # 'LS-4' # '' # 'F' # 
@@ -13547,6 +13983,7 @@ kglid = {
 		'DDDACE' : 'OH-532',		 # 'ASW-19' # 'HT' # 'F' # 
 		'DDDAD1' : 'OY-XYM',		 # 'Cirrus Std' # 'YM' # 'F' # 
 		'DDDAD2' : 'NOREG',		 # '' # '' # 'F' # 
+		'DDDAD4' : 'OK-2404',		 # 'ASW-24 E' # 'JM' # 'F' # 
 		'DDDAD6' : 'SE-UHE',		 # 'LS-7' # '' # 'F' # 
 		'DDDAD7' : 'SE-TXR',		 # 'Twin Astir II' # '' # 'F' # 
 		'DDDAD8' : 'OY-XVZ',		 # 'ASK-21' # 'VZ' # 'F' # 
@@ -13564,7 +14001,7 @@ kglid = {
 		'DDDAF1' : 'SE-URL',		 # 'Ventus 2cM' # 'RL' # 'F' # 
 		'DDDAF3' : 'SE-UTX',		 # 'Duo Discus t' # '' # 'F' # 
 		'DDDAF4' : 'SE-UDZ',		 # 'DG-300' # '4G' # 'F' # 
-		'DDDAF7' : 'D-6239',		 # 'ASW-24' # '' # 'F' # 
+		'DDDAF7' : 'SE-UOI',		 # 'DG-400' # '' # 'F' # 
 		'DDDAF8' : 'SE-UST',		 # 'DG-808 B' # '11' # 'F' # 
 		'DDDAF9' : 'D-KHND',		 # 'LS-8' # 'ND' # 'F' # 
 		'DDDAFA' : 'SEUPR',		 # 'SZD-48-3 Jantar Std 3' # 'PR' # 'F' # 
@@ -13581,7 +14018,7 @@ kglid = {
 		'DDDB0F' : 'G-CLPL',		 # 'LS-7' # 'W7' # 'F' # 
 		'DDDB11' : 'OY-XTH',		 # 'Cirrus Std' # 'TH' # 'F' # 
 		'DDDB12' : 'ZS-GTS',		 # 'Ventus cM' # '' # 'F' # 
-		'DDDB13' : 'D-4033',		 # 'SZD-9 Bocian' # '' # 'F' # 
+		'DDDB13' : 'D-3248',		 # 'SZD-9 Bocian' # '' # 'F' # 
 		'DDDB14' : 'SE-UKG',		 # 'Discus' # '' # 'F' # 
 		'DDDB15' : 'G-DDRD',		 # 'Ka-6 cr' # 'DRD' # 'F' # 
 		'DDDB19' : 'SE-UDN',		 # 'Grob G109' # '' # 'F' # 
@@ -13693,6 +14130,7 @@ kglid = {
 		'DDDBC8' : 'F-CFXS',		 # 'Pegase' # 'XS' # 'F' # 
 		'DDDBC9' : 'G_DETZ',		 # 'ASW-20' # '20' # 'F' # 
 		'DDDBCB' : 'SE-VSL',		 # 'Ultralight' # '' # 'F' # 
+		'DDDBCC' : 'OK-8430',		 # 'VT-116 Orlik II' # 'MK1' # 'F' # 
 		'DDDBCF' : 'G-CJTN',		 # 'DG-300' # 'E5' # 'F' # 
 		'DDDBD0' : 'F-CBZX',		 # 'Ka-6 cr' # 'ZX' # 'F' # 
 		'DDDBD1' : 'F-COVO',		 # 'SF-25' # 'VO' # 'F' # 
@@ -13736,7 +14174,7 @@ kglid = {
 		'DDDC05' : 'F-CHEY',		 # 'Pegase' # 'EY' # 'F' # 
 		'DDDC08' : 'OH-619',		 # 'LS-4' # 'YF' # 'F' # 
 		'DDDC09' : 'F-CEAV',		 # 'ASK-13' # 'AV' # 'F' # 
-		'DDDC0C' : 'HA-4403',		 # 'SZD-41 Jantar Std' # 'J' # 'F' # 
+		'DDDC0C' : 'HA-4424',		 # 'SZD-42 Jantar 2/2b' # 'EI' # 'F' # 
 		'DDDC0E' : 'F-CFDG',		 # 'LS-6 18' # 'DG' # 'F' # 
 		'DDDC0F' : 'F-CIRV',		 # 'ASK-21' # 'RV' # 'F' # 
 		'DDDC10' : 'F-CFZY',		 # 'LS-4' # 'ZY' # 'F' # 
@@ -13758,7 +14196,6 @@ kglid = {
 		'DDDC2F' : 'D-5666',		 # 'Discus' # 'D6' # 'F' # 
 		'DDDC32' : 'G-ddfg',		 # 'Cirrus Std' # '129' # 'F' # 
 		'DDDC33' : 'G-CFUH',		 # 'Ventus c' # 'E8' # 'F' # 
-		'DDDC35' : 'D-6384',		 # 'LS-8 18' # '1S' # 'F' # 
 		'DDDC3A' : 'G-CFMO',		 # 'Discus' # '158' # 'F' # 
 		'DDDC3B' : 'loulou',		 # 'ASG-29E' # 'PB' # 'F' # 
 		'DDDC3F' : 'GDESC',		 # 'LS-4 W' # '379' # 'F' # 
@@ -13800,6 +14237,7 @@ kglid = {
 		'DDDC7B' : 'D3690',		 # 'DG-300' # 'OK' # 'F' # 
 		'DDDC7C' : 'F-CJHC',		 # 'Pegase' # 'HC' # 'F' # 
 		'DDDC7D' : 'F-CGUR',		 # 'LS-6 18' # '3A' # 'F' # 
+		'DDDC7E' : 'D-7616',		 # 'ASW-20' # 'VD' # 'F' # 
 		'DDDC7F' : 'D-3052',		 # 'DG-300' # 'IB' # 'F' # 
 		'DDDC81' : 'F-CGQE',		 # 'Janus CM' # 'AJ' # 'F' # 
 		'DDDC84' : 'OH-787',		 # 'LS-4' # 'FM' # 'F' # 
@@ -13819,14 +14257,17 @@ kglid = {
 		'DDDCA2' : 'F-CIAA',		 # 'Duo Discus' # 'MCC' # 'F' # 
 		'DDDCA3' : 'F-CHGS',		 # 'Pegase' # 'GS' # 'F' # 
 		'DDDCA4' : 'D-1365',		 # 'LS-4' # 'PS' # 'F' # 
+		'DDDCA6' : 'D-6133',		 # 'Hornet' # 'W' # 'F' # 
 		'DDDCA8' : 'D-KKGH',		 # 'Discus t' # 'GH' # 'F' # 
 		'DDDCA9' : 'D-0728',		 # 'LS-1 d' # 'L7' # 'F' # 
 		'DDDCAC' : 'D-KHKI',		 # 'Piccolo B' # '' # 'F' # 
 		'DDDCB0' : 'D-3841',		 # 'ASW-19' # 'WD' # 'F' # 
 		'DDDCB1' : 'F-CEBJ',		 # 'Libelle Std' # '723' # 'F' # 
 		'DDDCB5' : 'NOREG',		 # 'Nimbus 3DT' # 'RJ' # 'F' # 
+		'DDDCB6' : 'D-KIFU',		 # 'UFO' # 'FU' # 'F' # 
 		'DDDCB7' : 'D-3536',		 # 'Libelle Std' # '36' # 'F' # 
 		'DDDCBB' : 'D-KBIX',		 # 'Ventus cM' # 'IX' # 'F' # 
+		'DDDCBD' : 'OK-2131',		 # 'Ventus cM' # '' # 'F' # 
 		'DDDCBE' : 'OH-930',		 # 'Discus 2' # 'N3' # 'F' # 
 		'DDDCBF' : 'F-CCDF',		 # 'ASK-21' # 'DF' # 'F' # 
 		'DDDCC2' : 'D-KFGW',		 # 'Ventus 2ct' # 'GW' # 'F' # 
@@ -13856,9 +14297,8 @@ kglid = {
 		'DDDCEA' : 'D-6103',		 # 'ASK-21' # 'GH' # 'F' # 
 		'DDDCEC' : 'OK-1958',		 # 'ASW-19' # 'NO' # 'F' # 
 		'DDDCEE' : 'D-KCRM',		 # 'Ventus 2ct' # 'RM' # 'F' # 
-		'DDDCEF' : 'OK-3012',		 # 'Cirrus 18m' # '13' # 'F' # 
+		'DDDCEF' : 'OM1176',		 # 'Cirrus Std' # 'MJ' # 'F' # 
 		'DDDCF0' : 'G-CKDX',		 # 'DG-200' # 'KDX' # 'F' # 
-		'DDDCF1' : 'D-8170',		 # 'Glasflugel H301' # '70' # 'F' # 
 		'DDDCF2' : 'S5-3052',		 # 'DG-100' # 'LX' # 'F' # 
 		'DDDCF3' : 'D-7721',		 # 'ASK-21' # '21' # 'F' # 
 		'DDDCF6' : 'G-CHTB',		 # 'Janus A' # 'HTB' # 'F' # 
@@ -13932,10 +14372,9 @@ kglid = {
 		'DDDD78' : 'F-CGVL',		 # 'Ventus 2bx' # 'VL' # 'F' # 
 		'DDDD7A' : 'D-5422',		 # 'ASK-21' # 'M1' # 'F' # 
 		'DDDD7B' : 'D-2923',		 # 'Ventus' # 'SJ' # 'F' # 
-		'DDDD7C' : 'LY-ZMZ',		 # 'HPH 304CZ-17' # 'MZ' # 'F' # 
 		'DDDD7D' : 'HA-MJA',		 # 'PA-25 Pawnee' # 'MJA' # 'F' # 
 		'DDDD7F' : 'HA-MJI',		 # 'PA-25 Pawnee' # 'MJI' # 'F' # 
-		'DDDD80' : 'OK-8430',		 # 'VT-116 Orlik II' # 'MK3' # 'F' # 
+		'DDDD80' : 'OK-7430',		 # 'VT-116 Orlik II' # 'MK3' # 'F' # 
 		'DDDD84' : 'D-6999',		 # 'Astir CS' # 'G8' # 'F' # 
 		'DDDD85' : 'OH-717',		 # 'LS-4' # 'KO' # 'F' # 
 		'DDDD86' : 'D-4282',		 # 'LS-8' # 'MP' # 'F' # 
@@ -13951,7 +14390,7 @@ kglid = {
 		'DDDD95' : 'F-CIBN',		 # 'SF-25' # 'BN' # 'F' # 
 		'DDDD9E' : 'NOREG',		 # 'Unknown' # 'AZ1' # 'F' # 
 		'DDDDA0' : 'OK-2694',		 # 'ASW-15' # 'Q1' # 'F' # 
-		'DDDDA1' : 'NOREG',		 # 'SZD-48-3 Jantar Std 3' # 'MB' # 'F' # 
+		'DDDDA1' : 'BER',		 # 'SZD-48-3 Jantar Std 3' # 'BER' # 'F' # 
 		'DDDDA3' : 'G-CIFU',		 # 'LS-4' # 'IZ' # 'F' # 
 		'DDDDA4' : 'D-9109',		 # 'PIK-20 B' # 'R6' # 'F' # 
 		'DDDDA6' : 'D-MOHY',		 # 'Ultralight' # '' # 'F' # 
@@ -13966,7 +14405,7 @@ kglid = {
 		'DDDDBA' : 'D-KSLS',		 # 'Discus t' # 'LS' # 'F' # 
 		'DDDDBB' : 'D-5838',		 # 'DG-100' # '' # 'F' # 
 		'DDDDC0' : 'D9340',		 # 'Ka-6 cr' # 'jab' # 'F' # 
-		'DDDDC1' : 'D-KBBF',		 # 'EB 28' # 'BF_' # 'F' # 
+		'DDDDC1' : 'D-KLMC',		 # 'DG-600' # 'MC' # 'F' # 
 		'DDDDC6' : 'PH1525',		 # 'DG-1000 T' # 'HD' # 'F' # 
 		'DDDDC7' : 'PH-1153',		 # 'Nimbus 4DM' # '4P' # 'F' # 
 		'DDDDCA' : 'D-2915',		 # 'ASG-29' # 'ZA' # 'F' # 
@@ -13976,9 +14415,11 @@ kglid = {
 		'DDDDDD' : 'D-KBRC',		 # 'ASH-31 MI' # 'RC' # 'F' # 
 		'DDDDDF' : 'NOREG',		 # 'Discus 2t' # 'TP' # 'F' # 
 		'DDDDE4' : 'D-4367',		 # 'LS-8 18' # 'TZ' # 'F' # 
+		'DDDDE8' : 'HA-4392',		 # 'SZD-30 Pirat' # '4L' # 'O' # 
 		'DDDDE9' : 'D-KIOH',		 # 'ASW-20' # 'OH' # 'F' # 
 		'DDDDEA' : 'OK-3118',		 # 'LS-8 18' # 'EJ' # 'F' # 
 		'DDDDED' : 'G-CHJS',		 # 'ASG-29E' # '601' # 'F' # 
+		'DDDDF4' : 'OK-1972',		 # 'Ventus 2cM' # 'JT' # 'F' # 
 		'DDDDF5' : 'OK-2345',		 # 'Duo Discus xt' # 'DD' # 'F' # 
 		'DDDDF6' : 'OH-982',		 # 'LAK-20 T' # '3G' # 'F' # 
 		'DDDDF9' : 'HA-3176',		 # 'Nimbus 4' # 'XX' # 'F' # 
@@ -14005,6 +14446,7 @@ kglid = {
 		'DDDE2F' : 'OY-OTX',		 # 'DG-808 C' # 'OT' # 'F' # 
 		'DDDE35' : 'OY-SEX',		 # 'LS-8' # 'SE' # 'F' # 
 		'DDDE36' : 'ZS-GCP',		 # 'JS-1 C18 Evo' # 'BAT' # 'F' # 
+		'DDDE37' : 'D-KMTW',		 # 'DG-808 B' # 'TW' # 'F' # 
 		'DDDE3B' : 'D-KUXS',		 # 'Discus 2cT' # 'F2' # 'F' # 
 		'DDDE3C' : '89',		 # 'DG-1000' # '89' # 'O' # 
 		'DDDE3D' : 'D-6520',		 # 'ASW-20' # 'MJ' # 'F' # 
@@ -14042,17 +14484,15 @@ kglid = {
 		'DDDE9D' : 'D-KIXZ',		 # 'Discus 2cT' # 'XZ' # 'I' # 
 		'DDDE9E' : 'D-8125',		 # 'Discus' # 'H25' # 'F' # 
 		'DDDEA5' : 'F-CGUO',		 # 'LS-6 18' # 'Z15' # 'F' # 
-		'DDDEA6' : 'D-KICS',		 # 'DG-808 C' # 'ICS' # 'F' # 
+		'DDDEA6' : 'NOREG',		 # '' # '' # 'F' # 
 		'DDDEA7' : 'F-JROJ',		 # 'Taurus' # 'OJ' # 'F' # 
 		'DDDEA9' : 'D-KGGN',		 # 'ASG-29E' # 'GN' # 'F' # 
 		'DDDEAA' : 'D-1389',		 # 'L-Spatz III' # '' # 'F' # 
 		'DDDEB5' : 'HB-2315',		 # 'ASW-24' # 'AS' # 'F' # 
-		'DDDEB7' : 'D-3129',		 # 'LS-1 f' # '6J' # 'F' # 
 		'DDDEB8' : 'OM-1010',		 # 'LS-10' # '10' # 'F' # 
 		'DDDEBA' : 'D-4536',		 # 'Duo Discus xl' # '36' # 'F' # 
 		'DDDEBB' : 'D-KUBA',		 # 'ASG-29E' # '2C' # 'F' # 
 		'DDDEC1' : 'D-KDCM',		 # 'Ventus 2cxM' # '' # 'F' # 
-		'DDDEC2' : 'D-KJMH',		 # 'Ventus 2CXa' # 'V2' # 'F' # 
 		'DDDEC3' : 'D-KSKX',		 # 'Ventus 2CXa' # 'KX' # 'F' # 
 		'DDDEC7' : 'OM-5555',		 # 'Ventus 2' # 'VI' # 'F' # 
 		'DDDECB' : 'SP-3994',		 # 'SZD-55' # 'M2' # 'F' # 
@@ -14060,7 +14500,6 @@ kglid = {
 		'DDDED0' : 'D-KVWR',		 # 'Nimbus 4DM' # 'WR' # 'F' # 
 		'DDDED3' : 'D-5865',		 # 'Glasflugel 304' # 'WW' # 'F' # 
 		'DDDED4' : 'G-KSSX',		 # 'ASG-29E' # 'SX' # 'F' # 
-		'DDDED9' : 'HB-2455',		 # 'Duo Discus t' # 'LM' # 'F' # 
 		'DDDEDA' : 'CC-AAE',		 # 'Nimbus 4DM' # 'AE' # 'F' # 
 		'DDDEDB' : 'D-KHAI',		 # 'Duo Discus xlt' # 'E2' # 'F' # 
 		'DDDEDD' : 'D-6819',		 # 'Ventus 2bx' # 'JOY' # 'F' # 
@@ -14098,14 +14537,16 @@ kglid = {
 		'DDDF33' : 'D-KIDM',		 # 'ASH-25 MI' # 'DM' # 'F' # 
 		'DDDF35' : 'D-3107',		 # 'Ventus 2' # 'O9' # 'F' # 
 		'DDDF36' : 'D-KXXH',		 # 'ASH-26 E' # 'XH' # 'F' # 
+		'DDDF38' : 'D-KXXH',		 # 'ASH-26 E' # 'FA' # 'F' # 
 		'DDDF3A' : 'D-KLTM',		 # 'ASG-29E' # 'MS' # 'F' # 
-		'DDDF3B' : 'OY-XVO',		 # 'ASG-29E' # '29' # 'F' # 
 		'DDDF3C' : 'PH-740',		 # 'LS-4' # 'G5' # 'F' # 
 		'DDDF3F' : 'D-KCLG',		 # 'ASH-31 MI' # 'LG' # 'F' # 
 		'DDDF43' : 'D-KRIB',		 # 'ASG-29E' # 'RI' # 'F' # 
 		'DDDF46' : 'D-KXMO',		 # 'Arcus T' # 'MO' # 'F' # 
 		'DDDF49' : 'OM-9119',		 # 'Duo Discus xlt' # 'DUO' # 'F' # 
+		'DDDF4B' : 'OK-8822',		 # 'Discus' # 'DK' # 'F' # 
 		'DDDF4F' : 'G-OTCZ',		 # 'Ventus 2cxT' # 'CZ' # 'F' # 
+		'DDDF52' : 'D-KMMV',		 # 'Ventus ct' # 'MV' # 'F' # 
 		'DDDF5A' : 'D-KWIX',		 # 'Discus 2cT' # 'IX' # 'F' # 
 		'DDDF5B' : 'SP_3908',		 # 'SZD-55' # 'HT' # 'F' # 
 		'DDDF5D' : 'D-1095',		 # 'Pegase' # 'V5' # 'F' # 
@@ -14114,7 +14555,6 @@ kglid = {
 		'DDDF62' : 'D-KVSA',		 # 'ASG-29E' # '3L' # 'F' # 
 		'DDDF65' : 'D-KBPM',		 # 'ASW-28t' # 'AB' # 'F' # 
 		'DDDF68' : 'D-KTRT',		 # 'Ventus 2ct' # 'Z9' # 'F' # 
-		'DDDF69' : 'D-KJAW',		 # 'ASG-29E' # '' # 'F' # 
 		'DDDF6A' : 'D-KSOB',		 # 'DG-808 B' # 'OB' # 'F' # 
 		'DDDF6B' : 'D-KWBE',		 # 'DG-808 B' # 'LK' # 'F' # 
 		'DDDF6E' : 'OE-5730',		 # 'DG-1000' # 'LE' # 'F' # 
@@ -14128,7 +14568,7 @@ kglid = {
 		'DDDF85' : 'PH-1031',		 # 'LS-6' # 'G9' # 'F' # 
 		'DDDF86' : 'OE-5634',		 # 'DG-303' # '3M' # 'F' # 
 		'DDDF89' : 'D-4363',		 # 'Ventus 2' # 'WB' # 'F' # 
-		'DDDF8B' : 'D-KTAX',		 # 'LS-8 st 18' # 'MP' # 'F' # 
+		'DDDF8B' : 'D-7682',		 # 'Mosquito' # 'AW' # 'F' # 
 		'DDDF8D' : 'D-KBFV',		 # 'Duo Discus xt' # '9S' # 'F' # 
 		'DDDF8E' : 'F-CJER',		 # 'ASG-29E' # 'AC' # 'F' # 
 		'DDDF8F' : 'D-4501',		 # 'Ventus 2' # 'DB' # 'F' # 
@@ -14163,7 +14603,7 @@ kglid = {
 		'DDDFED' : 'D-KBOH',		 # 'ASG-29E' # 'KB' # 'F' # 
 		'DDDFEE' : 'D-7748',		 # 'LS-6 18' # 'KK' # 'F' # 
 		'DDDFEF' : 'D-5966',		 # 'ASG-29' # 'GM' # 'F' # 
-		'DDDFF0' : 'GKUGG',		 # 'ASG-29E' # 'SG9' # 'F' # 
+		'DDDFF0' : 'SG9',		 # 'ASG-29E' # 'SG9' # 'F' # 
 		'DDDFF1' : 'F-CPLN',		 # 'Duo Discus xlt' # 'LN' # 'F' # 
 		'DDDFF3' : 'G-XASH',		 # 'ASH-31 MI' # 'A31' # 'F' # 
 		'DDDFF9' : 'VH-XYL',		 # 'JS-1 B Revelation' # 'F1' # 'F' # 
@@ -14188,7 +14628,6 @@ kglid = {
 		'DDE02D' : 'NOREG',		 # 'ASH-25 MI' # 'HO' # 'F' # 
 		'DDE02E' : 'D-KIXL',		 # 'Duo Discus xlt' # 'XL' # 'F' # 
 		'DDE037' : 'D-KUTT',		 # 'EB 28' # 'TT' # 'F' # 
-		'DDE123' : 'SE-UTS',		 # 'DG-1000' # 'TS' # 'F' # 
 		'DDE1A8' : 'OH-543',		 # 'ASK-21' # 'TIY' # 'F' # 
 		'DDE1A9' : 'G-CKCP',		 # 'Astir CS' # 'NG1' # 'F' # 
 		'DDE1AB' : 'OH-704',		 # 'ASK-23' # 'TC' # 'F' # 
@@ -14199,7 +14638,7 @@ kglid = {
 		'DDE1B1' : 'OO-YHH',		 # 'Pegase' # 'HH' # 'F' # 
 		'DDE1B2' : 'D-KBOS',		 # 'ASG-29' # 'OS' # 'F' # 
 		'DDE1B3' : 'G-DDJB',		 # 'Ka-8' # 'N11' # 'F' # 
-		'DDE1B4' : 'OY-JXA',		 # 'ASW-28 18' # '28' # 'F' # 
+		'DDE1B4' : 'OY-XNV',		 # 'LS-4' # 'V8' # 'F' # 
 		'DDE1B5' : 'G-DDNC',		 # 'Astir CS' # 'DNC' # 'F' # 
 		'DDE1B7' : 'D-7498',		 # 'Astir CS-77' # 'NA' # 'F' # 
 		'DDE1BB' : 'F-UMDO',		 # 'Jodel D140' # 'DO' # 'F' # 
@@ -14299,13 +14738,13 @@ kglid = {
 		'DDE27E' : 'D-KICD',		 # 'ASK-14' # 'PCD' # 'F' # 
 		'DDE27F' : 'F-BTPC',		 # 'Towplane' # 'PC' # 'F' # 
 		'DDE281' : 'PH-1282',		 # 'LS-4' # 'GO5' # 'F' # 
-		'DDE282' : 'F-CARN',		 # 'Astir Club' # '' # 'F' # 
+		'DDE282' : 'F-CIDE',		 # 'Duo Discus' # '' # 'F' # 
 		'DDE283' : 'F-CGUQ',		 # 'LS-6 18WJ' # '' # 'F' # 
+		'DDE286' : 'OO-YMF',		 # 'DG-100' # '' # 'F' # 
 		'DDE287' : 'HB-793',		 # 'Ka-6 e' # '793' # 'F' # 
 		'DDE288' : 'OO-YMF',		 # 'DG-100' # 'MF' # 'F' # 
 		'DDE289' : 'SE-UNP',		 # 'DG-1000' # 'NP' # 'F' # 
 		'DDE28A' : 'F-CBGP',		 # 'OldTimer' # 'BGP' # 'F' # 
-		'DDE28B' : 'F-CLRC',		 # 'ASH-25' # 'LRC' # 'F' # 
 		'DDE28C' : 'D-9239',		 # 'Kestrel' # '' # 'F' # 
 		'DDE28D' : 'F-CFYI',		 # 'Twin Astir II' # '' # 'F' # 
 		'DDE28E' : 'PH-1373',		 # 'SZD-51 Junior' # 'GO7' # 'F' # 
@@ -14320,7 +14759,7 @@ kglid = {
 		'DDE29E' : 'D-4898',		 # 'ASK-21' # '' # 'F' # 
 		'DDE29F' : 'G-CJST',		 # 'LS-1 c' # 'JST' # 'F' # 
 		'DDE2A0' : 'F-CFDH',		 # 'Discus' # '' # 'F' # 
-		'DDE2A1' : 'F-CIDE',		 # 'Duo Discus' # '' # 'F' # 
+		'DDE2A1' : 'F-CIDK',		 # 'Duo Discus' # '' # 'F' # 
 		'DDE2A2' : 'G-DERJ',		 # 'ASK-21' # 'R35' # 'F' # 
 		'DDE2A4' : 'F-CHLL',		 # 'Pegase' # '' # 'F' # 
 		'DDE2A6' : 'G-DHAA',		 # 'Libelle Std' # '263' # 'F' # 
@@ -14414,10 +14853,12 @@ kglid = {
 		'DDE34D' : 'NOREG',		 # 'Kestrel' # 'L33' # 'F' # 
 		'DDE34E' : 'D-5063',		 # 'Ventus' # '45' # 'F' # 
 		'DDE34F' : 'G-SRAH',		 # 'Mini Nimbus' # '147' # 'F' # 
+		'DDE351' : 'OH-484',		 # 'PIK-20 B' # '' # 'F' # 
 		'DDE352' : 'I-B525',		 # 'Silent 2 Electro' # 'LB' # 'F' # 
 		'DDE354' : 'OK-7744',		 # 'Ventus cM' # 'SW' # 'F' # 
 		'DDE355' : 'D-5109',		 # 'LS-4' # '4' # 'F' # 
 		'DDE356' : 'G-SANT',		 # 'Discus t' # 'SC' # 'F' # 
+		'DDE357' : 'SP-4024',		 # 'SZD-41 Jantar Std' # 'TO' # 'F' # 
 		'DDE359' : 'OK-2969',		 # 'Arcus M' # 'AR' # 'F' # 
 		'DDE35B' : 'VH-LKU',		 # 'PW-5' # 'LKU' # 'F' # 
 		'DDE35D' : 'VH-IUR',		 # 'Twin Astir II' # 'IUR' # 'F' # 
@@ -14461,13 +14902,10 @@ kglid = {
 		'DDE3AB' : 'G-CHPX',		 # 'Discus' # '693' # 'F' # 
 		'DDE3AF' : 'D-2584',		 # 'LS-6 18' # 'HW' # 'F' # 
 		'DDE3B4' : 'G-CHJV',		 # 'Astir CS' # 'LX' # 'F' # 
-		'DDE3B5' : 'G-CJKW',		 # 'Astir CS-77' # 'JKW' # 'F' # 
 		'DDE3B7' : 'NOREG',		 # 'ASW-20' # '751' # 'F' # 
-		'DDE3B8' : 'G-CITE',		 # 'Astir Jeans' # 'LPM' # 'F' # 
 		'DDE3B9' : 'G-DCHT',		 # 'ASW-15' # '846' # 'F' # 
 		'DDE3BB' : 'NO',		 # 'Different Aircraft' # 'GT' # 'F' # 
 		'DDE3BD' : 'G-CGBZ',		 # 'DG-500' # 'GBZ' # 'F' # 
-		'DDE3BE' : 'G-DBNH',		 # 'Ka-6 cr' # 'BNH' # 'F' # 
 		'DDE3C2' : 'G-CHLB',		 # 'LS-4' # '365' # 'F' # 
 		'DDE3C3' : 'NOREG',		 # 'Pegase' # '369' # 'F' # 
 		'DDE3C4' : 'OH-926',		 # 'DG-300' # 'O5' # 'F' # 
@@ -14486,10 +14924,7 @@ kglid = {
 		'DDE3D5' : 'HB-3384',		 # 'Duo Discus' # '84' # 'F' # 
 		'DDE3D7' : 'NOREG',		 # 'Nimbus 2 C' # 'N10' # 'F' # 
 		'DDE3D8' : 'F-UGBA',		 # 'Jodel D140' # 'BA' # 'F' # 
-		'DDE3DA' : 'G-CKAN',		 # 'SZD-50 Puchacz' # 'KAN' # 'F' # 
 		'DDE3DB' : 'PH-752',		 # 'DG-300' # 'MT' # 'F' # 
-		'DDE3DC' : 'G-MRVN',		 # 'SZD-50 Puchacz' # 'VN' # 'F' # 
-		'DDE3DE' : 'G-CFUY',		 # 'SZD-50 Puchacz' # 'FUY' # 'F' # 
 		'DDE3E0' : 'OE5740',		 # 'Astir Jeans' # 'WV' # 'F' # 
 		'DDE3E1' : 'HA-4484',		 # 'SZD-48-1 Jantar Std 2' # 'MA' # 'F' # 
 		'DDE3E2' : 'HA-4514',		 # 'SZD-48-1 Jantar Std 2' # 'MA' # 'F' # 
@@ -14532,9 +14967,6 @@ kglid = {
 		'DDE414' : 'G-DEOB',		 # 'SZD-30 Pirat' # 'EOB' # 'F' # 
 		'DDE415' : 'G-CHVM',		 # 'DG-300' # '393' # 'F' # 
 		'DDE416' : 'VH-RBG',		 # 'Twin Astir I' # 'RBG' # 'F' # 
-		'DDE418' : 'HB-1824',		 # 'LS-4' # 'FG' # 'F' # 
-		'DDE419' : 'HB-1841',		 # 'DG-300' # 'TU' # 'F' # 
-		'DDE41A' : 'HB-3256',		 # 'DG-505' # 'FO' # 'F' # 
 		'DDE41C' : 'I-KICO',		 # 'Kestrel' # '12' # 'F' # 
 		'DDE41E' : 'D-1668',		 # 'Ventus c' # 'CS' # 'F' # 
 		'DDE420' : 'G-CIKB',		 # 'Duo Discus xlt' # 'DD3' # 'F' # 
@@ -14547,7 +14979,7 @@ kglid = {
 		'DDE42C' : 'F-CKAJ',		 # 'ASK-21' # 'AJ' # 'F' # 
 		'DDE42E' : 'CC-KWK',		 # 'Blanik' # 'WK' # 'F' # 
 		'DDE42F' : 'CC-AMW',		 # 'Blanik' # 'MW' # 'F' # 
-		'DDE433' : 'GwZ',		 # 'Janus A' # 'WZ' # 'F' # 
+		'DDE433' : 'FFO',		 # 'Grob G109' # 'FFO' # 'F' # 
 		'DDE434' : 'G-CFUS',		 # 'SZD-51 Junior' # 'FUS' # 'F' # 
 		'DDE436' : 'D-2261',		 # 'LS-1 f' # 'CH' # 'F' # 
 		'DDE439' : 'OH-988',		 # 'ASG-29' # 'EZ' # 'F' # 
@@ -14659,7 +15091,6 @@ kglid = {
 		'DDE4D7' : 'G-CFYK',		 # 'LS-7' # '7R' # 'F' # 
 		'DDE4D8' : 'G-CJVM',		 # 'ASW-27' # 'GP' # 'F' # 
 		'DDE4D9' : 'G-DDZR',		 # 'IS-28B2' # 'DZR' # 'F' # 
-		'DDE4DC' : 'OH-907',		 # 'Discus 2' # 'JS' # 'F' # 
 		'DDE4DE' : 'D-5140',		 # 'Twin Astir II' # 'L1' # 'F' # 
 		'DDE4E1' : 'VH-IUR',		 # 'Twin Astir II' # 'IUR' # 'F' # 
 		'DDE4EA' : 'OH-417',		 # 'Libelle Std' # '72' # 'F' # 
@@ -14671,7 +15102,7 @@ kglid = {
 		'DDE4F1' : 'HA-4383',		 # 'SZD-30 Pirat' # '5V' # 'F' # 
 		'DDE4F4' : 'G-CHXB',		 # 'Astir CS-77' # '' # 'F' # 
 		'DDE4F5' : 'G-CKGF',		 # 'Duo Discus' # '233' # 'F' # 
-		'DDE4F7' : 'HA-5020',		 # 'IS-28B2' # 'BOB' # 'F' # 
+		'DDE4F7' : 'HA-SLF',		 # 'Cessna 172' # 'SLF' # 'F' # 
 		'DDE4F9' : 'D-7199',		 # 'Ka-7' # '' # 'F' # 
 		'DDE4FA' : 'D-3750',		 # 'ASW-19' # 'DB' # 'F' # 
 		'DDE592' : 'F-CJPI',		 # 'DG-800' # 'TI' # 'F' # 
@@ -14684,7 +15115,6 @@ kglid = {
 		'DDE5AC' : 'G-ONGC',		 # 'DR-400' # '' # 'F' # 
 		'DDE5AD' : 'SE-KVY',		 # 'Motorplane' # '82' # 'F' # 
 		'DDE5AE' : 'SE-UUO',		 # 'ASW-20' # 'AS' # 'F' # 
-		'DDE5B0' : 'SE-ITY',		 # 'PA-25 Pawnee' # 'TY' # 'F' # 
 		'DDE5B3' : 'OYXPD',		 # 'DG-400' # 'PD' # 'F' # 
 		'DDE5B5' : 'F-JXZN',		 # 'Taurus' # 'EZN' # 'F' # 
 		'DDE5B7' : 'NOREG',		 # 'HK36 Super Dimona' # 'QG' # 'F' # 
@@ -14772,6 +15202,7 @@ kglid = {
 		'DDE67C' : 'F-JVMI',		 # 'Ikarus C42 C' # '' # 'F' # 
 		'DDE67D' : 'ZE529',		 # 'Twin Astir II' # 'VR' # 'F' # 
 		'DDE68B' : 'G-BXJS',		 # 'Janus CM' # '' # 'F' # 
+		'DDE68D' : 'VH-GYM',		 # 'ASW-20' # 'GYM' # 'O' # 
 		'DDE68E' : 'G-CHUP',		 # 'Towplane' # 'UP' # 'F' # 
 		'DDE68F' : 'ZE632',		 # 'Twin Astir II' # 'XW' # 'F' # 
 		'DDE690' : 'ZE605',		 # 'Twin Astir II' # 'XE' # 'F' # 
@@ -14786,6 +15217,7 @@ kglid = {
 		'DDE6A3' : 'ZE682',		 # 'Twin Astir II' # 'YS' # 'F' # 
 		'DDE6A5' : 'ZE495',		 # 'Twin Astir II' # 'VA' # 'F' # 
 		'DDE6A7' : 'ZE521',		 # 'Twin Astir II' # 'VK' # 'F' # 
+		'DDE6A8' : 'ZE636',		 # 'Twin Astir II' # 'XZ' # 'F' # 
 		'DDE6A9' : 'ZE584',		 # 'Twin Astir II' # 'WP' # 'F' # 
 		'DDE6AC' : 'ZE628',		 # 'Twin Astir II' # 'XS' # 'F' # 
 		'DDE6AF' : 'ZE528',		 # 'Twin Astir II' # 'VQ' # 'F' # 
@@ -14835,6 +15267,7 @@ kglid = {
 		'DDE79F' : 'EC-DPE',		 # 'Twin Astir II' # 'PE' # 'F' # 
 		'DDE7A1' : 'HA-4402',		 # 'SZD-48-1 Jantar Std 2' # '37' # 'F' # 
 		'DDE7AA' : 'D-8244',		 # 'Std. Astir II' # 'D7' # 'F' # 
+		'DDE7B3' : 'D-MLPF',		 # 'Apis 2' # '' # 'F' # 
 		'DDE7B6' : 'D-KFFO',		 # 'Duo Discus t' # 'SD' # 'F' # 
 		'DDE7B8' : 'D-8181',		 # 'LS-7' # 'YC' # 'F' # 
 		'DDE7BB' : 'OE-5084',		 # 'Astir CS' # '' # 'F' # 
@@ -14883,16 +15316,17 @@ kglid = {
 		'DDE81F' : 'OKVUA07',		 # 'Banjo MH' # 'JS' # 'F' # 
 		'DDE820' : 'F-JBFE',		 # 'Sensation' # 'FE' # 'F' # 
 		'DDE821' : 'F-CMCM',		 # 'LAK-17B FES' # '50' # 'F' # 
+		'DDE828' : 'K-ACHT',		 # 'Unknown' # 'UT' # 'F' # 
 		'DDE829' : 'SP-3372',		 # 'SZD-42 Jantar 2/2b' # 'ZO' # 'F' # 
 		'DDE82A' : 'F-CCQK',		 # 'A60 Fauconnet' # 'QK' # 'F' # 
 		'DDE82B' : 'G-DDJD',		 # 'Astir CS' # 'DJD' # 'F' # 
 		'DDE82D' : 'D-3545',		 # 'LS-3' # '45' # 'F' # 
+		'DDE830' : 'D-3155',		 # 'ASW-20' # '3HT' # 'F' # 
 		'DDE831' : 'HB-1574',		 # 'LS-4' # 'M6' # 'F' # 
 		'DDE832' : 'zs-gfx',		 # 'JS-1 C18 Evo' # 'RZ' # 'F' # 
 		'DDE833' : 'NOREG',		 # 'JS-1 C18 Evo' # 'HAB' # 'F' # 
 		'DDE834' : 'D-3519',		 # 'Janus C' # 'GR' # 'F' # 
 		'DDE838' : 'ZK-GSW',		 # 'Ventus ct' # 'SW' # 'F' # 
-		'DDE846' : 'HB-3407',		 # 'Duo Discus' # 'ZO' # 'F' # 
 		'DDE84D' : 'D-KGHI',		 # 'ASK-21 MI' # '' # 'F' # 
 		'DDE84F' : 'F-CACC',		 # 'Twin Astir II' # 'T73' # 'F' # 
 		'DDE850' : 'D-6685',		 # 'LS-4' # '' # 'F' # 
@@ -14929,6 +15363,7 @@ kglid = {
 		'DDE9B8' : 'D-KMWH',		 # 'Ventus 2cxM' # 'CR' # 'F' # 
 		'DDE9B9' : 'G-CFTL',		 # 'ASW-20' # 'FTL' # 'F' # 
 		'DDE9BB' : 'F-CLFM',		 # 'ASW-27' # 'AM' # 'F' # 
+		'DDE9BD' : 'D-8302',		 # 'Nimbus 4D' # '8W' # 'F' # 
 		'DDE9BE' : 'D-7720',		 # 'Ventus' # 'AJ' # 'F' # 
 		'DDE9C1' : 'D-KKBX',		 # 'Duo Discus xlt' # 'BX' # 'F' # 
 		'DDE9C4' : 'D-KMBD',		 # 'Arcus M' # 'MBD' # 'F' # 
@@ -15013,7 +15448,7 @@ kglid = {
 		'DDEA73' : 'D-XXXX',		 # 'Unknown' # 'HB' # 'F' # 
 		'DDEA76' : 'D-1728',		 # 'ASW-28' # 'E1' # 'F' # 
 		'DDEA78' : 'D-KECA',		 # 'PIK-20 E' # '' # 'F' # 
-		'DDEA79' : 'NOREG',		 # '' # '' # 'F' # 
+		'DDEA79' : 'D-6299',		 # 'ASG-29' # 'X9' # 'F' # 
 		'DDEA7D' : 'D-KFCS',		 # 'ASH-25' # 'CS' # 'F' # 
 		'DDEA7E' : 'NOREG',		 # 'HPH 304S Shark' # 'KK' # 'F' # 
 		'DDEA7F' : 'D-9998',		 # 'Ventus 2' # 'TOM' # 'F' # 
@@ -15033,6 +15468,7 @@ kglid = {
 		'DDEA94' : 'D-KSAG',		 # 'ASH-25 MI' # 'AG' # 'F' # 
 		'DDEA98' : 'LN-GOM',		 # 'ASH-31 MI' # 'OM' # 'F' # 
 		'DDEA9D' : 'OY-XPV',		 # 'ASW-28' # 'PV' # 'F' # 
+		'DDEAA0' : 'FRBIDEN',		 # 'A60 Fauconnet' # 'A0' # 'F' # 
 		'DDEAA1' : 'D-MKGC',		 # 'Taurus' # 'GC' # 'F' # 
 		'DDEAA2' : 'D-KCBB',		 # 'PIK-20 E' # 'BB' # 'F' # 
 		'DDEAA3' : 'D-KDXL',		 # 'Duo Discus xlt' # 'XL' # 'F' # 
@@ -15063,7 +15499,7 @@ kglid = {
 		'DDEACE' : 'VHIHX',		 # 'Arcus M' # 'IHX' # 'F' # 
 		'DDEAD0' : 'h12oo3b',		 # 'Unknown' # '' # 'F' # 
 		'DDEAD5' : 'SM',		 # 'Quintus' # 'M' # 'F' # 
-		'DDEAD7' : 'D-2269',		 # 'ASK-13' # 'CD' # 'F' # 
+		'DDEAD7' : 'D-5569',		 # 'DG-1000' # 'CR' # 'F' # 
 		'DDEAD8' : 'Ebi',		 # 'Ventus 2cM' # 'CC' # 'F' # 
 		'DDEAD9' : 'G-CKDN',		 # 'ASW-27' # '15C' # 'F' # 
 		'DDEADD' : 'D-KTSS',		 # 'Ventus 2cxT' # 'DB' # 'F' # 
@@ -15120,7 +15556,6 @@ kglid = {
 		'DDEB47' : 'D-KFLH',		 # 'Ventus 2cxM' # 'LH' # 'F' # 
 		'DDEB49' : 'D-XXXX',		 # 'Unknown' # 'W92' # 'F' # 
 		'DDEB4B' : 'F-CMUR',		 # 'ASG-29E' # 'FLY' # 'F' # 
-		'DDEB4C' : 'NOREG',		 # 'EB 29' # 'EX' # 'F' # 
 		'DDEB4D' : 'D-KVKV',		 # 'Arcus T' # '2AS' # 'F' # 
 		'DDEB54' : 'PH-1515',		 # 'Nimbus 4' # '15' # 'F' # 
 		'DDEB56' : 'D-KKHL',		 # 'Antares 23 E' # 'HC' # 'F' # 
@@ -15136,7 +15571,8 @@ kglid = {
 		'DDEB70' : 'OK-1603',		 # 'Ventus c' # 'LS' # 'F' # 
 		'DDEB71' : 'OK-4114',		 # 'LS-4' # 'IX' # 'F' # 
 		'DDEB73' : 'D-2365',		 # 'LS-8' # 'ALV' # 'F' # 
-		'DDEB75' : 'G-CJKN',		 # 'LS-8 18' # '790' # 'F' # 
+		'DDEB75' : 'Flying',		 # 'LS-8 18' # 'NOT' # 'F' # 
+		'DDEB78' : 'OY-JXA',		 # 'ASW-28 18' # '28' # 'F' # 
 		'DDEB79' : 'D-KEWK',		 # 'EB 28' # 'WK' # 'F' # 
 		'DDEB7A' : 'OKSUQ51',		 # 'Taurus' # 'JK' # 'F' # 
 		'DDEB7B' : 'F-CMFA',		 # 'ASG-29' # 'BW' # 'F' # 
@@ -15171,11 +15607,11 @@ kglid = {
 		'DDEBC0' : 'PH-1520',		 # 'LS-8 st 18' # 'GX' # 'F' # 
 		'DDEBC1' : 'G-DCRN',		 # 'Cirrus Std' # '566' # 'F' # 
 		'DDEBC4' : 'D-1403',		 # 'ASW-19' # 'IWZ' # 'F' # 
-		'DDEBC5' : 'D-KLAP',		 # 'Janus CM' # '' # 'F' # 
 		'DDEBC8' : 'OK-1788',		 # 'Nimbus 3' # 'F' # 'F' # 
 		'DDEBC9' : 'OY-XUP',		 # 'Discus 2t' # 'AA' # 'F' # 
 		'DDEBCA' : 'PH-1439',		 # 'LS-8 18' # 'W8' # 'F' # 
 		'DDEBCB' : 'D-KSDG',		 # 'DG-1000 T' # 'YH' # 'F' # 
+		'DDEBCE' : 'G-XLII',		 # 'ASG-29E' # 'KM' # 'F' # 
 		'DDEBD0' : 'D-KJPC',		 # 'HPH 304S Shark' # '' # 'F' # 
 		'DDEBD2' : 'F-CFUS',		 # 'Nimbus 4DT' # 'US' # 'F' # 
 		'DDEBD6' : 'G-RIZK',		 # 'ASG-29E' # 'GP8' # 'F' # 
@@ -15200,7 +15636,7 @@ kglid = {
 		'DDEC0B' : 'VG-GCL',		 # 'Nimbus 3DM' # '' # 'F' # 
 		'DDEC0E' : 'D-XXHP',		 # 'Ventus ct' # 'HP' # 'F' # 
 		'DDEC13' : 'D-KOLG',		 # 'ASH-26 E' # 'OLE' # 'F' # 
-		'DDEC14' : 'D-2147',		 # 'Discus 2' # 'MM' # 'F' # 
+		'DDEC14' : 'D-2147',		 # 'Discus 2' # 'MMX' # 'F' # 
 		'DDEC19' : 'SE-UYA',		 # 'Arcus M' # '' # 'F' # 
 		'DDEC1A' : 'G-CJYD',		 # 'ASW-27' # 'T6' # 'F' # 
 		'DDEC1F' : 'D-2209',		 # 'LS-8' # 'X9' # 'F' # 
@@ -15283,7 +15719,8 @@ kglid = {
 		'DDECE3' : 'ZS-GBI',		 # 'JS-1 Revelation' # 'DY' # 'F' # 
 		'DDECE4' : 'G-CLOG',		 # 'ASG-29E' # 'OG' # 'F' # 
 		'DDECE5' : 'OK-1885',		 # 'Ventus 2cM' # 'LH' # 'F' # 
-		'DDECE6' : 'HB-2489',		 # 'Ventus 2cxT' # '3Z' # 'F' # 
+		'DDECE6' : 'NOREG',		 # '' # '' # 'F' # 
+		'DDECE7' : 'D-KYLS',		 # 'LS-8 st' # 'TC' # 'F' # 
 		'DDECE8' : 'D-KIZF',		 # 'ASH-31 MI' # 'ZF' # 'F' # 
 		'DDECEA' : 'HB-2520',		 # 'ASH-31 MI' # 'DK' # 'F' # 
 		'DDECED' : 'HB-3085',		 # 'LS-6 18' # 'ZQ' # 'F' # 
@@ -15297,7 +15734,6 @@ kglid = {
 		'DDECFA' : 'V-23',		 # 'Janus Ce' # 'V23' # 'F' # 
 		'DDECFC' : 'OH-1019',		 # 'ASG-29' # '19' # 'F' # 
 		'DDECFD' : 'D-KHBI',		 # 'ASG-29E' # 'KG' # 'F' # 
-		'DDED00' : 'NOREG',		 # '' # '' # 'F' # 
 		'DDED01' : 'HB-3024',		 # 'ASW-24' # 'AS' # 'F' # 
 		'DDED03' : 'D-0442',		 # 'LS-8 18' # 'ZM' # 'F' # 
 		'DDED04' : 'D-0897',		 # 'LS-8 18' # 'FX' # 'F' # 
@@ -15347,13 +15783,14 @@ kglid = {
 		'DDED5F' : 'HB-2514',		 # 'Ventus 2cxT' # 'QL' # 'F' # 
 		'DDED61' : 'HB-2508',		 # 'ASH-26 E' # '508' # 'F' # 
 		'DDED63' : 'ZK-GBF',		 # 'Arcus M' # 'BF' # 'F' # 
-		'DDED68' : 'D-KPLZ',		 # 'ASH-31 MI' # 'TJ' # 'F' # 
+		'DDED68' : 'D-KPLZ',		 # 'ASH-31 MI' # 'JT' # 'F' # 
 		'DDED69' : 'D-KAAJ',		 # 'ASH-31 MI' # 'AM' # 'F' # 
 		'DDED6C' : 'D-KJGS',		 # 'ASG-29E' # 'JG' # 'F' # 
 		'DDED6D' : 'D-KGET',		 # 'Ventus 2cxM' # 'ET' # 'F' # 
 		'DDED73' : 'NOREG',		 # '' # '' # 'F' # 
 		'DDED74' : 'NOREG',		 # 'ASG-29E' # '-1L' # 'F' # 
 		'DDED83' : 'S5-3046',		 # 'DG-300' # 'Y3' # 'F' # 
+		'DDED84' : 'OK-9092',		 # 'Pegase' # 'ZD' # 'F' # 
 		'DDED89' : 'S5-3047',		 # 'DG-100' # '11' # 'F' # 
 		'DDED8B' : 'HB-3267',		 # 'LS-8 18' # 'RL' # 'F' # 
 		'DDED8E' : 'HB-3439',		 # 'Duo Discus xl' # 'OH' # 'F' # 
@@ -15379,6 +15816,7 @@ kglid = {
 		'DDEDB8' : 'D-1975',		 # 'SZD-51 Junior' # 'CB' # 'F' # 
 		'DDEDB9' : 'D-KPER',		 # 'Ventus 2cxT' # 'RP' # 'F' # 
 		'DDEDBB' : 'D-8516',		 # 'Discus' # 'JE' # 'F' # 
+		'DDEDBC' : 'D-0771',		 # 'Libelle Std' # 'SL' # 'F' # 
 		'DDEDBD' : 'D-5298',		 # 'Ventus 2CX' # 'LA' # 'F' # 
 		'DDEDBE' : 'G-OLEC',		 # 'Silent 2 Electro' # 'LEC' # 'F' # 
 		'DDEDBF' : 'G-ILEW',		 # 'Arcus M' # 'LEW' # 'F' # 
@@ -15434,6 +15872,7 @@ kglid = {
 		'DDEE22' : 'G-STEM',		 # 'Stemme S-10' # 'S10' # 'F' # 
 		'DDEE23' : 'OK-2255',		 # 'LS-3' # 'R9' # 'F' # 
 		'DDEE24' : 'OK_4505',		 # 'LS-8 18' # 'ZB' # 'F' # 
+		'DDEE26' : 'VH-CHA',		 # 'Arcus M' # 'CHA' # 'F' # 
 		'DDEE27' : 'HB-2427',		 # 'Discus 2cT' # 'KG' # 'F' # 
 		'DDEE28' : 'OK-4304',		 # 'HPH 304S Shark' # 'ES' # 'F' # 
 		'DDEE2C' : 'NOREG',		 # '' # '' # 'F' # 
@@ -15442,6 +15881,7 @@ kglid = {
 		'DDEE34' : 'HB-3429',		 # 'ASG-29' # 'F' # 'F' # 
 		'DDEE35' : 'D-KKRG',		 # 'Ventus 2cxT' # 'RB' # 'F' # 
 		'DDEE37' : 'NOREG',		 # '' # '' # 'F' # 
+		'DDEE3A' : 'OK-1977',		 # 'DG-808 C' # 'MS' # 'F' # 
 		'DDEE3B' : 'OK-2053',		 # 'Cirrus Std' # 'DI' # 'F' # 
 		'DDEE3D' : 'VH-IXY',		 # 'Arcus M' # 'IXY' # 'F' # 
 		'DDEE3E' : '31E',		 # 'ASH-31 MI' # 'LR' # 'F' # 
@@ -15464,7 +15904,7 @@ kglid = {
 		'DDEE63' : 'F-CHEH',		 # 'Pegase' # 'FF' # 'F' # 
 		'DDEE66' : 'NOREG',		 # '' # '' # 'F' # 
 		'DDEE67' : 'CC-AAW',		 # 'Duo Discus t' # 'AW' # 'F' # 
-		'DDEE69' : 'D-2479',		 # 'Discus 2' # 'I' # 'F' # 
+		'DDEE69' : 'SP-4106',		 # 'Discus 2' # 'I' # 'F' # 
 		'DDEE6F' : 'SEUPI',		 # 'DG-600' # 'PI' # 'F' # 
 		'DDEE70' : 'D-KDCL',		 # 'ASG-32 MI' # 'CL' # 'F' # 
 		'DDEE71' : 'OK-9841',		 # 'Duo Discus' # '777' # 'F' # 
@@ -15472,6 +15912,7 @@ kglid = {
 		'DDEE73' : 'F-CGDX',		 # 'Duo Discus' # 'LW' # 'F' # 
 		'DDEE75' : 'G-CLGC',		 # 'Duo Discus' # 'LGC' # 'F' # 
 		'DDEE76' : 'D-xxME',		 # 'Ventus 2ct' # 'ME' # 'F' # 
+		'DDEE78' : 'F-CGKU',		 # 'ASH-25' # 'LL' # 'F' # 
 		'DDEE79' : 'F-CIJN',		 # 'Ventus 2' # 'EP' # 'F' # 
 		'DDEE7A' : 'HB-3325',		 # 'Ventus 2' # 'XI' # 'F' # 
 		'DDEE7D' : 'OK-4901',		 # 'Cirrus Std' # 'BB' # 'F' # 
@@ -15499,7 +15940,6 @@ kglid = {
 		'DDEEB6' : 'G-CLPU',		 # 'ASG-29E' # 'ES' # 'F' # 
 		'DDEEB7' : 'HB-3294',		 # 'LS-8' # 'NC' # 'F' # 
 		'DDEEB8' : 'D-KJOE',		 # 'HPH 304S Shark' # 'OE' # 'F' # 
-		'DDEEB9' : 'G-CJPI',		 # 'HPH 304S Shark' # 'PI' # 'F' # 
 		'DDEEBB' : 'D_KLON',		 # 'ASG-32 MI' # 'KG' # 'F' # 
 		'DDEEBF' : 'HB-3120',		 # 'LS-4' # 'O4' # 'F' # 
 		'DDEEC0' : 'GCLRH',		 # 'Glasflugel 304S' # 'V' # 'F' # 
@@ -15526,7 +15966,7 @@ kglid = {
 		'DDEEFC' : 'D-KTOF',		 # 'Discus 2c' # '921' # 'F' # 
 		'DDEEFE' : 'F-CLUB',		 # 'Ventus c' # 'M' # 'F' # 
 		'DDEF01' : 'D-KBBE',		 # 'Arcus T' # 'BE' # 'F' # 
-		'DDEF03' : 'G',		 # 'LS-8' # 'G' # 'F' # 
+		'DDEF03' : 'NOREG',		 # '' # '' # 'F' # 
 		'DDEF04' : 'D-2819',		 # 'LS-4' # 'DZ' # 'F' # 
 		'DDEF05' : 'G-REIN',		 # 'ASG-32 MI' # 'EIN' # 'F' # 
 		'DDEF06' : 'X-MMGR',		 # 'Experimental' # '' # 'F' # 
@@ -15582,13 +16022,12 @@ kglid = {
 		'DDEF72' : 'F-CFDU',		 # 'Discus 2c' # 'F1' # 'F' # 
 		'DDEF73' : 'D-KBTR',		 # 'DG-500' # 'BTR' # 'F' # 
 		'DDEF77' : 'NOREG',		 # 'Cirrus Std' # 'FW' # 'F' # 
-		'DDEF7B' : 'ZS-GXL',		 # 'JS-1 C21' # 'LEO' # 'F' # 
 		'DDEF7C' : 'OK-0130',		 # 'ASH-31 MI' # 'LH' # 'F' # 
 		'DDEF7D' : 'OK-4902',		 # 'Cirrus Std' # 'BW' # 'F' # 
 		'DDEF7E' : 'OK_1014',		 # 'LS-8a' # 'SK' # 'F' # 
-		'DDEF7F' : 'D-0867',		 # 'Arcus M' # '2D' # 'F' # 
+		'DDEF7F' : 'D-0867',		 # 'Arcus S' # '2D' # 'F' # 
 		'DDEF81' : 'D-KRLD',		 # 'ASH-25' # 'LN' # 'F' # 
-		'DDEF86' : 'HB-3115',		 # 'LS-6 18' # 'VI' # 'F' # 
+		'DDEF86' : 'NOREG',		 # '' # '' # 'F' # 
 		'DDEF89' : 'G-GSGS',		 # 'HPH 304S Shark' # 'GS' # 'F' # 
 		'DDEF8A' : 'G-CKCN',		 # 'ASW-27' # '700' # 'F' # 
 		'DDEF8B' : 'F-CFLX',		 # 'ASW-20' # 'LX' # 'F' # 
@@ -15704,13 +16143,13 @@ kglid = {
 		'DDF05D' : 'D-KJEB',		 # 'JS-1 C21' # 'EB' # 'F' # 
 		'DDF05F' : 'D-9004',		 # 'Duo Discus x' # 'PK' # 'F' # 
 		'DDF060' : 'HB-3146',		 # 'LS-6 18' # 'OY' # 'F' # 
-		'DDF061' : 'G-DFMG',		 # 'Discus' # 'NM' # 'F' # 
+		'DDF061' : 'NOREG',		 # '' # '' # 'F' # 
 		'DDF064' : 'D-3861',		 # 'ASW-20' # 'JPS' # 'F' # 
 		'DDF066' : 'OK-2016',		 # 'Duo Discus t' # 'ZS' # 'F' # 
 		'DDF068' : 'D-6085',		 # 'SB-10' # '14' # 'F' # 
 		'DDF069' : 'W75',		 # 'LS-6' # 'W75' # 'F' # 
 		'DDF06B' : 'G-CJTM',		 # 'LS-8' # '418' # 'F' # 
-		'DDF06C' : 'D-4215',		 # 'Discus 2' # 'Y' # 'F' # 
+		'DDF06C' : 'SP-4105',		 # 'Discus 2' # 'Y' # 'F' # 
 		'DDF06D' : 'LV-EMV',		 # 'DG-808 B' # 'MV' # 'F' # 
 		'DDF06E' : 'G-CJJT',		 # 'ASW-27' # '933' # 'F' # 
 		'DDF071' : 'D-MANS',		 # 'Silent 2 Electro' # 'AS' # 'F' # 
@@ -15723,7 +16162,6 @@ kglid = {
 		'DDF07E' : 'D-KHOG',		 # 'ASG-32 MI' # 'TB' # 'F' # 
 		'DDF07F' : 'D-KHBT',		 # 'Ventus 3T' # '2X' # 'F' # 
 		'DDF082' : 'F-CBPG',		 # 'ASG-29' # 'FB1' # 'F' # 
-		'DDF084' : 'OK-7393',		 # 'HPH 304S Shark' # 'TS' # 'F' # 
 		'DDF085' : 'G-IIOO',		 # 'ASG-29E' # 'MC' # 'F' # 
 		'DDF086' : 'D-BUEE',		 # 'ASH-25 MI' # 'HG' # 'F' # 
 		'DDF087' : 'NOREG',		 # 'Ventus 2cM' # 'OZ' # 'F' # 
@@ -15732,7 +16170,7 @@ kglid = {
 		'DDF08C' : 'OK-0330',		 # 'Nimbus 3' # '12' # 'F' # 
 		'DDF08E' : 'OK-2033',		 # 'ASG-32 MI' # 'DX' # 'F' # 
 		'DDF08F' : 'NOREG',		 # 'LAK-17 A' # 'VG' # 'F' # 
-		'DDF092' : 'D-KUNT',		 # 'LS-8 st 18' # 'HM' # 'F' # 
+		'DDF092' : 'OK-3713',		 # 'Ventus 2ct' # '14' # 'F' # 
 		'DDF093' : 'OK-2112',		 # 'Ventus c' # 'WL' # 'F' # 
 		'DDF094' : 'D-KXVH',		 # 'DG-800' # 'VH' # 'F' # 
 		'DDF095' : 'HA-3174',		 # 'Nimbus 3' # 'CC' # 'F' # 
@@ -15764,12 +16202,11 @@ kglid = {
 		'DDF0BF' : 'HB-902',		 # 'Elfe S4' # '92' # 'F' # 
 		'DDF0C0' : 'D-KRME',		 # 'Nimbus 4DM' # 'MF' # 'F' # 
 		'DDF0C1' : 'D-KTHM',		 # 'DG-808 C' # 'H1' # 'F' # 
-		'DDF0C3' : 'OH-975',		 # 'ASG-29E' # 'WS' # 'F' # 
 		'DDF0C4' : 'HB-3011',		 # 'LS-4' # 'OV' # 'F' # 
 		'DDF0D0' : 'F-CIME',		 # 'Duo Discus' # 'ME' # 'F' # 
 		'DDF0D4' : 'G-FESX',		 # 'Discus 2cT' # 'X' # 'F' # 
 		'DDF0D7' : 'OK-2230',		 # 'Ventus cM' # 'RK' # 'F' # 
-		'DDF0D8' : 'D-KMTM',		 # 'JS-3 18M' # 'XM' # 'F' # 
+		'DDF0D8' : 'OK-3883',		 # 'JS-3 18M' # 'XM' # 'F' # 
 		'DDF0D9' : 'G_CKRV',		 # 'ASG-29E' # '607' # 'F' # 
 		'DDF0DA' : 'OM-9969',		 # 'Arcus M' # 'CAR' # 'F' # 
 		'DDF0DB' : 'NOREG',		 # 'Cirrus Std' # 'LM' # 'F' # 
@@ -15777,11 +16214,10 @@ kglid = {
 		'DDF0DE' : 'CC-ASZ',		 # 'DG-1000' # 'SZ' # 'F' # 
 		'DDF0E2' : 'I-C816',		 # 'Taurus' # 'FV' # 'F' # 
 		'DDF0E3' : 'HB-3445',		 # 'LAK-17 B' # '' # 'F' # 
-		'DDF0E7' : 'F-CPAH',		 # 'JS-1 C18 Evo' # 'AH2' # 'F' # 
+		'DDF0E7' : 'F-CPAH',		 # 'JS-1 C18 Evo' # 'AH1' # 'F' # 
 		'DDF0E8' : 'LV-EOO',		 # 'ASW-20' # 'ZC' # 'F' # 
 		'DDF0EA' : 'NO',		 # 'GP 14 SE Velo' # 'AB' # 'F' # 
 		'DDF0ED' : 'G-CLES',		 # 'ASG-29E' # 'AB' # 'F' # 
-		'DDF0EE' : 'D-KSTM',		 # 'JS-3 18M' # 'AX' # 'F' # 
 		'DDF0EF' : 'HB-3180',		 # 'DG-800' # '1G' # 'F' # 
 		'DDF0F1' : 'HB-35XX',		 # 'ASG-32 MI' # '3V' # 'F' # 
 		'DDF0F2' : 'G-CLUZ',		 # 'Discus 2cT' # 'XL5' # 'F' # 
@@ -15793,11 +16229,11 @@ kglid = {
 		'DDF0FD' : 'ZS_GFC',		 # 'JS-3 18M' # 'OG' # 'F' # 
 		'DDF0FE' : 'ZS-GFF',		 # 'JS-3 18M' # 'LG' # 'F' # 
 		'DDF101' : 'HB-3421',		 # 'Ventus 2CX' # '3L' # 'F' # 
+		'DDF105' : 'LV-ECL',		 # 'LS-8a' # 'PL' # 'F' # 
 		'DDF106' : 'D-5471',		 # 'Ventus 2' # 'Ac4' # 'F' # 
 		'DDF108' : 'D-3144',		 # 'LS-4' # 'BC' # 'F' # 
 		'DDF10E' : 'G-XWON',		 # 'LS-8 18' # 'S8' # 'F' # 
 		'DDF10F' : 'D-2108',		 # 'DG-300' # '' # 'F' # 
-		'DDF110' : 'NOREG',		 # '' # '' # 'F' # 
 		'DDF111' : 'D-KHEM',		 # 'Ventus ct' # 'KW' # 'F' # 
 		'DDF113' : 'D-4872',		 # 'LS-8' # 'X' # 'F' # 
 		'DDF114' : 'G-CILS',		 # 'LS-10' # 'TT' # 'F' # 
@@ -15854,7 +16290,7 @@ kglid = {
 		'DDF943' : 'F-CEYN',		 # 'SF-28' # '' # 'F' # 
 		'DDF944' : 'CC-LWE',		 # 'Nimbus 4' # 'WE' # 'F' # 
 		'DDF947' : 'F-BNSX',		 # 'MS-893 Commodore' # 'SX' # 'F' # 
-		'DDF948' : 'D-8657',		 # 'Ka-8' # '' # 'F' # 
+		'DDF948' : 'D-8657',		 # 'Ka-8' # '57' # 'F' # 
 		'DDF94B' : 'F-GABK',		 # 'DR-400' # 'BK' # 'F' # 
 		'DDF94D' : 'F-CFYC',		 # 'Twin Astir II' # '' # 'F' # 
 		'DDF950' : 'F-JSLG',		 # 'Jodel D18' # '' # 'F' # 
@@ -15954,7 +16390,6 @@ kglid = {
 		'DDFA05' : 'D-0084',		 # 'Unknown' # '' # 'F' # 
 		'DDFA06' : 'F-CMJO',		 # 'LS-4 W' # 'JO' # 'F' # 
 		'DDFA09' : 'F-CGME',		 # 'Marianne' # 'ME' # 'F' # 
-		'DDFA0B' : 'D-7499',		 # 'Speed Astir II' # 'MY' # 'F' # 
 		'DDFA0D' : 'CC-KWM',		 # 'Blanik' # 'WM' # 'F' # 
 		'DDFA0E' : 'F-CFKS',		 # 'Twin Astir II' # 'KS' # 'F' # 
 		'DDFA10' : 'PH-1633',		 # 'Libelle Club' # '33' # 'F' # 
@@ -15972,7 +16407,7 @@ kglid = {
 		'DDFA31' : 'F-BIZE',		 # 'Jodel D140' # '' # 'F' # 
 		'DDFA33' : 'MQFW',		 # 'Astir Jeans' # 'WMQ' # 'F' # 
 		'DDFA3A' : 'D-8518',		 # 'ASW-27' # 'MT' # 'F' # 
-		'DDFA3B' : 'VH-GMD',		 # 'DG-400' # 'GMD' # 'F' # 
+		'DDFA3B' : 'VH-GMD',		 # 'DG-400' # '.MD' # 'F' # 
 		'DDFA3D' : 'M-ZELL',		 # 'Cessna 208' # 'ELL' # 'F' # 
 		'DDFA3E' : 'D-2836',		 # 'LS-8 18' # 'XH' # 'F' # 
 		'DDFA3F' : 'F-CHEV',		 # 'Pegase' # 'EV' # 'F' # 
@@ -16047,6 +16482,7 @@ kglid = {
 		'DDFAE4' : 'F-CJBA',		 # 'Alliance 34' # '' # 'F' # 
 		'DDFAE5' : 'D-7643',		 # 'SZD-50 Puchacz' # '' # 'F' # 
 		'DDFAE6' : 'MO1',		 # 'Baby' # 'MO1' # 'F' # 
+		'DDFAEA' : 'G-CJXM',		 # 'ASK-13' # 'JXM' # 'F' # 
 		'DDFAED' : 'D-2719',		 # 'ASK-21' # 'AD' # 'F' # 
 		'DDFAEE' : 'CC-LWD',		 # 'Ventus' # '3' # 'F' # 
 		'DDFAEF' : 'F-CITV',		 # 'ASK-21' # '' # 'F' # 
@@ -16057,7 +16493,7 @@ kglid = {
 		'DDFAF9' : 'D-7500',		 # 'Pilatus B4' # 'XK' # 'F' # 
 		'DDFAFA' : 'BWFL1',		 # 'Different Aircraft' # '1BW' # 'F' # 
 		'DDFAFB' : '73PU',		 # 'Phoenix' # '' # 'F' # 
-		'DDFAFD' : 'D-KGSW',		 # 'Ventus cM' # 'R1' # 'F' # 
+		'DDFAFD' : 'NOREG',		 # '' # '' # 'F' # 
 		'DDFB00' : 'D-0725',		 # 'LS-1 c' # '' # 'F' # 
 		'DDFB02' : 'D-KHSO',		 # 'LAK-17 AT' # '5B' # 'F' # 
 		'DDFB03' : 'D-5776',		 # 'Duo Discus' # 'RA' # 'F' # 
@@ -16125,7 +16561,7 @@ kglid = {
 		'DDFD33' : 'F-CGHK',		 # 'Pegase' # 'E17' # 'F' # 
 		'DDFD34' : 'F-GOSP',		 # 'Pilatus PC-6' # '' # 'F' # 
 		'DDFD35' : 'F-GDKL',		 # 'DR-400' # 'KL' # 'F' # 
-		'DDFD36' : 'D-8958',		 # 'LS-4' # '' # 'F' # 
+		'DDFD36' : 'D-8958',		 # 'LS-4' # '58' # 'F' # 
 		'DDFD38' : 'D-3273',		 # 'Astir CS' # 'BL' # 'F' # 
 		'DDFD3B' : 'NOREG',		 # 'Helicopter' # 'SAF' # 'F' # 
 		'DDFD3C' : 'F-BSVX',		 # 'MS-893 Commodore' # 'VX' # 'F' # 
@@ -16169,9 +16605,8 @@ kglid = {
 		'DDFDB3' : 'D-9221',		 # 'LS-1 d' # 'EO' # 'F' # 
 		'DDFDBB' : 'D-5163',		 # 'LS-7' # '' # 'F' # 
 		'DDFDBE' : 'D-5156',		 # 'Mini Nimbus' # '7X' # 'F' # 
-		'DDFDC0' : 'D-0131',		 # 'DG-300' # 'TM' # 'I' # 
+		'DDFDC0' : 'D-KGAQ',		 # 'SF-25' # '' # 'I' # 
 		'DDFDC1' : 'D-1757',		 # 'Ka-8' # '' # 'F' # 
-		'DDFDC2' : 'D-3179',		 # 'LS-4' # 'SB' # 'F' # 
 		'DDFDC5' : 'D-6312',		 # 'Nimbus 3D' # 'X6' # 'F' # 
 		'DDFDC6' : 'I-IVVS',		 # 'Std. Astir III' # '' # 'F' # 
 		'DDFDC7' : 'F-CEXG',		 # 'Astir CS' # 'XG' # 'F' # 
@@ -16200,7 +16635,7 @@ kglid = {
 		'DDFDF8' : 'D-KARF',		 # 'SF-25' # 'RF' # 'F' # 
 		'DDFDFE' : 'D-9023',		 # 'Ventus 2bx' # 'JT' # 'F' # 
 		'DDFDFF' : 'D-6529',		 # 'ASW-19' # '9T' # 'F' # 
-		'DDFE03' : 'D-8979',		 # 'ASK-21' # '79' # 'F' # 
+		'DDFE03' : 'NOREG',		 # '' # '' # 'F' # 
 		'DDFE06' : 'D-6909',		 # 'Twin Astir II' # '09' # 'F' # 
 		'DDFE0C' : 'D-6343',		 # 'DG-300' # 'ZX' # 'F' # 
 		'DDFE0D' : 'OK-3907',		 # 'Cirrus Std' # 'REX' # 'F' # 
@@ -16226,7 +16661,7 @@ kglid = {
 		'DDFE3D' : 'D-0651',		 # 'Astir CS' # '' # 'F' # 
 		'DDFE3F' : 'D-9861',		 # 'DG-300' # 'BC' # 'F' # 
 		'DDFE40' : 'SP-0085',		 # 'H36 Dimona' # 'S85' # 'F' # 
-		'DDFE42' : 'W70',		 # 'Other' # 'W70' # 'F' # 
+		'DDFE42' : 'D-3600',		 # 'Libelle Std' # 'AL' # 'F' # 
 		'DDFE47' : 'F-CEGA',		 # 'ASK-13' # 'GA' # 'F' # 
 		'DDFE48' : 'F-CBLL',		 # 'Marianne' # 'LL' # 'F' # 
 		'DDFE49' : 'D-2563',		 # 'LS-3' # 'DJ' # 'F' # 
@@ -16244,6 +16679,7 @@ kglid = {
 		'DDFE75' : 'OO-YBY',		 # 'Twin Astir II' # 'B1' # 'F' # 
 		'DDFE79' : 'D-KPGC',		 # 'Duo Discus t' # 'BT' # 'F' # 
 		'DDFE7C' : 'D-1973',		 # 'ASW-24' # 'M8' # 'F' # 
+		'DDFE7F' : 'D-4701',		 # 'DG-100' # 'SI' # 'F' # 
 		'DDFE83' : 'D2254',		 # 'LS-1 f' # 'HR' # 'F' # 
 		'DDFE85' : 'D-0585',		 # 'Discus' # 'BU' # 'F' # 
 		'DDFE8A' : 'D-KTTM',		 # 'Nimbus 3' # 'YA' # 'F' # 
@@ -16252,7 +16688,6 @@ kglid = {
 		'DDFE8E' : 'OK-7774',		 # 'Astir CS-77' # 'AS' # 'F' # 
 		'DDFE90' : 'D-8455',		 # 'Astir Club' # '' # 'F' # 
 		'DDFE93' : 'D-KKPE',		 # 'A380' # 'PE' # 'F' # 
-		'DDFF32' : 'PH-859',		 # 'LS-4' # 'G8' # 'F' # 
 		'DDFF98' : 'PH-ENJ',		 # 'PA-18 Super Cub' # 'PNJ' # 'O' # 
 		'DDFF99' : 'PH-1600',		 # 'HK36 Super Dimona' # 'P00' # 'F' # 
 		'DE007A' : 'D-EKNI',		 # 'MS-892 Commodore' # '' # 'F' # 
@@ -16276,7 +16711,7 @@ kglid = {
 		'DE0569' : 'F-CHKA',		 # 'Pegase' # '' # 'F' # 
 		'DE05B7' : 'DAB',		 # 'UFO' # 'DAB' # 'F' # 
 		'DE05BE' : 'G-CLVZ',		 # 'Pegase' # '' # 'F' # 
-		'DE05D1' : 'C-FGIV',		 # 'Bellanca Citabria' # '' # 'F' # 
+		'DE05D1' : 'C-GYSG',		 # 'Maule M-7-235' # '' # 'F' # 
 		'DE05D3' : 'C-GDUQ',		 # 'SZD-50 Puchacz' # '' # 'F' # 
 		'DE05D4' : 'C-GSZD',		 # 'SZD-54 Perkoz' # '' # 'F' # 
 		'DE061D' : 'HB-WYY',		 # 'Remos GX' # 'WYY' # 'F' # 
@@ -16290,7 +16725,7 @@ kglid = {
 		'DE066C' : 'D-KBFR',		 # 'Grob G109' # 'FR' # 'F' # 
 		'DE067C' : 'D-HALU',		 # 'Robinson R44' # '' # 'F' # 
 		'DE0683' : 'NOREG',		 # 'ASK-21' # 'R19' # 'F' # 
-		'DE0729' : 'G-BUXY',		 # 'PA-25 Pawnee' # 'XY' # 'F' # 
+		'DE0729' : 'G-BUXY',		 # 'PA-25 Pawnee' # 'XY' # 'I' # 
 		'DE0735' : 'NOREG',		 # 'LAK-17 A' # 'US' # 'F' # 
 		'DE074E' : 'BYE',		 # 'Olympia 463' # '' # 'F' # 
 		'DE0778' : 'D-9463',		 # 'Libelle Club' # '6i' # 'F' # 
@@ -16324,6 +16759,7 @@ kglid = {
 		'DF01B3' : 'C-GUCD',		 # 'PA-25 Pawnee' # '' # 'F' # 
 		'DF01B5' : 'C-GJCR',		 # 'LS-4' # '' # 'F' # 
 		'DF01B9' : 'C-GCTN',		 # 'ASW-20' # 'JG' # 'F' # 
+		'DF01BD' : 'N224JR',		 # 'ASW-24' # 'OJ' # 'F' # 
 		'DF0203' : 'C-GBPA',		 # 'HK36 Super Dimona' # '' # 'F' # 
 		'DF0206' : 'C-GRKX',		 # 'ASW-20' # 'KX' # 'F' # 
 		'DF0226' : 'D8664',		 # 'Ventus 2CX' # 'LE' # 'F' # 
@@ -16345,12 +16781,14 @@ kglid = {
 		'DF0283' : 'D-KKGN',		 # 'Arcus T' # 'GN' # 'F' # 
 		'DF0284' : 'D-KSWE',		 # 'Ventus 2cxM' # 'WE' # 'F' # 
 		'DF028A' : 'D-EBCW',		 # 'Cessna 172' # 'CW' # 'F' # 
+		'DF028D' : 'F-CPHA',		 # 'Duo Discus' # '' # 'F' # 
 		'DF0291' : 'D-KXBS',		 # 'DG-808 C' # 'HR' # 'F' # 
 		'DF02A1' : 'W11',		 # 'Hornet' # 'W11' # 'F' # 
 		'DF02BE' : 'D-ESBG',		 # 'Cessna 172' # 'BG' # 'F' # 
 		'DF02C6' : 'D-6154',		 # 'Ventus 2bx' # 'CC' # 'F' # 
 		'DF02CA' : 'D-KDPS',		 # 'HK36 Super Dimona' # '' # 'F' # 
-		'DF02D4' : 'D-KDMO',		 # 'ASG-29E' # 'MX' # 'F' # 
+		'DF02D2' : 'OY-ZAX',		 # 'Discus 2' # 'AX' # 'F' # 
+		'DF02D4' : 'D-KDMO',		 # 'ASG-29E' # 'MAX' # 'F' # 
 		'DF02DF' : 'F-CILM',		 # 'LAK-17 AT' # 'LM' # 'F' # 
 		'DF02E1' : 'D-KIBG',		 # 'miniLAK FES' # '' # 'F' # 
 		'DF02E8' : 'G-CEVD',		 # 'LS-3' # '382' # 'F' # 
@@ -16470,10 +16908,12 @@ kglid = {
 		'DF0875' : 'D-KPAX',		 # 'Arcus M' # '61' # 'F' # 
 		'DF0879' : 'D-2155',		 # 'ASK-21' # '' # 'F' # 
 		'DF087A' : 'G-CFLW',		 # 'Cirrus Std' # 'SL' # 'F' # 
+		'DF087E' : 'I-AEGR',		 # 'Towplane' # '' # 'F' # 
 		'DF0883' : 'D-1096',		 # 'Libelle Std' # 'WA' # 'F' # 
-		'DF0889' : 'D-KBFX',		 # 'Ventus ct' # 'FX' # 'F' # 
 		'DF088C' : 'D-KEIC',		 # 'Duo Discus' # 'IC' # 'F' # 
+		'DF088E' : 'D-9110',		 # 'HPH 304CZ-17' # 'IPB' # 'F' # 
 		'DF0890' : 'D-7076',		 # 'Discus' # 'TM' # 'F' # 
+		'DF0893' : 'D-KKKP',		 # 'DG-505' # '7F' # 'F' # 
 		'DF0898' : 'D-7564',		 # 'ASW-19' # 'ZB' # 'F' # 
 		'DF089A' : 'OO-ZBJ',		 # 'Ka-6 e' # '' # 'F' # 
 		'DF089E' : 'F-CPSL',		 # 'DG-1000' # '' # 'F' # 
@@ -16484,11 +16924,12 @@ kglid = {
 		'DF08B1' : 'D-4067',		 # 'Ka-6 cr' # '' # 'F' # 
 		'DF08B3' : 'D-0804',		 # 'DG-1000' # 'ALS' # 'F' # 
 		'DF08B4' : 'D-3761',		 # 'LS-8a' # '8A' # 'F' # 
+		'DF08B7' : 'D-9103',		 # 'Ventus c' # 'FM' # 'F' # 
 		'DF08BA' : 'D-1199',		 # 'DG-300' # 'IFF' # 'F' # 
 		'DF08BE' : 'D-2383',		 # 'Ka-8' # '' # 'F' # 
 		'DF08C3' : 'D-0345',		 # 'ASK-13' # '' # 'F' # 
 		'DF08C6' : 'D-2340',		 # 'Discus 2c' # 'B1' # 'F' # 
-		'DF08C7' : 'NOREG',		 # 'Towplane' # '-wv' # 'F' # 
+		'DF08C7' : 'NOREG',		 # '' # '' # 'F' # 
 		'DF08CC' : '_fu',		 # 'Motorglider' # '_fu' # 'F' # 
 		'DF08CE' : 'D-3252',		 # 'LS-1 f' # 'VS' # 'F' # 
 		'DF08CF' : 'D-9871',		 # 'Ventus' # 'ALX' # 'F' # 
@@ -16504,13 +16945,11 @@ kglid = {
 		'DF0925' : 'D-EGBH',		 # 'DR-400' # 'BH' # 'F' # 
 		'DF0929' : 'D-7152',		 # 'Duo Discus xl' # 'BH' # 'F' # 
 		'DF0930' : 'D-KRPT',		 # 'Arcus M' # 'PT' # 'F' # 
-		'DF0934' : 'D-7771',		 # 'SB-5 e' # '71' # 'F' # 
 		'DF0947' : 'T7-MFW',		 # 'Ultralight' # '' # 'F' # 
 		'DF0957' : 'VH-HDL',		 # 'LS-4' # 'HDL' # 'F' # 
 		'DF0981' : 'D-6998',		 # 'LS-8' # '98' # 'F' # 
 		'DF0986' : 'D-KBLV',		 # 'Discus 2cT' # 'LV' # 'F' # 
 		'DF0987' : 'F-CLDD',		 # 'Arcus S' # 'CA' # 'F' # 
-		'DF0994' : 'F-CZCX',		 # 'Arcus S' # 'CX' # 'F' # 
 		'DF09B5' : 'VH-VWR',		 # 'DG-1000' # 'VWR' # 'F' # 
 		'DF09B9' : 'VH-LAQ',		 # 'LAK 19' # 'AQ' # 'F' # 
 		'DF09C6' : 'VH-VWP',		 # 'ASG-29E' # 'WP' # 'F' # 
@@ -16527,7 +16966,7 @@ kglid = {
 		'DF0A24' : 'D-4331',		 # 'LS-4' # 'P3' # 'F' # 
 		'DF0A25' : 'D-KILI',		 # 'Arcus M' # 'V9' # 'F' # 
 		'DF0A2A' : 'D-2061',		 # 'Discus 2' # 'Vne' # 'F' # 
-		'DF0A2B' : 'D-1165',		 # 'ASK-21' # 'ASK' # 'F' # 
+		'DF0A2B' : 'D-6041',		 # 'LS-4' # 'H2' # 'F' # 
 		'DF0A2D' : 'D-1034',		 # 'ASW-24' # 'IAM' # 'F' # 
 		'DF0A3A' : 'NOREG',		 # 'A380' # '001' # 'F' # 
 		'DF0A41' : 'G-CJMN',		 # 'Nimbus 2' # '636' # 'F' # 
@@ -16550,7 +16989,6 @@ kglid = {
 		'DF0AD8' : 'D-7020',		 # 'Hornet' # 'H1' # 'F' # 
 		'DF0ADF' : '13',		 # 'DG-1000' # '13' # 'F' # 
 		'DF0AE7' : 'OE-5619',		 # 'LS-4' # 'O19' # 'F' # 
-		'DF0AEA' : 'D-KMII',		 # 'Ventus bT' # 'V' # 'F' # 
 		'DF0AEF' : 'D-6971',		 # 'DG-1000' # 'YD' # 'F' # 
 		'DF0AF2' : 'D-KPIK',		 # 'PIK-20 E' # 'PI' # 'F' # 
 		'DF0AF7' : 'D-0723',		 # 'LS-4' # '23' # 'F' # 
@@ -16559,7 +16997,6 @@ kglid = {
 		'DF0B08' : 'G-EHAV',		 # 'Libelle Std' # 'J34' # 'F' # 
 		'DF0B0F' : 'D-0845',		 # 'Libelle Std' # 'Y6' # 'F' # 
 		'DF0B10' : 'SE-UUI',		 # 'LS-8 st' # 'L3' # 'F' # 
-		'DF0B16' : 'HB-3332',		 # 'Ventus 2' # 'HX' # 'F' # 
 		'DF0B1C' : 'D-KFPE',		 # 'ASH-31 MI' # 'PE' # 'F' # 
 		'DF0B1E' : 'D-KBST',		 # 'Duo Discus xlt' # 'ST' # 'F' # 
 		'DF0B22' : 'D-1565',		 # 'Discus' # 'SL' # 'F' # 
@@ -16599,7 +17036,7 @@ kglid = {
 		'DF0BF9' : 'ZK-GHG',		 # 'ASH-31 MI' # 'HG' # 'F' # 
 		'DF0BFF' : 'D-KHMA',		 # 'Antares 18 T' # 'BT' # 'F' # 
 		'DF0C07' : 'D-KPRD',		 # 'Arcus M' # 'RD' # 'F' # 
-		'DF0C0E' : 'D-7456',		 # 'Ventus 2CX' # 'WV' # 'F' # 
+		'DF0C1B' : 'D-KAWD',		 # 'Duo Discus xlt' # 'WD' # 'F' # 
 		'DF0C1F' : 'D-7174',		 # 'Ventus 2' # '7v' # 'F' # 
 		'DF0C24' : 'NOREG',		 # 'Blanik' # '00' # 'F' # 
 		'DF0C37' : 'D-KPGM',		 # 'Ventus 2cxM' # 'GM' # 'F' # 
@@ -16635,6 +17072,7 @@ kglid = {
 		'DF0D62' : 'G-BBNA',		 # 'DHC-1 Chipmunk' # 'NA' # 'F' # 
 		'DF0D66' : 'F-COCO',		 # 'SZD-51 Junior' # '' # 'F' # 
 		'DF0D6D' : 'D-KXFF',		 # 'ASH-31 MI' # 'SKY' # 'F' # 
+		'DF0D6F' : 'D-KTHA',		 # 'Ventus 2cM' # 'HA' # 'F' # 
 		'DF0D72' : 'G-HBOS',		 # 'Motorglider' # 'BOS' # 'F' # 
 		'DF0D73' : 'F-CVTS',		 # 'Ventus 2' # 'LX' # 'F' # 
 		'DF0D75' : 'G-BCOY',		 # 'DHC-1 Chipmunk' # 'OY' # 'F' # 
@@ -16644,7 +17082,6 @@ kglid = {
 		'DF0DBA' : 'D-KBCS',		 # 'Ventus 2cM' # 'CU' # 'F' # 
 		'DF0DC1' : 'D-KMFB',		 # 'DG-808 B' # 'FB' # 'F' # 
 		'DF0DC2' : 'OE-0950',		 # 'Duo Discus xl' # 'V1' # 'F' # 
-		'DF0DC4' : 'D-9972',		 # 'Duo Discus x' # '72' # 'F' # 
 		'DF0DC5' : 'D-KGMF',		 # 'ASH-25 MI' # 'MF' # 'F' # 
 		'DF0DC8' : 'D-4587',		 # 'LS-8' # 'NC' # 'F' # 
 		'DF0DC9' : 'D-6480',		 # 'LS-1 f' # 'BX' # 'F' # 
@@ -16704,7 +17141,6 @@ kglid = {
 		'DF0EDE' : 'D-KAVY',		 # 'JS-1 C18 Evo' # 'VY' # 'F' # 
 		'DF0EDF' : 'F-JATT',		 # 'Sensation' # 'TT' # 'F' # 
 		'DF0EE7' : 'D-KXGX',		 # 'Discus 2cT' # 'GX' # 'F' # 
-		'DF0EEA' : 'D-KKUS',		 # 'DG-808 C' # 'US' # 'F' # 
 		'DF0EF2' : 'G-DDJN',		 # 'PIK-20 B' # '407' # 'F' # 
 		'DF0EF6' : 'D-KNGG',		 # 'HPH 304S Shark' # 'GG2' # 'F' # 
 		'DF0EF9' : 'D--KOCM',		 # 'ASH-31 MI' # 'CM' # 'F' # 
@@ -16719,6 +17155,7 @@ kglid = {
 		'DF0F24' : 'D-KXPB',		 # 'DG-400' # 'KG' # 'F' # 
 		'DF0F30' : 'D-KTTK',		 # 'Arcus M' # 'WK' # 'F' # 
 		'DF0F35' : 'HB-2360',		 # 'HK36 Super Dimona' # '' # 'F' # 
+		'DF0F3F' : 'HB-2094',		 # 'Valentin Taifun' # '' # 'F' # 
 		'DF0F4E' : 'D-KDWM',		 # 'Discus 2cT' # 'WM' # 'F' # 
 		'DF0F51' : 'HB-3401',		 # 'Duo Discus xl' # 'ZU' # 'F' # 
 		'DF0F6C' : 'C-GVSA',		 # 'Twin Astir II' # 'VSA' # 'F' # 
@@ -16730,7 +17167,6 @@ kglid = {
 		'DF0F84' : 'VH-VCS',		 # 'Discus' # 'VCS' # 'F' # 
 		'DF0F8D' : 'D2678',		 # 'LS-8' # 'KS' # 'F' # 
 		'DF0F91' : 'D-1951',		 # 'Discus 2c' # 'F1' # 'F' # 
-		'DF0F93' : 'D-4843',		 # 'Discus 2' # 'FL' # 'F' # 
 		'DF0F98' : 'HB-PRT',		 # 'PA-18 Super Cub' # 'PRT' # 'F' # 
 		'DF0FA3' : 'D-EAKT',		 # 'DR-400' # 'KT' # 'F' # 
 		'DF0FC6' : 'D-0767',		 # 'DG-1000' # '' # 'F' # 
@@ -16741,9 +17177,8 @@ kglid = {
 		'DF0FD4' : 'D-6114',		 # 'Discus 2c' # 'K9' # 'F' # 
 		'DF0FD6' : 'D-6380',		 # 'Ka-6 cr' # 'KH' # 'F' # 
 		'DF0FD7' : 'D-KDED',		 # 'DG-1000' # '' # 'O' # 
-		'DF1008' : 'NOREG',		 # 'Discus 2' # 'CX' # 'F' # 
+		'DF1008' : 'NOREG',		 # '' # '' # 'F' # 
 		'DF100A' : 'D-4156',		 # 'LS-8' # 'JO' # 'F' # 
-		'DF1015' : 'D-0202',		 # 'Discus 2' # '02' # 'F' # 
 		'DF102B' : 'D-KSKK',		 # 'ASG-32 MI' # 'KK' # 'F' # 
 		'DF102C' : 'D-EEVJ',		 # 'Cessna 172' # 'VJ' # 'F' # 
 		'DF102D' : 'B1',		 # 'UFO' # 'B1' # 'F' # 
@@ -16757,6 +17192,7 @@ kglid = {
 		'DF106E' : 'D-KVES',		 # 'DG-808 C' # 'ES' # 'F' # 
 		'DF106F' : 'F-JTWH',		 # 'Ikarus C42 B' # 'WH' # 'F' # 
 		'DF1071' : 'ZS-GBL',		 # 'JS-1 C18 Evo' # 'XS' # 'F' # 
+		'DF1078' : 'D-EFMD',		 # 'DR-400' # 'MD' # 'F' # 
 		'DF1079' : 'D-EVSC',		 # 'Cessna 172' # 'SC' # 'F' # 
 		'DF107B' : 'D-KDIB',		 # 'HPH 304S Shark' # 'D3' # 'F' # 
 		'DF1083' : 'D-EWSS',		 # 'DR-400' # 'SS' # 'F' # 
@@ -16787,6 +17223,7 @@ kglid = {
 		'DF110D' : 'D-KFAB',		 # 'Ventus 2cM' # 'AB' # 'F' # 
 		'DF1110' : 'VH-NKK',		 # 'ASW-20' # 'NKK' # 'F' # 
 		'DF1131' : 'N55DQ',		 # 'Ventus 3T' # '5E' # 'F' # 
+		'DF1163' : 'N633CA',		 # 'Pegase' # '3CA' # 'F' # 
 		'DF1167' : 'VH-GLA',		 # 'LS-8 18' # 'GLA' # 'F' # 
 		'DF116C' : 'VH-EPC',		 # 'ASH-26 E' # 'PC' # 'F' # 
 		'DF1180' : 'C-GNHJ',		 # 'Ka-6 cr' # 'NHJ' # 'F' # 
@@ -16803,6 +17240,7 @@ kglid = {
 		'DF11FF' : 'OM-0803',		 # 'Silent 2 Electro' # 'ZI' # 'F' # 
 		'DF1205' : 'C-GMZZ',		 # 'DG-800' # 'R2' # 'F' # 
 		'DF120D' : 'D-6926',		 # 'LS-8 18' # '5F' # 'F' # 
+		'DF1216' : 'OE-FMM',		 # 'Motorplane' # '' # 'F' # 
 		'DF1217' : 'D-KMFF',		 # 'ASH-26 E' # 'FOX' # 'F' # 
 		'DF121B' : 'D-KEPK',		 # 'DG-400' # 'PK' # 'F' # 
 		'DF1221' : 'C-GKAK',		 # 'SZD-55' # 'AK' # 'F' # 
@@ -16889,17 +17327,27 @@ kglid = {
 		'DF1493' : 'D-KLAC',		 # 'Ventus 2ct' # '4A' # 'F' # 
 		'DF149A' : 'D-3154',		 # 'Discus' # 'VM' # 'F' # 
 		'DF14A4' : 'D-7527',		 # 'ASW-27' # 'SE' # 'F' # 
+		'DF14A6' : 'PH-1641',		 # 'MDM-1 Fox' # 'FOX' # 'F' # 
 		'DF14A8' : 'NOREG',		 # 'PZL-104 Wilga' # 'BQ' # 'F' # 
 		'DF14B3' : 'PH-PXE',		 # 'EC 135' # 'POL' # 'F' # 
 		'DF14B6' : 'NOREG',		 # 'Motorglider' # 'OZ' # 'F' # 
 		'DF14B7' : 'D-3855',		 # 'ASW-19' # '55' # 'F' # 
+		'DF14C7' : 'D-0472',		 # 'Ka-6 e' # '' # 'F' # 
+		'DF14EA' : 'NOREG',		 # '' # '' # 'F' # 
 		'DF14EF' : 'V5-UKW',		 # 'Motorplane' # 'UKW' # 'F' # 
 		'DF14F2' : 'D-KHSM',		 # 'Arcus M' # 'SM' # 'F' # 
+		'DF14FD' : 'D-7826',		 # 'LS-4' # '4R' # 'F' # 
 		'DF1511' : 'D-7831',		 # 'LS-8' # 'OK' # 'F' # 
 		'DF1532' : 'D-0002',		 # 'LS-7' # 'CH' # 'F' # 
 		'DF153F' : 'D-5271',		 # 'Twin Astir II' # 'V1' # 'F' # 
 		'DF1543' : '14-86',		 # 'Ultralight' # '' # 'F' # 
 		'DF1546' : 'D-0892',		 # 'LS-1 c' # '' # 'F' # 
+		'DF155F' : 'D-KGUY',		 # 'Ventus 2cxM' # 'X' # 'F' # 
+		'DF156C' : 'D-KDDH',		 # 'Duo Discus xlt' # '55' # 'F' # 
+		'DF1571' : 'D-KFWV',		 # 'Ventus 3T' # 'WV' # 'F' # 
+		'DF1576' : 'MIL-SIM',		 # 'Helicopter' # 'MIL' # 'F' # 
+		'DF1586' : 'D-8206',		 # 'LS-7' # '7C' # 'F' # 
+		'DF1597' : 'D-9596',		 # 'Discus 2' # '8A' # 'F' # 
 		'DF15B2' : 'D6836',		 # 'Glasflugel 304' # 'GH' # 'F' # 
 		'DF15E8' : 'CC-AGN',		 # 'Ventus 2cxT' # 'GN' # 'F' # 
 		'DF1623' : 'D-KEWK',		 # 'EB 28' # 'WK' # 'F' # 
@@ -16907,15 +17355,25 @@ kglid = {
 		'DF1626' : 'D-8219',		 # 'ASW-19' # 'LG' # 'F' # 
 		'DF1629' : 'NOREG',		 # 'LS-1 f' # 'H7' # 'F' # 
 		'DF1633' : 'D-0268',		 # 'DG-300' # 'C1' # 'F' # 
+		'DF163B' : 'D-9035',		 # 'Ka-8' # '' # 'F' # 
+		'DF163C' : 'PH-PXB',		 # 'EC 135' # 'POL' # 'F' # 
+		'DF163E' : 'D-4390',		 # 'Discus 2' # 'MP' # 'F' # 
 		'DF1641' : 'D-1442',		 # 'LS-4' # 'D42' # 'F' # 
 		'DF167F' : 'PH-PXA',		 # 'EC 135' # 'POL' # 'F' # 
 		'DF1680' : 'PH-PXF',		 # 'EC 135' # 'POL' # 'F' # 
 		'DF1684' : 'D-3627',		 # 'ASW-27' # '5' # 'F' # 
 		'DF1686' : 'G-FOXH',		 # 'Ventus 2' # '77' # 'F' # 
 		'DF1696' : 'G-CKLT',		 # 'Nimbus 3' # 'GT' # 'F' # 
+		'DF170E' : 'D-0266',		 # 'ASK-13' # '66' # 'F' # 
+		'DF170F' : 'D-EETM',		 # 'DR-400' # '' # 'F' # 
+		'DF1710' : 'D-KGIU',		 # 'DG-1000 T' # 'GIU' # 'F' # 
 		'DF1716' : 'D-2487',		 # 'Ventus 2' # 'GH' # 'F' # 
+		'DF171A' : 'D-5848',		 # 'LS-8 18' # 'RS' # 'F' # 
+		'DF171F' : 'F-CHLX',		 # 'Pegase' # '' # 'F' # 
+		'DF1765' : 'D-7771',		 # 'SB-5 e' # '71' # 'F' # 
+		'E052D8' : 'LV-EKX',		 # 'Ventus 2cxM' # 'RX' # 'F' # 
 		'E15D38' : 'NOREG',		 # 'Unknown' # '' # 'O' # 
-		'E4C948' : 'SP-GAL',		 # 'UFO' # '' # 'O' # 
+		'E4C948' : 'SP-GAL',		 # 'Rallye 180T-D' # '' # 'O' # 
 		'E4CF55' : 'OH-356',		 # 'Ka-6 e' # 'JK' # 'O' # 
 		'E4D1B0' : 'D-9485',		 # 'LS-1 f' # 'neo' # 'F' # 
 		'E4FB2B' : '15',		 # 'SZD-41 Jantar Std' # '15' # 'O' # 
@@ -16938,10 +17396,10 @@ kglid = {
 		'E86C48' : 'NOREG',		 # 'Unknown' # '' # 'O' # 
 		'E88A3C' : 'AK',		 # 'LS-4' # 'AK' # 'O' # 
 		'E95A16' : 'SQ9PCB',		 # 'Other' # '' # 'O' # 
-		'E98C3E' : 'V',		 # 'SZD-48-3 Jantar Std 3' # 'V' # 'O' # 
+		'E98C3E' : '0699',		 # 'Blanik' # '699' # 'O' # 
 		'E98CE3' : 'V',		 # 'SZD-48-3 Jantar Std 3' # 'V' # 'O' # 
 		'E9903C' : 'CP',		 # 'SZD-48-3 Jantar Std 3' # '' # 'O' # 
-		'EA8B50' : '697',		 # 'Blanik' # '97' # 'O' # 
+		'EA8B50' : '0112',		 # 'Blanik' # '97' # 'O' # 
 		'EACF47' : 'FH-1929',		 # 'Ground Station' # 'FH' # 'O' # 
 		'EB4E53' : 'NOREG',		 # 'Unknown' # '' # 'O' # 
 		'EBE4E1' : 'D-kbms',		 # 'DG-808 B' # 'M8' # 'F' # 
@@ -16951,11 +17409,11 @@ kglid = {
 		'EDB6BD' : 'OY-TXA',		 # 'LS-4' # 'PLU' # 'F' # 
 		'EDDEA9' : 'NOREG',		 # 'SZD-56-2 Diana 2' # 'VS' # 'F' # 
 		'EE1234' : 'HB-380',		 # 'A380' # 'XXL' # 'I' # 
-		'EE8621' : 'OK-9502',		 # 'VSO-10' # 'B2' # 'O' # 
+		'EE8621' : 'OK-MPG',		 # 'Z-226 trener' # '' # 'O' # 
 		'EE8629' : 'LV-ELL',		 # 'SZD-48-3 Jantar Std 3' # 'ND' # 'O' # 
 		'EE86E9' : 'LV-DNJ',		 # 'Astir CS-77' # '73' # 'O' # 
 		'EE8745' : 'LV-DGY',		 # 'Ka-6 e' # '' # 'O' # 
-		'EE87F9' : 'OK-6434',		 # 'VT-116 Orlik II' # 'LI' # 'F' # 
+		'EE87F9' : 'OK-6434',		 # 'VT-116 Orlik II' # 'ZUZ' # 'F' # 
 		'EE887D' : 'LV-DOO',		 # 'PIK-20 E' # '84' # 'O' # 
 		'EE893D' : 'LV-EMU',		 # 'PW-5' # '' # 'O' # 
 		'EE8945' : 'D-MGGA',		 # 'Paraglider' # '' # 'F' # 
@@ -16969,6 +17427,7 @@ kglid = {
 		'EE8C39' : 'SP-AAB',		 # 'Yak-12' # '' # 'O' # 
 		'EE8DA9' : 'G-DAV2',		 # 'UFO' # '' # 'O' # 
 		'EEDBA7' : 'Crow',		 # 'Paraglider' # 'Cr' # 'O' # 
+		'EEE129' : 'MS-000',		 # 'Paraglider' # '' # 'O' # 
 		'EF05E5' : 'G-FOKX',		 # 'Towplane' # 'OKX' # 'O' # 
 		'EF0927' : 'F-CIFF',		 # 'Arcus T' # 'FP' # 'F' # 
 		'EF415C' : 'OKQUA10',		 # 'Zodiac CH601XL' # 'BAR' # 'O' # 
@@ -16980,9 +17439,11 @@ kglid = {
 		'F01912' : 'PH-1285',		 # 'Cirrus Std' # 'U2' # 'F' # 
 		'F06395' : 'NOREG',		 # '' # '' # 'F' # 
 		'F14943' : 'NOREG',		 # 'Unknown' # '' # 'O' # 
-		'F186F8' : 'GerEic',		 # 'Paraglider' # 'GE3' # 'O' # 
-		'F1870C' : 'GerEic',		 # 'Paraglider' # 'GE2' # 'F' # 
+		'F186F8' : 'GerEic',		 # 'Paraglider' # 'GE3' # 'F' # 
+		'F1870C' : 'GerEic',		 # 'Paraglider' # 'GE4' # 'F' # 
+		'F18894' : 'OK-XUO2',		 # 'Skylane Airlony' # 'XUO' # 'O' # 
 		'F18954' : 'DJI3',		 # 'DJI Phantom' # '' # 'O' # 
+		'F18A3C' : 'NOREG',		 # 'Paraglider' # '' # 'F' # 
 		'F1F1F1' : 'G-CKSK',		 # 'Different Aircraft' # '' # 'O' # 
 		'F21252' : 'c-fxwn',		 # 'LS-6' # 'S6' # 'O' # 
 		'F24E6A' : 'NOREG',		 # 'Unknown' # '' # 'O' # 
@@ -16992,7 +17453,7 @@ kglid = {
 		'F2D97C' : 'HAVES',		 # 'TB-9 Tampico' # 'HES' # 'O' # 
 		'F32162' : '29785',		 # 'Paraglider' # '101' # 'O' # 
 		'F35585' : 'HB-3209',		 # 'ASW-27' # 'CD' # 'I' # 
-		'F3D97F' : 'HA1274',		 # 'SF-25' # 'H74' # 'O' # 
+		'F3D97F' : 'HASTQ',		 # 'DA20 Katana' # 'HTQ' # 'O' # 
 		'F41922' : 'SP-3918',		 # 'LS-6' # 'BB' # 'O' # 
 		'F42CD6' : 'UWP',		 # 'Kestrel' # '' # 'O' # 
 		'F42E21' : 'NOREG',		 # '' # '' # 'O' # 
@@ -17003,6 +17464,7 @@ kglid = {
 		'F51163' : 'HB-1463',		 # 'LS-3' # '' # 'F' # 
 		'F51181' : 'OK-0024',		 # 'ASW-24 E' # 'CR' # 'F' # 
 		'F51237' : 'D-7501',		 # 'Ka-6 cr' # '' # 'F' # 
+		'F51334' : 'D5153',		 # 'DG-200' # '53' # 'F' # 
 		'F51368' : 'D-5775',		 # 'Libelle Std' # 'ULi' # 'F' # 
 		'F51772' : 'D-KDSA',		 # 'DG-400' # 'KD' # 'F' # 
 		'F51792' : 'D-1339',		 # 'DG-100' # 'D39' # 'F' # 
@@ -17024,6 +17486,7 @@ kglid = {
 		'F53582' : 'HA-4404',		 # 'SZD-41 Jantar Std' # 'TL' # 'F' # 
 		'F54118' : 'PAW',		 # 'Ground Station' # 'PAW' # 'O' # 
 		'F5C860' : 'HADAJ',		 # 'Diamond DA42' # 'DAJ' # 'O' # 
+		'F5F73F' : 'D-MAVU',		 # 'Roland Z602 XL' # '' # 'O' # 
 		'F60601' : 'D-MOSF',		 # 'Pioneer 300' # '' # 'F' # 
 		'F64420' : 'OM-1615',		 # 'ASW-15' # 'TZ' # 'F' # 
 		'F64440' : 'D-KYVG',		 # 'ASW-20' # '' # 'F' # 
@@ -17036,6 +17499,7 @@ kglid = {
 		'F65228' : 'D-7907',		 # 'LS-3' # '907' # 'F' # 
 		'F65297' : 'SP-3955',		 # 'SZD-55' # 'LT' # 'F' # 
 		'F65418' : 'D-3604',		 # 'Discus 2' # 'VF' # 'F' # 
+		'F65501' : 'G-DEJY',		 # 'SZD-9 Bocian' # 'EJY' # 'F' # 
 		'F65504' : 'D-KEMB',		 # 'DG-800' # '' # 'F' # 
 		'F65664' : 'D-2849',		 # 'LS-3' # '' # 'F' # 
 		'F65731' : 'D-1862',		 # 'Twin Astir II' # '' # 'F' # 
@@ -17063,22 +17527,23 @@ kglid = {
 		'F72605' : 'OO-YGB',		 # 'Duo Discus' # 'GB' # 'F' # 
 		'F72606' : 'SP3709',		 # 'SZD-41 Jantar Std' # 'MG' # 'F' # 
 		'F73121' : 'D-6415',		 # 'LS-4' # '' # 'F' # 
-		'F73250' : 'OO-ZMK',		 # 'Ka-6 cr' # 'MK' # 'F' # 
 		'F73263' : 'NOREG',		 # '' # '' # 'F' # 
 		'F73314' : 'D_5564',		 # 'DG-300' # 'Lor' # 'F' # 
 		'F74571' : '220665',		 # 'Paraglider' # 'MB' # 'O' # 
-		'F748E1' : '11339',		 # 'Paraglider' # 'Urs' # 'O' # 
+		'F748E1' : '11339',		 # 'Paraglider' # 'hau' # 'O' # 
 		'F74EEB' : '8525',		 # 'Paraglider' # 'UWE' # 'O' # 
 		'F78131' : 'G-DFBY',		 # 'Discus' # '780' # 'F' # 
 		'F78374' : 'D-2138',		 # 'DG-100' # 'SM' # 'F' # 
 		'F78402' : 'D-1327',		 # 'Astir Club' # 'H4' # 'F' # 
 		'F78882' : 'D-2609',		 # 'LS-3' # 'TG' # 'F' # 
+		'F78980' : 'D-9478',		 # 'Libelle Club' # '' # 'F' # 
 		'F79473' : 'PH-1184',		 # 'Discus t' # 'AN' # 'F' # 
 		'F7FBA5' : 'NOREG',		 # 'UFO' # '1X' # 'F' # 
 		'F8917F' : 'F8917F',		 # 'Ground Station' # 'G-' # 'O' # 
 		'F8F8F8' : 'NOREG',		 # 'Paraglider' # '' # 'O' # 
 		'F90498' : 'D-9467',		 # 'Libelle Club' # 'R2' # 'F' # 
 		'F905B5' : 'OK-7077',		 # 'Cirrus Std' # 'CX' # 'F' # 
+		'F90649' : 'D-5031',		 # 'Ka-6 cr' # '' # 'F' # 
 		'F90819' : 'NOREG',		 # 'Astir CS' # '' # 'F' # 
 		'F90883' : 'D-3161',		 # 'ASW-19' # 'WB' # 'F' # 
 		'F91085' : 'LN-GCP',		 # 'Duo Discus t' # 'CP' # 'F' # 
@@ -17118,7 +17583,7 @@ kglid = {
 		'FEC557' : 'tracker',		 # 'Unknown' # 'FdV' # 'O' # 
 		'FEDB7D' : 'HAJON',		 # 'Cessna 152' # 'HON' # 'O' # 
 		'FEDF5C' : 'HASUV',		 # 'DA40' # 'SUV' # 'O' # 
-		'FEDF6E' : 'HAVEU',		 # 'Cessna 150' # 'HEU' # 'O' # 
+		'FEDF6E' : 'HASTR',		 # 'DA20 Katana' # 'HTR' # 'O' # 
 		'FF017C' : 'sebu',		 # 'Paraglider' # '' # 'O' # 
 		'FF01A8' : 'Eisei',		 # 'Paraglider' # '' # 'O' # 
 		'FF0257' : 'IOTA_30',		 # 'Paraglider' # 'BV' # 'O' # 
@@ -17137,6 +17602,7 @@ kglid = {
 		'FF0797' : 'DP',		 # 'Paraglider' # 'DP' # 'O' # 
 		'FF0993' : 'Mario_S',		 # 'Paraglider' # '' # 'F' # 
 		'FF0A6E' : '38815',		 # 'Paraglider' # 'DKO' # 'F' # 
+		'FF0B7C' : 'MK6',		 # 'Paraglider' # '' # 'F' # 
 		'FF0F08' : 'Heiko',		 # 'Paraglider' # 'HeW' # 'F' # 
 		'FF0F31' : 'NOREG',		 # 'Paraglider' # '' # 'F' # 
 		'FF43EC' : 'SPOT-ST',		 # 'LAK-17B FES' # 'ST' # 'O' # 
@@ -17149,15 +17615,16 @@ kglid = {
 		'FF4C30' : 'Studo',		 # 'Astir Club' # '' # 'O' # 
 		'FF4C48' : 'OM-MPY',		 # 'Z-226 trener' # '' # 'O' # 
 		'FF4E18' : 'ZA1',		 # 'Blanik' # '' # 'O' # 
-		'FF4E78' : 'OK-JHA',		 # 'Hawker Hurricane' # '' # 'O' # 
+		'FF4E78' : 'OK-KL03',		 # 'Hawker Hurricane' # 'KL' # 'O' # 
 		'FF4EC4' : 'N315CM',		 # 'Stemme S-10' # 'CM' # 'F' # 
 		'FF4F4C' : 'mik42',		 # 'Paraglider' # '' # 'O' # 
 		'FF4FF0' : 'TEST3',		 # 'VSO-10' # '' # 'O' # 
 		'FF504C' : 'HA-6765',		 # 'Janus C' # 'DD' # 'O' # 
-		'FF50F0' : 'NOREG',		 # '' # '' # 'F' # 
+		'FF50F0' : 'OY-CBX',		 # 'Ventus' # 'BX' # 'F' # 
 		'FF5184' : 'N758WE',		 # 'Libelle Std' # 'WE' # 'F' # 
 		'FF8D91' : 'D-4299',		 # 'SZD-48-1 Jantar Std 2' # 'RE' # 'F' # 
 		'FFA51F' : 'HBPQK',		 # 'PA-18 Super Cub' # 'PQK' # 'F' # 
+		'FFAD54' : 'OK-EOD',		 # 'Motorplane' # '' # 'O' # 
 		'FFBA78' : 'SZ-406',		 # 'Paraglider' # '' # 'O' # 
 		'FFD968' : 'HA-YVIG',		 # 'Ultralight' # 'VIG' # 'O' # 
 		'FFDE5D' : 'oe9233',		 # 'H36 Dimona' # '' # 'O' # 
@@ -17178,7 +17645,7 @@ kglid = {
 		"000824":"N6044",
 		"000831":"N16MA",
 		"000841":"N68GH",
-		"000843":"N712AR",
+		"000843":"N135GS",
 		"000870":"N9966C",
 		"000963":"D-8960",
 		"000990":"DMMAI",
@@ -17229,9 +17696,12 @@ kglid = {
 		"081632":"D-xx92",
 		"091087":"D-KLIA",
 		"09B1D5":"D-KJHL",
+		"0D0686":"D-0686",
 		"0D1032":"D-1032",
 		"0D2117":"D-2117",
+		"0D3936":"D-3936",
 		"0D6534":"D6534",
+		"0D7149":"D-7149",
 		"0D7739":"D7739",
 		"0D9206":"D-9602",
 		"110123":"0815",
@@ -17248,9 +17718,12 @@ kglid = {
 		"140413":"D-KAKL",
 		"170385":"33086",
 		"1AB23C":"D-XXXX",
+		"1D4B05":"D-6657",
 		"1EA234":"D-0010",
+		"1f6707":"D-KCAL",
 		"2001B7":"FLATMX",
 		"2001DB":"48113",
+		"20032A":"49775",
 		"210556":"D-6161",
 		"215485":"215646",
 		"234567":"D-KSOR",
@@ -17279,7 +17752,7 @@ kglid = {
 		"39197C":"FJRHL",
 		"392900":"FGKIA",
 		"392BBC":"FJTMO",
-		"39349B":"F-CEBJ",
+		"39337B":"F-AYXG",
 		"39373C":"F-JUQC",
 		"394B5C":"67BVA",
 		"39525C":"F-JABZ",
@@ -17304,7 +17777,10 @@ kglid = {
 		"3D099B":"DEBWT",
 		"3D09E2":"D-MUTI",
 		"3D0AB7":"DECHR",
+		"3D0B3D":"D-ECMV",
+		"3D0CD3":"D-EDCL",
 		"3D0D12":"DEDEW",
+		"3D0E12":"D-EDOS",
 		"3D0E4A":"D-MLPH",
 		"3D0F77":"D-EBAX",
 		"3D0F97":"DEEDR",
@@ -17334,15 +17810,16 @@ kglid = {
 		"3D19D5":"D-EIAN",
 		"3D1A2E":"D-EIDY",
 		"3D1B88":"D-EIRG",
-		"3D1E40":"D-EJSA",
 		"3D1F4C":"D-EKCI",
 		"3D2017":"D-EKKD",
+		"3D20DC":"D-EKRS",
 		"3D20E8":"D-EKSE",
 		"3D20EF":"D-EKSD",
 		"3D210A":"D-EKTM",
 		"3D21C5":"D-ELAR",
 		"3D222C":"D-ELEQ",
 		"3D2234":"D-ELEY",
+		"3D2302":"D-ELMW",
 		"3D24CF":"D-EMEP",
 		"3D25E1":"D-EMPD",
 		"3D266B":"D-EMUL",
@@ -17351,8 +17828,8 @@ kglid = {
 		"3D28F0":"DENTG",
 		"3D29D7":"D-EOCD",
 		"3D2A70":"D-EOIA",
+		"3d2b60":"D-EORG",
 		"3D2B64":"DEORK",
-		"3D2DD7":"D-EPPN",
 		"3D31EC":"D-ERDS",
 		"3D32CA":"D-ERMG",
 		"3D3361":"D-ERSB",
@@ -17364,6 +17841,7 @@ kglid = {
 		"3D3ECE":"D-EWAO",
 		"3D3F16":"DEWDI",
 		"3D417E":"D-EXBA",
+		"3D4234":"D-EXIA",
 		"3D481D":"D-EZOF",
 		"3D4881":"D-EZSB",
 		"3D70F0":"D-FPAE",
@@ -17377,18 +17855,19 @@ kglid = {
 		"3E2697":"D-IFUT",
 		"3E3D68":"D-IOLK",
 		"3E3D6A":"D-IOLM",
-		"3E5BF1":"D-KAAB",
 		"3E5C42":"D-KADE",
+		"3e5c8c":"D-KAGA",
 		"3E5C9B":"DKAGP",
+		"3E5CBC":"D-KAHW",
 		"3E5D13":"D-KALF",
 		"3E5D3B":"D-KAMT",
+		"3e5db7":"D-KARN",
 		"3E5E2C":"D-KAWA",
 		"3E5F27":"D-KBFR",
 		"3E5F4E":"D-KBHE",
 		"3E5F55":"D-KBHL",
 		"3E5FB9":"D-KBLH",
 		"3E5FD7":"D-KBML",
-		"3E6052":"D-KBRE",
 		"3E6067":"D-KBRZ",
 		"3E607B":"D-KBST",
 		"3E608E":"D-KBTM",
@@ -17407,6 +17886,7 @@ kglid = {
 		"3E694C":"D-KFBO",
 		"3e69c3":"D-KFGD",
 		"3E69FB":"D-KFIH",
+		"3e6b63":"D-KFWD",
 		"3E6BFF":"DKGCD",
 		"3E6C07":"D-KGCL",
 		"3E6C83":"D-KGHF",
@@ -17435,6 +17915,7 @@ kglid = {
 		"3E77CE":"D-KKOK",
 		"3e78fb":"D-KKZZ",
 		"3E7916":"D-KLBA",
+		"3E79AA":"D-KLGS",
 		"3E7A25":"D-KLLL",
 		"3E7A9A":"D-KLPY",
 		"3E7B05":"G-KLUB",
@@ -17444,6 +17925,7 @@ kglid = {
 		"3e7e3f":"D-KMZV",
 		"3E7EBE":"D-KNES",
 		"3EC1A8":"DKOHK",
+		"3EC2D4":"D-KOSY",
 		"3EC50A":"D-KPOS",
 		"3ec9fe":"D-KRLM",
 		"3ECA64":"D-KRPK",
@@ -17451,31 +17933,35 @@ kglid = {
 		"3ECC1D":"D-KSGJ",
 		"3ECC65":"D-1259",
 		"3ECD6E":"N177SG",
+		"3ECE84":"D-KTEA",
 		"3ECF51":"D-KTLX",
 		"3ED119":"D-KUDL",
 		"3ED27A":"DKURA",
+		"3ED4AA":"D-KVMO",
 		"3ED614":"D-KWAM",
+		"3ED67C":"D-KWEM",
 		"3ED8EC":"D-KXCM",
 		"3EDB5A":"D-KYAK",
 		"3EDB97":"D-KYCT",
 		"3EDC76":"D-KYLI",
 		"3EDCD4":"D-KIQI",
-		"3EDE05":"DKZAR",
 		"3EE184":"D-0237",
 		"3EE2DD":"D-0582",
 		"3EE3D3":"D-0828",
+		"3EE4B4":"D-1053",
 		"3EE50B":"D-1140",
-		"3EE552":"D-KKWO",
 		"3EE627":"D-1424",
 		"3EE6D9":"D-1602",
 		"3EE901":"D-2154",
 		"3EE964":"D-2253",
 		"3EEA69":"D-2514",
+		"3EEB57":"2752",
 		"3EECE1":"D-3146",
 		"3EED11":"D-3194",
 		"3EEE19":"D-2690",
 		"3EEFF6":"D-XXXX",
 		"3eeff7":"D-3936",
+		"3EF2E8":"D-4689",
 		"3EF41B":"D-4996",
 		"3EF460":"D5065",
 		"3EF502":"D-5227",
@@ -17502,6 +17988,7 @@ kglid = {
 		"3FEA30":"D-MKDF",
 		"3FEA76":"D-MAIN",
 		"3FEA94":"D-MBBF",
+		"3FEA95":"D-MTPK",
 		"3FEAA8":"D-MRAA",
 		"3FEB05":"D-MISY",
 		"3FEB12":"D-MSSS",
@@ -17519,20 +18006,21 @@ kglid = {
 		"3FEE1A":"D-MHSD",
 		"3FEE30":"M-MWJM",
 		"3FEE40":"D-MENT",
+		"3FEEB9":"D-MRFK",
 		"3FEEEA":"D-MFFK",
 		"3FEF00":"D-MWHP",
+		"3FEF13":"D-MKAO",
 		"3FEF15":"D-MWNO",
 		"3FEF17":"D-MUCT",
-		"3FEF58":"D-MYTS",
+		"3FEF58":"D-MCCC",
+		"3FEFA8":"D-MLGT",
 		"3FEFB0":"D-MASY",
 		"3FEFB6":"DMTTR",
 		"3FEFBF":"D-MFGB",
-		"3FEFE4":"D-MKTT",
 		"3FEFF7":"D-MGMM",
 		"3FF093":"D-MUAW",
 		"3FF102":"DMJSA",
 		"3FF120":"D-MENB",
-		"3FF131":"D-MSBA",
 		"3FF156":"D-MMOC",
 		"3FF15B":"D-MHIK",
 		"3FF1A8":"D-MIIP",
@@ -17570,6 +18058,7 @@ kglid = {
 		"3FF727":"D-MRBT",
 		"3FF7EA":"D-MJOJ",
 		"3FF80A":"D-MTPW",
+		"3FF83E":"D-MYTS",
 		"40015D":"D-9827",
 		"400955":"D-7942",
 		"4010EF":"G-OPVM",
@@ -17583,6 +18072,7 @@ kglid = {
 		"40181A":"G-AXIA",
 		"4018CD":"G-AYME",
 		"401E45":"GENTT",
+		"402086":"G-BKVG",
 		"4022EF":"G-SAMG",
 		"4025C5":"G-BDPJ",
 		"4026CF":"G-RVNG",
@@ -17592,6 +18082,7 @@ kglid = {
 		"403075":"G-LASR",
 		"4031A1":"G-SSWV",
 		"4034A2":"GBTRS",
+		"4036D8":"G-BUXY",
 		"403B64":"G-HOPY",
 		"404264":"G-DCBM",
 		"404DF4":"G-DUOT",
@@ -17619,12 +18110,14 @@ kglid = {
 		"405907":"G-CJXM",
 		"405958":"G-CJDM",
 		"405996":"G-CHBV",
+		"405A93":"G-DCEC",
 		"405ADD":"G-RZEE",
 		"405B9A":"G-DDKC",
 		"405C9E":"G-DCSJ",
 		"405D7D":"G-CJMS",
 		"405E9C":"G-CJML",
 		"405F15":"G-IIOO",
+		"405FE0":"G-CJUF",
 		"406054":"G-DJNE",
 		"4064BF":"G-IIFX",
 		"406523":"G-UMPY",
@@ -17644,6 +18137,7 @@ kglid = {
 		"407659":"G-CLCO",
 		"4077AE":"G-OSOX",
 		"407803":"G-WILC",
+		"407AF1":"G-OSGU",
 		"43C38D":"WG486",
 		"43C38E":"WK518",
 		"43C38F":"ZA947",
@@ -17675,8 +18169,6 @@ kglid = {
 		"44E6A7":"OO-YUG",
 		"450000":"SP-394",
 		"456789":"D-0741",
-		"45970B":"OY-EXK",
-		"459B05":"OY-FXE",
 		"45A84A":"ECJAN",
 		"45AB08":"OY-JXH",
 		"45AC58":"OY-KBX",
@@ -17684,13 +18176,10 @@ kglid = {
 		"45CAD4":"OY-RVT",
 		"45CF07":"OY-SXG",
 		"45DB02":"OY-VXB",
-		"45E0E7":"OY-XGG",
 		"45E12D":"OY-XIM",
-		"45E189":"OY-XLI",
 		"45E1A8":"OY-XMH",
 		"45E243":"OY-XRC",
 		"45E2C6":"OY-XVF",
-		"45E2C9":"OY-XVI",
 		"45E2D3":"OY-XVS",
 		"45E358":"OY-XZX",
 		"45F054":"OY-946",
@@ -17698,10 +18187,8 @@ kglid = {
 		"47BFC3":"LN-GLA",
 		"47C310":"LN-GSH",
 		"47C320":"LN-GMB",
-		"4844E3":"PH-137",
 		"484751":"PH-111",
 		"484759":"PH-443",
-		"48475B":"PH-131",
 		"4847DD":"PH-495",
 		"4848AD":"PH-135",
 		"4848DE":"PH-114",
@@ -17719,6 +18206,7 @@ kglid = {
 		"484C78":"PH-829",
 		"484CC8":"PH-502",
 		"484D0E":"PH-121",
+		"484DF2":"PH-123",
 		"484E68":"PH-412",
 		"484ED4":"PH-365",
 		"484EED":"PH-147",
@@ -17738,6 +18226,9 @@ kglid = {
 		"485B01":"PH-160",
 		"485C5D":"PH-162",
 		"485DD7":"PH-163",
+		"485F00":"PH-163",
+		"485F3A":"PH-164",
+		"485FB4":"PH-164",
 		"4885C7":"G-CFXY",
 		"489911":"SP-GIS",
 		"48CC93":"SP3785",
@@ -17751,7 +18242,6 @@ kglid = {
 		"4AD413":"SE-THS",
 		"4AD5AD":"SEUMM",
 		"4AD5C1":"SE-UNA",
-		"4AD718":"SE-UXX",
 		"4B0831":"HB-DCR",
 		"4B1303":"HBHFF",
 		"4B1BDC":"HB-KOI",
@@ -17775,7 +18265,6 @@ kglid = {
 		"4B406C":"HB-YKI",
 		"4B408B":"HB-YLN",
 		"4B40B5":"HB-YND",
-		"4B4279":"HB-ZEN",
 		"4B473F":"HB-664",
 		"4B4798":"HB-753",
 		"4B4897":"G-DBEN",
@@ -17792,7 +18281,6 @@ kglid = {
 		"4B4C6D":"HB-199",
 		"4B4C72":"HB-199",
 		"4B4CDB":"HB-210",
-		"4B4D39":"HB-219",
 		"4B4D45":"HB-220",
 		"4B4D63":"HB-223",
 		"4B4DAF":"HB-328",
@@ -17808,17 +18296,16 @@ kglid = {
 		"4B4E6E":"HB-250",
 		"4B4E7B":"HB-251",
 		"4B5085":"HB-303",
+		"4B50A6":"HB-307",
 		"4B50D7":"3120",
 		"4B5112":"HB-317",
 		"4B511B":"HB-318",
 		"4B5181":"HB-329",
 		"4B5185":"HB-239",
-		"4B518C":"HB-330",
 		"4B51C0":"HB-335",
 		"4B5837":"HB5008",
 		"4b5a37":"HB-552",
 		"4BFFFF":"GVVT",
-		"4C8060":"D-KAYY",
 		"4CA808":"F-JYOB",
 		"4cc33f":"TF-SAC",
 		"4cc386":"TF-SAL",
@@ -17856,11 +18343,10 @@ kglid = {
 		"631011":"D-KIKA",
 		"654321":"G-DHMP",
 		"685645":"D-0815",
+		"703121":"D-KHRL",
 		"765432":"test",
 		"7C164A":"VH-EOS",
 		"7C16CF":"RSCU50",
-		"7C1FD7":"VH-GKP",
-		"7C206C":"VH-GOU",
 		"7C21A9":"VH-GXN",
 		"7C24E9":"VH-HKR",
 		"7C2934":"VH-IFA",
@@ -17870,8 +18356,8 @@ kglid = {
 		"7C5341":"VH-QQB",
 		"7C5DFE":"VH-SUO",
 		"7C74C9":"VH-XCR",
-		"7C7597":"RSCU58",
-		"7C7599":"RSCU53",
+		"7C7597":"VH-XIH",
+		"7C7599":"VH-XIJ",
 		"7C7652":"VH-XNO",
 		"7C76B7":"VH-XQH",
 		"7C76C6":"VH-XQW",
@@ -17885,19 +18371,17 @@ kglid = {
 		"93ABAE":"D-EOAC",
 		"999999":"VH-VLO",
 		"9DB274":"D-NONE",
-		"A00214":"N248MB",
 		"A002EF":"N10FY",
 		"A00403":"N10SZ",
 		"A00426":"N10UJ",
 		"A00443":"N-10VN",
-		"A005A1":"N100KM",
 		"A005F0":"N100NR",
 		"A00979":"N101LV",
 		"A00C81":"N102DV",
+		"A00C98":"N102ET",
 		"A0101B":"N103CR",
 		"A01348":"N10379",
 		"A0194C":"N105WS",
-		"A01B5A":"N106DS",
 		"A01F5D":"N107GT",
 		"A0234D":"N108K",
 		"A02470":"N108WR",
@@ -17905,10 +18389,12 @@ kglid = {
 		"A029DB":"N11AA",
 		"A02B6B":"N11SA",
 		"A02B84":"N11TA",
+		"A0300A":"N111BG",
 		"A033F2":"N112DF",
 		"A03474":"N112JL",
 		"A03CB7":"N114SZ",
 		"A05048":"N1192H",
+		"A05202":"12GU",
 		"A05209":"N12HA",
 		"A0527C":"N12MR",
 		"A0533A":"N12VF",
@@ -17960,6 +18446,7 @@ kglid = {
 		"A10447":"N165AF",
 		"A10D64":"N167TM",
 		"A117B0":"N17JV",
+		"A11CEE":"N171AK",
 		"A122F3":"N1720",
 		"A124A8":"N173DL",
 		"A12EA4":"N1754",
@@ -17980,11 +18467,12 @@ kglid = {
 		"A19187":"N20VB",
 		"A19264":"N200DX",
 		"A1934D":"N200PE",
-		"A193DC":"N200UY",
+		"A193DC":"N582RC",
 		"A1B17D":"N208U",
 		"A1B7C6":"N21GG",
 		"A1B8DA":"N21TH",
 		"A1BE53":"N211MG",
+		"A1C504":"N213DT",
 		"A1CD34":"N215MM",
 		"A1CDA0":"N215RV",
 		"A1DF2B":"N22FF",
@@ -17992,18 +18480,20 @@ kglid = {
 		"A1E066":"N22TW",
 		"A1E148":"N220CW",
 		"A1E291":"N220S",
-		"A1E588":"N221JH",
 		"A1ED47":"N223MP",
 		"A1EFF6":"N224B",
 		"A1F2E3":"D-KRMR",
+		"A1F6F9":"N2257Z",
 		"A1F74B":"226A",
 		"A1FB1D":"N227BB",
 		"A1FB62":"N227DW",
 		"A1FE5D":"N2277P",
+		"A1FF88":"N228JG",
 		"A1FFDA":"N228MP",
 		"A20391":"N229MP",
 		"A203EB":"N229RD",
 		"A2041D":"N229TD",
+		"A20723":"N23LB",
 		"A207BE":"N23SG",
 		"A20904":"N230fg",
 		"A20961":"N230K",
@@ -18053,7 +18543,6 @@ kglid = {
 		"A2FAD5":"N291SV",
 		"A2FAE6":"N291TM",
 		"A30211":"N293QV",
-		"A30717":"N2943",
 		"A31054":"N297JS",
 		"A31219":"N2972",
 		"A31478":"N298PA",
@@ -18081,6 +18570,7 @@ kglid = {
 		"A32F7C":"N304PJ",
 		"A32F7D":"N304PK",
 		"A32FBF":"N304SA",
+		"A33751":"N306TM",
 		"A344D0":"N31DN",
 		"A345A1":"N31MX",
 		"A345EA":"N31QV",
@@ -18094,8 +18584,10 @@ kglid = {
 		"A36576":"N318KM",
 		"A368F7":"N319HH",
 		"A36C85":"N32FS",
+		"A36CED":"N32KW",
 		"A36E01":"N32WX",
 		"A371DF":"N32086",
+		"A37376":"N321QS",
 		"A3849A":"N326A",
 		"A38DC6":"N328TW",
 		"A393C7":"N33DF",
@@ -18137,17 +18629,19 @@ kglid = {
 		"A4EAD5":"416EG",
 		"A4F5A1":"N419AT",
 		"A4F979":"N42CA",
+		"A4F99A":"N42DJ",
 		"A4F9BF":"N42EW",
 		"A4FBEA":"N420D",
 		"A4FED6":"N4206N",
+		"A4FFC0":"N421EF",
 		"A5036A":"N422DT",
 		"A50C0B":"N424S",
 		"A51B2A":"N428US",
 		"A51EA6":"N429SH",
+		"A52B9F":"N432M",
 		"A53379":"434_RH",
 		"A53C06":"N4362",
 		"A54417":"N4386Y",
-		"A5449E":"N9UH",
 		"A548A6":"N44DY",
 		"A55831":"N4430Y",
 		"A55872":"N4432T",
@@ -18159,11 +18653,13 @@ kglid = {
 		"A584C9":"N455BA",
 		"A5863F":"N455S",
 		"A58938":"N456JK",
+		"A59663":"N4593Y",
 		"A59846":"N46LK",
 		"A59BD2":"N460YS",
 		"A5A881":"N464AK",
 		"A5BBED":"N469KB",
 		"A5D11A":"N474MS",
+		"A5E1DF":"N4785F",
 		"A5E76F":"N48NC",
 		"A5E7B2":"N48QV",
 		"A5E87F":"N48Z",
@@ -18187,14 +18683,17 @@ kglid = {
 		"A6674C":"N511Y",
 		"A66B2C":"N512ZR",
 		"A66B58":"N5121",
+		"A67209":"N514TW",
 		"A67BD1":"N517DX",
 		"A67CB7":"N517PB",
 		"A68712":"N52F",
 		"A688B8":"N52XX",
 		"A68A6E":"N520RJ",
 		"A68A76":"N520RS",
+		"A6959A":"N523RR",
 		"A69F54":"N526BC",
 		"A6A34A":"N527DR",
+		"A6A49e":"N527TF",
 		"A6AF19":"N53LL",
 		"A6B053":"N53Z",
 		"A6B77B":"N5317K",
@@ -18203,7 +18702,9 @@ kglid = {
 		"A6E39F":"N543FS",
 		"A6FEBA":"N55SZ",
 		"A70561":"N551Z",
+		"A70E00":"N5538",
 		"A7257C":"N56KK",
+		"A7262E":"N56SN",
 		"A72B75":"N561JM",
 		"A73435":"N563Y",
 		"A73467":"N-5630",
@@ -18218,7 +18719,6 @@ kglid = {
 		"A7C055":"N599RH",
 		"A7C2EC":"N60AF",
 		"A7C39D":"N6LX",
-		"A7C450":"N6UA",
 		"A7C556":"N60EM",
 		"A7C665":"N60RH",
 		"A7CB5E":"N601ED",
@@ -18229,6 +18729,7 @@ kglid = {
 		"A81426":"N62CR",
 		"A8170E":"N620JJ",
 		"A82CBA":"n626ca",
+		"A83171":"N627NG",
 		"A83C67":"N63LK",
 		"A83DF8":"N630CK",
 		"A84914":"N633CA",
@@ -18244,6 +18745,7 @@ kglid = {
 		"A8B21A":"N66CH",
 		"A8B293":"N66HD",
 		"A8B3B5":"N66UU",
+		"A8B3C3":"N66VH",
 		"A8B3D8":"N66WD",
 		"A8D672":"N669JB",
 		"A8D83D":"N66911",
@@ -18266,7 +18768,7 @@ kglid = {
 		"A97FE6":"N711bj",
 		"A9880B":"N713JS",
 		"A99716":"N717LP",
-		"A999E1":"718bc",
+		"A999E1":"718BC",
 		"A9A1A3":"N72EM",
 		"A9A3B0":"N720BL",
 		"A9AB1D":"N722BK",
@@ -18331,7 +18833,6 @@ kglid = {
 		"AB4160":"N824T",
 		"AB48BD":"N826SH",
 		"AB5644":"N83CS",
-		"AB61CD":"N832WS",
 		"AB7EFD":"N84RF",
 		"ABA8D9":"N850RK",
 		"ABF416":"N87B",
@@ -18341,6 +18842,7 @@ kglid = {
 		"AC1BFD":"N88FD",
 		"AC1DF0":"N880BB",
 		"AC28D7":"N8829A",
+		"AC2D0E":"N884DT",
 		"AC67D7":"N899MA",
 		"AC6C53":"N9UY",
 		"AC6F3D":"N900AS",
@@ -18355,11 +18857,11 @@ kglid = {
 		"ACC2F4":"n921m",
 		"ACD57F":"N926LS",
 		"ACD864":"N927cg",
-		"ACD8D6":"N927GW",
 		"ACD9DC":"N927TH",
 		"ACDD40":"N928Q",
 		"ACE47C":"N93N",
 		"AD0B8A":"N94HM",
+		"AD0BB7":"N94KG",
 		"AD0C64":"N94SE",
 		"AD2AF9":"N948B",
 		"AD2D55":"N94804",
@@ -18375,12 +18877,12 @@ kglid = {
 		"ADA8D0":"N98AE",
 		"ADB1C0":"N9814A",
 		"ADB374":"N982KA",
-		"ADBBA9":"984T",
 		"Adc572":"N987db",
 		"ADC57C":"N987DM",
 		"ADD148":"N99LD",
 		"ADDEDC":"N291JS",
 		"ADE5B2":"N995EZ",
+		"ADE9AB":"OK-007",
 		"ADF1E3":"N998RS",
 		"ADF515":"N999LJ",
 		"B0B0B0":"DKWAG",
@@ -18389,7 +18891,6 @@ kglid = {
 		"BADCCC":"D-KLAX",
 		"C0014E":"C-FAMV",
 		"C001B6":"C-GJVF",
-		"C0022E":"C-GAVL",
 		"C002F4":"CFBDB",
 		"C003B6":"C-FBKN",
 		"C00A4F":"C-FDXM",
@@ -18398,21 +18899,20 @@ kglid = {
 		"C01D3F":"C-FLBY",
 		"C01EA5":"C-FLPS",
 		"C01F13":"C-FLTY",
-		"C020AD":"C-FMJS",
 		"C0246B":"C-FNUO",
 		"C025B8":"C-FOHJ",
 		"C02A2B":"C-FPZE",
 		"C02CD5":"C-FQZK",
 		"C03879":"C-FVKA",
 		"C03FD9":"C-FYEQ",
+		"C04078":"C-FYKT",
 		"C042CE":"C-FZHT",
 		"C0444F":"C-fzwo",
 		"C045C7":"C-GALA",
 		"C0485B":"C-GBKK",
-		"C0497D":"C-GBVO",
 		"C049D3":"C-GBYW",
+		"C04F0D":"C-GDYI",
 		"C05076":"C-GEMF",
-		"C05205":"C-GFBO",
 		"C0521F":"C-GFCO",
 		"C05389":"C-GNEH",
 		"C05566":"C-GGIV",
@@ -18425,17 +18925,12 @@ kglid = {
 		"C05D69":"C-GJJS",
 		"C05E4A":"C-GJSJ",
 		"C05E94":"C-GJVF",
-		"C05F76":"C-GKDX",
 		"C06208":"C-GLDF",
-		"C06230":"C-GLET",
 		"C0699F":"C-GNZY",
 		"C06B5F":"C-GORE",
-		"C06D62":"C-GPKZ",
 		"C06DAD":"C-ITRI",
 		"C071DA":"C-GRCZ",
 		"C072A7":"C-GRKW",
-		"C073F3":"C-GRXQ",
-		"C074BE":"C-GSFL",
 		"C07904":"C-GUDN",
 		"C079D3":"C-GUDM",
 		"C079D4":"C-GDUN",
@@ -18458,6 +18953,7 @@ kglid = {
 		"C82782":"ZK-GOK",
 		"C82814":"ZK-GZD",
 		"CAFE01":"D-KXVH",
+		"D000F1":"D-6838",
 		"D00113":"D-KOBM",
 		"D0015B":"D-KFOX",
 		"D00161":"D-3505",
@@ -18490,33 +18986,47 @@ kglid = {
 		"D00547":"D-2971",
 		"D0054F":"D-KKCE",
 		"D005AE":"D-7569",
+		"D006B5":"D-KPPP",
+		"D006CF":"D-KCTM",
 		"D00718":"D-1929",
 		"D0072E":"D-MLES",
+		"D0073B":"d3",
 		"D0074D":"D-KHMA",
 		"D008AA":"LY-BSA",
 		"D0092E":"D-3505",
 		"D00943":"GKSSX",
 		"D00944":"G-CEWC",
 		"D0094B":"D-KPWG",
+		"D009A3":"OO-ZOQ",
 		"D009AE":"D-KAKW",
 		"D009E4":"D-KGDS",
 		"D00A21":"VH-FQR",
+		"D00A2C":"OO-ZYB",
 		"D00A36":"D-KBPP",
 		"D00A38":"PH-162",
 		"D00A4B":"D-KCCN",
 		"D00A8F":"D-KFLS",
+		"D00A90":"OO-CHM",
 		"D00A99":"D-KMZV",
 		"D00B06":"9A-GDC",
 		"D00B4D":"SP-399",
+		"D00BDC":"ZT-GAF",
+		"D00E9D":"OM-140",
 		"D00EAC":"D-KFPF",
 		"D00EB4":"D-KEKG",
+		"D00EBC":"D-KBFA",
+		"D00F44":"05_JV",
+		"D00FE8":"OY-XZX",
 		"D00FF0":"D-KJBO",
 		"D00FF9":"D-7028",
 		"D01008":"D-K..G",
+		"D0100F":"D-KIMH",
 		"D01033":"C-FLXI",
 		"D01038":"VH-BHM",
 		"D0103E":"N101RW",
 		"D0103F":"VH-NII",
+		"D01179":"D-KOFE",
+		"D01344":"OO-UJA",
 		"D2A59B":"D-8795",
 		"DA8A02":"DYZ",
 		"DA8A03":"ZBI",
@@ -18539,6 +19049,7 @@ kglid = {
 		"DD0147":"D-KAZZ",
 		"DD017F":"D-KYRJ",
 		"DD0183":"D-4661",
+		"DD01A2":"D-7718",
 		"DD0279":"F-CAHY",
 		"DD0282":"D-2089",
 		"DD02AC":"HB-XFQ",
@@ -18567,7 +19078,6 @@ kglid = {
 		"DD0E7C":"D-MGKU",
 		"DD0EA3":"F-CDSP",
 		"DD0F4E":"F-CHFH",
-		"DD0FE2":"PH-146",
 		"DD1179":"OO-YAL",
 		"DD11D2":"D-1369",
 		"DD11DB":"D-2296",
@@ -18584,6 +19094,7 @@ kglid = {
 		"DD155E":"F-CVMP",
 		"DD15EA":"HB-321",
 		"DD183C":"D-KAJC",
+		"DD1846":"D-KICD",
 		"DD187E":"D-MBUL",
 		"DD1892":"Atos_V",
 		"DD191C":"D-KSSW",
@@ -18591,6 +19102,7 @@ kglid = {
 		"DD1953":"43314",
 		"DD1980":"D-NWOO",
 		"DD1990":"D-NAXH",
+		"DD19E0":"HB-182",
 		"DD1A2D":"D-NATO",
 		"DD39DB":"D-MRZB",
 		"DD4153":"D-KTGE",
@@ -18608,14 +19120,14 @@ kglid = {
 		"DD4EAA":"ZK-GZR",
 		"DD4EB2":"G-OSGU",
 		"DD4ED4":"G-DGCL",
-		"DD4EDE":"OY-XVY",
 		"DD4EE0":"SP-371",
 		"DD4EE6":"D-0349",
 		"DD4EF9":"FJXLT",
-		"DD4F35":"OY-EXA",
+		"DD4F03":"OY-XYK",
 		"DD4F38":"D-5729",
 		"DD4F39":"G-chrw",
 		"DD4F43":"G-SHHH",
+		"DD4F49":"OY-XXH",
 		"DD4F4C":"D-4823",
 		"DD4F60":"G-CFJV",
 		"DD4F71":"G-CGEB",
@@ -18662,13 +19174,13 @@ kglid = {
 		"DD8086":"F-CGZB",
 		"DD80CB":"HB-WAT",
 		"DD80DF":"D-1338",
-		"DD80E5":"HB-157",
 		"DD8126":"D-8424",
 		"DD8127":"D-1225",
 		"DD812C":"F-CIRJ",
 		"DD81F4":"D-0852",
 		"DD81F6":"D-7105",
 		"DD81F8":"D-1752",
+		"DD820B":"D-KBDI",
 		"DD820D":"D-KAYX",
 		"DD821D":"OO-VZZ",
 		"DD821E":"D-8389",
@@ -18707,7 +19219,6 @@ kglid = {
 		"DD837E":"D-1432",
 		"DD8387":"D-7891",
 		"DD838A":"PH-130",
-		"DD8393":"D-3192",
 		"DD8397":"D-KGGM",
 		"DD8398":"D-7936",
 		"DD83A5":"D-0213",
@@ -18776,6 +19287,7 @@ kglid = {
 		"DD85DF":"D-6094",
 		"DD85E7":"D-KHVI",
 		"DD85E9":"D-0405",
+		"DD85ED":"D-9019",
 		"DD85F7":"D-2199",
 		"DD8614":"D-1431",
 		"DD8615":"D-KSEL",
@@ -18784,7 +19296,6 @@ kglid = {
 		"DD8624":"D-6208",
 		"DD863D":"PH-936",
 		"DD8641":"ENSY",
-		"DD8646":"Goch",
 		"DD8652":"PH-134",
 		"DD8654":"D-8676",
 		"DD8659":"D-7329",
@@ -18810,14 +19321,11 @@ kglid = {
 		"DD86D6":"D-8051",
 		"DD86D7":"D-3834",
 		"DD86E0":"D-7028",
-		"DD86F1":"D-2752",
 		"DD86FD":"D-3942",
 		"DD8705":"D-2528",
 		"DD870E":"D-3924",
 		"DD8712":"D-2482",
-		"DD8713":"D-5574",
 		"DD8718":"D-2919",
-		"DD871A":"ECRQ",
 		"DD8722":"D-9437",
 		"DD872B":"D-2944",
 		"DD872F":"D-KEEM",
@@ -18844,7 +19352,6 @@ kglid = {
 		"DD88A1":"F-CGYB",
 		"DD88D8":"D-3934",
 		"DD88EB":"D-7449",
-		"DD88EE":"HB-320",
 		"DD88EF":"DD88EF",
 		"DD88F2":"D-7196",
 		"DD88FA":"D-1434",
@@ -18871,7 +19378,6 @@ kglid = {
 		"DD89D4":"D-5141",
 		"DD89E8":"HB-211",
 		"DD89F2":"PH-125",
-		"DD89F8":"D-1608",
 		"DD8A08":"D-0755",
 		"DD8A10":"D-KGRS",
 		"DD8A28":"F-CFAQ",
@@ -18907,16 +19413,10 @@ kglid = {
 		"DD8C0C":"D-6771",
 		"DD8C20":"HB-174",
 		"DD8C70":"F-CGGE",
-		"DD8C76":"HB-167",
 		"DD8C7F":"D-4994",
 		"DD8C8F":"HB-208",
-		"DD8CAE":"HB-150",
-		"DD8CC6":"HB-339",
 		"DD8CCE":"G-CJXY",
-		"DD8CF7":"G-DDVS",
 		"DD8D1E":"HB-176",
-		"DD8D1F":"HB-178",
-		"DD8D26":"HB-305",
 		"DD8D37":"LSZI",
 		"DD8D3A":"HB-154",
 		"DD8D41":"D-0231",
@@ -18981,6 +19481,7 @@ kglid = {
 		"DD9131":"D-7260",
 		"DD9140":"OE-092",
 		"DD9146":"D-KUEL",
+		"DD915B":"D-KDBS",
 		"DD916C":"D-8522",
 		"DD916D":"D-3701",
 		"DD916F":"D-KLFR",
@@ -18992,13 +19493,13 @@ kglid = {
 		"DD917D":"D-KEOC",
 		"DD9193":"D-5809",
 		"DD9197":"HB-163",
-		"DD919A":"HB-309",
 		"DD91A0":"D-KIZY",
 		"DD91A8":"HB-155",
 		"DD91B1":"D-KXXB",
 		"DD91C3":"D-5775",
 		"DD91C8":"D-4886",
 		"DD91D0":"D-8568",
+		"DD922F":"OE-562",
 		"DD923F":"OE-519",
 		"DD9248":"D-KLLG",
 		"DD9254":"VH-FQM",
@@ -19008,6 +19509,7 @@ kglid = {
 		"DD9265":"D-1679",
 		"DD926D":"D-1312",
 		"DD927C":"OE-945",
+		"DD9281":"D-0048",
 		"DD9289":"D-1660",
 		"DD928A":"D-KGFF",
 		"DD92A4":"OE-533",
@@ -19046,7 +19548,6 @@ kglid = {
 		"DD945C":"D-2877",
 		"DD9474":"D-5310",
 		"DD9482":"D-8975",
-		"DD9487":"D-4904",
 		"DD9488":"D-1773",
 		"DD948C":"D-KGPG",
 		"DD948E":"D-EAJJ",
@@ -19060,6 +19561,7 @@ kglid = {
 		"DD94F0":"D-4512",
 		"DD9503":"D-9216",
 		"DD9504":"OE-566",
+		"DD9505":"OE-537",
 		"DD9508":"HB-224",
 		"DD9519":"F-GINH",
 		"DD9526":"OE-913",
@@ -19084,6 +19586,7 @@ kglid = {
 		"DD95C8":"D-KISK",
 		"DD95CD":"D-2965",
 		"DD95CF":"D-7162",
+		"DD95D4":"PH-143",
 		"DD95EB":"D-KIQI",
 		"DD95F6":"D-3273",
 		"DD95FB":"D-KDIS",
@@ -19097,6 +19600,7 @@ kglid = {
 		"DD9642":"D-KKUA",
 		"DD9647":"D-2958",
 		"DD9649":"D-1223",
+		"DD9668":"FLP",
 		"DD9671":"D-3445",
 		"DD9675":"D-1678",
 		"DD9678":"D-3987",
@@ -19104,6 +19608,7 @@ kglid = {
 		"DD968E":"D-1028",
 		"DD969D":"D-5848",
 		"DD96A2":"D-MSFD",
+		"DD96A5":"D-KBXH",
 		"DD96A7":"D-4720",
 		"DD96B6":"D-9804",
 		"DD96BA":"D-5694",
@@ -19111,18 +19616,18 @@ kglid = {
 		"DD96CA":"HB-134",
 		"DD96CE":"DKKMR",
 		"DD96D6":"D-KHDK",
-		"DD96F6":"D-3740",
 		"DD96FF":"D-KCWD",
 		"DD9700":"D-2353",
-		"DD9706":"D-1053",
+		"DD9702":"G-CGBS",
 		"DD9707":"D-3103",
 		"DD970C":"D-9145",
 		"DD970F":"D-7226",
+		"DD9715":"OK-288",
+		"DD9716":"OE-534",
 		"DD971B":"HB-338",
 		"DD971C":"HB-158",
 		"DD9731":"OE-539",
 		"DD9736":"D-1849",
-		"DD9743":"DKMRV",
 		"DD974E":"OE-566",
 		"DD9753":"D-7337",
 		"DD9759":"D-1277",
@@ -19132,7 +19637,6 @@ kglid = {
 		"DD9774":"D-2432",
 		"DD9780":"OE-554",
 		"DD978F":"D-3486",
-		"DD97A1":"9277",
 		"DD97A5":"D-3826",
 		"DD97B6":"D-KTMS",
 		"DD97BA":"D-0266",
@@ -19150,7 +19654,6 @@ kglid = {
 		"DD980C":"D-4447",
 		"DD981C":"LY-IAP",
 		"DD9826":"OE-511",
-		"DD982A":"F-CJLL",
 		"DD982B":"D-2527",
 		"DD982E":"D-2535",
 		"DD982F":"D-KBPC",
@@ -19160,7 +19663,6 @@ kglid = {
 		"DD9853":"D-2973",
 		"DD9856":"ZU-GUO",
 		"DD985F":"D-KTAS",
-		"DD988F":"D-KYNT",
 		"DD989C":"D-5707",
 		"DD989F":"D-7757",
 		"DD98A2":"D-2443",
@@ -19171,7 +19673,7 @@ kglid = {
 		"DD98D5":"D-KLBD",
 		"DD98DD":"D-1401",
 		"DD98E1":"PH-146",
-		"DD98E7":"D-6925",
+		"DD98E3":"F-CBPE",
 		"DD98ED":"PH-141",
 		"DD9905":"D-7988",
 		"DD9907":"D-KKSA",
@@ -19192,6 +19694,7 @@ kglid = {
 		"DD997F":"F-CLUB",
 		"DD9995":"D-KEWE",
 		"DD999F":"D-0280",
+		"DD99A9":"D-KKLC",
 		"DD99C2":"D-KKUR",
 		"DD99CE":"D-8192",
 		"DD99DA":"D-KLKA",
@@ -19206,14 +19709,12 @@ kglid = {
 		"DD9A29":"D-4509",
 		"DD9A2E":"D-7641",
 		"DD9A36":"D-5313",
-		"DD9A3A":"D-4260",
 		"DD9A3B":"D-8092",
 		"DD9A43":"D-7812",
 		"DD9A44":"D-7359",
 		"DD9A45":"D-8600",
 		"DD9A51":"D-3309",
 		"DD9A59":"OE-527",
-		"DD9A5C":"D-5581",
 		"DD9A76":"D-KSMB",
 		"DD9A86":"OK-448",
 		"DD9A95":"D6504",
@@ -19226,7 +19727,7 @@ kglid = {
 		"DD9AE3":"D-9760",
 		"DD9AE4":"D-4164",
 		"DD9AEA":"D-0913",
-		"DD9AEB":"STOLEN",
+		"DD9AEB":"D-STOL",
 		"DD9B15":"D-0061",
 		"DD9B19":"D-6129",
 		"DD9B1C":"D-KCAE",
@@ -19246,7 +19747,7 @@ kglid = {
 		"DD9BA3":"D-1332",
 		"DD9BA5":"D-4013",
 		"DD9BAC":"D-KALZ",
-		"DD9BBD":"D-EKCH",
+		"DD9BBD":"D-EHAR",
 		"DD9BCF":"D-1451",
 		"DD9BF4":"D-9760",
 		"DD9BFD":"F-CICC",
@@ -19274,6 +19775,7 @@ kglid = {
 		"DD9C4B":"D-7920",
 		"DD9C4D":"D-4406",
 		"DD9C4E":"D-4992",
+		"DD9C50":"D-3997",
 		"DD9C56":"D-0312",
 		"DD9C5B":"D-1166",
 		"DD9C63":"D-3904",
@@ -19300,7 +19802,9 @@ kglid = {
 		"DD9D14":"D-6916",
 		"DD9D29":"D-6605",
 		"DD9D37":"D-1816",
+		"DD9D3E":"D-2595",
 		"DD9DB3":"G-CJJE",
+		"DD9DC4":"D-KLMC",
 		"DD9DC9":"D-1575",
 		"DD9DCA":"D-2637",
 		"DD9E0E":"D-8161",
@@ -19331,6 +19835,7 @@ kglid = {
 		"DD9F72":"D-1699",
 		"DD9F77":"I-BEPO",
 		"DD9F7D":"D-2682",
+		"DD9F82":"D-6109",
 		"DD9F8D":"D-8543",
 		"DD9F99":"D-1927",
 		"DD9F9A":"I-AFFE",
@@ -19348,7 +19853,6 @@ kglid = {
 		"DDA261":"D-KHBC",
 		"DDA283":"D-KBHH",
 		"DDA288":"D-EITR",
-		"DDA28B":"D-1393",
 		"DDA295":"D-KGIU",
 		"DDA299":"D-3739",
 		"DDA2A6":"HB-173",
@@ -19404,15 +19908,16 @@ kglid = {
 		"DDA524":"D-7845",
 		"DDA53A":"D-0485",
 		"DDA53D":"D-KTOM",
+		"DDA55B":"F-CFCB",
 		"DDA576":"D-9242",
 		"DDA578":"FCGCQ",
-		"DDA579":"D-6074",
+		"DDA579":"D-7168",
 		"DDA57D":"D-2074",
 		"DDA58D":"MELDEN",
 		"DDA5A3":"D-KPEZ",
 		"DDA5BD":"D-7953",
 		"DDA5C2":"D-1621",
-		"DDA5DF":"D-9610",
+		"DDA5DF":"D-6074",
 		"DDA5EB":"D-0885",
 		"DDA5FB":"D-2608",
 		"DDA5FF":"ZS-GUN",
@@ -19430,6 +19935,7 @@ kglid = {
 		"DDA651":"D-8879",
 		"DDA653":"D-KTEX",
 		"DDA654":"D-2974",
+		"DDA661":"D-1608",
 		"DDA669":"D-KMWF",
 		"DDA66B":"D-3066",
 		"DDA66C":"D-2673",
@@ -19447,7 +19953,6 @@ kglid = {
 		"DDA6C9":"D-KEGF",
 		"DDA6CF":"D-7995",
 		"DDA6E1":"D-2875",
-		"DDA6E5":"D-8182",
 		"DDA6EF":"D-9002",
 		"DDA6F3":"D-9909",
 		"DDA704":"D-4575",
@@ -19456,7 +19961,7 @@ kglid = {
 		"DDA70F":"D-2921",
 		"DDA72E":"D-8907",
 		"DDA735":"D-1989",
-		"DDA737":"D-7168",
+		"DDA737":"D-9610",
 		"DDA738":"D-4214",
 		"DDA740":"D-5656",
 		"DDA745":"D-1689",
@@ -19486,7 +19991,6 @@ kglid = {
 		"DDA803":"ZS-GTT",
 		"DDA804":"D-5356",
 		"DDA806":"D-4119",
-		"DDA826":"D-2419",
 		"DDA83B":"D-1373",
 		"DDA840":"D-6914",
 		"DDA849":"D-4616",
@@ -19494,6 +19998,7 @@ kglid = {
 		"DDA855":"D-KMBR",
 		"DDA857":"D-6676",
 		"DDA86A":"D-3358",
+		"DDA86C":"OK-197",
 		"DDA879":"D-1284",
 		"DDA896":"D-5799",
 		"DDA899":"D-0617",
@@ -19522,6 +20027,7 @@ kglid = {
 		"DDA9C6":"D-3778",
 		"DDA9D0":"D-KEIZ",
 		"DDA9D1":"D-8422",
+		"DDA9D5":"D-7843",
 		"DDA9DB":"D-2914",
 		"DDA9E5":"OE-574",
 		"DDA9E7":"D-KELE",
@@ -19554,7 +20060,6 @@ kglid = {
 		"DDAAB0":"D-KILL",
 		"DDAABB":"D-2342",
 		"DDAAC0":"D-5443",
-		"DDAAC2":"D-1481",
 		"DDAAC7":"D-0181",
 		"DDAAC9":"D-2273",
 		"DDAACA":"D-8062",
@@ -19580,20 +20085,20 @@ kglid = {
 		"DDAB54":"D-KLOK",
 		"DDAB58":"OE-571",
 		"DDAB6A":"D-2883",
-		"DDAB7C":"7C",
 		"DDAB81":"D-KLEB",
 		"DDAB89":"D-8126",
 		"DDAB91":"D-7331",
 		"DDAB96":"D-5887",
 		"DDAB98":"D-8409",
 		"DDAB99":"D-0197",
+		"DDAB9B":"D-6218",
 		"DDAB9C":"D-KKMK",
 		"DDAB9E":"D-2869",
 		"DDABB2":"OE5015",
 		"DDABC2":"D-6980",
 		"DDABC6":"D-4089",
 		"DDABC9":"D-MZLM",
-		"DDABCA":"D-0472",
+		"DDABCB":"D-3054",
 		"DDABF1":"G-BJIV",
 		"DDABFC":"D-KIMA",
 		"DDAC08":"D-0425",
@@ -19623,7 +20128,6 @@ kglid = {
 		"DDAD05":"OE-933",
 		"DDAD0B":"D-KAHG",
 		"DDAD12":"D-3562",
-		"DDAD1F":"D-0961",
 		"DDAD23":"D-KJCD",
 		"DDAD24":"D-5037",
 		"DDAD27":"PH-129",
@@ -19640,15 +20144,12 @@ kglid = {
 		"DDAD7E":"D-7709",
 		"DDAD91":"D-4705",
 		"DDAD96":"D-8013",
-		"DDAD97":"D-3505",
 		"DDAD98":"D-1652",
 		"DDADA0":"D-2248",
 		"DDADA5":"D-4920",
 		"DDADAC":"D-0245",
-		"DDADB2":"D-9017",
 		"DDADB6":"D-3421",
 		"DDADCE":"D-9278",
-		"DDADCF":"D-5766",
 		"DDADDF":"D-2848",
 		"DDADE8":"D-1882",
 		"DDADF3":"PH-893",
@@ -19666,6 +20167,7 @@ kglid = {
 		"DDAE58":"D-KETT",
 		"DDAE5F":"D-2348",
 		"DDAE6E":"D-9427",
+		"DDAE7C":"D-KIKW",
 		"DDAE9D":"F-CESI",
 		"DDAEA2":"SE-UUG",
 		"DDAEA8":"D-2191",
@@ -19720,6 +20222,7 @@ kglid = {
 		"DDB039":"D-5179",
 		"DDB03D":"D-7466",
 		"DDB042":"D-9414",
+		"DDB045":"D-3746",
 		"DDB046":"D-KMIC",
 		"DDB04C":"D-3084",
 		"DDB04F":"D-5846",
@@ -19773,16 +20276,15 @@ kglid = {
 		"DDB1B1":"D-8525",
 		"DDB1B3":"D-1644",
 		"DDB1C8":"D-9528",
+		"DDB1D3":"HB-246",
 		"DDB1DE":"D-4619",
 		"DDB1EF":"D-KFSV",
 		"DDB1F2":"D-3908",
 		"DDB1F5":"D-KAIC",
 		"DDB1FF":"F-CIBA",
-		"DDB201":"D-KNJA",
 		"DDB202":"D-1842",
 		"DDB203":"D-9378",
 		"DDB214":"D-3457",
-		"DDB217":"OK-078",
 		"DDB21B":"D-1891",
 		"DDB224":"D-1414",
 		"DDB22B":"D-3360",
@@ -19843,7 +20345,6 @@ kglid = {
 		"DDB39E":"VH-KYY",
 		"DDB3A0":"D-9275",
 		"DDB3A2":"XGG",
-		"DDB3AE":"D-5465",
 		"DDB3B2":"WPP",
 		"DDB3B9":"D-8626",
 		"DDB3C3":"G-CFWC",
@@ -19883,7 +20384,6 @@ kglid = {
 		"DDB51A":"D-2328",
 		"DDB51E":"D-5306",
 		"DDB51F":"MPCV",
-		"DDB520":"EGXO",
 		"DDB529":"VH-ZRD",
 		"DDB536":"D-3666",
 		"DDB53C":"VH-GXY",
@@ -19892,7 +20392,6 @@ kglid = {
 		"DDB54C":"VIT",
 		"DDB554":"D-7304",
 		"DDB555":"D-1599",
-		"DDB55E":"D-KMMM",
 		"DDB563":"D-4220",
 		"DDB566":"D-KKKL",
 		"DDB568":"D-6632",
@@ -19934,7 +20433,6 @@ kglid = {
 		"DDB62B":"D-6530",
 		"DDB634":"D-4528",
 		"DDB649":"D-MNTW",
-		"DDB659":"D-5385",
 		"DDB696":"D-6887",
 		"DDB6AF":"D-7873",
 		"DDB6C2":"D-0579",
@@ -19950,30 +20448,32 @@ kglid = {
 		"DDBA83":"VH-XJF",
 		"DDBA88":"BASE",
 		"DDBAA1":"D-5541",
+		"DDBAB1":"D-2288",
 		"DDBABB":"D-KTGE",
 		"DDBADA":"D-KSAP",
 		"DDBAE0":"D-0997",
 		"DDBAE7":"D-KIHW",
 		"DDBAE9":"G-CKSY",
+		"DDBAFF":"D-KNHC",
 		"DDBB08":"D-8048",
 		"DDBB10":"D-5805",
 		"DDBB14":"D-KFPF",
 		"DDBB1C":"PH-143",
-		"DDBB2C":"F-CJAC",
 		"DDBB4A":"D-8993",
 		"DDBB62":"D-3373",
 		"DDBB78":"D-KKVR",
 		"DDBB7C":"D5583",
+		"DDBB84":"SE-SMZ",
 		"DDBB8E":"D-7724",
 		"DDBBA6":"G-XDUO",
 		"DDBBAB":"ZS-OKW",
 		"DDBBB0":"D-3212",
 		"DDBBC2":"G-CJPA",
-		"DDBBD3":"OO-ZRP",
 		"DDBBE0":"D-4523",
 		"DDBC2E":"HB-341",
 		"DDBC38":"D-9210",
 		"DDBC6C":"D-8260",
+		"DDBC6F":"OY-XNE",
 		"DDBC8A":"D-KWNW",
 		"DDBCBF":"D-9250",
 		"DDBCCA":"D-KIHF",
@@ -19995,6 +20495,7 @@ kglid = {
 		"DDBD9C":"D-7218",
 		"DDBDA5":"SE-UVT",
 		"DDBE87":"D-1084",
+		"DDBE91":"D-MLPF",
 		"DDBEA0":"D-EEOF",
 		"DDBEA5":"D-8488",
 		"DDBEA9":"EINN",
@@ -20032,9 +20533,9 @@ kglid = {
 		"DDBFCF":"OY-XUA",
 		"DDBFD3":"OY-XLK",
 		"DDBFD7":"OY-XSF",
-		"DDBFD8":"OK-860",
 		"DDBFF3":"D-1984",
 		"DDC002":"T15",
+		"DDC028":"G-EEBA",
 		"DDC044":"D-4986",
 		"DDC060":"G-CKNR",
 		"DDC062":"D-7706",
@@ -20043,6 +20544,7 @@ kglid = {
 		"DDC097":"SE-UMP",
 		"DDC09A":"BPG",
 		"DDC09F":"LNGGN",
+		"DDC0A7":"OY-XYD",
 		"DDC0D0":"G-DDAS",
 		"DDC0E8":"SE-UEU",
 		"DDC0F2":"SE-UUI",
@@ -20061,6 +20563,7 @@ kglid = {
 		"DDC1A8":"MWSU",
 		"DDC1AC":"EC-HTH",
 		"DDC1BC":"D-EHAD",
+		"DDC1E2":"OE-549",
 		"DDC1E8":"D-0082",
 		"DDC1FA":"D-1333",
 		"DDC204":"LN-GAM",
@@ -20068,13 +20571,14 @@ kglid = {
 		"DDC225":"F-CVVK",
 		"DDC236":"SE-UNV",
 		"DDC250":"SE-CRF",
-		"DDC259":"SE-UTH",
 		"DDC279":"D-5899",
+		"DDC27B":"PH-495",
 		"DDC27C":"D-1976",
 		"DDC282":"D-5534",
 		"DDC299":"F-JIJH",
 		"DDC2E0":"D-7994",
 		"DDC2E5":"D-MUKF",
+		"DDC2EA":"D-KDMD",
 		"DDC2ED":"D-KZAC",
 		"DDC305":"OK-198",
 		"DDC30D":"D-6171",
@@ -20088,6 +20592,7 @@ kglid = {
 		"DDC347":"D-MCTL",
 		"DDC353":"D-MTUN",
 		"DDC368":"D-KRGO",
+		"DDC39F":"D-1234",
 		"DDC3CC":"D-KNOT",
 		"DDC3DE":"OE-712",
 		"DDC3F2":"D-5835",
@@ -20104,7 +20609,6 @@ kglid = {
 		"DDD165":"F-CHCR",
 		"DDD214":"D-9015",
 		"DDD218":"D-1365",
-		"DDD22C":"D-1230",
 		"DDD233":"D-8081",
 		"DDD235":"G-JIFI",
 		"DDD23A":"D-5761",
@@ -20116,7 +20620,6 @@ kglid = {
 		"DDD287":"D-7475",
 		"DDD289":"D-0604",
 		"DDD28B":"D-1505",
-		"DDD2B3":"D-7442",
 		"DDD2C5":"ZS-GXX",
 		"DDD2CE":"ZS-GVT",
 		"DDD2DB":"D-0336",
@@ -20188,12 +20691,12 @@ kglid = {
 		"DDD961":"F-CPIN",
 		"DDD963":"D-0259",
 		"DDD98D":"D-7685",
-		"DDD98E":"PH-852",
 		"DDD99A":"PH-588",
 		"DDD9B2":"D-8982",
 		"DDD9B3":"6238",
 		"DDD9B6":"D-6400",
 		"DDD9C1":"D5886",
+		"DDD9C5":"D-2928",
 		"DDD9C7":"PH-147",
 		"DDD9DB":"OY-XHW",
 		"DDD9E9":"SE-USL",
@@ -20201,15 +20704,17 @@ kglid = {
 		"DDDA20":"F-TFUI",
 		"DDDA23":"F-TGDH",
 		"DDDA27":"F-UQTH",
+		"DDDA86":"D-KRAN",
 		"DDDA8C":"F-JUFA",
 		"DDDAB4":"SE-TVR",
 		"DDDAB5":"D-KPJC",
 		"DDDABA":"G-CKAM",
-		"DDDAE4":"SEUOP",
+		"DDDAE4":"SE-UOP",
 		"DDDAE6":"D-1857",
 		"DDDAF5":"D-6904",
 		"DDDB05":"ZS-GRM",
 		"DDDB0A":"SE-UUB",
+		"DDDB0D":"D-6997",
 		"DDDB18":"D-3854",
 		"DDDB42":"SE-UVM",
 		"DDDB46":"SE-UVI",
@@ -20234,10 +20739,9 @@ kglid = {
 		"DDDC8F":"D-1714",
 		"DDDC97":"ZS-PXM",
 		"DDDC9E":"ZS-GAJ",
-		"DDDCA6":"D-6133",
 		"DDDCA7":"D-6089",
-		"DDDCBD":"OK-213",
 		"DDDCDA":"D-5929",
+		"DDDCF1":"D-8170",
 		"DDDD00":"D-5844",
 		"DDDD14":"D-7434",
 		"DDDD22":"D-4871",
@@ -20262,7 +20766,6 @@ kglid = {
 		"DDDE1B":"G-EEZO",
 		"DDDE1F":"D-KJLS",
 		"DDDE28":"PH1424",
-		"DDDE37":"D-0304",
 		"DDDE38":"D-KIJR",
 		"DDDE45":"G-CJDE",
 		"DDDE48":"D-KYLA",
@@ -20278,6 +20781,7 @@ kglid = {
 		"DDDEA2":"D-9806",
 		"DDDEAB":"VH-GLQ",
 		"DDDEB4":"D-KIMR",
+		"DDDEB7":"D-3129",
 		"DDDEBC":"D-KMMK",
 		"DDDEC6":"DKGCZ",
 		"DDDEC8":"ZK-GXG",
@@ -20297,11 +20801,11 @@ kglid = {
 		"DDDF28":"D-KSMF",
 		"DDDF30":"D-2088",
 		"DDDF37":"D-KIHD",
+		"DDDF3B":"OY-XVO",
 		"DDDF41":"D-KISP",
 		"DDDF42":"SE-UVX",
 		"DDDF44":"D-7350",
 		"DDDF4C":"D-KCIS",
-		"DDDF52":"D-KXXM",
 		"DDDF63":"D-KMCE",
 		"DDDF66":"D-KBRO",
 		"DDDF78":"D-KAWK",
@@ -20348,7 +20852,6 @@ kglid = {
 		"DDE32B":"VH-JSR",
 		"DDE337":"G-DCUB",
 		"DDE350":"D-KIYZ",
-		"DDE351":"D-KDFK",
 		"DDE37A":"D-5189",
 		"DDE37E":"D-2423",
 		"DDE387":"G-DFAW",
@@ -20366,6 +20869,7 @@ kglid = {
 		"DDE4BA":"PH-992",
 		"DDE4DD":"G-CIFU",
 		"DDE59C":"SE-UOB",
+		"DDE5AA":"SE-THZ",
 		"DDE5B2":"SE-UDO",
 		"DDE5DF":"SE-UTF",
 		"DDE68A":"G-CFEJ",
@@ -20418,7 +20922,6 @@ kglid = {
 		"DDEA97":"F-CIJP",
 		"DDEA9C":"OE-552",
 		"DDEA9E":"D-KDSS",
-		"DDEAA0":"SE_UVX",
 		"DDEAA5":"HB-234",
 		"DDEAAA":"SE-UYA",
 		"DDEAAE":"D-KBCU",
@@ -20430,7 +20933,6 @@ kglid = {
 		"DDEAC6":"D-KREW",
 		"DDEAD1":"D-KSMF",
 		"DDEAD4":"D-KARX",
-		"DDEADB":"D-3131",
 		"DDEAE2":"D-KJAN",
 		"DDEB02":"PH-151",
 		"DDEB03":"D-KWCB",
@@ -20472,7 +20974,7 @@ kglid = {
 		"DDECC7":"D-KPER",
 		"DDECCA":"D-KFVF",
 		"DDECD5":"DKRAS",
-		"DDECD6":"D-0965",
+		"DDED17":"D-5664",
 		"DDED28":"D-KJBC",
 		"DDED31":"ZS-GEI",
 		"DDED44":"ZS-GBR",
@@ -20486,12 +20988,11 @@ kglid = {
 		"DDED97":"D-5430",
 		"DDED9A":"KBKS",
 		"DDEDA0":"HB-202",
-		"DDEDBC":"I-IVPK",
 		"DDEDC3":"D-1090",
 		"DDEDDF":"D-3332",
 		"DDEE1D":"D-KCHM",
-		"DDEE3A":"OK-197",
 		"DDEE40":"D-KPJG",
+		"DDEE4A":"F-CGKA",
 		"DDEE77":"ZT-GAB",
 		"DDEE84":"D-KHHB",
 		"DDEE8C":"G-CLON",
@@ -20505,10 +21006,12 @@ kglid = {
 		"DDEF3C":"PH-953",
 		"DDEF3F":"OY-UBX",
 		"DDEF60":"D-4317",
+		"DDEF64":"D-KEUL",
 		"DDEF6F":"GCJMU",
 		"DDEF83":"D-KAVM",
 		"DDEF94":"GEEKI",
 		"DDEFA7":"YU-446",
+		"DDEFAA":"H17",
 		"DDEFAB":"D-9820",
 		"DDEFAF":"HB-244",
 		"DDEFB1":"D-KMXM",
@@ -20521,7 +21024,9 @@ kglid = {
 		"DDF091":"D-KSSK",
 		"DDF0B4":"D-KBVF",
 		"DDF0C7":"N328SA",
+		"DDF0EE":"D-KSTM",
 		"DDF107":"D-KRPF",
+		"DDF10B":"PH-4U1",
 		"DDF10C":"HB-239",
 		"DDF137":"TF-SAS",
 		"DDF14A":"NONE",
@@ -20590,6 +21095,7 @@ kglid = {
 		"DDFDF9":"D-8059",
 		"DDFE08":"D-KNUD",
 		"DDFE09":"D-4864",
+		"DDFE0B":"D-KFWH",
 		"DDFE25":"D-0923",
 		"DDFE27":"OE-945",
 		"DDFE34":"LY-AVW",
@@ -20630,7 +21136,6 @@ kglid = {
 		"DE05CF":"C-FTXW",
 		"DE05D6":"C-GNIM",
 		"DE0632":"C-FBMX",
-		"DE0EEA":"D-KKUS",
 		"DEDEDD":"59CQQ",
 		"DF0072":"N29SZ",
 		"DF0077":"N920B",
@@ -20658,7 +21163,6 @@ kglid = {
 		"DF0198":"C-GKHR",
 		"DF01B7":"N740XC",
 		"DF01BA":"N26HL",
-		"DF01BD":"N224JR",
 		"DF01DB":"N52ZZ",
 		"DF01E3":"C-GDMR",
 		"DF01F8":"C-GNKT",
@@ -20706,6 +21210,7 @@ kglid = {
 		"DF0874":"I-AEFF",
 		"DF0878":"I-ILMA",
 		"DF0881":"D-4222",
+		"DF0889":"D-KBFX",
 		"DF0895":"D-7266",
 		"DF08B2":"OE-527",
 		"DF08B8":"LNGIM",
@@ -20714,6 +21219,7 @@ kglid = {
 		"DF08C4":"D-KBBT",
 		"DF08D3":"D-2486",
 		"DF092A":"D-KSFL",
+		"DF0934":"D-7771",
 		"DF0937":"D-KXAG",
 		"DF0972":"N913P",
 		"DF097B":"N455S",
@@ -20726,6 +21232,7 @@ kglid = {
 		"DF09E6":"D-KLBH",
 		"DF09F3":"HB-256",
 		"DF0A1A":"D-5255",
+		"DF0A28":"D-3785",
 		"DF0A5A":"D-ESBH",
 		"DF0A6A":"D-7120",
 		"DF0A78":"D-KMSI",
@@ -20738,13 +21245,13 @@ kglid = {
 		"DF0ACD":"C-GVSI",
 		"DF0ACE":"VH-ZGR",
 		"DF0AFD":"D-EWLG",
+		"DF0B16":"HB-333",
 		"DF0B23":"D-6111",
 		"DF0B26":"D-MRMK",
 		"DF0B38":"D-EMUM",
 		"DF0BA8":"D-1811",
 		"DF0BCE":"D-KRKA",
 		"DF0C0B":"D-3627",
-		"DF0C1B":"D-KAWD",
 		"DF0C36":"D-2245",
 		"DF0C3E":"D-EGTP",
 		"DF0C49":"D-KCSP",
@@ -20818,6 +21325,7 @@ kglid = {
 		"DF1434":"D-EZEC",
 		"DF14A9":"D-6573",
 		"DF14E2":"HB-332",
+		"df14e3":"HB-336",
 		"df14e4":"HB-188",
 		"DF14F9":"D-KKON",
 		"DF1618":"VH-FJS",

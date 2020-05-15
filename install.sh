@@ -41,7 +41,6 @@ sudo apt-get install -y mailutils ntpdate mutt	ssmtp		#
 sudo apt-get install -y libcurl4-openssl-dev			#
 sudo apt-get install -y libjson0 libjson0-dev			#
 sudo apt-get install -y libjson-c-dev 				#
-sudo apt-get install -y libfap-dev                              #
 sudo apt-get install -y avahi-daemon 				#
 sudo apt-get install -y php7.2	 				#
 sudo a2enmod rewrite						#
