@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 import json
+import requests
 import urllib.request, urllib.error, urllib.parse
 global _ogninfo_                            # the OGN info data
 _ogninfo_ = {}                              # the OGN info data
@@ -20,27 +21,27 @@ def getddbdata():                           # get the data from the API server
     _ogninfo_ = j_obj                       # save the data on the global storage
     return j_obj                            # return the JSON objecta
 
-def getognreg(flarmid ):                    # get the ogn registration from the flarmID
+def getognreg(devid):                       # get the ogn registration from the flarmID
 
         global _ogninfo_                    # the OGN info data
         if len(_ogninfo_) == 0:
             _ogninfo_=getddbdata()
         devices=_ogninfo_["devices"]        # access to the ddbdata
         for dev in devices:                 # loop into the registrations
-            if dev["device_id"] == flarmid:  # if matches ??
+            if dev["device_id"] == devid:   # if matches ??
                 return dev["registration"]  # return the registration
 
         return "NOReg  "                    #if not found !!!
 
 
-def getognchk(flarmid):                     # Check if the FlarmID exist or NOT
+def getognchk(devid):                       # Check if the FlarmID exist or NOT
 
     global _ogninfo_                        # the OGN info data
     if len(_ogninfo_) == 0:
         _ogninfo_ = getddbdata()            # get the table from OGN DDB
     devices = _ogninfo_["devices"]          # access to the ddbdata
     for dev in devices:                     # loop into the devices
-        if dev["device_id"] == flarmid:     # if matches ??
+        if dev["device_id"] == devid:       # if matches ??
             return True
 
     return False
@@ -68,28 +69,39 @@ def getognflarmid(registration):            # get the FlarmID based on the regis
     return "NOFlarm"                        # if not found !!!
 
 
-def getogncn(flarmid):                      # get the ogn competition ID from the flarmID
+def getogncn(devid):                        # get the ogn competition ID from the flarmID
 
     global _ogninfo_                        # the OGN info data
     if len(_ogninfo_) == 0:
         _ogninfo_ = getddbdata()
     devices = _ogninfo_["devices"]          # access to the ddbdata
     for dev in devices:                     # loop into the compet
-        if dev["device_id"] == flarmid:     # if matches ??
+        if dev["device_id"] == devid:       # if matches ??
             return dev["cn"]                # return the competitionID
 
     return "NID"                            # if not found !!!
 
-def getognmodel(flarmid):                   # get the ogn aircraft model from the flarmID
+def getognmodel(devid):                     # get the ogn aircraft model from the flarmID
 
     global _ogninfo_                        # the OGN info data
     if len(_ogninfo_) == 0:
         _ogninfo_ = getddbdata()
     devices = _ogninfo_["devices"]          # access to the ddbdata
     for dev in devices:                     # loop into the registrations
-        if dev["device_id"] == flarmid:     # if matches ??
+        if dev["device_id"] == devid:       # if matches ??
             return dev["aircraft_model"]    #return the aircraft model
 
     return "NoModel"                        # if not found !!!
 
 ###################################################################
+
+DDB_URL = "http://ddb.glidernet.org/download/?j=1"
+
+
+def get_ddb_devices():
+    r = requests.get(DDB_URL)
+    for device in r.json()['devices']:
+        device.update({'identified': device['identified'] == 'Y',
+                       'tracked': device['tracked'] == 'Y'})
+        yield device
+

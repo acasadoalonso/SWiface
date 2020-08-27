@@ -467,15 +467,22 @@ def parseraprs(packet_str, msg):
         sensitivity = gdatal(data, "dB ")       # get the sensitivity
         if sensitivity == ' ':			# if no sensitivity provided
             sensitivity = 0
-        p6 = data.find('gps')                     # scan for gps info
+        p6 = data.find('gps')                   # scan for gps info
         if p6 != -1:
             gps = gdatar(data, "gps")  # get the gpsdata
         else:
-            p6 = data.find(' GPS')            # scan for gps info
+            p6 = data.find(' GPS')            	# scan for gps info
             if p6 != -1:
-                gps = "GPS"  # generic GPS mark
+                gps = "GPS"  			# generic GPS mark
             else:
-                gps = "NO"		# no GPS data
+                gps = "NO"			# no GPS data
+        if len(gps) > 6:
+                gps=gps[0:6]			# max 6 chars
+        if len(station) > 9:
+                station=station[0:9]		# max 9 chars
+        if len(source) > 8:
+                source=source[0:8]		# max 8 chars
+
         dte = date.strftime("%y%m%d")		# the aprs msgs has not date
 
         msg['path'] = path			# return the data parsed in the dict
@@ -539,16 +546,16 @@ def SRSSgetapidata(url):                    # get the data from the API server
 
 def SRSSgetjsondata(lat, lon, object='sunset', prt=False):
 
-    ts = 0                                    # init the return time since epoch
+    ts = 0                                    	# init the return time since epoch
     url = "http://api.sunrise-sunset.org/json?lat="+lat+"&lng="+lon+"&formatted=0"
-    jsondata = SRSSgetapidata(url)            # get the data from the web
+    jsondata = SRSSgetapidata(url)             	# get the data from the web
     #print jsondata
-    if prt:                                 # if print requested
+    if prt:                                 	# if print requested
         print(json.dumps(jsondata, indent=4))
-    if jsondata['status'] == "OK":          # only if results are OK
-        results = jsondata["results"]     # get the reults part
-        timeref = results[object]         # get the object that we need
-        #print timeref
+    if jsondata['status'] == "OK":          	# only if results are OK
+        results = jsondata["results"]     	# get the reults part
+        timeref = results[object]         	# get the object that we need
+        print(jsondata['status'], object, timeref)
         # convert to time format
         ttt = datetime.strptime(timeref, "%Y-%m-%dT%H:%M:%S+00:00")
         # number of second until beginning of the day

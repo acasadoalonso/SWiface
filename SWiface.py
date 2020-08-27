@@ -17,7 +17,7 @@ import os
 import os.path
 import atexit
 import signal
-import kglid                              # import the list on known gliders
+import ksta                               # import the list on known gliders
 import socket
 from parserfuncs import *                 # the ogn/ham parser functions
 from ognddbfuncs import getognreg         # the  get registration from FlarmID
@@ -43,8 +43,8 @@ def shutdown(sock, datafile, tmaxa, tmaxt, tmid, tmstd):
     for key in k:                       # report data
         gid = 'Noreg '                  # for unknown gliders
         if spanishsta(key) or frenchsta(key):
-            if key in kglid.ksta:
-                gid = kglid.ksta[key]   # report the station name
+            if key in ksta.ksta:
+                gid = ksta.ksta[key]   # report the station name
                 if len(gid) > 20:
                     gid = gid[0:20]
             else:
@@ -348,9 +348,14 @@ print("APRS Login reply:  ", sock_file.readline())
 start_time = time.time()  		# get the start and local times
 local_time = datetime.now()
 fl_date_time = local_time.strftime("%y%m%d")
-OGN_DATA = DBpath + "DATA" + fl_date_time+'.log'  # this is the LOG file
+
+if os.path.exists(DBpath):
+   OGN_DATA = DBpath + "DATA" + fl_date_time+'.log'  # this is the LOG file
+else:
+   OGN_DATA = "DATA" + fl_date_time+'.log'  # this is the LOG file
+
 print("OGN data file is: ", OGN_DATA)
-datafile = open(OGN_DATA, 'a')
+datafile = open(OGN_DATA, 'a')		# append the data
 keepalive_count = 1			# number of keep alive messages
 					# every 3 minutees we send a keep alive message to the APRS server
 keepalive_time = time.time()
