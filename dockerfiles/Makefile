@@ -13,7 +13,7 @@ build :
 	docker tag ${IMAGE_NAME}:$(FULL_VERSION) ${IMAGE_NAME}:$(MINOR_VERSION)
 	docker tag ${IMAGE_NAME}:$(FULL_VERSION) ${IMAGE_NAME}:$(MAJOR_VERSION)
 	docker tag ${IMAGE_NAME}:$(FULL_VERSION) ${IMAGE_NAME}
-	bash ../utils/docker.login
+	bash ~/src/sh/docker.login
 	docker push acasado/sws
 clean:
 	docker rmi ${IMAGE_NAME} 
