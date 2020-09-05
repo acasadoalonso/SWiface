@@ -132,6 +132,7 @@ def shutdown(sock, datafile, tmaxa, tmaxt, tmid, tmstd):
     print("Maximun altitude for the day:", tmaxa, ' meters MSL at:', tmaxt,
           'by:', gid, 'Station:', tmsta, "Max. distance:", tmaxd, "by:", tmstd)
     print("Sources:", fsour, "stations:", len (fsta), "Gliders:", len(k))
+    print("Aircraft types:", acfttype)
     conn.commit()			# commit the DB updates
     conn.close()			# close the database
     local_time = datetime.now() 	# report date and time now
@@ -173,6 +174,12 @@ def blackhole(lati, lon):
     else:
         return (True)
 ########################################################################
+def oksta(station):
+    if (station != "FLYMASTER" and station != "NAVITER"):
+        return(True)
+    else:
+        return(False)
+#####################
 
 
 def chkfilati(latitude,  flatil, flatiu):
@@ -189,7 +196,7 @@ def chkfilati(latitude,  flatil, flatiu):
 
 
 #----------------------ogn_SilentWingsInterface.py start-----------------------
-pgmversion = 'V2.00'
+pgmversion = 'V2.01'
 print("Start OGN Silent Wings Interface "+pgmversion)
 print("======================================")
 
@@ -233,6 +240,7 @@ if OGNT:				# check if we want to add the OGN trackers to be pair with the Flarm
 
 # --------------------------------------#
 
+acfttype = []                           # aircraft types
 fid = {}                                # FLARM ID list
 fidtm = {'NONE  ': 0}                   # FLARM ID list time
 fsta = {'NONE  ': 'NONE  '}             # STATION ID list
@@ -505,10 +513,17 @@ try:
             beacontype=path
             relay = 	msg['relay']			# relay type TCPIP, tracker
             station = 	msg['station']			# station name
+            if not oksta(station):			# if not a real station
+                continue
             otime = 	msg['otime']			# timestamp
             source = 	msg['source']			# source OGN/SPOT/FANET 
             if len(source) > 4:
                 source = source[0:3]
+            if 'acfttype' in msg:
+               acftt=msg['acfttype']
+               if not acftt in acfttype:
+                  acfttype.append(acftt)
+
             # if std records
             if ( relay == 'RELAY*' or relay[0:3] == "OGN"):
                 if relay[0:3] == "OGN" and prt:
