@@ -10,6 +10,7 @@ archive
 SWsynckglid.sh
 html/
 __pycache__
-ss*
+sscommit.sh
+sslink.sh
 config/
 log/
