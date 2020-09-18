@@ -13,6 +13,7 @@ if [ -f $sunsetfile ]
 		ss=$(/usr/local/bin/calcelestial -p sun -m set -q $city -H civil -f %s)
 fi
 alive=$"/nfs/OGN/SWdata/SWS.alive"
+pid=$"/tmp/sws.pid"
 now=$(date +%s)
 let "dif=$ss-$now-1800"
 if [ $dif -lt 0 ]
@@ -22,10 +23,9 @@ else
         if [ ! -f $alive ]
         then
                 logger  -t $0 "SWS Repo is not alive"
-                pnum=$(pgrep -x -f 'python3 /home/ogn/src/SWsrc/SWiface.py ')
-                if [ $? -eq 0 ] # if OGN repo interface is  not running
+                if [ -f $pid ] # if OGN repo interface is  not running
                 then
-                        sudo kill $pnum
+                        sudo kill $(cat /tmp/sws.pid)
                 fi
 #               restart OGN data collector
                 /bin/bash ~/src/SWsrc/sh/SWlive.sh
