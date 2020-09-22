@@ -1,3 +1,4 @@
+
 # 2020-08-05 CASADOUBUNTU
 ksta = { 
 # -------------------------------------------------------------------#
@@ -16,8 +17,10 @@ ksta = {
            "LEIG"   : "Igualada, Barcelona ",
            "LECD"   : "La Cerdanya, Girona ",
  	   "LESU"   : "La Seu de Urgel, Lerida ",
+ 	   "LEGY"   : "Garray, Soria ",
            "PWLERM" : "Robledillo de Mohernando",
            "CREAL"  : "Ciudad Real",
+           "LUGO"   : "Lugo ",
            "MORA"   : "Mora de Toledo, Toledo",
            "MADRID" : "Madrid - Test site",
            "ANDORRA": "Andorra ",
@@ -29,6 +32,8 @@ ksta = {
            "STOROW" :"Santa Orosia, Huesca ",
            "BOITAULL" : "Boi Taull, Lerida ",
            "CASTEJONS" : "Castejon de Sos, Huesca ",
+           "BELAVISTA" : "Belavista, Lisbon, Portugal ",
+           "LPMN"   : "Amendoeira, Portugal ",
 # french airports
            "LFCO"   : "Oloron",
            "LFDT"   : "Tarbes",
@@ -57,6 +62,9 @@ ksta = {
 	   "LFCS"   : "Bordeaux", 
 	   "LFMG"   : "La Montagne Noir", 
 	   "LFMP"   : "Perpignan", 
+	   "LFIX"   : "Itxassou", 
+	   "LFBA"   : "La Garomme", 
+	   "LFBS"   : "Biscarrosse", 
            "PAU"    : "Pau",
            "ROCAUDE": "Les Angles Ski Station",
            "POUBEAU": "Pou Beau, France",
