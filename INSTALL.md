@@ -38,3 +38,4 @@
    vagrant@scotchbox:~$ mailcatcher --http-ip=0.0.0.0
    composer update
    ```
+5. Review the installation

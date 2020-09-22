@@ -26,10 +26,6 @@ Dependencias:
 
 DBcreate.py:from DBopen_db import opendb
 DBcreate.py:import sqlite3
-libfap.py:from ctypes import *
-libfap.py:from datetime import datetime
-libfap.py:import socket
-libfap.py:import time
 parserfuncs.py:import datetime
 SWiface.py:from libfap import *
 SWiface.py:from ctypes import *
