@@ -27,7 +27,8 @@ else
                 if [ -f $pid ] # if OGN repo interface is  not running
                 then
                         pnum=$(cat $pid)
-                        sudo $pnum
+                        sudo kill $pnum
+                        rm $pid
                 fi
 #               restart OGN data collector
                 /bin/bash ~/src/SWsrc/sh/SWlive.sh
