@@ -1,4 +1,3 @@
-#FROM docker-registry.azuris.ch:5000/azuris/azphpapp:7.4
 FROM ubuntu:20.04
 ENV DEBIAN_FRONTEND=noninteractive 
 RUN apt-get update && apt-get -y upgrade 
@@ -70,5 +69,5 @@ EXPOSE 80
 EXPOSE 81
 EXPOSE 22
 
-RUN touch APRSinstallation.done	
+RUN touch SWSinstallation.done	
 ENTRYPOINT  service ssh start && service apache2 start && /bin/bash

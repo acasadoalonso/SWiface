@@ -34,6 +34,7 @@ ksta = {
            "CASTEJONS" : "Castejon de Sos, Huesca ",
            "BELAVISTA" : "Belavista, Lisbon, Portugal ",
            "LPMN"   : "Amendoeira, Portugal ",
+           "LPCB"   : "Castelo Branco, Portugal ",
 # french airports
            "LFCO"   : "Oloron",
            "LFDT"   : "Tarbes",

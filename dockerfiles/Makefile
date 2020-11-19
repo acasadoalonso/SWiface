@@ -14,7 +14,7 @@ build :
 	docker tag ${IMAGE_NAME}:$(FULL_VERSION) ${IMAGE_NAME}:$(MAJOR_VERSION)
 	docker tag ${IMAGE_NAME}:$(FULL_VERSION) ${IMAGE_NAME}
 	bash ~/src/sh/docker.login
-	docker push acasado/sws
+	docker push acasado/aprslog
 clean:
 	docker rmi ${IMAGE_NAME} 
 	docker images

@@ -9,7 +9,7 @@ import urllib.error
 import urllib.parse
 import json
 from datetime import datetime, timedelta
-from beeprint import pp
+#from beeprint import pp
 from ogn.parser import parse
 
 aprssources = {
@@ -19,6 +19,7 @@ aprssources = {
     "OGNFLR": "OGN",
     "OGNTRK": "OGN",
     "OGNDSX": "OGN",
+    "OGNTTN": "TTN",
     "OGADSB": "ADSB",
     "OGNFNT": "FANE",
     "OGNPAW": "PAW",
@@ -271,6 +272,8 @@ def spanishsta(station):                # return true if is an Spanish station
             station[0:4] == 'MORA'          or 	\
             station[0:4] == 'LUGO'          or 	\
             station[0:6] == 'MADRID'        or 	\
+            station[0:8] == 'LEMDadsb'      or 	\
+            station[0:7] == 'TTN2OGN'       or 	\
             station[0:5] == 'AVILA'         or	\
             station[0:9] == 'ALCAZAREN'     or	\
             station[0:7] == 'ANDORRA'       or	\
@@ -464,7 +467,7 @@ def parseraprs(packet_str, msg):
             msg['status']           = status
             msg['source']           = source
             return (msg)
-
+# ===================================================================================================== #
         # if std records            aprs_aircraft or tracker
         station = destination
 
@@ -575,6 +578,17 @@ def parseraprs(packet_str, msg):
                       
         if 'symboltable' in packet and 'symbolcode' in packet:
               msg['acfttype']=get_aircraft_type(packet['symboltable'], packet['symbolcode'])
+        if source == "ADSB":
+              fn   =gdatar(data," fn")
+              reg  =gdatar(data," reg")
+              model=gdatar(data," model")
+              if fn != ' ':
+                 msg['fn']=fn
+              if reg != ' ':
+                 msg['reg']=reg
+              if model != ' ':
+                 msg['model']=model
+
         return(msg)
     else:
         return -1				# if length ZERO or just the keep alive
