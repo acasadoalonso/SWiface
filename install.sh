@@ -118,6 +118,18 @@ then								#
 else
     mysql -u ogn -pogn --database SWIFACE <DBschema.sql   	#
 fi
+cd /tmp
+wget acasado.es:60080/files/GLIDERS.sql
+mysql -u ogn -pogn  SWIFACE </tmp/GLIDERS.sql
+cd /var/www/html/main						#
+if [ $sql = 'docker' ]			
+then			
+   echo "CREATE DATABASE if not exists SWIFACE" | sudo mysql -u ogn -pogn -h MARIADB
+   echo "SET GLOBAL log_bin_trust_function_creators = 1; " | sudo mysql -u ogn -pogn -h MARIADB
+   sudo mysql -u ogn -pogn -h MARIADB --database SWIFACE <DBschema.sql 
+   sudo mysql -u ogn -pogn -h MARIADB --database SWIFACE </tmp/GLIDERS.sql
+fi
+rm /tmp/GLIDERS.sql
 echo " "							#
 echo "Optional steps ... "					#
 echo "========================================================" #
