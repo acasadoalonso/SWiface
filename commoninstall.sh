@@ -6,7 +6,7 @@ else
 fi
 echo								#
 echo " "							#
-echo "Installing the SGP 2D live tracking interface ...." 	#
+echo "Installing the common components of the OGN  ...." 	#
 echo "=================================================="	#
 echo " "							#
 echo								#
@@ -53,7 +53,7 @@ sudo apt-get install -y python3-dev python3-pip 		#
 sudo apt-get install -y figlet inetutils-* mailutils		#
 sudo apt-get install -y avahi-daemon libcurl4-openssl-dev       #
 sudo apt-get install -y dos2unix libarchive-dev	 autoconf mc	#
-sudo apt-get install -y pkg-config git	mutt npm nodejs vim	# 
+sudo apt-get install -y pkg-config git	mutt vim		# 
 git config --global user.email "acasadoalonso@gmail.com"        #
 git config --global user.name "Angel Casado"                    #
 sudo apt-get install -y apache2 php 				#

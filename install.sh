@@ -15,24 +15,27 @@ sudo cat /etc/apache2/apache2.conf html.dir 	>>temp.conf	#
 sudo echo "ServerName SWserver  " >>temp.conf			#
 sudo mv temp.conf /etc/apache2/apache2.conf			#
 sudo service apache2 restart					#
+echo "  -------------------- APACHE restarted ---------------"	#
 cd /var/www/html/main						#
 echo								#
 echo " "							#
-echo "Installing mysql "					#
 echo "========================================================" #
 echo " "							#
 echo								#
-echo "Type ROOT old password: "					#
-echo " "							#
-echo "========================================================" #
-echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'ognognogn';" | sudo mysql -u root -p #
-echo "Type ROOT new password: "					#
-echo " "							#
-echo "========================================================" #
-echo "SELECT user,authentication_string,plugin,host FROM mysql.user; " | sudo mysql -u root -p 			#
-echo								#
-echo " "							#
-mysql_config_editor print --all					#
+if [ $sql = 'MySQL' ]			
+then	
+   echo "Type ROOT old password: "				#
+   echo " "							#
+   echo "========================================================" #
+   echo "ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'ognognogn';" | sudo mysql -u root -p #
+   echo "Type ROOT new password: "				#
+   echo " "							#
+   echo "========================================================" #
+   echo "SELECT user,authentication_string,plugin,host FROM mysql.user; " | sudo mysql -u root -p #
+   echo								#
+   echo " "							#
+   mysql_config_editor print --all				#
+fi
 if [ ! -d /etc/local ]						#
 then								#
     sudo mkdir /etc/local					#
@@ -99,7 +102,8 @@ if [ $sql = 'MySQL' ]
 then			
 	mysql_config_editor set --login-path=APRSogn --user=ogn --password
 fi
-cp doc/.my.cnf ~/
+cd /var/www/html/main						#
+cp doc/.my.cnf ~/						#
 echo "Create user ogn ..."					#
 sudo mysql  <doc/adduser.sql					#
 if [ $sql = 'MySQL' ]			
