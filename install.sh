@@ -114,9 +114,9 @@ else
 fi
 if [ $sql = 'MySQL' ]			
 then								#
-    mysql --login-path=APRSogn --database SWIFACE < main/DBschema.sql #
+    mysql --login-path=APRSogn --database SWIFACE <DBschema.sql #
 else
-    mysql -u ogn -pogn --database SWIFACE < main/DBschema.sql   #
+    mysql -u ogn -pogn --database SWIFACE <DBschema.sql   	#
 fi
 echo " "							#
 echo "Optional steps ... "					#
@@ -164,10 +164,7 @@ then								#
 	calcelestial -h 					#
 fi								#
 cd								#
-sudo apt-get -y dist-upgrade					#
-sudo apt-get -y autoremove					#
 sudo chmod 755 /var/log/syslog					#
-tail /var/log/syslog						#
 touch SWinstallation.done					#
 echo " "							#
 echo								#
@@ -183,3 +180,6 @@ echo "Install phpmyadmin if needed !!! "                                        
 echo "========================================================================================================"	#
 echo								#
 echo " "							#
+tail /var/log/syslog						#
+sudo apt-get -y dist-upgrade					#
+sudo apt-get -y autoremove					#

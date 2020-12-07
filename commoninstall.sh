@@ -70,6 +70,12 @@ echo "Installing phpmyadmin  ... "				#
 echo								#
 sudo apt-get install -y phpmyadmin 				#
 sudo service apache2 restart					#
+echo								#
+echo " "							#
+echo "Installing the PYTHON modules required  ..."		#
+echo "=================================================="	#
+echo " "							#
+echo								#
 sudo -H python3 -m pip install --upgrade pip			#
 pip3 -V								#
 sudo -H python3 -m pip install ephem pytz geopy configparser 	#
@@ -134,4 +140,9 @@ fi
 cd								#
 sudo apt-get install percona-toolkit				#
 sudo dpkg-reconfigure tzdata					#
-
+echo								#
+echo " "							#
+echo "End of common componets  ...." 				#
+echo "=================================================="	#
+echo " "							#
+echo								#
