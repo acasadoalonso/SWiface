@@ -93,18 +93,18 @@ fi								#
 echo " "							#
 echo "========================================================" #
 echo "Create the MySQL database SWIFACE "			#
-echo "Type the PASSword for the MySQL database SWIFACE "	#
 echo "========================================================" #
 echo "Running msqladmin .... assign root password ... "		#
 sudo mysqladmin -u root password ogn				#
-echo "Create the APRSogn login-path: Type assigned password"	#
 if [ $sql = 'MySQL' ]	
 then			
+        echo "Create the APRSogn login-path: Type assigned password"	#
 	mysql_config_editor set --login-path=APRSogn --user=ogn --password
 fi
 cd /var/www/html/main						#
 cp doc/.my.cnf ~/						#
 echo "Create user ogn ..."					#
+echo "========================================================" #
 sudo mysql  <doc/adduser.sql					#
 if [ $sql = 'MySQL' ]			
 then								#
@@ -124,6 +124,8 @@ mysql -u ogn -pogn  SWIFACE </tmp/GLIDERS.sql
 cd /var/www/html/main						#
 if [ $sql = 'docker' ]			
 then			
+   echo "Create DB in docker ogn ..."				#
+   echo "========================================================" #
    echo "CREATE DATABASE if not exists SWIFACE" | sudo mysql -u ogn -pogn -h MARIADB
    echo "SET GLOBAL log_bin_trust_function_creators = 1; " | sudo mysql -u ogn -pogn -h MARIADB
    sudo mysql -u ogn -pogn -h MARIADB --database SWIFACE <DBschema.sql 
@@ -135,7 +137,7 @@ echo "Optional steps ... "					#
 echo "========================================================" #
 echo " "							#
 echo								#
-cd main								#
+cd /var/www/html/main						#
 cp aliases ~/.bash_aliases					#
 cd sh	 							#
 crontab <crontab.data						#
