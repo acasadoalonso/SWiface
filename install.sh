@@ -5,63 +5,16 @@ echo "Installing the Silent Wings Studio interface ...." 	#
 echo "========================================================" #
 echo " "							#
 echo								#
-# Update repository information
-sudo apt-get update 
-export LC_ALL=en_US.UTF-8 && export LANG=en_US.UTF-8		#
-sudo apt-get install -y software-properties-common python3-software-properties
-echo " "							#
-echo								#
-echo " lets update the operating system libraries  ...." 	#
-echo "========================================================" #
-echo " "							#
-echo								#
-sudo apt-get update						#
-sudo apt-get install -y language-pack-en-base 			# 
-export LC_ALL=en_US.UTF-8 && export LANG=en_US.UTF-8		#
-echo " "							#
-echo "export LC_ALL=en_US.UTF-8 && export LANG=en_US.UTF-8 " >>~/.profile #
-echo "export LD_LIBRARY_PATH=/usr/local/lib" >>~/.profile 	#
-echo " "							#
-sudo apt-get -y upgrade						#
-echo								#
-echo " "							#
-echo "Installing the packages required . (LAMP stack)..."	#
-echo "========================================================" #
-echo " "							#
-echo								#
-echo								#
-sudo apt-get install -y mysql-server mysql-client sqlite3	#
-sudo mysql_secure_installation					#
-sudo apt-get install -y python3-dev python3-pip python3-mysqldb #
-sudo apt-get install -y dos2unix libarchive-dev	 autoconf mc	#
-sudo apt-get install -y pkg-config git mutt git-core vim	#
-sudo apt-get install -y apache2 php php-mcrypt php-mysql php-cli #
-sudo apt-get install -y php-mbstring php-gettext		#
-sudo apt-get install -y mailutils ntpdate mutt	ssmtp		#
-sudo apt-get install -y libcurl4-openssl-dev			#
-sudo apt-get install -y libjson0 libjson0-dev			#
-sudo apt-get install -y libjson-c-dev 				#
-sudo apt-get install -y avahi-daemon 				#
-sudo apt-get install -y php7.2	 				#
-sudo a2enmod rewrite						#
-sudo a2enmod cgi						#
-sudo phpenmod mcrypt						#
-sudo phpenmod mbstring						#
-sudo a2enmod php7.2 						#
+if [ $# = 0 ]; then						
+	sql='NO'
+else
+	sql=$1
+fi
+bash commoninstall.sh $sql					#
 sudo cat /etc/apache2/apache2.conf html.dir 	>>temp.conf	#
 sudo echo "ServerName SWserver  " >>temp.conf			#
 sudo mv temp.conf /etc/apache2/apache2.conf			#
 sudo service apache2 restart					#
-echo								#
-echo " "							#
-echo "Installing phpmyadmin  ... "				#
-echo "================================================" 	#
-echo " "							#
-echo								#
-sudo apt-get install -y libmysqlclient-dev			#
-sudo apt-get install -y phpmyadmin 				#
-sudo service apache2 restart					#
-
 cd /var/www/html/main						#
 echo								#
 echo " "							#
@@ -80,97 +33,6 @@ echo "SELECT user,authentication_string,plugin,host FROM mysql.user; " | sudo my
 echo								#
 echo " "							#
 mysql_config_editor print --all					#
-echo "Installing python "					#
-echo "========================================================" #
-echo " "							#
-echo								#
-sudo apt-get install -y python3-dev python3-pip python3-mysqldb #
-sudo apt-get install -y dos2unix libarchive-dev	 autoconf mc	#
-sudo apt-get install -y pkg-config git  at			#
-git config --global user.email "acasadoalonso@gmail.com"	#
-git config --global user.name "Angel Casado"			#
-echo								#
-echo " "							#
-echo "Installing apache2 "					#
-echo "========================================================" #
-echo " "							#
-echo								#
-sudo apt-get install -y apache2 				#
-echo								#
-echo " "							#
-echo "Installing php "						#
-echo "========================================================" #
-echo " "							#
-echo								#
-sudo apt-get install -y php php-mcrypt 				#
-sudo apt-get install -y php php-mysql php-cli 			#
-sudo apt-get install -y php-mbstring php-gettext		#
-sudo apt-get install -y php7.2 					#
-echo								#
-echo " "							#
-echo "Installing mail "						#
-echo "========================================================" #
-echo " "							#
-echo								#
-sudo apt-get install -y mailutils ntpdate mutt	ssmtp		#
-sudo apt-get install -y libcurl4-openssl-dev			#
-sudo apt-get install -y goaccess				#
-sudo apt-get install -y avahi-daemon                            #
-echo								#
-echo " "							#
-echo "Installing apache2 modules "				#
-echo "========================================================" #
-echo " "							#
-echo								#
-sudo a2enmod rewrite						#
-sudo a2enmod cgi						#
-sudo phpenmod mcrypt						#
-sudo phpenmod mbstring						#
-sudo a2enmod proxy_fcgi setenvif				#
-sudo a2enconf 							#
-sudo cat /etc/apache2/apache2.conf html.dir 	>>temp.conf	#
-sudo echo "ServerName SWiface " >>temp.conf			#
-sudo mv temp.conf /etc/apache2/apache2.conf			#
-echo								#
-echo " "							#
-echo "Installing apache2 conf "					#
-echo "========================================================" #
-echo " "							#
-echo								#
-cat /etc/apache2/apache2.conf					#
-sudo service apache2 restart					#
-echo " "							#
-echo "------------- APACHE2 restarted -----------------------"  #
-echo								#
-echo " "							#
-echo "Installing phpmyadmin  ... "				#
-echo "========================================================" #
-echo " "							#
-echo								#
-sudo apt-get install -y phpmyadmin 				#
-sudo service apache2 restart					#
-echo								#
-echo " "							#
-echo "Installing pyhon modules "				#
-echo "========================================================" #
-echo " "							#
-echo								#
-sudo -H pip3 install --upgrade pip                              #
-sudo -H pip3 install ephem 					#
-sudo -H pip3 install tqdm 					#
-sudo -H pip3 install pytz 					#
-sudo -H pip3 install geopy 					#
-sudo -H pip3 install configparser 				#
-sudo -H pip3 install pycountry 					#
-sudo -H pip3 install requests 					#
-sudo -H pip3 install pyopenssl 					#
-sudo -H pip3 install uritemplate				#
-sudo -H pip3 install pyMySQLdb					#
-sudo apt-get install libmysqlclient-dev                         #
-sudo -H pip3 install mysqlclient                                #
-sudo -H pip3 install beeprint					#
-sudo -H pip3 install ogn.client					#
-sudo -H pip3 install python-dateutil				#
 if [ ! -d /etc/local ]						#
 then								#
     sudo mkdir /etc/local					#
@@ -230,11 +92,28 @@ echo "========================================================" #
 echo "Create the MySQL database SWIFACE "			#
 echo "Type the PASSword for the MySQL database SWIFACE "	#
 echo "========================================================" #
-echo "CREATE DATABASE SWIFACE" | mysql -u root -p		#
-mysql -u root -p --database SWIFACE < main/DBschema.sql		#
-echo "Create the MySQL OGN user "				#
-echo "GRANT ALL PRIVILEGES ON *.* TO 'ogn'@'localhost' IDENTIFIED BY 'yourpassword'; " | mysql -u root -p     #
-echo "GRANT SELECT ON *.* TO 'ognread'@'localhost'     IDENTIFIED BY 'yourpassword'; " | mysql -u root -p     #
+echo "Running msqladmin .... assign root password ... "		#
+sudo mysqladmin -u root password ogn				#
+echo "Create the APRSogn login-path: Type assigned password"	#
+if [ $sql = 'MySQL' ]	
+then			
+	mysql_config_editor set --login-path=APRSogn --user=ogn --password
+fi
+cp doc/.my.cnf ~/
+echo "Create user ogn ..."					#
+sudo mysql  <doc/adduser.sql					#
+if [ $sql = 'MySQL' ]			
+then								#
+	echo "CREATE DATABASE if not exists SWIFACE" | mysql --login-path=APRSogn	#
+else
+	echo "CREATE DATABASE if not exists SWIFACE" | mysql -u ogn -pogn	
+fi
+if [ $sql = 'MySQL' ]			
+then								#
+    mysql --login-path=APRSogn --database SWIFACE < main/DBschema.sql #
+else
+    mysql -u ogn -pogn --database SWIFACE < main/DBschema.sql   #
+fi
 echo " "							#
 echo "Optional steps ... "					#
 echo "========================================================" #
@@ -242,13 +121,6 @@ echo " "							#
 echo								#
 cd main								#
 cp aliases ~/.bash_aliases					#
-if [ ! -f /usr/local/bin/mailcatcher ]				#
-then								#
-	sh sh/mailcatcher.install				#
-	#mailcatcher --http-ip=0.0.0.0				#
-	sudo /usr/local/bin/composer self-update		#
-	composer update						#
-fi								#
 cd sh	 							#
 crontab <crontab.data						#
 crontab -l 							#
@@ -281,8 +153,6 @@ echo " "							#
 echo "========================================================" #
 echo " "							#
 cd /var/www/html 						#
-rm kglid.py							#
-cp  main/kglid.py .						# 
 if [ ! -f /usr/local/bin/calcelestial ]				#
 then								#
 	cd main/sh						#
@@ -290,7 +160,6 @@ then								#
 	calcelestial -h 					#
 fi								#
 cd								#
-sudo dpkg-reconfigure tzdata					#
 sudo apt-get -y dist-upgrade					#
 sudo apt-get -y autoremove					#
 sudo chmod 755 /var/log/syslog					#
