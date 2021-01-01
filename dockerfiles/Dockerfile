@@ -10,9 +10,9 @@ RUN export LC_ALL=en_US.UTF-8 && export LANG=en_US.UTF-8
 RUN apt-get install -y python3 python3-pymysql python3-openssl python3-dev python3-pip 
 RUN apt-get install -y python3-mysqldb
 RUN apt-get install -y libmariadbclient-dev mutt wget 
-RUN apt-get install -y python3-rsa python3-psutil iproute2 systemd npm git
+RUN apt-get install -y python3-rsa python3-psutil iproute2 systemd git
 RUN apt-get install -y dos2unix libarchive-dev  autoconf mc    
-RUN apt-get install -y pkg-config nodejs vim git-core inetutils-ping mailutils at 
+RUN apt-get install -y pkg-config vim git-core inetutils-ping mailutils at 
 RUN apt-get install -y figlet 
 RUN apt-get install -y libcurl4-openssl-dev			
 RUN apt-get install -y libjson-c-dev 				

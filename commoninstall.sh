@@ -63,6 +63,8 @@ sudo apt-get install -y php7.4					#
 sudo apt-get install -y ntpdate					#
 sudo apt-get install -y ssmtp					#
 sudo apt-get install -y at sshpass minicom 			#
+sudo apt-get install -y fakeroot debhelper 			#
+sudo apt-get install -y libfile-fcntllock-perl			#
 sudo a2enmod rewrite						#
 sudo phpenmod mbstring						#
 echo								#
@@ -70,13 +72,14 @@ echo "Installing phpmyadmin  ... "				#
 echo								#
 sudo apt-get install -y phpmyadmin 				#
 sudo service apache2 restart					#
+sudo apt-get -y autoremove					#
 echo								#
 echo " "							#
 echo "Installing the PYTHON modules required  ..."		#
 echo "=================================================="	#
 echo " "							#
 echo								#
-sudo -H python3 -m pip install --upgrade pip			#
+#sudo -H python3 -m pip install --upgrade pip			#
 pip3 -V								#
 sudo -H python3 -m pip install ephem pytz geopy configparser 	#
 sudo -H python3 -m pip install pycountry uritemplate requests	#
@@ -86,6 +89,7 @@ sudo -H python3 -m pip install ttn               		#
 sudo -H python3 -m pip install pyserial 			#
 sudo -H python3 -m pip install eciespy pycryptodome rsa         #
 sudo -H python3 -m pip install mariadb               		#
+sudo -H python3 -m pip install ansible               		#
 if [ $sql = 'MySQL' ]					
 then	
 	sudo -H pip3 uninstall mysqlclient			#
@@ -138,8 +142,10 @@ then
    echo "SET GLOBAL log_bin_trust_function_creators = 1; " | sudo mysql -u root -pogn -h MARIADB
 fi
 cd								#
+sudo mysql_secure_installation					#
 sudo apt-get install percona-toolkit				#
 sudo dpkg-reconfigure tzdata					#
+sudo apt-get -y autoremove					#
 echo								#
 echo " "							#
 echo "End of common componets  ...." 				#
