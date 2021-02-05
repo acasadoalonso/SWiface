@@ -36,7 +36,7 @@
     group: root
     mode: '0644'
 
- name: Check whether if the file /nfs/hosts is already there
+- name: Check whether if the file /nfs/hosts is already there
   command: grep -Fq "CASADODOM" /etc/hosts
   register: checkhosts
   check_mode: no
