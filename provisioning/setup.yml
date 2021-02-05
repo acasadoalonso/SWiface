@@ -4,6 +4,9 @@
 # Ansible uses ControlPersist for SSH connections. The first time this playbook
 # runs, the docker commands would fail if run by the vagrant user, since the
 # persisted connection state isn't aware of the addition of the 'docker' group.
+- name: Install Build essentials
+  apt: name=build_essentials state=present
+
 - name: Install Docker
   apt: name=docker.io state=present
 
