@@ -91,7 +91,7 @@ echo								#
 if [ ! -f /tmp/GLIDERS.sql ]					#
 then								#
 	cd /tmp							#
-	wget acasado.es:60080/files/GLIDERS.sql >/dev/null	#
+	wget acasado.es:60080/files/GLIDERS.sql 2>/dev/null	#
 fi	
 if [ -f SWiface.db ]						#
 then								#
@@ -124,8 +124,6 @@ cp doc/.my.cnf ~/						#
 echo "Create DB user ogn ..."					#
 echo "========================================================" #
 sudo mysql  <doc/adduser.sql					#
-cd /tmp
-wget acasado.es:60080/files/GLIDERS.sql >/dev/null		#
 if [ $sql = 'MySQL' ]						#
 then	
    echo "CREATE DATABASE if not exists SWIFACE" | mysql --login-path=APRSogn	#
@@ -146,7 +144,7 @@ then
    sudo mysql -u ogn -pogn -h MARIADB --database SWIFACE <DBschema.sql 
    sudo mysql -u ogn -pogn -h MARIADB --database SWIFACE </tmp/GLIDERS.sql
 fi
-rm /tmp/GLIDERS.sql
+sudo rm /tmp/GLIDERS.sql*
 echo " "							#
 echo "Optional steps ... "					#
 echo "========================================================" #

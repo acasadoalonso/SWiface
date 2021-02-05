@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
+echo "======================================================================"
+echo "                   begin of bootstrap                                 "
+echo "======================================================================"
 sudo apt-get update
-sudo apt-get install -y apache2
 if [ ! -d /home/vagrant/src ]
 then 
    sudo -u vagrant mkdir /home/vagrant/src
@@ -11,7 +13,6 @@ if [ -f /nfs/hosts ]
 then 
 	sudo cat /nfs/hosts >>/etc/hosts
 fi
-
 if [ -f /tmp/commoninstall.sh ]
 then 
 	echo "======================================================================="
@@ -22,6 +23,8 @@ then
         sudo bash /tmp/install.sh
 fi
 sudo apt-get autoremove
+sudo apt-get autoclean
+sudo apt-get clean
 echo "======================================================================"
 echo "                   end of bootstrap                                   "
 echo "======================================================================"
