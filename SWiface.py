@@ -323,7 +323,7 @@ if os.path.isfile(compfile):
     j = fd.read()
     clist = json.loads(j)
     fd.close()				# close it
-    filter = "filter b/"  		# prepare the fileter param of login
+    filter = "filter b/"  		# prepare the filter param of login
     for f in clist:			# explore the whole list
         filter += f  			# add the flarm id
         filter += "/"  			# separated by an slash

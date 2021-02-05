@@ -61,7 +61,10 @@ fi								#
 if [ ! -d ~/src  ]						#
 then								#
 	mkdir ~/src   						#
-	ln -s $(pwd) ~/src/SWSsrc				#
+        if [ ! -d ~/src/SWSsrc  ]				#
+        then							#
+	   ln -s $(pwd) ~/src/SWSsrc				#
+        fi							#
 fi								#
 echo " "							#
 echo " DIR: /src ..."						#

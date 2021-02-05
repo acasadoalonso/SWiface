@@ -66,7 +66,7 @@ eventdesc2="OGN Live tracking in Alps "
 ; the filter are defined by a set of two paralelles if zero means no filter
 FILTER_LATI1 = 42.0
 FILTER_LATI2 = 46.0
-; secondary fileter
+; secondary filter
 FILTER_LATI3 = -30.0 	
 FILTER_LATI4 = -36.0 
 
