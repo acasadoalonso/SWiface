@@ -133,7 +133,7 @@ then								#
    mysql --login-path=APRSogn --database SWIFACE <DBschema.sql 	#
    mysql -u ogn -pogn  SWIFACE </tmp/GLIDERS.sql		#
 else								#
-   sudo mysql  -h $server <doc/adduser.sql			#
+   sudo mysql -u root -pogn -h $server <doc/adduser.sql		#
    echo "CREATE DATABASE if not exists SWIFACE" | mysql -u ogn -pogn -h $server	
    mysql -u ogn -pogn -h $server SWIFACE <SWIFACE.sql 		#
    mysql -u ogn -pogn -h $server SWIFACE </tmp/GLIDERS.sql	#
