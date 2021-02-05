@@ -91,7 +91,7 @@ echo								#
 if [ ! -f /tmp/GLIDERS.sql ]					#
 then								#
 	cd /tmp							#
-	wget acasado.es:60080/files/GLIDERS.sql			#
+	wget acasado.es:60080/files/GLIDERS.sql >/dev/null	#
 fi	
 if [ -f SWiface.db ]						#
 then								#
@@ -114,8 +114,6 @@ echo " "							#
 echo "========================================================" #
 echo "Create the MySQL database SWIFACE "			#
 echo "========================================================" #
-echo "Running msqladmin .... assign root password ... "		#
-sudo mysqladmin -u root password ogn				#
 if [ $sql = 'MySQL' ]	
 then			
         echo "Create the APRSogn login-path: Type assigned password"	#
@@ -123,24 +121,21 @@ then
 fi
 cd /var/www/html/main						#
 cp doc/.my.cnf ~/						#
-echo "Create user ogn ..."					#
+echo "Create DB user ogn ..."					#
 echo "========================================================" #
 sudo mysql  <doc/adduser.sql					#
-if [ $sql = 'MySQL' ]			
-then								#
-	echo "CREATE DATABASE if not exists SWIFACE" | mysql --login-path=APRSogn	#
-else
-	echo "CREATE DATABASE if not exists SWIFACE" | mysql -u ogn -pogn	
-fi
-if [ $sql = 'MySQL' ]			
-then								#
-    mysql --login-path=APRSogn --database SWIFACE <DBschema.sql #
-else
-    mysql -u ogn -pogn --database SWIFACE <DBschema.sql   	#
-fi
 cd /tmp
-wget acasado.es:60080/files/GLIDERS.sql
-mysql -u ogn -pogn  SWIFACE </tmp/GLIDERS.sql
+wget acasado.es:60080/files/GLIDERS.sql >/dev/null		#
+if [ $sql = 'MySQL' ]						#
+then	
+   echo "CREATE DATABASE if not exists SWIFACE" | mysql --login-path=APRSogn	#
+   mysql --login-path=APRSogn --database SWIFACE <DBschema.sql 	#
+   mysql -u ogn -pogn  SWIFACE </tmp/GLIDERS.sql
+else
+   echo "CREATE DATABASE if not exists SWIFACE" | mysql -u ogn -pogn -h $server	
+   mysql -u ogn -pogn -h $server --database SWIFACE <DBschema.sql #
+   mysql -u ogn -pogn -h $server SWIFACE </tmp/GLIDERS.sql
+fi
 cd /var/www/html/main						#
 if [ $sql = 'docker' ]			
 then			
