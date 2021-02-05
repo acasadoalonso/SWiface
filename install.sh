@@ -61,18 +61,18 @@ fi								#
 if [ ! -d ~/src  ]						#
 then								#
 	mkdir ~/src   						#
-	ln -s $(pwd) ~/src/SWsrc				#
+	ln -s $(pwd) ~/src/SWSsrc				#
 fi								#
 echo " "							#
 echo " DIR: /src ..."						#
 echo "================================================" 	#
 ls -la ~/src							#
-echo " DIR: /src/SWsrc ..."					#
+echo " DIR: /src/SWSsrc ..."					#
 echo "================================================" 	#
-ls -la ~/src/SWsrc						#
-echo " DIR: /src/SWsrc/sh ..."					#
+ls -la ~/src/SWSsrc						#
+echo " DIR: /src/SWSsrc/sh ..."					#
 echo "================================================" 	#
-ls -la ~/src/SWsrc/sh						#
+ls -la ~/src/SWSsrc/sh						#
 echo "================================================" 	#
 echo " "							#
 echo "Installing the templates needed  ...." 			#
@@ -168,8 +168,8 @@ fi								#
 if [ ! -d ~/src  ]						#
 then								#
 	mkdir ~/src   						#
-	mkdir ~/src/SWsrc					#
-	ln -s /var/www/html/main ~/src/SWsrc			#
+	mkdir ~/src/SWSsrc					#
+	ln -s /var/www/html/main ~/src/SWSsrc			#
 fi								#
 ls  -la ~/src 							#
 if [ ! -d /nfs  ]						#

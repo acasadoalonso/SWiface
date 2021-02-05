@@ -13,5 +13,5 @@ python3 genconfig.py
 cd /nfs/OGN/SWdata
 echo "Generated config.py :" 			>>SWproc.log
 date 						>>SWproc.log
-python3 ~/src/SWsrc/SWcalsunrisesunset.py 	>>SWproc.log
-python3 ~/src/SWsrc/SWiface.py 			>>SWproc.log &
+python3 ~/src/SWSsrc/SWcalsunrisesunset.py 	>>SWproc.log
+python3 ~/src/SWSsrc/SWiface.py 		>>SWproc.log &

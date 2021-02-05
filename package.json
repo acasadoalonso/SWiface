@@ -1,5 +1,5 @@
 {
-  "name": "SWsrc",
+  "name": "SWSsrc",
   "version": "1.0.0",
   "description": "This repo contains the interface between the [Silent Wings](http://www.silentwings.no) either Studio or Viewer with the [OGN network](http://wiki.glidernet.org).",
   "main": "index.js",

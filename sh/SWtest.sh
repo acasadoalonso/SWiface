@@ -31,7 +31,7 @@ else
                         rm $pid
                 fi
 #               restart OGN data collector
-                /bin/bash ~/src/SWsrc/sh/SWlive.sh
+                /bin/bash ~/src/SWSsrc/sh/SWlive.sh
                 logger -t $0 "SWS repo seems down, restarting"
                 date >>/nfs/OGN/SWdata/.SWSrestart.log
         else

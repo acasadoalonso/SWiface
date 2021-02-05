@@ -7,7 +7,7 @@ sudo apt-get update
 if [ ! -d /home/vagrant/src ]
 then 
    sudo -u vagrant mkdir /home/vagrant/src
-   sudo -u vagrant ln -s /vagrant/public/main /home/vagrant/src/SWsrc
+   sudo -u vagrant ln -s /vagrant/public/main /home/vagrant/src/SWSsrc
 fi
 if [ -f /nfs/hosts ]
 then 
