@@ -4,6 +4,9 @@
 
   vars:
     build_root: /vagrant/
+    bash_aliases:
+      - { alias: 'mariadb', command: 'mysql -u root -pogn -h 172.17.0.2' }
+      - { alias: 'sql', command: 'mysql -u root -pogn -h mariadb' }
 
   pre_tasks:
     - name: Update apt cache if needed.
@@ -12,17 +15,101 @@
       apt: upgrade=yes
     - name: Install Ansible
       apt: name=ansible state=present
-    - name: Update ansible.
+    - name: Update ansible collection community.mysql.
       command: ansible-galaxy collection install community.mysql
     - name: Install Maria-DB Client
       apt: name=mariadb-client state=present
+    - name: Install PHPMYADMIN
+      apt: name=phpmyadmin state=present
     - name: Autoremove
       apt: autoremove=yes
 
-  #roles:
-  #  - role: acasadoalonso.docker
-
   tasks:
+    - name: Bash aliases | Add aliases
+      become: no
+      lineinfile:
+        dest: "~/.bash_aliases"
+        create: yes
+        mode: 0644
+        line: 'alias {{ item.alias }}="{{ item.command }}"'
+        regexp: "^alias {{ item.alias }}="
+      with_items: "{{ bash_aliases }}"
+      when: bash_aliases != false
+
+    - name: Copy 
+      become: no
+      copy:
+         src: "../aliases"
+         dest: /tmp/aliases
+         mode: 0777
+
+    - name: Gen aliases
+      become: no
+      shell: /tmp/aliases
+
+    - name: Copy crontab data
+      copy:
+         src: "../crontab.data"
+         dest: /tmp/
+
+    - name: Copy aliases
+      become: no
+      copy:
+         src: "../aliases"
+         dest: ~/.bash_aliases
+
+    - name: Copy COMMON install shell
+      copy:
+         src: "../commoninstall.sh"
+         dest: /tmp/commoninstall.sh
+
+    - name: Copy  Install shell
+      copy:
+         src: "../install.sh"
+         dest: /tmp/install.sh
+
+    - name: Recursively remove src/SWSsrc
+      ansible.builtin.file:
+        path: ~/src/SWSsrc
+        state: absent
+
+    - name: Create the source directory at home
+      become: no
+      ansible.builtin.file:
+        path: "~/src"
+        state: directory
+        owner: vagrant
+        group: vagrant
+        mode: '0755'
+
+    - name: Create the SWSsrc directory at home
+      become: no
+      ansible.builtin.file:
+        path: "~/src/SWSsrc"
+        state: directory
+        owner: vagrant
+        group: vagrant
+        mode: '0755'
+
+    - name: Create a symbolic link to src/SWSsrc
+      become: no
+      ansible.builtin.file:
+        src: /var/www/html/main/
+        dest: ~/src/SWSsrc
+        owner: vagrant
+        group: vagrant
+        state: link
+        force: yes
+
+    - name: Copy CRONTAB shell file
+      copy:
+         src: "./CRONTAB.sh"
+         dest: /tmp/CRONTAB.sh
+
+    - name: Restore crontab
+      command: "bash /tmp/CRONTAB.sh"
+      
     - import_tasks: setup.yml
     - import_tasks: docker.yml
     - import_tasks: basicpak.yml
+    - import_tasks: fail2ban.yml
