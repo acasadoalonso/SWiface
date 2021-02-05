@@ -8,12 +8,20 @@ echo "========================================================" #
 echo " "							#
 echo " "							#
 echo								#
-if [ $# = 0 ]; then						
-	sql='NO'
-else
-	sql=$1
-fi
-bash commoninstall.sh $sql					#
+if [ $# = 0 ]; then						#
+	sql='NO'						#
+        server=mariadb						#
+else								#
+	sql=$1						        #
+        server=localhost					#
+fi								#
+if [ ! -f /tmp/commoninstall.sh ]				#
+then								#
+   echo "Installing the common software"			#
+   echo "=============================="			#
+   bash commoninstall.sh $sql					#
+fi								#
+cd /var/www/html/main						#
 echo "  -------------------- APACHE restarting ---------------"	#
 sudo cat /etc/apache2/apache2.conf html.dir 	>>temp.conf	#
 sudo echo "ServerName SWserver  "               >>temp.conf	#
@@ -77,6 +85,11 @@ echo "Setting the data bases       ...." 			#
 echo "========================================================" #
 echo " "							#
 echo								#
+if [ ! -f /tmp/GLIDERS.sql ]					#
+then								#
+	cd /tmp							#
+	wget acasado.es:60080/files/GLIDERS.sql			#
+fi	
 if [ -f SWiface.db ]						#
 then								#
 	rm      SWiface.db					#
