@@ -45,7 +45,7 @@
 
 - name: Add /nfs/hosts to /etc/hosts
   command: cat /nfs/hosts >> /etc/hosts
-  when: checkhosts.rc == 0
+  when: checkhosts.rc != 0
 
 - name: Run a PHPMYADMIN container.
   docker_container:
