@@ -37,7 +37,7 @@
     mode: '0644'
 
 - name: Check whether if the /nfs/hosts is already there
-  command: grep -Fxq "# CASADODOM" /etc/hosts
+  command: grep -vFxq "# CASADODOM" /etc/hosts
   register: checkhosts
   check_mode: no
   ignore_errors: yes
