@@ -16,6 +16,7 @@ else								#
         server=localhost					#
 fi								#
 ping -c 5 $server 						#
+ping -c 5 172.17.0.2 						#
 sleep 5								#
 if [ ! -f /tmp/commoninstall.sh ]				#
 then								#
@@ -52,7 +53,7 @@ then								#
    echo								#
    echo " "							#
    mysql_config_editor print --all				#
-if								#
+fi								#
 if [ ! -d /etc/local ]						#
 then								#
     sudo mkdir /etc/local					#
