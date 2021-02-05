@@ -6,7 +6,7 @@
     when: ansible_os_family == 'Debian'
 
 - name: Ensure fail2ban is running and enabled on boot.
-    service:
+  service:
     name: fail2ban
     state: started
     enabled: yes
