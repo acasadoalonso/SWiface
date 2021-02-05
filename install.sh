@@ -15,7 +15,8 @@ else								#
 	sql=$1						        #
         server=localhost					#
 fi								#
-ping -c $server 						#
+ping -c 5 $server 						#
+sleep 5								#
 if [ ! -f /tmp/commoninstall.sh ]				#
 then								#
    echo "Installing the common software"			#
@@ -51,7 +52,7 @@ then								#
    echo								#
    echo " "							#
    mysql_config_editor print --all				#
-f								#
+if								#
 if [ ! -d /etc/local ]						#
 then								#
     sudo mkdir /etc/local					#
