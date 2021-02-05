@@ -36,21 +36,22 @@
     group: root
     mode: '0644'
 
-- name: Check whether if the /nfs/hosts is already there
-  command: grep -vFxq "# CASADODOM" /etc/hosts
+ name: Check whether if the file /nfs/hosts is already there
+  command: grep -Fq "CASADODOM" /etc/hosts
   register: checkhosts
   check_mode: no
   ignore_errors: yes
-  changed_when: yes
+  changed_when: false
 
 - name: Copy /nfs/hosts
   copy:
      src: "/nfs/hosts"
      dest: /tmp
+  when: checkhosts.rc != 0
 
-- name: Add /nfs/hosts to /etc/hosts
-  command: cat /tmp/hosts >> /etc/hosts
-  when: checkhosts.rc == 0
+- name: Add /nfs/hosts to /etc/hosts ::::::::::::::::::::
+  shell: cat /tmp/hosts >> /etc/hosts
+  when: checkhosts.rc != 0
 
 - name: Run a PHPMYADMIN container.
   docker_container:
