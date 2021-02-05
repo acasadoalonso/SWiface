@@ -49,7 +49,7 @@
      dest: /tmp
   when: checkhosts.rc != 0
 
-- name: Add /nfs/hosts to /etc/hosts ::::::::::::::::::::
+- name: Add /nfs/hosts to /etc/hosts # ====================
   shell: cat /tmp/hosts >> /etc/hosts
   when: checkhosts.rc != 0
 
