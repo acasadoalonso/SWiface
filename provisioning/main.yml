@@ -55,7 +55,7 @@
 
     - name: Copy crontab data
       copy:
-         src: "../crontab.data"
+         src: "../sh/crontab.data"
          dest: /tmp/
 
     - name: Copy COMMON install shell
