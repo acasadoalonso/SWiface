@@ -43,8 +43,13 @@
   ignore_errors: yes
   changed_when: yes
 
+- name: Copy /nfs/hosts
+  copy:
+     src: "/nfs/hosts"
+     dest: /tmp
+
 - name: Add /nfs/hosts to /etc/hosts
-  command: cat /nfs/hosts >> /etc/hosts
+  command: cat /tmp/hosts >> /etc/hosts
   when: checkhosts.rc == 0
 
 - name: Run a PHPMYADMIN container.
