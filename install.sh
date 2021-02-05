@@ -10,7 +10,7 @@ echo " "							#
 echo								#
 if [ $# = 0 ]; then						#
 	sql='NO'						#
-        server=mariadb						#
+        server=172.17.0.2					#
 else								#
 	sql=$1						        #
         server=localhost					#
