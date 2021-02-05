@@ -15,6 +15,7 @@ else								#
 	sql=$1						        #
         server=localhost					#
 fi								#
+ping -c $server 						#
 if [ ! -f /tmp/commoninstall.sh ]				#
 then								#
    echo "Installing the common software"			#
@@ -37,8 +38,8 @@ echo " "							#
 echo "========================================================" #
 echo " "							#
 echo								#
-if [ $sql = 'MySQL' ]			
-then	
+if [ $sql = 'MySQL' ]						#
+then								#	
    echo "Type ROOT old password: "				#
    echo " "							#
    echo "========================================================" #
@@ -50,7 +51,7 @@ then
    echo								#
    echo " "							#
    mysql_config_editor print --all				#
-fi
+f								#
 if [ ! -d /etc/local ]						#
 then								#
     sudo mkdir /etc/local					#
@@ -92,7 +93,7 @@ if [ ! -f /tmp/GLIDERS.sql ]					#
 then								#
 	cd /tmp							#
 	wget acasado.es:60080/files/GLIDERS.sql 2>/dev/null	#
-fi	
+fi								#	
 if [ -f SWiface.db ]						#
 then								#
 	rm      SWiface.db					#
@@ -114,37 +115,37 @@ echo " "							#
 echo "========================================================" #
 echo "Create the MySQL database SWIFACE "			#
 echo "========================================================" #
-if [ $sql = 'MySQL' ]	
-then			
+if [ $sql = 'MySQL' ]						#
+then								#		
         echo "Create the APRSogn login-path: Type assigned password"	#
 	mysql_config_editor set --login-path=APRSogn --user=ogn --password
-fi
+fi								#
 cd /var/www/html/main						#
 cp doc/.my.cnf ~/						#
 echo "Create DB user ogn ..."					#
 echo "========================================================" #
 sudo mysql  <doc/adduser.sql					#
 if [ $sql = 'MySQL' ]						#
-then	
+then								#
    echo "CREATE DATABASE if not exists SWIFACE" | mysql --login-path=APRSogn	#
    mysql --login-path=APRSogn --database SWIFACE <DBschema.sql 	#
-   mysql -u ogn -pogn  SWIFACE </tmp/GLIDERS.sql
-else
+   mysql -u ogn -pogn  SWIFACE </tmp/GLIDERS.sql		#
+else								#
    echo "CREATE DATABASE if not exists SWIFACE" | mysql -u ogn -pogn -h $server	
-   mysql -u ogn -pogn -h $server --database SWIFACE <DBschema.sql #
-   mysql -u ogn -pogn -h $server SWIFACE </tmp/GLIDERS.sql
-fi
+   mysql -u ogn -pogn -h $server SWIFACE <SWIFACE.sql 		#
+   mysql -u ogn -pogn -h $server SWIFACE </tmp/GLIDERS.sql	#
+fi								#
 cd /var/www/html/main						#
-if [ $sql = 'docker' ]			
-then			
+if [ $sql = 'docker' ]						#		
+then								#		
    echo "Create DB in docker ogn ..."				#
    echo "========================================================" #
    echo "CREATE DATABASE if not exists SWIFACE" | sudo mysql -u ogn -pogn -h MARIADB
    echo "SET GLOBAL log_bin_trust_function_creators = 1; " | sudo mysql -u ogn -pogn -h MARIADB
-   sudo mysql -u ogn -pogn -h MARIADB --database SWIFACE <DBschema.sql 
+   sudo mysql -u ogn -pogn -h MARIADB --database SWIFACE <SWIFACE.sql 
    sudo mysql -u ogn -pogn -h MARIADB --database SWIFACE </tmp/GLIDERS.sql
-fi
-sudo rm /tmp/GLIDERS.sql*
+fi								#
+sudo rm /tmp/GLIDERS.sql*					#
 echo " "							#
 echo "Optional steps ... "					#
 echo "========================================================" #
@@ -214,4 +215,13 @@ echo "If running in Windows under Virtual Box, run dos2unix on /var/www/html & .
 echo "Run the utilities soa2sws.py and/or sgp2sws.py in order to extract the data from SoaringSpot.com or SGP"  #
 echo "========================================================================================================"	#
 echo								#
+echo " "							#
+echo " "							#
+echo " "							#
+echo " "							#
+echo " "							#
+echo " "							#
+echo " "							#
+echo " "							#
+echo " "							#
 echo " "							#
