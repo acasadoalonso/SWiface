@@ -1,8 +1,11 @@
 #!/bin/bash 
 echo								#
 echo " "							#
+echo " "							#
+echo "========================================================" #
 echo "Installing the Silent Wings Studio interface ...." 	#
 echo "========================================================" #
+echo " "							#
 echo " "							#
 echo								#
 if [ $# = 0 ]; then						
@@ -11,8 +14,9 @@ else
 	sql=$1
 fi
 bash commoninstall.sh $sql					#
+echo "  -------------------- APACHE restarting ---------------"	#
 sudo cat /etc/apache2/apache2.conf html.dir 	>>temp.conf	#
-sudo echo "ServerName SWserver  " >>temp.conf			#
+sudo echo "ServerName SWserver  "               >>temp.conf	#
 sudo mv temp.conf /etc/apache2/apache2.conf			#
 sudo service apache2 restart					#
 echo "  -------------------- APACHE restarted ---------------"	#
@@ -138,10 +142,16 @@ echo "========================================================" #
 echo " "							#
 echo								#
 cd /var/www/html/main						#
-cp aliases ~/.bash_aliases					#
+if [ ! -f     ~/.bash_aliases ]					#
+then								#
+    cp aliases ~/.bash_aliases					#
+fi								#
 cd sh	 							#
-crontab <crontab.data						#
-crontab -l 							#
+if [  -f     crontab.data ]	 				#
+then								#
+    crontab <crontab.data					#
+    crontab -l 							#
+fi								#
 if [ ! -d ~/src  ]						#
 then								#
 	mkdir ~/src   						#
@@ -179,7 +189,7 @@ then								#
 fi								#
 cd								#
 sudo chmod 755 /var/log/syslog					#
-touch SWinstallation.done					#
+touch SWSinstallation.done					#
 echo " "							#
 echo								#
 echo "========================================================================================================"	#
@@ -190,7 +200,6 @@ echo "In order to execute the Silent Wings data crawler execute:  bash ~/src/SWl
 echo "Check the placement of the RootDocument on APACHE2 ... needs to be /var/www/html"				#
 echo "If running in Windows under Virtual Box, run dos2unix on /var/www/html & ./main & ~/src"			#
 echo "Run the utilities soa2sws.py and/or sgp2sws.py in order to extract the data from SoaringSpot.com or SGP"  #
-echo "Install phpmyadmin if needed !!! "                                                                        #
 echo "========================================================================================================"	#
 echo								#
 echo " "							#

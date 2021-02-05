@@ -6,7 +6,7 @@
     build_root: /vagrant/
     bash_aliases:
       - { alias: 'mariadb', command: 'mysql -u root -pogn -h 172.17.0.2' }
-      - { alias: 'sql', command: 'mysql -u root -pogn -h mariadb' }
+      - { alias: 'sql',     command: 'mysql -u root -pogn -h mariadb' }
 
   pre_tasks:
     - name: Update apt cache if needed.
@@ -25,6 +25,12 @@
       apt: autoremove=yes
 
   tasks:
+    - name: Copy aliases
+      become: no
+      copy:
+         src: "../aliases"
+         dest: ~/.bash_aliases
+
     - name: Bash aliases | Add aliases
       become: no
       lineinfile:
@@ -51,12 +57,6 @@
       copy:
          src: "../crontab.data"
          dest: /tmp/
-
-    - name: Copy aliases
-      become: no
-      copy:
-         src: "../aliases"
-         dest: ~/.bash_aliases
 
     - name: Copy COMMON install shell
       copy:
