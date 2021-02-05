@@ -9,10 +9,6 @@ then
    sudo -u vagrant mkdir /home/vagrant/src
    sudo -u vagrant ln -s /vagrant/public/main /home/vagrant/src/SWSsrc
 fi
-if [ -f /nfs/hosts ]
-then 
-	sudo cat /nfs/hosts >>/etc/hosts
-fi
 if [ -f /tmp/commoninstall.sh ]
 then 
 	echo "======================================================================="
