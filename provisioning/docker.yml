@@ -49,7 +49,7 @@
 # Copy database dump file to remote host and restore it to database 'my_db'
 - name: Copy database dump file
   copy:
-     src: "../SWIFACE.template.sql"
+     src: "../SWIFACE.sql"
      dest: /tmp
 - name: Copy adduser file
   copy:
