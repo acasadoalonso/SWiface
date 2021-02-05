@@ -21,6 +21,9 @@ then								#
    echo "=============================="			#
    bash commoninstall.sh $sql					#
 fi								#
+echo "========================================================" #
+echo "Installing the specific parts of SWS interface ...." 	#
+echo "========================================================" #
 cd /var/www/html/main						#
 echo "  -------------------- APACHE restarting ---------------"	#
 sudo cat /etc/apache2/apache2.conf html.dir 	>>temp.conf	#
@@ -202,8 +205,11 @@ then								#
 fi								#
 cd								#
 sudo chmod 755 /var/log/syslog					#
+tail /var/log/syslog						#
 touch SWSinstallation.done					#
 echo " "							#
+sudo apt-get -y dist-upgrade					#
+sudo apt-get -y autoremove					#
 echo								#
 echo "========================================================================================================"	#
 echo "Installation done ..."											#
@@ -216,6 +222,3 @@ echo "Run the utilities soa2sws.py and/or sgp2sws.py in order to extract the dat
 echo "========================================================================================================"	#
 echo								#
 echo " "							#
-tail /var/log/syslog						#
-sudo apt-get -y dist-upgrade					#
-sudo apt-get -y autoremove					#
