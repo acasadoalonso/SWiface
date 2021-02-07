@@ -1,4 +1,3 @@
-# Edit this file to introduce tasks to be run by cron.
 # 
 MAILTO="youremail@yourserver.org" 
 # m h  dom mon dow   command
