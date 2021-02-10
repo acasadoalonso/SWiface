@@ -21,6 +21,7 @@ sudo apt-get install -y build-essential 			#
 #sudo add-apt-repository ppa:ondrej/php				#
 echo								#
 echo " "							#
+echo "=================================================="	#
 echo "Lets update the operating system libraries  ...." 	#
 echo "=================================================="	#
 echo " "							#
@@ -35,6 +36,7 @@ sudo apt install -y cifs-utils					#
 sudo apt install -y nfs-common					#
 echo								#
 echo " "							#
+echo "=================================================="	#
 echo "Installing the packages required . (LAMP stack)..."	#
 echo "=================================================="	#
 echo " "							#
@@ -78,25 +80,27 @@ sudo apt-get install -y dnsutils				#
 sudo apt-get install -y python3-autopep8			#
 sudo a2enmod rewrite						#
 sudo phpenmod mbstring						#
-echo								#
-echo "Installing phpmyadmin  ... "				#
-echo								#
+echo	""							#
+echo	""							#
 if [ $sql = 'MySQL' ]						#
 then								#
     sudo apt-get install -y phpmyadmin 				#
     sudo service apache2 restart				#
     sudo apt-get -y autoremove					#
+    echo "================================================"     #
     echo "Running msqladmin .... assign root password ... "	#
+    echo "================================================"     #
     sudo mysqladmin -u root password ogn			#
     sudo mysql_secure_installation				#
 fi								#
 echo								#
 echo " "							#
+echo "=================================================="	#
 echo "Installing the PYTHON modules required  ..."		#
 echo "=================================================="	#
 echo " "							#
 echo								#
-#sudo -H python3 -m pip install --upgrade pip			#
+sudo -H python3 -m pip install --upgrade pip			#
 pip3 -V								#
 sudo -H python3 -m pip install ephem pytz geopy configparser 	#
 sudo -H python3 -m pip install pycountry uritemplate requests	#
@@ -110,6 +114,7 @@ sudo -H python3 -m pip install ansible-lint            		#
 sudo -H python3 -m pip install molecule               		#
 sudo -H python3 -m pip install docker               		#
 sudo -H python3 -m pip install yamllint               		#
+sudo -H python3 -m pip install setuptools 			#
 sudo -H python3 -m pip install flake8               		#
 if [ $sql = 'MySQL' ]						#	
 then	a							#
@@ -136,6 +141,7 @@ then								#
 fi								#
 echo								#
 echo " "							#
+echo "=================================================="	#
 echo "Installing the templates needed  ...." 			#
 echo "=================================================="	#
 echo " "							#
@@ -148,6 +154,11 @@ fi								#
 cd /var/www/html/main						#
 if [ $sql = 'docker' -o $sql == 'MariaDB' ]			#
 then								#
+   echo " "							#
+   echo "=================================================="	#
+   echo "Install docker  ...." 					#
+   echo "=================================================="	#
+   echo " "							#
    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
    sudo apt-key fingerprint 0EBFCD88
    sudo add-apt-repository \
@@ -173,5 +184,6 @@ echo " "							#
 echo "=================================================="	#
 echo "End of common componets  ...." 				#
 echo "=================================================="	#
+echo " "							#
 echo " "							#
 echo								#
