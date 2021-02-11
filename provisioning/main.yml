@@ -7,6 +7,7 @@
     bash_aliases:
       - { alias: 'mariadb', command: 'mysql -u root -pogn -h 172.17.0.2' }
       - { alias: 'sql',     command: 'mysql -u root -pogn -h mariadb' }
+      - { alias: 'py',      command: 'pgrep -a python3' }
 
   pre_tasks:
     - name: Update apt cache if needed.
@@ -25,6 +26,15 @@
       apt: autoremove=yes
 
   tasks:
+    - name: Replace entry SWSTESTOGN
+      ansible.builtin.lineinfile:
+      path: /etc/hosts
+      regexp: 'SWSTESTOGN'
+      line: 192.168.1.213 SWSTESTOGN
+      owner: root
+      group: root
+      mode: '0644'
+
     - name: Copy aliases
       become: no
       copy:
