@@ -26,6 +26,7 @@
       apt: autoremove=yes
 
   tasks:
+
     - name: Replace entry SWSTESTOGN
       ansible.builtin.lineinfile:
       path: /etc/hosts
