@@ -40,6 +40,8 @@
       copy:
          src: "../aliases"
          dest: ~/.bash_aliases
+         owner: vagrant
+         group: vagrant
 
     - name: Bash aliases | Add aliases
       become: no
@@ -58,6 +60,8 @@
          src: "../aliases"
          dest: /tmp/aliases
          mode: 0777
+         owner: vagrant
+         group: vagrant
 
     - name: Gen aliases
       become: no
@@ -68,18 +72,24 @@
          src: "../sh/crontab.data"
          dest: /tmp/
          mode: 0777
+         owner: vagrant
+         group: vagrant
 
     - name: Copy COMMON install shell
       copy:
          src: "../commoninstall.sh"
          dest: /tmp/commoninstall.sh
          mode: 0777
+         owner: vagrant
+         group: vagrant
 
     - name: Copy  Install shell
       copy:
          src: "../install.sh"
          dest: /tmp/install.sh
          mode: 0777
+         owner: vagrant
+         group: vagrant
 
     - name: Recursively remove src/SWSsrc
       ansible.builtin.file:
@@ -119,6 +129,8 @@
          src: "./CRONTAB.sh"
          dest: /tmp/CRONTAB.sh
          mode: 0777
+         owner: vagrant
+         group: vagrant
 
     - name: Restore crontab
       command: "bash /tmp/CRONTAB.sh"
