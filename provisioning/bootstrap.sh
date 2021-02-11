@@ -18,6 +18,7 @@ then
         sudo su vagrant -c /tmp/commoninstall.sh
         sudo su vagrant -c /tmp/install.sh
 fi
+sudo apt-get dist-upgrade
 sudo apt-get autoremove
 sudo apt-get autoclean
 sudo apt-get clean
