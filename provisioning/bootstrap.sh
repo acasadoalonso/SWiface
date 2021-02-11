@@ -15,8 +15,8 @@ then
 	echo "Install the rest of the software running     bash /tmp/commoninstall.sh"
 	echo "follow by running                            bash /tmp/install.sh"
 	echo "======================================================================="
-        sudo bash /tmp/commoninstall.sh
-        sudo bash /tmp/install.sh
+        sudo su vagrant -c /tmp/commoninstall.sh
+        sudo su vagrant -c /tmp/install.sh
 fi
 sudo apt-get autoremove
 sudo apt-get autoclean

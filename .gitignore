@@ -12,5 +12,6 @@ html/
 __pycache__
 sscommit.sh
 sslink.sh
+.vagrant/
 config/
 log/
