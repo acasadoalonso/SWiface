@@ -139,7 +139,10 @@ else								#
    sudo mysql -u root -pogn -h $server <doc/adduser.sql		#
    echo "CREATE DATABASE if not exists SWIFACE" | mysql -u ogn -pogn -h $server	
    mysql -u ogn -pogn -h $server SWIFACE <SWIFACE.sql 		#
-   mysql -u ogn -pogn -h $server SWIFACE </tmp/GLIDERS.sql	#
+   if [ -f /tmp/GLIDERS.sql ]					#
+   then
+      mysql -u ogn -pogn -h $server SWIFACE </tmp/GLIDERS.sql	#
+   fi								#
 fi								#
 cd /var/www/html/main						#
 if [ $sql = 'docker' ]						#		

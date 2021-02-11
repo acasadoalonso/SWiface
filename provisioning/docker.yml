@@ -68,22 +68,27 @@
   copy:
      src: "../SWIFACE.sql"
      dest: /tmp
+    mode: '0777'
 - name: Copy adduser file
   copy:
      src: "../doc/adduser.sql"
      dest: /tmp
+    mode: '0777'
 - name: Copy SWIFACE shell file
   copy:
      src: "./SWIFACE.sh"
      dest: /tmp
+    mode: '0777'
 - name: Copy GLIDERS shell file
   copy:
      src: "./GLIDERS.sh"
      dest: /tmp/GLIDERS.sh
+    mode: '0777'
 - name: Copy ADDUSER shell file
   copy:
      src: "./ADDUSER.sh"
      dest: /tmp/ADDUSER.sh
+    mode: '0777'
 - name: Copy MariaDB conf
   become: no
   copy:
@@ -97,7 +102,7 @@
   get_url:
     url: http://acasado.es:60080/files/GLIDERS.sql
     dest: /tmp/GLIDERS.sql
-    mode: '0440'
+    mode: '0777'
 
 - name: Restore database table GLIDERS.sql
   command: "bash /tmp/GLIDERS.sh" 
