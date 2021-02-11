@@ -29,12 +29,12 @@
 
     - name: Replace entry SWSTESTOGN
       ansible.builtin.lineinfile:
-      path: /etc/hosts
-      regexp: 'SWSTESTOGN'
-      line: 192.168.1.213 SWSTESTOGN
-      owner: root
-      group: root
-      mode: '0644'
+        path: /etc/hosts
+        regexp: 'SWSTESTOGN'
+        line: 192.168.1.213 SWSTESTOGN
+        owner: root
+        group: root
+        mode: '0644'
 
     - name: Copy aliases
       become: no
