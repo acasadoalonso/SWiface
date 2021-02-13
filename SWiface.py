@@ -6,7 +6,7 @@
 
 #from libfap import *
 from ctypes import *
-from datetime import datetime
+from datetime import datetime, timedelta
 import socket
 import time
 import string
