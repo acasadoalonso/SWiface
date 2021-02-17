@@ -1,9 +1,9 @@
 docker search mariadb
-docker pull mariadb/server:10.4
+docker pull mariadb/server:latest
 docker images
-docker run --name mariadbtest -e MYSQL_ROOT_PASSWORD=mypass --restart unless-stopped -d mariadb/server:10.4
-docker run --name mariadbtest -e MYSQL_ROOT_PASSWORD=mypass -d mariadb/server:10.4 --log-bin --binlog-format=MIXED
-docker run --name mariadbtest -e MYSQL_ROOT_PASSWORD=mypass -d mariadb/server:10.4 --log-bin --binlog-format=MIXED 
+docker run --name mariadbtest -e MYSQL_ROOT_PASSWORD=mypass --restart unless-stopped -d mariadb/server:latest
+docker run --name mariadbtest -e MYSQL_ROOT_PASSWORD=mypass -d mariadb/server:latest --log-bin --binlog-format=MIXED
+docker run --name mariadbtest -e MYSQL_ROOT_PASSWORD=mypass -d mariadb/server:latest --log-bin --binlog-format=MIXED 
 docker ps
 docker restart mariadbtest
 docker logs mariadbtest
@@ -18,7 +18,7 @@ docker system prune -a
 docker volumes prune
 docker network create --subnet=172.18.0.0/16 mynetsql
 docker run --net mynetsql --ip 172.18.0.22 -it ubuntu bash
-docker run --net mynetsql --ip 172.18.0.2 --name mariadbtest -e MYSQL_ROOT_PASSWORD=mypass -d mariadb/server:10.4 --log-bin --binlog-format=MIXED 
+docker run --net mynetsql --ip 172.18.0.2 --name mariadbtest -e MYSQL_ROOT_PASSWORD=mypass -d mariadb/server:latest --log-bin --binlog-format=MIXED 
 sudo chmod 666 /var/run/docker.sock
 docker run --net mynetsql --ip 172.18.0.3 --name phpmyadmin -d --link mariadb -e PMA_HOST=mariadb -p 8081:80 phpmyadmin/phpmyadmin
 

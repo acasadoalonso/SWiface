@@ -136,6 +136,11 @@ then								#
    mysql --login-path=APRSogn --database SWIFACE <DBschema.sql 	#
    mysql -u ogn -pogn  SWIFACE </tmp/GLIDERS.sql		#
 else								#
+   if [ $sql = 'mariadb' ]					#
+   then 							#
+      sudo install -y mariadb-server mariadb-client		#
+      server = localhost					#
+   fi								#
    sudo mysql -u root -pogn -h $server <doc/adduser.sql		#
    echo "CREATE DATABASE if not exists SWIFACE" | mysql -u ogn -pogn -h $server	
    mysql -u ogn -pogn -h $server SWIFACE <SWIFACE.sql 		#

@@ -182,7 +182,7 @@ sudo apt-get -y autoremove					#
 echo								#
 echo " "							#
 echo "=================================================="	#
-echo "End of common componets  ...." 				#
+echo " End of common components  ...." 				#
 echo "=================================================="	#
 echo " "							#
 echo " "							#
