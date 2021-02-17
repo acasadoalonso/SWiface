@@ -138,7 +138,7 @@ then								#
 else								#
    if [ $sql = 'mariadb' ]					#
    then 							#
-      sudo install -y mariadb-server mariadb-client		#
+      sudo apt-get install -y mariadb-server mariadb-client	#
       server = localhost					#
    fi								#
    sudo mysql -u root -pogn -h $server <doc/adduser.sql		#
