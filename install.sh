@@ -139,7 +139,7 @@ else								#
    if [ $sql = 'mariadb' ]					#
    then 							#
       sudo apt-get install -y mariadb-server mariadb-client	#
-      server = localhost					#
+      let '$server=localhost'					#
    fi								#
    sudo mysql -u root -pogn -h $server <doc/adduser.sql		#
    echo "CREATE DATABASE if not exists SWIFACE" | mysql -u ogn -pogn -h $server	
