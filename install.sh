@@ -23,6 +23,7 @@ then								#
    echo "Installing the common software"			#
    echo "=============================="			#
    bash commoninstall.sh $sql					#
+   echo "=============================="			#
 fi								#
 echo "========================================================" #
 echo "Installing the specific parts of SWS interface ...." 	#
@@ -58,6 +59,7 @@ if [ ! -d /etc/local ]						#
 then								#
     sudo mkdir /etc/local					#
 fi								#
+cd /var/www/html/main						#
 if [ ! -d ~/src  ]						#
 then								#
 	mkdir ~/src   						#
@@ -99,6 +101,7 @@ then								#
 	cd /tmp							#
 	wget acasado.es:60080/files/GLIDERS.sql 2>/dev/null	#
 fi								#	
+cd /var/www/html/						#
 if [ -f SWiface.db ]						#
 then								#
 	rm      SWiface.db					#
@@ -179,11 +182,14 @@ fi								#
 if [ ! -d ~/src  ]						#
 then								#
 	mkdir ~/src   						#
+fi								#
+if [ ! -d ~/src/SWSsrc ]					#
+then								#
 	mkdir ~/src/SWSsrc					#
 	ln -s /var/www/html/main ~/src/SWSsrc			#
 fi								#
 ls  -la ~/src 							#
-if [ ! -d /nfs  ]						#
+if [ ! -d /nfs/OGN/SWdata  ]					#
 then								#
 	echo							#
 	echo "Adding user ogn ...	"			#
@@ -200,6 +206,7 @@ then								#
 	sudo chmod 777 *					#
 	sudo chown ogn:ogn */*					# 
 	sudo chmod 777 */*					#
+        ls -la 							#
 fi								#
 echo " "							#
 echo "========================================================" #
@@ -238,4 +245,4 @@ echo " "							#
 echo " "							#
 echo " "							#
 echo " "							#
-echo " "							#
+echo " ======================= END ==========================="	#
