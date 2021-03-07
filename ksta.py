@@ -24,6 +24,7 @@ ksta = {
            "MORA"   : "Mora de Toledo, Toledo",
            "MADRID" : "Madrid - Test site",
            "ANDORRA": "Andorra ",
+           "Taull2" : "Boi Taull ski station ",
            "LAMOLINA" : "La TOSA de Alp, Girona ",
            "ALCAZAREN" : "Alcazaren, Valladolid ",
            "AVILA"  : "Avila ",
