@@ -7,7 +7,6 @@
 sh/nfs.sh
 sh/SWbkup.sh
 archive
-SWsynckglid.sh
 html/
 __pycache__
 sscommit.sh

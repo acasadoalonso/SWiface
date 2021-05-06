@@ -41,6 +41,15 @@ FILTER_LATI4            = float(cfg.get('filter', 'FILTER_LATI4'))
 
 # --------------------------------------#
 try:
+        prttext     = cfg.get('server', 'prt').strip("'")
+        if     (prttext == 'False'):
+                prt = False
+        else:
+                prt = True
+except:
+        prt         = True
+
+try:
         cucFileLocation = cfg.get('server', 'cucFileLocation').strip("'").strip('"')
 except:
         cucFileLocation = "/var/www/html/cuc/"
@@ -82,6 +91,28 @@ try:
 	OGNTtext     = cfg.get('location', 'OGNT').strip("'").strip('"')
 except:
 	OGNTtext='False'
+
+try:
+	DDBhost     = cfg.get('server', 'DDBhost').strip("'")
+except:
+	DDBhost     = 'acasado.es'
+
+try:
+	DDBport     = cfg.get('server', 'DDBport').strip("'")
+except:
+	DDBport     = '60082'
+
+try:
+	DDBurl1     = cfg.get('server', 'DDBurl1').strip("'")
+except:
+	DDBurl1     = 'http://acasado.es:60082/download/?j=2'
+
+try:
+	DDBurl2     = cfg.get('server', 'DDBurl2').strip("'")
+except:
+	DDBurl2     = 'http://DDB.glidernet.org/download/?j=2'
+
+
 
 DBpath                  = cfg.get('server', 'DBpath').strip("'").strip('"')
 MySQLtext               = cfg.get('server', 'MySQL').strip("'").strip('"')
