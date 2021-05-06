@@ -175,7 +175,7 @@ def blackhole(lati, lon):
         return (True)
 ########################################################################
 def oksta(station):
-    if (station != "FLYMASTER" and station != "NAVITER"):
+    if (station != "FLYMASTER" ):
         return(True)
     else:
         return(False)
@@ -336,7 +336,7 @@ if os.path.isfile(compfile):
     if hostname == "CHILEOGN" or hostname == "OGNCHILE":
         filter += " p/SC/VITACURA/ROBLE/ELBOSQUE/TROCA/WBUX/COLORA/SANRA/OLMUE \n"
     else:
-        filter += " p/LF/LE/ \n"  	# add all the station of france and Spain for control
+        filter += " p/LF/LE/ \n" 	# add all the station of france and Spain for control
     login = 'user %s pass %s vers Silent-Wings-Interface %s %s' % (config.APRS_USER, config.APRS_PASSCODE, pgmversion, filter)
 else:
     login = 'user %s pass %s vers Silent-Wings-Interface %s %s' % (config.APRS_USER, config.APRS_PASSCODE, pgmversion, config.APRS_FILTER_DETAILS)
@@ -578,7 +578,8 @@ try:
                         rf = msg['rf']	                # RF sensitibity load
                     else:
                         rf = ' '
-                    print("===>STA:", id, latitude, longitude, altitude, ":", version, cpu, rf, ":::", status, ":", aprstype,":")
+                    if prt:
+                       print("===>STA:", id, latitude, longitude, altitude, ":", version, cpu, rf, ":::", status, ":", aprstype,":")
                     if id[0:3] == "OGN":		# trap !!!
                         print ("===>MSG:", msg) 
                 continue                        	# go for the next record
@@ -672,6 +673,7 @@ try:
                 sensitivity = 0
             						# if we have OGN tracker aggregation and is an OGN tracker
             if OGNT and id[0:3] == 'OGN':
+                print ("OOOO>>>", msg)
                 if id in ognttable:			# if the device is on the list
                     					# substitude the OGN tracker ID for the related FLARMID
                    id = ognttable[id]			# do the change before record on the DDBB
