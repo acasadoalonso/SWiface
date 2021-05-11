@@ -30,7 +30,7 @@ echo "Sync GLIDERS table on databases at server: "$(hostname)  	>>SWproc.log
 cd    /nfs/OGN/DIRdata
 if [ -f 'kglid.py' ]
 then
-	cp kglid.py ~/src/SWSsrc
+	cp kglid.py $SCRIPTPATH/../
 fi
 cd $DBpath
 if [ -f $db ]

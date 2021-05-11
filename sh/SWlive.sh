@@ -15,5 +15,5 @@ sunsetfile=$DBpath"/SWS.sunset"
 cd $DBpath
 date >>SWproc.log
 echo $(hostname)" running SWlive:"		>>SWproc.log
-python3 ~/src/SWSsrc/SWcalsunrisesunset.py 	>>SWproc.log 
-python3 ~/src/SWSsrc/SWiface.py   	 	>>SWproc.log &
+python3 $SCRIPTPATH/../SWcalsunrisesunset.py 	>>SWproc.log 
+python3 $SCRIPTPATH/../SWiface.py   	 	>>SWproc.log &

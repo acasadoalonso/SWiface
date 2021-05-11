@@ -26,5 +26,5 @@ python3 genconfig.py
 cd $DBpath
 echo "Generated config.py :" 			>>SWproc.log
 date 						>>SWproc.log
-python3 ~/src/SWSsrc/SWcalsunrisesunset.py 	>>SWproc.log
-python3 ~/src/SWSsrc/SWiface.py 		>>SWproc.log &
+python3 $SCRIPTPATH/../SWcalsunrisesunset.py 	>>SWproc.log 
+python3 $SCRIPTPATH/../SWiface.py   	 	>>SWproc.log &
