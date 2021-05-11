@@ -4,17 +4,26 @@ if [ $# = 0 ]; then
 else
 	city=$1
 fi
+if [ -z $CONFIGDIR ]
+then 
+     export CONFIGDIR=/etc/local/
+fi
+DBuser=$(echo    `grep '^DBuser '   $CONFIGDIR/APRSconfig.ini` | sed 's/=//g' | sed 's/^DBuser //g')
+DBpasswd=$(echo  `grep '^DBpasswd ' $CONFIGDIR/APRSconfig.ini` | sed 's/=//g' | sed 's/^DBpasswd //g' | sed 's/ //g' )
+DBpath=$(echo    `grep '^DBpath '   $CONFIGDIR/APRSconfig.ini` | sed 's/=//g' | sed 's/^DBpath //g' | sed 's/ //g' )
 
-sunsetfile=$"/nfs/OGN/SWdata/SWS.sunset"
+SCRIPT=$(readlink -f $0)
+SCRIPTPATH=`dirname $SCRIPT`
+
+sunsetfile=$DBpath"/SWS.sunset"
 if [ -f $sunsetfile ]
 	then
 		ss=$(cat $sunsetfile)
 	else
 		ss=$(/usr/local/bin/calcelestial -p sun -m set -q $city -H civil -f %s)
 fi
-alive=$"/nfs/OGN/SWdata/SWS.alive"
-#pid=$"/tmp/sws.pid"
-pid=$(echo  `grep '^pid' /etc/local/SWSconfig.ini` | sed 's/=//g' | sed 's/^pid//g')
+alive=$DBpath"/SWS.alive"
+pid=$(echo  `grep '^pid' $CONFIGDIR/SWSconfig.ini` | sed 's/=//g' | sed 's/^pid//g')
 now=$(date +%s)
 let "dif=$ss-$now-1800"
 if [ $dif -lt 0 ]
@@ -31,9 +40,9 @@ else
                         rm $pid
                 fi
 #               restart OGN data collector
-                /bin/bash ~/src/SWSsrc/sh/SWlive.sh
+                /bin/bash $SCRIPTPATH/SWlive.sh
                 logger -t $0 "SWS repo seems down, restarting"
-                date >>/nfs/OGN/SWdata/.SWSrestart.log
+                date >>$DBpath/.SWSrestart.log
         else
                 logger -t $0 "SWS Repo is alive at: "$city
                 logger -t $0 "SWS repo seems up: "$dif" Now: "$now" Sunset: "$ss

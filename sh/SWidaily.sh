@@ -1,5 +1,4 @@
 #!/bin/bash
-cd /nfs/OGN/SWdata
 MySQL='NO'
 if [ $# -eq  0 ]; then
 	server='localhost'
@@ -8,6 +7,18 @@ else
 	MySQL='YES'
 fi
 hostname=$(hostname)
+if [ -z $CONFIGDIR ]
+then 
+     export CONFIGDIR=/etc/local/
+fi
+DBuser=$(echo    `grep '^DBuser '   $CONFIGDIR/APRSconfig.ini` | sed 's/=//g' | sed 's/^DBuser //g')
+DBpasswd=$(echo  `grep '^DBpasswd ' $CONFIGDIR/APRSconfig.ini` | sed 's/=//g' | sed 's/^DBpasswd //g' | sed 's/ //g' )
+DBpath=$(echo    `grep '^DBpath '   $CONFIGDIR/APRSconfig.ini` | sed 's/=//g' | sed 's/^DBpath //g' | sed 's/ //g' )
+cd $DBpath
+SCRIPT=$(readlink -f $0)
+SCRIPTPATH=`dirname $SCRIPT`
+
+
 echo "Process SQLITE3 DB at server: "$hostname		>>SWproc.log
 echo "select 'Number of fixes: on the DB:', count(*) from OGNDATA; select station, 'Kms.max.:',max(distance) as Distance,'        Flarmid :',idflarm, 'Date:',date, time, station from OGNDATA group by station; " | sqlite3 -echo SWiface.db	>>SWproc.log
 echo ".dump OGNDATA" |        sqlite3 SWiface.db >ogndata.dmp 
