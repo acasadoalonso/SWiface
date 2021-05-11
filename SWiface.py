@@ -673,7 +673,6 @@ try:
                 sensitivity = 0
             						# if we have OGN tracker aggregation and is an OGN tracker
             if OGNT and id[0:3] == 'OGN':
-                print ("OOOO>>>", msg)
                 if id in ognttable:			# if the device is on the list
                     					# substitude the OGN tracker ID for the related FLARMID
                    id = ognttable[id]			# do the change before record on the DDBB
