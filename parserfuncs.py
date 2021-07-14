@@ -3,6 +3,7 @@
 # Parser functions for the OGN APRS applications
 #
 
+import ksta			# list of know stations
 import urllib.request
 import urllib.error
 import urllib.parse
@@ -11,33 +12,38 @@ import os
 import atexit
 import socket
 from datetime import datetime
-# from beeprint import pp
 from ogn.parser import parse
 
-aprssources = {
-    "APRS": "OGN",
-    "OGNSDR": "OGN",
-    "OGFLR": "OGN",
-    "OGNFLR": "OGN",
-    "OGNTRK": "OGN",
-    "OGNDSX": "OGN",
-    "OGNTTN": "TTN",
-    "OGADSB": "ADSB",
-    "OGNFNT": "FANE",
-    "OGNPAW": "PAW",
-    "OGSPOT": "SPOT",
-    "OGINRE": "INREACH",
-    "OGFLYM": "FLYM",
-    "OGSPID": "SPID",
-    "OGSKYL": "SKYL",
-    "OGLT24": "LT24",
-    "OGCAPT": "CAPT",
-    "OGNAVI": "NAVI",
-    "OGNSKY": "SKYS",
-    "OGNXCG": "XCG",
-    "OGNMAV": "NMAV",
-    "OGNDELAY": "DLYM"
+# --------------------------------------------------------------------------
+aprssources = {			# sources based on the APRS TOCALL
+    "APRS":   "OGN",		# old tocall
+    "OGNSDR": "OGN",		# station Sofware defined radio
+    "OGFLR":  "OGN",		# Flarm
+    "OGNFLR": "OGN",		# Flarm
+    "OGNTRK": "OGN",		# OGN Tracker
+    "OGNDSX": "OGN",		# old DSX
+    "OGNTTN": "TTN",		# the things LoRaWan network
+    "OGNHEL": "HELI",		# helium LoRaWan
+    "OGADSB": "ADSB",		# ADSB
+    "OGNFNT": "FANE",		# FANET
+    "OGNPAW": "PAW",		# PilotAware
+    "OGPAW":  "PAW",		# PilotAware
+    "OGSPOT": "SPOT",		# SPOT
+    "OGINRE": "INREACH",        # Garmin InReach
+    "OGFLYM": "FLYM",		# FlyMaster
+    "OGSPID": "SPID",		# spider
+    "OGSKYL": "SKYL",		# Sky lines (XCsoar)
+    "OGLT24": "LT24",		# LiveTrack 24
+    "OGCAPT": "CAPT",		# capture
+    "OGNAVI": "NAVI",		# NAVITER
+    "OGNSKY": "SKYS",		# Sky Safe
+    "OGNAVZ": "AVIA",		# AVIAZE
+    "OGNMTK": "MTRK",		# Microtrack
+    "OGNXCG": "XCG",		# Cross Country Guide
+    "OGNMAV": "NMAV",		# MAV link
+    "OGNDELAY": "DLYM"		# Delayed fixes (IGC mandated)
 }
+# --------------------------------------------------------------------------
 aprssymtypes=[
     "/z",                   # 0 = ?
     "/'",                   # 1 = (moto-)glider (most frequent)
@@ -45,7 +51,7 @@ aprssymtypes=[
     "/X",                   # 3 = helicopter (often)
     "/g",                   # 4 = parachute (rare but seen - often mixed with drop plane)
     "\\^",                  # 5 = drop plane (seen)
-    "/g",                   # 6 = hang-glider (rare but seen)
+    "/_",                   # 6 = MicroLight (FANET) (rare but seen)
     "/g",                   # 7 = para-glider (rare but seen)
     "\\^",                  # 8 = powered aircraft (often)
     "/^",                   # 9 = jet aircraft (rare but seen)
@@ -56,6 +62,7 @@ aprssymtypes=[
     "/z",                   # E = ground support (ground vehicles at airfields)
     "\\n"                   # F = static object (ground relay ?)
 ]
+# --------------------------------------------------------------------------
 aprstypes=[
     "Unkown",               # 0 = ?
     "Glider",               # 1 = (moto-)glider (most frequent)
@@ -63,7 +70,7 @@ aprstypes=[
     "Helicopter",           # 3 = helicopter (often)
     "ParaGlider",           # 7 = para-glider (rare but seen)
     "DropPlane",            # 5 = drop plane (seen)
-    "HangGlider",           # 6 = hang-glider (rare but seen)
+    "MicroLight",           # 6 = MicroLight / hang-glider (rare but seen)
     "Parachute",            # 4 = parachute (rare but seen - often mixed with drop plane)
     "PowerAircraft",        # 8 = powered aircraft (often)
     "Jet",                  # 9 = jet aircraft (rare but seen)
@@ -74,6 +81,7 @@ aprstypes=[
     "GroundVehicle",        # E = ground support (ground vehicles at airfields)
     "GroundStation"         # F = static object (ground relay ?)
 ]
+# --------------------------------------------------------------------------
 
 
 def get_aircraft_type(sym1, sym2):      # return the aircraft type based on the symbol table
@@ -84,6 +92,7 @@ def get_aircraft_type(sym1, sym2):      # return the aircraft type based on the 
         if sym == aprssymtypes[idx]:
             return (aprstypes[idx])
         idx += 1
+    print (">>> Unkown Acft Type", sym1, sym2, "<<<")
     return ("UNKOWN")
 
 
@@ -236,6 +245,7 @@ def get_source(dstcallsign):
     if src in aprssources:
         return (aprssources[src])
     else:
+        print(">>> Unkown SOURCE:", src, "<<<")
         return ("UNKW")
 # ########################################################################
 
@@ -301,10 +311,17 @@ def spanishsta(station):                # return true if is an Spanish station
             station[0:9] == 'CASTEJONS' or	\
             station[0:9] == 'BELAVISTA' or	\
             station[0:9] == 'ALDEASEST' or	\
-            station[0:9] == 'MADDREDAM' or	\
+            station[0:9] == 'AldeaSEst' or	\
+            station[0:9] == 'MADRUEDAN' or	\
+            station[0:9] == 'Madruedan' or	\
             station[0:9] == 'PCARRASCO' or	\
+            station[0:9] == 'PCarrasco' or	\
             station[0:8] == 'SMUERDO'   or	\
-            station[0:8] == 'PORTAINE':
+            station[0:8] == 'SMuerdo'   or	\
+            station[0:9] == 'SSALVADOR' or	\
+            station[0:9] == 'SSalvador' or	\
+            station[0:8] == 'PORTAINE'  or      \
+            station in ksta.ksta:
         return True
     else:
         return False
