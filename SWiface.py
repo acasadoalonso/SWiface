@@ -110,10 +110,10 @@ def shutdown(sock, datafile, tmaxa, tmaxt, tmid, tmstd):
                     except MySQLdb.Error as e:
                         try:
                             print(">>>MySQL Error [%d]: %s" % (
-                                e.args[0], e.args[1]))
+                                e.args[0], e.args[1]), file=sys.stderr)
                         except IndexError:
-                            print(">>>MySQL Error: %s" % str(e))
-                        print(">>>MySQL error:", updcmd)
+                            print(">>>MySQL Error: %s" % str(e), file=sys.stderr)
+                        print(">>>MySQL error:", updcmd, file=sys.stderr)
                 else:
                     # SQL command to execute: UPDATE
                     updcmd = "update RECEIVERS SET idrec=?, descri=?, lati=?, longi=?, alti=? where idrec=?"
@@ -231,6 +231,7 @@ DBpasswd = config.DBpasswd
 DBname 	= config.DBname
 MySQL 	= config.MySQL
 OGNT 	= config.OGNT
+DELAY   = config.DELAY
 # --------------------------------------#
 
 
@@ -429,8 +430,8 @@ try:
 
             except Exception as e:
 
-                print(('Something\'s wrong with socket write. Exception type is %s' % (repr(e))))
-                print("Socket error:", keepalive_count, current_time)
+                print(('Something\'s wrong with socket write. Exception type is %s' % (repr(e))), file=sys.stderr)
+                print("Socket error:", keepalive_count, current_time, file=sys.stderr)
                 if keepalive_count != -1:		# check if we are at shutdown now
                     keepalive_count = -1		# indicate shutdown now
                     shutdown(sock, datafile, tmaxa, tmaxt, tmid, tmstd)
@@ -444,7 +445,7 @@ try:
                     ogntbuildtable(conn, ognttable, prt)
 
             except Exception as e:			# if we have an error during the aggregation functions
-                print(('Something\'s wrong with interface functions Exception type is %s \n\n' % (repr(e))))
+                print(('Something\'s wrong with interface functions Exception type is %s \n\n' % (repr(e))), file=sys.stderr)
                 nerr += 1
 
 
@@ -461,10 +462,10 @@ try:
                 datafile.write(packet_str)
 
         except socket.error:
-            print("Socket error on readline")
+            print("Socket error on readline", file=sys.stderr)
             nerr += 1
             if nerr > 20:
-                print("Socket error multiple  Failures.  Orderly closeout, keep alive count:", keepalive_count)
+                print("Socket error multiple  Failures.  Orderly closeout, keep alive count:", keepalive_count, file=sys.stderr)
                 date = datetime.now()
                 print("UTC now is: ", date, "Bye ...\n\n")
                 break
@@ -476,9 +477,9 @@ try:
         if len(packet_str) == 0:
             nerr += 1
             if nerr > 20:
-                print("Multiple Read returns zero length string. Failure.  Orderly closeout, keep alive count:", keepalive_count)
+                print("Multiple Read returns zero length string. Failure.  Orderly closeout, keep alive count:", keepalive_count, file=sys.stderr)
                 date = datetime.now()
-                print("UTC now is: ", date, "Bye ...\n\n")
+                print("UTC now is: ", date, "Bye ...\n\n", file=sys.stderr)
                 break
             else:
                 sleep(5)				# sleep for 5 seconds and give it another chance
@@ -497,10 +498,10 @@ try:
             try:
             	msg = parseraprs(packet_str, msg)	# parse data using ogn_parser
             except exception as e:
-                print ("Parser error: >>>", e, packet_str, "<<<")
+                print ("Parser error: >>>", e, packet_str, "<<<", file=sys.stderr)
                 continue
             if msg == -1:
-                print ("Parser error: >>>",  packet_str, "<<<")
+                print ("Parser error: >>>",  packet_str, "<<<", file=sys.stderr)
                 continue
             if prt:
                 print("Parsed msg:>>>", msg)
@@ -609,6 +610,11 @@ try:
             sensitivity = msg['sensitivity']
             gps = 	msg['gps']
             hora = 	msg['time']			# fix time
+            if source == 'DLYM':
+                dly = timedelta(seconds=DELAY)		# add DELAY
+                otime=otime+dly
+                hora = otime.strftime("%H%M%S")		# original time + DELAY
+
             altim = altitude                          	# the altitude in meters
             						# filter by latitude
             if config.FILTER_LATI1 > 0:			# if we are in the norther hemisfere
@@ -617,6 +623,9 @@ try:
             if (blackhole(longitude, latitude)):
                 print("BH:", id, longitude, latitude, date)
                 continue				# if is not within our latitude ignore the data
+            if latitude == -1 or longitude == -1 or altitude == 0:
+                continue
+
 
             try:
                 if altitude >= fmaxa[id]:		# check for maximun altitude
@@ -692,10 +701,10 @@ try:
                     curs.execute(addcmd)            	# add the data to the DDBB
                 except MySQLdb.Error as e:
                     try:
-                        print(">>>MySQL Error [%d]: %s" % (e.args[0], e.args[1]))
+                        print(">>>MySQL Error [%d]: %s" % (e.args[0], e.args[1]), file=sys.stderr)
                     except IndexError:
-                        print(">>>MySQL Error: %s" % str(e))
-                    print(">>>MySQL error:", nrecs, addcmd)
+                        print(">>>MySQL Error: %s" % str(e), file=sys.stderr)
+                    print(">>>MySQL error:", nrecs, addcmd, file=sys.stderr)
             else:					# using SQLite3
                 addcmd = "insert into OGNDATA values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"
                 curs.execute(addcmd, (id, dte, hora, station, latitude, longitude, altim, speed,

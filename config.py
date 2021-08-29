@@ -60,6 +60,11 @@ except:
 	PIDfile='/tmp/SWS.pid'
 
 try:
+	DELAY         = cfg.get('server', 'DELAY').strip("'").strip('"')
+except:
+	DELAY         = 0
+
+try:
 	location_name   = cfg.get('location', 'location_name').strip("'").strip('"')
 except:
 	location_name   = ' '
@@ -156,6 +161,6 @@ assert len(APRS_USER) > 3 and len(str(APRS_PASSCODE)) > 0, 'Please set APRS_USER
 print("Config file used:    ",                  configfile, hostname, processid)
 print("Config server values:",                  "MySQL =", MySQL, DBhost, DBuser, DBname, DBpath, cucFileLocation)
 print("Config APRS values:  ",                  APRS_SERVER_HOST, APRS_SERVER_PORT, APRS_USER, APRS_PASSCODE, APRS_FILTER_DETAILS)
-print("Config location :    ", 			location_name, location_latitude, location_longitude, "SPIDER=", SPIDER, "SPOT=", SPOT, "LT24=", LT24, "SKYLINE=", SKYLINE, "OGNtracker=", OGNT)
+print("Config location :    ", 			location_name, location_latitude, location_longitude, "SPIDER=", SPIDER, "SPOT=", SPOT, "LT24=", LT24, "SKYLINE=", SKYLINE, "OGNtracker=", OGNT, "DELAY=", DELAY)
 # --------------------------------------#
 
