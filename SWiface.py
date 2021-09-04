@@ -232,6 +232,7 @@ DBname 	= config.DBname
 MySQL 	= config.MySQL
 OGNT 	= config.OGNT
 DELAY   = config.DELAY
+OGNT=True
 # --------------------------------------#
 
 
@@ -680,10 +681,11 @@ try:
                 rot = 0
             if sensitivity == ' ':
                 sensitivity = 0
-            						# if we have OGN tracker aggregation and is an OGN tracker
+
             if OGNT and id[0:3] == 'OGN':
                 if id in ognttable:			# if the device is on the list
                     					# substitude the OGN tracker ID for the related FLARMID
+                   #print("III", id, ognttable[id])
                    id = ognttable[id]			# do the change before record on the DDBB
             						# write the DB record
             if source == "SPOT":			# if SPOT ignore it !!
