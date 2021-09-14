@@ -196,7 +196,8 @@ def chkfilati(latitude,  flatil, flatiu):
 
 
 #----------------------ogn_SilentWingsInterface.py start-----------------------
-pgmversion = 'V2.01'
+pgmversion = 'V2.02'
+print("\n\n")
 print("Start OGN Silent Wings Interface "+pgmversion)
 print("======================================")
 
@@ -306,11 +307,26 @@ if prtreq and prtreq[0] == 'prt':
     prt = True
 else:
     prt = False
-if OGNT:				# if we need aggregation of FLARM and OGN trackers data
-    ognttable = {}			# init the instance of the table
+compfile = config.cucFileLocation + "/competitiongliders.lst"
+ognttable = {}				# init the instance of the table
+clist=[]				# competition list 
+if os.path.isfile(compfile):
+    fd = open(compfile, 'r')  		# open and read the file
+    j = fd.read()
+    clist = json.loads(j)
+    fd.close()				# close it
+    if clist[1][0:3] == 'OGN':		# if the pairing is there on the competition table???
+       OGNT = False			# we do not need to use the TRACKERDEV DB table
+       tl=len(clist)			# check the number of entries ???
+       idx=0				# index into the table      
+       while idx < tl:			# scan the whole table
+          ognttable[clist[idx+1]]=clist[idx]
+          idx += 2
+       print ("OGN Tracker pair table:\n", ognttable, "\n\n")  
+    elif OGNT:				# if we need aggregation of FLARM and OGN trackers data
     					# build the table from the TRKDEVICES DB table
-    ogntbuildtable(conn, ognttable, prt=True)
-    print(ognttable)
+       ogntbuildtable(conn, ognttable, prt=False)
+       print("OGN Tracker Pair table from DB:\n",ognttable)
 
 					# create socket & connect to server
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -318,13 +334,8 @@ sock.connect((config.APRS_SERVER_HOST, config.APRS_SERVER_PORT))
 print("Socket sock connected")
 
 					# logon to OGN APRS network
-compfile = config.cucFileLocation + "/competitiongliders.lst"
 # if we have a COMP file with the list of flarm ids, pass that to the APRS at login time
-if os.path.isfile(compfile):
-    fd = open(compfile, 'r')  		# open and read the file
-    j = fd.read()
-    clist = json.loads(j)
-    fd.close()				# close it
+if len(clist) > 0:			# if we have tracker pairing table ???
     filter = "filter b/"  		# prepare the filter param of login
     for f in clist:			# explore the whole list
         filter += f  			# add the flarm id
