@@ -307,27 +307,36 @@ if prtreq and prtreq[0] == 'prt':
     prt = True
 else:
     prt = False
-compfile = config.cucFileLocation + "/competitiongliders.lst"
+
+#compfile = config.cucFileLocation + "/competitiongliders.lst"a this format name
 ognttable = {}				# init the instance of the table
 clist=[]				# competition list 
-if os.path.isfile(compfile):
-    fd = open(compfile, 'r')  		# open and read the file
-    j = fd.read()
-    clist = json.loads(j)
-    fd.close()				# close it
-    if clist[1][0:3] == 'OGN':		# if the pairing is there on the competition table???
-       OGNT = False			# we do not need to use the TRACKERDEV DB table
-       tl=len(clist)			# check the number of entries ???
-       idx=0				# index into the table      
-       while idx < tl:			# scan the whole table
-          ognttable[clist[idx+1]]=clist[idx]
-          idx += 2
-       print ("OGN Tracker pair table:\n", ognttable, "\n\n")  
-    elif OGNT:				# if we need aggregation of FLARM and OGN trackers data
+paircnt=0
+for compfile in os.listdir(config.cucFileLocation):
+   if compfile.find("competitiongliders.lst") != -1: # only of it is a competition file
+      print("Competition file:", compfile) # Show the name of the file containg the competition list
+      fd = open(config.cucFileLocation + compfile, 'r')	# open and read the file
+      j = fd.read()			# read the competition file
+      cclist = json.loads(j)		# load it from competition file
+      fd.close()			# close it
+      if cclist[1][0:3] == 'OGN':	# if the pairing is there on the competition table???
+         OGNT = False			# we do not need to use the TRACKERDEV DB table
+         tl=len(cclist)			# check the number of entries ???
+         idx=0				# index into the table      
+         while idx < tl:		# scan the whole table
+            ognttable[cclist[idx+1]]=cclist[idx]
+            idx += 2
+            paircnt += 1
+      for c in cclist:			# add these entries to the master CLIST
+         clist.append(c)		# add each flarm Id and each OGN tracker ID
+
+if paircnt > 0:
+       print ("OGN Tracker pair table:\n", ognttable, "\n")  
+elif OGNT:				# if we need aggregation of FLARM and OGN trackers data
     					# build the table from the TRKDEVICES DB table
        ogntbuildtable(conn, ognttable, prt=False)
-       print("OGN Tracker Pair table from DB:\n",ognttable)
-
+       print("OGN Tracker Pair table from DB:\n",ognttable, "\n")
+#print ("CCC", clist)
 					# create socket & connect to server
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 sock.connect((config.APRS_SERVER_HOST, config.APRS_SERVER_PORT))
@@ -353,7 +362,7 @@ if len(clist) > 0:			# if we have tracker pairing table ???
     login = 'user %s pass %s vers Silent-Wings-Interface %s %s' % (config.APRS_USER, config.APRS_PASSCODE, pgmversion, filter)
 else:
     login = 'user %s pass %s vers Silent-Wings-Interface %s %s' % (config.APRS_USER, config.APRS_PASSCODE, pgmversion, config.APRS_FILTER_DETAILS)
-print("APRS login:", login)  		# print the login for control
+#print("APRS login:", login)  		# print the login for control
 login=login.encode(encoding='utf-8', errors='strict') 
 sock.send(login)    			# login into the APRS server
 
