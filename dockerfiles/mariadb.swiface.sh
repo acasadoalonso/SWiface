@@ -1,9 +1,13 @@
 !#/bin/bash
 bash mariadbdbnet.sh
+cd Mariadb.debian
+bash mariadb.patch
+make
+cd ..
 bash mariadb.sh
 bash mariadbpma.sh
 bash mariadb.start
-cho "Create the MySQL database SWIFACE "			#
+echo "Create the MySQL database SWIFACE "			#
 echo "Type the PASSword for the MySQL database SWIFACE "	#
 echo "========================================================" #
 echo "CREATE DATABASE SWIFACE" | mysql -h mariadb -u root -p	#

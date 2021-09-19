@@ -1,0 +1,1 @@
+docker pull phpmyadmin --platform linux/arm/v7
