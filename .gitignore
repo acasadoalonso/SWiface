@@ -14,3 +14,4 @@ sslink.sh
 .vagrant/
 config/
 log/
+dockerfiles/config.docker

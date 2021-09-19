@@ -1,31 +1,23 @@
-FROM ubuntu:20.04
+FROM debian
 ENV DEBIAN_FRONTEND=noninteractive 
 RUN apt-get update && apt-get -y upgrade 
 RUN apt-get install -y apt-utils
 RUN apt-get install -y software-properties-common 		
 RUN apt-get install -y python3-software-properties 		
 RUN apt-get install -y build-essential 			
-RUN apt-get install -y language-pack-en-base 
 RUN export LC_ALL=en_US.UTF-8 && export LANG=en_US.UTF-8	
-RUN apt-get install -y python3 python3-pymysql python3-openssl python3-dev python3-pip 
-RUN apt-get install -y python3-mysqldb
-RUN apt-get install -y libmariadbclient-dev mutt wget 
-RUN apt-get install -y python3-rsa python3-psutil iproute2 systemd git
-RUN apt-get install -y dos2unix libarchive-dev  autoconf mc    
+RUN apt-get install -y python3 python3-pymysql python3-openssl python3-dev python3-pip python3-mysqldb
+RUN apt-get install -y mutt wget python3-rsa python3-psutil iproute2 systemd git libarchive-dev  autoconf mc    
 RUN apt-get install -y pkg-config vim git-core inetutils-ping mailutils at 
-RUN apt-get install -y figlet 
-RUN apt-get install -y libcurl4-openssl-dev			
-RUN apt-get install -y libjson-c-dev 				
-RUN apt-get install -y apache2 php 				
-RUN apt-get install -y php-sqlite3 php-mysql php-cli 	
-RUN apt-get install -y php-mbstring php-json	
-RUN apt-get install -y php7.4					
-RUN apt-get install -y ntpdate				
-RUN apt-get install -y ssh sudo				
-RUN apt-get install -y libmysqlclient-dev 			
-RUN apt-get install -y sqlite3 libsqlite3-dev mysql-client 
-RUN a2enmod rewrite						
-RUN phpenmod mbstring		
+RUN apt-get install -y figlet libcurl4-openssl-dev libjson-c-dev ntpdate libsqlite3-dev ssh sudo openssh-server
+RUN apt-get install -y mariadb-client percona-toolkit				
+
+RUN mkdir -p /var/run/sshd
+# authorize SSH connection with root account
+RUN sed -i '/^#/!s/PermitRootLogin .*/PermitRootLogin yes/' /etc/ssh/sshd_config
+RUN sudo service ssh restart
+# change password root
+RUN echo "root:docker"|chpasswd
 RUN git config --global user.email "acasadoalonso@gmail.com" 
 RUN git config --global user.name "Angel Casado"     
 RUN set -x \
@@ -33,28 +25,31 @@ RUN set -x \
     && pip3 install --upgrade setuptools \
     && pip3 install ephem pytz geopy configparser pycountry pyopenssl uritemplate \
     && pip3 install mysqlclient requests mysql-connector-python beeprint ogn.client \
-    && pip3 install tqdm psutil rsa python-dateutil  				\
-    && pip3 install --force-reinstall --no-binary mysqlclient mysqlclient
+    && pip3 install tqdm psutil rsa python-dateutil  				
 
-WORKDIR /var/www/
-
-RUN git clone https://github.com/acasadoalonso/SWiface-PHP	 	public
-RUN git clone https://github.com/acasadoalonso/SWiface		 	public/main
-RUN mkdir -p /var/www/public
-RUN mkdir -p /var/www/public/main
-RUN mkdir -p /var/www/data
-RUN mkdir -p /var/www/local
-RUN mkdir -p /var/www/src
-VOLUME /var/www/public/
-VOLUME /var/www/local/
-VOLUME /var/www/data/
-VOLUME /var/www/src/
-RUN ln -s /var/www/public /var/www/html/SWS
-RUN apt-get install -y percona-toolkit				
 RUN dpkg-reconfigure tzdata					
-RUN echo "ServerName SWS" >> /etc/apache2/apache2.conf
 RUN apt-get -y dist-upgrade					
 RUN apt-get -y autoremove	
+WORKDIR /var/www/
+
+RUN git clone https://github.com/acasadoalonso/SWiface		main
+RUN mkdir -p /var/www/data
+RUN mkdir -p /var/www/local
+RUN mkdir -p /var/www/html
+RUN mkdir -p /var/www/html/cuc/
+RUN mkdir -p /var/www/src
+RUN mkdir -p /etc/local 
+RUN mkdir -p /nfs/
+RUN mkdir -p /nfs/OGN
+RUN mkdir -p /nfs/OGN/SWdata
+VOLUME /var/www
+VOLUME /etc/local
+VOLUME /nfs
+COPY config.docker /etc/local/SWSconfig.ini
+COPY DBschema.sql .
+RUN sed -i 's/DBhost/DBhost= mariadb #/i'            /etc/local/SWSconfig.ini
+RUN sed -i 's/DBpasswd/DBpasswd=ogn #/i'             /etc/local/SWSconfig.ini
+RUN sed -i 's/DBpasswdread/DBpasswdread=ogn #/i'     /etc/local/SWSconfig.ini
 ARG USER=angel
 ARG UID=1000
 ARG GID=1000
@@ -68,6 +63,8 @@ RUN echo "Welcome to the SWS application container" > /etc/motd \
 EXPOSE 80
 EXPOSE 81
 EXPOSE 22
-
 RUN touch SWSinstallation.done	
-ENTRYPOINT  service ssh start && service apache2 start && /bin/bash
+RUN service ssh start 
+WORKDIR /var/www/main/
+#CMD /bin/bash /usr/bin/python3 SWiface.py >/nfs/OGN/SWdata/SWiface.log 2>/nfs/OGN/SWdata/SWiface.errorlog  &&  /usr/bin/tail -f /dev/null
+CMD ["/usr/bin/python3", "SWiface.py" ] 
