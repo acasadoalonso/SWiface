@@ -1,25 +1,21 @@
 FROM debian
 ENV DEBIAN_FRONTEND=noninteractive 
 RUN apt-get update && apt-get -y upgrade 
-RUN apt-get install -y apt-utils
-RUN apt-get install -y software-properties-common 		
-RUN apt-get install -y python3-software-properties 		
-RUN apt-get install -y build-essential 			
+RUN apt-get install -y apt-utils software-properties-common python3-software-properties build-essential 			
 RUN export LC_ALL=en_US.UTF-8 && export LANG=en_US.UTF-8	
-RUN apt-get install -y python3 python3-pymysql python3-openssl python3-dev python3-pip python3-mysqldb
-RUN apt-get install -y mutt wget python3-rsa python3-psutil iproute2 systemd git libarchive-dev  autoconf mc    
-RUN apt-get install -y pkg-config vim git-core inetutils-ping mailutils at 
-RUN apt-get install -y figlet libcurl4-openssl-dev libjson-c-dev ntpdate libsqlite3-dev ssh sudo openssh-server
-RUN apt-get install -y mariadb-client percona-toolkit				
+RUN apt-get install -y python3 python3-pymysql python3-openssl python3-dev python3-pip python3-mysqldb python3-rsa python3-psutil 
+RUN apt-get install -y mutt wget iproute2 systemd git libarchive-dev  autoconf mc pkg-config vim git-core inetutils-ping mailutils at 
+RUN apt-get install -y figlet libcurl4-openssl-dev libjson-c-dev ntpdate libsqlite3-dev sudo openssh-server mariadb-client percona-toolkit				
 
 RUN mkdir -p /var/run/sshd
 # authorize SSH connection with root account
-RUN sed -i '/^#/!s/PermitRootLogin .*/PermitRootLogin yes/' /etc/ssh/sshd_config
+#RUN sed -i '/^#/!s/PermitRootLogin .*/PermitRootLogin yes/' /etc/ssh/sshd_config
+RUN sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 RUN sudo service ssh restart
 # change password root
 RUN echo "root:docker"|chpasswd
 RUN git config --global user.email "acasadoalonso@gmail.com" 
-RUN git config --global user.name "Angel Casado"     
+RUN git config --global user.name  "Angel Casado"     
 RUN set -x \
     && pip3 install --upgrade pip \
     && pip3 install --upgrade setuptools \
@@ -47,9 +43,6 @@ VOLUME /etc/local
 VOLUME /nfs
 COPY config.docker /etc/local/SWSconfig.ini
 COPY DBschema.sql .
-RUN sed -i 's/DBhost/DBhost= mariadb #/i'            /etc/local/SWSconfig.ini
-RUN sed -i 's/DBpasswd/DBpasswd=ogn #/i'             /etc/local/SWSconfig.ini
-RUN sed -i 's/DBpasswdread/DBpasswdread=ogn #/i'     /etc/local/SWSconfig.ini
 ARG USER=angel
 ARG UID=1000
 ARG GID=1000
@@ -64,7 +57,7 @@ EXPOSE 80
 EXPOSE 81
 EXPOSE 22
 RUN touch SWSinstallation.done	
-RUN service ssh start 
+RUN service ssh restart
 WORKDIR /var/www/main/
 #CMD /bin/bash /usr/bin/python3 SWiface.py >/nfs/OGN/SWdata/SWiface.log 2>/nfs/OGN/SWdata/SWiface.errorlog  &&  /usr/bin/tail -f /dev/null
-CMD ["/usr/bin/python3", "SWiface.py" ] 
+CMD ["/usr/bin/python3", "SWiface.py" ] && service ssh restart 

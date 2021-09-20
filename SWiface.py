@@ -657,13 +657,13 @@ try:
                     tmid = id              	        # who did it
                     tmsta = station         	        # station capturing the max altitude
             except:
-                print ("TTTT>>>>", msg)                 # trap: check it out
+                print ("TTTT altitude >>>>", msg)                 # trap: check it out
                 continue
             try:
                 if speed >= fmaxs[id]:			# check for maximun speed
                      fmaxs[id] = speed
             except:
-                print ("TTTT>>>>", msg)                 # trap: check it out
+                print ("TTTT speed >>>>", msg)                 # trap: check it out
                 continue
             if altim > 15000 or altim < 0:
                 altim = 0
