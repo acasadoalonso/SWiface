@@ -11,6 +11,7 @@ RUN mkdir -p /var/run/sshd
 # authorize SSH connection with root account
 #RUN sed -i '/^#/!s/PermitRootLogin .*/PermitRootLogin yes/' /etc/ssh/sshd_config
 RUN sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+RUN ssh-keygen -A 
 RUN sudo service ssh restart
 # change password root
 RUN echo "root:docker"|chpasswd
@@ -23,7 +24,9 @@ RUN set -x \
     && pip3 install mysqlclient requests mysql-connector-python beeprint ogn.client \
     && pip3 install tqdm psutil rsa python-dateutil  				
 
-RUN dpkg-reconfigure tzdata					
+RUN dpkg-reconfigure tzdata				
+ENV TZ=Europe/Madrid
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone	
 RUN apt-get -y dist-upgrade					
 RUN apt-get -y autoremove	
 WORKDIR /var/www/
@@ -60,4 +63,4 @@ RUN touch SWSinstallation.done
 RUN service ssh restart
 WORKDIR /var/www/main/
 #CMD /bin/bash /usr/bin/python3 SWiface.py >/nfs/OGN/SWdata/SWiface.log 2>/nfs/OGN/SWdata/SWiface.errorlog  &&  /usr/bin/tail -f /dev/null
-CMD ["/usr/bin/python3", "SWiface.py" ] && service ssh restart 
+CMD ["/usr/bin/python3", "SWiface.py" ] 
