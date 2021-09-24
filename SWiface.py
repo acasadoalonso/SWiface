@@ -623,8 +623,8 @@ try:
             course = 	msg['course']			# heading
             if speed in msg:				# speed 
                speed = 	msg['speed']
-            else 
-               spped = 0
+            else: 
+               speed = 0
             uniqueid = 	msg['uniqueid']
             if len(uniqueid) > 16:
                 uniqueid = uniqueid[0:16]		# limit to 16 chars
