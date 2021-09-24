@@ -16,6 +16,7 @@ echo $DBuser $DBpasswd
 echo "Process Mariadb DB." 				>>SWproc.docker.log
 echo "==================." 				>>SWproc.docker.log
 echo "                   " 				>>SWproc.docker.log
+docker stop swiface 	 				>>SWproc.docker.log
 mysqlcheck -u $DBuser -p$DBpasswd -h $server SWIFACE   	>>SWproc.docker.log
 mysqlcheck -u $DBuser -p$DBpasswd -h $server SWARCHIVE 	>>SWproc.docker.log
 echo "set session sql_mode='STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION'; "| mysql   -v -h $server -u $DBuser -p$DBpasswd SWIFACE	      >>SWproc.docker.log
@@ -24,5 +25,7 @@ mysqldump  -u $DBuser -p$DBpasswd --add-drop-table -h $server SWIFACE OGNDATA >o
 mysql      -u $DBuser -p$DBpasswd                  -h $server SWARCHIVE       <ogndata.sql >>SWproc.docker.log
 echo "delete from OGNDATA;" | mysql -u $DBuser -p$DBpasswd     -v -h $server SWIFACE          >>SWproc.docker.log
 mv ogndata.sql archive
+docker logs swiface >>SWproc.docker.log
 echo "End of processes  Mariadb DB at server: "$hostname 	>>SWproc.docker.log
+mv SWproc.docker.log archive/SWiproc.docker$(date +%y%m%d).log
 cd

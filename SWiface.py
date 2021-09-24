@@ -649,6 +649,8 @@ try:
 
 
             try:
+                if altitude == None:
+                   altitude = 0;
                 if altitude >= fmaxa[id]:		# check for maximun altitude
                  fmaxa[id] = altitude
                  if altitude > tmaxa and (not spanishsta(id) and not frenchsta(id)):
@@ -660,6 +662,8 @@ try:
                 print ("TTTT altitude >>>>", msg)                 # trap: check it out
                 continue
             try:
+                if speed == None:
+                   speed = 0 
                 if speed >= fmaxs[id]:			# check for maximun speed
                      fmaxs[id] = speed
             except:
