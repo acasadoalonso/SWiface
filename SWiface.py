@@ -621,7 +621,10 @@ try:
 #							normal position records
 #
             course = 	msg['course']			# heading
-            speed = 	msg['speed']
+            if speed in msg:				# speed 
+               speed = 	msg['speed']
+            else 
+               spped = 0
             uniqueid = 	msg['uniqueid']
             if len(uniqueid) > 16:
                 uniqueid = uniqueid[0:16]		# limit to 16 chars
@@ -651,7 +654,7 @@ try:
             try:
                 if altitude == None:
                    altitude = 0;
-                if altitude >= fmaxa[id]:		# check for maximun altitude
+                elif altitude >= fmaxa[id]:		# check for maximun altitude
                  fmaxa[id] = altitude
                  if altitude > tmaxa and (not spanishsta(id) and not frenchsta(id)):
                     tmaxa = altitude        	        # maximum altitude for the day
@@ -664,7 +667,7 @@ try:
             try:
                 if speed == None:
                    speed = 0 
-                if speed >= fmaxs[id]:			# check for maximun speed
+                elif speed >= fmaxs[id]:			# check for maximun speed
                      fmaxs[id] = speed
             except:
                 print ("TTTT speed >>>>", msg)                 # trap: check it out
