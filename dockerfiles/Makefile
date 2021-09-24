@@ -5,7 +5,7 @@ FULL_VERSION := 0.2.0
 MINOR_VERSION := 0.2
 MAJOR_VERSION := 0
 
-dev:
+dev:	../SWiface.py Dockerfile
 	docker build --no-cache=false -t ${IMAGE_NAME} .
 
 build :

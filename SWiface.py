@@ -621,7 +621,7 @@ try:
 #							normal position records
 #
             course = 	msg['course']			# heading
-            if speed in msg:				# speed 
+            if 'speed' in msg:				# speed 
                speed = 	msg['speed']
             else: 
                speed = 0
