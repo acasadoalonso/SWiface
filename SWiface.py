@@ -620,7 +620,10 @@ try:
 #
 #							normal position records
 #
-            course = 	msg['course']			# heading
+            if 'course' in msg:
+                course = msg['course']			# heading
+            else:
+                course = 0
             if 'speed' in msg:				# speed 
                speed = 	msg['speed']
             else: 
@@ -629,8 +632,14 @@ try:
             if len(uniqueid) > 16:
                 uniqueid = uniqueid[0:16]		# limit to 16 chars
             extpos = 	msg['extpos']
-            roclimb = 	msg['roclimb']			# rate of climb
-            rot = msg['rot']
+            if 'roclimb' in msg:
+                roclimb = msg['roclimb']		# rate of climb
+            else:
+                roclimb = 0
+            if 'rot' in msg:
+                rot = msg['rot']
+            else:
+                rot = 0
             sensitivity = msg['sensitivity']
             gps = 	msg['gps']
             hora = 	msg['time']			# fix time
