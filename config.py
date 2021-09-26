@@ -159,6 +159,7 @@ assert len(APRS_USER) > 3 and len(str(APRS_PASSCODE)) > 0, 'Please set APRS_USER
  
 # --------------------------------------#
 						# report the configuration paramenters
+print("\n\n")
 print("Config file used:    ",                  configfile, hostname, processid)
 print("Config server values:",                  "MySQL =", MySQL, DBhost, DBuser, DBname, DBpath, cucFileLocation)
 print("Config APRS values:  ",                  APRS_SERVER_HOST, APRS_SERVER_PORT, APRS_USER, APRS_PASSCODE, APRS_FILTER_DETAILS)

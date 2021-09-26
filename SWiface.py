@@ -196,7 +196,7 @@ def chkfilati(latitude,  flatil, flatiu):
 
 
 #----------------------ogn_SilentWingsInterface.py start-----------------------
-pgmversion = 'V2.02'
+pgmversion = 'V2.03'
 print("\n\n")
 print("Start OGN Silent Wings Interface "+pgmversion)
 print("======================================")
@@ -207,7 +207,8 @@ dte = date.strftime("%y%m%d")             # today's date
 hostname = socket.gethostname()
 print("Date: ", date, " UTC at:", hostname, "Process ID:", os.getpid())
 
-import config
+if True:
+   import config
 
 # protection against running the same daemon at the same time
 if os.path.exists(config.PIDfile):
