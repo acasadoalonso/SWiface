@@ -14,6 +14,7 @@ RUN sudo service ssh restart
 RUN echo "root:docker"|chpasswd
 RUN git config --global user.email "acasadoalonso@gmail.com" 
 RUN git config --global user.name  "Angel Casado"     
+RUN git config pull.ff only 
 RUN set -x \
     && pip3 install --upgrade pip \
     && pip3 install --upgrade setuptools \
