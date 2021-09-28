@@ -625,6 +625,8 @@ try:
                 course = msg['course']			# heading
             else:
                 course = 0
+            if course == None:				# just in case
+                course = 0
             if 'speed' in msg:				# speed 
                speed = 	msg['speed']
             else: 
@@ -743,7 +745,7 @@ try:
                         print(">>>MySQL Error [%d]: %s" % (e.args[0], e.args[1]), file=sys.stderr)
                     except IndexError:
                         print(">>>MySQL Error: %s" % str(e), file=sys.stderr)
-                    print(">>>MySQL error:", nrecs, addcmd, file=sys.stderr)
+                    print(">>>MySQL error:", nrecs, addcmd,  file=sys.stderr)
             else:					# using SQLite3
                 addcmd = "insert into OGNDATA values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"
                 curs.execute(addcmd, (id, dte, hora, station, latitude, longitude, altim, speed,
