@@ -30,6 +30,7 @@ from time import sleep
 
 
 # shutdown routine, close files and report on activity
+
 def shutdown(sock, datafile, tmaxa, tmaxt, tmid, tmstd):
                                         # shutdown before exit
     sock.shutdown(0)                    # shutdown the connection
@@ -138,7 +139,7 @@ def shutdown(sock, datafile, tmaxa, tmaxt, tmid, tmstd):
     local_time = datetime.now() 	# report date and time now
     location.date = ephem.Date(datetime.utcnow())
     print("Local Time (server) now is:", local_time, " and UTC time at location ",
-          config.location_name, "is:", location.date, "UTC.")
+          config.location_name, "is:", location.date, "UTC.\n")
     try:
         os.remove(config.APP+".alive")	# delete the mark of alive
     except:
@@ -153,7 +154,7 @@ def shutdown(sock, datafile, tmaxa, tmaxt, tmid, tmstd):
 def signal_term_handler(signal, frame):
     print('got SIGTERM ... shutdown orderly')
     shutdown(sock, datafile, tmaxa, tmaxt, tmid, tmstd)  # shutdown orderly
-    print("Exit now ....\n\n")
+    print("\n\nExit after a SIGTERM now ....\n\n")
     sys.exit(0)
 
 
@@ -196,7 +197,7 @@ def chkfilati(latitude,  flatil, flatiu):
 
 
 #----------------------ogn_SilentWingsInterface.py start-----------------------
-pgmversion = 'V2.03'
+pgmversion = 'V2.04'
 print("\n\n")
 print("Start OGN Silent Wings Interface "+pgmversion)
 print("======================================")
@@ -392,6 +393,8 @@ keepalive_count = 1			# number of keep alive messages
 keepalive_time = time.time()
 					# and we create a SWS.alive file for control that we are alive as well
 alive(config.APP, first="yes")
+sys.stdout.flush()			# flush the print messages
+sys.stderr.flush()			# flush the print messages
 #
 #-----------------------------------------------------------------
 #-----------------------------------------------------------------
@@ -428,7 +431,7 @@ try:
         if location.date > next_sunset or localdate.hour > 21:
 
             print("At Sunset now ... Time is (server):", date, "UTC. Location time:",
-                  location.date, "UTC ... Next sunset is: ", next_sunset,  " UTC")
+                  location.date, "UTC ... Next sunset is: ", next_sunset,  " UTC \n================================================================================\n")
             shutdown(sock, datafile, tmaxa, tmaxt, tmid, tmstd)
             print("At Sunset ... Exit\n\n", localdate)
             exit(0)
@@ -467,8 +470,10 @@ try:
                     ogntbuildtable(conn, ognttable, prt)
 
             except Exception as e:			# if we have an error during the aggregation functions
-                print(('Something\'s wrong with interface functions Exception type is %s \n\n' % (repr(e))), file=sys.stderr)
+                print(('Something\'s wrong with building OGNT table Exception type is %s \n\n' % (repr(e))), file=sys.stderr)
                 nerr += 1
+            sys.stdout.flush()				# flush the print messages
+            sys.stderr.flush()				# flush the print messages
 
 
 # ------------------------------------------------------- main loop ------------------------------------- #
@@ -764,7 +769,7 @@ except KeyboardInterrupt:
 print('Counters:', nrecs, nids)				# number of fix written and number of flarms seeing ...
 shutdown(sock, datafile, tmaxa, tmaxt, tmid, tmstd)
 location.date = ephem.Date(datetime.utcnow())
-print("Exit now ...", location.date, "\n\n")
 if nerr > 0:
-    print("Number of errors:", nerr)
+    print("\nNumber of errors:", nerr,"<<<<<\n")
+print("Exit now ...", location.date, "\n=================================================================================================\n")
 exit(1)
