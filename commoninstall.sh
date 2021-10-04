@@ -44,6 +44,7 @@ echo								#
 cd /var/www/html/main						#
 sudo apt install -y mariadb-client				#
 sudo apt install -y libmariadb-dev				#
+sudo apt-get install -y python3-dev python3-pip 		#
 if [ $sql = 'MariaDB' ]						#
 then								#
      sudo apt install -y mariadb-server 			#
@@ -59,7 +60,6 @@ then								#
 fi								#
 sudo apt-get install -y percona-toolkit				#
 sudo apt-get install -y sqlite3 ntpdate				#
-sudo apt-get install -y python3-dev python3-pip 		#
 sudo apt-get install -y figlet inetutils-* 			#
 sudo apt-get install -y avahi-daemon libcurl4-openssl-dev       #
 sudo apt-get install -y dos2unix libarchive-dev	 autoconf mc	#
