@@ -15,5 +15,5 @@ echo "Starting docker container swiface at: "$HOSTNAME $(date) 				>>SWproc.dock
 echo "================================================================================"	>>SWproc.docker.log
 echo "Location: "$location "City: "$city 						>>SWproc.docker.log
 docker start swiface 									>>SWproc.docker.log
-/bin/echo '/bin/bash ~/src/SWSsrc/dockerfiles/SWidaily.docker.sh '$city | at -M $(/usr/local/bin/calcelestial -n -p sun -m set -q $city )  >>SWproc.docker.log 2>&1
+/bin/echo '/bin/bash ~/src/SWSsrc/dockerfiles/SWidaily.docker.sh '$city | at -M $(/usr/local/bin/calcelestial -n -p sun -m set -q $city ) - 15 minutes  >>SWproc.docker.log 2>&1
 echo "Container scheduled ..."								>>SWproc.docker.log
