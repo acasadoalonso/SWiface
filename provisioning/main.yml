@@ -5,8 +5,8 @@
   vars:
     build_root: /vagrant/
     bash_aliases:
-      - { alias: 'mariadb', command: 'mysql -u root -pogn -h 172.17.0.2' }
-      - { alias: 'sql',     command: 'mysql -u root -pogn -h mariadb' }
+      - { alias: 'mariadb', command: 'mysql -u root -p$(cat /tmp/.DBpasswd) -h 172.17.0.2' }
+      - { alias: 'sql',     command: 'mysql -u root -p$(cat /tmp/.DBpasswd) -h mariadb' }
       - { alias: 'py',      command: 'pgrep -a python3' }
 
   pre_tasks:

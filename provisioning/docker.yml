@@ -66,6 +66,15 @@
       - name: mynetsql
         ipv4_address: 172.17.0.3
 
+# Copy password file
+- name: password file
+  copy:
+     src: "../.DBpasswd"
+     dest: /tmp
+     mode: '0777'
+     owner: vagrant
+     group: vagrant
+
 # Copy database dump file to remote host and restore it to database 'my_db'
 - name: Copy database dump file
   copy:

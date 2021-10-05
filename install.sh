@@ -41,6 +41,12 @@ echo " "							#
 echo "========================================================" #
 echo " "							#
 echo								#
+if [ ! -f .DBpasswd    ]					#
+then								#
+   echo "Type DB password ..."					#
+   read DBpasswd						#
+   echo $DBpasswd > .DBpasswd					#
+fi								#
 if [ $sql = 'MySQL' ]						#
 then								#	
    echo "Type ROOT old password: "				#
@@ -137,19 +143,19 @@ then								#
    sudo mysql  --login-path=APRSogn <doc/adduser.sql		#
    echo "CREATE DATABASE if not exists SWIFACE" | mysql --login-path=APRSogn	#
    mysql --login-path=APRSogn --database SWIFACE <DBschema.sql 	#
-   mysql -u ogn -pogn  SWIFACE </tmp/GLIDERS.sql		#
+   mysql -u ogn -$(cat .DBpasswd)  SWIFACE </tmp/GLIDERS.sql	#
 else								#
    if [ $sql = 'mariadb' ]					#
    then 							#
       sudo apt-get install -y mariadb-server mariadb-client	#
       let '$server=localhost'					#
    fi								#
-   sudo mysql -u root -pogn -h $server <doc/adduser.sql		#
-   echo "CREATE DATABASE if not exists SWIFACE" | mysql -u ogn -pogn -h $server	
-   mysql -u ogn -pogn -h $server SWIFACE <SWIFACE.sql 		#
+   sudo mysql -u root -$(cat .DBpasswd) -h $server <doc/adduser.sql		#
+   echo "CREATE DATABASE if not exists SWIFACE" | mysql -u ogn -$(cat .DBpasswd) -h $server	
+   mysql -u ogn -$(cat .DBpasswd) -h $server SWIFACE <SWIFACE.sql 		#
    if [ -f /tmp/GLIDERS.sql ]					#
    then
-      mysql -u ogn -pogn -h $server SWIFACE </tmp/GLIDERS.sql	#
+      mysql -u ogn -$(cat .DBpasswd) -h $server SWIFACE </tmp/GLIDERS.sql	#
    fi								#
 fi								#
 cd /var/www/html/main						#
@@ -157,10 +163,10 @@ if [ $sql = 'docker' ]						#
 then								#		
    echo "Create DB in docker ogn ..."				#
    echo "========================================================" #
-   echo "CREATE DATABASE if not exists SWIFACE" | sudo mysql -u ogn -pogn -h MARIADB
-   echo "SET GLOBAL log_bin_trust_function_creators = 1; " | sudo mysql -u ogn -pogn -h MARIADB
-   sudo mysql -u ogn -pogn -h MARIADB --database SWIFACE <SWIFACE.sql 
-   sudo mysql -u ogn -pogn -h MARIADB --database SWIFACE </tmp/GLIDERS.sql
+   echo "CREATE DATABASE if not exists SWIFACE" | sudo mysql -u ogn -p$(cat .DBpasswd) -h MARIADB
+   echo "SET GLOBAL log_bin_trust_function_creators = 1; " | sudo mysql -u ogn -p$(cat .DBpasswd) -h MARIADB
+   sudo mysql -u ogn -p$(cat .DBpasswd) -h MARIADB --database SWIFACE <SWIFACE.sql 
+   sudo mysql -u ogn -p$(cat .DBpasswd) -h MARIADB --database SWIFACE </tmp/GLIDERS.sql
 fi								#
 sudo rm /tmp/GLIDERS.sql*					#
 echo " "							#

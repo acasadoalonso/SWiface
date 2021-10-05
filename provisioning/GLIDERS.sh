@@ -1,3 +1,3 @@
 #!/bin/bash
-echo "DROP TABLE GLIDERS" | mysql SWIFACE -h 172.17.0.2 -u root -pogn 
-mysql SWIFACE -h 172.17.0.2 -u root -pogn </tmp/GLIDERS.sql
+echo "DROP TABLE GLIDERS" | mysql SWIFACE -h 172.17.0.2 -u root -p$(cat /tmp/.DBpasswd) 
+mysql SWIFACE -h 172.17.0.2 -u root -p$(cat /tmp/.DBpasswd) </tmp/GLIDERS.sql
