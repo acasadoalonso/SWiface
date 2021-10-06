@@ -15,3 +15,4 @@ sslink.sh
 config/
 log/
 dockerfiles/config.docker
+.DBpasswd

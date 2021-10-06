@@ -10,12 +10,21 @@ echo " "							#
 echo								#
 if [ $# -eq  0 ]; then						#
 	sql='NO'						#
-        server=172.17.0.2					#
 else								#
 	sql=$1						        #
+fi								#
+if   [ $sql = 'MySQL' ]; then					#
+        server=localhost					#
+elif [ $sql = 'Mariadb' ]; then					#
+        server=localhost					#
+elif [ $sql = 'VM' ]; then					#
+        server=172.17.0.2					#
+elif [ $sql = 'docker' ]; then					#
+        server=MARIADB						#
+else								#
         server=localhost					#
 fi								#
-echo "SQL option: "$sql 					#
+echo "SQL option: "$sql" Server: "$server  			#
 ping -c 5 $server 						#
 ping -c 5 172.17.0.2 						#
 sleep 5								#
@@ -155,23 +164,23 @@ else								#
    then 							#
       echo "Installing MariaDB"					#
       sudo apt-get install -y mariadb-server mariadb-client	#
-      let '$server=localhost'					#
+      docker stop mariadb					#
+      sudo service mariadb start				#
    fi								#
    if [ $sql = 'VM' ]						#
    then 							#
-      echo "Installing MariaDB"					#
-      sudo apt-get install -y mariadb-server mariadb-client	#
-      let '$server=localhost'					#
+      echo "Installing MariaDB on a VM"				#
+      sudo apt-get install -y mariadb-client			#
    fi								#
    if [ ! $sql = 'NO' ]						#
    then								#
-      echo "Add user ...at server:"$server"with password:"$(cat .DBpasswd)      #
-      sudo mysql -u root -p$(cat .DBpasswd) -h $server <doc/adduser.sql		#
-      echo "CREATE DATABASE if not exists SWIFACE" | mysql -u ogn -p$(cat .DBpasswd) -h $server	
-      mysql -u ogn -p$(cat .DBpasswd) -h $server SWIFACE <SWIFACE.sql 		#
+      echo "Add user ogn ... with password: "$(cat .DBpasswd)   #
+      sudo mysql -u root -p$(cat .DBpasswd)  -h $server  <doc/adduser.sql	#
+      echo "CREATE DATABASE if not exists SWIFACE" | mysql  -h $server -u ogn -p$(cat .DBpasswd)
+      mysql -u ogn -p$(cat .DBpasswd)  -h $server SWIFACE <SWIFACE.sql	#
       if [ -f /tmp/GLIDERS.sql ]				#
       then							#
-         mysql -u ogn -p$(cat .DBpasswd) -h $server SWIFACE </tmp/GLIDERS.sql	#
+         mysql -u ogn -p$(cat .DBpasswd)  -h $server SWIFACE </tmp/GLIDERS.sql	#
       fi							#
    fi 								#
 fi								#
