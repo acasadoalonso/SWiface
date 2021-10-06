@@ -1,4 +1,8 @@
 ---
+- name: Stop service mariadb, if started
+  ansible.builtin.service:
+    name: mariadb
+    state: stopped
 
 - name: Create a network with custom IPAM config
   community.general.docker_network:
