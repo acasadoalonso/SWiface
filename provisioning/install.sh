@@ -8,6 +8,11 @@ then								#
 fi	
 sudo apt install ansible
 vagrant --version
-vagrant vbox update
+vagrant box update
+if [ ! -d /var/www/html/SWS ]
+then
+    git clone https://github.com/acasadoalonso/SWiface-PHP.git /var/www/html/SWS
+    ls ../html
+fi
 vagrant up
 
