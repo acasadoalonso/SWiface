@@ -136,7 +136,7 @@ then								#
 fi								#
 cd /var/www/html/main						#
 cp doc/.my.cnf ~/						#
-echo "Create DB user ogn ..."					#
+echo "Create DB user ogn ...DB:"$sql				#
 echo "========================================================" #
 if [ $sql = 'MySQL' ]						#
 then								#
@@ -147,9 +147,11 @@ then								#
 else								#
    if [ $sql = 'mariadb' ]					#
    then 							#
+      echo "Installing MariaDB"					#
       sudo apt-get install -y mariadb-server mariadb-client	#
       let '$server=localhost'					#
    fi								#
+   echo "Add user ...at server:"$server"with password:"$(cat .DBpasswd)         #
    sudo mysql -u root -$(cat .DBpasswd) -h $server <doc/adduser.sql		#
    echo "CREATE DATABASE if not exists SWIFACE" | mysql -u ogn -$(cat .DBpasswd) -h $server	
    mysql -u ogn -$(cat .DBpasswd) -h $server SWIFACE <SWIFACE.sql 		#

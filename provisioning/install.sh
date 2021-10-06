@@ -14,5 +14,8 @@ then
     git clone https://github.com/acasadoalonso/SWiface-PHP.git /var/www/html/SWS
     ls ../html
 fi
+wget https://download.virtualbox.org/virtualbox/LATEST.TXT
+wget https://download.virtualbox.org/virtualbox/$(cat LATEST.TXT)/Oracle_VM_VirtualBox_Extension_Pack-$(cat LATEST.TXT).vbox-extpack 
+sudo vboxmanage extpack install *extpack
 vagrant up
 
