@@ -43,6 +43,10 @@ echo " "							#
 echo								#
 if [ ! -f .DBpasswd    ]					#
 then								#
+   cp /tmp/.DBpasswd .						#
+fi								#
+if [ ! -f .DBpasswd    ]					#
+then								#
    echo "Type DB password ..."					#
    read DBpasswd						#
    echo $DBpasswd > .DBpasswd					#
@@ -143,7 +147,7 @@ then								#
    sudo mysql  --login-path=APRSogn <doc/adduser.sql		#
    echo "CREATE DATABASE if not exists SWIFACE" | mysql --login-path=APRSogn	#
    mysql --login-path=APRSogn --database SWIFACE <DBschema.sql 	#
-   mysql -u ogn -$(cat .DBpasswd)  SWIFACE </tmp/GLIDERS.sql	#
+   mysql -u ogn -p$(cat .DBpasswd)  SWIFACE </tmp/GLIDERS.sql	#
 else								#
    if [ $sql = 'mariadb' ]					#
    then 							#
@@ -151,13 +155,19 @@ else								#
       sudo apt-get install -y mariadb-server mariadb-client	#
       let '$server=localhost'					#
    fi								#
+   if [ $sql = 'VM' ]						#
+   then 							#
+      echo "Installing MariaDB"					#
+      sudo apt-get install -y mariadb-server mariadb-client	#
+      let '$server=localhost'					#
+   fi								#
    echo "Add user ...at server:"$server"with password:"$(cat .DBpasswd)         #
-   sudo mysql -u root -$(cat .DBpasswd) -h $server <doc/adduser.sql		#
-   echo "CREATE DATABASE if not exists SWIFACE" | mysql -u ogn -$(cat .DBpasswd) -h $server	
-   mysql -u ogn -$(cat .DBpasswd) -h $server SWIFACE <SWIFACE.sql 		#
+   sudo mysql -u root -p$(cat .DBpasswd) -h $server <doc/adduser.sql		#
+   echo "CREATE DATABASE if not exists SWIFACE" | mysql -u ogn -p$(cat .DBpasswd) -h $server	
+   mysql -u ogn -p$(cat .DBpasswd) -h $server SWIFACE <SWIFACE.sql 		#
    if [ -f /tmp/GLIDERS.sql ]					#
    then
-      mysql -u ogn -$(cat .DBpasswd) -h $server SWIFACE </tmp/GLIDERS.sql	#
+      mysql -u ogn -p$(cat .DBpasswd) -h $server SWIFACE </tmp/GLIDERS.sql	#
    fi								#
 fi								#
 cd /var/www/html/main						#

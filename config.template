@@ -67,6 +67,6 @@ eventdesc2="OGN Live tracking in Alps "
 FILTER_LATI1 = 42.0
 FILTER_LATI2 = 46.0
 ;                                      secondary filter
-#FILTER_LATI3 = -30.0 	
-#FILTER_LATI4 = -36.0 
+FILTER_LATI3 = 0
+FILTER_LATI4 = 0
 

@@ -657,9 +657,13 @@ try:
 
             altim = altitude                          	# the altitude in meters
             						# filter by latitude
-            if config.FILTER_LATI1 > 0:			# if we are in the norther hemisfere
+            if config.FILTER_LATI1 > 0 and config.FILTER_LATI3 > 0:			# if we are in the norther hemisfere
                 if (chkfilati(latitude, config.FILTER_LATI1, config.FILTER_LATI2) and chkfilati(latitude, config.FILTER_LATI3, config.FILTER_LATI4)):
                     continue			        # if is not within our latitude ignore the data
+            elif config.FILTER_LATI1 > 0 :		# if we are in the norther hemisfere
+                if (chkfilati(latitude, config.FILTER_LATI1, config.FILTER_LATI2) :
+                    continue			        # if is not within our latitude ignore the data
+
             if (blackhole(longitude, latitude)):
                 print("BH:", id, longitude, latitude, date)
                 continue				# if is not within our latitude ignore the data

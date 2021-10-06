@@ -35,10 +35,18 @@ location_longitude      = cfg.get('location', 'location_longitud').strip("'").st
 FLOGGER_LATITUDE        = cfg.get('location', 'location_latitude').strip("'").strip('"')
 FLOGGER_LONGITUDE       = cfg.get('location', 'location_longitud').strip("'").strip('"')
 
-FILTER_LATI1            = float(cfg.get('filter', 'FILTER_LATI1'))
-FILTER_LATI2            = float(cfg.get('filter', 'FILTER_LATI2'))
-FILTER_LATI3            = float(cfg.get('filter', 'FILTER_LATI3'))
-FILTER_LATI4            = float(cfg.get('filter', 'FILTER_LATI4'))
+try:
+     FILTER_LATI1       = float(cfg.get('filter', 'FILTER_LATI1'))
+     FILTER_LATI2       = float(cfg.get('filter', 'FILTER_LATI2'))
+except:
+     FILTER_LATI1       = 0.0
+     FILTER_LATI2       = 0.0
+try:
+     FILTER_LATI3       = float(cfg.get('filter', 'FILTER_LATI3'))
+     FILTER_LATI4       = float(cfg.get('filter', 'FILTER_LATI4'))
+except:
+     FILTER_LATI3       = 0.0
+     FILTER_LATI4       = 0.0
 
 # --------------------------------------#
 try:

@@ -16,7 +16,8 @@ then
 	echo "follow by running                            bash /tmp/install.sh"
 	echo "======================================================================="
         sudo su vagrant -c /tmp/commoninstall.sh
-        sudo su vagrant -c /tmp/install.sh
+        echo "DBpasswd:"$(cat /tmp/.DBpasswd) 
+        sudo su vagrant -c /tmp/install.sh VM
 fi
 sudo apt-get dist-upgrade
 sudo apt-get autoremove
