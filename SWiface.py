@@ -110,8 +110,7 @@ def shutdown(sock, datafile, tmaxa, tmaxt, tmid, tmstd):
                         curs.execute(updcmd)
                     except MySQLdb.Error as e:
                         try:
-                            print(">>>MySQL Error [%d]: %s" % (
-                                e.args[0], e.args[1]), file=sys.stderr)
+                            print(">>>MySQL Error [%d]: %s" % ( e.args[0], e.args[1]), file=sys.stderr)
                         except IndexError:
                             print(">>>MySQL Error: %s" % str(e), file=sys.stderr)
                         print(">>>MySQL error:", updcmd, file=sys.stderr)

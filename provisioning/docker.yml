@@ -69,7 +69,7 @@
 # Copy password file
 - name: password file
   copy:
-     src: "../.DBpasswd"
+     src: "./.DBpasswd"
      dest: /tmp
      mode: '0777'
      owner: vagrant

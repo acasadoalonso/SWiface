@@ -12,11 +12,10 @@ Install Vagrant: 		https://www.vagrantup.com/downloads.html
   or create   the database SWIFACE on MySQL using phpmyadmin as defined on the template DBschema.sql 
 - Make the archive folder, for example: makdir 								SWdata/archive
 - copy the database to the archive directory, for example: 						cp SWdata/SWiface.db SWdata/archive
-- Adjust the setting on setting.py									vi setting.py
+- Adjust the setting on /etc/local/SWSconfig.ini							vi config.template --> /etc/local/SWSconfig.ini
 - update the list of known pilots									vi kpilots.py
-- Review the list of known gliders									vi kglid.py
 - Install the crontab entries										crontab -e
-- Execute the collector program										sh live.sh
+- Execute the collector program										sh sh/live.sh
 
 
 That program will run until the sunset at the competition area, as definned on the settings file.
@@ -49,31 +48,14 @@ SWiface.py:import MySQLdb                              # the SQL data base routi
 --------------------------------------------------------------------------------------------------
 
 
-Install in a Virtual Box
 
-Install VirtualBox and Vagrant
+--------------------------------------------------------------------------------------------------
+## Testing setup
 
-Clone and run Scotch Box, a full-featured development environment for php
+1. For installing SWiface using a docker container, go to the dockerfiles directory and execute install.sh
 
-git clone https://github.com/scotch-io/scotch-box.git SWIFACE
-cd SWIFACE
-vagrant up
+2. For installing SWiface on a VM machine, go to the provisioning directory and execute install.sh
 
-Clone SWiface repository into the webroot of the Scotch Box
+## ----------------------------------------------------------------------------------------------------------------------------------------------
 
-rm ./public/index.php
-git clone https://github.com/glidernet/SWiface-PHP public
-git clone https://github.com/glidernet/SWiface     public/main
-vagrant ssh
 
-# The following commands get executed in the vm
-cd /var/www/public/main
-sh install.sh
-cd ..
-python SWiface.py
-
-Access your local SWS interface instance at 192.168.33.10
-
-(optional, for email debugging) Run MailCatcher, accessible at 192.168.33.10
-
-vagrant@scotchbox:~$ mailcatcher --http-ip=0.0.0.0

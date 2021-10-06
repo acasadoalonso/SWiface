@@ -39,3 +39,11 @@
    composer update
    ```
 5. Review the installation
+
+## Testing setup
+
+1. For installing SWiface using a docker container, go to the dockerfiles directory and execute install.sh
+
+2. For installing SWiface on a VM machine, go to the provisioning directory and execute install.sh
+
+## ----------------------------------------------------------------------------------------------------------------------------------------------
