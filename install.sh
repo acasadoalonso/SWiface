@@ -15,6 +15,7 @@ else								#
 	sql=$1						        #
         server=localhost					#
 fi								#
+echo "SQL option: "$sql 					#
 ping -c 5 $server 						#
 ping -c 5 172.17.0.2 						#
 sleep 5								#
@@ -51,6 +52,7 @@ then								#
    read DBpasswd						#
    echo $DBpasswd > .DBpasswd					#
 fi								#
+echo "DB passwd:"$(cat .DBpasswd)				#
 if [ $sql = 'MySQL' ]						#
 then								#	
    echo "Type ROOT old password: "				#
@@ -161,14 +163,17 @@ else								#
       sudo apt-get install -y mariadb-server mariadb-client	#
       let '$server=localhost'					#
    fi								#
-   echo "Add user ...at server:"$server"with password:"$(cat .DBpasswd)         #
-   sudo mysql -u root -p$(cat .DBpasswd) -h $server <doc/adduser.sql		#
-   echo "CREATE DATABASE if not exists SWIFACE" | mysql -u ogn -p$(cat .DBpasswd) -h $server	
-   mysql -u ogn -p$(cat .DBpasswd) -h $server SWIFACE <SWIFACE.sql 		#
-   if [ -f /tmp/GLIDERS.sql ]					#
-   then
-      mysql -u ogn -p$(cat .DBpasswd) -h $server SWIFACE </tmp/GLIDERS.sql	#
-   fi								#
+   if [ ! $sql = 'NO' ]						#
+   then								#
+      echo "Add user ...at server:"$server"with password:"$(cat .DBpasswd)      #
+      sudo mysql -u root -p$(cat .DBpasswd) -h $server <doc/adduser.sql		#
+      echo "CREATE DATABASE if not exists SWIFACE" | mysql -u ogn -p$(cat .DBpasswd) -h $server	
+      mysql -u ogn -p$(cat .DBpasswd) -h $server SWIFACE <SWIFACE.sql 		#
+      if [ -f /tmp/GLIDERS.sql ]				#
+      then							#
+         mysql -u ogn -p$(cat .DBpasswd) -h $server SWIFACE </tmp/GLIDERS.sql	#
+      fi							#
+   fi 								#
 fi								#
 cd /var/www/html/main						#
 if [ $sql = 'docker' ]						#		
