@@ -6,5 +6,8 @@ then								#
    read DBpasswd						#
    echo $DBpasswd > .DBpasswd					#
 fi	
+sudo apt install ansible
+vagrant --version
+vagrant vbox update
 vagrant up
 
