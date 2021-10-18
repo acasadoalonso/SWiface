@@ -209,9 +209,14 @@ print("Date: ", date, " UTC at:", hostname, "Process ID:", os.getpid())
 
 if True:
    import config
+if 'USER' in os.environ:
+    user = os.environ['USER']
+else:
+    user = "www-data"                     # assume www
+
 
 # protection against running the same daemon at the same time
-if os.path.exists(config.PIDfile):
+if user != 'docker' and os.path.exists(config.PIDfile):
     print("SWiface already running !!!")
     raise RuntimeError("SWiface already running !!!")
     exit(-1)			# exit with an error code
