@@ -1,7 +1,8 @@
 FROM debian
 ENV DEBIAN_FRONTEND=noninteractive 
-RUN apt-get update && apt-get -y upgrade 
-RUN apt-get install -y apt-utils software-properties-common python3-software-properties build-essential 			
+RUN apt-get update 
+RUN apt-get -y upgrade 
+RUN apt-get install -y apt-utils software-properties-common python3-software-properties build-essential locales			
 # Set the locale
 RUN sed -i '/en_US.UTF-8/s/^# //g' /etc/locale.gen && locale-gen
 ENV LANG en_US.UTF-8  
@@ -20,7 +21,6 @@ RUN sudo service ssh restart
 RUN echo "root:docker"|chpasswd
 RUN git config --global user.email "acasadoalonso@gmail.com" 
 RUN git config --global user.name  "Angel Casado"     
-RUN git config pull.ff only 
 RUN set -x \
     && pip3 install --upgrade pip \
     && pip3 install --upgrade setuptools \
@@ -36,6 +36,9 @@ RUN apt-get -y autoremove
 WORKDIR /var/www/
 
 RUN git clone https://github.com/acasadoalonso/SWiface		main
+WORKDIR /var/www/main
+RUN git config pull.ff only 
+WORKDIR /var/www/
 RUN mkdir -p /var/www/data
 RUN mkdir -p /var/www/local
 RUN mkdir -p /var/www/html
@@ -66,5 +69,7 @@ EXPOSE 22
 RUN touch SWSinstallation.done	
 RUN service ssh restart
 WORKDIR /var/www/main/
+ENV USER=docker
+
 #CMD /bin/bash /usr/bin/python3 SWiface.py >/nfs/OGN/SWdata/SWiface.log 2>/nfs/OGN/SWdata/SWiface.errorlog  &&  /usr/bin/tail -f /dev/null
 CMD ["/usr/bin/python3", "SWiface.py" ] 
