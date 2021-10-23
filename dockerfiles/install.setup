@@ -1,7 +1,8 @@
 #!/bin/bash
 #
 # install SWS interface on a docker container
-
+#
+sudo apt install mariadb-client
 if [ ! -f /usr/bin/docker ]; then
 	echo Install docker					#
 	bash install.docker					#
@@ -39,7 +40,7 @@ fi
 echo start all containers
 bash mariadb.start
 echo create db SWIFACE 
-bash create.SWIFACE.db.sh $DBpasswd
+bash create.SWIFACE.db.sh $(cat .DBpasswd)
 echo create and start container
 bash swiface.standalone.sh
 bash SSH.start.swiface.sh

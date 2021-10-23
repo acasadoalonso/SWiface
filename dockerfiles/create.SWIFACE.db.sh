@@ -11,7 +11,7 @@ DBpath=$(echo    `grep '^DBpath '   $CONFIGDIR/SWSconfig.ini` | sed 's/=//g' | s
 SCRIPT=$(readlink -f $0)
 SCRIPTPATH=`dirname $SCRIPT`
 
-echo "Create the MySQL OGN user "				#
+echo "Create the MySQL OGN user "$1				#
 echo "Type the PASSword for the MySQL database "	        #
 echo "GRANT ALL PRIVILEGES ON *.* TO 'ogn'@'%' IDENTIFIED BY '$DBpasswd'; " | mysql -u root -p$1 -h mariadb    #
 echo "GRANT SELECT ON *.* TO 'ognread'@'%'     IDENTIFIED BY '$DBpasswd'; " | mysql -u root -p$1 -h mariadb    #
