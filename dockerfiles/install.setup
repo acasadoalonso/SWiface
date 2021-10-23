@@ -8,8 +8,10 @@ if [ ! -f /usr/bin/docker ]; then
 	bash install.docker					#
 fi
 echo Install portainer						#
+echo "=========================================================="
 bash install.portainer						#
 echo create docker container
+echo "=========================================================="
 make
 if [ ! -f .DBpasswd    ]					#
 then								#
@@ -21,26 +23,38 @@ if [ ! -f config.docker ]; then
      cp config.template config.docker
 fi
 echo create docker network
+echo "=========================================================="
 bash mariadbnet.sh
 arch=$(uname -m)
 if [ $arch != 'x84-64' ]
 then
     cd Mariadb.debian
+    echo Create the container for the non-AMD64 architecture
+    echo "======================================================"
     bash mariadb.patch
     make
+    echo Create mariadb container
+    echo "======================================================"
     bash mariadb.sh
+    echo Create phpmyadmin container
+    echo "======================================================"
     bash mariadbpma.sh
     cd ..
 else
-    echo create mariadb container
+    echo Create mariadb container
+    echo "======================================================"
     bash mariadb.sh
-    echo create phpmyadmin container
+    echo Create phpmyadmin container
+    echo "======================================================"
     bash mariadbpma.sh
 fi
 echo start all containers
+echo "=========================================================="
 bash mariadb.start
 echo create db SWIFACE 
+echo "=========================================================="
 bash create.SWIFACE.db.sh $(cat .DBpasswd)
 echo create and start container
+echo "=========================================================="
 bash swiface.standalone.sh
 bash SSH.start.swiface.sh
