@@ -1,5 +1,5 @@
 #!/bin/sh
-server='ubuntu'
+server='localhost'
 if [ -z $CONFIGDIR ]
 then 
      export CONFIGDIR=/etc/local/
@@ -13,7 +13,7 @@ SCRIPTPATH=`dirname $SCRIPT`
 
 
 cd $DBpath
-echo "drop database SWiface;"                   | mysql --login-path=SARogn -h $server 
-echo "create database SWiface;"                 | mysql --login-path=SARogn -h $server 
-sqlite3 SWiface.db ".dump" |python3 ../src/sql* | mysql --login-path=SARogn -h $server SWiface 
+echo "drop database SWiface;"                   | mysql -u $DBuser -p$DBpasswd -h $server 
+echo "create database SWiface;"                 | mysql -u $DBuser -p$DBpasswd -h $server 
+sqlite3 SWiface.db ".dump" |python3 ../src/sql* | mysql -u $DBuser -p$DBpasswd -h $server SWiface 
 cd

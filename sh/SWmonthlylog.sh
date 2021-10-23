@@ -29,8 +29,8 @@ mv DATA$(date +%y)*.log Y$(date +%y)
 mv SW$(date +%y)*.log   Y$(date +%y) 
 if [ $MySQL == 'YES' ]
 then
-	mysqldump                                --login-path=SARogn -h $server SWARCHIVE >db/SWARCHIVE.dmp
-	echo "delete from OGNDATA;" | mysql      --login-path=SARogn -v -h $server SWARCHIVE                      >>SWproc.log
+	mysqldump                                -u $DBuser -p$DBpasswd -h $server SWARCHIVE >db/SWARCHIVE.dmp
+	echo "delete from OGNDATA;" | mysql      -u $DBuser -p$DBpasswd -v -h $server SWARCHIVE                      >>SWproc.log
 	mv ogndata.sql mondata.sql
 fi
 pwd

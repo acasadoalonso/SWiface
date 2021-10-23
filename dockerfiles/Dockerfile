@@ -1,6 +1,8 @@
 FROM debian
 ENV DEBIAN_FRONTEND=noninteractive 
+
 RUN apt-get update 
+RUN apt-get install -y apt-utils
 RUN apt-get -y upgrade 
 RUN apt-get install -y apt-utils software-properties-common python3-software-properties build-essential locales			
 # Set the locale

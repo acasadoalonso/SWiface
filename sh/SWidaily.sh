@@ -36,17 +36,17 @@ fi
 if [ $MySQL == 'YES' ]
 then
 	echo "Process MYSQL DB." 				>>SWproc.log
-	mysqlcheck --login-path=SARogn -h $server SWIFACE   	>>SWproc.log
-	mysqlcheck --login-path=SARogn -h $server SWARCHIVE 	>>SWproc.log
-	echo "set session sql_mode='STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION'; "| mysql --login-path=SARogn  -v -h $server SWIFACE	      >>SWproc.log
-	echo "select 'Number of fixes: on the DB:', count(*) from OGNDATA; select station, 'Kms.max.:',max(distance),'        Flarmid :',idflarm, 'Date:',date, time, station from OGNDATA group by station; "                 | mysql --login-path=SARogn  -v -h $server SWIFACE	      >>SWproc.log
-	mysqldump                               --login-path=SARogn -t -h $server SWIFACE OGNDATA >ogndata.sql 
-	mysql                                   --login-path=SARogn    -h $server SWARCHIVE       <ogndata.sql >>SWproc.log
-	echo "delete from OGNDATA;" | mysql     --login-path=SARogn -v -h $server SWIFACE                      >>SWproc.log
+	mysqlcheck -u $DBuser -p$DBpasswd -h $server SWIFACE   	>>SWproc.log
+	mysqlcheck -u $DBuser -p$DBpasswd -h $server SWARCHIVE 	>>SWproc.log
+	echo "set session sql_mode='STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION'; "| mysql -u $DBuser -p$DBpasswd  -v -h $server SWIFACE	      >>SWproc.log
+	echo "select 'Number of fixes: on the DB:', count(*) from OGNDATA; select station, 'Kms.max.:',max(distance),'        Flarmid :',idflarm, 'Date:',date, time, station from OGNDATA group by station; "                 | mysql -u $DBuser -p$DBpasswd  -v -h $server SWIFACE	      >>SWproc.log
+	mysqldump                               -u $DBuser -p$DBpasswd -t -h $server SWIFACE OGNDATA >ogndata.sql 
+	mysql                                   -u $DBuser -p$DBpasswd    -h $server SWARCHIVE       <ogndata.sql >>SWproc.log
+	echo "delete from OGNDATA;" | mysql     -u $DBuser -p$DBpasswd -v -h $server SWIFACE                      >>SWproc.log
 	mv ogndata.sql archive
-	echo "End of processes SQLITE3 & MYSQL DB at server: "$hostname 	>>SWproc.log
+	echo "End of processes SQLITE3 & MYSQL DB at server: "$hostname 					  >>SWproc.log
 fi
-mutt -a "SWproc.log" -s $server"  process SWS interface at: "$hostname -- angel@acasado.es
+mutt -a "SWproc.log" -s $server"  process SWS interface at: "$hostname -- $(cat mailnames.txt)
 mv DATA*.log  archive		>/dev/null 2>&1
 mv SWproc.log archive/SWproc$(date +%y%m%d).log
 rm SWS.alive			>/dev/null 2>&1

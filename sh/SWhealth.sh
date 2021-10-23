@@ -2,6 +2,8 @@
 
 # script to email logfiles 
 # then delete the logfiles to save space
+SCRIPT=$(readlink -f $0)
+SCRIPTPATH=`dirname $SCRIPT`
 
 /sbin/ifconfig 		>  hc.log
 df -v 			>> hc.log
@@ -15,7 +17,7 @@ now=`date "+%R"`
 taken=$day"_"$DMY"_"$now
 hn=`hostname   `
 gettime=`date "+%M"`
-hc=$(ls ~/hc.log)
+hc=$(ls $SCRIPTPATH/hc.log)
 #insert healthcheck commands here
 {
 echo $taken
@@ -36,7 +38,7 @@ lsusb
 echo "           "
 cd /nfs/OGN/SWdata
 ls -lrt
-} | mutt -a $hc -s $hn" SWS iface Health Check "$taken -- angel@acasado.es
+} | mutt -a $hc -s $hn" SWS iface Health Check "$taken -- $(cat $SCRIPTPATH/mailnames.txt)
 
-rm -f ~/hc.log
+rm -f $SCRIPTPATH/hc.log
 

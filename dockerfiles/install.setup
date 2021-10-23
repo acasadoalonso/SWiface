@@ -11,6 +11,9 @@ then								#
    read DBpasswd						#
    echo $DBpasswd > .DBpasswd					#
 fi	
+if [ ! -f docker.config ]; then
+     cp docker.template docker.config
+fi
 bash mariadbnet.sh
 bash mariadbpma.sh
 bash mariadb.sh

@@ -3,7 +3,10 @@
 # script to email logfiles 
 # then delete the logfiles to save space
 
-/sbin/ifconfig >  hc.log
+SCRIPT=$(readlink -f $0)
+SCRIPTPATH=`dirname $SCRIPT`
+
+/sbin/ifconfig          >  hc.log
 df -v 			>> hc.log
 lsusb	 		>> hc.log
 /usr/bin/uptime	 	>> hc.log
@@ -37,7 +40,7 @@ lsusb
 echo "           "
 cd /nfs/OGN/DIRdata
 ls -lrt
-} | mutt -a ~/hc.log -s $hn" UBUNTU Health Check "$taken -- angel@acasado.es
+} | mutt -a $SCRIPTPATH/hc.log -s $hn" UBUNTU Health Check "$taken -- $(cat $SCRIPTPATH/mailnames.txt)
 
-rm -f ~/hc.log
+rm -f $SCRIPTPATH/hc.log
 

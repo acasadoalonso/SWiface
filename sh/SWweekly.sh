@@ -1,6 +1,15 @@
 #!/bin/bash
-dir='/nfs/OGN/DIRdata'
-db='/nfs/OGN/DIRdata/SAROGN.db'
+if [ -z $CONFIGDIR ]
+then 
+     export CONFIGDIR=/etc/local/
+fi
+dir=$(echo    `grep '^DBpath '   $CONFIGDIR/SARconfig.ini` | sed 's/=//g' | sed 's/^DBpath //g' | sed 's/ //g' )
+db=$DBpath'/SAROGN.db'
+if [ ! -d $dir ]
+then
+	echo "---exiting---"
+	exit 1
+fi
 MySQL='NO'
 if [ $# -eq  0 ]; then
 	server='localhost'
@@ -10,15 +19,6 @@ else
 fi
 
 # test if directory is available
-if [ ! -d $dir ]
-then
-	echo "---exiting---"
-	exit 1
-fi
-if [ -z $CONFIGDIR ]
-then 
-     export CONFIGDIR=/etc/local/
-fi
 DBuser=$(echo    `grep '^DBuser '   $CONFIGDIR/SWSconfig.ini` | sed 's/=//g' | sed 's/^DBuser //g')
 DBpasswd=$(echo  `grep '^DBpasswd ' $CONFIGDIR/SWSconfig.ini` | sed 's/=//g' | sed 's/^DBpasswd //g' | sed 's/ //g' )
 DBpath=$(echo    `grep '^DBpath '   $CONFIGDIR/SWSconfig.ini` | sed 's/=//g' | sed 's/^DBpath //g' | sed 's/ //g' )
@@ -54,10 +54,10 @@ cd ..
 if [ $MySQL  == 'YES' ]
 then
 
-	echo "drop table GLIDERS;" | mysql --login-path=SARogn -h $server SWIFACE       >>SWproc.log 
+	echo "drop table GLIDERS;" | mysql -u $DBuser -p$DBpasswd -h $server SWIFACE       >>SWproc.log 
 	python3 /nfs/OGN/src/SARsrc/sql* <GLIDERS.dump >gliders.sql
-	mysql --login-path=SARogn -h $server SWIFACE   <gliders.sql                     >>SWproc.log
-	mysql --login-path=SARogn -h $server -e "select count(*) from GLIDERS" SWIFACE  >>SWproc.log
+	mysql -u $DBuser -p$DBpasswd -h $server SWIFACE   <gliders.sql                     >>SWproc.log
+	mysql -u $DBuser -p$DBpasswd -h $server -e "select count(*) from GLIDERS" SWIFACE  >>SWproc.log
 	date                                                    >>SWproc.log
 	rm gliders.sql
 	echo "============= end MySQL ============================" 	>>SWproc.log
