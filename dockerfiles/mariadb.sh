@@ -10,6 +10,6 @@ DBpath=$(echo    `grep '^DBpath '   $CONFIGDIR/SWSconfig.ini` | sed 's/=//g' | s
 SCRIPT=$(readlink -f $0)
 SCRIPTPATH=`dirname $SCRIPT`
 
-docker run --net mynetsql --ip 172.18.0.2 --name mariadb -e MYSQL_ROOT_PASSWORD=$DBpasswd -d mariadb:latest --log-bin --binlog-format=MIXED --restart unless-stopped
+docker run --net mynetsql --ip 172.18.0.2 --name mariadb -e MYSQL_ROOT_PASSWORD=$DBpasswd  --log-bin --binlog-format=MIXED --restart unless-stopped -d mariadb:latest 
 
 
