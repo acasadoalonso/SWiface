@@ -2,10 +2,12 @@
 #
 # install SWS interface on a docker container
 
-echo Install docker						#
-bash install.docker
+if [ ! -f /usr/bin/docker ]; then
+	echo Install docker					#
+	bash install.docker					#
+fi
 echo Install portainer						#
-bash install.portainer
+bash install.portainer						#
 echo create docker container
 make
 if [ ! -f .DBpasswd    ]					#
