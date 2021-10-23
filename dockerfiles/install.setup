@@ -21,14 +21,25 @@ if [ ! -f config.docker ]; then
 fi
 echo create docker network
 bash mariadbnet.sh
-echo create phpmyadmin container
-bash mariadbpma.sh
-echo create mariadb container
-bash mariadb.sh
+arch=$(uname -m)
+if [ $arch != 'x84-64' ]
+then
+    cd Mariadb.debian
+    bash mariadb.patch
+    make
+    bash mariadb.sh
+    bash mariadbpma.sh
+    cd ..
+else
+    echo create mariadb container
+    bash mariadb.sh
+    echo create phpmyadmin container
+    bash mariadbpma.sh
+fi
 echo start all containers
 bash mariadb.start
 echo create db SWIFACE 
-bash create.SWIFACE.db.sh
+bash create.SWIFACE.db.sh $DBpasswd
 echo create and start container
 bash swiface.standalone.sh
 bash SSH.start.swiface.sh
