@@ -1,9 +1,12 @@
 #!/bin/bash
 #
 # install SWS interface on a docker container
-#
+
+echo Install docker						#
 bash install.docker
+echo Install portainer						#
 bash install.portainer
+echo create docker container
 make
 if [ ! -f .DBpasswd    ]					#
 then								#
@@ -11,13 +14,19 @@ then								#
    read DBpasswd						#
    echo $DBpasswd > .DBpasswd					#
 fi	
-if [ ! -f docker.config ]; then
-     cp docker.template docker.config
+if [ ! -f config.docker ]; then
+     cp config.template config.docker
 fi
+echo create docker network
 bash mariadbnet.sh
+echo create phpmyadmin container
 bash mariadbpma.sh
+echo create mariadb container
 bash mariadb.sh
+echo start all containers
 bash mariadb.start
+echo create db SWIFACE 
 bash create.SWIFACE.db.sh
+echo create and start container
 bash swiface.standalone.sh
 bash SSH.start.swiface.sh
