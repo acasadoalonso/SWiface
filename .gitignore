@@ -6,6 +6,7 @@
 *.bkup
 sh/nfs.sh
 sh/SWbkup.sh
+sh/mailnammes.txt
 archive
 html/
 __pycache__
