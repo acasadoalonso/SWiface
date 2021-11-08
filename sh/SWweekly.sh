@@ -4,7 +4,7 @@ then
      export CONFIGDIR=/etc/local/
 fi
 dir=$(echo    `grep '^DBpath '   $CONFIGDIR/SARconfig.ini` | sed 's/=//g' | sed 's/^DBpath //g' | sed 's/ //g' )
-db=$DBpath'/SAROGN.db'
+db=$dir'/SAROGN.db'
 if [ ! -d $dir ]
 then
 	echo "---exiting---"
@@ -26,13 +26,9 @@ DBpath=$(echo    `grep '^DBpath '   $CONFIGDIR/SWSconfig.ini` | sed 's/=//g' | s
 SCRIPT=$(readlink -f $0)
 SCRIPTPATH=`dirname $SCRIPT`
 
-echo "Sync GLIDERS table on databases at server: "$(hostname)  	>>SWproc.log
-cd    /nfs/OGN/DIRdata
-if [ -f 'kglid.py' ]
-then
-	cp kglid.py $SCRIPTPATH/../
-fi
 cd $DBpath
+echo "Sync GLIDERS table on databases at server: "$(hostname)  	>>SWproc.log
+echo $db							>>SWproc.log
 if [ -f $db ]
 then
 	echo ".dump GLIDERS" |        sqlite3  $db >GLIDERS.dump
