@@ -19,6 +19,7 @@ export LC_ALL=en_US.UTF-8 && export LANG=en_US.UTF-8		#
 sudo apt-get install -y software-properties-common 		#
 sudo apt-get install -y python3-software-properties 		#
 sudo apt-get install -y build-essential 			#
+sudo apt-get install -y python-is-python3			#
 echo								#
 echo " "							#
 echo "=================================================="	#
@@ -144,6 +145,7 @@ sudo -H python3 -m pip install ephem pytz geopy configparser 	#
 sudo -H python3 -m pip install pycountry uritemplate requests	#
 sudo -H python3 -m pip install beeprint ogn.client		#
 sudo -H python3 -m pip install tqdm psutil python-dateutil	#
+sudo -H python3 -m pip install ping3               		#
 sudo -H python3 -m pip install ttn               		#
 sudo -H python3 -m pip install paho-mqtt			#
 sudo -H python3 -m pip install pyserial 			#

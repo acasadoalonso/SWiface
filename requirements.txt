@@ -1,0 +1,6 @@
+geopy==2.2.0
+MySQL-python==1.2.5
+ogn_client==1.2.1
+pyephem==9.99
+pytz==2021.1
+requests==2.25.1

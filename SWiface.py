@@ -20,7 +20,7 @@ import signal
 import ksta                               # import the list on known gliders
 import socket
 from parserfuncs import *                 # the ogn/ham parser functions
-from ognddbfuncs import getognreg         # the  get registration from FlarmID
+from ognddbfuncs import getognreg, getogncn, findfastestaprs
 from geopy.distance import geodesic       # use the Vincenty algorithm^M
 # use the Nominatim as the geolocator^M
 from geopy.geocoders import GeoNames
@@ -343,9 +343,14 @@ elif OGNT:				# if we need aggregation of FLARM and OGN trackers data
        ogntbuildtable(conn, ognttable, prt=False)
        print("OGN Tracker Pair table from DB:\n",ognttable, "\n")
 #print ("CCC", clist)
+server=config.APRS_SERVER_HOST
+if server == ' ':
+   server=findfastestaprs()
+#server="aprs.glidernet.org"
+
 					# create socket & connect to server
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-sock.connect((config.APRS_SERVER_HOST, config.APRS_SERVER_PORT))
+sock.connect((server, config.APRS_SERVER_PORT))
 print("Socket sock connected")
 
 					# logon to OGN APRS network
@@ -551,6 +556,8 @@ try:
             source = 	msg['source']			# source OGN/SPOT/FANET 
             if len(source) > 4:
                 source = source[0:3]
+            if  source != "OGN":
+                continue
             if 'acfttype' in msg:
                acftt=msg['acfttype']
                if not acftt in acfttype:
@@ -613,7 +620,7 @@ try:
                     if prt:
                        print("===>STA:", id, latitude, longitude, altitude, ":", version, cpu, rf, ":::", status, ":", aprstype,":")
                     if id[0:3] == "OGN":		# trap !!!
-                        print ("===>MSG:", msg) 
+                        print ("===>MSG:", msg, "<=== invalid TCPIP\n", packet_str) 
                 continue                        	# go for the next record
 							# check for tracker status
             if aprstype == 'status' and beacontype== "tracker" :	# if tracker status report
