@@ -4,7 +4,6 @@
 #
 # Version for gathering all the records for Spain
 
-#from libfap import *
 from ctypes import *
 from datetime import datetime, timedelta
 import socket
@@ -25,7 +24,8 @@ from geopy.distance import geodesic       # use the Vincenty algorithm^M
 # use the Nominatim as the geolocator^M
 from geopy.geocoders import GeoNames
 from time import sleep
-
+from zoneinfo import ZoneInfo
+from timezonefinder import TimezoneFinder
 #########################################################################
 
 
@@ -137,8 +137,8 @@ def shutdown(sock, datafile, tmaxa, tmaxt, tmid, tmstd):
     conn.close()			# close the database
     local_time = datetime.now() 	# report date and time now
     location.date = ephem.Date(datetime.utcnow())
-    print("Local Time (server) now is:", local_time, " and UTC time at location ",
-          config.location_name, "is:", location.date, "UTC.\n")
+    print("Local Time (server) now is:", local_time, " and UTC time is:",
+           location.date, "UTC. Date at location:", config.location_name, " is:", dte,  "\n")
     try:
         os.remove(config.APP+".alive")	# delete the mark of alive
     except:
@@ -203,7 +203,8 @@ print("======================================")
 
 print("Program Version:", time.ctime(os.path.getmtime(__file__)))
 date = datetime.utcnow()       		  # get the date
-dte = date.strftime("%y%m%d")             # today's date
+dte = date.strftime("%y%m%d")             # today's date (UTC)
+tme = date.strftime("%H%M%S")             # today's time (UTC)
 hostname = socket.gethostname()
 print("Date: ", date, " UTC at:", hostname, "Process ID:", os.getpid())
 
@@ -304,9 +305,23 @@ location.lat, location.lon = location_latitude, location_longitude
 date = datetime.now()
 next_sunrise = location.next_rising(ephem.Sun(), date)
 next_sunset = location.next_setting(ephem.Sun(), date)
+tz = TimezoneFinder()
+timezone=tz.timezone_at(lng=float(location_longitude), lat=float(location_latitude))
+zone = ZoneInfo(timezone)		
+yy=int(dte[0:2])
+mm=int(dte[2:4])
+dd=int(dte[4:6])
+HH=int(tme[0:2])
+MM=int(tme[2:4])
+SS=int(tme[4:6])
+
+local = date.astimezone(tz=zone)
+dte = local.strftime("%y%m%d")             # today's date (at location)
+tme = local.strftime("%H%M%S")             # today's time (at location)
+print("Location:            ", location_latitude, location_longitude, " Local time at location: ", local, "Time Zone: ", timezone)
 print("Sunrise today is at: ", next_sunrise, " UTC ")
 print("Sunset  today is at: ", next_sunset,  " UTC ")
-print("Time now is: ", date, " Local time")
+print("SERVER Time now is:  ", date, " Local time")
 
 prtreq = sys.argv[1:]
 if prtreq and prtreq[0] == 'prt':
@@ -786,5 +801,5 @@ shutdown(sock, datafile, tmaxa, tmaxt, tmid, tmstd)
 location.date = ephem.Date(datetime.utcnow())
 if nerr > 0:
     print("\nNumber of errors:", nerr,"<<<<<\n")
-print("Exit now ...", location.date, "\n=================================================================================================\n")
+print("Exit now ...", location.date, dte, "\n=================================================================================================\n")
 exit(1)
