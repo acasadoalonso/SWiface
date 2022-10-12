@@ -24,8 +24,12 @@ from geopy.distance import geodesic       # use the Vincenty algorithm^M
 # use the Nominatim as the geolocator^M
 from geopy.geocoders import GeoNames
 from time import sleep
-from zoneinfo import ZoneInfo
 from timezonefinder import TimezoneFinder
+try:
+        import zoneinfo
+except ImportError:
+        from backports import zoneinfo
+
 #########################################################################
 
 
@@ -307,7 +311,7 @@ next_sunrise = location.next_rising(ephem.Sun(), date)
 next_sunset = location.next_setting(ephem.Sun(), date)
 tz = TimezoneFinder()
 timezone=tz.timezone_at(lng=float(location_longitude), lat=float(location_latitude))
-zone = ZoneInfo(timezone)		
+zone = zoneinfo.ZoneInfo(timezone)		
 yy=int(dte[0:2])
 mm=int(dte[2:4])
 dd=int(dte[4:6])
