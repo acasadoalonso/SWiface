@@ -146,6 +146,7 @@ sudo -H python3 -m pip install pycountry uritemplate requests	#
 sudo -H python3 -m pip install beeprint ogn.client		#
 sudo -H python3 -m pip install tqdm psutil python-dateutil	#
 sudo -H python3 -m pip install ping3               		#
+sudo -H python3 -m pip install pipreqs               		#
 sudo -H python3 -m pip install ttn               		#
 sudo -H python3 -m pip install paho-mqtt			#
 sudo -H python3 -m pip install pyserial 			#
