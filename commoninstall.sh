@@ -107,7 +107,7 @@ echo "Install now other utilities"				#
 echo "==========================="                              #
 sudo apt-get install -y ntpdate					#
 sudo apt-get install -y ssmtp					#
-sudo apt-get install -y at sshpass minicom 			#
+sudo apt-get install -y at sshpass minicom sshfs		#
 sudo apt-get install -y fakeroot debhelper 			#
 sudo apt-get install -y libfile-fcntllock-perl			#
 sudo apt-get install -y nvme-cli				#

@@ -22,17 +22,21 @@ prt		=config.prt
 
 ####################################################################
 
-def findfastestaprs():
+def findfastestaprs():				# find the fastest APRS server
 
-   aprs=["glidern1.glidernet.org", "glidern2.glidernet.org", "glidern3.glidernet.org", "glidern4.glidernet.org","glidern5.glidernet.org"]
-   p=999
+   aprs=["glidern1.glidernet.org",		# list of aprs.glidernet.org server 
+         "glidern2.glidernet.org",
+         "glidern3.glidernet.org",
+         "glidern4.glidernet.org",
+         "glidern5.glidernet.org"]
+   p=999					# start with a high value
    url=''
-   for u in aprs:
-       pp=ping(u)
-       if pp < p:
-          p=pp
-          url=u
-   return(url)
+   for u in aprs:				# got thru all the servers
+       pp=ping(u)				# ping the server
+       if pp < p:				# if faster ?
+          p=pp					# remember the ping time
+          url=u					# remember the URL
+   return(url)					# return the URL of the fastest server 
 ####################################################################
 
 def servertest(host, port):
