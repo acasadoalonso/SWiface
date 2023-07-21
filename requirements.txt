@@ -5,5 +5,5 @@ ogn_client==1.2.1
 ping3==4.0.3
 pyephem==9.99
 pytz==2022.1
-requests==2.28.1
-timezonefinder==6.1.9
+requests==2.25.1
+timezonefinder==6.2.0
