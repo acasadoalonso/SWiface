@@ -281,7 +281,7 @@ DBname 	= config.DBname
 MySQL 	= config.MySQL
 OGNT 	= config.OGNT
 DELAY   = config.DELAY
-OGNT=True
+OGNT    = True
 # --------------------------------------#
 
 
@@ -382,7 +382,7 @@ for compfile in os.listdir(config.cucFileLocation):
       cclist = json.loads(j)		# load it from competition file
       fd.close()			# close it
       if cclist[1][0:3] == 'OGN':	# if the pairing is there on the competition table???
-         OGNT = False			# we do not need to use the TRACKERDEV DB table
+         #OGNT = False			# we do not need to use the TRACKERDEV DB table
          tl=len(cclist)			# check the number of entries ???
          idx=0				# index into the table      
          while idx < tl:		# scan the whole table
