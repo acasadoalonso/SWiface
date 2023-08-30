@@ -198,6 +198,35 @@ def chkfilati(latitude,  flatil, flatiu):
     return(False)
 ########################################################################
 
+def datal(data, typer):                        # get data on the left
+    p = data.find(typer)                        # scan for the type requested
+    if p == -1:
+        return (" ")
+    pb = p
+    while (data[pb] != ' ' and data[pb] != '/' and pb >= 0):
+        pb -= 1
+    ret = data[pb +1:p]                         # return the data requested
+    return(ret)
+# #######################################################################
+
+
+def datar(data, typer):                # get data on the  right
+    p = data.find(typer)                # scan for the type requested
+    if p == -1:
+        return (" ")
+    p = p +len(typer)
+    pb = p
+    maxd = len(data) -1
+    while (pb < maxd):
+        if data[pb] == ' ' or data[pb] == '\n' or data[pb] == '\r':
+            pb += 1
+            break
+        pb += 1
+    ret = data[p:pb+1]                    # return the data requesteda
+    return(ret)
+
+########################################################################
+
 
 #----------------------ogn_SilentWingsInterface.py start-----------------------
 pgmversion = 'V2.04'
@@ -234,8 +263,16 @@ with open(config.PIDfile, "w") as f:  # protect against to running the daemon tw
 atexit.register(lambda: os.remove(config.PIDfile))
 
 # --------------------------------------#
-location_latitude = config.location_latitude  # get the configuration parameters
-location_longitude = config.location_longitude
+if getinfoairport (config.location_name) != None:
+   print(getinfoairport (config.location_name))
+   location_latitude = getinfoairport (config.location_name)['lat']
+   location_longitude = getinfoairport (config.location_name)['lon']
+   
+else:
+   location_latitude=config.location_latitude
+   location_longitude=config.location_longitude
+print("Location coordinates:", location_latitude, location_longitude, "at: ", config.location_name)
+
 DBpath 	= config.DBpath
 DBhost 	= config.DBhost
 DBuser 	= config.DBuser
@@ -680,6 +717,8 @@ try:
                 rot = 0
             sensitivity = msg['sensitivity']
             gps = 	msg['gps']
+            if datal(gps,'x').isnumeric() and datar(gps,'x').isnumeric() and (int(datal(gps,'x')) > 10 or int(datar(gps,'x'))) > 10:
+                continue  				# bad quality GPS data         
             hora = 	msg['time']			# fix time
             if source == 'DLYM':
                 dly = timedelta(seconds=DELAY)		# add DELAY
@@ -744,7 +783,7 @@ try:
                     fmaxd[id] = distance		# save the new distance
                 fscnt[station] += 1			# increase the counter of fixes
             if source != "OGN":				# if it is not OGN, we get the distance to the home base
-                distance = geodesic((latitude, longitude), (config.location_latitude,config.location_longitude)).km    # distance to the base
+                distance = geodesic((latitude, longitude), (location_latitude,location_longitude)).km    # distance to the base
                 dist = distance
             if altim > tmaxa:				# if exceed the maximun altitude
                 tmaxa = altim               		# maximum altitude for the day
