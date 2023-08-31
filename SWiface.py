@@ -717,6 +717,8 @@ try:
                 rot = 0
             sensitivity = msg['sensitivity']
             gps = 	msg['gps']
+            if gps == 'NO' or gps == 'NO ':
+               continue
             if datal(gps,'x').isnumeric() and datar(gps,'x').isnumeric() and (int(datal(gps,'x')) > 10 or int(datar(gps,'x'))) > 10:
                 continue  				# bad quality GPS data         
             hora = 	msg['time']			# fix time
