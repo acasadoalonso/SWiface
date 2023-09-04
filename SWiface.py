@@ -30,6 +30,7 @@ try:
 except ImportError:
         from backports import zoneinfo
 
+global compmtime
 #########################################################################
 
 
@@ -226,6 +227,36 @@ def datar(data, typer):                # get data on the  right
     return(ret)
 
 ########################################################################
+def compbuildtable(ogntable, clist, prt=False):
+ paircnt=0
+ global compmtime 
+ for compfile in os.listdir(config.cucFileLocation):
+   if compfile.find("competitiongliders.lst") != -1: # only of it is a competition file
+      competitionfile=config.cucFileLocation + compfile	# Competition file
+      cctime=os.path.getmtime(competitionfile)
+      if cctime ==  compmtime:
+         return (-1)			# number of pairs -1 indicates no rebuild is needed
+      else:
+         compmtime = cctime		# remember the new competition modification time
+      if prt:
+         print("Rebuild pair table from  Competition file:", compfile,"Comp mtime: ",time.ctime(cctime)) # Show the name of the file containg the competition list)
+
+      fd = open(config.cucFileLocation + compfile, 'r')	# open and read the file
+      j = fd.read()			# read the competition file
+      cclist = json.loads(j)		# load it from competition file
+      fd.close()			# close it
+      if cclist[1][0:3] == 'OGN':	# if the pairing is there on the competition table???
+         #OGNT = False			# we do not need to use the TRACKERDEV DB table
+         tl=len(cclist)			# check the number of entries ???
+         idx=0				# index into the table      
+         while idx < tl:		# scan the whole table
+            ognttable[cclist[idx+1]]=cclist[idx]
+            idx += 2
+            paircnt += 1
+      for c in cclist:			# add these entries to the master CLIST
+         clist.append(c)		# add each flarm Id and each OGN tracker ID
+ return(paircnt)			# return the number of pairs
+########################################################################
 
 
 #----------------------ogn_SilentWingsInterface.py start-----------------------
@@ -308,7 +339,7 @@ tmaxd = 0                               # maximun distance
 tmid = 'NONE     '                      # glider ID obtaining max altitude
 tmsta = '         '                     # station capturing max altitude
 tmstd = '         '                     # station capturing max distance
-
+compmtime=0.0				# competition file mod time 
 fsllo = {'NONE  ': 0.0}      		# station location longitude
 fslla = {'NONE  ': 0.0}      		# station location latitude
 fslal = {'NONE  ': 0.0}      		# station location altitude
@@ -373,24 +404,7 @@ else:
 #compfile = config.cucFileLocation + "/competitiongliders.lst"a this format name
 ognttable = {}				# init the instance of the table
 clist=[]				# competition list 
-paircnt=0
-for compfile in os.listdir(config.cucFileLocation):
-   if compfile.find("competitiongliders.lst") != -1: # only of it is a competition file
-      print("Competition file:", compfile) # Show the name of the file containg the competition list
-      fd = open(config.cucFileLocation + compfile, 'r')	# open and read the file
-      j = fd.read()			# read the competition file
-      cclist = json.loads(j)		# load it from competition file
-      fd.close()			# close it
-      if cclist[1][0:3] == 'OGN':	# if the pairing is there on the competition table???
-         #OGNT = False			# we do not need to use the TRACKERDEV DB table
-         tl=len(cclist)			# check the number of entries ???
-         idx=0				# index into the table      
-         while idx < tl:		# scan the whole table
-            ognttable[cclist[idx+1]]=cclist[idx]
-            idx += 2
-            paircnt += 1
-      for c in cclist:			# add these entries to the master CLIST
-         clist.append(c)		# add each flarm Id and each OGN tracker ID
+paircnt=compbuildtable(ognttable,clist,True)	# build the pairing table
 
 if paircnt > 0:
        print ("OGN Tracker pair table:\n", ognttable, "\n")  
@@ -528,11 +542,14 @@ try:
                 print("At socket error ... Exit\n\n")
                 exit(-1)
 
-            try:					
-
-                if OGNT:				# if we need aggregation of FLARM and OGN trackers data
+            try:
+                if prt:					
+                   print("Rebuild the ognttable ...")
+                paircnt=compbuildtable(ognttable,clist, True)	# build the pairing table
+                if paircnt == 0:			# if we need aggregation of FLARM and OGN trackers data (paircnt > 0 or paircnt <0 not needed)
                     					# rebuild the table from the TRKDEVICES DB table
-                    ogntbuildtable(conn, ognttable, prt)
+                    ogntbuildtable(conn, ognttable, prt) 
+
 
             except Exception as e:			# if we have an error during the aggregation functions
                 print(('Something\'s wrong with building OGNT table Exception type is %s \n\n' % (repr(e))), file=sys.stderr)
