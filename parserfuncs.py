@@ -30,6 +30,7 @@ aprssources = {			# sources based on the APRS TOCALL
     "OGNHEL": "HELI",		# helium LoRaWan
     "OGOBS":  "OBS",		# OBS LoRaWan
     "OGADSB": "ADSB",		# ADSB
+    "ONADSB": "ADSB",		# ADSB
     "OGADSL": "ADSL",		# ADS-L
     "OGNFNT": "FANE",		# FANET
     "OGFNT":  "FANE",		# FANET
