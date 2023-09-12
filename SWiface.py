@@ -260,7 +260,7 @@ def compbuildtable(ogntable, clist, prt=False):
 
 
 #----------------------ogn_SilentWingsInterface.py start-----------------------
-pgmversion = 'V2.04'
+pgmversion = 'V2.05'
 print("\n\n")
 print("Start OGN Silent Wings Interface "+pgmversion)
 print("======================================")
@@ -427,12 +427,12 @@ print("Socket sock connected")
 # if we have a COMP file with the list of flarm ids, pass that to the APRS at login time
 if len(clist) > 0:			# if we have tracker pairing table ???
     filter = "filter b/"  		# prepare the filter param of login
-    for f in clist:			# explore the whole list
+    for f in clist and f != ' ':			# explore the whole list
         filter += f  			# add the flarm id
         filter += "/"  			# separated by an slash
 
     if OGNT:
-        for f in ognttable:
+        for f in ognttable and f != ' ':
             filter += f  		# add the flarm id
             filter += "/"  		# separated by an slash
 
