@@ -427,14 +427,16 @@ print("Socket sock connected")
 # if we have a COMP file with the list of flarm ids, pass that to the APRS at login time
 if len(clist) > 0:			# if we have tracker pairing table ???
     filter = "filter b/"  		# prepare the filter param of login
-    for f in clist and f != ' ':			# explore the whole list
-        filter += f  			# add the flarm id
-        filter += "/"  			# separated by an slash
+    for f in clist :			# explore the whole list
+        if f != ' ':
+           filter += f  		# add the flarm id
+           filter += "/"  		# separated by an slash
 
     if OGNT:
-        for f in ognttable and f != ' ':
-            filter += f  		# add the flarm id
-            filter += "/"  		# separated by an slash
+        for f in ognttable :
+            if f != ' ':
+               filter += f  		# add the flarm id
+               filter += "/"  		# separated by an slash
 
     if hostname == "CHILEOGN" or hostname == "OGNCHILE":
         filter += " p/SC/VITACURA/ROBLE/ELBOSQUE/TROCA/WBUX/COLORA/SANRA/OLMUE \n"
