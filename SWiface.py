@@ -260,15 +260,15 @@ def compbuildtable(ogntable, clist, prt=False):
 
 
 #----------------------ogn_SilentWingsInterface.py start-----------------------
-pgmversion = 'V2.05'
+pgmversion = 'V2.06'			# September 2023
 print("\n\n")
 print("Start OGN Silent Wings Interface "+pgmversion)
 print("======================================")
 
 print("Program Version:", time.ctime(os.path.getmtime(__file__)))
-date = datetime.utcnow()       		  # get the date
-dte = date.strftime("%y%m%d")             # today's date (UTC)
-tme = date.strftime("%H%M%S")             # today's time (UTC)
+date = datetime.utcnow()       		# get the date
+dte = date.strftime("%y%m%d")           # today's date (UTC)
+tme = date.strftime("%H%M%S")           # today's time (UTC)
 hostname = socket.gethostname()
 print("Date: ", date, " UTC at:", hostname, "Process ID:", os.getpid())
 
@@ -277,17 +277,17 @@ if True:
 if 'USER' in os.environ:
     user = os.environ['USER']
 else:
-    user = "www-data"                     # assume www
+    user = "www-data"                   # assume www
 
 
 # protection against running the same daemon at the same time
 if user != 'docker' and os.path.exists(config.PIDfile):
     print("SWiface already running !!!")
     raise RuntimeError("SWiface already running !!!")
-    exit(-1)			# exit with an error code
+    exit(-1)				# exit with an error code
 #
 # --------------------------------------#
-with open(config.PIDfile, "w") as f:  # protect against to running the daemon twice
+with open(config.PIDfile, "w") as f:  	# protect against to running the daemon twice
     f.write(str(os.getpid()))
     f.close()
 # remove the lock file at exit
@@ -332,7 +332,7 @@ fmaxs = {'NONE  ': 0}                   # maximun speed
 nrecs = 0                               # output record counter
 nids = 0                                # output ID counter
 i = 0                                   # loop counter
-nerr = 0
+nerr = 0				# number of errors
 tmaxa = 0                               # maximun altitude for the day
 tmaxt = 0                               # time at max altitude
 tmaxd = 0                               # maximun distance
@@ -388,8 +388,8 @@ MM=int(tme[2:4])
 SS=int(tme[4:6])
 
 local = date.astimezone(tz=zone)
-dte = local.strftime("%y%m%d")             # today's date (at location)
-tme = local.strftime("%H%M%S")             # today's time (at location)
+dte = local.strftime("%y%m%d")          # today's date (at location)
+tme = local.strftime("%H%M%S")          # today's time (at location)
 print("Location:            ", location_latitude, location_longitude, " Local time at location: ", local, "Time Zone: ", timezone)
 print("Sunrise today is at: ", next_sunrise, " UTC ")
 print("Sunset  today is at: ", next_sunset,  " UTC ")
@@ -415,9 +415,7 @@ elif OGNT:				# if we need aggregation of FLARM and OGN trackers data
 #print ("CCC", clist)
 server=config.APRS_SERVER_HOST
 if server == ' ':
-   server=findfastestaprs()
-#server="aprs.glidernet.org"
-
+   server=findfastestaprs() 		#server="aprs.glidernet.org"
 					# create socket & connect to server
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 sock.connect((server, config.APRS_SERVER_PORT))
@@ -521,7 +519,7 @@ try:
 
         current_time = time.time()
         elapsed_time = current_time - keepalive_time
-        if (current_time - keepalive_time) > 180:        # keepalives every 3 mins
+        if (current_time - keepalive_time) > 180:       # keepalives every 3 mins
             try:
                 rtn = sock_file.write("# Python SWSiface App\n\n")
                 # Make sure keepalive gets sent. If not flushed then buffered
@@ -559,9 +557,9 @@ try:
             sys.stdout.flush()				# flush the print messages
             sys.stderr.flush()				# flush the print messages
 
-
+#
 # ------------------------------------------------------- main loop ------------------------------------- #
-
+#
         if prt:
             print("In main loop. Count= ", i)
             i += 1
@@ -737,17 +735,18 @@ try:
             sensitivity = msg['sensitivity']
             gps = 	msg['gps']
             if gps != 'NO' and gps != 'NO ':		# check GPS quality
-               if datal(gps,'x').isnumeric() and datar(gps,'x').isnumeric() and (int(datal(gps,'x')) > 10 or int(datar(gps,'x'))) > 10:
+               if datal(gps,'x').isnumeric() and datar(gps,'x').isnumeric() and (int(datal(gps,'x')) > 10 or int(datar(gps,'x')) >10) :
                   continue  				# bad quality GPS data         
             hora = 	msg['time']			# fix time
-            if source == 'DLYM':
+            if source == 'DLYM':			# in the case of DELAY, we adjust the time
                 dly = timedelta(seconds=DELAY)		# add DELAY
                 otime=otime+dly
                 hora = otime.strftime("%H%M%S")		# original time + DELAY
 
             altim = altitude                          	# the altitude in meters
+                           				# black BOX
             						# filter by latitude
-            if config.FILTER_LATI1 > 0 and config.FILTER_LATI3 > 0:			# if we are in the norther hemisfere
+            if config.FILTER_LATI1 > 0 and config.FILTER_LATI3 > 0:			# if we are in the northern hemisfere
                 if (chkfilati(latitude, config.FILTER_LATI1, config.FILTER_LATI2) and chkfilati(latitude, config.FILTER_LATI3, config.FILTER_LATI4)):
                     continue			        # if is not within our latitude ignore the data
             elif config.FILTER_LATI1 > 0 :		# if we are in the northern hemisfere
@@ -757,11 +756,12 @@ try:
             if (blackhole(longitude, latitude)):
                 print("BH:", id, longitude, latitude, date)
                 continue				# if is not within our latitude ignore the data
+							# ignore bad data
             if latitude == -1 or longitude == -1 or altitude == 0:
                 continue
 
 
-            try:
+            try:					# check altitude
                 if altitude == None:
                    altitude = 0;
                 elif altitude >= fmaxa[id]:		# check for maximun altitude
@@ -772,15 +772,15 @@ try:
                     tmid = id              	        # who did it
                     tmsta = station         	        # station capturing the max altitude
             except:
-                print ("TTTT altitude >>>>", msg)                 # trap: check it out
+                print ("TTTT altitude >>>>", msg)       # trap: check it out
                 continue
             try:
                 if speed == None:
                    speed = 0 
-                elif speed >= fmaxs[id]:			# check for maximun speed
+                elif speed >= fmaxs[id]:		# check for maximun speed
                      fmaxs[id] = speed
             except:
-                print ("TTTT speed >>>>", msg)                 # trap: check it out
+                print ("TTTT speed >>>>", msg)          # trap: check it out
                 continue
             if altim > 15000 or altim < 0:
                 altim = 0
@@ -819,7 +819,7 @@ try:
             if sensitivity == ' ':
                 sensitivity = 0
 
-            if OGNT and id[0:3] == 'OGN':
+            if OGNT and id[0:3] == 'OGN':		# check for pairing trackers
                 if id in ognttable:			# if the device is on the list
                     					# substitude the OGN tracker ID for the related FLARMID
                    #print("III", id, ognttable[id])
@@ -844,7 +844,7 @@ try:
                     except IndexError:
                         print(">>>MySQL Error: %s" % str(e), file=sys.stderr)
                     print(">>>MySQL error:", nrecs, addcmd,  file=sys.stderr)
-            else:					# using SQLite3
+            else:					# still using SQLite3
                 addcmd = "insert into OGNDATA values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"
                 curs.execute(addcmd, (id, dte, hora, station, latitude, longitude, altim, speed,
                                       course, roclimb, rot, sensitivity, gps, uniqueid, dist, extpos, source))
