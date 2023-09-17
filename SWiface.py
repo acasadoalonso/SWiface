@@ -260,7 +260,7 @@ def compbuildtable(ogntable, clist, prt=False):
 
 
 #----------------------ogn_SilentWingsInterface.py start-----------------------
-pgmversion = 'V2.06'			# September 2023
+pgmversion = 'V2.07'			# September 2023
 print("\n\n")
 print("Start OGN Silent Wings Interface "+pgmversion)
 print("======================================")
