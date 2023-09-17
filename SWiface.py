@@ -242,9 +242,13 @@ def compbuildtable(ogntable, clist, prt=False):
          print("Rebuild pair table from  Competition file:", compfile,"Comp mtime: ",time.ctime(cctime)) # Show the name of the file containg the competition list)
 
       fd = open(config.cucFileLocation + compfile, 'r')	# open and read the file
+
       j = fd.read()			# read the competition file
+      if len(j) == 0:			# check for empty file
+         return(paircnt)
       cclist = json.loads(j)		# load it from competition file
       fd.close()			# close it
+
       if cclist[1][0:3] == 'OGN':	# if the pairing is there on the competition table???
          #OGNT = False			# we do not need to use the TRACKERDEV DB table
          tl=len(cclist)			# check the number of entries ???
