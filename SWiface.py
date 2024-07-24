@@ -241,6 +241,7 @@ def compbuildtable(ogntable, clist, prt=False):
       if prt:
          print("Rebuild pair table from  Competition file:", compfile,"Comp mtime: ",time.ctime(cctime)) # Show the name of the file containg the competition list)
 
+      print ("Competitor file:",config.cucFileLocation + compfile)	# open and read the file
       fd = open(config.cucFileLocation + compfile, 'r')	# open and read the file
 
       j = fd.read()			# read the competition file
@@ -249,7 +250,7 @@ def compbuildtable(ogntable, clist, prt=False):
       cclist = json.loads(j)		# load it from competition file
       fd.close()			# close it
 
-      if cclist[1][0:3] == 'OGN':	# if the pairing is there on the competition table???
+      if cclist[1][0:3] == 'OGN' or cclist[1][0:3] == 'MTK':	# if the pairing is there on the competition table???
          #OGNT = False			# we do not need to use the TRACKERDEV DB table
          tl=len(cclist)			# check the number of entries ???
          idx=0				# index into the table      
@@ -264,7 +265,7 @@ def compbuildtable(ogntable, clist, prt=False):
 
 
 #----------------------ogn_SilentWingsInterface.py start-----------------------
-pgmversion = 'V2.07'			# September 2023
+pgmversion = 'V2.08'			# September 2023
 print("\n\n")
 print("Start OGN Silent Wings Interface "+pgmversion)
 print("======================================")
@@ -633,7 +634,7 @@ try:
             source = 	msg['source']			# source OGN/SPOT/FANET 
             if len(source) > 4:
                 source = source[0:3]
-            if  source != "OGN":
+            if  source != "OGN" and source != 'MTRK':
                 continue
             if 'acfttype' in msg:
                acftt=msg['acfttype']
@@ -742,6 +743,12 @@ try:
                if datal(gps,'x').isnumeric() and datar(gps,'x').isnumeric() and (int(datal(gps,'x')) > 10 or int(datar(gps,'x')) >10) :
                   continue  				# bad quality GPS data         
             hora = 	msg['time']			# fix time
+							# check that the time is valid
+            
+            horar = otime.strftime("%H%M%S")		# original time 
+            if hora > horar:                            # if hora of the packer is bigger that the ora of the server ??
+               print (">>>> check the time of the packets .... <<<<", hora, horar)
+               continue
             if source == 'DLYM':			# in the case of DELAY, we adjust the time
                 dly = timedelta(seconds=DELAY)		# add DELAY
                 otime=otime+dly
@@ -823,7 +830,7 @@ try:
             if sensitivity == ' ':
                 sensitivity = 0
 
-            if OGNT and id[0:3] == 'OGN':		# check for pairing trackers
+            if OGNT and (id[0:3] == 'OGN' or id[0:3] == 'MTK'):		# check for pairing trackers
                 if id in ognttable:			# if the device is on the list
                     					# substitude the OGN tracker ID for the related FLARMID
                    #print("III", id, ognttable[id])

@@ -1,9 +1,9 @@
-airportsdata == 20230717
+airportsdata == 20230906
 geopy == 2.2.0
 ogn_client == 1.2.1
 ping3 == 4.0.3
 pytz == 2022.1
 requests == 2.25.1
-backports.functools_lru_cache == 1.6.6
+backports.functools_lru_cache == 2.0.0
 pyephem == 9.99
-timezonefinder == 6.2.0
+timezonefinder == 6.5.2

@@ -32,7 +32,10 @@ def findfastestaprs():				# find the fastest APRS server
    p=999					# start with a high value
    url=''
    for u in aprs:				# got thru all the servers
-       pp=ping(u)				# ping the server
+       try:
+          pp=ping(u)				# ping the server
+       except:
+          return (u)
        if pp < p:				# if faster ?
           p=pp					# remember the ping time
           url=u					# remember the URL
@@ -54,16 +57,16 @@ def servertest(host, port):
 
 ####################################################################
 
-def getddbdata():                           # get the data from the API server
+def getddbdata(prt=False):                  		# get the data from the API server
 
-    global _ogninfo_                        # the OGN info data
+    global _ogninfo_                        	# the OGN info data
     if servertest(HOST, PORT):
         DDB_URL=DDB_URL1
     else:
         DDB_URL=DDB_URL2
-    #if prt:
-    print("DDB Connecting with: ", DDB_URL, HOST, PORT)
-    print("PING time: ",           ping(HOST))
+    if prt:
+       print("DDB Connecting with: ", DDB_URL, HOST, PORT)
+       print("PING time: ",           ping(HOST))
     req = urllib.request.Request(DDB_URL)
     req.add_header("Accept", "application/json")  # it return a JSON string
     req.add_header("Content-Type", "application/hal+json")
@@ -80,7 +83,7 @@ def getogninfo(devid):			    # return the OGN DDB infor for this device
 
     global _ogninfo_   		            # the OGN info data
     if len(_ogninfo_) == 0:
-        _ogninfo_=getddbdata()
+        _ogninfo_=getddbdata(prt)
     devices=_ogninfo_["devices"]            # access to the ddbdata
     for dev in devices:                     # loop into the registrations
         if dev["device_id"] == devid:       # if matches ??
