@@ -745,9 +745,10 @@ try:
             hora = 	msg['time']			# fix time
 							# check that the time is valid
             
-            horar = otime.strftime("%H%M%S")		# original time 
-            if hora > horar:                            # if hora of the packer is bigger that the ora of the server ??
-               print (">>>> check the time of the packets .... <<<<", hora, horar)
+            horaUTC = datetime.utcnow()       		# get the date
+            horau = horaUTC.strftime("%H%M%S")		# UTC time 
+            if hora > horau:                            # if hora of the packer is bigger that the ora of the server ??
+               print (">>>> check the time of the packets .... <<<<", hora, horau)
                continue
             if source == 'DLYM':			# in the case of DELAY, we adjust the time
                 dly = timedelta(seconds=DELAY)		# add DELAY
