@@ -164,6 +164,7 @@ sudo -H python3 -m pip install mysqlclient			#
 sudo -H python3 -m pip install timezonefinder 			#
 sudo -H python3 -m pip install airportsdata			#
 sudo -H python3 -m pip install termcolor			#
+sudo -H python3 -m pip install gitpython			#
 if [ $sql = 'MySQL' ]						#	
 then								#
 	sudo -H pip3 uninstall mysqlclient			#

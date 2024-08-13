@@ -9,7 +9,6 @@ from datetime import datetime, timedelta
 import socket
 import time
 import string
-import ephem
 import pytz
 import sys
 import os
@@ -29,7 +28,8 @@ try:
         import zoneinfo
 except ImportError:
         from backports import zoneinfo
-
+import astral, astral.sun
+# --------------------------------------#
 global compmtime
 #########################################################################
 
@@ -141,9 +141,9 @@ def shutdown(sock, datafile, tmaxa, tmaxt, tmid, tmstd):
     conn.commit()			# commit the DB updates
     conn.close()			# close the database
     local_time = datetime.now() 	# report date and time now
-    location.date = ephem.Date(datetime.utcnow())
+    date = datetime.utcnow()       		# get the date
     print("Local Time (server) now is:", local_time, " and UTC time is:",
-           location.date, "UTC. Date at location:", config.location_name, " is:", dte,  "\n")
+           date, "UTC. \nDate at location:", config.location_name, " is:", dte,  "\n")
     try:
         os.remove(config.APP+".alive")	# delete the mark of alive
     except:
@@ -270,7 +270,7 @@ print("\n\n")
 print("Start OGN Silent Wings Interface "+pgmversion)
 print("======================================")
 
-print("Program Version:", time.ctime(os.path.getmtime(__file__)))
+print("Program Version:", time.ctime(os.path.getmtime(__file__)),"\n")
 date = datetime.utcnow()       		# get the date
 dte = date.strftime("%y%m%d")           # today's date (UTC)
 tme = date.strftime("%H%M%S")           # today's time (UTC)
@@ -300,15 +300,37 @@ atexit.register(lambda: os.remove(config.PIDfile))
 
 # --------------------------------------#
 if getinfoairport (config.location_name) != None:
+   info=getinfoairport (config.location_name)
    print(getinfoairport (config.location_name))
    location_latitude = getinfoairport (config.location_name)['lat']
    location_longitude = getinfoairport (config.location_name)['lon']
+   city=info['city']
+   country=info['country']
+   tz=info['tz']
    
 else:
    location_latitude=config.location_latitude
-   location_longitude=config.location_longitude
-print("Location coordinates:", location_latitude, location_longitude, "at: ", config.location_name)
+   location_longitude=config.location_longitudei
+   city='Paris'
+   country='France'
+   tz = 'Europe/Paris'
 
+tz_tz = pytz.timezone(tz)		# time zone of the competition site
+print("Location coordinates:", location_latitude, location_longitude, "at: ", config.location_name, country, city, tz)
+
+# --------------------------------------#
+print('====== astral information ======')
+l = astral.LocationInfo(city, country, tz, location_latitude, location_longitude)
+print((
+    f"Information for {l.name}/{l.region}\n"
+    f"Timezone: {l.timezone}\n"
+    f"Latitude: {l.latitude:.02f}; Longitude: {l.longitude:.02f}\n"
+))
+s = astral.sun.sun(l.observer, date=date.today())
+dusk=s['dusk']
+duskTime=  dusk.astimezone(tz_tz)		# check if we are beyond the DUSK
+print("Dusk is at:", s['dusk'], "UTC and Local Time:", duskTime)	# tell the dusk time
+# ---------------------------------------------------------------
 DBpath 	= config.DBpath
 DBhost 	= config.DBhost
 DBuser 	= config.DBuser
@@ -374,17 +396,11 @@ curs = conn.cursor()                    # set the cursor
 # Initialise API for computing sunrise and sunset
 #-----------------------------------------------------------------
 #
-location = ephem.Observer()
-location.pressure = 0
-location.horizon = '-0:34'      	# Adjustments for angle to horizon
 
-location.lat, location.lon = location_latitude, location_longitude
-date = datetime.now()
-next_sunrise = location.next_rising(ephem.Sun(), date)
-next_sunset = location.next_setting(ephem.Sun(), date)
-tz = TimezoneFinder()
-timezone=tz.timezone_at(lng=float(location_longitude), lat=float(location_latitude))
-zone = zoneinfo.ZoneInfo(timezone)		
+date    = datetime.now()
+tz      = TimezoneFinder()
+timezone= tz.timezone_at(lng=float(location_longitude), lat=float(location_latitude))
+zone    = zoneinfo.ZoneInfo(timezone)		
 yy=int(dte[0:2])
 mm=int(dte[2:4])
 dd=int(dte[4:6])
@@ -395,10 +411,13 @@ SS=int(tme[4:6])
 local = date.astimezone(tz=zone)
 dte = local.strftime("%y%m%d")          # today's date (at location)
 tme = local.strftime("%H%M%S")          # today's time (at location)
-print("Location:            ", location_latitude, location_longitude, " Local time at location: ", local, "Time Zone: ", timezone)
-print("Sunrise today is at: ", next_sunrise, " UTC ")
-print("Sunset  today is at: ", next_sunset,  " UTC ")
-print("SERVER Time now is:  ", date, " Local time")
+print("Location:               ", location_latitude, location_longitude, 
+    "\nLocal time at location: ", local, " Time Zone: ", timezone, "\n")
+print("SERVER Time now is:     ", date, " Local time")
+#
+# handle the parameters
+#
+
 
 prtreq = sys.argv[1:]
 if prtreq and prtreq[0] == 'prt':
@@ -406,7 +425,6 @@ if prtreq and prtreq[0] == 'prt':
 else:
     prt = False
 
-#compfile = config.cucFileLocation + "/competitiongliders.lst"a this format name
 ognttable = {}				# init the instance of the table
 clist=[]				# competition list 
 paircnt=compbuildtable(ognttable,clist,True)	# build the pairing table
@@ -441,14 +459,11 @@ if len(clist) > 0:			# if we have tracker pairing table ???
                filter += f  		# add the flarm id
                filter += "/"  		# separated by an slash
 
-    if hostname == "CHILEOGN" or hostname == "OGNCHILE":
-        filter += " p/SC/VITACURA/ROBLE/ELBOSQUE/TROCA/WBUX/COLORA/SANRA/OLMUE \n"
-    else:
-        filter += " p/LF/LE/ \n" 	# add all the station of france and Spain for control
+    filter += "  \n" 	    		# add new line 
     login = 'user %s pass %s vers Silent-Wings-Interface %s %s' % (config.APRS_USER, config.APRS_PASSCODE, pgmversion, filter)
 else:
     login = 'user %s pass %s vers Silent-Wings-Interface %s %s' % (config.APRS_USER, config.APRS_PASSCODE, pgmversion, config.APRS_FILTER_DETAILS)
-#print("APRS login:", login)  		# print the login for control
+ 
 login=login.encode(encoding='utf-8', errors='strict') 
 sock.send(login)    			# login into the APRS server
 
@@ -500,22 +515,25 @@ date = datetime.now()
 # Initialise API for computing sunrise and sunset
 #-----------------------------------------------------------------
 #
-location = ephem.Observer()
-location.pressure = 0
-location.horizon = '-0:34'		# Adjustments for angle to horizon
 
 try:
 
     while True:
-        # check the localtime for this location...
-        location.date = ephem.Date(datetime.utcnow())
-        date = datetime.utcnow()	# time of the server
+        date      = datetime.utcnow()	# time of the server
         localdate = datetime.now()	# time of the server
-        # if it is past the sunset or 22:00h local time ??
-        if location.date > next_sunset or localdate.hour > 21:
+        # if it is past the sunset 
+        local = localdate.astimezone(tz=zone)
+        if local.hour > duskTime.hour:	# check if we are beyond the DUSK
 
-            print("At Sunset now ... Time is (server):", date, "UTC. Location time:",
-                  location.date, "UTC ... Next sunset is: ", next_sunset,  " UTC \n================================================================================\n")
+            print("At Sunset now ... Time is (server):", date, 
+                  "UTC. Location time:", location.date, 
+                  "\nlocal hour", local.hour, 
+                  "Local time:", local, 
+                  "\nDusk time", duskTime, duskTime.hour,
+                  "\nUTC ... Next sunset is: ", 
+                  next_sunset,  
+                  " UTC \n================================================================================\n")
+
             shutdown(sock, datafile, tmaxa, tmaxt, tmid, tmstd)
             print("At Sunset ... Exit\n\n", localdate)
             exit(0)
@@ -634,7 +652,7 @@ try:
             source = 	msg['source']			# source OGN/SPOT/FANET 
             if len(source) > 4:
                 source = source[0:3]
-            if  source != "OGN" and source != 'MTRK':
+            if  source != "OGN" and source != 'MTRK' and source != 'ADSB':
                 continue
             if 'acfttype' in msg:
                acftt=msg['acfttype']
@@ -873,8 +891,7 @@ except KeyboardInterrupt:
 							# report number of records read and files generated
 print('Counters:', nrecs, nids)				# number of fix written and number of flarms seeing ...
 shutdown(sock, datafile, tmaxa, tmaxt, tmid, tmstd)
-location.date = ephem.Date(datetime.utcnow())
 if nerr > 0:
     print("\nNumber of errors:", nerr,"<<<<<\n")
-print("Exit now ...", location.date, dte, "\n=================================================================================================\n")
+print("Exit now ...", dte, "\n=================================================================================================\n")
 exit(1)
