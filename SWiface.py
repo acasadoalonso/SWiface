@@ -24,6 +24,8 @@ from geopy.distance import geodesic       # use the Vincenty algorithm^M
 from geopy.geocoders import GeoNames
 from time import sleep
 from timezonefinder import TimezoneFinder
+from dtfuncs import *
+
 try:
         import zoneinfo
 except ImportError:
@@ -141,7 +143,7 @@ def shutdown(sock, datafile, tmaxa, tmaxt, tmid, tmstd):
     conn.commit()			# commit the DB updates
     conn.close()			# close the database
     local_time = datetime.now() 	# report date and time now
-    date = datetime.utcnow()       		# get the date
+    date = naive_utcnow()       	# get the date
     print("Local Time (server) now is:", local_time, " and UTC time is:",
            date, "UTC. \nDate at location:", config.location_name, " is:", dte,  "\n")
     try:
@@ -271,7 +273,7 @@ print("Start OGN Silent Wings Interface "+pgmversion)
 print("======================================")
 
 print("Program Version:", time.ctime(os.path.getmtime(__file__)),"\n")
-date = datetime.utcnow()       		# get the date
+date = naive_utcnow()       		# get the date
 dte = date.strftime("%y%m%d")           # today's date (UTC)
 tme = date.strftime("%H%M%S")           # today's time (UTC)
 hostname = socket.gethostname()
@@ -498,7 +500,7 @@ sys.stderr.flush()			# flush the print messages
 #-----------------------------------------------------------------
 #-----------------------------------------------------------------
 #
-now = datetime.utcnow()			# get the UTC time
+now = naive_utcnow()			# get the UTC time
 min5 = timedelta(seconds=300)		# 5 minutes ago
 now = now-min5				# now less 5 minutes
 # number of seconds until beginning of the day 1-1-1970
@@ -519,7 +521,7 @@ date = datetime.now()
 try:
 
     while True:
-        date      = datetime.utcnow()	# time of the server
+        date      = naive_utcnow()	# time of the server
         localdate = datetime.now()	# time of the server
         # if it is past the sunset 
         local = localdate.astimezone(tz=zone)
@@ -763,7 +765,7 @@ try:
             hora = 	msg['time']			# fix time
 							# check that the time is valid
             
-            horaUTC = datetime.utcnow()       		# get the date
+            horaUTC = naive_utcnow()       		# get the date
             horau = horaUTC.strftime("%H%M%S")		# UTC time 
             if hora > horau:                            # if hora of the packer is bigger that the ora of the server ??
                print (">>>> check the time of the packets .... <<<<", hora, horau)
