@@ -528,7 +528,7 @@ try:
         if local.hour > duskTime.hour:	# check if we are beyond the DUSK
 
             print("At Sunset now ... Time is (server):", date, 
-                  "UTC. Location time:", location.date, 
+                  "UTC. Location time:", local.date, 
                   "\nlocal hour", local.hour, 
                   "Local time:", local, 
                   "\nDusk time", duskTime, duskTime.hour,
