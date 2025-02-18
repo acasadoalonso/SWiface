@@ -311,6 +311,7 @@ if getinfoairport (config.location_name) != None:
    tz=info['tz']
    
 else:
+   print ("Airport code not found:", config.location_name)
    location_latitude=config.location_latitude
    location_longitude=config.location_longitude
    city='Paris'
