@@ -59,6 +59,7 @@ def servertest(host, port):
 
 def getddbdata(prt=False):                  		# get the data from the API server
 
+    j_obj=''					# empty as default
     global _ogninfo_                        	# the OGN info data
     if servertest(HOST, PORT):
         DDB_URL=DDB_URL1
@@ -66,15 +67,19 @@ def getddbdata(prt=False):                  		# get the data from the API server
         DDB_URL=DDB_URL2
     if prt:
        print("DDB Connecting with: ", DDB_URL, HOST, PORT)
-       print("PING time: ",           ping(HOST))
-    req = urllib.request.Request(DDB_URL)
-    req.add_header("Accept", "application/json")  # it return a JSON string
-    req.add_header("Content-Type", "application/hal+json")
-    r = urllib.request.urlopen(req)         # open the url resource
-    js=r.read().decode('UTF-8')
-    j_obj = json.loads(js)                  # convert to JSON
+       #print("PING time: ",           ping(HOST))
+    try:
+       req = urllib.request.Request(DDB_URL)
+       req.add_header("Accept", "application/json")  # it return a JSON string
+       req.add_header("Content-Type", "application/hal+json")
+       r = urllib.request.urlopen(req)      # open the url resource
+       js=r.read().decode('UTF-8')
+       j_obj = json.loads(js)               # convert to JSON
 
-    _ogninfo_ = j_obj                       # save the data on the global storage
+       _ogninfo_ = j_obj                    # save the data on the global storage
+    except:
+       print("DDB Connecting with: ", DDB_URL, HOST, PORT, " failed ... \n")
+       j_obj=''
     return j_obj                            # return the JSON objecta
 
 ####################################################################
@@ -84,6 +89,8 @@ def getogninfo(devid):			    # return the OGN DDB infor for this device
     global _ogninfo_   		            # the OGN info data
     if len(_ogninfo_) == 0:
         _ogninfo_=getddbdata(prt)
+        if len(_ogninfo_) == 0:
+           return "NOInfo"  			    # if not found !!!
     devices=_ogninfo_["devices"]            # access to the ddbdata
     for dev in devices:                     # loop into the registrations
         if dev["device_id"] == devid:       # if matches ??
@@ -97,6 +104,8 @@ def getognreg(devid):                       # get the ogn registration from the 
     global _ogninfo_                        # the OGN info data
     if len(_ogninfo_) == 0:
         _ogninfo_=getddbdata()
+        if len(_ogninfo_) == 0:
+           return "NOInfo"  			    # if not found !!!
     devices=_ogninfo_["devices"]            # access to the ddbdata
     for dev in devices:                     # loop into the registrations
         if dev["device_id"] == devid:   # if matches ??
@@ -110,6 +119,8 @@ def getognchk(devid):                       # Check if the FlarmID exist or NOT
     global _ogninfo_                        # the OGN info data
     if len(_ogninfo_) == 0:
         _ogninfo_ = getddbdata()            # get the table from OGN DDB
+        if len(_ogninfo_) == 0:
+           return False
     devices = _ogninfo_["devices"]          # access to the ddbdata
     for dev in devices:                     # loop into the devices
         if dev["device_id"] == devid:       # if matches ??
@@ -124,6 +135,8 @@ def getognflarmid(registration):            # get the FlarmID based on the regis
     global _ogninfo_                        # the OGN info data
     if len(_ogninfo_) == 0:
         _ogninfo_ = getddbdata()
+        if len(_ogninfo_) == 0:
+           return "NOInfo"  			    # if not found !!!
     devices = _ogninfo_["devices"]          # access to the ddbdata
     for dev in devices:                     # loop into the registrations
         if dev["registration"] == registration:  # if matches ??
@@ -146,6 +159,8 @@ def getogncn(devid):                        # get the ogn competition ID from th
     global _ogninfo_                        # the OGN info data
     if len(_ogninfo_) == 0:
         _ogninfo_ = getddbdata()
+        if len(_ogninfo_) == 0:
+           return "NOInfo"  			    # if not found !!!
     devices = _ogninfo_["devices"]          # access to the ddbdata
     for dev in devices:                     # loop into the compet
         if dev["device_id"] == devid:       # if matches ??
@@ -160,6 +175,8 @@ def getognmodel(devid):                     # get the ogn aircraft model from th
     global _ogninfo_                        # the OGN info data
     if len(_ogninfo_) == 0:
         _ogninfo_ = getddbdata()
+        if len(_ogninfo_) == 0:
+           return "NOInfo"  			    # if not found !!!
     devices = _ogninfo_["devices"]          # access to the ddbdata
     for dev in devices:                     # loop into the registrations
         if dev["device_id"] == devid:       # if matches ??
@@ -188,6 +205,8 @@ def get_by_dvt(devdvt, dvt):
     cnt = 0
     if len(_ogninfo_) == 0:
         _ogninfo_ = getddbdata()
+        if len(_ogninfo_) == 0:
+           return (cnt)
     devices = _ogninfo_["devices"]          # access to the ddbdata
     for device in devices:
         if device['device_type'] == dvt:

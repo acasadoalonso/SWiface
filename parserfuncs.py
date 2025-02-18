@@ -25,6 +25,7 @@ aprssources = {			# sources based on the APRS TOCALL
     "OGNFLR": "OGN",		# Flarm
     "OGNTRK": "OGN",		# OGN Tracker
     "OGNDSX": "OGN",		# old DSX
+    "OGNDVS": "WTX",		# Weather stations
     "OGNTTN": "TTN",		# the things LoRaWan network
     "OGTTN2": "TTN",		# the things LoRaWan network V2 - deprecated
     "OGTTN3": "TTN",		# the things LoRaWan network V3 - cumunity edition
@@ -56,6 +57,7 @@ aprssources = {			# sources based on the APRS TOCALL
     "OGAIRM": "AIRM",	   	# Airmate
     "OGNMYC": "MYC",	   	# My cloud base
     "FXCAPP": "FXC",	   	# FXC 
+    "OGMSHT": "MSHT",	   	# Metashtic
     "OGNDLY": "DLYM"		# Delayed fixes (IGC mandated)
 }
 # --------------------------------------------------------------------------
@@ -358,6 +360,12 @@ def spanishsta(station):                # return true if is an Spanish station
             station[0:4] == 'LUGA'      or      \
             station[0:5] == 'Avila'     or      \
             station[0:5] == 'AVILA'     or      \
+            station[0:7] == 'Montsec'   or      \
+            station[0:7] == 'MONTSEC'   or      \
+            station[0:9] == 'TordlOrri' or      \
+            station[0:9] == 'TORDLORRI' or      \
+            station[0:8] == 'Baqueira'  or      \
+            station[0:8] == 'BAQUEIRA'  or      \
             station in ksta.ksta and station[0:2] != 'LF' and station != 'Roquefort' :
         return True
     return False
