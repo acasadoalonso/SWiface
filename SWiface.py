@@ -312,7 +312,7 @@ if getinfoairport (config.location_name) != None:
    
 else:
    location_latitude=config.location_latitude
-   location_longitude=config.location_longitudei
+   location_longitude=config.location_longitude
    city='Paris'
    country='France'
    tz = 'Europe/Paris'
