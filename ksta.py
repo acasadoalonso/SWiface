@@ -132,6 +132,7 @@ ksta = {
 "Lillo"     : "Lillo, Toledo ",
 "ARANGOITI" : "Arangoiti, Navarra ",
 "ELPUERTO"  : "El Puerto de Santa Maria, Cadiz ",
+"ElPuerto"  : "El Puerto de Santa Maria, Cadiz ",
 "ABDALAJIS" : "Valle de Abdalajis, Malaga ",
 "AXARQUIA"  : "Valle de la Axarquia, Malaga ",
 "SSCC-RDAR" : "Estacion radar Paracuellos, Madrid ",
