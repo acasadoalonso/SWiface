@@ -642,6 +642,8 @@ try:
                 print("Parsed msg:>>>", msg)
             id = 	msg['id']                      	# id
             aprstype = 	msg['aprstype']			# aprs message type
+            if not 'longitude' in msg:                  # if not longitude ???
+                continue
             longitude = msg['longitude']		# and so on ...
             latitude = 	msg['latitude']
             altitude = 	msg['altitude']
