@@ -43,6 +43,7 @@ ksta = {
 "LETI"   : "El Tietar, Toledo",
 "LECN"   : "Castellon de la Plana",
 "LERS"   : "Reus, Tarragona",
+"LETY"   : "Tinajeros, Albacete",
 #
 # spanish sites
 "LEMDADSB"  : "Madrid - ADSB GateWay",
@@ -130,11 +131,14 @@ ksta = {
 "BoiTaull"  : "Boi Taull, Lerida ",
 "BOITAULL"  : "Boi Taull, Lerida ",
 "Lillo"     : "Lillo, Toledo ",
+"LILLO"     : "Lillo, Toledo ",
 "ARANGOITI" : "Arangoiti, Navarra ",
 "ELPUERTO"  : "El Puerto de Santa Maria, Cadiz ",
 "ElPuerto"  : "El Puerto de Santa Maria, Cadiz ",
 "ABDALAJIS" : "Valle de Abdalajis, Malaga ",
 "AXARQUIA"  : "Valle de la Axarquia, Malaga ",
+"Larouco"   : "Larouco, Orense ",
+"LAROUCO"   : "Larouco, Orense ",
 "SSCC-RDAR" : "Estacion radar Paracuellos, Madrid ",
 "SPAINAVX"  : "Estacion ficticia gateway AVX ",
 "SPAINTTT"  : "Estacion ficticia gateway Enaire ",

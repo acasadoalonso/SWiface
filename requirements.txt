@@ -9,4 +9,4 @@ pytz==2024.1
 Requests==2.32.3
 suntime==1.3.2
 suntimes==1.1.2
-timezonefinder==6.5.8
+timezonefinder==6.5.9

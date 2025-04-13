@@ -267,7 +267,7 @@ def compbuildtable(ogntable, clist, prt=False):
 
 
 #----------------------ogn_SilentWingsInterface.py start-----------------------
-pgmversion = 'V2.08'			# September 2023
+pgmversion = 'V2.09'			# April 2025
 print("\n\n")
 print("Start OGN Silent Wings Interface "+pgmversion)
 print("======================================")
@@ -655,7 +655,7 @@ try:
             source = 	msg['source']			# source OGN/SPOT/FANET 
             if len(source) > 4:
                 source = source[0:3]
-            if  source != "OGN" and source != 'MTRK' and source != 'ADSB':
+            if  source != "OGN" and source != 'MTRK' :  #and source != 'ADSB':
                 continue
             if 'acfttype' in msg:
                acftt=msg['acfttype']
@@ -768,9 +768,11 @@ try:
             
             horaUTC = naive_utcnow()       		# get the date
             horau = horaUTC.strftime("%H%M%S")		# UTC time 
-            if hora > horau:                            # if hora of the packer is bigger that the ora of the server ??
-               print (">>>> check the time of the packets .... <<<<", hora, horau)
-               continue
+            deltat = abs(int(hora[0:2]) * 3600 + int(hora[2:4]) * 60 + int(hora[4:6])) - abs(int(horau[0:2]) * 3600 + int(horau
+[2:4]) * 60 + int(horau[4:6]))    			# delta time
+            if deltat > 3:     				# if hora of the packer is bigger that the hora of the server ??
+                print (">>>> check the time of the packets .... <<<< Packet:", hora, "UTC", horau, "Delta", deltat)
+                continue
             if source == 'DLYM':			# in the case of DELAY, we adjust the time
                 dly = timedelta(seconds=DELAY)		# add DELAY
                 otime=otime+dly
