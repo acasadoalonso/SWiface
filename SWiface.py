@@ -15,6 +15,7 @@ import os
 import os.path
 import atexit
 import signal
+from ksta import *
 import ksta                               # import the list on known gliders
 import socket
 from parserfuncs import *                 # the ogn/ham parser functions
@@ -801,15 +802,15 @@ try:
             try:					# check altitude
                 if altitude == None:
                    altitude = 0;
-                elif altitude >= fmaxa[id]:		# check for maximun altitude
+                elif id in fmaxa and altitude >= fmaxa[id]:	# check for maximun altitude
                  fmaxa[id] = altitude
                  if altitude > tmaxa and (not spanishsta(id) and not frenchsta(id)):
                     tmaxa = altitude        	        # maximum altitude for the day
                     tmaxt = date            	        # and time
                     tmid = id              	        # who did it
                     tmsta = station         	        # station capturing the max altitude
-            except:
-                print ("TTTT altitude >>>>", msg)       # trap: check it out
+            except Except as e:
+                print ("TTTT altitude >>>>", e, msg)    # trap: check it out
                 continue
             try:
                 if speed == None:

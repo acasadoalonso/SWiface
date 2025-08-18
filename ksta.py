@@ -30,6 +30,7 @@ ksta = {
 "LETL"   : "Teruel, Teruel",
 "LEMT"   : "Casarrubios del Monte, Madrid",
 "LECU"   : "Cuatro Vientos",
+"LECU2"  : "Cuatro Vientos",
 "LEMU"   : "Mutxamiel, Alicante",
 "LEBE"   : "Beas del Segura, Jaen",
 "LEDE"   : "Cordoba",
@@ -44,6 +45,8 @@ ksta = {
 "LECN"   : "Castellon de la Plana",
 "LERS"   : "Reus, Tarragona",
 "LETY"   : "Tinajeros, Albacete",
+"LESA"   : "Matacan, Salamanca",
+"GCLB"   : "El Berriel, Gran Canaria",
 #
 # spanish sites
 #
@@ -100,7 +103,7 @@ ksta = {
 "ALJARAFE"  : "La Juliana, LEJI Sevilla ",
 "LUGA"      : "LUGA Sevilla ",
 "MSAG"      : "MSAG Malaga ",
-"FAEPARAP"  : "Parapente Jaen ",
+"FAEPARAPE" : "Parapente Jaen ",
 "Jaen"      : "Parapente Jaen ",
 "PicAguila" : "Pico del Aguila, Huesca ",
 "PICAGUILA" : "Pico del Aguila, Huesca ",
@@ -134,19 +137,38 @@ ksta = {
 "Lillo"     : "Lillo, Toledo ",
 "LILLO"     : "Lillo, Toledo ",
 "ARANGOITI" : "Arangoiti, Navarra ",
+"Arangoiti" : "Arangoiti, Navarra ",
 "ELPUERTO"  : "El Puerto de Santa Maria, Cadiz ",
 "ElPuerto"  : "El Puerto de Santa Maria, Cadiz ",
+"Abdalajis" : "Valle de Abdalajis, Malaga ",
 "ABDALAJIS" : "Valle de Abdalajis, Malaga ",
 "AXARQUIA"  : "Valle de la Axarquia, Malaga ",
+"Axarquia"  : "Valle de la Axarquia, Malaga ",
 "Larouco"   : "Larouco, Orense ",
 "LAROUCO"   : "Larouco, Orense ",
-"Pozuelo"   : "Pozuelo de Alarcon, Madrid ",
-"POZUELO"   : "Pozuelo de Alarcon, Madrid ",
-"Tenerife"  : "Tenerife, Canary Islands ",
+"PozueloA"  : "Pozuelo de Alarcon, Madrid ",
+"POZUELOA"  : "Pozuelo de Alarcon, Madrid ",
+"Algodonal" : "Algodonales, Cadiz ",
+"ALGODONAL" : "Algodonales, Cadiz ",
+"VILADAMAT" : "Viladamat, Girona ",
+"Viladamat" : "Viladamat, Girona ",
+"TenerifeN" : "Tenerife Norte, Canarias ",
+"TENERIFEN" : "Tenerife Norte, Canarias ",
+"TenerifeS" : "Tenerife Sur, Canarias ",
+"TENERIFES" : "Tenerife Sur, Canarias ",
+"CabezaBel" : "Cabezabellosa, Caceres ",
+"CABEZABEL" : "Cabezabellosa, Caceres ",
+"Pedrahita" : "Piedrahita, Avila ",
+"PEDRAHITA" : "Piedrahita, Avila ",
+"Ortigosa"  : "Ortigosa del Monte, Segovia ",
+"ORTIGOSA"  : "Ortigosa del Monte, Segovia ",
+"AVX920"    : "Madrid, Barajas",
 "SSCC-RDAR" : "Estacion radar Paracuellos, Madrid ",
+"SpainAVX"  : "Estacion ficticia gateway AVX ",
 "SPAINAVX"  : "Estacion ficticia gateway AVX ",
+"SpainTTT"  : "Estacion ficticia gateway Enaire ",
 "SPAINTTT"  : "Estacion ficticia gateway Enaire ",
-"SPAINENA"  : "Estacion ficticia gateway Enaire ",
+"SpainENA"  : "Estacion ficticia gateway Enaire ",
 
 # french airports
 "LFBM"   : "Mont de Marsan",
@@ -295,6 +317,8 @@ def spanishsta(station):                # return true if is an Spanish station
             station[0:9] == 'TORDLORRI' or      \
             station[0:8] == 'Baqueira'  or      \
             station[0:8] == 'BAQUEIRA'  or      \
+            station[0:9] == 'VILADAMAT' or      \
+            station[0:9] == 'Viladamat' or      \
             station in ksta.ksta and station[0:2] != 'LF' and station != 'Roquefort' :
         return True
     return False

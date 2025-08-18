@@ -61,7 +61,9 @@ aprssources = {			# sources based on the APRS TOCALL
     "FXCAPP": "FXC",	   	# FXC 
     "OGMSHT": "MSHT",	   	# Metashtic
     "OGNPUR": "PURT",	   	# Pure track
-    "OGNDLY": "DLYM"		# Delayed fixes (IGC mandated)
+    "OGNDLY": "DLYM",		# Delayed fixes (IGC mandated)
+    "OGNVOL": "VOLA",		# Volandoo
+    "OGAPIK": "APIK"		# ?
 }
 # --------------------------------------------------------------------------
 aprssymtypes=[
@@ -272,7 +274,8 @@ def get_source(dstcallsign):
     src = str(dstcallsign)
     if src in aprssources:
         return (aprssources[src])
-    print(">>> Unknown SOURCE:", src, "<<<", file=sys.stderr)
+    print(">>> Unknown SOURCE:", src, naive_utcnow(),"<<<", file=sys.stderr)
+        
     return ("UNKW")
 # ########################################################################
 
@@ -430,8 +433,12 @@ def parseraprs(packet_str, msg):
 	
             # scan for the body of the APRS message
             p = data.find(' v0.')                       # the comment side
+            status = " "
             if aprstype == 'status':
-                status = packet['comment'].rstrip()     # status informationa
+                if   "comment" in packet:
+                   status = packet['comment'].rstrip()  # status informationa
+                elif "user_comment" in packet:
+                   status = packet['user_comment'].rstrip()  # status informationa
             else:
                 status = " "
             if 'cpu_temp' in packet:
