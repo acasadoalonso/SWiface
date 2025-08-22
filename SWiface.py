@@ -252,17 +252,19 @@ def compbuildtable(ogntable, clist, prt=False):
          return(paircnt)
       cclist = json.loads(j)		# load it from competition file
       fd.close()			# close it
-
+      #print ("QQQ", cclist)
       if cclist[1][0:3] == 'OGN' or cclist[1][0:3] == 'MTK':	# if the pairing is there on the competition table???
          #OGNT = False			# we do not need to use the TRACKERDEV DB table
          tl=len(cclist)			# check the number of entries ???
          idx=0				# index into the table      
          while idx < tl:		# scan the whole table
             ognttable[cclist[idx+1]]=cclist[idx]
-            idx += 2
-            paircnt += 1
+            ognttable[cclist[idx+2]]=cclist[idx]
+            idx += 3
+            paircnt += 2
       for c in cclist:			# add these entries to the master CLIST
          clist.append(c)		# add each flarm Id and each OGN tracker ID
+      print ("CCL", cclist, "\n\n",clist, "\n\n\n", ogntable)
  return(paircnt)			# return the number of pairs
 ########################################################################
 
@@ -639,6 +641,10 @@ try:
             if msg == -1:
                 print ("Parser error: >>>",  packet_str, "<<<", file=sys.stderr)
                 continue
+            if msg == -2:			    # parser error
+                print("Parser time error: ______", packet_str, file=sys.stderr)
+                continue
+
             if prt:
                 print("Parsed msg:>>>", msg)
             id = 	msg['id']                      	# id

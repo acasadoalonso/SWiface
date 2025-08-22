@@ -365,6 +365,9 @@ def decdeg2dms(dd):			# convert degress float into DDMMSS
 
 
 def parseraprs(packet_str, msg):
+    rc=packet_str.find(":/______")
+    if rc != -1:
+       return -2
     # args: packet_str the packet stream with the data, msg the dict where to return the parsed data
     try:
         packet = parse(packet_str)
