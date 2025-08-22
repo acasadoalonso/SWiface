@@ -664,7 +664,7 @@ try:
             source = 	msg['source']			# source OGN/SPOT/FANET 
             if len(source) > 4:
                 source = source[0:3]
-            if  source != "OGN" and source != 'MTRK' :  #and source != 'ADSB':
+            if  source != "OGN" and source != 'MTRK'  and source != "NAVI":  #and source != 'ADSB':
                 continue
             if 'acfttype' in msg:
                acftt=msg['acfttype']
