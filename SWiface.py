@@ -264,7 +264,7 @@ def compbuildtable(ogntable, clist, prt=False):
             paircnt += 2
       for c in cclist:			# add these entries to the master CLIST
          clist.append(c)		# add each flarm Id and each OGN tracker ID
-      print ("CCL", cclist, "\n\n",clist, "\n\n\n", ogntable)
+      #print ("CCL", cclist, "\n\n",clist, "\n\n\n", ogntable)
  return(paircnt)			# return the number of pairs
 ########################################################################
 
