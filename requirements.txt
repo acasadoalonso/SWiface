@@ -3,3 +3,4 @@ geopy==2.4.1
 ogn_client==1.2.1
 ping3==4.0.8
 pytz==2024.1
+suntime==1.3.2
