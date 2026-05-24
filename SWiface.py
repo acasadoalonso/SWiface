@@ -617,6 +617,10 @@ try:
             else:
                 sleep(5)				# sleep for 5 seconds and give it another chance
                 continue
+        except Exception as e: 
+                print(('Something\'s wrong with socket readline. Exception type is %s' % (repr(e))), file=sys.stderr)
+                nerr += 1
+                continue
         # A zero length line should not be return if keepalives are being sent
         # A zero length line will only be returned after ~30m if keepalives are not sent
         if len(packet_str) == 0:
