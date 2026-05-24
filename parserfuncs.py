@@ -413,7 +413,7 @@ def parseraprs(packet_str, msg):
         otime     = get_otime(packet)                   # msg time
         data      = packet_str
         ix = packet_str.find('>')
-        cc = packet_str[0:ix]April 2025
+        cc = packet_str[0:ix]
         ix = packet_str.find(':')     # look for the message type
         # check if it is position report or status report
         msgtype = packet_str[ix +1:ix +2]
