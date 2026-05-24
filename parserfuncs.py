@@ -421,6 +421,7 @@ def parseraprs(packet_str, msg):
             if gid not in APRSerrs:
                print("MMM Check APRStype >>>", aprstype, "ID:", gid, "Msg:", data, file=sys.stderr)
                APRSerrs.append(gid)			# print the error only oncea
+            msg['id']       = gid	        	# return the parsed data into the dict
             return (-1)
 # ===================================================================================================== #
         # if TCPIP records            			The the WX
