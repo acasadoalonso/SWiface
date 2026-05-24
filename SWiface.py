@@ -270,7 +270,7 @@ def compbuildtable(ogntable, clist, prt=False):
 
 
 #----------------------ogn_SilentWingsInterface.py start-----------------------
-pgmversion = 'V2.10'			# April 2025
+pgmversion = 'V2.11'			# April 2025
 print("\n\n")
 print("Start OGN Silent Wings Interface "+pgmversion)
 print("======================================")
@@ -664,7 +664,7 @@ try:
             source = 	msg['source']			# source OGN/SPOT/FANET 
             if len(source) > 4:
                 source = source[0:3]
-            if  source != "OGN" and source != 'MTRK'  and source != "NAVI":  #and source != 'ADSB':
+            if  source != "OGN" and source != 'MTRK'  and source != "NAVI" and source != 'ADSB'	:  #and source != 'ADSB':
                 continue
             if 'acfttype' in msg:
                acftt=msg['acfttype']
