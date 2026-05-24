@@ -418,9 +418,9 @@ def parseraprs(packet_str, msg):
         # check if it is position report or status report
         msgtype = packet_str[ix +1:ix +2]
         if msgtype != '>' and msgtype != '/' and aprstype != 'position_weather':   	# only status or location messages
-            if aprstype not in APRSerrs:
-               print("MMM Check APRStype >>>", aprstype, data, file=sys.stderr)
-               APRSerrs.append(aprstype)		# print the error only oncea
+            if gid not in APRSerrs:
+               print("MMM Check APRStype >>>", aprstype, "ID:", gid, "Msg:", data, file=sys.stderr)
+               APRSerrs.append(gid)			# print the error only oncea
             return (-1)
 # ===================================================================================================== #
         # if TCPIP records            			The the WX
