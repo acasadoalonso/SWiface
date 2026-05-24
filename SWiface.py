@@ -645,6 +645,8 @@ try:
                 print ("Parser error: >>>", e, packet_str, "<<<", file=sys.stderr)
                 continue
             if msg == -1:
+                if id in msg:
+		    print ("Parser error: >>>", msg[id], "<<<", file=sys.stderr)
                 print ("Parser error: >>>",  packet_str, "<<<", file=sys.stderr)
                 continue
             if msg == -2:			    # parser error
