@@ -653,7 +653,7 @@ try:
                 print("Parser time error: ______", packet_str, file=sys.stderr)
                 continue
 
-            if True:
+            if prt:
                 print("Parsed msg:>>>", msg)
             id = 	msg['id']                      	# id
             aprstype = 	msg['aprstype']			# aprs message type
