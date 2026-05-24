@@ -640,20 +640,20 @@ try:
 
             						# parse the message into the dict
             try:
-            	msg = parseraprs(packet_str, msg)	# parse data using ogn_parser
+            	rc = parseraprs(packet_str, msg)	# parse data using ogn_parser
             except exception as e:
                 print ("Parser error: >>>", e, packet_str, "<<<", file=sys.stderr)
                 continue
-            if msg == -1:
+            if rc == -1:
                 if id in msg:
                    print ("Parser error: >>>", msg[id], "<<<", file=sys.stderr)
                 print ("Parser error: >>>",  packet_str, "<<<", file=sys.stderr)
                 continue
-            if msg == -2:			    # parser error
+            if rc == -2:			    # parser error
                 print("Parser time error: ______", packet_str, file=sys.stderr)
                 continue
 
-            if prt:
+            if True:
                 print("Parsed msg:>>>", msg)
             id = 	msg['id']                      	# id
             aprstype = 	msg['aprstype']			# aprs message type
