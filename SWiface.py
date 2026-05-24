@@ -644,22 +644,21 @@ try:
             	rc = parseraprs(packet_str, msg)	# parse data using ogn_parser
             except exception as e:
                 if packet_str[0:9] in parsererrors:
-		    continue
+                   continue
                 print ("Parser Error: >>> Error:", e, "Data:", packet_str, "<<<", file=sys.stderr)
                 parsererrors.append(packet_str[0:9])
                 continue
             if rc == -1:
                 if 'id' in msg:
                    if msg['id'] in parsererrors:
-		      continue
+                      continue
                    print ("Parser error: >>>", msg[id], "<<<", file=sys.stderr)
                    parsererrors.append(msg[id])
                 else
                    if packet_str[0:9] in parsererrors:
-		      continue
+                      continue
                    print ("Parser error: >>>",  packet_str, "<<<", file=sys.stderr)
                    parsererrors.append(packet_str[0:9])
-                   
                 continue
             if rc == -2:			    # parser error
                 print("Parser time error: ______", packet_str, file=sys.stderr)
