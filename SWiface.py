@@ -270,7 +270,7 @@ def compbuildtable(ogntable, clist, prt=False):
 
 
 #----------------------ogn_SilentWingsInterface.py start-----------------------
-pgmversion = 'V2.11'			# April 2025
+pgmversion = 'V2.12'			# May 2026
 print("\n\n")
 print("Start OGN Silent Wings Interface "+pgmversion)
 print("======================================")
@@ -446,9 +446,15 @@ server=config.APRS_SERVER_HOST
 if server == ' ':
    server=findfastestaprs() 		#server="aprs.glidernet.org"
 					# create socket & connect to server
-sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-sock.connect((server, config.APRS_SERVER_PORT))
-print("Socket sock connected")
+
+try:                                    
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    sock.connect((server, config.APRS_SERVER_PORT))
+except:
+    print ("problems connecting to APRS:", server)
+    exit (-1)
+print("Socket sock connected", server)
+
 
 					# logon to OGN APRS network
 # if we have a COMP file with the list of flarm ids, pass that to the APRS at login time
