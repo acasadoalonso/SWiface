@@ -654,7 +654,7 @@ try:
                       continue
                    print ("Parser error: >>>", msg[id], "<<<", file=sys.stderr)
                    parsererrors.append(msg[id])
-                else
+                else:
                    if packet_str[0:9] in parsererrors:
                       continue
                    print ("Parser error: >>>",  packet_str, "<<<", file=sys.stderr)
