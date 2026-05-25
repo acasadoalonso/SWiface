@@ -232,6 +232,7 @@ def datar(data, typer):                # get data on the  right
 ########################################################################
 def compbuildtable(ogntable, clist, prt=False):
  paircnt=0
+ MTK=False
  global compmtime 
  for compfile in os.listdir(config.cucFileLocation):
    if compfile.find("competitiongliders.lst") != -1: # only of it is a competition file
@@ -253,15 +254,23 @@ def compbuildtable(ogntable, clist, prt=False):
       cclist = json.loads(j)		# load it from competition file
       fd.close()			# close it
       #print ("QQQ", cclist)
+      if cclist[1][0:3] == 'MTK':	#   
+         MTK=True
+
       if cclist[1][0:3] == 'OGN' or cclist[1][0:3] == 'MTK':	# if the pairing is there on the competition table???
          #OGNT = False			# we do not need to use the TRACKERDEV DB table
          tl=len(cclist)			# check the number of entries ???
-         idx=0				# index into the table      
+         idx=0				# index into the table
          while idx < tl:		# scan the whole table
             ognttable[cclist[idx+1]]=cclist[idx]
-            ognttable[cclist[idx+2]]=cclist[idx]
-            idx += 3
-            paircnt += 2
+            if MTK:
+               ognttable[cclist[idx+2]]=cclist[idx]
+               idx += 3
+               paircnt += 2
+            else:
+               idx += 2
+               paircnt += 1
+      
       for c in cclist:			# add these entries to the master CLIST
          clist.append(c)		# add each flarm Id and each OGN tracker ID
       #print ("CCL", cclist, "\n\n",clist, "\n\n\n", ogntable)
@@ -543,9 +552,7 @@ try:
                   "\nlocal hour", local.hour, 
                   "Local time:", local, 
                   "\nDusk time", duskTime, duskTime.hour,
-                  "\nUTC ... Next sunset is: ", 
-                  next_sunset,  
-                  " UTC \n================================================================================\n")
+                  "\n\n================================================================================\n")
 
             shutdown(sock, datafile, tmaxa, tmaxt, tmid, tmstd)
             print("At Sunset ... Exit\n\n", localdate)
