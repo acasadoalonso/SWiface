@@ -279,7 +279,7 @@ def compbuildtable(ogntable, clist, prt=False):
 
 
 #----------------------ogn_SilentWingsInterface.py start-----------------------
-pgmversion = 'V2.12'			# May 2026
+pgmversion = 'V2.13'			# June 2026
 print("\n\n")
 print("Start OGN Silent Wings Interface "+pgmversion)
 print("======================================")
@@ -483,12 +483,16 @@ if len(clist) > 0:			# if we have tracker pairing table ???
 
     filter += "  \n" 	    		# add new line 
     login = 'user %s pass %s vers Silent-Wings-Interface %s %s' % (config.APRS_USER, config.APRS_PASSCODE, pgmversion, filter)
+
 else:
-    if config.APRS_FILTER_DETAILS != ' ':
+    if config.APRS_FILTER_DETAILS != '':
        login = 'user %s pass %s vers Silent-Wings-Interface %s %s' % (config.APRS_USER, config.APRS_PASSCODE, pgmversion, config.APRS_FILTER_DETAILS)
     else:
-       login = 'user %s pass %s vers Silent-Wings-Interface %s\n' % (config.APRS_USER, config.APRS_PASSCODE, pgmversion, 'filter r/%f/%f/250 \n' % (location_latitude, location_longitude))
-print("APRS Login request:", login)	# for control print the login sent
+       #print ("TTT", location_latitude, location_longitude)
+       filter = "filter r/%f/%f/250 \n"%(location_latitude, location_longitude) # filter for 250 km around the location
+       login = 'user %s pass %s vers Silent-Wings-Interface %s ' % (config.APRS_USER, config.APRS_PASSCODE, pgmversion)+filter 			   # login with the filter for 250 km around the location
+#print("APRS Login request:", login)     # for control print the login sent
+
 login=login.encode(encoding='utf-8', errors='strict') 
 sock.send(login)    			# login into the APRS server
 
@@ -498,7 +502,7 @@ sock_file = sock.makefile(mode='rw')
 print("APRS Version:", sock_file.readline())
 sleep(2)
 					# for control print the login sent and get the response
-print("APRS Login request:", login)
+print("APRS Login requested:", login)
 print("APRS Login reply:  ", sock_file.readline())
 
 start_time = time.time()  		# get the start and local times
