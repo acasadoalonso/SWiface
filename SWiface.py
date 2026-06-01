@@ -484,8 +484,11 @@ if len(clist) > 0:			# if we have tracker pairing table ???
     filter += "  \n" 	    		# add new line 
     login = 'user %s pass %s vers Silent-Wings-Interface %s %s' % (config.APRS_USER, config.APRS_PASSCODE, pgmversion, filter)
 else:
-    login = 'user %s pass %s vers Silent-Wings-Interface %s %s' % (config.APRS_USER, config.APRS_PASSCODE, pgmversion, config.APRS_FILTER_DETAILS)
- 
+    if config.APRS_FILTER_DETAILS != ' ':
+       login = 'user %s pass %s vers Silent-Wings-Interface %s %s' % (config.APRS_USER, config.APRS_PASSCODE, pgmversion, config.APRS_FILTER_DETAILS)
+    else:
+       login = 'user %s pass %s vers Silent-Wings-Interface %s\n' % (config.APRS_USER, config.APRS_PASSCODE, pgmversion, 'filter r/%f/%f/250 \n' % (location_latitude, location_longitude))
+print("APRS Login request:", login)	# for control print the login sent
 login=login.encode(encoding='utf-8', errors='strict') 
 sock.send(login)    			# login into the APRS server
 

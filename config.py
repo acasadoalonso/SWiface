@@ -28,8 +28,12 @@ APRS_SERVER_HOST        = cfg.get    ('APRS', 'APRS_SERVER_HOST').strip("'").str
 APRS_SERVER_PORT        = int(cfg.get('APRS', 'APRS_SERVER_PORT'))
 APRS_USER               = cfg.get    ('APRS', 'APRS_USER').strip("'").strip('"')
 APRS_PASSCODE           = int(cfg.get('APRS', 'APRS_PASSCODE'))                 # See http://www.george-smart.co.uk/wiki/APRS_Callpass
-APRS_FILTER_DETAILS     = cfg.get    ('APRS', 'APRS_FILTER_DETAILS').strip("'").strip('"')
-APRS_FILTER_DETAILS     = APRS_FILTER_DETAILS + '\n '
+
+try:
+    APRS_FILTER_DETAILS     = cfg.get    ('APRS', 'APRS_FILTER_DETAILS').strip("'").strip('"')
+    APRS_FILTER_DETAILS     = APRS_FILTER_DETAILS + '\n '
+except:
+    APRS_FILTER_DETAILS     = ''
 
 try:
     location_name = cfg.get('location', 'location_name').strip("'").strip('"')
