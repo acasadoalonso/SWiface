@@ -556,7 +556,7 @@ try:
         localdate = datetime.now()	# time of the server
         # if it is past the sunset 
         local = localdate.astimezone(tz=zone)
-        if dusktime != None and local.hour > duskTime.hour:	# check if we are beyond the DUSK
+        if (dusktime == None and local.hour > 22) or (local.hour > duskTime.hour):	# check if we are beyond the DUSK
 
             print("At Sunset now ... Time is (server):", date, 
                   "UTC. Location time:", local, 
