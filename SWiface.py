@@ -341,10 +341,14 @@ print((
     f"Timezone: {l.timezone}\n"
     f"Latitude: {l.latitude:.02f}; Longitude: {l.longitude:.02f}\n"
 ))
-s = astral.sun.sun(l.observer, date=date.today())
-dusk=s['dusk']
-duskTime=  dusk.astimezone(tz_tz)		# check if we are beyond the DUSK
-print("Dusk is at:", s['dusk'], "UTC and Local Time:", duskTime)	# tell the dusk time
+try:
+   s = astral.sun.sun(l.observer, date=date.today())
+   dusk=s['dusk']
+   duskTime=  dusk.astimezone(tz_tz)		# check if we are beyond the DUSK
+   print("Dusk is at:", s['dusk'], "UTC and Local Time:", duskTime)	# tell the dusk time
+except Exception as e:
+   print("Error computing dusk time:", e)
+   dusktime=None
 # ---------------------------------------------------------------
 DBpath 	= config.DBpath
 DBhost 	= config.DBhost
@@ -552,7 +556,7 @@ try:
         localdate = datetime.now()	# time of the server
         # if it is past the sunset 
         local = localdate.astimezone(tz=zone)
-        if local.hour > duskTime.hour:	# check if we are beyond the DUSK
+        if dusktime != None and local.hour > duskTime.hour:	# check if we are beyond the DUSK
 
             print("At Sunset now ... Time is (server):", date, 
                   "UTC. Location time:", local, 
