@@ -29,6 +29,7 @@ competition location, so it is normally driven from cron rather than run as a se
 - [Dependencies](#dependencies)
 - [Known gaps](#known-gaps)
 - [Contributing / support](#contributing--support)
+- [License](#license)
 
 ---
 
@@ -439,5 +440,15 @@ Please report bugs through the [GitHub issue tracker](https://github.com/acasado
 
 **Angel Casado** — [acasado (at) acm.org](mailto:acasado@acm.org)
 
-Licensed under the **GNU General Public License, version 2** — see [COPYING](COPYING).
-(`package.json` still says ISC; `COPYING` is authoritative.)
+---
+
+## License
+
+Copyright 2016–2026 Angel Casado
+
+Licensed under the **Apache License, Version 2.0** — see [LICENSE](LICENSE). You may not use these
+files except in compliance with the License. Unless required by applicable law or agreed to in
+writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+
+> This project was previously distributed under the GNU General Public License, version 2.
