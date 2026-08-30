@@ -270,7 +270,7 @@ def compbuildtable(ogntable, clist, prt=False):
          while idx < tl:		# scan the whole table
             ognttable[cclist[idx+1]]=cclist[idx]
             if MTK:
-               ognttable[cclist[idx+2]]=cclist[idx]
+               ognttable[cclist[idx+pairi]]=cclist[idx]
                idx     += idxi
                paircnt += pairi
             else:
