@@ -253,23 +253,29 @@ def compbuildtable(ogntable, clist, prt=False):
          return(paircnt)
       cclist = json.loads(j)		# load it from competition file
       fd.close()			# close it
-      #print ("QQQ", cclist)
+      #print ("QQQ", len(cclist), cclist)
       if cclist[1][0:3] == 'MTK':	#   
          MTK=True
 
       if cclist[1][0:3] == 'OGN' or cclist[1][0:3] == 'MTK':	# if the pairing is there on the competition table???
          #OGNT = False			# we do not need to use the TRACKERDEV DB table
+         if cclist[1][0:3] == 'OGN' and cclist[2][0:3] == 'MTK':	# if the pairing is there on the competition table???
+            idxi=3			# index into the table
+            pairi=2			# index into the table
+         else:
+            idxi=2			# index into the table
+            pairi=1			# index into the table
          tl=len(cclist)			# check the number of entries ???
          idx=0				# index into the table
          while idx < tl:		# scan the whole table
             ognttable[cclist[idx+1]]=cclist[idx]
             if MTK:
                ognttable[cclist[idx+2]]=cclist[idx]
-               idx += 3
-               paircnt += 2
+               idx     += idxi
+               paircnt += pairi
             else:
-               idx += 2
-               paircnt += 1
+               idx     += idxi
+               paircnt += pairi
       
       for c in cclist:			# add these entries to the master CLIST
          clist.append(c)		# add each flarm Id and each OGN tracker ID
