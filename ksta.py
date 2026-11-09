@@ -1,5 +1,5 @@
 
-# 2025-05-05 CASADOUBUNTU
+# 2026-11-09 CASADOUBUNTU
 ksta = { 
 # -------------------------------------------------------------------#
 # Known Receivers
@@ -41,6 +41,7 @@ ksta = {
 "LEMR"   : "La Morgali, Asturias",
 "LEPN"   : "Valverde de Leganes, Badajoz",
 "LEVT"   : "Vitoria",
+"LEVC"   : "Valencia",
 "LETX"   : "Totana, Murcia",
 "LETI"   : "El Tietar, Toledo",
 "LECN"   : "Castellon de la Plana",
@@ -175,14 +176,19 @@ ksta = {
 "Pitolero"  : "Pico del Pitolero, Caceres ",
 "AVX920"    : "Barajas, Madrid",
 "ElPerdon"  : "El Perdon, Navarra ",
-"AltoLeons" : "Alto de los Leones, Madrid",
+"AltoLeon"  : "Alto de los Leones, Madrid",
+"ALTOLEON"  : "Alto de los Leones, Madrid",
 "Paracuell" : "Paracuellos Madrid",
 "PARACUELL" : "Paracuellos Madrid",
-"Barjas"    : "Barajas, Madrid",
+"Barajas"   : "Barajas, Madrid",
+"Caravaca"  : "Caravaca de la Cruz, Murcia",
+"LaMuela"   : "La Muela, Zaragoza",
+"Codonyera" : "La Codonyera, Teruel",
 "SSCC-RDAR" : "Estacion radar Paracuellos, Madrid ",
 "SpainAVX"  : "Estacion ficticia gateway AVX ",
 "SPAINAVX"  : "Estacion ficticia gateway AVX ",
 "SpainTTT"  : "Estacion ficticia gateway Enaire ",
+"SpainTT2"  : "Estacion ficticia gateway Enaire ",
 "SPAINTTT"  : "Estacion ficticia gateway Enaire ",
 "SpainENA"  : "Estacion ficticia gateway Enaire ",
 "VOLANDOO"  : "Estacion ficticia gateway VOLANDOO ",
